@@ -1,0 +1,18 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port pcie_7x_mgt -pg 1 -lvl 0 -x -780 -y -780 -defaultsOSRD -left
+preplace inst axi_pcie3_0 -pg 1 -lvl 1 -x -600 -y -430 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -x -190 -y -670 -defaultsOSRD -resize 250 220
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 140 -y -470 -defaultsOSRD
+preplace netloc axi_pcie3_0_axi_aclk 1 1 2 -420 -470 N
+preplace netloc axi_pcie3_0_axi_aresetn 1 1 2 -410 -450 N
+preplace netloc axi_pcie3_0_M_AXI 1 1 1 -430 -741n
+preplace netloc axi_pcie3_0_pcie_7x_mgt 1 0 2 N -780 -440
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 -40 -660n
+levelinfo -pg 1 -780 -600 -190 140 460 590
+pagesize -pg 1 -db -bbox -sgen -910 -990 590 320
+"
+}
+

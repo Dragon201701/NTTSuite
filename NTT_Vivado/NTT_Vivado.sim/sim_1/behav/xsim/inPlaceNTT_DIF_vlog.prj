@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../inplace_DIT_precomp.srcs/sources_1/imports/inPlaceNTT_DIF.v3/scverify" \
+"../../../../inplace_DIT_precomp.srcs/sources_1/imports/inPlaceNTT_DIF.v3/concat_sim_rtl.v" \
+"../../../../inplace_DIT_precomp.srcs/sources_1/imports/inPlaceNTT_DIF.v3/rtl.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
