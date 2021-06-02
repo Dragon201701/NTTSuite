@@ -1,1 +1,1 @@
---relax --debug typical --mt auto -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot NTT xil_defaultlib.NTT xil_defaultlib.glbl -log elaborate.log
+--relax --debug typical --mt auto -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_19 -L axi_mmu_v2_1_17 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot NTT xil_defaultlib.NTT xil_defaultlib.glbl -log elaborate.log

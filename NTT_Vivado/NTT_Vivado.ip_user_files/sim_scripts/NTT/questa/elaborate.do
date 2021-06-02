@@ -1,1 +1,1 @@
-vopt -64 +acc -l elaborate.log -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.NTT xil_defaultlib.glbl -o NTT_opt
+vopt -64 +acc -l elaborate.log -L xil_defaultlib -L xpm -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_19 -L axi_mmu_v2_1_17 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.NTT xil_defaultlib.glbl -o NTT_opt

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="pcie3_7x_0_synth_1" LaunchPart="xc7vx690tffg1761-2" LaunchTime="1622577718">
   <File Type="PA-TCL" Name="pcie3_7x_0.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="pcie3_7x_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="pcie3_7x_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="pcie3_7x_0.vds"/>
   <File Type="RDS-UTIL" Name="pcie3_7x_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="pcie3_7x_0_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="pcie3_7x_0.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="pcie3_7x_0_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="pcie3_7x_0_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pcie3_7x_0">
     <File Path="$PSRCDIR/sources_1/ip/pcie3_7x_0/pcie3_7x_0.xci">
       <FileInfo>
@@ -46,9 +43,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
