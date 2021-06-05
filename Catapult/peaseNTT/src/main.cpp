@@ -93,21 +93,24 @@ int main(int argc, char *argv[]){
 
 	uint64_t k = 3;
 
-	uint64_t n = 1024;
+	uint64_t n = VECTOR_SIZE;
   	uint64_t p = 68719403009;
   	uint64_t r = 36048964756;
 
 	uint64_t vec[VECTOR_SIZE], vec2[VECTOR_SIZE];
-	uint64_t *result;
+	uint64_t *result1, *result2;
 
 	for (int i = 0; i < VECTOR_SIZE; i++){
 		vec[i] = i;
 		vec2[i] = i;
 	}
-	result = peaceNTT(vec, p, r);
+	result2 = inPlaceNTT_DIT(vec2, VECTOR_SIZE, p, r, false);
+	result1 = peaceNTT(vec, VECTOR_SIZE,  p, r, false);
 	//printVec(result, VECTOR_SIZE);
 
-	cout<<"Compare result: "<<compVec(inPlaceNTT_DIT(vec2, VECTOR_SIZE, p, r, true), result, n, true);
+	cout<<"Compare result: "<<compVec(result1, result2, n, true);
+	free(result1);
+	free(result2);
 /*	
 	//uint64_t *vec = randVec(n,10);
 
