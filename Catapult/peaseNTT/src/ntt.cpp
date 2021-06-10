@@ -53,7 +53,7 @@ UINT64_T modExp_dev(UINT64_T base, UINT64_T exp, UINT64_T m){
  * @param src The source array
  * @param dst The destination array
  */
-#pragma hls_design block
+#pragma hls_design inline
 void cpyVec_dev(UINT64_T src[VECTOR_SIZE], UINT64_T dst[VECTOR_SIZE] ){
 
     COPY_LOOP: for(int i = 0; i < VECTOR_SIZE; i++){

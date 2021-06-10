@@ -1,0 +1,85 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.96 seconds, memory usage 1519576kB, peak memory usage 1519576kB (SOL-9)
+Source file analysis completed (CIN-68)
+go analyze
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: variable "base" is used before its value is set (CRD-549)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.81 seconds, memory usage 1510820kB, peak memory usage 1511396kB (SOL-9)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Warning: variable "base" is used before its value is set (CRD-549)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.66 seconds, memory usage 1511396kB, peak memory usage 1511396kB (SOL-9)
+Pragma 'hls_design<>' detected on routine 'cpyVec_dev' (CIN-6)
+# Warning: variable "base" is used before its value is set (CRD-549)
+/INPUTFILES/2
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+solution file add ./src/utils.cpp -exclude true
+solution file add ./src/main.cpp -exclude true
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+go analyze
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/3
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+quit
+# Info: Branching solution 'solution.v1' at state 'analyze' (PRJ-2)
+CU_DESIGN sid4 ADD {} {VERSION v1 SID sid4 BRANCH_SID sid3 BRANCH_STATE analyze INCREMENTAL 0 STATE analyze TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/ SYNTHESIS_FLOWPKG Vivado STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} PROPERTIES {} name solution}: Race condition
+# Info: Design complexity at end of 'compile': Total ops = 278, Real ops = 95, Vars = 39 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v3': elapsed time 2.78 seconds, memory usage 1519576kB, peak memory usage 1585112kB (SOL-9)
+Generating synthesis internal form... (CIN-3)
+Loop '/peaceNTT/core/TWIDDLE_LOOP' iterated at most 10 times. (LOOP-2)
+Synthesizing routine 'peaceNTT' (CIN-13)
+Found top design routine 'peaceNTT' specified by directive (CIN-52)
+Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Loop '/peaceNTT/core/COMP_LOOP' iterated at most 512 times. (LOOP-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Design 'peaceNTT' was read (SOL-1)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/peaceNTT' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Synthesizing routine 'cpyVec_dev' (CIN-13)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Optimizing block '/peaceNTT/cpyVec_dev' ... (CIN-4)
+Inlining routine 'cpyVec_dev' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Loop '/peaceNTT/cpyVec_dev/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+Inlining routine 'operator<<64, false>' (CIN-14)
+INOUT port 'dst' is only used as an output. (OPT-11)
+INOUT port 'src' is only used as an input. (OPT-10)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v3/CDesignChecker/design_checker.sh'
+go compile
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v3' (SOL-8)
+# Warning:           Hierarchy Block 'cpyVec_dev' Instance 'cpyVec_dev:inst' $PROJECT_HOME/src/ntt.cpp:57
+# Warning: Hierarchical design detected - SLEC-CPC does not support design with hierarchy
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'peaceNTT' (CIN-14)
+Inlining routine 'modExp_dev' (CIN-14)
+Inlining routine 'operator/<66, true>' (CIN-14)
+Found design routine 'cpyVec_dev' specified by directive (CIN-52)
