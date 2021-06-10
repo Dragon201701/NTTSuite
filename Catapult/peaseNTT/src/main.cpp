@@ -2,6 +2,11 @@
 
 using namespace std;
 
+void cpyVec(uint64_t * src, uint64_t * dst, uint64_t n){
+    for(int i = 0; i < n; i++)
+        dst[i] = src[i];
+}
+
 /**
  * Perform a basic NTT on an input vector and return the result
  *
@@ -89,6 +94,39 @@ uint64_t *inPlaceNTT_DIT(uint64_t *vec, uint64_t n, uint64_t p, uint64_t r, bool
 
 }
 
+uint64_t* peaceNTT_golden(uint64_t * vec, uint64_t n, uint64_t p, uint64_t g, bool rev){
+
+    uint64_t t = (uint64_t)log2(n);
+    uint64_t * xt = vec;
+    uint64_t * yt = (uint64_t*)calloc(n, sizeof(uint64_t));
+
+    if(rev)
+        xt = bit_reverse(vec, n);
+
+    cout<<"Peace NTT\nt: "<<t<<endl;
+
+    uint64_t r_strt = 0;
+    uint64_t r_end  = exp2(t - 1);
+    uint64_t mid = n / 2;
+    for (uint64_t c = t; c >= 1; c--){
+
+        uint64_t w = modExp(g, (p - 1) / exp2(t - c + 1), p);
+        uint64_t base = exp2(c - 1);
+
+        for (uint64_t r = r_strt; r < r_end; r++){
+            uint64_t r1 = floor(r / base);
+            uint64_t f1 = xt[r*2];
+            uint64_t f2 = modulo(modExp(w, r1, p) * xt[r*2 + 1], p);
+            yt[r]       = modulo(f1 + f2, p);
+            yt[r+ mid]  = modulo(f1 - f2, p);
+        }
+        cpyVec(yt, xt, n);
+        cout<<"Complte stage: "<<c<<" computation.\n";
+        //printVec(xt,n);
+    }
+    return yt;
+}
+
 int main(int argc, char *argv[]){
 
 	uint64_t k = 3;
@@ -105,7 +143,7 @@ int main(int argc, char *argv[]){
 		vec2[i] = i;
 	}
 	result2 = inPlaceNTT_DIT(vec2, VECTOR_SIZE, p, r, false);
-	result1 = peaceNTT(vec, VECTOR_SIZE,  p, r, false);
+	result1 = peaceNTT_golden(vec, VECTOR_SIZE,  p, r, false);
 	//printVec(result, VECTOR_SIZE);
 
 	cout<<"Compare result: "<<compVec(result1, result2, n, true);

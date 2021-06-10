@@ -1,12 +1,15 @@
-CPP=$(wildcard src/*.cpp)
-OBJ=$(CPP:.cpp=.o)
-DEPS=$(wildcard include/*.h)
+HLSDIR			= 	$(MGC_HOME)/shared/include
+IDIR        	=  	-I include -I $(MGC_HOME)/shared/include
+CCFLAGS 		=	-g -std=c++11
+C_SRCS			=	$(wildcard src/*.cpp)
+C_OBJS			=	$(C_SRCS:%.cpp=%.o)
+OBJS			=	$(C_OBJS)
+TARGET			=	ntt_tb.out
+CC 				= 	$(MGC_HOME)/bin/g++
 
-%.o: %.cpp $(DEPS)
-	$(CXX) -c -o $@ $< -Iinclude
+all:$(TARGET)
 
-NTT: $(OBJ) 
-	$(CXX) -o $@ $^ -Iinclude
-
+$(TARGET):$(OBJS)
+	$(CC) -Wall -g -std=gnu++11 -o $@ $(OBJS) $(IDIR) 
 clean:
-	rm -rfv NTT $(OBJ)
+	rm -f $(TARGET) $(OBJS)
