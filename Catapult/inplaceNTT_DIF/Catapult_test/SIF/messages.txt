@@ -1,0 +1,19 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+File '/home/jd4691/NTT_Xilinx/Catapult/Untitled' saved
+solution file add ./inplaceNTT_DIF/src/ntt_tb.cpp -exclude true
+go compile
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
+solution file add ./inplaceNTT_DIF/src/ntt.cpp
+/INPUTFILES/1
+/INPUTFILES/2
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)

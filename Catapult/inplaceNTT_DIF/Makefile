@@ -1,4 +1,4 @@
-CXXFLAGS 		+=	-g -I ./include "$(MGC_HOME)shared/include" -std=c++11
+CXXFLAGS 		+=	-g -I$(MGC_HOME)shared/include -std=c++11
 C_SRCS			=	$(wildcard src/*.cpp)
 C_OBJS			=	$(C_SRCS:%.cpp=%.o)
 OBJS			=	$(C_OBJS)

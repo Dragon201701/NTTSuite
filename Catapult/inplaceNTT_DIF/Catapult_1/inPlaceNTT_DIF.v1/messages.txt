@@ -1,0 +1,81 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.73 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/1
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 1314692kB, peak memory usage 1314692kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+
+go analyze
+go compile
+option set Input/TargetPlatform x86_64
+c++11
+option set Input/CppStandard c++11
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
+solution file add ./src/ntt.cpp
+go analyze
+solution file add ./src/ntt_tb.cpp -exclude true
+# Error: Compilation aborted (CIN-5)
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF
+/INPUTFILES/2
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 2.63 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' iterated at most 10 times. (LOOP-2)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 9 times. (LOOP-2)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator/<64, false>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Inlining routine 'operator>><64, false>' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
+
+# Messages from "go libraries"
+
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.43 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library remove *
+solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+go libraries
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)

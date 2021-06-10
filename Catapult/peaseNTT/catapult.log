@@ -5,7 +5,7 @@
 //             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
 //  
-//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  Running on Linux jd4691@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
 //  
 //  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
 //                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
@@ -14,131 +14,50 @@
 //                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
 //                       DesignPad v2.78_1.0
 //  
-//  Start time Wed Jun  9 22:00:51 2021
+//  Start time Thu Jun 10 07:30:33 2021
 # -------------------------------------------------
-# Logging session transcript to file "/tmp/log81887c2aeb7c.0"
-# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+# Logging session transcript to file "/tmp/log31944d82b4858.0"
+project load /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/Catapult.ccs
+# Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/peaseNTT/catapult.log"
+solution file add ../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+# Error: cannot open input file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp' (BASIC-3)
+# Error: 
+solution file add ../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp
+# Error: cannot open input file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp' (BASIC-3)
+# Error: 
+solution file add ../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+# Error: cannot open input file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/main.cpp' (BASIC-3)
+# Error: 
+solution file add ../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+# Error: cannot open input file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp' (BASIC-3)
+# Error: 
+solution file add ../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp
+# Error: cannot open input file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp' (BASIC-3)
+# Error: 
+solution file add ../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+# Error: cannot open input file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/../../../../jd4691/NTT_Xilinx/Catapult/peaseNTT/src/main.cpp' (BASIC-3)
+# Error: 
+project new -name Catapult_2
 solution file add ./src/utils.cpp -exclude true
 # /INPUTFILES/1
 solution file add ./src/ntt.cpp
 # /INPUTFILES/2
-solution file add ./src/main.cpp -exclude true
-# /INPUTFILES/3
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/catapult.log"
-# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
 # Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Warning: $PROJECT_HOME/include/config.h(17): last line of file ends without a newline (CRD-1)
-# Error: $PROJECT_HOME/include/ntt.h(11): expected a ")" (CRD-18)
-# Warning: $PROJECT_HOME/include/ntt.h(13): last line of file ends without a newline (CRD-1)
-# Error: $PROJECT_HOME/src/ntt.cpp(38): expected a ")" (CRD-18)
-# Error: $PROJECT_HOME/src/ntt.cpp(40): identifier "dst" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(40): identifier "src" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(43): expected a ")" (CRD-18)
-# Error: $PROJECT_HOME/src/ntt.cpp(44): identifier "n" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(46): no instance of overloaded function "exp2" matches the argument list (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(46):             argument types are: (ac_int<66, true>) (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(48): expected an identifier (CRD-40)
-# Error: $PROJECT_HOME/src/ntt.cpp(48): expected a ";" (CRD-65)
-# Error: $PROJECT_HOME/src/ntt.cpp(49): identifier "vec" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(49): identifier "xt" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(49): too many arguments in function call (CRD-140)
-# Error: $PROJECT_HOME/src/ntt.cpp(51): identifier "g" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(51): identifier "p" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(51): no instance of overloaded function "exp2" matches the argument list (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(51):             argument types are: (ac_int<66, true>) (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(54): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(54):             function "floor(double)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(54):             function "std::floor(long double)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(54):             function "std::floor(float)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(54):             argument types are: (ac_int<64, false>) (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(57): identifier "result" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(57): no suitable conversion function from "ac_int<65, false>" to "int64_t" exists (CRD-413)
-# Error: $PROJECT_HOME/src/ntt.cpp(58): no suitable conversion function from "ac_int<65, true>" to "int64_t" exists (CRD-413)
-# Error: $PROJECT_HOME/src/ntt.cpp(60): identifier "result" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(60): too many arguments in function call (CRD-140)
-# $PROJECT_HOME/src/ntt.cpp(42): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Error: $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/c++0x_warning.h(32): #error directive: This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options. (CRD-35)
 # Error: Compilation aborted (CIN-5)
-# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.62 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.02 seconds, memory usage 1380208kB, peak memory usage 1380208kB (SOL-9)
 # Error: go analyze: Failed analyze
+option set Input/TargetPlatform x86_64
+option set Input/CppStandard c++11
+# c++11
 go analyze
+
+go compile
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
-# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Warning: $PROJECT_HOME/include/config.h(17): last line of file ends without a newline (CRD-1)
-# Error: $PROJECT_HOME/include/ntt.h(11): expected a ")" (CRD-18)
-# Warning: $PROJECT_HOME/include/ntt.h(13): last line of file ends without a newline (CRD-1)
-# Error: $PROJECT_HOME/src/ntt.cpp(38): expected a ")" (CRD-18)
-# Error: $PROJECT_HOME/src/ntt.cpp(40): identifier "dst" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(40): identifier "src" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(45): expected a ")" (CRD-18)
-# Error: $PROJECT_HOME/src/ntt.cpp(46): identifier "n" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(48): no instance of overloaded function "exp2" matches the argument list (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(48):             argument types are: (ac_int<66, true>) (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(50): expected an identifier (CRD-40)
-# Error: $PROJECT_HOME/src/ntt.cpp(50): expected a ";" (CRD-65)
-# Error: $PROJECT_HOME/src/ntt.cpp(51): identifier "vec" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(51): identifier "xt" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(51): too many arguments in function call (CRD-140)
-# Error: $PROJECT_HOME/src/ntt.cpp(53): identifier "g" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(53): identifier "p" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(53): no instance of overloaded function "exp2" matches the argument list (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(53):             argument types are: (ac_int<66, true>) (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(56): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(56):             function "floor(double)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(56):             function "std::floor(long double)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(56):             function "std::floor(float)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(56):             argument types are: (ac_int<64, false>) (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(59): identifier "result" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(59): no suitable conversion function from "ac_int<65, false>" to "int64_t" exists (CRD-413)
-# Error: $PROJECT_HOME/src/ntt.cpp(60): no suitable conversion function from "ac_int<65, true>" to "int64_t" exists (CRD-413)
-# Error: $PROJECT_HOME/src/ntt.cpp(62): identifier "result" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(62): too many arguments in function call (CRD-140)
-# $PROJECT_HOME/src/ntt.cpp(44): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
-# Error: Compilation aborted (CIN-5)
-# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.50 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
-# Error: go analyze: Failed analyze
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
-# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Warning: $PROJECT_HOME/include/config.h(17): last line of file ends without a newline (CRD-1)
-# Error: $PROJECT_HOME/include/ntt.h(11): expected a ")" (CRD-18)
-# Warning: $PROJECT_HOME/include/ntt.h(13): last line of file ends without a newline (CRD-1)
-# Error: $PROJECT_HOME/src/ntt.cpp(38): expected a ")" (CRD-18)
-# Error: $PROJECT_HOME/src/ntt.cpp(40): identifier "dst" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(40): identifier "src" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(44): expected a ")" (CRD-18)
-# Error: $PROJECT_HOME/src/ntt.cpp(45): identifier "n" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(47): no instance of overloaded function "exp2" matches the argument list (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(47):             argument types are: (ac_int<66, true>) (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(49): expected an identifier (CRD-40)
-# Error: $PROJECT_HOME/src/ntt.cpp(49): expected a ";" (CRD-65)
-# Error: $PROJECT_HOME/src/ntt.cpp(50): identifier "vec" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(50): identifier "xt" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(50): too many arguments in function call (CRD-140)
-# Error: $PROJECT_HOME/src/ntt.cpp(52): identifier "g" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(52): identifier "p" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(52): no instance of overloaded function "exp2" matches the argument list (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(52):             argument types are: (ac_int<66, true>) (CRD-304)
-# Error: $PROJECT_HOME/src/ntt.cpp(55): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(55):             function "floor(double)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(55):             function "std::floor(long double)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(55):             function "std::floor(float)" (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(55):             argument types are: (ac_int<64, false>) (CRD-308)
-# Error: $PROJECT_HOME/src/ntt.cpp(58): identifier "result" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(58): no suitable conversion function from "ac_int<65, false>" to "int64_t" exists (CRD-413)
-# Error: $PROJECT_HOME/src/ntt.cpp(59): no suitable conversion function from "ac_int<65, true>" to "int64_t" exists (CRD-413)
-# Error: $PROJECT_HOME/src/ntt.cpp(61): identifier "result" is undefined (CRD-20)
-# Error: $PROJECT_HOME/src/ntt.cpp(61): too many arguments in function call (CRD-140)
-# $PROJECT_HOME/src/ntt.cpp(43): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
-# Error: Compilation aborted (CIN-5)
-# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.58 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
-# Error: go analyze: Failed analyze
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
 # Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
 # Warning: $PROJECT_HOME/include/config.h(17): last line of file ends without a newline (CRD-1)
 # Error: $PROJECT_HOME/include/ntt.h(11): expected a ")" (CRD-18)
@@ -169,11 +88,12 @@ go analyze
 # Error: $PROJECT_HOME/src/ntt.cpp(61): too many arguments in function call (CRD-140)
 # $PROJECT_HOME/src/ntt.cpp(43): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
 # Error: Compilation aborted (CIN-5)
-# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.64 seconds, memory usage 1379796kB, peak memory usage 1380312kB (SOL-9)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.51 seconds, memory usage 1380312kB, peak memory usage 1380832kB (SOL-9)
 # Error: go analyze: Failed analyze
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
 # Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
 # Warning: $PROJECT_HOME/include/config.h(17): last line of file ends without a newline (CRD-1)
 # Error: $PROJECT_HOME/include/ntt.h(11): expected a ")" (CRD-18)
@@ -204,5 +124,7 @@ go analyze
 # Error: $PROJECT_HOME/src/ntt.cpp(61): too many arguments in function call (CRD-140)
 # $PROJECT_HOME/src/ntt.cpp(43): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
 # Error: Compilation aborted (CIN-5)
-# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.61 seconds, memory usage 1379796kB, peak memory usage 1380312kB (SOL-9)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.46 seconds, memory usage 1380312kB, peak memory usage 1380832kB (SOL-9)
 # Error: go analyze: Failed analyze
+solution file remove -all
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
