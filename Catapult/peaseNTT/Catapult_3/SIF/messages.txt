@@ -1,0 +1,36 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.73 seconds, memory usage 1445744kB, peak memory usage 1445744kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<>' detected on routine 'cpyVec_dev' (CIN-6)
+option set Input/TargetPlatform x86_64
+/INPUTFILES/1
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/peaseNTT/catapult.log"
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/peaseNTT
+/INPUTFILES/3
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Error: Compilation aborted (CIN-5)
+# Error: #error directive: This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options. (CRD-35)
+/INPUTFILES/2
+c++11
+option set Input/CppStandard c++11
+go analyze
+solution file add ./Catapult/peaseNTT/src/ntt.cpp
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: go analyze: Failed analyze
+solution file add ./Catapult/peaseNTT/src/utils.cpp -exclude true
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.02 seconds, memory usage 1314692kB, peak memory usage 1314692kB (SOL-9)
+solution file add ./Catapult/peaseNTT/src/main.cpp -exclude true

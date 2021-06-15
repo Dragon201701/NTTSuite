@@ -65,21 +65,7 @@ void cpyVec_dev(UINT64_T src[VECTOR_SIZE], UINT64_T dst[VECTOR_SIZE] ){
 }
 
 #pragma hls_design top
-void peaceNTT(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T result[VECTOR_SIZE] ){
-    /*
-         Calculate Twiddle Factors array
-    */
-    UINT64_T twiddle[VECTOR_SIZE];
-
-    UINT64_T w0 = modExp_dev(g, (p - 1) / VECTOR_ADDR_BIT, p), witer = 1;
-
-    TWIDDLE_LOOP: for(int i = 0; i < VECTOR_ADDR_BIT; i++){
-
-        twiddle[i] = witer;
-
-        witer = (witer * w0) % p;
-
-    }
+void peaceNTT(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T result[VECTOR_SIZE],UINT64_T twiddle[VECTOR_SIZE]){
 
     /*
         Initialize parameters
