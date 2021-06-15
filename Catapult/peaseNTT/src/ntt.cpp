@@ -92,9 +92,9 @@ void peaceNTT(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T result
 
     STAGE_LOOP: for (unsigned c = t; c >= 1; c--){
 
-        COMP_LOOP: for (unsigned r = r_strt; r < r_end; r++){
+        const unsigned base = -1 << (c - 1);
 
-            const unsigned base = -1 << (c - 1);
+        COMP_LOOP: for (unsigned r = r_strt; r < r_end; r++){
 
             UINT64_T f1 = xt[r << 1];
 
