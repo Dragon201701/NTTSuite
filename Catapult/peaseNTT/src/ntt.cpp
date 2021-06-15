@@ -77,37 +77,32 @@ void peaceNTT(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T result
 
         twiddle[i] = witer;
 
-        witer = modulo_dev(witer * w0, p);
+        witer = (witer * w0) % p;
 
     }
 
     /*
         Initialize parameters
     */
-    UINT64_T t = VECTOR_ADDR_BIT, r_strt = 0, r_end  = VECTOR_SIZE / 2;
+    const unsigned t = VECTOR_ADDR_BIT, r_strt = 0, r_end  = VECTOR_SIZE / 2;
 
     UINT64_T xt[VECTOR_SIZE] ;
 
     cpyVec_dev(vec, xt);
 
-    UINT64_T base = VECTOR_SIZE;
-
-    unsigned mid = VECTOR_SIZE / 2;
-
     STAGE_LOOP: for (unsigned c = t; c >= 1; c--){
-        unsigned base = base / 2;
 
         COMP_LOOP: for (unsigned r = r_strt; r < r_end; r++){
 
-            unsigned r1 = r / base;
+            const unsigned base = -1 << (c - 1);
 
             UINT64_T f1 = xt[r << 1];
 
-            UINT64_T f2 = modulo_dev(twiddle[r1 * (1 << (c - 1))] * xt[r << 1 + 1], p);
+            UINT64_T f2 = (twiddle[r & base] * xt[r << 1 + 1]) % p;
 
-            result[r]       = modulo_dev(f1 + f2, p);
+            result[r]       = (f1 + f2) % p;
 
-            result[r + mid]  = modulo_dev(f1 - f2, p);
+            result[r + r_end]  = (f1 - f2) % p;
 
         }
 
