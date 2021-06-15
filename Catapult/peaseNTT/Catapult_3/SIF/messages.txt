@@ -4,6 +4,61 @@
 
 # Messages from "go analyze"
 
+# Info: Completed transformation 'analyze' on solution 'peaceNTT.v3': elapsed time 2.91 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'peaceNTT.v3' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'peaceNTT.v3': elapsed time 2.84 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+go analyze
+File '$PROJECT_HOME/include/ntt.h' saved
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: duplicate parameter name (CRD-100)
+# Error: Compilation aborted (CIN-5)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'peaceNTT.v3' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'peaceNTT.v3': elapsed time 2.81 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+go analyze
+# Info: Starting transformation 'analyze' on solution 'peaceNTT.v3' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: duplicate parameter name (CRD-100)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+go analyze
+# Error: go analyze: Failed analyze
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+peaceNTT.v3
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'new' on solution 'peaceNTT.v3': elapsed time 2.70 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+# Info: Branching solution 'peaceNTT.v3' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'peaceNTT.v3' (SOL-8)
+# Error: Compilation aborted (CIN-5)
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Error: duplicate parameter name (CRD-100)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.72 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+go analyze
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
 # Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.73 seconds, memory usage 1445744kB, peak memory usage 1445744kB (SOL-9)
 # Warning: last line of file ends without a newline (CRD-1)
 Source file analysis completed (CIN-68)
@@ -34,3 +89,88 @@ File '$PROJECT_HOME/src/ntt.cpp' saved
 solution file add ./Catapult/peaseNTT/src/utils.cpp -exclude true
 # Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.02 seconds, memory usage 1314692kB, peak memory usage 1314692kB (SOL-9)
 solution file add ./Catapult/peaseNTT/src/main.cpp -exclude true
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 48, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v3': elapsed time 2.03 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'peaceNTT' (CIN-14)
+Synthesizing routine 'peaceNTT' (CIN-13)
+go compile
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v3' (SOL-8)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'cpyVec_dev' (CIN-14)
+Inlining routine 'cpyVec_dev' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/peaceNTT' ... (CIN-4)
+Loop '/peaceNTT/core/COMP_LOOP' iterated at most 512 times. (LOOP-2)
+Loop '/peaceNTT/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+Design 'peaceNTT' was read (SOL-1)
+Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 1024 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/peaseNTT/Catapult_3/peaceNTT.v3/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Found top design routine 'peaceNTT' specified by directive (CIN-52)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 48, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v3': elapsed time 0.28 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v3' (SOL-8)
+go libraries
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 48, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v3': elapsed time 0.11 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v3' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 58, Real ops = 15, Vars = 23 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v3': elapsed time 0.06 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+# Error: directive set: directive cannot be set at this stage
+# Error: Directive 'CLOCKS' must be specified no later than state 'libraries'. (DIR-5)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v3' (SOL-8)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+go architect
+Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 15}}
+directive set DSP_EXTRACTION yes
+# Info: Design complexity at end of 'memories': Total ops = 60, Real ops = 15, Vars = 23 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v3': elapsed time 0.35 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v3' (SOL-8)
+I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 60, Real ops = 15, Vars = 23 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v3': elapsed time 0.03 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v3' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 77, Real ops = 15, Vars = 26 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v3': elapsed time 0.33 seconds, memory usage 1511400kB, peak memory usage 1511400kB (SOL-9)
+Design 'peaceNTT' contains '15' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v3' (SOL-8)
+
+# Messages from "go allocate"
+
+# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Warning: Couldn't find library component for operator 'rem(65,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(65,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v3' (SOL-8)
+go allocate
+Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Error: Couldn't find library component for operation 'COMP_LOOP:f2:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Error: Couldn't find library component for operation 'COMP_LOOP:rem' ( rem(65,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'COMP_LOOP:COMP_LOOP:rem#1' ( rem(65,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
