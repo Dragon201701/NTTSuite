@@ -1,0 +1,384 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'peaceNTT.v20': elapsed time 1.50 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'peaceNTT.v20' (SOL-8)
+peaceNTT.v20
+go compile
+# Info: Branching solution 'peaceNTT.v20' at state 'new' (PRJ-2)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 49, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v20': elapsed time 1.53 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+Loop '/peaceNTT/core/COPY_LOOP' iterated at most 4096 times. (LOOP-2)
+Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 4096 times. (LOOP-2)
+Loop '/peaceNTT/core/COMP_LOOP' iterated at most 2048 times. (LOOP-2)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v20' (SOL-8)
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Design 'peaceNTT' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v20/CDesignChecker/design_checker.sh'
+Optimizing block '/peaceNTT' ... (CIN-4)
+Inlining routine 'cpyVec_dev' (CIN-14)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Synthesizing routine 'peaceNTT' (CIN-13)
+Found top design routine 'peaceNTT' specified by directive (CIN-52)
+Inlining routine 'cpyVec_dev' (CIN-14)
+Inlining routine 'peaceNTT' (CIN-14)
+Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 49, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v20': elapsed time 0.29 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v20' (SOL-8)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 49, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v20': elapsed time 0.10 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 13.33 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.665 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 13.33 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.665 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v20' (SOL-8)
+go extract
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 186, Real ops = 64, Vars = 39 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v20': elapsed time 1.23 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP' is being partially unrolled 8 times. (LOOP-3)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v20' (SOL-8)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP#1' is being partially unrolled 8 times. (LOOP-3)
+Loop '/peaceNTT/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+# Info: Design complexity at end of 'memories': Total ops = 344, Real ops = 64, Vars = 118 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v20': elapsed time 2.52 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+Memory Resource '/peaceNTT/vec:rsc(0)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(7)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(6)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Resource '/peaceNTT/vec:rsc' split into 1 x 8 blocks (MEM-11)
+Resource '/peaceNTT/result:rsc' split into 1 x 8 blocks (MEM-11)
+I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/result:rsc(0)(1)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/vec:rsc(0)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(7)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(6)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Resource '/peaceNTT/twiddle:rsc' split into 1 x 8 blocks (MEM-11)
+Memory Resource '/peaceNTT/result:rsc(0)(3)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(2)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(5)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(4)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(3)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(2)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(5)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(4)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Resource '/peaceNTT/core/xt:rsc' split into 1 x 8 blocks (MEM-11)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v20' (SOL-8)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(1)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(0)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 344, Real ops = 64, Vars = 118 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v20': elapsed time 0.10 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v20' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 502, Real ops = 111, Vars = 114 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v20': elapsed time 0.66 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+Design 'peaceNTT' contains '111' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v20' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 502, Real ops = 111, Vars = 114 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'peaceNTT.v20': elapsed time 1.93 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled LOOP '/peaceNTT/core/COMP_LOOP' (51 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaceNTT/core/COPY_LOOP#1' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaceNTT/core/COPY_LOOP' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaceNTT/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v20' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Final schedule of SEQUENTIAL '/peaceNTT/core': Latency = 1214993, Area (Datapath, Register, Total) = 35842.27, 0.00, 35842.27 (CRAAS-12)
+At least one feasible schedule exists. (CRAAS-9)
+Resource allocation and scheduling done. (CRAAS-2)
+Prescheduled LOOP '/peaceNTT/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaceNTT/core/main' (2 c-steps) (SCHD-7)
+# Info: Initial schedule of SEQUENTIAL '/peaceNTT/core': Latency = 147473, Area (Datapath, Register, Total) = 331319.30, 0.00, 331319.30 (CRAAS-11)
+Prescheduled SEQUENTIAL '/peaceNTT/core' (total length 147478 c-steps) (SCHD-8)
+
+# Messages from "go schedule"
+
+# Info: Completed transformation 'schedule' on solution 'peaceNTT.v20': elapsed time 28.26 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-9)
+# Info: Running transformation 'schedule' on solution 'peaceNTT.v20': elapsed time 24.36 seconds, memory usage 2035720kB, peak memory usage 2035720kB (SOL-15)
+# Info: Design complexity at end of 'schedule': Total ops = 76401, Real ops = 94, Vars = 633 (SOL-21)
+Global signal 'result:rsc(0)(2).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(2)i' (LIB-3)
+Global signal 'result:rsc(0)(2).d' added to design 'peaceNTT' for component 'result:rsc(0)(2)i' (LIB-3)
+Global signal 'result:rsc(0)(3).d' added to design 'peaceNTT' for component 'result:rsc(0)(3)i' (LIB-3)
+Global signal 'result:rsc(0)(3).we' added to design 'peaceNTT' for component 'result:rsc(0)(3)i' (LIB-3)
+Global signal 'result:rsc(0)(2).q' added to design 'peaceNTT' for component 'result:rsc(0)(2)i' (LIB-3)
+Global signal 'result:rsc(0)(1).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(1)i' (LIB-3)
+Global signal 'result:rsc(0)(2).we' added to design 'peaceNTT' for component 'result:rsc(0)(2)i' (LIB-3)
+Global signal 'result:rsc(0)(2).radr' added to design 'peaceNTT' for component 'result:rsc(0)(2)i' (LIB-3)
+Global signal 'result:rsc(0)(4).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(4)i' (LIB-3)
+Global signal 'result:rsc(0)(4).d' added to design 'peaceNTT' for component 'result:rsc(0)(4)i' (LIB-3)
+Global signal 'result:rsc(0)(5).d' added to design 'peaceNTT' for component 'result:rsc(0)(5)i' (LIB-3)
+Global signal 'result:rsc(0)(5).we' added to design 'peaceNTT' for component 'result:rsc(0)(5)i' (LIB-3)
+Global signal 'result:rsc(0)(4).q' added to design 'peaceNTT' for component 'result:rsc(0)(4)i' (LIB-3)
+Global signal 'result:rsc(0)(3).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(3)i' (LIB-3)
+Global signal 'result:rsc(0)(4).we' added to design 'peaceNTT' for component 'result:rsc(0)(4)i' (LIB-3)
+Global signal 'result:rsc(0)(4).radr' added to design 'peaceNTT' for component 'result:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).q' added to design 'peaceNTT' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).radr' added to design 'peaceNTT' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).q' added to design 'peaceNTT' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).radr' added to design 'peaceNTT' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).q' added to design 'peaceNTT' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(7).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).q' added to design 'peaceNTT' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).radr' added to design 'peaceNTT' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(0).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(0).d' added to design 'peaceNTT' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(1).d' added to design 'peaceNTT' for component 'result:rsc(0)(1)i' (LIB-3)
+Global signal 'result:rsc(0)(1).we' added to design 'peaceNTT' for component 'result:rsc(0)(1)i' (LIB-3)
+Global signal 'result:rsc(0)(0).q' added to design 'peaceNTT' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).radr' added to design 'peaceNTT' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'result:rsc(0)(0).we' added to design 'peaceNTT' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(0).radr' added to design 'peaceNTT' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'peaceNTT' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(0).lz' added to design 'peaceNTT' for component 'vec:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(7).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'g:rsc.triosy.lz' added to design 'peaceNTT' for component 'g:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(6).lz' added to design 'peaceNTT' for component 'vec:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(2).lz' added to design 'peaceNTT' for component 'vec:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(4).lz' added to design 'peaceNTT' for component 'vec:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'result:rsc(0)(6).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(6)i' (LIB-3)
+Global signal 'result:rsc(0)(6).d' added to design 'peaceNTT' for component 'result:rsc(0)(6)i' (LIB-3)
+Global signal 'result:rsc(0)(7).d' added to design 'peaceNTT' for component 'result:rsc(0)(7)i' (LIB-3)
+Global signal 'result:rsc(0)(7).we' added to design 'peaceNTT' for component 'result:rsc(0)(7)i' (LIB-3)
+Global signal 'result:rsc(0)(6).q' added to design 'peaceNTT' for component 'result:rsc(0)(6)i' (LIB-3)
+Global signal 'result:rsc(0)(5).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(5)i' (LIB-3)
+Global signal 'result:rsc(0)(6).we' added to design 'peaceNTT' for component 'result:rsc(0)(6)i' (LIB-3)
+Global signal 'result:rsc(0)(6).radr' added to design 'peaceNTT' for component 'result:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(7).wadr' added to design 'peaceNTT' for component 'result:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).q' added to design 'peaceNTT' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).radr' added to design 'peaceNTT' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(0).d' added to design 'peaceNTT' for component 'xt:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(0).we' added to design 'peaceNTT' for component 'xt:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(1).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(1)i' (LIB-3)
+Global signal 'xt:rsc(0)(0).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(0).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(0)i' (LIB-3)
+Global signal 'g:rsc.dat' added to design 'peaceNTT' for component 'g:rsci' (LIB-3)
+Global signal 'xt:rsc(0)(0).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(0).q' added to design 'peaceNTT' for component 'xt:rsc(0)(0)i' (LIB-3)
+Global signal 'xt:rsc(0)(2).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(2)i' (LIB-3)
+Global signal 'xt:rsc(0)(1).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(1)i' (LIB-3)
+Global signal 'xt:rsc(0)(2).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(2)i' (LIB-3)
+Global signal 'xt:rsc(0)(2).q' added to design 'peaceNTT' for component 'xt:rsc(0)(2)i' (LIB-3)
+Global signal 'xt:rsc(0)(1).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(1)i' (LIB-3)
+Global signal 'xt:rsc(0)(1).q' added to design 'peaceNTT' for component 'xt:rsc(0)(1)i' (LIB-3)
+Global signal 'xt:rsc(0)(1).d' added to design 'peaceNTT' for component 'xt:rsc(0)(1)i' (LIB-3)
+Global signal 'xt:rsc(0)(1).we' added to design 'peaceNTT' for component 'xt:rsc(0)(1)i' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'peaceNTT.v20' (SOL-8)
+Global signal 'p:rsc.dat' added to design 'peaceNTT' for component 'p:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+Global signal 'xt:rsc(0)(6).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(6)i' (LIB-3)
+Global signal 'xt:rsc(0)(5).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(5)i' (LIB-3)
+Global signal 'xt:rsc(0)(6).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(6)i' (LIB-3)
+Global signal 'xt:rsc(0)(6).q' added to design 'peaceNTT' for component 'xt:rsc(0)(6)i' (LIB-3)
+Global signal 'xt:rsc(0)(5).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(5)i' (LIB-3)
+Global signal 'xt:rsc(0)(5).q' added to design 'peaceNTT' for component 'xt:rsc(0)(5)i' (LIB-3)
+Global signal 'xt:rsc(0)(5).d' added to design 'peaceNTT' for component 'xt:rsc(0)(5)i' (LIB-3)
+Global signal 'xt:rsc(0)(5).we' added to design 'peaceNTT' for component 'xt:rsc(0)(5)i' (LIB-3)
+Global signal 'xt:rsc(0)(7).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(7)i' (LIB-3)
+Global signal 'xt:rsc(0)(7).q' added to design 'peaceNTT' for component 'xt:rsc(0)(7)i' (LIB-3)
+Global signal 'xt:rsc(0)(7).d' added to design 'peaceNTT' for component 'xt:rsc(0)(7)i' (LIB-3)
+Global signal 'xt:rsc(0)(7).we' added to design 'peaceNTT' for component 'xt:rsc(0)(7)i' (LIB-3)
+Global signal 'xt:rsc(0)(6).d' added to design 'peaceNTT' for component 'xt:rsc(0)(6)i' (LIB-3)
+Global signal 'xt:rsc(0)(6).we' added to design 'peaceNTT' for component 'xt:rsc(0)(6)i' (LIB-3)
+Global signal 'xt:rsc(0)(7).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(7)i' (LIB-3)
+Global signal 'xt:rsc(0)(6).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(6)i' (LIB-3)
+Global signal 'xt:rsc(0)(3).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(3)i' (LIB-3)
+Global signal 'xt:rsc(0)(3).q' added to design 'peaceNTT' for component 'xt:rsc(0)(3)i' (LIB-3)
+Global signal 'xt:rsc(0)(3).d' added to design 'peaceNTT' for component 'xt:rsc(0)(3)i' (LIB-3)
+Global signal 'xt:rsc(0)(3).we' added to design 'peaceNTT' for component 'xt:rsc(0)(3)i' (LIB-3)
+Global signal 'xt:rsc(0)(2).d' added to design 'peaceNTT' for component 'xt:rsc(0)(2)i' (LIB-3)
+Global signal 'xt:rsc(0)(2).we' added to design 'peaceNTT' for component 'xt:rsc(0)(2)i' (LIB-3)
+Global signal 'xt:rsc(0)(3).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(3)i' (LIB-3)
+Global signal 'xt:rsc(0)(2).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(2)i' (LIB-3)
+Global signal 'xt:rsc(0)(4).d' added to design 'peaceNTT' for component 'xt:rsc(0)(4)i' (LIB-3)
+Global signal 'xt:rsc(0)(4).we' added to design 'peaceNTT' for component 'xt:rsc(0)(4)i' (LIB-3)
+Global signal 'xt:rsc(0)(5).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(5)i' (LIB-3)
+Global signal 'xt:rsc(0)(4).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(4)i' (LIB-3)
+Global signal 'xt:rsc(0)(4).clken' added to design 'peaceNTT' for component 'xt:rsc(0)(4)i' (LIB-3)
+Global signal 'xt:rsc(0)(3).wadr' added to design 'peaceNTT' for component 'xt:rsc(0)(3)i' (LIB-3)
+Global signal 'xt:rsc(0)(4).radr' added to design 'peaceNTT' for component 'xt:rsc(0)(4)i' (LIB-3)
+Global signal 'xt:rsc(0)(4).q' added to design 'peaceNTT' for component 'xt:rsc(0)(4)i' (LIB-3)
+Report written to file 'cycle.rpt'
+# Warning: Input port 'g:rsc.dat' is never used. (OPT-4)
+Global signal 'result:rsc.triosy(0)(1).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(2).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(7).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(0).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(5).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(6).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(3).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(4).lz' added to design 'peaceNTT' for component 'result:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(1).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(2).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(0).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(5).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(6).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(3).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(4).lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy(0)(4):obj' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 2883, Real ops = 824, Vars = 554 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'peaceNTT.v20': elapsed time 96.82 seconds, memory usage 2101256kB, peak memory usage 2101256kB (SOL-9)
+# Info: Running transformation 'dpfsm' on solution 'peaceNTT.v20': elapsed time 79.62 seconds, memory usage 2101256kB, peak memory usage 2101256kB (SOL-15)
+# Info: Running transformation 'dpfsm' on solution 'peaceNTT.v20': elapsed time 55.15 seconds, memory usage 2101256kB, peak memory usage 2101256kB (SOL-15)
+# Info: Starting transformation 'dpfsm' on solution 'peaceNTT.v20' (SOL-8)
+# Info: Running transformation 'dpfsm' on solution 'peaceNTT.v20': elapsed time 25.13 seconds, memory usage 2101256kB, peak memory usage 2101256kB (SOL-15)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'COPY_LOOP#1:i:acc#12.itm' for variables 'COPY_LOOP#1:i:acc#12.itm, COPY_LOOP#1:i:acc#8.itm, COMP_LOOP-7:f2:acc.itm' (2 registers deleted). (FSM-3)
+Creating shared register 'COPY_LOOP#1:i:acc#10.itm' for variables 'COPY_LOOP#1:i:acc#10.itm, COPY_LOOP#1:i:acc#11.itm, COPY_LOOP#1:i:acc#13.itm, COPY_LOOP#1:i:acc#14.mut, COPY_LOOP#1:i:acc#15.mut' (4 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 3355, Real ops = 984, Vars = 2389 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'peaceNTT.v20': elapsed time 3.96 seconds, memory usage 2101256kB, peak memory usage 2101256kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'peaceNTT.v20' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 3334, Real ops = 979, Vars = 600 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'peaceNTT.v20': elapsed time 23.22 seconds, memory usage 2166792kB, peak memory usage 2166792kB (SOL-9)
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(5). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(2). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(0). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(6). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(4). Defaulting to 'clk'
+Report written to file 'rtl.rpt'
+# Info: Starting transformation 'extract' on solution 'peaceNTT.v20' (SOL-8)
+Generating scverify_top.cpp ()
+Netlist written to file 'rtl.vhdl' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(4). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(2). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(1). Defaulting to 'clk'
+generate concat
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(6). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+order file name is: rtl.vhdl_order.txt
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(0). Defaulting to 'clk'
+order file name is: rtl.vhdl_order_sim.txt
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(7). Defaulting to 'clk'
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v20/concat_rtl.vhdl
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(7). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(2). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(0). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ./rtl.vhdl
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(3). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(5). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v20/concat_sim_rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Add dependent file: ./rtl.vhdl
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(5). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(6). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(4). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(3). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(1). Defaulting to 'clk'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Generating SCVerify testbench files
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(4). Defaulting to 'clk'
+order file name is: rtl.v_order.txt
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(2). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(1). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(6). Defaulting to 'clk'
+Netlist written to file 'rtl.v' (NET-4)
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+generate concat
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(0). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(7). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order_sim.txt
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(3). Defaulting to 'clk'
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v20/concat_rtl.v
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(5). Defaulting to 'clk'
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(7). Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v20/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(3). Defaulting to 'clk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc(0)(1). Defaulting to 'clk'

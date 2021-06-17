@@ -1,0 +1,12 @@
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP:acc RESOURCE_NAME COMP_LOOP:acc:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COPY_LOOP#1:acc RESOURCE_NAME COMP_LOOP:acc:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP:acc#8 RESOURCE_NAME COMP_LOOP:acc#5:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP:acc#5 RESOURCE_NAME COMP_LOOP:acc#5:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP:acc#6 RESOURCE_NAME COMP_LOOP:acc#5:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP:acc#7 RESOURCE_NAME COMP_LOOP:acc#5:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COPY_LOOP:acc RESOURCE_NAME COPY_LOOP:acc:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/STAGE_LOOP:base:acc RESOURCE_NAME COPY_LOOP:acc:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP-2:acc#1 RESOURCE_NAME COMP_LOOP-1:acc#1:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP-4:acc#1 RESOURCE_NAME COMP_LOOP-1:acc#1:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP-3:acc#1 RESOURCE_NAME COMP_LOOP-1:acc#1:rg
+directive set /peaceNTT/peaceNTT:core/peaceNTT:core:conc/COMP_LOOP-1:acc#1 RESOURCE_NAME COMP_LOOP-1:acc#1:rg

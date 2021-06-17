@@ -1,11 +1,12 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
-#include <cstdint>
-#include <cmath>
+//#include <cstdint>
+//#include <cmath>
 #include <ac_int.h>
+#include <ac_math.h>
 
-const unsigned VECTOR_SIZE = 1024;
+const unsigned VECTOR_SIZE = 4096;
 const unsigned VECTOR_WIDTH = 64;
 const unsigned VECTOR_ADDR_BIT = 10;
 const unsigned PARAM_WIDTH = 64;

@@ -1,0 +1,26 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n137[label="n137 : DOPER\n 668cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n141[label="n141 : DOPER\n 685cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n136[label="n136 : DOPER\n 668cy+3.9\n",shape=ellipse,style=filled,color=bisque];
+  n108[label="n108 : DOPER\n 668cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n90[label="n90 : ZOPER\n 668cy+2.4\n",shape=ellipse];
+  n83[label="n83 : DOPER\n 667cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n482[label="n482 : DOPER\n 667cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n479[label="n479 : ZOPER\n 667cy+2.4\n",shape=ellipse];
+  n472[label="n472 : DOPER\n 666cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n152[label="n152 : DOPER\n 666cy+10\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n137 : 0x7ff63bd6b6d0 COMP_LOOP-1:COMP_LOOP:rem#1\ln141 : 0x7ff6390e81c0 COMP_LOOP:write_mem(result:rsc(0)(0).@)\ln136 : 0x7ff64211d400 COMP_LOOP-1:acc#1\ln108 : 0x7ff642819ea0 COMP_LOOP:f1:mux1h\ln90  : 0x7ff641940ab0 COMP_LOOP:f1:slc(COMP_LOOP:f1:read_mem(xt:rsc(0)(0).@))(63-0)\ln83  : 0x7ff62c84f910 COMP_LOOP:f1:read_mem(xt:rsc(0)(0).@)\ln482 : 0x7ff64260df70 COPY_LOOP#1:write_mem(xt:rsc(0)(0).@)#1\ln479 : 0x7ff6429eddf0 COPY_LOOP#1:conc#67\ln472 : 0x7ff64250b3f0 COPY_LOOP#1:read_mem(result:rsc(0)(0).@)\ln152 : 0x7ff643549280 COMP_LOOP:write_mem(result:rsc(0)(0).@)#1\l",shape=none];
+  n137 -> n141[label="258 : 0+0.750",color=blue];
+  n136 -> n137[label="259 : 0",color=green2];
+  n108 -> n136[label="258 : 0",color=blue];
+  n90 -> n108[label="258 : 0",color=blue];
+  n83 -> n90[label="259 : 0",color=green2];
+  n482 -> n83[label="262 : 0+0.750",color=red, style=bold];
+  n479 -> n482[label="258 : 0+0.750",color=blue];
+  n472 -> n479[label="258 : 0",color=blue];
+  n152 -> n472[label="262 : 0",color=red, style=bold];
+  n141 -> n152[label="258 : 0",color=blue];
+}
+

@@ -127,7 +127,7 @@ uint64_t* peaceNTT_golden(uint64_t * vec, uint64_t n, uint64_t p, uint64_t g, bo
     return yt;
 }
 
-int main(int argc, char *argv[]){
+CCS_MAIN(int argc, char *argv[]){
 
 	uint64_t k = 3;
 
@@ -138,14 +138,20 @@ int main(int argc, char *argv[]){
 	uint64_t vec[VECTOR_SIZE], vec2[VECTOR_SIZE];
 	uint64_t *result1, *result2;
 
-	for (int i = 0; i < VECTOR_SIZE; i++){
+	for (unsigned i = 0; i < VECTOR_SIZE; i++){
 		vec[i] = i;
 		vec2[i] = i;
 	}
 	result2 = inPlaceNTT_DIT(vec2, VECTOR_SIZE, p, r, false);
 	result1 = peaceNTT_golden(vec, VECTOR_SIZE,  p, r, false);
 	//printVec(result, VECTOR_SIZE);
-
+	UINT64_T vec_dev[VECTOR_SIZE], twiddle_dev[VECTOR_SIZE], result_dev[VECTOR_SIZE];
+	UINT64_T p_dev = 68719403009, r_dev = 36048964756;
+	for (unsigned i = 0; i < VECTOR_SIZE; i++){
+		twiddle_dev[i] = i;
+		vec_dev[i] = i;
+	}
+	CCS_DESIGN(peaceNTT)(vec_dev, p_dev, r_dev, result_dev, twiddle_dev);
 	cout<<"Compare result: "<<compVec(result1, result2, n, true);
 	free(result1);
 	free(result2);
@@ -158,6 +164,6 @@ int main(int argc, char *argv[]){
 	uint64_t *out2 = fourStepNTT(vec,n,p,r,2);
 	printVec(out2,n);
 */
-	return 0;
+	CCS_RETURN(0);
 
 }
