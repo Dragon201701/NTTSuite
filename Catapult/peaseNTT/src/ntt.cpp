@@ -15,8 +15,8 @@ using namespace std;
 UINT64_T modulo_dev(INT64_T base, UINT64_T m){
 
 	INT64_T result = base % m;
-
-	return (result >= 0) ? (UINT64_T)result : (UINT64_T)(result + m);
+	
+	return result >= 0? (UINT64_T) result : (UINT64_T) (result + m);
 
 }
 
@@ -55,40 +55,35 @@ UINT64_T modExp_dev(UINT64_T base, UINT64_T exp, UINT64_T m){
  */
 #pragma hls_design inline
 void cpyVec_dev(UINT64_T src[VECTOR_SIZE], UINT64_T dst[VECTOR_SIZE] ){
+        COPY_LOOP: for (unsigned i = 0; i < VECTOR_SIZE; i++){
+                dst[i] = src[i];
 
-    COPY_LOOP: for(int i = 0; i < VECTOR_SIZE; i++){
-
-        dst[i] = src[i];
-
-    }
-
+        }
 }
 
 #pragma hls_design top
 void peaceNTT(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T result[VECTOR_SIZE],UINT64_T twiddle[VECTOR_SIZE]){
-
     /*
         Initialize parameters
     */
-    const unsigned t = VECTOR_ADDR_BIT, r_strt = 0, r_end  = VECTOR_SIZE / 2;
+    const unsigned r_strt = 0, r_end  = VECTOR_SIZE / 2;
 
     UINT64_T xt[VECTOR_SIZE] ;
 
     cpyVec_dev(vec, xt);
 
-    STAGE_LOOP: for (unsigned c = t; c >= 1; c--){
+    STAGE_LOOP: for (unsigned c = VECTOR_ADDR_BIT; c >= 1; c--){
 
-        const unsigned base = -1 << (c - 1);
+        unsigned base = -1 << (c - 1);
 
-        COMP_LOOP: for (unsigned r = r_strt; r < r_end; r++){
-
+        COMP_LOOP: for (unsigned r = 0; r < r_end; r++){
             UINT64_T f1 = xt[r << 1];
 
-            UINT64_T f2 = (twiddle[r & base] * xt[r << 1 + 1]) % p;
+            UINT64_T f2 =  (twiddle[r & base] * xt[(r << 1) + 1]) % p;
+            
+            result[r]       = modulo_dev(f1 + f2,  p);    
 
-            result[r]       = (f1 + f2) % p;
-
-            result[r + r_end]  = (f1 - f2) % p;
+            result[r + r_end]  = modulo_dev(f1 - f2, p);
 
         }
 
