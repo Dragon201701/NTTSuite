@@ -1,0 +1,22 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n61[label="n61 : DOPER\n 1632cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n63[label="n63 : DOPER\n 1649cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n60[label="n60 : DOPER\n 1632cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n59[label="n59 : ZOPER\n 1632cy+2.4\n",shape=ellipse];
+  n47[label="n47 : DOPER\n 1631cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n154[label="n154 : DOPER\n 1631cy+10\n",shape=ellipse,style=filled,color=bisque];
+  n150[label="n150 : ZOPER\n 1631cy+2.4\n",shape=ellipse];
+  n149[label="n149 : DOPER\n 1630cy+10\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n61  : 0x7ff63a0ecb20 COMP_LOOP-1:COMP_LOOP:rem#1\ln63  : 0x7ff63a2057f0 COMP_LOOP:write_mem(result:rsc.@)\ln60  : 0x7ff649007e20 COMP_LOOP-1:acc#1\ln59  : 0x7ff63a20d020 COMP_LOOP:f1:slc()(63-0)#2\ln47  : 0x7ff63a1d77c0 COMP_LOOP:f1:read_mem(xt:rsc.@)\ln154 : 0x7ff63a1e2c00 COPY_LOOP#1:write_mem(xt:rsc.@)#1\ln150 : 0x7ff63a01dfe0 COPY_LOOP#1:conc#67\ln149 : 0x7ff63a201de0 COPY_LOOP#1:read_mem(result:rsc.@)\l",shape=none];
+  n61 -> n63[label="258 : 0+2.250",color=blue];
+  n60 -> n61[label="259 : 0",color=green2];
+  n59 -> n60[label="259 : 0",color=green2];
+  n47 -> n59[label="258 : 0",color=blue];
+  n154 -> n47[label="262 : 0+1.939",color=red, style=bold];
+  n150 -> n154[label="258 : 0+1.189",color=blue];
+  n149 -> n150[label="259 : 0",color=green2];
+  n63 -> n149[label="262 : 0+1.500",color=red, style=bold];
+}
+

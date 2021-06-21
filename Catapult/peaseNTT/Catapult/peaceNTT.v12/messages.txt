@@ -1,0 +1,258 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.60 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/main.cpp -exclude true
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+option set Input/TargetPlatform x86_64
+/INPUTFILES/3
+c++11
+option set Input/CppStandard c++11
+
+/INPUTFILES/2
+go analyze
+Source file analysis completed (CIN-68)
+go compile
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+solution file add ./src/utils.cpp -exclude true
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp (CIN-69)
+quit
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v6': elapsed time 2.23 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 49, Real ops = 15, Vars = 18 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v6/CDesignChecker/design_checker.sh'
+Loop '/peaceNTT/core/COMP_LOOP' iterated at most 2048 times. (LOOP-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/peaceNTT/core/COPY_LOOP' iterated at most 4096 times. (LOOP-2)
+Found top design routine 'peaceNTT' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'peaceNTT' (CIN-14)
+Synthesizing routine 'peaceNTT' (CIN-13)
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v6' (SOL-8)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'cpyVec_dev' (CIN-14)
+Inlining routine 'cpyVec_dev' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/peaceNTT' ... (CIN-4)
+Design 'peaceNTT' was read (SOL-1)
+Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 4096 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 49, Real ops = 15, Vars = 18 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v6': elapsed time 0.70 seconds, memory usage 1445344kB, peak memory usage 1445864kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v6' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+go libraries
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v6': elapsed time 0.08 seconds, memory usage 1445284kB, peak memory usage 1445864kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 49, Real ops = 15, Vars = 18 (SOL-21)
+/CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set SCHED_USE_MULTICYCLE true
+go memories
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v6' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 117, Real ops = 36, Vars = 31 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v12': elapsed time 0.93 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+# Info: Branching solution 'peaceNTT.v12' at state 'assembly' (PRJ-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v12/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/peaceNTT/core/COPY_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/peaceNTT/core/COPY_LOOP#1' is being partially unrolled 8 times. (LOOP-3)
+/peaceNTT/core/STAGE_LOOP/PIPELINE_INIT_INTERVAL 1
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v12' (SOL-8)
+go extract
+# Info: Design complexity at end of 'loops': Total ops = 117, Real ops = 36, Vars = 31 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v10': elapsed time 0.92 seconds, memory usage 1445848kB, peak memory usage 1445864kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v10/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'peaceNTT.v10' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/peaceNTT/vec:rsc/INTERLEAVE 8
+directive set /peaceNTT/vec:rsc -INTERLEAVE 8
+/peaceNTT/result:rsc/INTERLEAVE 8
+directive set /peaceNTT/result:rsc -INTERLEAVE 8
+/peaceNTT/core/xt:rsc/INTERLEAVE 8
+/peaceNTT/core/xt/WORD_WIDTH 128
+directive set /peaceNTT/core/xt -WORD_WIDTH 128
+Loop '/peaceNTT/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/peaceNTT/core/COPY_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/peaceNTT/core/COPY_LOOP#1' is being partially unrolled 8 times. (LOOP-3)
+/peaceNTT/twiddle:rsc/INTERLEAVE 8
+directive set /peaceNTT/twiddle:rsc -INTERLEAVE 8
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v10' (SOL-8)
+go extract
+# Info: Design complexity at end of 'loops': Total ops = 117, Real ops = 36, Vars = 31 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v9': elapsed time 0.89 seconds, memory usage 1445848kB, peak memory usage 1445864kB (SOL-9)
+Loop '/peaceNTT/core/COPY_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/peaceNTT/core/COPY_LOOP#1' is being partially unrolled 8 times. (LOOP-3)
+/peaceNTT/core/STAGE_LOOP/PIPELINE_INIT_INTERVAL 0
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v9' (SOL-8)
+go extract
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v9/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'peaceNTT.v9' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/peaceNTT/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+# Info: Design complexity at end of 'loops': Total ops = 117, Real ops = 36, Vars = 31 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v8': elapsed time 0.93 seconds, memory usage 1445848kB, peak memory usage 1445864kB (SOL-9)
+Loop '/peaceNTT/core/COPY_LOOP#1' is being partially unrolled 8 times. (LOOP-3)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v8' (SOL-8)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT/Catapult/peaceNTT.v8/CDesignChecker/design_checker.sh'
+go extract
+Loop '/peaceNTT/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+# Info: Branching solution 'peaceNTT.v8' at state 'assembly' (PRJ-2)
+Loop '/peaceNTT/core/COPY_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/peaceNTT/core/COMP_LOOP/UNROLL 4
+directive set /peaceNTT/core/COMP_LOOP -UNROLL 4
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+/peaceNTT/core/COPY_LOOP#1/UNROLL 8
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+directive set /peaceNTT/core/COPY_LOOP#1 -UNROLL 8
+/peaceNTT/core/COPY_LOOP/UNROLL 4
+/peaceNTT/core/STAGE_LOOP/PIPELINE_INIT_INTERVAL 1
+directive set /peaceNTT/core/STAGE_LOOP -PIPELINE_INIT_INTERVAL 1
+# Info: Design complexity at end of 'loops': Total ops = 59, Real ops = 15, Vars = 23 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v6': elapsed time 0.03 seconds, memory usage 1445284kB, peak memory usage 1445864kB (SOL-9)
+Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v6' (SOL-8)
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 374, Real ops = 36, Vars = 110 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v12': elapsed time 4.85 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/result:rsc(0)(1)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Resource '/peaceNTT/core/xt:rsc' split into 1 x 8 blocks (MEM-11)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v12' (SOL-8)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(1)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(0)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(7)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(6)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Resource '/peaceNTT/vec:rsc' split into 1 x 8 blocks (MEM-11)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(3)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(2)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(5)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc(0)(4)' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 128 x 128). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(7)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(6)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Resource '/peaceNTT/twiddle:rsc' split into 1 x 8 blocks (MEM-11)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/vec:rsc(0)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/vec:rsc(0)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(3)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(2)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(5)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc(0)(4)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 512 x 64). (MEM-4)
+Resource '/peaceNTT/result:rsc' split into 1 x 8 blocks (MEM-11)
+# Info: Design complexity at end of 'cluster': Total ops = 374, Real ops = 36, Vars = 110 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v12': elapsed time 0.10 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v12' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 671, Real ops = 132, Vars = 158 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v12': elapsed time 1.05 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+Design 'peaceNTT' contains '132' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v12' (SOL-8)
+
+# Messages from "go allocate"
+
+# Error:   MEMORYREAD "COMP_LOOP:f1:read_mem(xt:rsc(0)(0).@)" ntt.cpp(85,26,10) (BASIC-25)
+# Error: Feedback path is too long to schedule design with current pipeline and clock constraints. (SCHD-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Error:   MEMORYWRITE "COMP_LOOP:write_mem(result:rsc(0)(0).@)#1" ntt.cpp(91,12,17) (BASIC-25)
+# Error: Schedule failed, sequential delay violated. List of sequential operations and dependencies: (SCHD-20)
+ ntt.cpp(89,34,1): chained data dependency at time 668cy+3.9 (SCHD-6)
+   with output variable "COMP_LOOP-1:COMP_LOOP:rem#1.cmx.sva" (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_add(64,0,64,0,65)" (SCHD-6)
+   from operation ACCU "COMP_LOOP-1:acc#1" with delay  1.845 (SCHD-6)
+ ntt.cpp(89,40,1): chained data dependency with delay of 0.75 at time 668cy+10 (SCHD-6)
+# Error:   MEMORYWRITE "COMP_LOOP:write_mem(result:rsc(0)(0).@)" ntt.cpp(89,12,9) (BASIC-25)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_rem(65,64,0)" (SCHD-6)
+   from operation REM "COMP_LOOP-1:COMP_LOOP:rem#1" with delay  16cy (SCHD-6)
+Netlist written to file 'schedule.gnt' (NET-4)
+   with input delay 0.50 (SCHD-6)
+   with output variable "tmp#10.sva" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_1R1W_RBW_rwport(23,9,64,512,512,64,1)" (SCHD-6)
+ ntt.cpp(91,12,17): chained feedback data dependency at time 666cy+10 (SCHD-6)
+   with input delay 0.50 (SCHD-6)
+   from operation CONCATENATE CONCATENATE "COPY_LOOP#1:conc#67" (SCHD-6)
+ ntt.cpp(61,8,6): chained data dependency with delay of 0.75 at time 667cy+2.4 (SCHD-6)
+   from operation MEMORYREAD "COPY_LOOP#1:read_mem(result:rsc(0)(0).@)" with delay  2.4 (SCHD-6)
+ ntt.cpp(61,17,6): chained data dependency at time 666cy+10 (SCHD-6)
+   from operation MEMORYWRITE "COMP_LOOP:write_mem(result:rsc(0)(0).@)" with delay  0.1 (SCHD-6)
+ ntt.cpp(89,12,9): chained data dependency at time 685cy+10 (SCHD-6)
+   with output variable "result:rsc(0)(0).@" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_1R1W_RBW_rwport(23,9,64,512,512,64,1)" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_1R1W_RBW_rwport(23,9,64,512,512,64,1)" (SCHD-6)
+   from operation MEMORYWRITE "COMP_LOOP:write_mem(result:rsc(0)(0).@)#1" with delay  0.1 (SCHD-6)
+   with input delay 0.50 (SCHD-6)
+   with output variable "result:rsc(0)(0).@" (SCHD-6)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v12' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+   from operation READSLICE READSLICE "COMP_LOOP:f1:slc(COMP_LOOP:f1:read_mem(xt:rsc(0)(0).@))(63-0)" (SCHD-6)
+ ntt.cpp(85,26,10): chained data dependency at time 668cy+2.4 (SCHD-6)
+   from operation MEMORYREAD "COMP_LOOP:f1:read_mem(xt:rsc(0)(0).@)" with delay  2.4 (SCHD-6)
+ ntt.cpp(85,26,10): chained data dependency at time 667cy+10 (SCHD-6)
+   from operation MUX1HOT "COMP_LOOP:f1:mux1h" with delay  1.5 (SCHD-6)
+ ntt.cpp(85,26,10): chained data dependency at time 668cy+2.4 (SCHD-6)
+   with output variable "tmp(63:0).lpi#2.dfm" (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_mux1hot(64,4)" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_1R1W_RBW_rwport_en(7,7,128,128,128,128,1)" (SCHD-6)
+   from operation MEMORYWRITE "COPY_LOOP#1:write_mem(xt:rsc(0)(0).@)#1" with delay  0.1 (SCHD-6)
+   with input delay 0.50 (SCHD-6)
+   with output variable "xt:rsc(0)(0).@" (SCHD-6)
+   with output variable "COMP_LOOP:f1:read_mem(xt:rsc(0)(0).@).ncse.sva#1" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_1R1W_RBW_rwport_en(7,7,128,128,128,128,1)" (SCHD-6)
+ ntt.cpp(61,8,6): chained feedback data dependency with delay of 0.75 at time 667cy+10 (SCHD-6)
+   with input delay 0.50 (SCHD-6)
+# Error:   MEMORYWRITE "COPY_LOOP#1:write_mem(xt:rsc(0)(0).@)#1" ntt.cpp(61,8,6) (BASIC-25)
+# Error:   MEMORYREAD "COPY_LOOP#1:read_mem(result:rsc(0)(0).@)" ntt.cpp(61,17,6) (BASIC-25)
+# Error:   REM "COMP_LOOP-1:COMP_LOOP:rem#1" ntt.cpp(89,40,1), delay:  16cy, mapped to: mgc_Xilinx-VIRTEX-7-2_beh.mgc_rem(65,64,0) (BASIC-25)

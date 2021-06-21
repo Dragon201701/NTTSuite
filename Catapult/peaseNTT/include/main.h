@@ -3,7 +3,7 @@
 #include <cstdlib> 		/* malloc() */
 
 #include <iostream>
-
+#include <mc_scverify.h>
 #include "ntt.h"
 #include "utils.h"
 #include "config.h"
