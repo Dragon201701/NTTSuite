@@ -1,6 +1,6 @@
 #include <cmath>		/* log2(), pow() */
 #include <cstdint>		/* uint64_t */
-#include <cstdlib> 		/* malloc() */
+//#include <cstdlib> 		/* malloc() */
 
 #include <iostream>
 #include <mc_scverify.h>
