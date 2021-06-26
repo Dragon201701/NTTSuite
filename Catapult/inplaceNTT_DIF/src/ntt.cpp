@@ -44,7 +44,7 @@ void inPlaceNTT_DIF(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T result
     //mgc_ac_log2(n, i);
 	STAGE_MAIN_LOOP:for(unsigned i = VECTOR_ADDR_BIT; i >= 1; i--){
 
-		m = 2^i;
+		m = 1 << (i - 1);
 
 		k_ = ((UINT64_T)(p - 1))/m;
 		a = modExp(r,k_,p);

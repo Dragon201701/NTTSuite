@@ -75,11 +75,16 @@ void peaceNTT(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T result
     STAGE_LOOP: for (unsigned c = VECTOR_ADDR_BIT; c >= 1; c--){
 
         unsigned base = -1 << (c - 1);
+        unsigned indicator = ~base;
+        UINT64_T lst = 0;
 
         COMP_LOOP: for (unsigned r = 0; r < r_end; r++){
             UINT64_T f1 = xt[r << 1];
-
-            UINT64_T f2 =  (twiddle[r & base] * xt[(r << 1) + 1]) % p;
+            
+            if((r & indicator) == 0){
+                lst = twiddle[r & base];
+            }
+            UINT64_T f2 =  (lst * xt[(r << 1) + 1]) % p;//(twiddle[r & base] * xt[(r << 1) + 1]) % p;
             
             result[r]       = modulo_dev(f1 + f2,  p);    
 

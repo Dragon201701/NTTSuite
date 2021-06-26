@@ -1,4 +1,5 @@
 #include "../include/main.h"
+#include "../include/utils.h"
 
 using namespace std;
 
@@ -146,7 +147,13 @@ CCS_MAIN(int argc, char *argv[]){
 	result1 = peaceNTT_golden(vec, VECTOR_SIZE,  p, r, false);
 	//printVec(result, VECTOR_SIZE);
 	UINT64_T vec_dev[VECTOR_SIZE], twiddle_dev[VECTOR_SIZE], result_dev[VECTOR_SIZE];
-	UINT64_T p_dev = 68719403009, r_dev = 36048964756;
+	uint64_t w0 = (UINT64_T)modExp(g, (p - 1) / n, p);
+	uint64_t witer = 1;
+	for(int i=0; i < n; i++){
+		twiddle_dev[i] = (UINT64_T)witer;
+		witer = modulo(witer * w0);
+	}
+	UINT64_T p_dev = (479 << 21) + 1, r_dev = 3;
 	for (unsigned i = 0; i < VECTOR_SIZE; i++){
 		twiddle_dev[i] = i;
 		vec_dev[i] = i;

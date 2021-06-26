@@ -1,0 +1,42 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 1.73 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'fir_filter' (CIN-6)
+flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+solution file add ${sfd}/src/fir_filter.cpp
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+> end dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.04 seconds, memory usage 1314776kB, peak memory usage 1314776kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+c++11
+flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+flow package require /SCVerify
+# Error: go analyze: Failed analyze
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/catapult.log"
+solution file add ${sfd}/src/csvparser.cpp -exclude true
+go analyze
+/INPUTFILES/3
+solution options defaults
+solution.v2
+10.4.1
+go analyze
+flow package require /SCVerify
+/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv
+/INPUTFILES/1
+/INPUTFILES/2
+solution file add ${sfd}/src/fir_filter_tb.cpp -exclude true
+/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv

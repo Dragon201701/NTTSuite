@@ -1,0 +1,10 @@
+directive set /fir_filter/fir_filter:core/core/sum.sva REGISTER_NAME sum.sva
+directive set /fir_filter/fir_filter:core/core/sum.sva#1 REGISTER_NAME sum.sva
+directive set /fir_filter/fir_filter:core/core/MAC_LOOP:slc(MAC_LOOP:acc)(7).itm REGISTER_NAME MAC_LOOP:slc(MAC_LOOP:acc)(7).itm
+directive set /fir_filter/fir_filter:core/core/SHIFT_LOOP:slc(SHIFT_LOOP:acc)(7).itm REGISTER_NAME MAC_LOOP:slc(MAC_LOOP:acc)(7).itm
+directive set /fir_filter/fir_filter:core/core/MAC_LOOP:slc(b:rsci.s_din)(9-0).itm REGISTER_NAME MAC_LOOP:slc(b:rsci.s_din)(9-0).itm
+directive set /fir_filter/fir_filter:core/core/x:static_init:else:acc.itm REGISTER_NAME MAC_LOOP:slc(b:rsci.s_din)(9-0).itm
+directive set /fir_filter/fir_filter:core/core/x:vinit.ndx.sva REGISTER_NAME MAC_LOOP:slc(b:rsci.s_din)(9-0).itm
+directive set /fir_filter/fir_filter:core/core/SHIFT_LOOP:n(6:0).sva REGISTER_NAME MAC_LOOP:slc(b:rsci.s_din)(9-0).itm
+directive set /fir_filter/fir_filter:core/core/MAC_LOOP:n(6:0).sva#1 REGISTER_NAME MAC_LOOP:n(6:0).sva#1
+directive set /fir_filter/fir_filter:core/core/SHIFT_LOOP:acc#2.cse.sva REGISTER_NAME MAC_LOOP:n(6:0).sva#1

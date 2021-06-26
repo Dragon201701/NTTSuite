@@ -1,0 +1,279 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 1.85 seconds, memory usage 1445788kB, peak memory usage 1445788kB (SOL-9)
+Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'fir_filter' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ${sfd}/src/csvparser.cpp -exclude true
+go analyze
+/INPUTFILES/3
+/INPUTFILES/1
+/INPUTFILES/2
+solution file add ${sfd}/src/fir_filter_tb.cpp -exclude true
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv
+flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+solution file add ${sfd}/src/fir_filter.cpp
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution options defaults
+Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+solution.v2
+# Error: Compilation aborted (CIN-5)
+10.4.1
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+flow package require /SCVerify
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go analyze
+c++11
+> end dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.04 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+# Error: go analyze: Failed analyze
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 63, Real ops = 19, Vars = 14 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'fir_filter.v1': elapsed time 1.44 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/fir_filter/core/MAC_LOOP' iterated at most 127 times. (LOOP-2)
+Design 'fir_filter' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v1/CDesignChecker/design_checker.sh'
+INOUT port 'b' is only used as an input. (OPT-10)
+Optimizing block '/fir_filter' ... (CIN-4)
+INOUT port 'y' is only used as an output. (OPT-11)
+Found top design routine 'fir_filter' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'fir_filter' (CIN-14)
+Synthesizing routine 'fir_filter' (CIN-13)
+go compile
+# Info: Starting transformation 'compile' on solution 'fir_filter.v1' (SOL-8)
+Loop '/fir_filter/core/SHIFT_LOOP' iterated at most 126 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 63, Real ops = 19, Vars = 14 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'fir_filter.v1': elapsed time 0.77 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'fir_filter.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1926-2
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 64, Real ops = 19, Vars = 14 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'fir_filter.v1': elapsed time 0.08 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'fir_filter.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 70, Real ops = 19, Vars = 17 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'fir_filter.v1': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Starting transformation 'loops' on solution 'fir_filter.v1' (SOL-8)
+go architect
+Loop '/fir_filter/core/main' is left rolled. (LOOP-4)
+Loop '/fir_filter/core/MAC_LOOP' is left rolled. (LOOP-4)
+Loop '/fir_filter/core/SHIFT_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 82, Real ops = 21, Vars = 19 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'fir_filter.v1': elapsed time 0.81 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Memory Resource '/fir_filter/core/x:rsc' (from var: x) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 127 x 3). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'fir_filter.v1' (SOL-8)
+Memory Resource '/fir_filter/b:rsc' (from var: b) mapped to 'amba.ccs_axi4_slave_mem' (size: 127 x 10). (MEM-4)
+I/O-Port Resource '/fir_filter/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_out' (size: 9). (MEM-2)
+I/O-Port Resource '/fir_filter/i_sample:rsc' (from var: i_sample) mapped to 'ccs_ioport.ccs_in' (size: 3). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 82, Real ops = 21, Vars = 19 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'fir_filter.v2': elapsed time 0.03 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/CDesignChecker/design_checker.sh'
+/SCHED_USE_MULTICYCLE true
+# Info: Branching solution 'fir_filter.v2' at state 'memories' (PRJ-2)
+# Info: Starting transformation 'cluster' on solution 'fir_filter.v2' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+go extract
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Design complexity at end of 'cluster': Total ops = 82, Real ops = 21, Vars = 19 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'fir_filter.v1': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'fir_filter.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 99, Real ops = 21, Vars = 20 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'fir_filter.v2': elapsed time 0.14 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+Design 'fir_filter' contains '21' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'fir_filter.v2' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 99, Real ops = 21, Vars = 20 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'fir_filter.v2': elapsed time 0.23 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+Prescheduled LOOP '/fir_filter/core/core:rlp' (1 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/fir_filter/core': Latency = 635, Area (Datapath, Register, Total) = 1166.00, 0.00, 1166.00 (CRAAS-11)
+Prescheduled LOOP '/fir_filter/core/SHIFT_LOOP' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir_filter/core/MAC_LOOP' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir_filter/core/x:vinit' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir_filter/core/main' (5 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'fir_filter.v2' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/fir_filter/core': Latency = 635, Area (Datapath, Register, Total) = 1166.00, 0.00, 1166.00 (CRAAS-12)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/fir_filter/core' (total length 892 c-steps) (SCHD-8)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 687, Real ops = 44, Vars = 292 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'fir_filter.v2': elapsed time 3.56 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: Starting transformation 'schedule' on solution 'fir_filter.v2' (SOL-8)
+Global signal 'i_sample:rsc.dat' added to design 'fir_filter' for component 'i_sample:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+Global signal 'x:rsc.d' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+Global signal 'x:rsc.we' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+Global signal 'i_sample:rsc.triosy.lz' added to design 'fir_filter' for component 'i_sample:rsc.triosy:obj' (LIB-3)
+Global signal 'x:rsc.wadr' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+Global signal 'x:rsc.clken' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+Global signal 'y:rsc.dat' added to design 'fir_filter' for component 'y:rsci' (LIB-3)
+Global signal 'x:rsc.radr' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+Global signal 'x:rsc.q' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+Report written to file 'cycle.rpt'
+Global signal 'b:rsc.BRESP' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'y:rsc.triosy.lz' added to design 'fir_filter' for component 'y:rsc.triosy:obj' (LIB-3)
+Global signal 'b:rsc.BID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.triosy.lz' added to design 'fir_filter' for component 'b:rsc.triosy:obj' (LIB-3)
+Global signal 'b:rsc.BVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.BUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WLAST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RDATA' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARBURST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARSIZE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARQOS' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARCACHE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARPROT' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARLOCK' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARREGION' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Info: Not creating buffer for wait controller for component 'b:rsc' (SCHD-46)
+Global signal 'b:rsc.BREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARLEN' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.s_tdone' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARADDR' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.tr_write_done' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWBURST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RLAST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWSIZE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RRESP' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWCACHE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWLOCK' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.RUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'i_sample:rsc' (SCHD-46)
+Global signal 'b:rsc.AWLEN' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWADDR' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WSTRB' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WDATA' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWQOS' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWPROT' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWREGION' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 466, Real ops = 91, Vars = 272 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'fir_filter.v2': elapsed time 0.65 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Warning: Extrapolation detected. Script '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/adjust_char_library.tcl' generated. (LIB-142)
+Creating shared register 'x:static_init:else:acc.itm' for variables 'x:static_init:else:acc.itm, x:vinit.ndx.sva, SHIFT_LOOP:n(6:0).sva' (2 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+# Info: Starting transformation 'dpfsm' on solution 'fir_filter.v2' (SOL-8)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 460, Real ops = 83, Vars = 403 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'fir_filter.v2': elapsed time 0.98 seconds, memory usage 1445852kB, peak memory usage 1445852kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'fir_filter.v2' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Design complexity at end of 'extract': Total ops = 454, Real ops = 85, Vars = 272 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'fir_filter.v2': elapsed time 5.58 seconds, memory usage 1445852kB, peak memory usage 1445852kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Report written to file 'rtl.rpt'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+order file name is: rtl.v_order_sim.txt
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
+Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_rtl.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
+Netlist written to file 'rtl.v' (NET-4)
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Starting transformation 'extract' on solution 'fir_filter.v2' (SOL-8)
+order file name is: rtl.vhdl_order.txt
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_rtl.vhdl
+Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_sim_rtl.v
+Add dependent file: ./rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
+order file name is: rtl.vhdl_order_sim.txt
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd

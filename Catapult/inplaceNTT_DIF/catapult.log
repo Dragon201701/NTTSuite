@@ -14,93 +14,78 @@
 //                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
 //                       DesignPad v2.78_1.0
 //  
-//  Start time Wed Jun  9 00:12:00 2021
+//  Start time Tue Jun 22 23:17:50 2021
 # -------------------------------------------------
-# Logging session transcript to file "/tmp/log25686402a90d6.0"
-set_working_dir /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF
-solution file add ./src/ntt_tb.cpp -exclude true
-# /INPUTFILES/1
-solution file add ./src/ntt.cpp
-# /INPUTFILES/2
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Logging session transcript to file "/tmp/log12786e42ac572.0"
+project save
+# Moving session transcript to file "/home/jd4691/NTT_Xilinx/catapult.log"
+# Saving project file '/home/jd4691/NTT_Xilinx/Catapult_1.ccs'. (PRJ-5)
+project load /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test
 # Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
-# Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/setup.tcl
+dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# > puts "Catapult Online Training: Module 3"
+# Catapult Online Training: Module 3
+# > puts "In this lab, you will simulate the FIR filter"
+# In this lab, you will simulate the FIR filter
+# > puts "  with bit-accurate AC Datatypes"
+#   with bit-accurate AC Datatypes
+# > set sfd [file dirname [info script]]
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4
+# > solution new -state initial
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+# solution.v2
+# > solution options defaults
+# > flow package require /SCVerify
+# 10.4.1
+# > flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv
+# > solution file add ${sfd}/src/fir_filter.cpp
+# /INPUTFILES/1
+# > solution file add ${sfd}/src/fir_filter_tb.cpp -exclude true
+# /INPUTFILES/2
+# > solution file add ${sfd}/src/csvparser.cpp -exclude true
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
 # Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
 # Error: /usr/include/gnu/stubs.h(7): cannot open source file "gnu/stubs-32.h" (CRD-1696)
 # Error: Compilation aborted (CIN-5)
-# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 1314692kB, peak memory usage 1314692kB (SOL-9)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.04 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+# > end dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/setup.tcl
 # Error: go analyze: Failed analyze
 option set Input/TargetPlatform x86_64
 option set Input/CppStandard c++11
 # c++11
 go analyze
-
-go compile
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
 # Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Warning: $PROJECT_HOME/include/config.h(17): last line of file ends without a newline (CRD-1)
-# Warning: $PROJECT_HOME/include/ntt.h(19): last line of file ends without a newline (CRD-1)
-# Warning: $PROJECT_HOME/src/ntt.cpp(71): last line of file ends without a newline (CRD-1)
-# $PROJECT_HOME/src/ntt.cpp(32): Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(12): Pragma 'hls_design<top>' detected on routine 'fir_filter' (CIN-6)
 # Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.73 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
-# Generating synthesis internal form... (CIN-3)
-# $PROJECT_HOME/src/ntt.cpp(33): Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
-# $PROJECT_HOME/src/ntt.cpp(33): Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
-# $PROJECT_HOME/src/ntt.cpp(33): Inlining routine 'inPlaceNTT_DIF' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator-<64, false>' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2813): Inlining routine 'operator/<64, false>' (CIN-14)
-# $PROJECT_HOME/src/ntt.cpp(13): Inlining routine 'modExp' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator><64, false>' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator%<64, false>' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>><64, false>' (CIN-14)
-# $PROJECT_HOME/src/ntt.cpp(13): Inlining routine 'modExp' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator><64, false>' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator%<64, false>' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>><64, false>' (CIN-14)
-# $PROJECT_HOME/src/ntt.cpp(33): Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
-# $PROJECT_HOME/src/ntt.cpp(33): INOUT port 'vec' is only used as an input. (OPT-10)
-# $PROJECT_HOME/src/ntt.cpp(36): Loop '/inPlaceNTT_DIF/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
-# $PROJECT_HOME/src/ntt.cpp(54): Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 9 times. (LOOP-2)
-# $PROJECT_HOME/src/ntt.cpp(45): Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' iterated at most 10 times. (LOOP-2)
-# Design 'inPlaceNTT_DIF' was read (SOL-1)
-# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
-# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 2.63 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'compile': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
-solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
-solution library remove *
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
-go libraries
-# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
-# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
-# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.43 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'libraries': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
-go libraries
-directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
-# /CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 1.85 seconds, memory usage 1445788kB, peak memory usage 1445788kB (SOL-9)
 go compile
-solution library remove *
-# Info: Branching solution 'inPlaceNTT_DIF.v2' at state 'compile' (PRJ-2)
+# Info: Starting transformation 'compile' on solution 'fir_filter.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Found top design routine 'fir_filter' specified by directive (CIN-52)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Synthesizing routine 'fir_filter' (CIN-13)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Inlining routine 'fir_filter' (CIN-14)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Optimizing block '/fir_filter' ... (CIN-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(14): INOUT port 'b' is only used as an input. (OPT-10)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(15): INOUT port 'y' is only used as an output. (OPT-11)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Loop '/fir_filter/core/SHIFT_LOOP' iterated at most 126 times. (LOOP-2)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Loop '/fir_filter/core/MAC_LOOP' iterated at most 127 times. (LOOP-2)
+# Design 'fir_filter' was read (SOL-1)
 # Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v2/CDesignChecker/design_checker.sh'
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
-solution library add Xilinx_ROMS
-solution library remove *
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'fir_filter.v1': elapsed time 1.44 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 63, Real ops = 19, Vars = 14 (SOL-21)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1926-2
 solution library add Xilinx_RAMS
+solution library add amba
 go libraries
-# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Info: Starting transformation 'libraries' on solution 'fir_filter.v1' (SOL-8)
 # Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
 # Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
 # Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
@@ -110,258 +95,640 @@ go libraries
 # Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
 # Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
 # Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
-# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.74 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'libraries': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
+# Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'fir_filter.v1': elapsed time 0.77 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 63, Real ops = 19, Vars = 14 (SOL-21)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
 go assembly
-# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.13 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'assembly': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
+# Info: Starting transformation 'assembly' on solution 'fir_filter.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'fir_filter.v1': elapsed time 0.08 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 64, Real ops = 19, Vars = 14 (SOL-21)
 go architect
-# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# $PROJECT_HOME/src/ntt.cpp(36): Loop '/inPlaceNTT_DIF/core/COPY_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(17): Loop '/inPlaceNTT_DIF/core/modExp:while' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(17): Loop '/inPlaceNTT_DIF/core/modExp#1:while' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(54): Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(52): Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(45): Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(33): Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
-# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# $PROJECT_HOME/src/ntt.cpp(33): Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
-# $PROJECT_HOME/src/ntt.cpp(33): I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $PROJECT_HOME/src/ntt.cpp(33): I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $PROJECT_HOME/src/ntt.cpp(33): Memory Resource '/inPlaceNTT_DIF/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
-# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.28 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'memories': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'cluster': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# Design 'inPlaceNTT_DIF' contains '52' real operations. (SOL-11)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.61 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'fir_filter.v1' (SOL-8)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Loop '/fir_filter/core/SHIFT_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Loop '/fir_filter/core/MAC_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Loop '/fir_filter/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'fir_filter.v1': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 70, Real ops = 19, Vars = 17 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'fir_filter.v1' (SOL-8)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(18): Memory Resource '/fir_filter/core/x:rsc' (from var: x) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 127 x 3). (MEM-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): I/O-Port Resource '/fir_filter/i_sample:rsc' (from var: i_sample) mapped to 'ccs_ioport.ccs_in' (size: 3). (MEM-2)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(14): Memory Resource '/fir_filter/b:rsc' (from var: b) mapped to 'amba.ccs_axi4_slave_mem' (size: 127 x 10). (MEM-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(15): I/O-Port Resource '/fir_filter/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_out' (size: 9). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'fir_filter.v1': elapsed time 0.81 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 82, Real ops = 21, Vars = 19 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'fir_filter.v1' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Completed transformation 'cluster' on solution 'fir_filter.v1': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 82, Real ops = 21, Vars = 19 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'fir_filter.v1' (SOL-8)
+# Design 'fir_filter' contains '21' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'fir_filter.v1': elapsed time 0.26 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 99, Real ops = 21, Vars = 20 (SOL-21)
 go allocate
-# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
-# Info: Select qualified components for data operations ... (CRAAS-3)
-# Warning: Couldn't find library component for operator 'div(64,0,4,0,32)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(65,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(65,1,64,0,65)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(129,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Info: Apply resource constraints on data operations ... (CRAAS-4)
-# Error: Couldn't find library component for operation 'operator_<64,false>:div' ( div(64,0,4,0,32) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp:while:if:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp:while:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:COMP_LOOP:rem#1' ( rem(65,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:rem#1' ( rem(65,1,64,0,65) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:rem' ( rem(129,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp#1:while:if:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp#1:while:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.17 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
-# Error: Design 'inPlaceNTT_DIF' could not schedule partition '/inPlaceNTT_DIF/core' - incomplete component selection
-directive set SCHED_USE_MULTICYCLE true
-# Error: Directive 'SCHED_USE_MULTICYCLE' must be specified no later than state 'memories'. (DIR-5)
-# Error: directive set: directive cannot be set at this stage
-go extract
-# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
-# Info: Select qualified components for data operations ... (CRAAS-3)
-# Warning: Couldn't find library component for operator 'div(64,0,4,0,32)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(65,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(65,1,64,0,65)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(129,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Info: Apply resource constraints on data operations ... (CRAAS-4)
-# Error: Couldn't find library component for operation 'operator_<64,false>:div' ( div(64,0,4,0,32) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp:while:if:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp:while:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:COMP_LOOP:rem#1' ( rem(65,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:rem#1' ( rem(65,1,64,0,65) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:rem' ( rem(129,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp#1:while:if:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp#1:while:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.18 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
-# Error: Design 'inPlaceNTT_DIF' could not schedule partition '/inPlaceNTT_DIF/core' - incomplete component selection
-go assembly
-directive set DSP_EXTRACTION yes
-# Info: Branching solution 'inPlaceNTT_DIF.v3' at state 'assembly' (PRJ-2)
-# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v3/CDesignChecker/design_checker.sh'
-# /DSP_EXTRACTION yes
-go assembly
-go extract
-# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v3' (SOL-8)
-# $PROJECT_HOME/src/ntt.cpp(36): Loop '/inPlaceNTT_DIF/core/COPY_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(17): Loop '/inPlaceNTT_DIF/core/modExp:while' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(17): Loop '/inPlaceNTT_DIF/core/modExp#1:while' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(54): Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(52): Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(45): Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
-# $PROJECT_HOME/src/ntt.cpp(33): Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
-# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v3': elapsed time 0.04 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v3' (SOL-8)
-# $PROJECT_HOME/src/ntt.cpp(33): Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
-# $PROJECT_HOME/src/ntt.cpp(33): I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $PROJECT_HOME/src/ntt.cpp(33): I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $PROJECT_HOME/src/ntt.cpp(33): Memory Resource '/inPlaceNTT_DIF/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
-# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v3': elapsed time 0.33 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'memories': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v3' (SOL-8)
-# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v3': elapsed time 0.03 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'cluster': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v3' (SOL-8)
-# Design 'inPlaceNTT_DIF' contains '52' real operations. (SOL-11)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v3': elapsed time 0.33 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
-# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v3' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
-# Info: Select qualified components for data operations ... (CRAAS-3)
-# Warning: Couldn't find library component for operator 'div(64,0,4,0,32)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(65,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(65,1,64,0,65)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(129,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
-# Info: Apply resource constraints on data operations ... (CRAAS-4)
-# Error: Couldn't find library component for operation 'operator_<64,false>:div' ( div(64,0,4,0,32) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp:while:if:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp:while:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:COMP_LOOP:rem#1' ( rem(65,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:rem#1' ( rem(65,1,64,0,65) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'COMP_LOOP:rem' ( rem(129,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp#1:while:if:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Error: Couldn't find library component for operation 'modExp#1:while:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
-# Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v3': elapsed time 0.23 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
-# Error: Design 'inPlaceNTT_DIF' could not schedule partition '/inPlaceNTT_DIF/core' - incomplete component selection
-directive set SCHED_USE_MULTICYCLE true
-# Error: Directive 'SCHED_USE_MULTICYCLE' must be specified no later than state 'memories'. (DIR-5)
-# Error: directive set: directive cannot be set at this stage
-go memories
-directive set SCHED_USE_MULTICYCLE true
-# Info: Branching solution 'inPlaceNTT_DIF.v4' at state 'memories' (PRJ-2)
-# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/CDesignChecker/design_checker.sh'
-# /SCHED_USE_MULTICYCLE true
-go allocate
-# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
-# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v4': elapsed time 0.04 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'cluster': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
-# Design 'inPlaceNTT_DIF' contains '52' real operations. (SOL-11)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v4': elapsed time 0.35 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
-# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'fir_filter.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
 # Info: Select qualified components for data operations ... (CRAAS-3)
 # Info: Apply resource constraints on data operations ... (CRAAS-4)
-# $PROJECT_HOME/src/ntt.cpp(17): Prescheduled LOOP '/inPlaceNTT_DIF/core/modExp#1:while' (40 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(54): Prescheduled LOOP '/inPlaceNTT_DIF/core/COMP_LOOP' (94 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(52): Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' (2 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(17): Prescheduled LOOP '/inPlaceNTT_DIF/core/modExp:while' (40 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(45): Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' (8 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(36): Prescheduled LOOP '/inPlaceNTT_DIF/core/COPY_LOOP' (3 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(33): Prescheduled LOOP '/inPlaceNTT_DIF/core/main' (2 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(33): Prescheduled LOOP '/inPlaceNTT_DIF/core/core:rlp' (0 c-steps) (SCHD-7)
-# $PROJECT_HOME/src/ntt.cpp(33): Prescheduled SEQUENTIAL '/inPlaceNTT_DIF/core' (total length 15634 c-steps) (SCHD-8)
-# Info: $PROJECT_HOME/src/ntt.cpp(33): Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 15718, Area (Datapath, Register, Total) = 93553.70, 0.00, 93553.70 (CRAAS-11)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Prescheduled LOOP '/fir_filter/core/MAC_LOOP' (2 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Prescheduled LOOP '/fir_filter/core/SHIFT_LOOP' (3 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled LOOP '/fir_filter/core/main' (5 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(18): Prescheduled LOOP '/fir_filter/core/x:vinit' (2 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled LOOP '/fir_filter/core/core:rlp' (1 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled SEQUENTIAL '/fir_filter/core' (total length 892 c-steps) (SCHD-8)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Initial schedule of SEQUENTIAL '/fir_filter/core': Latency = 635, Area (Datapath, Register, Total) = 1166.00, 0.00, 1166.00 (CRAAS-11)
 # At least one feasible schedule exists. (CRAAS-9)
-# Info: $PROJECT_HOME/src/ntt.cpp(33): Final schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 19628, Area (Datapath, Register, Total) = 52431.75, 0.00, 52431.75 (CRAAS-12)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Final schedule of SEQUENTIAL '/fir_filter/core': Latency = 635, Area (Datapath, Register, Total) = 1166.00, 0.00, 1166.00 (CRAAS-12)
 # Resource allocation and scheduling done. (CRAAS-2)
 # Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF.v4': elapsed time 0.54 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'allocate': Total ops = 203, Real ops = 52, Vars = 40 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'fir_filter.v1': elapsed time 0.26 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 99, Real ops = 21, Vars = 20 (SOL-21)
+go memories
+directive set SCHED_USE_MULTICYCLE true
+# Info: Branching solution 'fir_filter.v2' at state 'memories' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/CDesignChecker/design_checker.sh'
+# /SCHED_USE_MULTICYCLE true
 go extract
-# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
-# Global signal 'vec:rsc.q' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
-# Global signal 'vec:rsc.radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
-# Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'p:rsci' (LIB-3)
-# Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'r:rsci' (LIB-3)
-# Global signal 'result:rsc.q' added to design 'inPlaceNTT_DIF' for component 'result:rsci' (LIB-3)
-# Global signal 'result:rsc.radr' added to design 'inPlaceNTT_DIF' for component 'result:rsci' (LIB-3)
-# Global signal 'result:rsc.we' added to design 'inPlaceNTT_DIF' for component 'result:rsci' (LIB-3)
-# Global signal 'result:rsc.d' added to design 'inPlaceNTT_DIF' for component 'result:rsci' (LIB-3)
-# Global signal 'result:rsc.wadr' added to design 'inPlaceNTT_DIF' for component 'result:rsci' (LIB-3)
-# Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy:obj' (LIB-3)
-# Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'p:rsc.triosy:obj' (LIB-3)
-# Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'r:rsc.triosy:obj' (LIB-3)
-# Global signal 'result:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'result:rsc.triosy:obj' (LIB-3)
+# Info: Starting transformation 'cluster' on solution 'fir_filter.v2' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Completed transformation 'cluster' on solution 'fir_filter.v2': elapsed time 0.03 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 82, Real ops = 21, Vars = 19 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'fir_filter.v2' (SOL-8)
+# Design 'fir_filter' contains '21' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'fir_filter.v2': elapsed time 0.14 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 99, Real ops = 21, Vars = 20 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'fir_filter.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Prescheduled LOOP '/fir_filter/core/MAC_LOOP' (2 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Prescheduled LOOP '/fir_filter/core/SHIFT_LOOP' (3 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled LOOP '/fir_filter/core/main' (5 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(18): Prescheduled LOOP '/fir_filter/core/x:vinit' (2 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled LOOP '/fir_filter/core/core:rlp' (1 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled SEQUENTIAL '/fir_filter/core' (total length 892 c-steps) (SCHD-8)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Initial schedule of SEQUENTIAL '/fir_filter/core': Latency = 635, Area (Datapath, Register, Total) = 1166.00, 0.00, 1166.00 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Final schedule of SEQUENTIAL '/fir_filter/core': Latency = 635, Area (Datapath, Register, Total) = 1166.00, 0.00, 1166.00 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'fir_filter.v2': elapsed time 0.23 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 99, Real ops = 21, Vars = 20 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'fir_filter.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+# Global signal 'i_sample:rsc.dat' added to design 'fir_filter' for component 'i_sample:rsci' (LIB-3)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Creating buffer for wait controller for component 'i_sample:rsc' (SCHD-46)
+# Global signal 'b:rsc.AWID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWADDR' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWLEN' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWSIZE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWBURST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWLOCK' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWCACHE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWPROT' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWQOS' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWREGION' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.AWREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.WDATA' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.WSTRB' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.WLAST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.WUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.WVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.WREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.BID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.BRESP' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.BUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.BVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.BREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARADDR' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARLEN' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARSIZE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARBURST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARLOCK' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARCACHE' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARPROT' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARQOS' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARREGION' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.ARREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RDATA' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RRESP' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RLAST' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RUSER' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RVALID' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.RREADY' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Not creating buffer for wait controller for component 'b:rsc' (SCHD-46)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Not creating buffer for wait controller for component 'b:rsc' (SCHD-46)
+# Global signal 'b:rsc.tr_write_done' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'b:rsc.s_tdone' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'y:rsc.dat' added to design 'fir_filter' for component 'y:rsci' (LIB-3)
+# Global signal 'x:rsc.clken' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+# Global signal 'x:rsc.q' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+# Global signal 'x:rsc.radr' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+# Global signal 'x:rsc.we' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+# Global signal 'x:rsc.d' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+# Global signal 'x:rsc.wadr' added to design 'fir_filter' for component 'x:rsci' (LIB-3)
+# Global signal 'i_sample:rsc.triosy.lz' added to design 'fir_filter' for component 'i_sample:rsc.triosy:obj' (LIB-3)
+# Global signal 'b:rsc.triosy.lz' added to design 'fir_filter' for component 'b:rsc.triosy:obj' (LIB-3)
+# Global signal 'y:rsc.triosy.lz' added to design 'fir_filter' for component 'y:rsc.triosy:obj' (LIB-3)
 # Report written to file 'cycle.rpt'
-# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF.v4': elapsed time 8.14 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'schedule': Total ops = 6547, Real ops = 46, Vars = 119 (SOL-21)
-# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
+# Info: Completed transformation 'schedule' on solution 'fir_filter.v2': elapsed time 3.56 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 687, Real ops = 44, Vars = 292 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'fir_filter.v2' (SOL-8)
 # Performing FSM extraction... (FSM-1)
-# Creating shared register 'exit:modExp#1:while.sva' for variables 'exit:modExp#1:while.sva, exit:modExp:while.sva, exit:COMP_LOOP.sva' (2 registers deleted). (FSM-3)
-# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v4': elapsed time 2.23 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'dpfsm': Total ops = 1228, Real ops = 456, Vars = 223 (SOL-21)
-# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
+# Creating shared register 'x:static_init:else:acc.itm' for variables 'x:static_init:else:acc.itm, x:vinit.ndx.sva, SHIFT_LOOP:n(6:0).sva' (2 registers deleted). (FSM-3)
+# Warning: Extrapolation detected. Script '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'dpfsm' on solution 'fir_filter.v2': elapsed time 0.65 seconds, memory usage 1445272kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 466, Real ops = 91, Vars = 272 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'fir_filter.v2' (SOL-8)
 # Netlist written to file 'schematic.nlv' (NET-4)
-# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF.v4': elapsed time 1.79 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'instance': Total ops = 1291, Real ops = 461, Vars = 1008 (SOL-21)
-# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
+# Info: Completed transformation 'instance' on solution 'fir_filter.v2': elapsed time 0.98 seconds, memory usage 1445852kB, peak memory usage 1445852kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 460, Real ops = 83, Vars = 403 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'fir_filter.v2' (SOL-8)
 # Report written to file 'rtl.rpt'
 # Generating scverify_top.cpp
 # Netlist written to file 'rtl.vhdl' (NET-4)
 # generate concat
 # order file name is: rtl.vhdl_order.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
 # Add dependent file: ./rtl.vhdl
-# Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/concat_rtl.vhdl
+# Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_rtl.vhdl
 # order file name is: rtl.vhdl_order_sim.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
 # Add dependent file: ./rtl.vhdl
-# Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/concat_sim_rtl.vhdl
+# Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_sim_rtl.vhdl
 # Generating SCVerify testbench files
 # Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
 # Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
 # Netlist written to file 'rtl.v' (NET-4)
 # generate concat
 # order file name is: rtl.v_order.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
 # Add dependent file: ./rtl.v
-# Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/concat_rtl.v
+# Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_rtl.v
 # order file name is: rtl.v_order_sim.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
 # Add dependent file: ./rtl.v
-# Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/concat_sim_rtl.v
+# Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2/concat_sim_rtl.v
 # Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Warning: Could not determine clock name for resource /fir_filter/core/x:rsc. Defaulting to 'clk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
 # Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
-# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF.v4': elapsed time 7.57 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
-# Info: Design complexity at end of 'extract': Total ops = 1279, Real ops = 462, Vars = 223 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'fir_filter.v2': elapsed time 5.58 seconds, memory usage 1445852kB, peak memory usage 1445852kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 454, Real ops = 85, Vars = 272 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_vhdl_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_vhdl_msim'
+# mkdir -p scverify/rtl_vhdl_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_vhdl_msim/amba_lib'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_vhdl_msim/amba_lib
+# ============================================
+# Mapping logical library 'amba_lib' to physical path '$SCVLIBS/scverify/rtl_vhdl_msim/amba_lib'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap amba_lib \$SCVLIBS/scverify/rtl_vhdl_msim/amba_lib
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap amba_lib $SCVLIBS/scverify/rtl_vhdl_msim/amba_lib 
+# Modifying scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_vhdl_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_vhdl_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_vhdl_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_vhdl_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_vhdl_msim/mgc_hls 
+# Modifying scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_vhdl_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_vhdl_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_vhdl_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_vhdl_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_vhdl_msim/work 
+# Modifying scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_vhdl_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home//bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult_test/fir_filter.v2/scverify/ccs_wave_signals.dat scverify/rtl_vhdl_msim/scverify_msim_wave.tcl ./Catapult_test/fir_filter.v2/.dut_inst_info.tcl ./Catapult_test/fir_filter.v2/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult_test/fir_filter.v2/scverify/ccs_wave_signals.dat scverify/rtl_vhdl_msim/scverify_msim_wave.tcl ./Catapult_test/fir_filter.v2/.dut_inst_info.tcl ./Catapult_test/fir_filter.v2/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_vhdl_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work amba_lib   /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:43 on Jun 22,2021
+# vcom -work amba_lib /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/amba_comps.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package amba_comps
+# -- Compiling package body amba_comps
+# -- Loading package amba_comps
+# End time: 23:26:43 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work amba_lib   /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:43 on Jun 22,2021
+# vcom -work amba_lib /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package MATH_REAL
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package amba_comps
+# -- Compiling entity ccs_axi4_slave_mem
+# -- Compiling architecture rtl of ccs_axi4_slave_mem
+# End time: 23:26:44 on Jun 22,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/mgc_io_sync_v2.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/mgc_io_sync_v2.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:44 on Jun 22,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/mgc_io_sync_v2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mgc_io_sync_pkg_v2
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity mgc_io_sync_v2
+# -- Compiling architecture beh of mgc_io_sync_v2
+# End time: 23:26:44 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_in_v1.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_in_v1.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:44 on Jun 22,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_in_v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package ccs_in_pkg_v1
+# -- Compiling entity ccs_in_v1
+# -- Compiling architecture beh of ccs_in_v1
+# End time: 23:26:44 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_out_v1.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_out_v1.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:44 on Jun 22,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_out_v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package ccs_out_pkg_v1
+# -- Compiling entity ccs_out_v1
+# -- Compiling architecture beh of ccs_out_v1
+# End time: 23:26:44 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:44 on Jun 22,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package BLOCK_1R1W_RBW_pkg
+# -- Compiling entity BLOCK_1R1W_RBW
+# -- Compiling architecture rtl of BLOCK_1R1W_RBW
+# End time: 23:26:44 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: rtl.vhdl
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work work   rtl.vhdl
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:26:44 on Jun 22,2021
+# vcom -work work rtl.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package amba_comps
+# -- Loading package mgc_io_sync_pkg_v2
+# -- Loading package ccs_in_pkg_v1
+# -- Loading package ccs_out_pkg_v1
+# -- Loading package NUMERIC_STD
+# -- Loading package BLOCK_1R1W_RBW_pkg
+# -- Compiling entity fir_filter_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_en_4_7_3_127_127_3_1_gen
+# -- Compiling architecture v2 of fir_filter_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_en_4_7_3_127_127_3_1_gen
+# -- Compiling entity fir_filter_core_core_fsm
+# -- Compiling architecture v2 of fir_filter_core_core_fsm
+# -- Compiling entity fir_filter_core_staller
+# -- Compiling architecture v2 of fir_filter_core_staller
+# -- Compiling entity fir_filter_core_y_rsc_triosy_obj_y_rsc_triosy_wait_ctrl
+# -- Compiling architecture v2 of fir_filter_core_y_rsc_triosy_obj_y_rsc_triosy_wait_ctrl
+# -- Compiling entity fir_filter_core_b_rsc_triosy_obj_b_rsc_triosy_wait_ctrl
+# -- Compiling architecture v2 of fir_filter_core_b_rsc_triosy_obj_b_rsc_triosy_wait_ctrl
+# -- Compiling entity fir_filter_core_i_sample_rsc_triosy_obj_i_sample_rsc_triosy_wait_ctrl
+# -- Compiling architecture v2 of fir_filter_core_i_sample_rsc_triosy_obj_i_sample_rsc_triosy_wait_ctrl
+# -- Compiling entity fir_filter_core_b_rsci_b_rsc_wait_dp
+# -- Compiling architecture v2 of fir_filter_core_b_rsci_b_rsc_wait_dp
+# -- Compiling entity fir_filter_core_b_rsci_b_rsc_wait_ctrl
+# -- Compiling architecture v2 of fir_filter_core_b_rsci_b_rsc_wait_ctrl
+# -- Compiling entity fir_filter_core_wait_dp
+# -- Compiling architecture v2 of fir_filter_core_wait_dp
+# -- Compiling entity fir_filter_core_y_rsc_triosy_obj
+# -- Compiling architecture v2 of fir_filter_core_y_rsc_triosy_obj
+# -- Compiling entity fir_filter_core_b_rsc_triosy_obj
+# -- Compiling architecture v2 of fir_filter_core_b_rsc_triosy_obj
+# -- Compiling entity fir_filter_core_i_sample_rsc_triosy_obj
+# -- Compiling architecture v2 of fir_filter_core_i_sample_rsc_triosy_obj
+# -- Compiling entity fir_filter_core_b_rsci
+# -- Compiling architecture v2 of fir_filter_core_b_rsci
+# -- Compiling entity fir_filter_core
+# -- Compiling architecture v2 of fir_filter_core
+# -- Compiling entity fir_filter
+# -- Compiling architecture v2 of fir_filter
+# End time: 23:26:44 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VHDL -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 23:26:44 on Jun 22,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 23:26:46 on Jun 22,2021, Elapsed time: 0:00:02
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_vhdl_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home//bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult_test/fir_filter.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_test/fir_filter.v2/.dut_inst_info.tcl ./Catapult_test/fir_filter.v2/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult_test/fir_filter.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_test/fir_filter.v2/.dut_inst_info.tcl ./Catapult_test/fir_filter.v2/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:27:16 on Jun 22,2021
+# vlog -work work /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v 
+# -- Compiling module ccs_axi4_slave_mem
+# 
+# Top level modules:
+# 	ccs_axi4_slave_mem
+# End time: 23:27:16 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/mgc_io_sync_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/mgc_io_sync_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:27:16 on Jun 22,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 23:27:16 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_in_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_in_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:27:16 on Jun 22,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 23:27:16 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_out_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_out_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:27:17 on Jun 22,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs/ccs_out_v1.v 
+# -- Compiling module ccs_out_v1
+# 
+# Top level modules:
+# 	ccs_out_v1
+# End time: 23:27:17 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:27:17 on Jun 22,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v 
+# -- Compiling module BLOCK_1R1W_RBW
+# 
+# Top level modules:
+# 	BLOCK_1R1W_RBW
+# End time: 23:27:17 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:27:17 on Jun 22,2021
+# vlog -work work rtl.v 
+# -- Compiling module fir_filter_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_en_4_7_3_127_127_3_1_gen
+# -- Compiling module fir_filter_core_core_fsm
+# -- Compiling module fir_filter_core_staller
+# -- Compiling module fir_filter_core_y_rsc_triosy_obj_y_rsc_triosy_wait_ctrl
+# -- Compiling module fir_filter_core_b_rsc_triosy_obj_b_rsc_triosy_wait_ctrl
+# -- Compiling module fir_filter_core_i_sample_rsc_triosy_obj_i_sample_rsc_triosy_wait_ctrl
+# -- Compiling module fir_filter_core_b_rsci_b_rsc_wait_dp
+# -- Compiling module fir_filter_core_b_rsci_b_rsc_wait_ctrl
+# -- Compiling module fir_filter_core_wait_dp
+# -- Compiling module fir_filter_core_y_rsc_triosy_obj
+# -- Compiling module fir_filter_core_b_rsc_triosy_obj
+# -- Compiling module fir_filter_core_i_sample_rsc_triosy_obj
+# -- Compiling module fir_filter_core_b_rsci
+# -- Compiling module fir_filter_core
+# -- Compiling module fir_filter
+# 
+# Top level modules:
+# 	fir_filter
+# End time: 23:27:17 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 23:27:17 on Jun 22,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 23:27:18 on Jun 22,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 23:29:22 on Jun 22,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 23:29:23 on Jun 22,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test/fir_filter.v2'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home//pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 23:31:39 on Jun 22,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.5c/Mgc_home//shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 23:31:40 on Jun 22,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/directives.tcl
+dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/directives.tcl
+# > puts "Catapult On-Demand Training: Module 4"
+# Catapult On-Demand Training: Module 4
+# > puts "In this lab, you will synthesize the FIR filter"
+# In this lab, you will synthesize the FIR filter
+# > puts "  with bit-accurate AC Datatypes"
+#   with bit-accurate AC Datatypes
+# > set sfd [file dirname [info script]]
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4
+# > solution new -state initial
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+# solution.v2
+# > solution options defaults
+# /Input/CompilerSettings/Type gcc /Input/CompilerSettings/Version 4.9.2 /Input/CompilerSettings/InstallPath /opt/mentorgraphics/Catapult_10.5c/Mgc_home /Input/CompilerSettings/Target GCC_x86_32 /Input/CompilerSettings/CppStandard c++98 /Input/CompilerSettings/CompilerVersion 4.9.2 /Input/CompilerSettings/Defines {__EMBEDDED_CXX__ vco_aol __null=0 __DBL_MIN_EXP__=(-1021) __UINT_LEAST16_MAX__=65535 __ATOMIC_ACQUIRE=2 __FLT_MIN__=1.17549435082228750797e-38F __GCC_IEC_559_COMPLEX=2 {__UINT_LEAST8_TYPE__=unsigned char} {__INTMAX_C(c)=c ## LL} __CHAR_BIT__=8 __UINT8_MAX__=255 __WINT_MAX__=4294967295U __ORDER_LITTLE_ENDIAN__=1234 __SIZE_MAX__=4294967295U __WCHAR_MAX__=2147483647L __GCC_HAVE_SYNC_COMPARE_AND_SWAP_1 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 __DBL_DENORM_MIN__=double(4.94065645841246544177e-324L) __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 __GCC_ATOMIC_CHAR_LOCK_FREE=2 __GCC_IEC_559=2 __FLT_EVAL_METHOD__=2 __unix__ __GCC_ATOMIC_CHAR32_T_LOCK_FREE=2 __UINT_FAST64_MAX__=18446744073709551615ULL __SIG_ATOMIC_TYPE__=int __DBL_MIN_10_EXP__=(-307) __FINITE_MATH_ONLY__=0 __GNUC_PATCHLEVEL__=2 __UINT_FAST8_MAX__=255 __DEC64_MAX_EXP__=385 __INT8_C(c)=c __UINT_LEAST64_MAX__=18446744073709551615ULL __SHRT_MAX__=32767 __LDBL_MAX__=1.18973149535723176502e+4932L __UINT_LEAST8_MAX__=255 __GCC_ATOMIC_BOOL_LOCK_FREE=2 {__UINTMAX_TYPE__=long long unsigned int} __linux __DEC32_EPSILON__=1E-6DF __unix __UINT32_MAX__=4294967295U __LDBL_MAX_EXP__=16384 __WINT_MIN__=0U __linux__ __SCHAR_MAX__=127 {__WCHAR_MIN__=(-__WCHAR_MAX__ - 1)} {__INT64_C(c)=c ## LL} __DBL_DIG__=15 __GCC_ATOMIC_POINTER_LOCK_FREE=2 __SIZEOF_INT__=4 __SIZEOF_POINTER__=4 __GCC_ATOMIC_CHAR16_T_LOCK_FREE=2 __USER_LABEL_PREFIX__= __STDC_HOSTED__ __LDBL_HAS_INFINITY__ __FLT_EPSILON__=1.19209289550781250000e-7F __GXX_WEAK__ __LDBL_MIN__=3.36210314311209350626e-4932L __DEC32_MAX__=9.999999E96DF __INT32_MAX__=2147483647 __SIZEOF_LONG__=4 __STDC_IEC_559__ __STDC_ISO_10646__=201103L __UINT16_C(c)=c __DECIMAL_DIG__=21 __gnu_linux__ __LDBL_HAS_QUIET_NAN__ __GNUC__=4 __GXX_RTTI __MMX__ __FLT_HAS_DENORM__ __SIZEOF_LONG_DOUBLE__=12 __BIGGEST_ALIGNMENT__=16 __DBL_MAX__=double(1.79769313486231570815e+308L) __INT_FAST32_MAX__=2147483647 __DBL_HAS_INFINITY__ __INT64_MAX__=9223372036854775807LL __DEC32_MIN_EXP__=(-94) __INT_FAST16_TYPE__=int __LDBL_HAS_DENORM__ __DEC128_MAX__=9.999999999999999999999999999999999E6144DL __INT_LEAST32_MAX__=2147483647 __DEC32_MIN__=1E-95DF __DEPRECATED __DBL_MAX_EXP__=1024 __DEC128_EPSILON__=1E-33DL __ATOMIC_HLE_RELEASE=131072 __PTRDIFF_MAX__=2147483647 __STDC_NO_THREADS__ __ATOMIC_HLE_ACQUIRE=65536 __GNUG__=4 __LONG_LONG_MAX__=9223372036854775807LL __SIZEOF_SIZE_T__=4 __SIZEOF_WINT_T__=4 __GXX_ABI_VERSION=1002 __FLT_MIN_EXP__=(-125) {__INT_FAST64_TYPE__=long long int} __DBL_MIN__=double(2.22507385850720138309e-308L) __FLT_MIN_10_EXP__=(-37) __DECIMAL_BID_FORMAT__ __DEC128_MIN__=1E-6143DL __REGISTER_PREFIX__= __UINT16_MAX__=65535 __DBL_HAS_DENORM__ {__UINT8_TYPE__=unsigned char} __NO_INLINE__ __i386 __FLT_MANT_DIG__=24 {__UINT64_C(c)=c ## ULL} _STDC_PREDEF_H __GCC_ATOMIC_INT_LOCK_FREE=2 __FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__ __STDC_IEC_559_COMPLEX__ __INT32_C(c)=c __DEC64_EPSILON__=1E-15DD __ORDER_PDP_ENDIAN__=3412 __DEC128_MIN_EXP__=(-6142) __code_model_32__ __INT_FAST32_TYPE__=int {__UINT_LEAST16_TYPE__=short unsigned int} unix __INT16_MAX__=32767 __i386__ __UINT64_MAX__=18446744073709551615ULL {__INT8_TYPE__=signed char} __ELF__ __FLT_RADIX__=2 {__INT_LEAST16_TYPE__=short int} __LDBL_EPSILON__=1.08420217248550443401e-19L {__UINTMAX_C(c)=c ## ULL} __k8 __SIG_ATOMIC_MAX__=2147483647 __GCC_ATOMIC_WCHAR_T_LOCK_FREE=2 __SIZEOF_PTRDIFF_T__=4 __DEC32_SUBNORMAL_MIN__=0.000001E-95DF __INT_FAST16_MAX__=2147483647 __UINT_FAST32_MAX__=4294967295U {__UINT_LEAST64_TYPE__=long long unsigned int} __FLT_HAS_QUIET_NAN__ __FLT_MAX_10_EXP__=38 __LONG_MAX__=2147483647L __DEC128_SUBNORMAL_MIN__=0.000000000000000000000000000000001E-6143DL __FLT_HAS_INFINITY__ {__UINT_FAST16_TYPE__=unsigned int} __DEC64_MAX__=9.999999999999999E384DD __PRAGMA_REDEFINE_EXTNAME __INT_LEAST16_MAX__=32767 __DEC64_MANT_DIG__=16 __UINT_LEAST32_MAX__=4294967295U __GCC_ATOMIC_LONG_LOCK_FREE=2 {__INT_LEAST64_TYPE__=long long int} {__INT16_TYPE__=short int} {__INT_LEAST8_TYPE__=signed char} __DEC32_MAX_EXP__=97 __INT_FAST8_MAX__=127 __INTPTR_MAX__=2147483647 linux __SSE2__ __EXCEPTIONS __LDBL_MANT_DIG__=64 __DBL_HAS_QUIET_NAN__ {__SIG_ATOMIC_MIN__=(-__SIG_ATOMIC_MAX__ - 1)} __k8__ __INTPTR_TYPE__=int {__UINT16_TYPE__=short unsigned int} __SIZEOF_FLOAT__=4 __UINTPTR_MAX__=4294967295U __DEC64_MIN_EXP__=(-382) __INT_FAST64_MAX__=9223372036854775807LL __GCC_ATOMIC_TEST_AND_SET_TRUEVAL __FLT_DIG__=6 {__UINT_FAST64_TYPE__=long long unsigned int} __INT_MAX__=2147483647 {__INT64_TYPE__=long long int} __FLT_MAX_EXP__=128 __DBL_MANT_DIG__=53 __INT_LEAST64_MAX__=9223372036854775807LL __DEC64_MIN__=1E-383DD {__WINT_TYPE__=unsigned int} {__UINT_LEAST32_TYPE__=unsigned int} __SIZEOF_SHORT__=2 __SSE__ __LDBL_MIN_EXP__=(-16381) __INT_LEAST8_MAX__=127 __LDBL_MAX_10_EXP__=4932 __ATOMIC_RELAXED=0 __DBL_EPSILON__=double(2.22044604925031308085e-16L) __UINT8_C(c)=c __INT_LEAST32_TYPE__=int __SIZEOF_WCHAR_T__=4 {__UINT64_TYPE__=long long unsigned int} {__INT_FAST8_TYPE__=signed char} __DBL_DECIMAL_DIG__=17 __FXSR__ __DEC_EVAL_METHOD__=2 __ORDER_BIG_ENDIAN__=4321 {__UINT32_C(c)=c ## U} __INTMAX_MAX__=9223372036854775807LL __BYTE_ORDER__=__ORDER_LITTLE_ENDIAN__ __FLT_DENORM_MIN__=1.40129846432481707092e-45F __INT8_MAX__=127 {__UINT_FAST32_TYPE__=unsigned int} {__CHAR32_TYPE__=unsigned int} __FLT_MAX__=3.40282346638528859812e+38F __INT32_TYPE__=int __SIZEOF_DOUBLE__=8 {__INTMAX_TYPE__=long long int} i386 __DEC128_MAX_EXP__=6145 __ATOMIC_CONSUME __GNUC_MINOR__=9 __UINTMAX_MAX__=18446744073709551615ULL __DEC32_MANT_DIG__=7 __DBL_MAX_10_EXP__=308 __LDBL_DENORM_MIN__=3.64519953188247460253e-4951L __INT16_C(c)=c __STDC__ __PTRDIFF_TYPE__=int __ATOMIC_SEQ_CST=5 {__UINT32_TYPE__=unsigned int} {__UINTPTR_TYPE__=unsigned int} __DEC64_SUBNORMAL_MIN__=0.000000000000001E-383DD __DEC128_MANT_DIG__=34 __LDBL_MIN_10_EXP__=(-4931) __SIZEOF_LONG_LONG__=8 __GCC_ATOMIC_LLONG_LOCK_FREE=2 __LDBL_DIG__=18 __FLT_DECIMAL_DIG__=9 __UINT_FAST16_MAX__=4294967295U __GNUC_GNU_INLINE__ __GCC_ATOMIC_SHORT_LOCK_FREE=2 {__UINT_FAST8_TYPE__=unsigned char} _GNU_SOURCE __ATOMIC_ACQ_REL=4 __ATOMIC_RELEASE=3} /Input/CompilerSettings/SearchPath {/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/x86_64-linux-gnu/32 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/backward /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include-fixed /usr/local/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/../../include /usr/include} /Input/CompilerSettings/LibPaths {}
+# > flow package require /SCVerify
+# 10.4.1
+# > flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv
+# > solution file add ${sfd}/src/fir_filter.cpp
+# /INPUTFILES/1
+# > solution file add ${sfd}/src/fir_filter_tb.cpp -exclude true
+# /INPUTFILES/2
+# > solution file add ${sfd}/src/csvparser.cpp -exclude true
+# /INPUTFILES/3
+# > go analyze 
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: /usr/include/gnu/stubs.h(7): cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: Compilation aborted (CIN-5)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.04 seconds, memory usage 1511384kB, peak memory usage 1511384kB (SOL-9)
+# > end dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/directives.tcl
+# Error: go analyze: Failed analyze
+quit
+# Saving project file '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_test.ccs'. (PRJ-5)
+// Finish time Tue Jun 22 23:54:25 2021, time elapsed 36:35, peak memory 1.44GB, exit status 0

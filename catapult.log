@@ -1,0 +1,912 @@
+//  Catapult Ultra Synthesis 10.3a/798110 (Production Release) Tue Dec  4 22:20:19 PST 2018
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2018, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux jd4691@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.3_1.0, HLS_PKGS v23.3_1.0, 
+//                       SIF_TOOLKITS v23.3_1.0, SIF_XILINX v23.3_1.0, 
+//                       SIF_ALTERA v23.3_1.0, CCS_LIBS v23.3_1.0, 
+//                       CDS_PPRO PowerPro-10.2_1, 
+//                       CDS_DesigChecker design-checking-10.3a, 
+//                       CDS_OASYS v18.1_3.7, DesignPad v2.78_1.0
+//  
+//  Start time Wed Jun 23 00:08:03 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log9986bc295af2.0"
+dofile /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# > dofile /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# > puts "Catapult Online Training: Module 3"
+# Catapult Online Training: Module 3
+# > puts "In this lab, you will simulate the FIR filter"
+# In this lab, you will simulate the FIR filter
+# > puts "  with bit-accurate AC Datatypes"
+#   with bit-accurate AC Datatypes
+# > set sfd [file dirname [info script]]
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4
+# > solution new -state initial
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+# solution.v2
+# > solution options defaults
+# > flow package require /SCVerify
+# 8.0a
+# > solution file add ${sfd}/src/fir_filter.cpp
+# /INPUTFILES/1
+# > solution file add ${sfd}/src/fir_filter_tb.cpp -exclude true
+# /INPUTFILES/2
+# > solution file add ${sfd}/src/csvparser.cpp -exclude true
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Moving session transcript to file "/home/jd4691/NTT_Xilinx/catapult.log"
+# Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+# Error: /usr/include/gnu/stubs.h(7): cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: Compilation aborted (CIN-5)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.08 seconds, memory usage 1326672kB, peak memory usage 1326672kB (SOL-9)
+# > end dofile /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# Error: go analyze: Failed analyze
+option set Input/TargetPlatform x86_64
+option set Input/CppStandard c++11
+# c++11
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(12): Pragma 'hls_design<top>' detected on routine 'fir_filter' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 1.65 seconds, memory usage 1456096kB, peak memory usage 1456096kB (SOL-9)
+go compile
+# Info: Starting transformation 'compile' on solution 'solution.v2' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(12): Found top design routine 'fir_filter' specified by directive (CIN-52)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(12): Found top design routine 'fir_filter' specified by directive (CIN-52)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Synthesizing routine 'fir_filter' (CIN-13)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Inlining routine 'fir_filter' (CIN-14)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Optimizing block '/fir_filter' ... (CIN-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(14): INOUT port 'b' is only used as an input. (OPT-10)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(15): INOUT port 'y' is only used as an output. (OPT-11)
+# Info: Optimizing partition '/fir_filter': (Total ops = 85, Real ops = 25, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 85, Real ops = 25, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 81, Real ops = 25, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 81, Real ops = 25, Vars = 23) (SOL-10)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(20): Splitting object 'pref' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Splitting object 'pref#2' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Splitting object 'pref:pref.pref#1' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(14): Splitting object 'pref:b.ptr.idx.pref' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Splitting object 'pref:b.ptr.idx.pref.pref' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Splitting object 'pref:b.ptr.idx.pref.pref.pref' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/include/ac_fixed.h(272): Splitting object 'ac_fixed:cctor' into 3 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(30): Splitting object 'MAC_LOOP:acc.tdx' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/include/ac_fixed.h(272): Splitting object 'asn.rnd' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 77, Real ops = 24, Vars = 31) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 67, Real ops = 21, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 67, Real ops = 21, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 67, Real ops = 21, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 67, Real ops = 21, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 67, Real ops = 21, Vars = 8) (SOL-10)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Loop '/fir_filter/core/SHIFT_LOOP' iterated at most 126 times. (LOOP-2)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Loop '/fir_filter/core/MAC_LOOP' iterated at most 127 times. (LOOP-2)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Splitting object 'SHIFT_LOOP:n' into 2 segments (OPT-19)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Splitting object 'MAC_LOOP:n' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 71, Real ops = 19, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 63, Real ops = 18, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 63, Real ops = 18, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 63, Real ops = 18, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 63, Real ops = 18, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 63, Real ops = 18, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 63, Real ops = 18, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 63, Real ops = 18, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 63, Real ops = 18, Vars = 9) (SOL-10)
+# Design 'fir_filter' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'fir_filter.v1': elapsed time 1.56 seconds, memory usage 1456096kB, peak memory usage 1456096kB (SOL-9)
+solution library add mgc_sample-065nm-dw_beh_dc -- -rtlsyntool DesignCompiler -vendor Sample -technology 065nm -Designware Yes
+go libraries
+# Info: Starting transformation 'libraries' on solution 'fir_filter.v1' (SOL-8)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/designcompiler/mgc_sample-065nm-dw_beh_dc.lib' [mgc_sample-065nm-dw_beh_dc]... (LIB-49)
+# Warning: Could not read Encrypted Liberty technology library file 'sample_065nm.clib' specified in a catapult library, in the paths specified () (LIB-147)
+# Warning: Downstream flows that depend on a Encrypted Liberty file(s) will not be able to run. Please check option ComponentLibs/TechLibSearchPath. (LIB-191)
+# Warning: Could not read Liberty technology library file 'sample_065nm.lib' specified in a catapult library, in the paths specified () (LIB-147)
+# Warning: Downstream flows that depend on a Liberty file(s) will not be able to run. Please check option ComponentLibs/TechLibSearchPath. (LIB-191)
+# Warning: No LEF technology libraries have been specified (LIB-192)
+# Warning: No Process Technology File (PTF) technology libraries have been specified (LIB-192)
+# Warning: Could not read Synopsys DB technology library file 'sample_065nm.db' specified in a catapult library, in the paths specified () (LIB-147)
+# Warning: Downstream flows that depend on a Synopsys DB file(s) will not be able to run. Please check option ComponentLibs/TechLibSearchPath. (LIB-191)
+# Info: Completed transformation 'libraries' on solution 'fir_filter.v1': elapsed time 0.43 seconds, memory usage 1456096kB, peak memory usage 1456096kB (SOL-9)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go assembly
+# Info: Starting transformation 'assembly' on solution 'fir_filter.v1' (SOL-8)
+# Info: Optimizing partition '/fir_filter': (Total ops = 64, Real ops = 19, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 64, Real ops = 19, Vars = 9) (SOL-10)
+# Info: Completed transformation 'assembly' on solution 'fir_filter.v1': elapsed time 0.10 seconds, memory usage 1456612kB, peak memory usage 1456612kB (SOL-9)
+go architect
+# Info: Starting transformation 'loops' on solution 'fir_filter.v1' (SOL-8)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 70, Real ops = 19, Vars = 9) (SOL-10)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Loop '/fir_filter/core/SHIFT_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Loop '/fir_filter/core/MAC_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Loop '/fir_filter/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'fir_filter.v1': elapsed time 0.06 seconds, memory usage 1456612kB, peak memory usage 1456612kB (SOL-9)
+# Info: Starting transformation 'memories' on solution 'fir_filter.v1' (SOL-8)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): I/O-Port Resource '/fir_filter/i_sample:rsc' (from var: i_sample) mapped to 'ccs_ioport.ccs_in' (size: 3). (MEM-2)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(14): I/O-Port Resource '/fir_filter/b:rsc' (from var: b) mapped to 'ccs_ioport.ccs_in' (size: 1270). (MEM-2)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(15): I/O-Port Resource '/fir_filter/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_out' (size: 9). (MEM-2)
+# Info: Optimizing partition '/fir_filter': (Total ops = 73, Real ops = 19, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 73, Real ops = 19, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 72, Real ops = 19, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 72, Real ops = 19, Vars = 17) (SOL-10)
+# Warning: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(20): Writing to register bank 'x' with 126 registers using a dynamic index can cause excessive runtime and undesired hardware.  Please inspect coding style. (MEM-74)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(18): Splitting object 'x' into 127 segments (OPT-19)
+# Info: Optimizing partition '/fir_filter': (Total ops = 1083, Real ops = 522, Vars = 269) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 1083, Real ops = 522, Vars = 261) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 951, Real ops = 518, Vars = 258) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 951, Real ops = 518, Vars = 266) (SOL-10)
+# Info: Completed transformation 'memories' on solution 'fir_filter.v1': elapsed time 1.26 seconds, memory usage 1456612kB, peak memory usage 1456612kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'fir_filter.v1' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Completed transformation 'cluster' on solution 'fir_filter.v1': elapsed time 0.12 seconds, memory usage 1456612kB, peak memory usage 1456612kB (SOL-9)
+# Info: Starting transformation 'architect' on solution 'fir_filter.v1' (SOL-8)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 3393, Real ops = 518, Vars = 1673) (SOL-10)
+# Info: Optimizing partition '/fir_filter/core': (Total ops = 1331, Real ops = 518, Vars = 512) (SOL-10)
+# Design 'fir_filter' contains '521' real operations. (SOL-11)
+# Warning: Extrapolation detected. Script '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'architect' on solution 'fir_filter.v1': elapsed time 0.64 seconds, memory usage 1456612kB, peak memory usage 1456612kB (SOL-9)
+go allocate
+# Info: Starting transformation 'allocate' on solution 'fir_filter.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(29): Prescheduled LOOP '/fir_filter/core/MAC_LOOP' (1 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(19): Prescheduled LOOP '/fir_filter/core/SHIFT_LOOP' (1 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled LOOP '/fir_filter/core/main' (3 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled LOOP '/fir_filter/core/core:rlp' (0 c-steps) (SCHD-7)
+# $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Prescheduled SEQUENTIAL '/fir_filter/core' (total length 256 c-steps) (SCHD-8)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Initial schedule of SEQUENTIAL '/fir_filter/core': Latency = 255, Area (Datapath, Register, Total) = 8601.29, 9396.00, 17997.29 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8256.90, 9396.00, 17652.90 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 9119.80, 9396.00, 18515.80 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8756.86, 9396.00, 18152.86 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8600.63, 9396.00, 17996.63 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8572.74, 9396.00, 17968.74 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8514.68, 9396.00, 17910.68 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8485.82, 9396.00, 17881.82 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8473.79, 9396.00, 17869.79 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8415.01, 9396.00, 17811.01 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8302.90, 9396.00, 17698.90 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/MAC_LOOP': Latency = 255, Area (Datapath, Register, Total) = 8202.71, 9396.00, 17598.71 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 7236.50, 9396.00, 16632.50 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 7128.60, 9396.00, 16524.60 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 7125.59, 9396.00, 16521.59 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 6540.95, 9396.00, 15936.95 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 6454.06, 9396.00, 15850.06 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 6449.54, 9396.00, 15845.54 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 6327.21, 9396.00, 15723.21 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 6268.53, 9396.00, 15664.53 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/SHIFT_LOOP': Latency = 255, Area (Datapath, Register, Total) = 6265.63, 9396.00, 15661.63 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/main': Latency = 255, Area (Datapath, Register, Total) = 6171.08, 9396.00, 15567.08 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/main': Latency = 255, Area (Datapath, Register, Total) = 6115.08, 9396.00, 15511.08 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/main': Latency = 255, Area (Datapath, Register, Total) = 6101.53, 9396.00, 15497.53 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/main': Latency = 255, Area (Datapath, Register, Total) = 6084.73, 9396.00, 15480.73 (CRAAS-10)
+# Info: Optimized LOOP '/fir_filter/core/main': Latency = 255, Area (Datapath, Register, Total) = 6076.18, 9396.00, 15472.18 (CRAAS-10)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(13): Final schedule of SEQUENTIAL '/fir_filter/core': Latency = 255, Area (Datapath, Register, Total) = 6014.59, 9396.00, 15410.59 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'fir_filter.v1': elapsed time 1.72 seconds, memory usage 1456612kB, peak memory usage 1456612kB (SOL-9)
+go extract
+# Info: Starting transformation 'schedule' on solution 'fir_filter.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+# Global signal 'i_sample:rsc.dat' added to design 'fir_filter' for component 'i_sample:rsci' (LIB-3)
+# Global signal 'b:rsc.dat' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+# Global signal 'y:rsc.dat' added to design 'fir_filter' for component 'y:rsci' (LIB-3)
+# Global signal 'i_sample:rsc.triosy.lz' added to design 'fir_filter' for component 'i_sample:rsc.triosy:obj' (LIB-3)
+# Global signal 'b:rsc.triosy.lz' added to design 'fir_filter' for component 'b:rsc.triosy:obj' (LIB-3)
+# Global signal 'y:rsc.triosy.lz' added to design 'fir_filter' for component 'y:rsc.triosy:obj' (LIB-3)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2129, Real ops = 521, Vars = 544) (SOL-10)
+# Info: $MGC_HOME/shared/training/ondemand/module4/src/fir_filter.cpp(15): Splitting object 'y:rsci.idat' into 3 segments (OPT-19)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/core': (Total ops = 2107, Real ops = 521, Vars = 522) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/core': (Total ops = 1470, Real ops = 521, Vars = 513) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 1491, Real ops = 521, Vars = 537) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/core': (Total ops = 1470, Real ops = 521, Vars = 513) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 1491, Real ops = 521, Vars = 537) (SOL-10)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'fir_filter.v1': elapsed time 19.23 seconds, memory usage 1456096kB, peak memory usage 1456612kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'fir_filter.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/core': (Total ops = 1989, Real ops = 521, Vars = 513) (SOL-10)
+# Creating shared register 'MAC_LOOP:n(6:0).sva' for variables 'MAC_LOOP:n(6:0).sva, SHIFT_LOOP:n(6:0).sva' (1 register deleted). (FSM-2)
+# Creating shared register 'x(1).lpi#2' for variables 'x(1).lpi#2, x(1).sva#1, x(1).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(10).lpi#2' for variables 'x(10).lpi#2, x(10).sva#1, x(10).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(100).lpi#2' for variables 'x(100).lpi#2, x(100).sva#1, x(100).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(101).lpi#2' for variables 'x(101).lpi#2, x(101).sva#1, x(101).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(102).lpi#2' for variables 'x(102).lpi#2, x(102).sva#1, x(102).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(103).lpi#2' for variables 'x(103).lpi#2, x(103).sva#1, x(103).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(104).lpi#2' for variables 'x(104).lpi#2, x(104).sva#1, x(104).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(105).lpi#2' for variables 'x(105).lpi#2, x(105).sva#1, x(105).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(106).lpi#2' for variables 'x(106).lpi#2, x(106).sva#1, x(106).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(107).lpi#2' for variables 'x(107).lpi#2, x(107).sva#1, x(107).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(108).lpi#2' for variables 'x(108).lpi#2, x(108).sva#1, x(108).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(109).lpi#2' for variables 'x(109).lpi#2, x(109).sva#1, x(109).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(11).lpi#2' for variables 'x(11).lpi#2, x(11).sva#1, x(11).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(110).lpi#2' for variables 'x(110).lpi#2, x(110).sva#1, x(110).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(111).lpi#2' for variables 'x(111).lpi#2, x(111).sva#1, x(111).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(112).lpi#2' for variables 'x(112).lpi#2, x(112).sva#1, x(112).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(113).lpi#2' for variables 'x(113).lpi#2, x(113).sva#1, x(113).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(114).lpi#2' for variables 'x(114).lpi#2, x(114).sva#1, x(114).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(115).lpi#2' for variables 'x(115).lpi#2, x(115).sva#1, x(115).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(116).lpi#2' for variables 'x(116).lpi#2, x(116).sva#1, x(116).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(117).lpi#2' for variables 'x(117).lpi#2, x(117).sva#1, x(117).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(118).lpi#2' for variables 'x(118).lpi#2, x(118).sva#1, x(118).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(119).lpi#2' for variables 'x(119).lpi#2, x(119).sva#1, x(119).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(12).lpi#2' for variables 'x(12).lpi#2, x(12).sva#1, x(12).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(120).lpi#2' for variables 'x(120).lpi#2, x(120).sva#1, x(120).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(121).lpi#2' for variables 'x(121).lpi#2, x(121).sva#1, x(121).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(122).lpi#2' for variables 'x(122).lpi#2, x(122).sva#1, x(122).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(123).lpi#2' for variables 'x(123).lpi#2, x(123).sva#1, x(123).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(124).lpi#2' for variables 'x(124).lpi#2, x(124).sva#1, x(124).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(125).lpi#2' for variables 'x(125).lpi#2, x(125).sva#1, x(125).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(13).lpi#2' for variables 'x(13).lpi#2, x(13).sva#1, x(13).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(14).lpi#2' for variables 'x(14).lpi#2, x(14).sva#1, x(14).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(15).lpi#2' for variables 'x(15).lpi#2, x(15).sva#1, x(15).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(16).lpi#2' for variables 'x(16).lpi#2, x(16).sva#1, x(16).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(17).lpi#2' for variables 'x(17).lpi#2, x(17).sva#1, x(17).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(18).lpi#2' for variables 'x(18).lpi#2, x(18).sva#1, x(18).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(19).lpi#2' for variables 'x(19).lpi#2, x(19).sva#1, x(19).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(2).lpi#2' for variables 'x(2).lpi#2, x(2).sva#1, x(2).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(20).lpi#2' for variables 'x(20).lpi#2, x(20).sva#1, x(20).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(21).lpi#2' for variables 'x(21).lpi#2, x(21).sva#1, x(21).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(22).lpi#2' for variables 'x(22).lpi#2, x(22).sva#1, x(22).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(23).lpi#2' for variables 'x(23).lpi#2, x(23).sva#1, x(23).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(24).lpi#2' for variables 'x(24).lpi#2, x(24).sva#1, x(24).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(25).lpi#2' for variables 'x(25).lpi#2, x(25).sva#1, x(25).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(26).lpi#2' for variables 'x(26).lpi#2, x(26).sva#1, x(26).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(27).lpi#2' for variables 'x(27).lpi#2, x(27).sva#1, x(27).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(28).lpi#2' for variables 'x(28).lpi#2, x(28).sva#1, x(28).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(29).lpi#2' for variables 'x(29).lpi#2, x(29).sva#1, x(29).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(3).lpi#2' for variables 'x(3).lpi#2, x(3).sva#1, x(3).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(30).lpi#2' for variables 'x(30).lpi#2, x(30).sva#1, x(30).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(31).lpi#2' for variables 'x(31).lpi#2, x(31).sva#1, x(31).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(32).lpi#2' for variables 'x(32).lpi#2, x(32).sva#1, x(32).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(33).lpi#2' for variables 'x(33).lpi#2, x(33).sva#1, x(33).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(34).lpi#2' for variables 'x(34).lpi#2, x(34).sva#1, x(34).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(35).lpi#2' for variables 'x(35).lpi#2, x(35).sva#1, x(35).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(36).lpi#2' for variables 'x(36).lpi#2, x(36).sva#1, x(36).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(37).lpi#2' for variables 'x(37).lpi#2, x(37).sva#1, x(37).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(38).lpi#2' for variables 'x(38).lpi#2, x(38).sva#1, x(38).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(39).lpi#2' for variables 'x(39).lpi#2, x(39).sva#1, x(39).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(4).lpi#2' for variables 'x(4).lpi#2, x(4).sva#1, x(4).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(40).lpi#2' for variables 'x(40).lpi#2, x(40).sva#1, x(40).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(41).lpi#2' for variables 'x(41).lpi#2, x(41).sva#1, x(41).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(42).lpi#2' for variables 'x(42).lpi#2, x(42).sva#1, x(42).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(43).lpi#2' for variables 'x(43).lpi#2, x(43).sva#1, x(43).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(44).lpi#2' for variables 'x(44).lpi#2, x(44).sva#1, x(44).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(45).lpi#2' for variables 'x(45).lpi#2, x(45).sva#1, x(45).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(46).lpi#2' for variables 'x(46).lpi#2, x(46).sva#1, x(46).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(47).lpi#2' for variables 'x(47).lpi#2, x(47).sva#1, x(47).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(48).lpi#2' for variables 'x(48).lpi#2, x(48).sva#1, x(48).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(49).lpi#2' for variables 'x(49).lpi#2, x(49).sva#1, x(49).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(5).lpi#2' for variables 'x(5).lpi#2, x(5).sva#1, x(5).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(50).lpi#2' for variables 'x(50).lpi#2, x(50).sva#1, x(50).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(51).lpi#2' for variables 'x(51).lpi#2, x(51).sva#1, x(51).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(52).lpi#2' for variables 'x(52).lpi#2, x(52).sva#1, x(52).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(53).lpi#2' for variables 'x(53).lpi#2, x(53).sva#1, x(53).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(54).lpi#2' for variables 'x(54).lpi#2, x(54).sva#1, x(54).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(55).lpi#2' for variables 'x(55).lpi#2, x(55).sva#1, x(55).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(56).lpi#2' for variables 'x(56).lpi#2, x(56).sva#1, x(56).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(57).lpi#2' for variables 'x(57).lpi#2, x(57).sva#1, x(57).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(58).lpi#2' for variables 'x(58).lpi#2, x(58).sva#1, x(58).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(59).lpi#2' for variables 'x(59).lpi#2, x(59).sva#1, x(59).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(6).lpi#2' for variables 'x(6).lpi#2, x(6).sva#1, x(6).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(60).lpi#2' for variables 'x(60).lpi#2, x(60).sva#1, x(60).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(61).lpi#2' for variables 'x(61).lpi#2, x(61).sva#1, x(61).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(62).lpi#2' for variables 'x(62).lpi#2, x(62).sva#1, x(62).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(63).lpi#2' for variables 'x(63).lpi#2, x(63).sva#1, x(63).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(64).lpi#2' for variables 'x(64).lpi#2, x(64).sva#1, x(64).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(65).lpi#2' for variables 'x(65).lpi#2, x(65).sva#1, x(65).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(66).lpi#2' for variables 'x(66).lpi#2, x(66).sva#1, x(66).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(67).lpi#2' for variables 'x(67).lpi#2, x(67).sva#1, x(67).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(68).lpi#2' for variables 'x(68).lpi#2, x(68).sva#1, x(68).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(69).lpi#2' for variables 'x(69).lpi#2, x(69).sva#1, x(69).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(7).lpi#2' for variables 'x(7).lpi#2, x(7).sva#1, x(7).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(70).lpi#2' for variables 'x(70).lpi#2, x(70).sva#1, x(70).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(71).lpi#2' for variables 'x(71).lpi#2, x(71).sva#1, x(71).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(72).lpi#2' for variables 'x(72).lpi#2, x(72).sva#1, x(72).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(73).lpi#2' for variables 'x(73).lpi#2, x(73).sva#1, x(73).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(74).lpi#2' for variables 'x(74).lpi#2, x(74).sva#1, x(74).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(75).lpi#2' for variables 'x(75).lpi#2, x(75).sva#1, x(75).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(76).lpi#2' for variables 'x(76).lpi#2, x(76).sva#1, x(76).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(77).lpi#2' for variables 'x(77).lpi#2, x(77).sva#1, x(77).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(78).lpi#2' for variables 'x(78).lpi#2, x(78).sva#1, x(78).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(79).lpi#2' for variables 'x(79).lpi#2, x(79).sva#1, x(79).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(8).lpi#2' for variables 'x(8).lpi#2, x(8).sva#1, x(8).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(80).lpi#2' for variables 'x(80).lpi#2, x(80).sva#1, x(80).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(81).lpi#2' for variables 'x(81).lpi#2, x(81).sva#1, x(81).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(82).lpi#2' for variables 'x(82).lpi#2, x(82).sva#1, x(82).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(83).lpi#2' for variables 'x(83).lpi#2, x(83).sva#1, x(83).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(84).lpi#2' for variables 'x(84).lpi#2, x(84).sva#1, x(84).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(85).lpi#2' for variables 'x(85).lpi#2, x(85).sva#1, x(85).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(86).lpi#2' for variables 'x(86).lpi#2, x(86).sva#1, x(86).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(87).lpi#2' for variables 'x(87).lpi#2, x(87).sva#1, x(87).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(88).lpi#2' for variables 'x(88).lpi#2, x(88).sva#1, x(88).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(89).lpi#2' for variables 'x(89).lpi#2, x(89).sva#1, x(89).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(9).lpi#2' for variables 'x(9).lpi#2, x(9).sva#1, x(9).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(90).lpi#2' for variables 'x(90).lpi#2, x(90).sva#1, x(90).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(91).lpi#2' for variables 'x(91).lpi#2, x(91).sva#1, x(91).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(92).lpi#2' for variables 'x(92).lpi#2, x(92).sva#1, x(92).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(93).lpi#2' for variables 'x(93).lpi#2, x(93).sva#1, x(93).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(94).lpi#2' for variables 'x(94).lpi#2, x(94).sva#1, x(94).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(95).lpi#2' for variables 'x(95).lpi#2, x(95).sva#1, x(95).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(96).lpi#2' for variables 'x(96).lpi#2, x(96).sva#1, x(96).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(97).lpi#2' for variables 'x(97).lpi#2, x(97).sva#1, x(97).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(98).lpi#2' for variables 'x(98).lpi#2, x(98).sva#1, x(98).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(99).lpi#2' for variables 'x(99).lpi#2, x(99).sva#1, x(99).sva' (2 registers deleted). (FSM-3)
+# Creating shared register 'x(126).lpi#2' for variables 'x(126).lpi#2, x(126).sva#1' (1 register deleted). (FSM-2)
+# Creating shared register 'sum.sva' for variables 'sum.sva, sum.sva#1' (1 register deleted). (FSM-2)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2166, Real ops = 1050, Vars = 1852) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 5876, Real ops = 3179, Vars = 5588) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 4187, Real ops = 1491, Vars = 172) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2698, Real ops = 1053, Vars = 270) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2638, Real ops = 1023, Vars = 292) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2638, Real ops = 1023, Vars = 292) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2638, Real ops = 1023, Vars = 292) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2638, Real ops = 1023, Vars = 292) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Completed transformation 'dpfsm' on solution 'fir_filter.v1': elapsed time 10.88 seconds, memory usage 1456096kB, peak memory usage 1456612kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'fir_filter.v1' (SOL-8)
+# Reassigned operation SHIFT_LOOP:acc:mgc_add(8,0,2,1,8,4) to mgc_add(8,0,1,0,8,4) (ASG-1)
+# Reassigned operation MAC_LOOP:acc:mgc_add(8,0,8,0,8,4) to mgc_add(8,0,1,0,8,4) (ASG-1)
+# Reassigned operation MAC_LOOP:acc#1:mgc_add(20,0,13,1,20,4) to mgc_add(20,1,13,1,20,4) (ASG-1)
+# Reassigned operation acc:mgc_add(14,1,1,0,15,4) to mgc_add(20,1,13,1,20,4) (ASG-1)
+# Reassigned operation MAC_LOOP:acc#2:mgc_add(7,0,2,1,7,3) to mgc_add(7,0,2,1,7,4) (ASG-1)
+# Reassigned operation SHIFT_LOOP:acc#2:mgc_add(7,0,2,1,7,3) to mgc_add(7,0,2,1,7,4) (ASG-1)
+# Shared Operations MAC_LOOP:mux,SHIFT_LOOP:mux#126 on resource MAC_LOOP:mux:rg:mgc_mux(3,7,128,4) (ASG-3)
+# Shared Operations SHIFT_LOOP:acc,MAC_LOOP:acc on resource MAC_LOOP:acc:rg:mgc_add(8,0,1,0,8,4) (ASG-3)
+# Shared Operations MAC_LOOP:acc#1,acc on resource MAC_LOOP:acc#1:rg:mgc_add(20,1,13,1,20,4) (ASG-3)
+# Shared Operations MAC_LOOP:acc#2,SHIFT_LOOP:acc#2 on resource MAC_LOOP:acc#2:rg:mgc_add(7,0,2,1,7,4) (ASG-3)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2724, Real ops = 1046, Vars = 2704) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2786, Real ops = 1013, Vars = 422) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2777, Real ops = 1011, Vars = 290) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2649, Real ops = 1011, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2644, Real ops = 1010, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2644, Real ops = 1010, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2644, Real ops = 1010, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2644, Real ops = 1010, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'fir_filter.v1': elapsed time 4.51 seconds, memory usage 1456096kB, peak memory usage 1456612kB (SOL-9)
+# Info: Starting transformation 'extract' on solution 'fir_filter.v1' (SOL-8)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2644, Real ops = 1010, Vars = 2625) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2773, Real ops = 1010, Vars = 423) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2773, Real ops = 1010, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 2644, Real ops = 1010, Vars = 288) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir_filter': (Total ops = 4648, Real ops = 1744, Vars = 344) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm': (Total ops = 8, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir_filter/fir_filter:core/fir_filter:core_core:fsm/fir_filter:core_core:fsm': (Total ops = 7, Real ops = 1, Vars = 1) (SOL-10)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'fir_filter.v1': elapsed time 12.70 seconds, memory usage 1456096kB, peak memory usage 1456612kB (SOL-9)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/sif/userware/En_na/flows/app_msim.flo create_wave_script ./Catapult_3/fir_filter.v1/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_3/fir_filter.v1/.dut_inst_info.tcl ./Catapult_3/fir_filter.v1/.qwave_signal 
+# app_msim.flo - Executing command 'create_wave_script ./Catapult_3/fir_filter.v1/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_3/fir_filter.v1/.dut_inst_info.tcl ./Catapult_3/fir_filter.v1/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:11:44 on Jun 23,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 00:11:44 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:11:44 on Jun 23,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.v 
+# -- Compiling module ccs_out_v1
+# 
+# Top level modules:
+# 	ccs_out_v1
+# End time: 00:11:45 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:11:45 on Jun 23,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 00:11:45 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:11:45 on Jun 23,2021
+# vlog -work work rtl.v 
+# -- Compiling module fir_filter_core_core_fsm
+# -- Compiling module fir_filter_core
+# -- Compiling module fir_filter
+# 
+# Top level modules:
+# 	fir_filter
+# End time: 00:11:45 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:11:45 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:11:46 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+# File '$PROJECT_HOME/Catapult_3/fir_filter.v1/scverify/Verify_rtl_v_msim.mk' saved
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -std=c++11 -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:16:01 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:16:02 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -std=c++11 -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:20:56 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:20:57 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+# File '$PROJECT_HOME/Catapult_3/fir_filter.v1/scverify/Verify_rtl_vhdl_msim.mk' saved
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_vhdl_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_rtl_vhdl_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_vhdl_msim'
+# mkdir -p scverify/rtl_vhdl_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_vhdl_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_vhdl_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_vhdl_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_vhdl_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_vhdl_msim/mgc_hls 
+# Modifying scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_vhdl_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_vhdl_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_vhdl_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_vhdl_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_vhdl_msim/work 
+# Modifying scverify/rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_vhdl_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/sif/userware/En_na/flows/app_msim.flo create_wave_script ./Catapult_3/fir_filter.v1/scverify/ccs_wave_signals.dat scverify/rtl_vhdl_msim/scverify_msim_wave.tcl ./Catapult_3/fir_filter.v1/.dut_inst_info.tcl ./Catapult_3/fir_filter.v1/.qwave_signal 
+# app_msim.flo - Executing command 'create_wave_script ./Catapult_3/fir_filter.v1/scverify/ccs_wave_signals.dat scverify/rtl_vhdl_msim/scverify_msim_wave.tcl ./Catapult_3/fir_filter.v1/.dut_inst_info.tcl ./Catapult_3/fir_filter.v1/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_vhdl_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:22:48 on Jun 23,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package ccs_in_pkg_v1
+# -- Compiling entity ccs_in_v1
+# -- Compiling architecture beh of ccs_in_v1
+# End time: 00:22:48 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:22:48 on Jun 23,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package ccs_out_pkg_v1
+# -- Compiling entity ccs_out_v1
+# -- Compiling architecture beh of ccs_out_v1
+# End time: 00:22:48 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work mgc_hls   /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:22:48 on Jun 23,2021
+# vcom -work mgc_hls /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mgc_io_sync_pkg_v2
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity mgc_io_sync_v2
+# -- Compiling architecture beh of mgc_io_sync_v2
+# End time: 00:22:48 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling VHDL file: rtl.vhdl
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work work   rtl.vhdl
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:22:48 on Jun 23,2021
+# vcom -work work rtl.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ccs_in_pkg_v1
+# -- Loading package ccs_out_pkg_v1
+# -- Loading package mgc_io_sync_pkg_v2
+# -- Compiling entity fir_filter_core_core_fsm
+# -- Compiling architecture v1 of fir_filter_core_core_fsm
+# -- Compiling entity fir_filter_core
+# -- Compiling architecture v1 of fir_filter_core
+# -- Compiling entity fir_filter
+# -- Compiling architecture v1 of fir_filter
+# End time: 00:22:48 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VHDL -g -std=c++11 -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:22:48 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:22:49 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_vhdl_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_vhdl_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_rtl_vhdl_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VHDL -g -std=c++11 -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:55:47 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:55:48 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_vhdl_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -std=c++11 -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:57:54 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:57:55 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/rtl_v_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_concat_sim_rtl_vhdl_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_concat_sim_rtl_vhdl_msim.mk SIMTOOL=msim simgui'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_concat_sim_rtl_vhdl_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/concat_sim_rtl_vhdl_msim'
+# mkdir -p scverify/concat_sim_rtl_vhdl_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/concat_sim_rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/concat_sim_rtl_vhdl_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/concat_sim_rtl_vhdl_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/concat_sim_rtl_vhdl_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/concat_sim_rtl_vhdl_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/concat_sim_rtl_vhdl_msim/work 
+# Modifying scverify/concat_sim_rtl_vhdl_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/concat_sim_rtl_vhdl_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/sif/userware/En_na/flows/app_msim.flo create_wave_script ./Catapult_3/fir_filter.v1/scverify/ccs_wave_signals.dat scverify/concat_sim_rtl_vhdl_msim/scverify_msim_wave.tcl ./Catapult_3/fir_filter.v1/.dut_inst_info.tcl ./Catapult_3/fir_filter.v1/.qwave_signal 
+# app_msim.flo - Executing command 'create_wave_script ./Catapult_3/fir_filter.v1/scverify/ccs_wave_signals.dat scverify/concat_sim_rtl_vhdl_msim/scverify_msim_wave.tcl ./Catapult_3/fir_filter.v1/.dut_inst_info.tcl ./Catapult_3/fir_filter.v1/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/concat_sim_rtl_vhdl_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling VHDL file: concat_sim_rtl.vhdl
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vcom -work work   concat_sim_rtl.vhdl
+# Model Technology ModelSim SE-64 vcom 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 00:58:45 on Jun 23,2021
+# vcom -work work concat_sim_rtl.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package ccs_in_pkg_v1
+# -- Compiling entity ccs_in_v1
+# -- Compiling architecture beh of ccs_in_v1
+# -- Compiling package ccs_out_pkg_v1
+# -- Compiling entity ccs_out_v1
+# -- Compiling architecture beh of ccs_out_v1
+# -- Compiling package mgc_io_sync_pkg_v2
+# -- Compiling entity mgc_io_sync_v2
+# -- Compiling architecture beh of mgc_io_sync_v2
+# -- Loading package ccs_in_pkg_v1
+# -- Loading package ccs_out_pkg_v1
+# -- Loading package mgc_io_sync_pkg_v2
+# -- Compiling entity fir_filter_core_core_fsm
+# -- Compiling architecture v1 of fir_filter_core_core_fsm
+# -- Compiling entity fir_filter_core
+# -- Compiling architecture v1 of fir_filter_core
+# -- Compiling entity fir_filter
+# -- Compiling architecture v1 of fir_filter
+# End time: 00:58:45 on Jun 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VHDL -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir_filter -DCCS_DESIGN_FUNC_fir_filter -DCCS_DESIGN_TOP_fir_filter -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# Start time: 00:58:45 on Jun 23,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# "/opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++
+#           /5.3.0/type_traits", line 311: error: identifier "__float128" is
+#           undefined
+#       struct __is_floating_point_helper<__float128>
+#                                         ^
+# 
+# 1 error detected in the compilation of "/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp".
+# ** Error: (sccom-6143) Creation of debug database failed.
+# End time: 00:58:46 on Jun 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# make: *** [scverify/concat_sim_rtl_vhdl_msim/fir_filter.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making './scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/orig_cxx_osci'
+# mkdir -p scverify/orig_cxx_osci
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/g++ -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../.. -I. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp -o scverify/orig_cxx_osci/fir_filter.cpp.cxxts.o
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/g++ -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../.. -I. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp -o scverify/orig_cxx_osci/fir_filter_tb.cpp.cxxts.o
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp: In function ‘bool ReadCSV_Coefficients(std::string, COEFF_TYPE*)’:
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp:93:16: warning: unused variable ‘headerFields’ [-Wunused-variable]
+#    const char **headerFields = CsvParser_getFields(header);
+#                 ^
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp: In function ‘int ReadCSV_Samples(std::string, samplesVector_t&)’:
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp:133:16: warning: unused variable ‘headerFields’ [-Wunused-variable]
+#    const char **headerFields = CsvParser_getFields(header);
+#                 ^
+# ============================================
+# Compiling C++ file: /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/csvparser.cpp
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/g++ -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../.. -I. -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.3a/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/csvparser.cpp -o scverify/orig_cxx_osci/csvparser.cpp.cxxts.o
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/g++  -L/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/lib/Linux/gcc -L/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/lib -L/opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/lib/Linux/gcc scverify/orig_cxx_osci/fir_filter.cpp.cxxts.o scverify/orig_cxx_osci/fir_filter_tb.cpp.cxxts.o scverify/orig_cxx_osci/csvparser.cpp.cxxts.o -lpthread -lsystemc -o scverify/orig_cxx_osci/scverify_top
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# ============================================
+# Simulating design
+# cd ../..; ./Catapult_3/fir_filter.v1/scverify/orig_cxx_osci/scverify_top 
+# Error: opening CSV file for reading: coefficients.csv : No such file or directory
+# Error: opening CSV file for reading: samples.csv : No such file or directory
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp:57 - Failed to read input samples
+# Error: make: *** [sim] Error 255
+set sfd [file dirname [info script]]
+# .
+$sfd
+# Error: invalid command name "."
+${sfd}
+# Error: invalid command name "."
+echo ${sfd}
+# .
+flow run /SCVerify/launch_make ./scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making './scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+# Make utility invoked from '/home/jd4691/NTT_Xilinx/Catapult_3/fir_filter.v1'
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "/dev/null" (BASIC-15)
+# make: Nothing to be done for `build'.
+#     /opt/mentorgraphics/Catapult_10.3a/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# ============================================
+# Simulating design
+# cd ../..; ./Catapult_3/fir_filter.v1/scverify/orig_cxx_osci/scverify_top 
+# Error: opening CSV file for reading: coefficients.csv : No such file or directory
+# Error: opening CSV file for reading: samples.csv : No such file or directory
+# /opt/mentorgraphics/Catapult_10.3a/Mgc_home/shared/training/ondemand/module4/src/fir_filter_tb.cpp:57 - Failed to read input samples
+# Error: make: *** [sim] Error 255
+quit
+# Saving project file '/home/jd4691/NTT_Xilinx/Catapult_3.ccs'. (PRJ-5)
+// Finish time Wed Jun 23 01:07:06 2021, time elapsed 59:03, peak memory 1.45GB, exit status 0

@@ -1,0 +1,320 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 1.73 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'fir_filter' (CIN-6)
+flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+solution file add ${sfd}/src/fir_filter.cpp
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+> end dofile /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/setup.tcl
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.04 seconds, memory usage 1314776kB, peak memory usage 1314776kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/src/fir_filter.cpp (CIN-69)
+c++11
+flow package option set /SCVerify/INVOKE_ARGS "[file join $sfd coefficients.csv] [file join $sfd samples.csv] [file join $sfd filter_output.csv]"
+flow package require /SCVerify
+# Error: go analyze: Failed analyze
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/catapult.log"
+solution file add ${sfd}/src/csvparser.cpp -exclude true
+go analyze
+/INPUTFILES/3
+solution options defaults
+solution.v2
+10.4.1
+go analyze
+flow package require /SCVerify
+/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv
+/INPUTFILES/1
+/INPUTFILES/2
+solution file add ${sfd}/src/fir_filter_tb.cpp -exclude true
+/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/coefficients.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/samples.csv /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/training/ondemand/module4/filter_output.csv
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 63, Real ops = 19, Vars = 14 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'fir_filter.v1': elapsed time 1.42 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+Inlining routine 'fir_filter' (CIN-14)
+Synthesizing routine 'fir_filter' (CIN-13)
+INOUT port 'b' is only used as an input. (OPT-10)
+Optimizing block '/fir_filter' ... (CIN-4)
+Loop '/fir_filter/core/SHIFT_LOOP' iterated at most 126 times. (LOOP-2)
+Loop '/fir_filter/core/MAC_LOOP' iterated at most 127 times. (LOOP-2)
+Design 'fir_filter' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult_2/fir_filter.v1/CDesignChecker/design_checker.sh'
+# Info: Starting transformation 'compile' on solution 'fir_filter.v1' (SOL-8)
+Found top design routine 'fir_filter' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+go compile
+directive set -DESIGN_HIERARCHY fir_filter
+solution design set fir_filter -top (HC-8)
+INOUT port 'y' is only used as an output. (OPT-11)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 63, Real ops = 19, Vars = 14 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'fir_filter.v1': elapsed time 0.39 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Info: Starting transformation 'libraries' on solution 'fir_filter.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 64, Real ops = 19, Vars = 14 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'fir_filter.v1': elapsed time 0.08 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+go extract
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+# Info: Starting transformation 'assembly' on solution 'fir_filter.v1' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 70, Real ops = 19, Vars = 17 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'fir_filter.v1': elapsed time 0.02 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+Loop '/fir_filter/core/SHIFT_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'fir_filter.v1' (SOL-8)
+Loop '/fir_filter/core/main' is left rolled. (LOOP-4)
+Loop '/fir_filter/core/MAC_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 951, Real ops = 518, Vars = 266 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'fir_filter.v1': elapsed time 1.14 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+I/O-Port Resource '/fir_filter/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_out' (size: 9). (MEM-2)
+I/O-Port Resource '/fir_filter/b:rsc' (from var: b) mapped to 'ccs_ioport.ccs_in' (size: 1270). (MEM-2)
+I/O-Port Resource '/fir_filter/i_sample:rsc' (from var: i_sample) mapped to 'ccs_ioport.ccs_in' (size: 3). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'fir_filter.v1' (SOL-8)
+# Info: Design complexity at end of 'cluster': Total ops = 951, Real ops = 518, Vars = 266 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'fir_filter.v1': elapsed time 0.11 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'fir_filter.v1' (SOL-8)
+# Info: Completed transformation 'architect' on solution 'fir_filter.v1': elapsed time 0.59 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+# Warning: Extrapolation detected. Script '/home/jd4691/NTT_Xilinx/Catapult_2/fir_filter.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Design complexity at end of 'architect': Total ops = 2094, Real ops = 521, Vars = 521 (SOL-21)
+Design 'fir_filter' contains '521' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'fir_filter.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 2094, Real ops = 521, Vars = 521 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'fir_filter.v1': elapsed time 1.65 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+# Info: Initial schedule of SEQUENTIAL '/fir_filter/core': Latency = 255, Area (Datapath, Register, Total) = 3736.74, 5163.75, 8900.49 (CRAAS-11)
+Prescheduled SEQUENTIAL '/fir_filter/core' (total length 256 c-steps) (SCHD-8)
+# Info: Final schedule of SEQUENTIAL '/fir_filter/core': Latency = 255, Area (Datapath, Register, Total) = 2662.19, 5163.75, 7825.94 (CRAAS-12)
+At least one feasible schedule exists. (CRAAS-9)
+Prescheduled LOOP '/fir_filter/core/SHIFT_LOOP' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir_filter/core/MAC_LOOP' (1 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+Prescheduled LOOP '/fir_filter/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir_filter/core/main' (3 c-steps) (SCHD-7)
+# Info: Starting transformation 'allocate' on solution 'fir_filter.v1' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 2010, Real ops = 521, Vars = 537 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'fir_filter.v1': elapsed time 20.44 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+Global signal 'y:rsc.dat' added to design 'fir_filter' for component 'y:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'fir_filter.v1' (SOL-8)
+Global signal 'b:rsc.dat' added to design 'fir_filter' for component 'b:rsci' (LIB-3)
+Global signal 'i_sample:rsc.dat' added to design 'fir_filter' for component 'i_sample:rsci' (LIB-3)
+Global signal 'b:rsc.triosy.lz' added to design 'fir_filter' for component 'b:rsc.triosy:obj' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/fir_filter/core' (CRAAS-1)
+Global signal 'i_sample:rsc.triosy.lz' added to design 'fir_filter' for component 'i_sample:rsc.triosy:obj' (LIB-3)
+Global signal 'y:rsc.triosy.lz' added to design 'fir_filter' for component 'y:rsc.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 862, Real ops = 485, Vars = 206 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'fir_filter.v1': elapsed time 9.16 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+Creating shared register 'x(90).lpi#2' for variables 'x(90).lpi#2, x(90).sva#1, x(90).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(9).lpi#2' for variables 'x(9).lpi#2, x(9).sva#1, x(9).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(70).lpi#2' for variables 'x(70).lpi#2, x(70).sva#1, x(70).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(7).lpi#2' for variables 'x(7).lpi#2, x(7).sva#1, x(7).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(72).lpi#2' for variables 'x(72).lpi#2, x(72).sva#1, x(72).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(56).lpi#2' for variables 'x(56).lpi#2, x(56).sva#1, x(56).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(71).lpi#2' for variables 'x(71).lpi#2, x(71).sva#1, x(71).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(55).lpi#2' for variables 'x(55).lpi#2, x(55).sva#1, x(55).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(58).lpi#2' for variables 'x(58).lpi#2, x(58).sva#1, x(58).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(67).lpi#2' for variables 'x(67).lpi#2, x(67).sva#1, x(67).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(57).lpi#2' for variables 'x(57).lpi#2, x(57).sva#1, x(57).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(66).lpi#2' for variables 'x(66).lpi#2, x(66).sva#1, x(66).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(52).lpi#2' for variables 'x(52).lpi#2, x(52).sva#1, x(52).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(69).lpi#2' for variables 'x(69).lpi#2, x(69).sva#1, x(69).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(51).lpi#2' for variables 'x(51).lpi#2, x(51).sva#1, x(51).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(68).lpi#2' for variables 'x(68).lpi#2, x(68).sva#1, x(68).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(78).lpi#2' for variables 'x(78).lpi#2, x(78).sva#1, x(78).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(54).lpi#2' for variables 'x(54).lpi#2, x(54).sva#1, x(54).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(77).lpi#2' for variables 'x(77).lpi#2, x(77).sva#1, x(77).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(53).lpi#2' for variables 'x(53).lpi#2, x(53).sva#1, x(53).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(8).lpi#2' for variables 'x(8).lpi#2, x(8).sva#1, x(8).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(63).lpi#2' for variables 'x(63).lpi#2, x(63).sva#1, x(63).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(79).lpi#2' for variables 'x(79).lpi#2, x(79).sva#1, x(79).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(62).lpi#2' for variables 'x(62).lpi#2, x(62).sva#1, x(62).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(74).lpi#2' for variables 'x(74).lpi#2, x(74).sva#1, x(74).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(65).lpi#2' for variables 'x(65).lpi#2, x(65).sva#1, x(65).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(73).lpi#2' for variables 'x(73).lpi#2, x(73).sva#1, x(73).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(64).lpi#2' for variables 'x(64).lpi#2, x(64).sva#1, x(64).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(76).lpi#2' for variables 'x(76).lpi#2, x(76).sva#1, x(76).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(6).lpi#2' for variables 'x(6).lpi#2, x(6).sva#1, x(6).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(75).lpi#2' for variables 'x(75).lpi#2, x(75).sva#1, x(75).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(59).lpi#2' for variables 'x(59).lpi#2, x(59).sva#1, x(59).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(61).lpi#2' for variables 'x(61).lpi#2, x(61).sva#1, x(61).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(60).lpi#2' for variables 'x(60).lpi#2, x(60).sva#1, x(60).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(41).lpi#2' for variables 'x(41).lpi#2, x(41).sva#1, x(41).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(40).lpi#2' for variables 'x(40).lpi#2, x(40).sva#1, x(40).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(43).lpi#2' for variables 'x(43).lpi#2, x(43).sva#1, x(43).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(42).lpi#2' for variables 'x(42).lpi#2, x(42).sva#1, x(42).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(38).lpi#2' for variables 'x(38).lpi#2, x(38).sva#1, x(38).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(37).lpi#2' for variables 'x(37).lpi#2, x(37).sva#1, x(37).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(4).lpi#2' for variables 'x(4).lpi#2, x(4).sva#1, x(4).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(39).lpi#2' for variables 'x(39).lpi#2, x(39).sva#1, x(39).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(49).lpi#2' for variables 'x(49).lpi#2, x(49).sva#1, x(49).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(48).lpi#2' for variables 'x(48).lpi#2, x(48).sva#1, x(48).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(50).lpi#2' for variables 'x(50).lpi#2, x(50).sva#1, x(50).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(5).lpi#2' for variables 'x(5).lpi#2, x(5).sva#1, x(5).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(45).lpi#2' for variables 'x(45).lpi#2, x(45).sva#1, x(45).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(44).lpi#2' for variables 'x(44).lpi#2, x(44).sva#1, x(44).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(47).lpi#2' for variables 'x(47).lpi#2, x(47).sva#1, x(47).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(46).lpi#2' for variables 'x(46).lpi#2, x(46).sva#1, x(46).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(27).lpi#2' for variables 'x(27).lpi#2, x(27).sva#1, x(27).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(26).lpi#2' for variables 'x(26).lpi#2, x(26).sva#1, x(26).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(29).lpi#2' for variables 'x(29).lpi#2, x(29).sva#1, x(29).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(28).lpi#2' for variables 'x(28).lpi#2, x(28).sva#1, x(28).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(23).lpi#2' for variables 'x(23).lpi#2, x(23).sva#1, x(23).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(22).lpi#2' for variables 'x(22).lpi#2, x(22).sva#1, x(22).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(25).lpi#2' for variables 'x(25).lpi#2, x(25).sva#1, x(25).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(24).lpi#2' for variables 'x(24).lpi#2, x(24).sva#1, x(24).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(34).lpi#2' for variables 'x(34).lpi#2, x(34).sva#1, x(34).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(33).lpi#2' for variables 'x(33).lpi#2, x(33).sva#1, x(33).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(36).lpi#2' for variables 'x(36).lpi#2, x(36).sva#1, x(36).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(35).lpi#2' for variables 'x(35).lpi#2, x(35).sva#1, x(35).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(30).lpi#2' for variables 'x(30).lpi#2, x(30).sva#1, x(30).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(3).lpi#2' for variables 'x(3).lpi#2, x(3).sva#1, x(3).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(32).lpi#2' for variables 'x(32).lpi#2, x(32).sva#1, x(32).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(31).lpi#2' for variables 'x(31).lpi#2, x(31).sva#1, x(31).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(125).lpi#2' for variables 'x(125).lpi#2, x(125).sva#1, x(125).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(124).lpi#2' for variables 'x(124).lpi#2, x(124).sva#1, x(124).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(14).lpi#2' for variables 'x(14).lpi#2, x(14).sva#1, x(14).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(13).lpi#2' for variables 'x(13).lpi#2, x(13).sva#1, x(13).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(121).lpi#2' for variables 'x(121).lpi#2, x(121).sva#1, x(121).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(120).lpi#2' for variables 'x(120).lpi#2, x(120).sva#1, x(120).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(123).lpi#2' for variables 'x(123).lpi#2, x(123).sva#1, x(123).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(122).lpi#2' for variables 'x(122).lpi#2, x(122).sva#1, x(122).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(2).lpi#2' for variables 'x(2).lpi#2, x(2).sva#1, x(2).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(19).lpi#2' for variables 'x(19).lpi#2, x(19).sva#1, x(19).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(21).lpi#2' for variables 'x(21).lpi#2, x(21).sva#1, x(21).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(20).lpi#2' for variables 'x(20).lpi#2, x(20).sva#1, x(20).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(16).lpi#2' for variables 'x(16).lpi#2, x(16).sva#1, x(16).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(15).lpi#2' for variables 'x(15).lpi#2, x(15).sva#1, x(15).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(18).lpi#2' for variables 'x(18).lpi#2, x(18).sva#1, x(18).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(17).lpi#2' for variables 'x(17).lpi#2, x(17).sva#1, x(17).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(110).lpi#2' for variables 'x(110).lpi#2, x(110).sva#1, x(110).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(11).lpi#2' for variables 'x(11).lpi#2, x(11).sva#1, x(11).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(112).lpi#2' for variables 'x(112).lpi#2, x(112).sva#1, x(112).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(111).lpi#2' for variables 'x(111).lpi#2, x(111).sva#1, x(111).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(107).lpi#2' for variables 'x(107).lpi#2, x(107).sva#1, x(107).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(106).lpi#2' for variables 'x(106).lpi#2, x(106).sva#1, x(106).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(109).lpi#2' for variables 'x(109).lpi#2, x(109).sva#1, x(109).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(108).lpi#2' for variables 'x(108).lpi#2, x(108).sva#1, x(108).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(118).lpi#2' for variables 'x(118).lpi#2, x(118).sva#1, x(118).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(117).lpi#2' for variables 'x(117).lpi#2, x(117).sva#1, x(117).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(12).lpi#2' for variables 'x(12).lpi#2, x(12).sva#1, x(12).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(119).lpi#2' for variables 'x(119).lpi#2, x(119).sva#1, x(119).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(114).lpi#2' for variables 'x(114).lpi#2, x(114).sva#1, x(114).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(113).lpi#2' for variables 'x(113).lpi#2, x(113).sva#1, x(113).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(116).lpi#2' for variables 'x(116).lpi#2, x(116).sva#1, x(116).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(115).lpi#2' for variables 'x(115).lpi#2, x(115).sva#1, x(115).sva' (2 registers deleted). (FSM-3)
+# Info: Starting transformation 'dpfsm' on solution 'fir_filter.v1' (SOL-8)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'x(103).lpi#2' for variables 'x(103).lpi#2, x(103).sva#1, x(103).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(102).lpi#2' for variables 'x(102).lpi#2, x(102).sva#1, x(102).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(105).lpi#2' for variables 'x(105).lpi#2, x(105).sva#1, x(105).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(104).lpi#2' for variables 'x(104).lpi#2, x(104).sva#1, x(104).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(10).lpi#2' for variables 'x(10).lpi#2, x(10).sva#1, x(10).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(1).lpi#2' for variables 'x(1).lpi#2, x(1).sva#1, x(1).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(101).lpi#2' for variables 'x(101).lpi#2, x(101).sva#1, x(101).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(99).lpi#2' for variables 'x(99).lpi#2, x(99).sva#1, x(99).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(100).lpi#2' for variables 'x(100).lpi#2, x(100).sva#1, x(100).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(96).lpi#2' for variables 'x(96).lpi#2, x(96).sva#1, x(96).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(95).lpi#2' for variables 'x(95).lpi#2, x(95).sva#1, x(95).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(98).lpi#2' for variables 'x(98).lpi#2, x(98).sva#1, x(98).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(97).lpi#2' for variables 'x(97).lpi#2, x(97).sva#1, x(97).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(85).lpi#2' for variables 'x(85).lpi#2, x(85).sva#1, x(85).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(84).lpi#2' for variables 'x(84).lpi#2, x(84).sva#1, x(84).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(87).lpi#2' for variables 'x(87).lpi#2, x(87).sva#1, x(87).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(86).lpi#2' for variables 'x(86).lpi#2, x(86).sva#1, x(86).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(81).lpi#2' for variables 'x(81).lpi#2, x(81).sva#1, x(81).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(80).lpi#2' for variables 'x(80).lpi#2, x(80).sva#1, x(80).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(83).lpi#2' for variables 'x(83).lpi#2, x(83).sva#1, x(83).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(82).lpi#2' for variables 'x(82).lpi#2, x(82).sva#1, x(82).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(92).lpi#2' for variables 'x(92).lpi#2, x(92).sva#1, x(92).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(91).lpi#2' for variables 'x(91).lpi#2, x(91).sva#1, x(91).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(94).lpi#2' for variables 'x(94).lpi#2, x(94).sva#1, x(94).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(93).lpi#2' for variables 'x(93).lpi#2, x(93).sva#1, x(93).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(89).lpi#2' for variables 'x(89).lpi#2, x(89).sva#1, x(89).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'x(88).lpi#2' for variables 'x(88).lpi#2, x(88).sva#1, x(88).sva' (2 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 859, Real ops = 463, Vars = 840 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'fir_filter.v1': elapsed time 2.05 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'fir_filter.v1' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 843, Real ops = 467, Vars = 202 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'fir_filter.v1': elapsed time 5.68 seconds, memory usage 1445344kB, peak memory usage 1445856kB (SOL-9)
+order file name is: rtl.vhdl_order_sim.txt
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult_2/fir_filter.v1/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult_2/fir_filter.v1/concat_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ./rtl.vhdl
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Report written to file 'rtl.rpt'
+# Info: Starting transformation 'extract' on solution 'fir_filter.v1' (SOL-8)
+Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult_2/fir_filter.v1/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Generating SCVerify testbench files
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+generate concat
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order.txt
+order file name is: rtl.v_order.txt
+Generating scverify_top.cpp ()
+Add dependent file: ./rtl.v
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Netlist written to file 'rtl.vhdl' (NET-4)
+Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult_2/fir_filter.v1/concat_sim_rtl.v
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
