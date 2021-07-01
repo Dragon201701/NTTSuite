@@ -45,7 +45,7 @@ void inPlaceNTT_DIT_precomp(VEC_T vec[VECTOR_SIZE],  PARAM_T p, PARAM_T r, VEC_T
 		m = 1 << i;
 		VEC_LOOP: for(unsigned  j = 0; j < VECTOR_SIZE; j+=m){
 		COMP_LOOP: for(unsigned k = 0; k < m >> 1; k++){
-		        	VEC_T tmp = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
+		        VEC_T tmp = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
 				factor1 = vec[j + k];
 				factor2 = modulo(tmp * vec[j + k + m/2],p);
 				vec[j + k] = modulo(factor1 + factor2, p);
