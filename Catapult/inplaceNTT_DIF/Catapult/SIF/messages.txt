@@ -1,92 +1,22 @@
 
 # Messages from "go new"
 
-# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
 
 # Messages from "go analyze"
 
-# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 3.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Warning: last line of file ends without a newline (CRD-1)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Warning: last line of file ends without a newline (CRD-1)
-# Warning: last line of file ends without a newline (CRD-1)
-Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.43 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
 Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Error:   Usage: options <operator> <args>
-# Error:       remove              Remove directives
-# Error:       -------------------------------------------------------------------------
-# Error: 
-# Error:     <args>                Operator specific arguments (Optional)
-# Error:       -------------------------------------------------------------------------
-# Error:       exists              Checks if an option exists
-# Error:       -------------------------------------------------------------------------
-# Error:       get                 Get an option value
-# Error:       -------------------------------------------------------------------------
-# Error:     <operator>            Operation for <object> (Required)
-# Error:       -------------------------------------------------------------------------
-# Error:       defaults            Restore to default settings
-# Error:     <args>                Operator specific arguments (Required)
-# Error:       set                 Set an option value
-option set Input/TargetPlatform x86_64
-# Error: 
-# Error:       -------------------------------------------------------------------------
-# Error:       load                Load options from saved location
-# Error:       -------------------------------------------------------------------------
-# Error:       save                Save options to a specified location
-# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 0.03 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
-option set Input/CppStandard c++11
-# Error: Compilation aborted (CIN-5)
-x86_64
-directive
-go analyze
-# Error: go analyze: Failed analyze
-c++11
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Error:       get                 Get directive info
-# Error:       -------------------------------------------------------------------------
-# Error:       set                 Set directives
-# Error:       -------------------------------------------------------------------------
-# Error:   Usage: directive <operator> ?<args>?
-# Error: directive: no value specified for <directive>
-# Error:     <operator>            Operation for <object> (Required)
-# Error:                           Access directives in the current project
-# Error: options: no value specified for <options>
-option
-# Error:     
-# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 0.05 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
-# Error: Compilation aborted (CIN-5)
-go compile
-# Error: go analyze: Failed analyze
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Error: Compilation aborted (CIN-5)
-# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
-# Error: go analyze: Failed analyze
-go analyze
-# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 0.04 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
-go analyze
-/INPUTFILES/2
-solution file add ./src/ntt_tb.cpp -exclude true
-go analyze
-# Error: go analyze: Input files not specfied
 /INPUTFILES/1
-# Error: invalid command name "option"
-# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
-solution options defaults
-solution.v2
-> end dofile /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/directives.tcl
-option set Input/TargetPlatform x86_64
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
 solution file add ./src/ntt.cpp
-Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
-# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.01 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
+Source file analysis completed (CIN-68)
+solution file add ./src/ntt_tb.cpp -exclude true
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"

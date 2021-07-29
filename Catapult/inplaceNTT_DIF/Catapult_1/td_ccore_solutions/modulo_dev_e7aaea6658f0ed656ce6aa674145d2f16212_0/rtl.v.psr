@@ -1,0 +1,267 @@
+puts {-- Note: Precision Synthesis Started}
+
+proc get_state { args } {
+   set state {}
+   catch {
+      set impl [get_impl_property -name]
+      set psi [open $impl/${impl}.psi r]
+      while {[gets $psi line] >= 0} {
+            if {[regexp -- "PROP key='statename' .*value='(.+)'" $line du state]} {
+                  break
+            }
+      }
+      close $psi
+   }
+   set state
+}
+
+proc run_setup { args } {
+   ## Setup Project
+   new_project -name psr_v -folder . -createimpl_name psr_v_impl -force
+   set_project_property -usetempdir false
+   set_input_dir .
+   setup_design -var "analyze_extra_options=-override -keeplast"
+
+   ## Add source HDL files
+   set CATAPULT_HOME /opt/mentorgraphics/Catapult_10.5c/Mgc_home
+   add_input_file $CATAPULT_HOME/pkgs/siflibs/ccs_in_v1.v -format verilog
+   add_input_file $CATAPULT_HOME/pkgs/siflibs/mgc_out_dreg_v2.v -format verilog
+   add_input_file $CATAPULT_HOME/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v -format verilog
+   add_input_file ./rtl.v -format verilog
+setup_design -search_path ""
+#   set CATAPULT_HOME /opt/mentorgraphics/Catapult_10.5c/Mgc_home
+#   add_input_file [list "$CATAPULT_HOME/pkgs/siflibs/ccs_in_v1.v"] -format verilog
+#   add_input_file [list "$CATAPULT_HOME/pkgs/siflibs/mgc_out_dreg_v2.v"] -format verilog
+#   add_input_file [list "$CATAPULT_HOME/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v"] -format verilog
+#   add_input_file ../../../../../../../../../../../.catapult/Cache/10_5c_896140/CCORE/16274147439e1edff5.3/rtl.v -format verilog
+   setup_design -design=modulo_dev
+
+   ## Setup technology settings
+   setup_design -manufacturer Xilinx -family VIRTEX-7 -speed -2
+   setup_design -variable bumpup_device=true
+   setup_design -addio=false
+   setup_design -gated_clock 2
+
+   if {[string compare [lindex [split [lindex [split [get_version] { }] end] .] 0] "2010a"] >= 0} {
+      if {[string compare [lindex [split [lindex [split [get_version] { }] end] .] 0] "2019"] >= 0} {
+         setup_design -var enable_catapult_vivado_timing_report=true
+      }
+      setup_place_and_route -flow Vivado -command {Integrated Place and Route} -write_bitstream 0 -ba_format Verilog -vivado_ooc_synthesis 1
+      setup_place_and_route -flow Vivado -command {Integrated Place and Route} -phys_opt_design 1
+   }
+
+   ## Add timing constraint file
+   add_input_file ../../../../../../../../../../../.catapult/Cache/10_5c_896140/CCORE/16274147439e1edff5.3/rtl.v.psr.sdc -format SDC
+
+   save_project
+}
+
+proc run_mapped { args } {
+
+   set use_sngl_rpt 0
+   set p_tmp [lindex [split [get_version]] end]
+   set prec_ver [join [lrange [split [regsub -all {[:alpha:]} $p_tmp {}] {.}] 0 1] {.}]
+
+   ## Synthesize design
+   puts "-- Starting synthesis for design 'modulo_dev': [clock format [clock seconds]]"
+   puts "-- Netlist design name : 'modulo_dev'"
+   compile
+
+   # When a clock is not detected (e.g. combinational designs) Precision RTL
+   # creates the fake clock "Design_Clock" with the period corresponding to the frequency
+   # setting in the setup_design.
+   if {$prec_ver >= 2019.1} {
+      set use_sngl_rpt 1
+      puts "-- Precision Unified Report for P2P mode"
+   }
+
+   # Do not place pad on outputs, for characterization purposes only
+   set_attribute [all_outputs] -port -name NOPAD -value TRUE
+   set_attribute [list_design] -name HIERARCHY -value flatten
+
+   synthesize
+   puts "-- Synthesis finished for design 'modulo_dev': [clock format [clock seconds]]"
+
+   puts "-- BlockMulUnit (from /TECHLIBS/mgc_Xilinx-VIRTEX-7-2_beh/MODS/mgc_mul/BINDINGS/all/PROPERTY_MAPPING/BlockMulUnit): 608.0"
+   puts "-- BlockMulUnit (from /TECHLIBS/mgc_Xilinx-VIRTEX-7-2_beh/MODS/mgc_mul_pipe/BINDINGS/all/PROPERTY_MAPPING/BlockMulUnit): 651.0"
+
+   puts "-- Characterization mode: p2p "
+   if {$use_sngl_rpt} {
+      puts "-- Input delay constraint: 0.0 "
+   }
+
+   # Gather area and timing information
+   puts "-- Synthesis area report for design 'modulo_dev'"
+   report_area -cell_usage
+   puts "-- END Synthesis area report for design 'modulo_dev'"
+
+   if {$use_sngl_rpt} {
+      puts "-- Synthesis input_to_output:timing report for design 'modulo_dev'"
+      report_timing -from [all_inputs] -to [all_outputs] -nworst 1 -detail
+      puts "-- END Synthesis input_to_output:timing report for design 'modulo_dev'"
+   } else {
+      puts "-- Synthesis input_to_output:timing report for design 'modulo_dev' '1' 'IN' port 'base_rsc_dat' '3' 'OUT' port 'return_rsc_z'"
+      report_timing -from base_rsc_dat(63:0) -to return_rsc_z(63:0) -num_paths 1 -detail  -exclude_io_buffer
+      puts "-- END Synthesis input_to_output:timing report for design 'modulo_dev' '1' 'IN' port 'base_rsc_dat' '3' 'OUT' port 'return_rsc_z'"
+      puts "-- Synthesis input_to_output:timing report for design 'modulo_dev' '2' 'IN' port 'm_rsc_dat' '3' 'OUT' port 'return_rsc_z'"
+      report_timing -from m_rsc_dat(63:0) -to return_rsc_z(63:0) -num_paths 1 -detail  -exclude_io_buffer
+      puts "-- END Synthesis input_to_output:timing report for design 'modulo_dev' '2' 'IN' port 'm_rsc_dat' '3' 'OUT' port 'return_rsc_z'"
+      puts "-- Synthesis input_to_output:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_en' '3' 'OUT' port 'return_rsc_z'"
+      report_timing -from ccs_ccore_en -to return_rsc_z(63:0) -num_paths 1 -detail  -exclude_io_buffer
+      puts "-- END Synthesis input_to_output:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_en' '3' 'OUT' port 'return_rsc_z'"
+      puts "-- Synthesis input_to_output:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_start_rsc_dat' '3' 'OUT' port 'return_rsc_z'"
+      report_timing -from ccs_ccore_start_rsc_dat -to return_rsc_z(63:0) -num_paths 1 -detail  -exclude_io_buffer
+      puts "-- END Synthesis input_to_output:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_start_rsc_dat' '3' 'OUT' port 'return_rsc_z'"
+   }
+
+   if {$use_sngl_rpt} {
+      puts "-- Synthesis input_to_register:timing report for design 'modulo_dev'"
+      if {[all_inputs] != {}  && [all_registers] != {}} {
+         report_timing -from [all_inputs] -to [all_registers] -nworst 1 -detail
+      }
+      puts "-- END Synthesis input_to_register:timing report for design 'modulo_dev'"
+   } else {
+      set regs_ccs_ccore_clk [all_registers -clock {ccs_ccore_clk}]
+      if { [llength ${regs_ccs_ccore_clk} ] > 0 } {
+         puts "-- Synthesis input_to_register:timing report for design 'modulo_dev' '1' 'IN' port 'base_rsc_dat' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+         report_timing -from base_rsc_dat(63:0) -to $regs_ccs_ccore_clk -num_paths 1 -detail  -exclude_io_buffer
+         puts "-- END Synthesis input_to_register:timing report for design 'modulo_dev' '1' 'IN' port 'base_rsc_dat' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+
+         puts "-- Synthesis input_to_register:timing report for design 'modulo_dev' '2' 'IN' port 'm_rsc_dat' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+         report_timing -from m_rsc_dat(63:0) -to $regs_ccs_ccore_clk -num_paths 1 -detail  -exclude_io_buffer
+         puts "-- END Synthesis input_to_register:timing report for design 'modulo_dev' '2' 'IN' port 'm_rsc_dat' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+
+         puts "-- Synthesis input_to_register:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_en' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+         report_timing -from ccs_ccore_en -to $regs_ccs_ccore_clk -num_paths 1 -detail  -exclude_io_buffer
+         puts "-- END Synthesis input_to_register:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_en' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+
+         puts "-- Synthesis input_to_register:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_start_rsc_dat' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+         report_timing -from ccs_ccore_start_rsc_dat -to $regs_ccs_ccore_clk -num_paths 1 -detail  -exclude_io_buffer
+         puts "-- END Synthesis input_to_register:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_start_rsc_dat' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+
+      # this workaround ensures that there is a input delay for the cases
+      # where Precision does not have a complete timing model for a particular device
+      # the reported value is used if no other input delay value is reported
+      #puts "-- Synthesis input_to_register:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_clk' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+      #report_timing -from ccs_ccore_clk -to [all_registers -clock {ccs_ccore_clk}] -num_paths 1 -detail  -exclude_io_buffer
+      #puts "-- END Synthesis input_to_register:timing report for design 'modulo_dev' '0' 'INOUT' port 'ccs_ccore_clk' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+      }
+
+   }
+   if {$use_sngl_rpt} {
+      puts "-- Synthesis register_to_register:timing report for design 'modulo_dev'"
+      if {[all_registers] != {}} {
+         report_timing -from [all_registers] -to [all_registers] -nworst 1 -detail
+      }
+      puts "-- END Synthesis register_to_register:timing report for design 'modulo_dev'"
+   } else {
+      set regsi_ccs_ccore_clk [all_registers -clock {ccs_ccore_clk}]
+      set regso_ccs_ccore_clk [all_registers -clock {ccs_ccore_clk}]
+      if { [llength ${regsi_ccs_ccore_clk} ] > 0 && [llength ${regso_ccs_ccore_clk} ] > 0 } {
+         puts "-- Synthesis register_to_register:timing report for design 'modulo_dev' '0' 'INOUT' CLOCK 'ccs_ccore_clk' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+         report_timing -from ${regs_ccs_ccore_clk} -to ${regs_ccs_ccore_clk} -num_paths 1 -detail  -exclude_io_buffer
+         puts "-- END Synthesis register_to_register:timing report for design 'modulo_dev' '0' 'INOUT' CLOCK 'ccs_ccore_clk' '0' 'INOUT' CLOCK 'ccs_ccore_clk'"
+      }
+
+   }
+   if {$use_sngl_rpt} {
+      puts "-- Synthesis register_to_output:timing report for design 'modulo_dev'"
+      if {[all_registers] != {}  && [all_outputs] != {}} {
+         report_timing -from [all_registers] -to [all_outputs] -nworst 1 -detail
+      }
+      puts "-- END Synthesis register_to_output:timing report for design 'modulo_dev'"
+   } else {
+      set regs_ccs_ccore_clk [all_registers -clock {ccs_ccore_clk}]
+      if { [llength ${regs_ccs_ccore_clk} ] > 0 } {
+         puts "-- Synthesis register_to_output:timing report for design 'modulo_dev' '0' 'INOUT' CLOCK 'ccs_ccore_clk' '3' 'OUT' port 'return_rsc_z'"
+         report_timing -from [all_registers -clock ccs_ccore_clk] -to return_rsc_z(63:0) -num_paths 1 -detail  -exclude_io_buffer
+         puts "-- END Synthesis register_to_output:timing report for design 'modulo_dev' '0' 'INOUT' CLOCK 'ccs_ccore_clk' '3' 'OUT' port 'return_rsc_z'"
+      }
+
+   }
+   save_project
+}
+
+proc remove_sdf_annotate { infile outfile } {
+   if { ![file exists $infile] }  {
+      puts "Error - input file $infile not found"
+      return
+   }
+   set s [open $infile "r"]
+   set d [open $outfile "w"]
+   while { ! [eof $s] } {
+      gets $s line
+      if { [string match "*\$sdf_annotate*" $line] == 0 } {
+         puts $d $line
+      }
+   }
+   close $s
+   close $d
+}
+
+proc vendor_vars { vendor tech lang stage } {
+  # returns a list { netlist_output_directory netlist_file_suffix sdf_file_suffix sdf_inst sim_opts }
+  set SDFINST ""
+  switch -glob -- "${vendor}-${tech}" {
+    "Xilinx*" {
+      if { $stage == "gate" } {
+        set SDFINST scverify_top/rtl
+      }
+      if { $lang == "vhdl" } {
+        return [list VNDR_NETDIR . VNDR_NETSUF .vhd     VNDR_SDFSUF _out.sdf VNDR_SDFINST $SDFINST]
+      } else {
+        #return [list VLOG_OPTS \$(XILINX)/verilog/src/glbl.v SIM_OPTS glbl VNDR_NETDIR . VNDR_NETSUF .v VNDR_SDFSUF _out.sdf VNDR_SDFINST $SDFINST]
+        return [list VNDR_NETDIR . VNDR_NETSUF .v     VNDR_SDFSUF _out.sdf VNDR_SDFINST $SDFINST]
+      }
+    }
+    "Altera*" {
+      if { $stage == "gate" } {
+        set SDFINST scverify_top/rtl
+      }
+      if { $lang == "vhdl" } {
+        return [list VNDR_NETDIR simulation/modelsim VNDR_NETSUF .vho VNDR_SDFSUF _vhd.sdo VNDR_SDFINST $SDFINST]
+      } else {
+        return [list VNDR_NETDIR simulation/modelsim VNDR_NETSUF .vo VNDR_SDFSUF _v.sdo VNDR_SDFINST $SDFINST]
+      }
+    }
+  }
+}
+
+proc run_gate { args } {
+   place_and_route cl
+   save_project
+}
+
+proc run_flow { argv } {
+   global gui_mode
+   array set db $argv
+   if {[info exists db(-run_state)]} {
+       set db(run_state) $db(-run_state)
+   }
+   if {![info exists db(run_state)]} {
+       set db(run_state) {mapped}
+   }
+
+   if {$db(run_state) == {setup} || ![file exists ./psr_v.psp] || [catch {open_project ./psr_v.psp}]} {
+       puts "-- Executing run_setup procedure"
+       run_setup
+   }
+
+   #--------------  Setup Stage Complete -------------------------------------
+
+   if {$db(run_state) == {setup} || ([info exists db(gui_mode)] && $db(gui_mode))} {
+       return
+   }
+
+   set cstate [get_state]
+   if {$cstate != {synthesized} && $cstate != {pnr}} {
+       puts "-- Executing run_mapped procedure"
+       run_mapped
+   }
+   if {$db(run_state) == {mapped}} {
+      return
+   }
+
+}
+
+run_flow [expr {[info exists argv]?$argv:{}}]

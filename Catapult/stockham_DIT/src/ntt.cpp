@@ -1,13 +1,11 @@
 
 #include "../include/ntt.h"
 
-#pragma hls_design inline
-UINT64_T modulo_dev(INT64_T base, UINT64_T m){
-
-	INT64_T result = base % m;
-	
-	return result >= 0? (UINT64_T) result : (UINT64_T) (result + m);
-
+#pragma hls_design ccore
+UINT64_T modulo_dev(ac_int<64, true> base, UINT64_T m){
+	ac_int<64, true> q, result;
+	result = base % m;
+	return (result >= 0) ? (UINT64_T)result : (UINT64_T)(result + m);
 }
 
 /**
@@ -19,39 +17,29 @@ UINT64_T modulo_dev(INT64_T base, UINT64_T m){
  * @return 	The result of the expression
  */
 #pragma hls_design inline
-UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
-
-	UINT64_T result = 1;
-	
+UINT64_T modExp_dev(UINT64_T base, UINT64_T exp, UINT64_T m){
+	UINT64_T result = 1, q = 1;
 	while(exp > 0){
-
-		if(exp % 2){
-
-			result = (result * base) % m;
-
-		}
-
-		exp = exp >> 1;
-		base = (base * base) % m;
-	}
-
+        result = ((UINT64_T)(result * base) % m);
+        exp--;
+    }
 	return result;
 }
 
 #pragma hls_design top
-void stockham_DIT(VEC_T xt[VECTOR_SIZE], UINT64_T p, UINT64_T g, VEC_T twiddle[VECTOR_SIZE]){
+void stockham_DIT(UINT64_T xt[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T twiddle[VECTOR_SIZE]){
 
-    VEC_T yt[VECTOR_SIZE];
-    VEC_T *x = xt;
-    VEC_T *y = yt;
+    UINT64_T yt[VECTOR_SIZE];
+    UINT64_T *x = xt;
+    UINT64_T *y = yt;
 
-    VEC_T *tmp;
+    UINT64_T *tmp;
     tmp = x;
     x = y;
     y = tmp;
 
-    int s = VECTOR_SIZE >> 1;
-    int shift = VECTOR_ADDR_BIT - 1;
+    unsigned s = VECTOR_SIZE >> 1;
+    unsigned shift = VECTOR_ADDR_BIT - 1;
 
     OUTER_LOOP:for(unsigned nn = 1; nn < VECTOR_ADDR_BIT ; nn++, s = s >> 1, shift = shift - 1){
         const int m = 1 << (nn - 1);
