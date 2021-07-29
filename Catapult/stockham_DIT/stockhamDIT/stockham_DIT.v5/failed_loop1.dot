@@ -1,0 +1,20 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n79[label="n79 : DOPER\n 819cy+8.81458\n",shape=ellipse,style=filled,color=bisque];
+  n84[label="n84 : DOPER\n 819cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n77[label="n77 : DOPER\n 819cy+6.96958\n",shape=ellipse,style=filled,color=bisque];
+  n74[label="n74 : DOPER\n 803cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n73[label="n73 : DOPER\n 803cy+2.48\n",shape=ellipse,style=filled,color=bisque];
+  n34[label="n34 : DOPER\n 803cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n26[label="n26 : DOPER\n 802cy+12\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n79 : 0x7f941500d210 modulo_dev:mux\ln84 : 0x7f941500da40 INNER_LOOP:write_mem(xt:rsc.@)\ln77 : 0x7f94376453c0 modulo_dev:qelse:acc\ln74 : 0x7f940934eae0 modulo_dev:result:rem\ln73 : 0x7f940934e950 INNER_LOOP:acc#2\ln34 : 0x7f946f105500 INNER_LOOP:a:INNER_LOOP:a:mux\ln26 : 0x7f946f15af80 INNER_LOOP:a:read_mem(xt:rsc.@)\l",shape=none];
+  n79 -> n84[label="258 : 0+0.750",color=blue];
+  n77 -> n79[label="258 : 0",color=blue];
+  n74 -> n77[label="258 : 0",color=blue];
+  n73 -> n74[label="259 : 0",color=green2];
+  n34 -> n73[label="258 : 0",color=blue];
+  n26 -> n34[label="258 : 0",color=blue];
+  n84 -> n26[label="262 : 0+0.750",color=red, style=bold];
+}
+

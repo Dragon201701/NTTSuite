@@ -1,0 +1,39 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n90[label="n90 : DOPER\n 560cy+8.81458\n",shape=ellipse,style=filled,color=bisque];
+  n98[label="n98 : DOPER\n 560cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n88[label="n88 : DOPER\n 560cy+6.96958\n",shape=ellipse,style=filled,color=bisque];
+  n85[label="n85 : DOPER\n 544cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n84[label="n84 : DOPER\n 544cy\n",shape=ellipse,style=filled,color=bisque];
+  n81[label="n81 : DOPER\n 518cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n80[label="n80 : DOPER\n 518cy\n",shape=ellipse,style=filled,color=bisque];
+  n73[label="n73 : DOPER\n 517cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n50[label="n50 : DOPER\n 516cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n123[label="n123 : DOPER\n 545cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n115[label="n115 : DOPER\n 545cy+8.81458\n",shape=ellipse,style=filled,color=bisque];
+  n113[label="n113 : DOPER\n 545cy+6.96958\n",shape=ellipse,style=filled,color=bisque];
+  n110[label="n110 : DOPER\n 529cy+12\n",shape=ellipse,style=filled,color=bisque];
+  n109[label="n109 : DOPER\n 529cy+2.48\n",shape=ellipse,style=filled,color=bisque];
+  n38[label="n38 : DOPER\n 529cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n28[label="n28 : DOPER\n 528cy+12\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n90  : 0x7f943793a290 modulo_dev:mux\ln98  : 0x7f94aebc1c40 INNER_LOOP:write_mem(xt:rsc.@)\ln88  : 0x7f941321fc70 modulo_dev:qelse:acc\ln85  : 0x7f9409e17210 modulo_dev:result:rem\ln84  : 0x7f948765a870 INNER_LOOP:acc#2\ln81  : 0x7f9436f5f220 INNER_LOOP:b:rem\ln80  : 0x7f942881bb80 INNER_LOOP:b:mul\ln73  : 0x7f9437c5ed70 INNER_LOOP:b:mux1h\ln50  : 0x7f94aebc1650 INNER_LOOP:b:read_mem(xt:rsc.@)\ln123 : 0x7f94aebc1ed0 INNER_LOOP:write_mem(xt:rsc.@)#1\ln115 : 0x7f94170f54a0 modulo_dev#1:mux\ln113 : 0x7f94cff46f20 modulo_dev#1:qelse:acc\ln110 : 0x7f940a81a230 modulo_dev#1:result:rem\ln109 : 0x7f943cc0d190 INNER_LOOP:acc#5\ln38  : 0x7f948764fae0 INNER_LOOP:a:INNER_LOOP:a:mux\ln28  : 0x7f94aebc1430 INNER_LOOP:a:read_mem(xt:rsc.@)\l",shape=none];
+  n90 -> n98[label="258 : 0+0.750",color=blue];
+  n88 -> n90[label="258 : 0",color=blue];
+  n85 -> n88[label="258 : 0",color=blue];
+  n84 -> n85[label="259 : 0",color=green2];
+  n81 -> n84[label="258 : 0",color=blue];
+  n80 -> n81[label="259 : 0",color=green2];
+  n73 -> n80[label="258 : 0",color=blue];
+  n50 -> n73[label="258 : 0",color=blue];
+  n123 -> n50[label="262 : 0+0.750",color=red, style=bold];
+  n115 -> n123[label="258 : 0+0.750",color=blue];
+  n113 -> n115[label="258 : 0",color=blue];
+  n110 -> n113[label="258 : 0",color=blue];
+  n109 -> n110[label="259 : 0",color=green2];
+  n38 -> n109[label="258 : 0",color=blue];
+  n28 -> n38[label="258 : 0",color=blue];
+  n98 -> n28[label="262 : 0+0.750",color=red, style=bold];
+  n98 -> n50[label="262 : 0+0.750",color=red, style=bold];
+}
+

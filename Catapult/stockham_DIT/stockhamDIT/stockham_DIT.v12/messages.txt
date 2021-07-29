@@ -1,0 +1,267 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.31 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.02 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+go libraries
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 2.74 seconds, memory usage 6950880kB, peak memory usage 6951384kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+Source file analysis completed (CIN-68)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.82 seconds, memory usage 6950880kB, peak memory usage 6951384kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: identifier "VEC_ADDR_BIT" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: go analyze: Failed analyze
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.82 seconds, memory usage 6951384kB, peak memory usage 6951384kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/1
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/catapult.log"
+solution file add ./src/ntt.cpp
+go analyze
+/INPUTFILES/2
+go compile
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+option set Input/TargetPlatform x86_64
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 6950884kB, peak memory usage 6950884kB (SOL-9)
+c++11
+solution file add ./src/ntt_tb.cpp -exclude true
+option set Input/CppStandard c++11
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 142, Real ops = 25, Vars = 64 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'stockham_DIT.v12': elapsed time 4.63 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'stockham_DIT.v12' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Optimizing block '/stockham_DIT' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Synthesizing routine 'stockham_DIT' (CIN-13)
+Found top design routine 'stockham_DIT' specified by directive (CIN-52)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'stockham_DIT' (CIN-14)
+Loop '/stockham_DIT/core/INNER_LOOP' iterated at most 512 times. (LOOP-2)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Design 'stockham_DIT' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v12/CDesignChecker/design_checker.sh'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 142, Real ops = 25, Vars = 64 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'stockham_DIT.v12': elapsed time 0.37 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'stockham_DIT.v12' (SOL-8)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 142, Real ops = 25, Vars = 64 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'stockham_DIT.v12': elapsed time 0.20 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'stockham_DIT.v12' (SOL-8)
+go extract
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 150, Real ops = 25, Vars = 68 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'stockham_DIT.v12': elapsed time 0.05 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Loop '/stockham_DIT/core/main' is left rolled. (LOOP-4)
+Loop '/stockham_DIT/core/OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/stockham_DIT/core/INNER_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'stockham_DIT.v12' (SOL-8)
+# Info: Design complexity at end of 'memories': Total ops = 149, Real ops = 25, Vars = 68 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'stockham_DIT.v12': elapsed time 1.15 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Memory Resource '/stockham_DIT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 1024 x 64). (MEM-4)
+Memory Resource '/stockham_DIT/core/yt:rsc' (from var: yt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/stockham_DIT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'stockham_DIT.v12' (SOL-8)
+I/O-Port Resource '/stockham_DIT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/stockham_DIT/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 1024 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 149, Real ops = 25, Vars = 68 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'stockham_DIT.v12': elapsed time 0.06 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'stockham_DIT.v12' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 271, Real ops = 42, Vars = 77 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'stockham_DIT.v12': elapsed time 0.33 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Design 'stockham_DIT' contains '42' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'stockham_DIT.v12' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 271, Real ops = 42, Vars = 77 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'stockham_DIT.v12': elapsed time 0.50 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Prescheduled LOOP '/stockham_DIT/core/INNER_LOOP' (47 c-steps) (SCHD-7)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/stockham_DIT/core/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/stockham_DIT/core/OUTER_LOOP' (1 c-steps) (SCHD-7)
+# Warning: Process 'core' has IGNORE_DEPENDENCY_FROM directives (potentially created from ignore_memory_precedence commands).  The command was refined to be dependent on the order of the arguments.  Please verify the correctness of the argument order.  See also the command's documentation. (MEM-52)
+# Info: Starting transformation 'allocate' on solution 'stockham_DIT.v12' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/stockham_DIT/core' (CRAAS-1)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/stockham_DIT/core': Latency = 31742, Area (Datapath, Register, Total) = 34199.68, 0.00, 34199.68 (CRAAS-12)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/stockham_DIT/core' (total length 24067 c-steps) (SCHD-8)
+Prescheduled LOOP '/stockham_DIT/core/core:rlp' (0 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/stockham_DIT/core': Latency = 24062, Area (Datapath, Register, Total) = 43166.93, 0.00, 43166.93 (CRAAS-11)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 1959, Real ops = 41, Vars = 158 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'stockham_DIT.v12': elapsed time 9.52 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Global signal 'twiddle:rsc.qb' added to design 'stockham_DIT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'g:rsc.dat' added to design 'stockham_DIT' for component 'g:rsci' (LIB-3)
+Global signal 'yt:rsc.clken' added to design 'stockham_DIT' for component 'yt:rsci' (LIB-3)
+Global signal 'twiddle:rsc.adrb' added to design 'stockham_DIT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'stockham_DIT' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'xt:rsc.triosy.lz' added to design 'stockham_DIT' for component 'xt:rsc.triosy:obj' (LIB-3)
+Global signal 'yt:rsc.wadr' added to design 'stockham_DIT' for component 'yt:rsci' (LIB-3)
+Global signal 'g:rsc.triosy.lz' added to design 'stockham_DIT' for component 'g:rsc.triosy:obj' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'stockham_DIT' for component 'p:rsc.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+# Warning: Input port 'g:rsc.dat' is never used. (OPT-4)
+Global signal 'xt:rsc.da' added to design 'stockham_DIT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.wea' added to design 'stockham_DIT' for component 'xt:rsci' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'stockham_DIT' for component 'p:rsci' (LIB-3)
+Global signal 'xt:rsc.adra' added to design 'stockham_DIT' for component 'xt:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'stockham_DIT.v12' (SOL-8)
+Global signal 'xt:rsc.qa' added to design 'stockham_DIT' for component 'xt:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/stockham_DIT/core' (CRAAS-1)
+Global signal 'yt:rsc.radr' added to design 'stockham_DIT' for component 'yt:rsci' (LIB-3)
+Global signal 'yt:rsc.q' added to design 'stockham_DIT' for component 'yt:rsci' (LIB-3)
+Global signal 'yt:rsc.d' added to design 'stockham_DIT' for component 'yt:rsci' (LIB-3)
+Global signal 'yt:rsc.we' added to design 'stockham_DIT' for component 'yt:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 674, Real ops = 356, Vars = 182 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'stockham_DIT.v12': elapsed time 1.72 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'INNER_LOOP:a.lpi#3.dfm' for variables 'INNER_LOOP:a.lpi#3.dfm, INNER_LOOP:acc#2.psp, INNER_LOOP:w:asn.itm, modulo_dev:_qr.lpi#3.dfm' (3 registers deleted). (FSM-3)
+# Info: Starting transformation 'dpfsm' on solution 'stockham_DIT.v12' (SOL-8)
+
+# Messages from "go extract"
+
+# Info: Completed transformation 'instance' on solution 'stockham_DIT.v12': elapsed time 1.13 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 675, Real ops = 315, Vars = 540 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'stockham_DIT.v12' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'extract' on solution 'stockham_DIT.v12': elapsed time 7.19 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 666, Real ops = 316, Vars = 183 (SOL-21)
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Warning: Could not determine clock name for resource /stockham_DIT/core/yt:rsc. Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Netlist written to file 'rtl.v' (NET-4)
+order file name is: rtl.vhdl_order.txt
+generate concat
+generate concat
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v12/concat_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v12/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Warning: Could not determine clock name for resource /stockham_DIT/core/yt:rsc. Defaulting to 'clk'
+Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v12/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /stockham_DIT/core/yt:rsc. Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Report written to file 'rtl.rpt'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Info: Starting transformation 'extract' on solution 'stockham_DIT.v12' (SOL-8)
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v12/concat_sim_rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /stockham_DIT/core/yt:rsc. Defaulting to 'clk'
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()

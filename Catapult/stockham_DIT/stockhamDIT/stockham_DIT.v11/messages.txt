@@ -1,0 +1,150 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.02 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+go libraries
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 2.74 seconds, memory usage 6950880kB, peak memory usage 6951384kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+Source file analysis completed (CIN-68)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.82 seconds, memory usage 6950880kB, peak memory usage 6951384kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: identifier "VEC_ADDR_BIT" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: go analyze: Failed analyze
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.82 seconds, memory usage 6951384kB, peak memory usage 6951384kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/1
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/catapult.log"
+solution file add ./src/ntt.cpp
+go analyze
+/INPUTFILES/2
+go compile
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+option set Input/TargetPlatform x86_64
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 6950884kB, peak memory usage 6950884kB (SOL-9)
+c++11
+solution file add ./src/ntt_tb.cpp -exclude true
+option set Input/CppStandard c++11
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'stockham_DIT.v7': elapsed time 2.77 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 99, Real ops = 28, Vars = 43 (SOL-21)
+Design 'stockham_DIT' was read (SOL-1)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Optimizing block '/stockham_DIT' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v7/CDesignChecker/design_checker.sh'
+Synthesizing routine 'stockham_DIT' (CIN-13)
+Found top design routine 'stockham_DIT' specified by directive (CIN-52)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'stockham_DIT' (CIN-14)
+Loop '/stockham_DIT/core/OUTER_LOOP' iterated at most 9 times. (LOOP-2)
+Loop '/stockham_DIT/core/INNER_LOOP' iterated at most 512 times. (LOOP-2)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'stockham_DIT.v7' (SOL-8)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 99, Real ops = 28, Vars = 43 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'stockham_DIT.v7': elapsed time 0.35 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'stockham_DIT.v7' (SOL-8)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 99, Real ops = 28, Vars = 43 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'stockham_DIT.v7': elapsed time 0.16 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'stockham_DIT.v7' (SOL-8)
+go extract
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v11/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'stockham_DIT.v11' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'loops': Total ops = 107, Real ops = 28, Vars = 47 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'stockham_DIT.v10': elapsed time 0.05 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Loop '/stockham_DIT/core/main' is left rolled. (LOOP-4)
+/stockham_DIT/core/OUTER_LOOP/PIPELINE_INIT_INTERVAL 0
+# Info: Starting transformation 'loops' on solution 'stockham_DIT.v10' (SOL-8)
+/stockham_DIT/core/INNER_LOOP/PIPELINE_INIT_INTERVAL 3
+go extract
+directive set /stockham_DIT/core/INNER_LOOP -PIPELINE_INIT_INTERVAL 3
+# Info: Branching solution 'stockham_DIT.v10' at state 'assembly' (PRJ-2)
+Loop '/stockham_DIT/core/OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/stockham_DIT/core/INNER_LOOP' is left rolled. (LOOP-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v10/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'loops': Total ops = 107, Real ops = 28, Vars = 47 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'stockham_DIT.v9': elapsed time 0.05 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Loop '/stockham_DIT/core/OUTER_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'stockham_DIT.v9' (SOL-8)
+Loop '/stockham_DIT/core/INNER_LOOP' is left rolled. (LOOP-4)
+go extract
+# Info: Branching solution 'stockham_DIT.v9' at state 'assembly' (PRJ-2)
+Loop '/stockham_DIT/core/main' is left rolled. (LOOP-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v9/CDesignChecker/design_checker.sh'
+/stockham_DIT/core/OUTER_LOOP/PIPELINE_INIT_INTERVAL 3
+# Info: Design complexity at end of 'loops': Total ops = 107, Real ops = 28, Vars = 47 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'stockham_DIT.v8': elapsed time 0.07 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+go extract
+# Info: Branching solution 'stockham_DIT.v8' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/stockham_DIT/core/OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/stockham_DIT/core/INNER_LOOP' is left rolled. (LOOP-4)
+Loop '/stockham_DIT/core/main' is left rolled. (LOOP-4)
+/stockham_DIT/core/INNER_LOOP/PIPELINE_INIT_INTERVAL 0
+# Info: Starting transformation 'loops' on solution 'stockham_DIT.v8' (SOL-8)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/stockhamDIT/stockham_DIT.v8/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'loops': Total ops = 107, Real ops = 28, Vars = 47 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'stockham_DIT.v7': elapsed time 0.06 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Loop '/stockham_DIT/core/INNER_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'stockham_DIT.v7' (SOL-8)
+Loop '/stockham_DIT/core/main' is left rolled. (LOOP-4)
+Loop '/stockham_DIT/core/OUTER_LOOP' is left rolled. (LOOP-4)

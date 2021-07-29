@@ -1,0 +1,106 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+go new
+Input file has changed
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: go analyze: Failed analyze
+go libraries
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 3.36 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: identifier "n" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.31 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.02 seconds, memory usage 6951396kB, peak memory usage 6951396kB (SOL-9)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+go libraries
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 2.74 seconds, memory usage 6950880kB, peak memory usage 6951384kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+Source file analysis completed (CIN-68)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.82 seconds, memory usage 6950880kB, peak memory usage 6951384kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: identifier "VEC_ADDR_BIT" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: go analyze: Failed analyze
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.82 seconds, memory usage 6951384kB, peak memory usage 6951384kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_DIT' (CIN-6)
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/1
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/stockham_DIT/catapult.log"
+solution file add ./src/ntt.cpp
+go analyze
+/INPUTFILES/2
+go compile
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+option set Input/TargetPlatform x86_64
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 6950884kB, peak memory usage 6950884kB (SOL-9)
+c++11
+solution file add ./src/ntt_tb.cpp -exclude true
+option set Input/CppStandard c++11
+set_working_dir /home/jd4691/NTT_Xilinx/Catapult/stockham_DIT
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
