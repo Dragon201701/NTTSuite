@@ -1,0 +1,92 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.12 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/modExp/catapult.log"
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/modExp/src/modExp.cpp (CIN-69)
+solution file add ./src/modExp_tb.cpp -exclude true
+solution file add ./src/modExp.cpp
+/INPUTFILES/1
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'modExp.v1': elapsed time 1.61 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1/CDesignChecker/design_checker.sh'
+Synthesizing routine 'modExp' (CIN-13)
+Design 'modExp' was read (SOL-1)
+Found top design routine 'modExp' specified by directive (CIN-52)
+Optimizing block '/modExp' ... (CIN-4)
+Inlining routine 'operator><64, false>' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modExp' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'modExp.v1' (SOL-8)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'modExp.v1': elapsed time 0.75 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+go libraries
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Starting transformation 'libraries' on solution 'modExp.v1' (SOL-8)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'modExp.v1': elapsed time 0.03 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'modExp.v1' (SOL-8)
+go extract
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'modExp.v1': elapsed time 0.01 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Loop '/modExp/core/while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'modExp.v1' (SOL-8)
+Loop '/modExp/core/main' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'modExp.v1': elapsed time 0.06 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
+I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'modExp.v1' (SOL-8)
+I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'modExp.v1': elapsed time 0.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'modExp.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'modExp.v1': elapsed time 0.22 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Design 'modExp' contains '10' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'modExp.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Starting transformation 'allocate' on solution 'modExp.v1' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Warning: Couldn't find library component for operator 'rem(64,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Error: Couldn't find library component for operation 'while:rem' ( rem(64,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)

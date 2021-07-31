@@ -111,7 +111,7 @@ CCS_MAIN(int argc, char **argv){
 	UINT64_T p = 17;
 	UINT64_T r = 3;	
 
-	VEC_T vec[VECTOR_SIZE], output[VECTOR_SIZE];
+	VEC_T vec[VECTOR_SIZE], output[VECTOR_SIZE], twiddle[VECTOR_SIZE];
 	uint64_t * vec2 = (uint64_t *)malloc(VECTOR_SIZE * sizeof(uint64_t));
 	uint64_t * golden_output;
 	for (size_t i = 0; i < VECTOR_SIZE; i++){
@@ -121,7 +121,7 @@ CCS_MAIN(int argc, char **argv){
 	
 
 	//printVec(inPlaceNTT_DIT_precomp(vec,n,p,r),n);
-	CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, output);
+	CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, output, twiddle);
     golden_output = inPlaceNTT_DIF_golden(vec2, VECTOR_SIZE, p, r);
 	printVec(golden_output);
 /*	

@@ -1,171 +1,111 @@
 
 # Messages from "go new"
 
-# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
 
 # Messages from "go analyze"
 
-# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 3.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Warning: last line of file ends without a newline (CRD-1)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Warning: last line of file ends without a newline (CRD-1)
-# Warning: last line of file ends without a newline (CRD-1)
-Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.43 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
 Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Error:   Usage: options <operator> <args>
-# Error:       remove              Remove directives
-# Error:       -------------------------------------------------------------------------
-# Error: 
-# Error:     <args>                Operator specific arguments (Optional)
-# Error:       -------------------------------------------------------------------------
-# Error:       exists              Checks if an option exists
-# Error:       -------------------------------------------------------------------------
-# Error:       get                 Get an option value
-# Error:       -------------------------------------------------------------------------
-# Error:     <operator>            Operation for <object> (Required)
-# Error:       -------------------------------------------------------------------------
-# Error:       defaults            Restore to default settings
-# Error:     <args>                Operator specific arguments (Required)
-# Error:       set                 Set an option value
-option set Input/TargetPlatform x86_64
-# Error: 
-# Error:       -------------------------------------------------------------------------
-# Error:       load                Load options from saved location
-# Error:       -------------------------------------------------------------------------
-# Error:       save                Save options to a specified location
-# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 0.03 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
-option set Input/CppStandard c++11
-# Error: Compilation aborted (CIN-5)
-x86_64
-directive
-go analyze
-# Error: go analyze: Failed analyze
-c++11
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Error:       get                 Get directive info
-# Error:       -------------------------------------------------------------------------
-# Error:       set                 Set directives
-# Error:       -------------------------------------------------------------------------
-# Error:   Usage: directive <operator> ?<args>?
-# Error: directive: no value specified for <directive>
-# Error:     <operator>            Operation for <object> (Required)
-# Error:                           Access directives in the current project
-# Error: options: no value specified for <options>
-option
-# Error:     
-# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 0.05 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
-# Error: Compilation aborted (CIN-5)
-go compile
-# Error: go analyze: Failed analyze
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# Error: Compilation aborted (CIN-5)
-# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
-# Error: go analyze: Failed analyze
-go analyze
-# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 0.04 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
-go analyze
-/INPUTFILES/2
-solution file add ./src/ntt_tb.cpp -exclude true
-go analyze
-# Error: go analyze: Input files not specfied
 /INPUTFILES/1
-# Error: invalid command name "option"
-# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
-solution options defaults
-solution.v2
-> end dofile /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/directives.tcl
-option set Input/TargetPlatform x86_64
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
 solution file add ./src/ntt.cpp
-Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
-# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.01 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
+Source file analysis completed (CIN-68)
+solution file add ./src/ntt_tb.cpp -exclude true
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
 
 # Messages from "go compile"
 
-# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 2.65 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'compile': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
-Inlining routine 'operator><64, false>' (CIN-14)
-Inlining routine 'modExp' (CIN-14)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 1.79 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 79, Real ops = 33, Vars = 30 (SOL-21)
 Inlining routine 'operator>><64, false>' (CIN-14)
-# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
-Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-go compile
-Loop '/inPlaceNTT_DIF/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+Optimizing block '/inPlaceNTT_DIF/modulo_dev' ... (CIN-4)
 Design 'inPlaceNTT_DIF' was read (SOL-1)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
 Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' iterated at most 10 times. (LOOP-2)
-Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 9 times. (LOOP-2)
-INOUT port 'vec' is only used as an input. (OPT-10)
-Inlining routine 'operator-<64, false>' (CIN-14)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
+Found design routine 'modulo_dev' specified by directive (CIN-52)
 Inlining routine 'inPlaceNTT_DIF' (CIN-14)
-Inlining routine 'modExp' (CIN-14)
-Inlining routine 'operator/<64, false>' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
 Generating synthesis internal form... (CIN-3)
 # Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
-Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
-Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
-Inlining routine 'operator%<64, false>' (CIN-14)
-Inlining routine 'operator><64, false>' (CIN-14)
-Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
 Inlining routine 'operator>><64, false>' (CIN-14)
-Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator<<64, false>' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Inlining routine 'operator+<64, false>' (CIN-14)
+Inlining routine 'modExp_dev' (CIN-14)
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modExp_dev' (CIN-14)
+Inlining routine 'operator+<64, false>' (CIN-14)
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
 
 # Messages from "go libraries"
 
-# Info: Design complexity at end of 'libraries': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
-# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.37 seconds, memory usage 1446364kB, peak memory usage 1446364kB (SOL-9)
-Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
-# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
-Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Design complexity at end of 'libraries': Total ops = 79, Real ops = 33, Vars = 30 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.68 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
 solution library remove *
-solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
-go libraries
-Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1158-2
-solution library add Xilinx_RAMS
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffq1761-2
-# Error: solution library add: Could not locate library file for library name mgc_Xilinx-VIRTEX-7-2_beh for current configuration
-go libraries
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library remove *
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
 Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-uplus-3_beh.lib' [mgc_Xilinx-VIRTEX-uplus-3_beh]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+go libraries
 
 # Messages from "go assembly"
 
-# Info: Design complexity at end of 'assembly': Total ops = 98, Real ops = 41, Vars = 24 (SOL-21)
-# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.14 seconds, memory usage 1446364kB, peak memory usage 1446364kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 80, Real ops = 33, Vars = 31 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.28 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
 # Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
 go assembly
-/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
-directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
 
 # Messages from "go architect"
 
-# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 41, Vars = 28 (SOL-21)
-# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.03 seconds, memory usage 1446364kB, peak memory usage 1446364kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 87, Real ops = 33, Vars = 36 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.03 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
 Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
-Loop '/inPlaceNTT_DIF/core/modExp#1:while' is left rolled. (LOOP-4)
 Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
 Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
-Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
 # Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
-go architect
-Loop '/inPlaceNTT_DIF/core/modExp:while' is left rolled. (LOOP-4)
-Loop '/inPlaceNTT_DIF/core/COPY_LOOP' is left rolled. (LOOP-4)
-# Error: Please select a library with memories or increase REGISTER_THRESHOLD (MEM-8)
-# Error: Splitting of Resource '/inPlaceNTT_DIF/vec:rsc' into 1024 variables could cause excessive runtime or memory requirements (MEM-8)
+go extract
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 88, Real ops = 33, Vars = 35 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.41 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
 # Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
-# Error: Splitting of Resource '/inPlaceNTT_DIF/result:rsc' into 1024 variables could cause excessive runtime or memory requirements (MEM-8)
-# Error: Please select a library with memories or increase REGISTER_THRESHOLD (MEM-8)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+# Error: Couldn't find library component for operation 'rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Error: Top-down synthesis of C-CORE 'modulo_dev' failed (ASM-2)

@@ -12,7 +12,7 @@ using namespace std;
 void modExp(UINT64_T base, UINT64_T exp, UINT64_T m, UINT64_T &result){
 
 	result = 1;
-	UINT64_T q;
+	//UINT64_T q;
     
     while(exp > 0){
         result = (UINT64_T)(result * base);

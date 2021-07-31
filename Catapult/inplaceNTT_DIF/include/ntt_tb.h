@@ -14,7 +14,7 @@
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m);
 /**
  * Perform the operation 'base (mod m)'
  *
@@ -22,7 +22,7 @@ uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-uint64_t modulo(int64_t base, int64_t m);
+UINT64_T modulo(int64_t base, int64_t m);
 /**
  * Perform an in-place iterative breadth-first decimation-in-frequency Cooley-Tukey NTT on an input vector and return the result
  *
@@ -33,4 +33,4 @@ uint64_t modulo(int64_t base, int64_t m);
  * @param rev	Whether to perform bit reversal on the output vector
  * @return 	The transformed vector
  */
-uint64_t *inPlaceNTT_DIF_golden(uint64_t *vec, uint64_t n, uint64_t p, uint64_t r);
+UINT64_T *inPlaceNTT_DIF_golden(UINT64_T *vec, UINT64_T n, UINT64_T p, UINT64_T r);

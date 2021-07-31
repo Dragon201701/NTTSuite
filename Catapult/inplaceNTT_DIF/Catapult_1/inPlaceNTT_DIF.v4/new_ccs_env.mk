@@ -23,7 +23,7 @@ HLD_CONSTRAINT_FNAME                                := top_gate_constraints.cpp
 export HLD_CONSTRAINT_FNAME
 endif
 ifeq "$(TCLSH_CMD)" ""
-TCLSH_CMD                                           := /opt/mentorgraphics/Catapult_10.5c/Mgc_home//bin/tclsh8.5
+TCLSH_CMD                                           := /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5
 export TCLSH_CMD
 endif
 ifeq "$(QuestaSIM_Path)" ""
@@ -463,7 +463,7 @@ SCVerify_GENERATE_STAGES                            := schedule extract switchin
 export SCVerify_GENERATE_STAGES
 endif
 ifeq "$(SCVerify_USE_CCS_BLOCK)" ""
-SCVerify_USE_CCS_BLOCK                              := false
+SCVerify_USE_CCS_BLOCK                              := true
 export SCVerify_USE_CCS_BLOCK
 endif
 ifeq "$(SCVerify_AUTOWAIT)" ""

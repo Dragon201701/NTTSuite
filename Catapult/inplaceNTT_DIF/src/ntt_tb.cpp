@@ -4,10 +4,10 @@
 #include "../include/config.h"
 using namespace std;
 
-void printVec(uint64_t *vec){
+void printVec(UINT64_T *vec){
 
 	std::cout << "[";
-	for(uint64_t i = 0; i < VECTOR_SIZE; i++){
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
 
 		std::cout << vec[i] << ",";
 
@@ -15,7 +15,17 @@ void printVec(uint64_t *vec){
 	std::cout << "]" << std::endl;
 
 }
-
+/**
+ * Perform the operation 'base (mod m)'
+ *
+ * @param base	The base of the expression
+ * @param m	The modulus of the expression
+ * @return 	The result of the expression
+ */
+UINT64_T modulo(int64_t base, int64_t m){
+	int64_t result = base % m;
+	return (result >= 0) ? result : result + m;
+}
 /**
  * Perform the operation 'base^exp (mod m)' using the memory-efficient method
  *
@@ -24,38 +34,14 @@ void printVec(uint64_t *vec){
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m){
-
-	uint64_t result = 1;
-	
+#pragma hls_design inline
+UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+	UINT64_T result = 1, q = 1;
 	while(exp > 0){
-
-		if(exp % 2){
-
-			result = modulo(result*base, m);
-
-		}
-
-		exp = exp >> 1;
-		base = modulo(base*base,m);
-	}
-
+        result = (UINT64_T)((result * base) % m);
+		exp--;
+    }
 	return result;
-
-}
-
-/**
- * Perform the operation 'base (mod m)'
- *
- * @param base	The base of the expression
- * @param m	The modulus of the expression
- * @return 	The result of the expression
- */
-uint64_t modulo(int64_t base, int64_t m){
-
-	int64_t result = base % m;
-	return (result >= 0) ? result : result + m;
-
 }
 /**
  * Perform an in-place iterative breadth-first decimation-in-frequency Cooley-Tukey NTT on an input vector and return the result
@@ -67,32 +53,32 @@ uint64_t modulo(int64_t base, int64_t m){
  * @param rev	Whether to perform bit reversal on the output vector
  * @return 	The transformed vector
  */
-uint64_t *inPlaceNTT_DIF_golden(uint64_t *vec, uint64_t n, uint64_t p, uint64_t r){
+UINT64_T *inPlaceNTT_DIF_golden(UINT64_T *vec, UINT64_T n, uint64_t p, uint64_t r){
 
-	uint64_t *result;
-	result = (uint64_t *) malloc(n*sizeof(uint64_t));
+	UINT64_T *result;
+	result = (UINT64_T *) malloc(n*sizeof(UINT64_T));
 
-	for(uint64_t i = 0; i < n; i++){
+	for(UINT64_T i = 0; i < n; i++){
 		result[i] = vec[i];
 	}
 
-	uint64_t m,k_,a,factor1,factor2;
-	for(uint64_t i = log2(n); i >= 1; i--){
+	UINT64_T m,k_,a,factor1,factor2;
+	for(UINT64_T i = log2(n); i >= 1; i--){
 
 		m = pow(2,i);
 
 		k_ = (p - 1)/m;
 		a = modExp(r,k_,p);
 
-		for(uint64_t j = 0; j < n; j+=m){
+		for(UINT64_T j = 0; j < n; j+=m){
 
-			for(uint64_t k = 0; k < m/2; k++){
+			for(UINT64_T k = 0; k < m/2; k++){
 
-				factor1 = result[j + k];
-				factor2 = result[j + k + m/2];
+				factor1 = result[UINT64_T(j + k)];
+				factor2 = result[UINT64_T(j + k + m/2)];
 
-				result[j + k] 		= modulo(factor1 + factor2,p);
-				result[j + k + m/2]	= modulo(modExp(a,k,p)*modulo(factor1 - factor2,p),p);
+				result[j + k] 		= modulo(int64_t(factor1 + factor2),p);
+				result[j + k + m/2]	= modulo(modExp(a,k,p)*modulo(int64_t(factor1 - factor2),p),p);
 
 			}
 		}

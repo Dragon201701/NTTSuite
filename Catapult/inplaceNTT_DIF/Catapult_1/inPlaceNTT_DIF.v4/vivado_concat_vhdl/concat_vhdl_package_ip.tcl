@@ -1,15 +1,15 @@
 # Environment variable settings
 global env
-set CATAPULT_HOME "/opt/mentorgraphics/Catapult_10.5c/Mgc_home/"
+set CATAPULT_HOME "/opt/mentorgraphics/Catapult_10.5c/Mgc_home"
 ## Set the variable for file path prefixing 
-set RTL_TOOL_SCRIPT_DIR /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/vivado_concat_vhdl
+set RTL_TOOL_SCRIPT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/vivado_concat_vhdl
 set RTL_TOOL_SCRIPT_DIR [file dirname [file normalize [info script] ] ]
 puts "-- RTL_TOOL_SCRIPT_DIR is set to '$RTL_TOOL_SCRIPT_DIR' "
 # Vivado Non-Project mode script starts here
 puts "==========================================="
 puts "Catapult driving Vivado in Non-Project mode"
 puts "==========================================="
-set outputDir /home/jd4691/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/vivado_concat_vhdl
+set outputDir /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult_1/inPlaceNTT_DIF.v4/vivado_concat_vhdl
 set outputDir $RTL_TOOL_SCRIPT_DIR
 create_project -force ip_tcl_concat_vhdl
    read_vhdl -library work ../concat_rtl.vhdl

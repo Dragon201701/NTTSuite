@@ -1,0 +1,338 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.43 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+solution file add ./src/ntt.cpp
+go compile
+solution file add ./src/ntt_tb.cpp -exclude true
+/INPUTFILES/1
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 1.79 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 79, Real ops = 33, Vars = 30 (SOL-21)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' iterated at most 10 times. (LOOP-2)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Generating synthesis internal form... (CIN-3)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'operator<<64, false>' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Inlining routine 'operator+<64, false>' (CIN-14)
+Inlining routine 'modExp_dev' (CIN-14)
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modExp_dev' (CIN-14)
+Inlining routine 'operator+<64, false>' (CIN-14)
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Optimizing block '/inPlaceNTT_DIF/modulo_dev' ... (CIN-4)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 79, Real ops = 33, Vars = 30 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.68 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+go libraries
+solution library remove *
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library remove *
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-uplus-3_beh.lib' [mgc_Xilinx-VIRTEX-uplus-3_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 80, Real ops = 33, Vars = 31 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.28 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 1547, Real ops = 498, Vars = 315 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v8': elapsed time 4.29 seconds, memory usage 1773536kB, peak memory usage 1773536kB (SOL-9)
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 32
+directive set /inPlaceNTT_DIF/core/COMP_LOOP -UNROLL 32
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v8' (SOL-8)
+go extract
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 32
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 32
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 32
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 32 times. (LOOP-3)
+N_UNROLL parameter 32 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v8/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF.v8' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'loops': Total ops = 795, Real ops = 258, Vars = 171 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v7': elapsed time 1.91 seconds, memory usage 1781752kB, peak memory usage 1781752kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 16
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 16 times. (LOOP-3)
+N_UNROLL parameter 16 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 16
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF/vec:rsc -INTERLEAVE 16
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 64
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v7' (SOL-8)
+go extract
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v7/CDesignChecker/design_checker.sh'
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+# Info: Branching solution 'inPlaceNTT_DIF.v7' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 419, Real ops = 138, Vars = 99 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v6': elapsed time 1.11 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+N_UNROLL parameter 8 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v6/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF.v6' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 128
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 128
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v6' (SOL-8)
+go extract
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 8
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 8
+directive set /inPlaceNTT_DIF/vec:rsc -INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 231, Real ops = 78, Vars = 63 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v5': elapsed time 0.73 seconds, memory usage 1519608kB, peak memory usage 1519608kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v5/CDesignChecker/design_checker.sh'
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+# Info: Branching solution 'inPlaceNTT_DIF.v5' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 4
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 4
+N_UNROLL parameter 4 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 256
+directive set /inPlaceNTT_DIF/vec:rsc -INTERLEAVE 4
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 256
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v5' (SOL-8)
+go extract
+# Info: Design complexity at end of 'loops': Total ops = 138, Real ops = 48, Vars = 45 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v4': elapsed time 0.67 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 512
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 512
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 2 times. (LOOP-3)
+N_UNROLL parameter 2 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v4/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF.v4' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v4' (SOL-8)
+go extract
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 2
+# Info: Design complexity at end of 'loops': Total ops = 138, Real ops = 48, Vars = 45 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v3': elapsed time 0.65 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+/inPlaceNTT_DIF/vec:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v3/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF.v3' at state 'assembly' (PRJ-2)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+directive set /inPlaceNTT_DIF/vec:rsc -INTERLEAVE 4
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult.ccs'. (PRJ-5)
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 256
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 4
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 2
+project save
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v3' (SOL-8)
+N_UNROLL parameter 2 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+directive set /inPlaceNTT_DIF/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 256
+go extract
+# Info: Design complexity at end of 'loops': Total ops = 87, Real ops = 33, Vars = 36 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.03 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+/DSP_EXTRACTION yes
+directive set SCHED_USE_MULTICYCLE true
+go memories
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF/Catapult/inPlaceNTT_DIF.v2/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF.v2' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'loops': Total ops = 87, Real ops = 33, Vars = 36 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.03 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/STAGE_MAIN_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+go extract
+Loop '/inPlaceNTT_DIF/core/modExp_dev#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/modExp_dev:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 9734, Real ops = 498, Vars = 376 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 1061.56 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-9)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 1024.44 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 1000.52 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 1048.38 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 922.72 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 899.02 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 976.67 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 952.73 seconds, memory usage 1871332kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 55.76 seconds, memory usage 1838560kB, peak memory usage 1838560kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 25.71 seconds, memory usage 1773024kB, peak memory usage 1773536kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 210.25 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 180.25 seconds, memory usage 1904096kB, peak memory usage 1904096kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 257.79 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 234.15 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 103.24 seconds, memory usage 1838560kB, peak memory usage 1838560kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 79.49 seconds, memory usage 1838560kB, peak memory usage 1838560kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 150.92 seconds, memory usage 1871332kB, peak memory usage 1871332kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 127.05 seconds, memory usage 1838560kB, peak memory usage 1838560kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 412.48 seconds, memory usage 1871332kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 388.58 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 459.84 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 436.04 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 305.67 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 281.84 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 364.78 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 334.78 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 614.06 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 590.51 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 673.87 seconds, memory usage 1871332kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 643.86 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 519.29 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 489.28 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 566.78 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 543.09 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 828.39 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 798.39 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 875.66 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 852.24 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 721.60 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 697.92 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 769.37 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'inPlaceNTT_DIF.v8': elapsed time 745.46 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+Resource '/inPlaceNTT_DIF/vec:rsc' split into 1 x 32 blocks (MEM-11)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v8' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(9)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(8)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(15)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(14)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(17)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(16)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(11)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(10)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(13)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(12)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(23)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(22)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(25)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(24)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(19)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(18)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(21)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(20)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(31)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(30)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(27)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(26)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(29)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(28)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 32 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 9722, Real ops = 496, Vars = 367 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 264.39 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-9)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 76.58 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 48.13 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 130.43 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 106.59 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+Module 'modulo_dev_bb61c76201db0c9669a47462bb7d006361ff_0' in the cache is valid & accepted for CCORE 'modulo_dev_bb61c76201db0c9669a47462bb7d006361ff' (TD-3)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v8' (SOL-8)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 24.10 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+Module for CCORE 'modulo_dev_bb61c76201db0c9669a47462bb7d006361ff' has been successfully synthesized (TD-4)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 261.19 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 178.46 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 154.66 seconds, memory usage 1871332kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 231.18 seconds, memory usage 1904096kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'cluster' on solution 'inPlaceNTT_DIF.v8': elapsed time 202.38 seconds, memory usage 1936868kB, peak memory usage 1936868kB (SOL-15)
+# Info: Design complexity at end of 'architect': Total ops = 27612, Real ops = 4537, Vars = 2484 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 193.97 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-9)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 130.08 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 106.26 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+Design 'inPlaceNTT_DIF' contains '4537' real operations. (SOL-11)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 183.04 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 154.10 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 28.49 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v8' (SOL-8)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 82.40 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIF.v8': elapsed time 58.49 seconds, memory usage 1838560kB, peak memory usage 1936868kB (SOL-15)

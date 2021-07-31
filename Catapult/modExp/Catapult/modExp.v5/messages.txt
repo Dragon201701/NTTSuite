@@ -1,0 +1,197 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.13 seconds, memory usage 1510820kB, peak memory usage 1511396kB (SOL-9)
+solution file add ./src/modExp_tb.cpp -exclude true
+solution file add ./src/modExp.cpp
+/INPUTFILES/1
+option set Input/TargetPlatform x86_64
+/Input/CompilerSettings/Type gcc /Input/CompilerSettings/Version 4.9.2 /Input/CompilerSettings/InstallPath /opt/mentorgraphics/Catapult_10.5c/Mgc_home /Input/CompilerSettings/Target GCC_x86_32 /Input/CompilerSettings/CppStandard c++98 /Input/CompilerSettings/CompilerVersion 4.9.2 /Input/CompilerSettings/Defines {__EMBEDDED_CXX__ vco_aol __null=0 __DBL_MIN_EXP__=(-1021) __UINT_LEAST16_MAX__=65535 __ATOMIC_ACQUIRE=2 __FLT_MIN__=1.17549435082228750797e-38F __GCC_IEC_559_COMPLEX=2 {__UINT_LEAST8_TYPE__=unsigned char} {__INTMAX_C(c)=c ## LL} __CHAR_BIT__=8 __UINT8_MAX__=255 __WINT_MAX__=4294967295U __ORDER_LITTLE_ENDIAN__=1234 __SIZE_MAX__=4294967295U __WCHAR_MAX__=2147483647L __GCC_HAVE_SYNC_COMPARE_AND_SWAP_1 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 __DBL_DENORM_MIN__=double(4.94065645841246544177e-324L) __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 __GCC_ATOMIC_CHAR_LOCK_FREE=2 __GCC_IEC_559=2 __FLT_EVAL_METHOD__=2 __unix__ __GCC_ATOMIC_CHAR32_T_LOCK_FREE=2 __UINT_FAST64_MAX__=18446744073709551615ULL __SIG_ATOMIC_TYPE__=int __DBL_MIN_10_EXP__=(-307) __FINITE_MATH_ONLY__=0 __GNUC_PATCHLEVEL__=2 __UINT_FAST8_MAX__=255 __DEC64_MAX_EXP__=385 __INT8_C(c)=c __UINT_LEAST64_MAX__=18446744073709551615ULL __SHRT_MAX__=32767 __LDBL_MAX__=1.18973149535723176502e+4932L __UINT_LEAST8_MAX__=255 __GCC_ATOMIC_BOOL_LOCK_FREE=2 {__UINTMAX_TYPE__=long long unsigned int} __linux __DEC32_EPSILON__=1E-6DF __unix __UINT32_MAX__=4294967295U __LDBL_MAX_EXP__=16384 __WINT_MIN__=0U __linux__ __SCHAR_MAX__=127 {__WCHAR_MIN__=(-__WCHAR_MAX__ - 1)} {__INT64_C(c)=c ## LL} __DBL_DIG__=15 __GCC_ATOMIC_POINTER_LOCK_FREE=2 __SIZEOF_INT__=4 __SIZEOF_POINTER__=4 __GCC_ATOMIC_CHAR16_T_LOCK_FREE=2 __USER_LABEL_PREFIX__= __STDC_HOSTED__ __LDBL_HAS_INFINITY__ __FLT_EPSILON__=1.19209289550781250000e-7F __GXX_WEAK__ __LDBL_MIN__=3.36210314311209350626e-4932L __DEC32_MAX__=9.999999E96DF __INT32_MAX__=2147483647 __SIZEOF_LONG__=4 __STDC_IEC_559__ __STDC_ISO_10646__=201103L __UINT16_C(c)=c __DECIMAL_DIG__=21 __gnu_linux__ __LDBL_HAS_QUIET_NAN__ __GNUC__=4 __GXX_RTTI __MMX__ __FLT_HAS_DENORM__ __SIZEOF_LONG_DOUBLE__=12 __BIGGEST_ALIGNMENT__=16 __DBL_MAX__=double(1.79769313486231570815e+308L) __INT_FAST32_MAX__=2147483647 __DBL_HAS_INFINITY__ __INT64_MAX__=9223372036854775807LL __DEC32_MIN_EXP__=(-94) __INT_FAST16_TYPE__=int __LDBL_HAS_DENORM__ __DEC128_MAX__=9.999999999999999999999999999999999E6144DL __INT_LEAST32_MAX__=2147483647 __DEC32_MIN__=1E-95DF __DEPRECATED __DBL_MAX_EXP__=1024 __DEC128_EPSILON__=1E-33DL __ATOMIC_HLE_RELEASE=131072 __PTRDIFF_MAX__=2147483647 __STDC_NO_THREADS__ __ATOMIC_HLE_ACQUIRE=65536 __GNUG__=4 __LONG_LONG_MAX__=9223372036854775807LL __SIZEOF_SIZE_T__=4 __SIZEOF_WINT_T__=4 __GXX_ABI_VERSION=1002 __FLT_MIN_EXP__=(-125) {__INT_FAST64_TYPE__=long long int} __DBL_MIN__=double(2.22507385850720138309e-308L) __FLT_MIN_10_EXP__=(-37) __DECIMAL_BID_FORMAT__ __DEC128_MIN__=1E-6143DL __REGISTER_PREFIX__= __UINT16_MAX__=65535 __DBL_HAS_DENORM__ {__UINT8_TYPE__=unsigned char} __NO_INLINE__ __i386 __FLT_MANT_DIG__=24 {__UINT64_C(c)=c ## ULL} _STDC_PREDEF_H __GCC_ATOMIC_INT_LOCK_FREE=2 __FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__ __STDC_IEC_559_COMPLEX__ __INT32_C(c)=c __DEC64_EPSILON__=1E-15DD __ORDER_PDP_ENDIAN__=3412 __DEC128_MIN_EXP__=(-6142) __code_model_32__ __INT_FAST32_TYPE__=int {__UINT_LEAST16_TYPE__=short unsigned int} unix __INT16_MAX__=32767 __i386__ __UINT64_MAX__=18446744073709551615ULL {__INT8_TYPE__=signed char} __ELF__ __FLT_RADIX__=2 {__INT_LEAST16_TYPE__=short int} __LDBL_EPSILON__=1.08420217248550443401e-19L {__UINTMAX_C(c)=c ## ULL} __k8 __SIG_ATOMIC_MAX__=2147483647 __GCC_ATOMIC_WCHAR_T_LOCK_FREE=2 __SIZEOF_PTRDIFF_T__=4 __DEC32_SUBNORMAL_MIN__=0.000001E-95DF __INT_FAST16_MAX__=2147483647 __UINT_FAST32_MAX__=4294967295U {__UINT_LEAST64_TYPE__=long long unsigned int} __FLT_HAS_QUIET_NAN__ __FLT_MAX_10_EXP__=38 __LONG_MAX__=2147483647L __DEC128_SUBNORMAL_MIN__=0.000000000000000000000000000000001E-6143DL __FLT_HAS_INFINITY__ {__UINT_FAST16_TYPE__=unsigned int} __DEC64_MAX__=9.999999999999999E384DD __PRAGMA_REDEFINE_EXTNAME __INT_LEAST16_MAX__=32767 __DEC64_MANT_DIG__=16 __UINT_LEAST32_MAX__=4294967295U __GCC_ATOMIC_LONG_LOCK_FREE=2 {__INT_LEAST64_TYPE__=long long int} {__INT16_TYPE__=short int} {__INT_LEAST8_TYPE__=signed char} __DEC32_MAX_EXP__=97 __INT_FAST8_MAX__=127 __INTPTR_MAX__=2147483647 linux __SSE2__ __EXCEPTIONS __LDBL_MANT_DIG__=64 __DBL_HAS_QUIET_NAN__ {__SIG_ATOMIC_MIN__=(-__SIG_ATOMIC_MAX__ - 1)} __k8__ __INTPTR_TYPE__=int {__UINT16_TYPE__=short unsigned int} __SIZEOF_FLOAT__=4 __UINTPTR_MAX__=4294967295U __DEC64_MIN_EXP__=(-382) __INT_FAST64_MAX__=9223372036854775807LL __GCC_ATOMIC_TEST_AND_SET_TRUEVAL __FLT_DIG__=6 {__UINT_FAST64_TYPE__=long long unsigned int} __INT_MAX__=2147483647 {__INT64_TYPE__=long long int} __FLT_MAX_EXP__=128 __DBL_MANT_DIG__=53 __INT_LEAST64_MAX__=9223372036854775807LL __DEC64_MIN__=1E-383DD {__WINT_TYPE__=unsigned int} {__UINT_LEAST32_TYPE__=unsigned int} __SIZEOF_SHORT__=2 __SSE__ __LDBL_MIN_EXP__=(-16381) __INT_LEAST8_MAX__=127 __LDBL_MAX_10_EXP__=4932 __ATOMIC_RELAXED=0 __DBL_EPSILON__=double(2.22044604925031308085e-16L) __UINT8_C(c)=c __INT_LEAST32_TYPE__=int __SIZEOF_WCHAR_T__=4 {__UINT64_TYPE__=long long unsigned int} {__INT_FAST8_TYPE__=signed char} __DBL_DECIMAL_DIG__=17 __FXSR__ __DEC_EVAL_METHOD__=2 __ORDER_BIG_ENDIAN__=4321 {__UINT32_C(c)=c ## U} __INTMAX_MAX__=9223372036854775807LL __BYTE_ORDER__=__ORDER_LITTLE_ENDIAN__ __FLT_DENORM_MIN__=1.40129846432481707092e-45F __INT8_MAX__=127 {__UINT_FAST32_TYPE__=unsigned int} {__CHAR32_TYPE__=unsigned int} __FLT_MAX__=3.40282346638528859812e+38F __INT32_TYPE__=int __SIZEOF_DOUBLE__=8 {__INTMAX_TYPE__=long long int} i386 __DEC128_MAX_EXP__=6145 __ATOMIC_CONSUME __GNUC_MINOR__=9 __UINTMAX_MAX__=18446744073709551615ULL __DEC32_MANT_DIG__=7 __DBL_MAX_10_EXP__=308 __LDBL_DENORM_MIN__=3.64519953188247460253e-4951L __INT16_C(c)=c __STDC__ __PTRDIFF_TYPE__=int __ATOMIC_SEQ_CST=5 {__UINT32_TYPE__=unsigned int} {__UINTPTR_TYPE__=unsigned int} __DEC64_SUBNORMAL_MIN__=0.000000000000001E-383DD __DEC128_MANT_DIG__=34 __LDBL_MIN_10_EXP__=(-4931) __SIZEOF_LONG_LONG__=8 __GCC_ATOMIC_LLONG_LOCK_FREE=2 __LDBL_DIG__=18 __FLT_DECIMAL_DIG__=9 __UINT_FAST16_MAX__=4294967295U __GNUC_GNU_INLINE__ __GCC_ATOMIC_SHORT_LOCK_FREE=2 {__UINT_FAST8_TYPE__=unsigned char} _GNU_SOURCE __ATOMIC_ACQ_REL=4 __ATOMIC_RELEASE=3} /Input/CompilerSettings/SearchPath {/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/x86_64-linux-gnu/32 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/backward /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include-fixed /usr/local/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/../../include /usr/include} /Input/CompilerSettings/LibPaths {}
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+c++11
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/modExp/src/modExp.cpp (CIN-69)
+option set Input/CppStandard c++11
+go assembly
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+/INPUTFILES/2
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+directive set DSP_EXTRACTION yes
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'modExp.v4': elapsed time 1.56 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v4/CDesignChecker/design_checker.sh'
+Design 'modExp' was read (SOL-1)
+Optimizing block '/modExp' ... (CIN-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Synthesizing routine 'modExp' (CIN-13)
+Found top design routine 'modExp' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'operator><64, false>' (CIN-14)
+# Info: Starting transformation 'compile' on solution 'modExp.v4' (SOL-8)
+Inlining routine 'modExp' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'modExp.v5': elapsed time 0.29 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+solution library add Xilinx_RAMS
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+directive set DSP_EXTRACTION yes
+# Info: Branching solution 'modExp.v5' at state 'compile' (PRJ-2)
+# Info: Starting transformation 'libraries' on solution 'modExp.v5' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+go assembly
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v5/CDesignChecker/design_checker.sh'
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'modExp.v4' (SOL-8)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+# Info: Design complexity at end of 'compile': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Error: Unable to load techlibs
+# Info: Completed transformation 'compile' on solution 'modExp.v4': elapsed time 0.26 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'modExp.v5': elapsed time 0.02 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'modExp.v5' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'modExp.v5': elapsed time 0.02 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+Loop '/modExp/core/main' is left rolled. (LOOP-4)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+Loop '/modExp/core/while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'modExp.v5' (SOL-8)
+# Info: Design complexity at end of 'memories': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'modExp.v5': elapsed time 0.06 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'modExp.v5' (SOL-8)
+I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'modExp.v5': elapsed time 0.03 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+go extract
+go compile
+/SCHED_USE_MULTICYCLE true
+# Info: Starting transformation 'cluster' on solution 'modExp.v5' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'modExp.v5': elapsed time 0.08 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+Design 'modExp' contains '10' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'modExp.v5' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'modExp.v5': elapsed time 0.18 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'modExp.v5' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-11)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Final schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-12)
+Prescheduled LOOP '/modExp/core/main' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/modExp/core/while' (26 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/modExp/core' (total length 30 c-steps) (SCHD-8)
+Prescheduled LOOP '/modExp/core/core:rlp' (1 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 498, Real ops = 9, Vars = 58 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'modExp.v5': elapsed time 1.23 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+Global signal 'result:rsc.zin' added to design 'modExp' for component 'result:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'modExp.v5' (SOL-8)
+Global signal 'base:rsc.dat' added to design 'modExp' for component 'base:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
+Global signal 'result:rsc.triosy.lz' added to design 'modExp' for component 'result:rsc.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+Global signal 'base:rsc.triosy.lz' added to design 'modExp' for component 'base:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc.zout' added to design 'modExp' for component 'result:rsci' (LIB-3)
+Global signal 'm:rsc.triosy.lz' added to design 'modExp' for component 'm:rsc.triosy:obj' (LIB-3)
+Global signal 'exp:rsc.triosy.lz' added to design 'modExp' for component 'exp:rsc.triosy:obj' (LIB-3)
+Global signal 'm:rsc.dat' added to design 'modExp' for component 'm:rsci' (LIB-3)
+Global signal 'exp:rsc.dat' added to design 'modExp' for component 'exp:rsci' (LIB-3)
+Global signal 'result:rsc.lzout' added to design 'modExp' for component 'result:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 164, Real ops = 46, Vars = 56 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'modExp.v5': elapsed time 0.37 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+Performing FSM extraction... (FSM-1)
+# Info: Starting transformation 'dpfsm' on solution 'modExp.v5' (SOL-8)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 154, Real ops = 38, Vars = 108 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'modExp.v5': elapsed time 0.36 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'modExp.v5' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Design complexity at end of 'extract': Total ops = 150, Real ops = 39, Vars = 56 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'modExp.v5': elapsed time 4.76 seconds, memory usage 1576356kB, peak memory usage 1576356kB (SOL-9)
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+Generating scverify_top.cpp ()
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v5/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Generating SCVerify testbench files
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v5/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Netlist written to file 'rtl.v' (NET-4)
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v5/concat_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v5/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Report written to file 'rtl.rpt'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Starting transformation 'extract' on solution 'modExp.v5' (SOL-8)

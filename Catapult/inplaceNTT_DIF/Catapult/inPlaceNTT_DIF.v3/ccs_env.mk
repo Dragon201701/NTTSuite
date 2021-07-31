@@ -23,7 +23,7 @@ HLD_CONSTRAINT_FNAME                                := top_gate_constraints.cpp
 export HLD_CONSTRAINT_FNAME
 endif
 ifeq "$(TCLSH_CMD)" ""
-TCLSH_CMD                                           := /opt/mentorgraphics/Catapult_10.5c/Mgc_home//bin/tclsh8.5
+TCLSH_CMD                                           := /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5
 export TCLSH_CMD
 endif
 ifeq "$(QuestaSIM_Path)" ""
@@ -463,7 +463,7 @@ SCVerify_GENERATE_STAGES                            := schedule extract switchin
 export SCVerify_GENERATE_STAGES
 endif
 ifeq "$(SCVerify_USE_CCS_BLOCK)" ""
-SCVerify_USE_CCS_BLOCK                              := false
+SCVerify_USE_CCS_BLOCK                              := true
 export SCVerify_USE_CCS_BLOCK
 endif
 ifeq "$(SCVerify_AUTOWAIT)" ""
@@ -937,6 +937,82 @@ endif
 ifeq "$(Vivado_ShellExe)" ""
 Vivado_ShellExe                                     := vivado
 export Vivado_ShellExe
+endif
+ifeq "$(CoverCheck_QHOME)" ""
+CoverCheck_QHOME                                    := can't read "QHOME": no such variable
+export CoverCheck_QHOME
+endif
+ifeq "$(CoverCheck_LICENSE_QUEUING)" ""
+CoverCheck_LICENSE_QUEUING                          := false
+export CoverCheck_LICENSE_QUEUING
+endif
+ifeq "$(CoverCheck_WITNESS_WAVEFORM)" ""
+CoverCheck_WITNESS_WAVEFORM                         := false
+export CoverCheck_WITNESS_WAVEFORM
+endif
+ifeq "$(CoverCheck_JOBS)" ""
+CoverCheck_JOBS                                     := 2
+export CoverCheck_JOBS
+endif
+ifeq "$(CoverCheck_TIMEOUT)" ""
+CoverCheck_TIMEOUT                                  := 
+export CoverCheck_TIMEOUT
+endif
+ifeq "$(CoverCheck_SCRIPT_DIR)" ""
+CoverCheck_SCRIPT_DIR                               := 
+export CoverCheck_SCRIPT_DIR
+endif
+ifeq "$(CoverCheck_AUTO_APPLY)" ""
+CoverCheck_AUTO_APPLY                               := true
+export CoverCheck_AUTO_APPLY
+endif
+ifeq "$(Xilinx_SynthesisFlowType)" ""
+Xilinx_SynthesisFlowType                            := fpga
+export Xilinx_SynthesisFlowType
+endif
+ifeq "$(Xilinx_FlowSuffix)" ""
+Xilinx_FlowSuffix                                   := xv
+export Xilinx_FlowSuffix
+endif
+ifeq "$(Xilinx_XILINX)" ""
+Xilinx_XILINX                                       := /opt/Xilinx2018
+export Xilinx_XILINX
+endif
+ifeq "$(Xilinx_XILINX_LIB)" ""
+Xilinx_XILINX_LIB                                   := can't read "XILINX_LIB": no such variable
+export Xilinx_XILINX_LIB
+endif
+ifeq "$(Xilinx_XILINX_VHDL_LIB)" ""
+Xilinx_XILINX_VHDL_LIB                              := 
+export Xilinx_XILINX_VHDL_LIB
+endif
+ifeq "$(Xilinx_XILINX_VERILOG_LIB)" ""
+Xilinx_XILINX_VERILOG_LIB                           := 
+export Xilinx_XILINX_VERILOG_LIB
+endif
+ifeq "$(Xilinx_XILINX_SIM_LIBS)" ""
+Xilinx_XILINX_SIM_LIBS                              := 
+export Xilinx_XILINX_SIM_LIBS
+endif
+ifeq "$(Xilinx_NEW_SIMLIB_FLOW)" ""
+Xilinx_NEW_SIMLIB_FLOW                              := false
+export Xilinx_NEW_SIMLIB_FLOW
+endif
+ifeq "$(Xilinx_COMPXLIB_DIR)" ""
+Xilinx_COMPXLIB_DIR                                 := 
+export Xilinx_COMPXLIB_DIR
+endif
+ifeq "$(Xilinx_SIMLIBS_V)" ""
+Xilinx_SIMLIBS_V                                    := 
+export Xilinx_SIMLIBS_V
+endif
+ifeq "$(Xilinx_SIMLIBS_VHD)" ""
+Xilinx_SIMLIBS_VHD                                  := 
+export Xilinx_SIMLIBS_VHD
+endif
+ifeq "$(Xilinx_BITGEN)" ""
+Xilinx_BITGEN                                       := false
+export Xilinx_BITGEN
 endif
 ifeq "$(INLINEDPROPERTYLANG)" ""
 INLINEDPROPERTYLANG                                 := psl

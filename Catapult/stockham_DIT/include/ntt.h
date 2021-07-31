@@ -14,7 +14,7 @@
  */
 UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m);
 
-void stockham_DIT(VEC_T xt[VECTOR_SIZE], UINT64_T p, UINT64_T g, VEC_T twiddle[VECTOR_SIZE]);
+void stockham_DIT(UINT64_T xt[VECTOR_SIZE], UINT64_T p, UINT64_T g, UINT64_T twiddle[VECTOR_SIZE]);
 //void DIT_RELOOP(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T result[VECTOR_ADDR_BIT+1][VECTOR_SIZE], VEC_T twiddle[VECTOR_SIZE]);
 
 #endif /* NTT_H_ */
