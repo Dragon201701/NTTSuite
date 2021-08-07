@@ -1,5 +1,5 @@
 ==============================================================================
-[10850] Catapult 10.5c/896140 - Sat Aug  7 14:49:40 2021
+[10857] Catapult 10.5c/896140 - Sat Aug  7 14:54:13 2021
 ------------------------------------------------------------------------------
 [New LWP 61563]
 [New LWP 61564]
@@ -184,8 +184,8 @@ Thread 5 (Thread 0x7fee1e36d700 (LWP 61621)):
 #5  0x00007fee373ef96d in clone () from /lib64/libc.so.6
 
 Thread 4 (Thread 0x7fee2ef71700 (LWP 61565)):
-#0  0x0000000000e559be in pmul (cmax=902, cmin=1, t=0x7fed8f7c28b0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:134
-#1  SC_FinalNode::push_gain (this=0x7fed93edcce0, tmp=tmp@entry=0x7fed8f7c28b0, maxc=993) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:162
+#0  0x0000000000e559be in pmul (cmax=592, cmin=1, t=0x7fed8f7c28b0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:134
+#1  SC_FinalNode::push_gain (this=0x7fed8cfc3ca0, tmp=tmp@entry=0x7fed8f7c28b0, maxc=993) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:162
 #2  0x0000000000e562c5 in SC_FinalDep::calc_gain (this=this@entry=0x7fee2ef6f940) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:312
 #3  0x0000000000e56746 in SC_FinalDep::optimize (this=this@entry=0x7fee2ef6f940) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:385
 #4  0x0000000000e578bb in sif_sc_final (blk=blk@entry=0x7fedb72544f0, alloc=alloc@entry=0x7fedd753a500) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:578

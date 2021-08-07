@@ -51,4 +51,14 @@ void inPlaceNTT_DIF(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r){
 			}
 		}
 	}
+<<<<<<< HEAD
+	
+	/*if(rev){
+		return bit_reverse(result,n);
+	}else{
+		return result;
+	}*/
 }
+=======
+}
+>>>>>>> 51f618ed618b8be67fc9e3cdad66b372802b3a1e

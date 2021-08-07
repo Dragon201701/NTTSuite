@@ -108,7 +108,7 @@ CCS_MAIN(int argc, char **argv){
 
 	//printVec(inPlaceNTT_DIT_precomp(vec,n,p,r),n);
 	CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, output);
-    golden_output = inPlaceNTT_DIF_golden(vec2, VECTOR_SIZE, p, r);
+    	golden_output = inPlaceNTT_DIF_golden(vec2, VECTOR_SIZE, p, r);
 	printVec(golden_output);
 /*	
 	//uint64_t *vec = randVec(n,10);
