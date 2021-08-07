@@ -1,0 +1,152 @@
+
+# Loop constraints
+directive set /inPlaceNTT_DIF/core/core:rlp CSTEPS_FROM {{. == 0}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main CSTEPS_FROM {{. == 2} {.. == 0}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP CSTEPS_FROM {{. == 2} {.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP CSTEPS_FROM {{. == 1} {.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP CSTEPS_FROM {{. == 125} {.. == 0}}
+
+# IO operation constraints
+directive set /inPlaceNTT_DIF/core/core:rlp/main/p:io_read(p:rsc.@) CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/r:io_read(r:rsc.@) CSTEPS_FROM {{.. == 1}}
+
+# Sync operation constraints
+
+# Real operation constraints
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:lshift CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:acc CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@) CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@) CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@) CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@) CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#35 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:acc#10 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#1 CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:acc#6 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:modulo() CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:tmp:acc CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:tmp:lshift CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:tmp:mul CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(0).@) CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:mul CSTEPS_FROM {{.. == 16}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:modulo()#1 CSTEPS_FROM {{.. == 17}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@) CSTEPS_FROM {{.. == 30}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@) CSTEPS_FROM {{.. == 30}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@) CSTEPS_FROM {{.. == 30}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@) CSTEPS_FROM {{.. == 30}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:acc#8 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:modulo()#2 CSTEPS_FROM {{.. == 4}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#1 CSTEPS_FROM {{.. == 31}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#1 CSTEPS_FROM {{.. == 31}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#1 CSTEPS_FROM {{.. == 31}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#1 CSTEPS_FROM {{.. == 31}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:acc CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#2 CSTEPS_FROM {{.. == 32}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#2 CSTEPS_FROM {{.. == 32}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#2 CSTEPS_FROM {{.. == 32}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#2 CSTEPS_FROM {{.. == 32}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#2 CSTEPS_FROM {{.. == 33}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:acc#10 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#3 CSTEPS_FROM {{.. == 33}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#3 CSTEPS_FROM {{.. == 33}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#3 CSTEPS_FROM {{.. == 33}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#3 CSTEPS_FROM {{.. == 33}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#3 CSTEPS_FROM {{.. == 34}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:acc#6 CSTEPS_FROM {{.. == 34}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:modulo() CSTEPS_FROM {{.. == 34}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:tmp:lshift CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:tmp:mul CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(0).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(1).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(2).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(3).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:mux1h CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:mul CSTEPS_FROM {{.. == 47}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:modulo()#1 CSTEPS_FROM {{.. == 48}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#2 CSTEPS_FROM {{.. == 61}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#2 CSTEPS_FROM {{.. == 61}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#2 CSTEPS_FROM {{.. == 61}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#2 CSTEPS_FROM {{.. == 61}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:acc#8 CSTEPS_FROM {{.. == 34}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-2:modulo()#2 CSTEPS_FROM {{.. == 35}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#3 CSTEPS_FROM {{.. == 62}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#3 CSTEPS_FROM {{.. == 62}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#3 CSTEPS_FROM {{.. == 62}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#3 CSTEPS_FROM {{.. == 62}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:acc CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:acc#11 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#4 CSTEPS_FROM {{.. == 63}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#4 CSTEPS_FROM {{.. == 63}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#4 CSTEPS_FROM {{.. == 63}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#4 CSTEPS_FROM {{.. == 63}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#4 CSTEPS_FROM {{.. == 64}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:acc#10 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#5 CSTEPS_FROM {{.. == 64}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#5 CSTEPS_FROM {{.. == 64}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#5 CSTEPS_FROM {{.. == 64}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#5 CSTEPS_FROM {{.. == 64}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#5 CSTEPS_FROM {{.. == 65}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:acc#6 CSTEPS_FROM {{.. == 65}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:modulo() CSTEPS_FROM {{.. == 65}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:tmp:lshift CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:tmp:mul CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(0).@)#2 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(2).@)#2 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:mux CSTEPS_FROM {{.. == 4}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:mul CSTEPS_FROM {{.. == 78}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:modulo()#1 CSTEPS_FROM {{.. == 79}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#4 CSTEPS_FROM {{.. == 92}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#4 CSTEPS_FROM {{.. == 92}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#4 CSTEPS_FROM {{.. == 92}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#4 CSTEPS_FROM {{.. == 92}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:acc#8 CSTEPS_FROM {{.. == 65}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-3:modulo()#2 CSTEPS_FROM {{.. == 66}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#5 CSTEPS_FROM {{.. == 93}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#5 CSTEPS_FROM {{.. == 93}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#5 CSTEPS_FROM {{.. == 93}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#5 CSTEPS_FROM {{.. == 93}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:acc#12 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#6 CSTEPS_FROM {{.. == 94}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#6 CSTEPS_FROM {{.. == 94}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#6 CSTEPS_FROM {{.. == 94}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#6 CSTEPS_FROM {{.. == 94}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#6 CSTEPS_FROM {{.. == 95}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:acc#10 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(0).@)#7 CSTEPS_FROM {{.. == 95}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(1).@)#7 CSTEPS_FROM {{.. == 95}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(2).@)#7 CSTEPS_FROM {{.. == 95}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:read_mem(vec:rsc(0)(3).@)#7 CSTEPS_FROM {{.. == 95}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:mux1h#7 CSTEPS_FROM {{.. == 96}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:acc#6 CSTEPS_FROM {{.. == 96}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:modulo() CSTEPS_FROM {{.. == 96}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:tmp:mul CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(0).@)#3 CSTEPS_FROM {{.. == 4}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(1).@)#3 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(2).@)#3 CSTEPS_FROM {{.. == 4}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:read_mem(twiddle:rsc(0)(3).@)#3 CSTEPS_FROM {{.. == 3}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:tmp:mux1h#1 CSTEPS_FROM {{.. == 5}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:mul CSTEPS_FROM {{.. == 109}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:modulo()#1 CSTEPS_FROM {{.. == 110}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#6 CSTEPS_FROM {{.. == 123}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#6 CSTEPS_FROM {{.. == 123}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#6 CSTEPS_FROM {{.. == 123}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#6 CSTEPS_FROM {{.. == 123}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:acc#8 CSTEPS_FROM {{.. == 96}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-4:modulo()#2 CSTEPS_FROM {{.. == 97}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(0).@)#7 CSTEPS_FROM {{.. == 124}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(1).@)#7 CSTEPS_FROM {{.. == 124}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(2).@)#7 CSTEPS_FROM {{.. == 124}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:write_mem(vec:rsc(0)(3).@)#7 CSTEPS_FROM {{.. == 124}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP:acc#13 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/COMP_LOOP/COMP_LOOP-1:acc CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/VEC_LOOP/VEC_LOOP:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:acc#1 CSTEPS_FROM {{.. == 2}}
+directive set /inPlaceNTT_DIF/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:acc CSTEPS_FROM {{.. == 2}}
+
+# Probe constraints

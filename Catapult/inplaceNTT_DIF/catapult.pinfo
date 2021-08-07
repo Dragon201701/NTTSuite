@@ -1,5 +1,5 @@
 ==============================================================================
-[3713] Catapult 10.5c/896140 - Thu Jul 29 11:26:30 2021
+[24482] Catapult 10.5c/896140 - Sat Aug  7 14:50:10 2021
 ------------------------------------------------------------------------------
 [New LWP 31195]
 [New LWP 31196]
@@ -173,72 +173,3 @@ Thread 6 (Thread 0x7ff51297e700 (LWP 31260)):
 #3  0x00000000008de5c2 in _ZN2yRWFAqu::_ZNdpSk8gMp::InitW(void*) ()
 #4  0x00000000008d4fb3 in _ZNXxBsPEL9::_ZNSUNRwcNN::_ZN8gPozogJ::rinit(void*) ()
 #5  0x00007ff528e25ea5 in start_thread () from /lib64/libpthread.so.0
-#6  0x00007ff52831696d in clone () from /lib64/libc.so.6
-
-Thread 5 (Thread 0x7ff51317f700 (LWP 31258)):
-#0  0x00007ff528e29a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007ff52989ace7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#2  0x00007ff52986463c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7ff51c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
-#4  0x00007ff528e25ea5 in start_thread () from /lib64/libpthread.so.0
-#5  0x00007ff52831696d in clone () from /lib64/libc.so.6
-
-Thread 4 (Thread 0x7ff51b7fe700 (LWP 31197)):
-#0  0x0000000000e559be in pmul (cmax=1307, cmin=12, t=0x7ff4b1716310) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:134
-#1  SC_FinalNode::push_gain (this=0x7ff4b3f9b740, tmp=tmp@entry=0x7ff4b1716310, maxc=1441) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:162
-#2  0x0000000000e562c5 in SC_FinalDep::calc_gain (this=this@entry=0x7ff51b7fc940) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:312
-#3  0x0000000000e56746 in SC_FinalDep::optimize (this=this@entry=0x7ff51b7fc940) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:385
-#4  0x0000000000e578bb in sif_sc_final (blk=blk@entry=0x7ff514bb7710, alloc=alloc@entry=0x7ff4d5192110) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:578
-#5  0x0000000000e57727 in sif_sc_final (blk=blk@entry=0x7ff516bcb310, alloc=alloc@entry=0x7ff4d5192110) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
-#6  0x0000000000e57727 in sif_sc_final (blk=blk@entry=0x7ff4d23d32a0, alloc=alloc@entry=0x7ff4d5192110) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
-#7  0x0000000000e57727 in sif_sc_final (blk=blk@entry=0x7ff514c886a0, alloc=alloc@entry=0x7ff4d5192110) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
-#8  0x0000000000e57727 in sif_sc_final (blk=0x7ff514dc4060, alloc=0x7ff4d5192110) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
-#9  0x0000000000e4fc4c in SIF_Scheduler::post_schedule (this=this@entry=0x7ff4e026a680) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:3834
-#10 0x00000000005b8146 in SIF_AllocData::update_schedule (this=this@entry=0x7ff4d5192110) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_alloc.cxx:1469
-#11 0x0000000000a2e525 in sif_compute_schedule_cmd_rek (lres=..., design=design@entry=0x7ff4dcd7bb20, hpart=hpart@entry=0x7ff4dcd80130) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_allocation.cxx:1475
-#12 0x0000000000a330d2 in sif_compute_schedule_cmd (interp=0x7ff51402fc00, solution=0x7ff4dc16c5d0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_allocation.cxx:1557
-#13 0x00000000008a582b in (anonymous namespace)::ise_go_transform (stateSetCWD=..., solution=@0x7ff51b7fd9b8: 0x7ff4dc16c5d0, cmd=..., lres=...) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2089
-#14 TUC_Go::ise_go (interp=interp@entry=0x7ff51402fc00, cmd=..., solution=@0x7ff51b7fd9b8: 0x7ff4dc16c5d0, state=state@entry=SDS::Sextract) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2261
-#15 0x00000000008a7c4c in TUC_Go::TclCommand::Command (this=<optimized out>, objcIdx=<optimized out>, clientData=<optimized out>, interp=0x7ff51402fc00, objc=<optimized out>, objv=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2441
-#16 0x000000000085c4b5 in SIF_TclCommand::Process (objv=0x7ff51403e860, objc=2, interp=0x7ff51402fc00, clientData=0x0, objcIdx=1, this=0x7ff514248c30) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.cxx:271
-#17 SIF_TclTopCommand::tclCommand (clientData=<optimized out>, interp=0x7ff51402fc00, objc=2, objv=0x7ff51403e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.h:255
-#18 0x00007ff5297ee8a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#19 0x00007ff5297f018c in TclEvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#20 0x00007ff5297f0793 in Tcl_EvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#21 0x0000000000a1e41d in TTclThread::Handler::EventEval::Process (this=0x7ff510f6e9a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1595
-#22 0x0000000000a12b63 in TTclThread::Event::EventProc (evPtr=<optimized out>, flags=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1026
-#23 0x00007ff52986436f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#24 0x00007ff5298645b5 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#25 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7ff51c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
-#26 0x00007ff528e25ea5 in start_thread () from /lib64/libpthread.so.0
-#27 0x00007ff52831696d in clone () from /lib64/libc.so.6
-
-Thread 3 (Thread 0x7ff51bfff700 (LWP 31196)):
-#0  0x00007ff52830d9a3 in select () from /lib64/libc.so.6
-#1  0x00007ff529899e78 in NotifierThreadProc () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#2  0x00007ff528e25ea5 in start_thread () from /lib64/libpthread.so.0
-#3  0x00007ff52831696d in clone () from /lib64/libc.so.6
-
-Thread 2 (Thread 0x7ff520e9a700 (LWP 31195)):
-#0  0x00007ff528e29a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007ff52989ace7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#2  0x00007ff52986463c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x2b8cca0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
-#4  0x00007ff528e25ea5 in start_thread () from /lib64/libpthread.so.0
-#5  0x00007ff52831696d in clone () from /lib64/libc.so.6
-
-Thread 1 (Thread 0x7ff52b605740 (LWP 31193)):
-#0  0x00007ff528e29a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
-#1  0x00007ff52989945b in Tcl_ConditionWait () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#2  0x0000000000a12fad in TTclThread::TclCondition::Wait (this=0x2b8a560) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:58
-#3  0x000000000096cb1d in TUC_Startup::RunInteractiveCommand::TclCommand::Command(int, void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
-#4  0x000000000085c4b5 in SIF_TclCommand::Process (objv=0x2b0b7d8, objc=1, interp=0x2afe0b0, clientData=0x0, objcIdx=1, this=0x2b8b220) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.cxx:271
-#5  SIF_TclTopCommand::tclCommand (clientData=<optimized out>, interp=0x2afe0b0, objc=1, objv=0x2b0b7d8) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.h:255
-#6  0x00007ff5297ee8a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#7  0x00007ff529832576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#8  0x00007ff52983ac97 in TclCompEvalObj () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#9  0x00007ff5297f0846 in TclEvalObjEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#10 0x0000000000457f28 in TTclObjI::Eval (this=0x7ffea93eeaf0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/aol/Isrc/ise/tclobj.h:601
-#11 StartTcl (envp=0x0, argv=0x7ffea93eec28, argc=1) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/newui_main.cxx:1005
-#12 app_main (argv=0x7ffea93eec28, argc=1, envp=0x0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/newui_main.cxx:1073
-#13 main (argc=1, argv=0x7ffea93eec28) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/newui_main.cxx:1092

@@ -1,0 +1,184 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v2
+vinPlaceNTT_DIF
+Z1 !s110 1627859670
+!i10b 1
+!s100 F4FH9_@8Ad4ODM82MS_iF1
+Il=oYI6^<PodMV[bBgUYiC3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1627847148
+Z4 8rtl.v
+Z5 Frtl.v
+L0 741
+Z6 OL;L;10.6;65
+r1
+!s85 0
+31
+Z7 !s108 1627859670.000000
+Z8 !s107 rtl.v|
+Z9 !s90 -work|work|rtl.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+nin@place@n@t@t_@d@i@f
+vinPlaceNTT_DIF_core
+R1
+!i10b 1
+!s100 f?>L>825XYV>;m5eNCeYX3
+I2C:b[:D>E8J:B`SaC_I1C1
+R2
+R0
+R3
+R4
+R5
+L0 333
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_core
+vinPlaceNTT_DIF_core_core_fsm
+R1
+!i10b 1
+!s100 P6e<eR`@@I_bVUHRijE`V0
+IC094VNh]?cd^6V8??`?Z_3
+R2
+R0
+R3
+R4
+R5
+L0 72
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_core_core_fsm
+vinPlaceNTT_DIF_core_wait_dp
+R1
+!i10b 1
+!s100 Cll79dGgki7H[JCc:]Gb?0
+Ia<E>hiOf7gLlXOL1?KGml1
+R2
+R0
+R3
+R4
+R5
+L0 315
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_core_wait_dp
+vinPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_7_10_64_1024_1024_64_1_gen
+R1
+!i10b 1
+!s100 HC9B=ZB^i@DUz7hW2WB^K1
+IF1cg0cHmi5jDgUKb_?MB53
+R2
+R0
+R3
+R4
+R5
+Z12 L0 16
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_@xilinx_@r@a@m@s_@b@l@o@c@k_1@r1@w_@r@b@w_rport_7_10_64_1024_1024_64_1_gen
+vinPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_4_10_64_1024_1024_64_1_gen
+R1
+!i10b 1
+!s100 hlcLWA?oB<K0jRDaUkk7Z3
+I<E;]7Mz@Dg3`:TBECT??h2
+R2
+R0
+R3
+R4
+R5
+L0 38
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_@xilinx_@r@a@m@s_@b@l@o@c@k_1@r1@w_@r@b@w_rwport_4_10_64_1024_1024_64_1_gen
+vmodulo
+R1
+!i10b 1
+!s100 :1j`_KRA7;OaXi^NG`oaR3
+I4C42ff1Z5RC5?O99P5_cI3
+R2
+R0
+Z13 w1627847137
+Z14 8../td_ccore_solutions/modulo_9ae1d119fc8eee114172955f76eb675761ce_0/rtl.v
+Z15 F../td_ccore_solutions/modulo_9ae1d119fc8eee114172955f76eb675761ce_0/rtl.v
+L0 5040
+R6
+r1
+!s85 0
+31
+R7
+Z16 !s107 ../td_ccore_solutions/modulo_9ae1d119fc8eee114172955f76eb675761ce_0/rtl.v|
+Z17 !s90 -work|work|../td_ccore_solutions/modulo_9ae1d119fc8eee114172955f76eb675761ce_0/rtl.v|
+!i113 0
+R10
+R11
+vmodulo_core
+R1
+!i10b 1
+!s100 i?Ge=b330egbi>Ga]2;Xc0
+IG4DdH6`Zn:z_?I^cJ;5AN3
+R2
+R0
+R13
+R14
+R15
+R12
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 0
+R10
+R11

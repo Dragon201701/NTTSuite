@@ -1,0 +1,77 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 4.22 seconds, memory usage 2305432kB, peak memory usage 2305432kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+go compile
+# Error: expected a ")" (CRD-18)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 4.03 seconds, memory usage 2305432kB, peak memory usage 2305432kB (SOL-9)
+Input file has changed
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: expected a ")" (CRD-18)
+# Error: go analyze: Failed analyze
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 3.81 seconds, memory usage 2305432kB, peak memory usage 2305432kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: expected a ")" (CRD-18)
+# Error: expected a ")" (CRD-18)
+go compile
+# Error: Compilation aborted (CIN-5)
+go compile
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.66 seconds, memory usage 2231704kB, peak memory usage 2231704kB (SOL-9)
+Source file analysis completed (CIN-68)
+directive set DSP_EXTRACTION yes
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/DSP_EXTRACTION yes
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT.v2': elapsed time 3.39 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Source file analysis completed (CIN-68)
+inPlaceNTT_DIT.v2
+# Info: Branching solution 'inPlaceNTT_DIT.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+go compile
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.33 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Moving session transcript to file "/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Source file analysis completed (CIN-68)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt_tb.cpp -exclude true
+solution file add ./src/ntt.cpp
+/INPUTFILES/1

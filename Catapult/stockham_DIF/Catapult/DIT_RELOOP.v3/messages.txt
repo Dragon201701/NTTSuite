@@ -1,0 +1,67 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.78 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+/INPUTFILES/2
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+solution file add ./src/ntt.cpp
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt_tb.cpp -exclude true
+/INPUTFILES/1
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'DIT_RELOOP' (CIN-6)
+quit
+quit
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'DIT_RELOOP.v1': elapsed time 2.67 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 75, Real ops = 27, Vars = 29 (SOL-21)
+Generating synthesis internal form... (CIN-3)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/CDesignChecker/design_checker.sh'
+# Info: Starting transformation 'compile' on solution 'DIT_RELOOP.v1' (SOL-8)
+Inlining routine 'modulo_dev' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Optimizing block '/DIT_RELOOP/modulo_dev' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Found top design routine 'DIT_RELOOP' specified by directive (CIN-52)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Inlining routine 'DIT_RELOOP' (CIN-14)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' iterated at most 1025 times. (LOOP-2)
+Synthesizing routine 'DIT_RELOOP' (CIN-13)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 2049 times. (LOOP-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Design 'DIT_RELOOP' was read (SOL-1)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/DIT_RELOOP' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+# Info: Branching solution 'DIT_RELOOP.v3' at state 'compile' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v3/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'libraries': Total ops = 75, Real ops = 27, Vars = 29 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'DIT_RELOOP.v1': elapsed time 0.76 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Starting transformation 'libraries' on solution 'DIT_RELOOP.v1' (SOL-8)
+go libraries

@@ -1,0 +1,857 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT.v2': elapsed time 3.39 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Source file analysis completed (CIN-68)
+inPlaceNTT_DIT.v2
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Branching solution 'inPlaceNTT_DIT.v2' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.33 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Moving session transcript to file "/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/catapult.log"
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+solution file add ./src/ntt_tb.cpp -exclude true
+Source file analysis completed (CIN-68)
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIT.v2': elapsed time 2.65 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Design 'inPlaceNTT_DIT' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' iterated at most 9 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v2/CDesignChecker/design_checker.sh'
+Synthesizing routine 'inPlaceNTT_DIT' (CIN-13)
+Found top design routine 'inPlaceNTT_DIT' specified by directive (CIN-52)
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'inPlaceNTT_DIT' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator/<66, true>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Optimizing block '/inPlaceNTT_DIT' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIT.v2': elapsed time 0.28 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v43': elapsed time 0.16 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-9)
+# Info: Branching solution 'inPlaceNTT_DIT.v43' at state 'libraries' (PRJ-2)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v43/CDesignChecker/design_checker.sh'
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid44 ADD {} {VERSION v43 SID sid44 BRANCH_SID sid43 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+directive set -CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set /inPlaceNTT_DIT/core/COMP_LOOP -UNROLL 16
+/inPlaceNTT_DIT/vec:rsc/INTERLEAVE 16
+go libraries
+/inPlaceNTT_DIT/core/COMP_LOOP/UNROLL 16
+CU_DIRECTIVE sid43 SET /inPlaceNTT_DIT/core/COMP_LOOP {UNROLL 8}: Race condition
+CU_DIRECTIVE sid43 SET /inPlaceNTT_DIT/core/modExp:while {PIPELINE_INIT_INTERVAL 0}: Race condition
+CU_DESIGN sid43 ADD {} {VERSION v42 SID sid43 BRANCH_SID sid42 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+CU_DIRECTIVE sid43 SET /inPlaceNTT_DIT/core/VEC_LOOP {UNROLL no}: Race condition
+CU_DIRECTIVE sid43 SET /inPlaceNTT_DIT/vec:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+CU_DIRECTIVE sid43 SET /inPlaceNTT_DIT/core/modExp#1:while {PIPELINE_INIT_INTERVAL 0}: Race condition
+CU_DIRECTIVE sid43 SET /inPlaceNTT_DIT/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v42/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v42' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'loops': Total ops = 753, Real ops = 269, Vars = 213 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT.v41': elapsed time 2.07 seconds, memory usage 2762712kB, peak memory usage 2762712kB (SOL-9)
+Loop '/inPlaceNTT_DIT/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/modExp:while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT.v41' (SOL-8)
+N_UNROLL parameter 8 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIT/core/modExp#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v41': elapsed time 0.16 seconds, memory usage 2762712kB, peak memory usage 2762712kB (SOL-9)
+go extract
+directive set -CLOCKS {clk {-CLOCK_PERIOD 11.9 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.95 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.9 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.95 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.9 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.95 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid42 ADD {} {VERSION v41 SID sid42 BRANCH_SID sid41 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v41' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v41/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v41' at state 'libraries' (PRJ-2)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v40': elapsed time 0.15 seconds, memory usage 2500568kB, peak memory usage 2500568kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v40' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v40/CDesignChecker/design_checker.sh'
+go assembly
+/CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid41 ADD {} {VERSION v40 SID sid41 BRANCH_SID sid40 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+# Info: Branching solution 'inPlaceNTT_DIT.v40' at state 'libraries' (PRJ-2)
+go libraries
+/inPlaceNTT_DIT/core/COMP_LOOP/UNROLL 8
+# Info: Branching solution 'inPlaceNTT_DIT.v39' at state 'assembly' (PRJ-2)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v39/CDesignChecker/design_checker.sh'
+CU_DIRECTIVE sid40 SET /inPlaceNTT_DIT/core/COMP_LOOP {UNROLL 4}: Race condition
+CU_DIRECTIVE sid40 SET /inPlaceNTT_DIT/core/modExp:while {PIPELINE_INIT_INTERVAL 0}: Race condition
+CU_DESIGN sid40 ADD {} {VERSION v39 SID sid40 BRANCH_SID sid39 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+CU_DIRECTIVE sid40 SET /inPlaceNTT_DIT/core/VEC_LOOP {UNROLL no}: Race condition
+CU_DIRECTIVE sid40 SET /inPlaceNTT_DIT/vec:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+CU_DIRECTIVE sid40 SET /inPlaceNTT_DIT/core/modExp#1:while {PIPELINE_INIT_INTERVAL 0}: Race condition
+CU_DIRECTIVE sid40 SET /inPlaceNTT_DIT/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+# Info: Design complexity at end of 'loops': Total ops = 401, Real ops = 145, Vars = 117 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT.v38': elapsed time 1.12 seconds, memory usage 2369508kB, peak memory usage 2369508kB (SOL-9)
+N_UNROLL parameter 4 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIT/core/modExp#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/inPlaceNTT_DIT/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/modExp:while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT.v38' (SOL-8)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v38': elapsed time 0.16 seconds, memory usage 2369508kB, peak memory usage 2369508kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v38/CDesignChecker/design_checker.sh'
+directive set -CLOCKS {clk {-CLOCK_PERIOD 11.63 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.815 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.63 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.815 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid39 ADD {} {VERSION v38 SID sid39 BRANCH_SID sid38 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+# Info: Branching solution 'inPlaceNTT_DIT.v38' at state 'libraries' (PRJ-2)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 11.63 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.815 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v38' (SOL-8)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v37': elapsed time 0.14 seconds, memory usage 2238436kB, peak memory usage 2238436kB (SOL-9)
+go extract
+directive set -CLOCKS {clk {-CLOCK_PERIOD 11.76 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.88 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.76 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.88 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.76 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.88 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid38 ADD {} {VERSION v37 SID sid38 BRANCH_SID sid37 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v37' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v37/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v37' at state 'libraries' (PRJ-2)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v36': elapsed time 0.15 seconds, memory usage 2172900kB, peak memory usage 2172908kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v36' (SOL-8)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid37 ADD {} {VERSION v36 SID sid37 BRANCH_SID sid36 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v36/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v36' at state 'libraries' (PRJ-2)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v34': elapsed time 0.14 seconds, memory usage 2041828kB, peak memory usage 2041828kB (SOL-9)
+go extract
+directive set -CLOCKS {clk {-CLOCK_PERIOD 11.11 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.555 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.11 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.555 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 11.11 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5.555 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid35 ADD {} {VERSION v34 SID sid35 BRANCH_SID sid34 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v34' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v34/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v34' at state 'libraries' (PRJ-2)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v33': elapsed time 0.14 seconds, memory usage 2035684kB, peak memory usage 2035684kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v33' (SOL-8)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 12.5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 6.25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid34 ADD {} {VERSION v33 SID sid34 BRANCH_SID sid12 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v33/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v33' at state 'libraries' (PRJ-2)
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v12': elapsed time 0.16 seconds, memory usage 1773540kB, peak memory usage 1781732kB (SOL-9)
+CU_DESIGN sid12 ADD {} {VERSION v12 SID sid12 BRANCH_SID sid11 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v12' (SOL-8)
+# Info: Branching solution 'inPlaceNTT_DIT.v12' at state 'libraries' (PRJ-2)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v12/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v5': elapsed time 0.14 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+# Info: Branching solution 'inPlaceNTT_DIT.v5' at state 'libraries' (PRJ-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v5/CDesignChecker/design_checker.sh'
+go assembly
+CU_DESIGN sid5 ADD {} {VERSION v5 SID sid5 BRANCH_SID sid4 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v2': elapsed time 0.14 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT.v43': elapsed time 5.33 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 1457, Real ops = 517, Vars = 405 (SOL-21)
+Loop '/inPlaceNTT_DIT/core/modExp:while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+Loop '/inPlaceNTT_DIT/core/VEC_LOOP' is left rolled. (LOOP-4)
+N_UNROLL parameter 16 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' is being partially unrolled 16 times. (LOOP-3)
+Loop '/inPlaceNTT_DIT/core/modExp#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 3499, Real ops = 517, Vars = 451 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIT.v43': elapsed time 16.22 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-9)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(9)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(8)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(15)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(14)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIT/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(11)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(10)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(13)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(12)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Resource '/inPlaceNTT_DIT/vec:rsc' split into 1 x 16 blocks (MEM-11)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 256 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 3499, Real ops = 517, Vars = 451 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIT.v43': elapsed time 0.51 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 8284, Real ops = 1680, Vars = 1146 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIT.v43': elapsed time 25.93 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-9)
+# Info: Running transformation 'architect' on solution 'inPlaceNTT_DIT.v43': elapsed time 23.69 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-15)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+Design 'inPlaceNTT_DIT' contains '1680' real operations. (SOL-11)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 8284, Real ops = 1680, Vars = 1146 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8211.41 seconds, memory usage 2959332kB, peak memory usage 3024868kB (SOL-9)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1950.52 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1926.75 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1795.94 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1772.04 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1843.72 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1819.90 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2105.11 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5598.74 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2081.38 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5574.96 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2152.65 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5646.48 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2128.87 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5622.62 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1998.18 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5491.70 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1974.33 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5467.96 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2051.37 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5544.95 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2022.00 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5515.52 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3133.73 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5800.88 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3103.98 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5776.99 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3187.19 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5854.04 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3163.73 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5824.61 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3032.87 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5699.50 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3009.20 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5670.35 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3080.25 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5753.25 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3056.59 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5729.51 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3335.34 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5182.61 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3311.70 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5158.86 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3382.54 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5235.83 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3359.05 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5206.38 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3234.44 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5081.27 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3210.74 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5052.40 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3288.14 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5135.06 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3258.14 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5111.27 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2723.64 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5390.39 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2699.85 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5360.85 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2771.02 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5444.16 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2747.34 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5420.41 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2616.59 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5289.61 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2592.81 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5265.84 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2669.84 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5337.07 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2640.38 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5313.37 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2925.76 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6412.39 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2902.06 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6388.81 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2979.19 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6471.45 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2949.43 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6441.43 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2824.60 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6317.78 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2794.75 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6287.77 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2878.27 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6365.27 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2854.59 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6341.49 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3953.20 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6626.01 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3929.46 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6596.00 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4000.65 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6673.49 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3976.91 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6649.76 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3846.12 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6519.13 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3822.38 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6495.36 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3905.68 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6566.54 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3875.67 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6542.85 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4155.35 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6008.62 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4131.57 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5979.10 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4214.76 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6062.32 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4184.76 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6038.63 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4060.21 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5908.01 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4030.21 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5884.05 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4107.82 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5955.44 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4084.02 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5931.83 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3536.83 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6216.92 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3513.06 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6193.22 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3596.53 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6264.10 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3566.52 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6240.39 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3441.96 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6109.58 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3411.96 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6085.93 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3489.25 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6163.22 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3465.53 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6133.26 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3751.11 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7244.33 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3721.10 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7214.33 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3798.63 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7292.37 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3774.89 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7268.28 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3643.86 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7137.40 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3620.16 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7113.39 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3691.38 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7185.27 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 3667.61 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7161.43 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4773.37 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7446.68 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4749.74 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7422.92 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4833.02 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7494.39 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4803.01 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7470.49 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4678.48 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7340.44 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4648.47 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7316.38 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4726.02 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7398.88 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4702.26 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7368.87 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4981.32 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6828.02 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4957.52 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6804.28 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5028.62 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6875.93 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 5004.84 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6851.96 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4880.42 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6720.86 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4856.69 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6697.22 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4927.52 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6780.58 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4904.07 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6750.57 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4369.33 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7030.60 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4339.33 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7006.99 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4416.76 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7089.75 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4393.03 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7059.74 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4262.21 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6935.17 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4238.48 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6905.16 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4309.70 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6983.11 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4285.94 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 6959.14 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4571.39 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8064.85 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4547.65 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8040.99 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4618.88 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8112.44 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4595.10 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8088.58 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4464.25 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7958.60 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4440.49 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7934.68 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4523.91 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8017.15 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 4493.89 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7987.14 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8171.71 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8141.70 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 8195.70 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7648.79 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7624.80 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7708.04 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7678.04 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7553.45 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7523.45 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7601.06 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7577.22 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7862.59 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7832.59 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7910.67 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7886.63 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7756.06 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7731.92 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7803.99 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 7780.13 seconds, memory usage 3024868kB, peak memory usage 3024868kB (SOL-15)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/main' (2 c-steps) (SCHD-7)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIT/core': Latency = 304701, Area (Datapath, Register, Total) = 52480.54, 0.00, 52480.54 (CRAAS-11)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIT/core' (total length 304706 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/VEC_LOOP' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP' (705 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/STAGE_LOOP' (10 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/modExp:while' (20 c-steps) (SCHD-7)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIT/core': Latency = 480696, Area (Datapath, Register, Total) = 38295.67, 0.00, 38295.67 (CRAAS-12)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 72.07 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-15)
+# Info: Optimized LOOP 'modExp:while': Latency = 484854, Area (Datapath, Register, Total) = 38295.67, 0.00, 38295.67 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 102.10 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 23.85 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-15)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Optimized LOOP 'COMP_LOOP-1:modExp#1:while': Latency = 394989, Area (Datapath, Register, Total) = 52480.54, 0.00, 52480.54 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 47.56 seconds, memory usage 2959320kB, peak memory usage 2959320kB (SOL-15)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-11:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-12:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-9:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-10:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-15:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-16:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-13:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-14:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-3:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-4:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-1:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-2:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-7:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-8:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-5:modExp#1:while' (20 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-6:modExp#1:while' (20 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 660.09 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 636.64 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 713.73 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 690.10 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 565.89 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 535.88 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 612.88 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 589.40 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 868.06 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 844.15 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 915.69 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 891.87 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 760.98 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 737.29 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 814.15 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 784.65 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 256.70 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 226.69 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 304.05 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 280.39 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 149.49 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 125.78 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 197.00 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 173.28 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 458.69 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 435.07 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 506.17 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 482.48 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 351.45 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 327.70 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 411.31 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 381.31 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1486.34 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1462.47 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1533.89 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1510.23 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1379.44 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1355.63 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1432.47 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1403.20 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1688.82 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1664.98 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1742.03 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1712.59 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1587.10 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1557.70 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1641.11 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1617.29 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1069.96 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1046.18 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1123.27 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1093.81 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 968.71 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 939.55 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1022.47 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 998.72 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1277.86 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1248.45 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1331.77 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1307.87 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1177.00 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1153.27 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1224.66 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1200.89 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2307.30 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2283.48 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2360.61 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2331.13 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2205.92 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2176.33 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2259.71 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2235.92 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2515.29 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2485.69 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2569.17 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2545.32 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2414.36 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2390.62 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2461.85 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 2438.08 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1896.75 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIT.v43': elapsed time 1867.54 seconds, memory usage 3024856kB, peak memory usage 3024856kB (SOL-15)
+
+# Messages from "go schedule"
+
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 459.89 seconds, memory usage 3221476kB, peak memory usage 3278924kB (SOL-15)
+# Info: Design complexity at end of 'schedule': Total ops = 181346, Real ops = 1096, Vars = 1785 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 463.49 seconds, memory usage 3221476kB, peak memory usage 3278924kB (SOL-9)
+Global signal 'vec:rsc(0)(8).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 333.88 seconds, memory usage 3155940kB, peak memory usage 3278924kB (SOL-15)
+Global signal 'vec:rsc(0)(7).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 305.22 seconds, memory usage 3155940kB, peak memory usage 3278924kB (SOL-15)
+Global signal 'vec:rsc(0)(10).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(9)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 363.89 seconds, memory usage 3155940kB, peak memory usage 3278924kB (SOL-15)
+Global signal 'vec:rsc(0)(10).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(9)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 257.28 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 281.14 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+Global signal 'vec:rsc(0)(8).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(9)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(9)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 435.68 seconds, memory usage 3221476kB, peak memory usage 3278924kB (SOL-15)
+Global signal 'vec:rsc(0)(12).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(11)i' (LIB-3)
+Report written to file 'cycle.rpt'
+Global signal 'vec:rsc(0)(12).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(12)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 387.91 seconds, memory usage 3267620kB, peak memory usage 3278924kB (SOL-15)
+Global signal 'vec:rsc(0)(12).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(10)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 411.80 seconds, memory usage 3155940kB, peak memory usage 3278924kB (SOL-15)
+Global signal 'vec:rsc(0)(11).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(12).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIT' for component 'r:rsci' (LIB-3)
+Global signal 'vec:rsc(0)(0).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIT' for component 'p:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT/core' (CRAAS-1)
+Global signal 'vec:rsc.triosy(0)(15).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(15):obj' (LIB-3)
+Global signal 'vec:rsc(0)(2).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(13).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(13):obj' (LIB-3)
+Global signal 'vec:rsc(0)(2).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(14).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(14):obj' (LIB-3)
+Global signal 'vec:rsc(0)(2).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(7).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'vec:rsc(0)(4).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(8).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(8):obj' (LIB-3)
+Global signal 'vec:rsc(0)(3).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(5).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'vec:rsc(0)(4).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(6).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'vec:rsc(0)(4).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(11).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(11):obj' (LIB-3)
+Global signal 'vec:rsc(0)(3).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(12).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(12):obj' (LIB-3)
+Global signal 'vec:rsc(0)(2).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(9).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(9):obj' (LIB-3)
+Global signal 'vec:rsc(0)(3).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(10).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(10):obj' (LIB-3)
+Global signal 'vec:rsc(0)(3).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIT' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc(0)(6).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(0).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'vec:rsc(0)(5).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 24.77 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+Global signal 'vec:rsc(0)(6).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIT' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc(0)(6).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(3).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'vec:rsc(0)(5).qa' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(4).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'vec:rsc(0)(4).adra' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(1).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'vec:rsc(0)(5).da' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(2).lz' added to design 'inPlaceNTT_DIT' for component 'vec:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'vec:rsc(0)(5).wea' added to design 'inPlaceNTT_DIT' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 179.32 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 150.76 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 233.31 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 209.33 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 78.73 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 54.79 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 126.72 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIT.v43': elapsed time 102.61 seconds, memory usage 3155940kB, peak memory usage 3155940kB (SOL-15)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 29771, Real ops = 11611, Vars = 1178 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 281.12 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-9)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 262.54 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-15)
+Creating shared register 'COMP_LOOP:COMP_LOOP:nor#1.itm' for variables 'COMP_LOOP:COMP_LOOP:nor#1.itm, COMP_LOOP:COMP_LOOP:nor#13.itm, COMP_LOOP:COMP_LOOP:nor#17.itm, COMP_LOOP:COMP_LOOP:nor#21.itm, COMP_LOOP:COMP_LOOP:nor#25.itm, COMP_LOOP:COMP_LOOP:nor#29.itm, COMP_LOOP:COMP_LOOP:nor#33.itm, COMP_LOOP:COMP_LOOP:nor#37.itm, COMP_LOOP:COMP_LOOP:nor#41.itm, COMP_LOOP:COMP_LOOP:nor#45.itm, COMP_LOOP:COMP_LOOP:nor#49.itm, COMP_LOOP:COMP_LOOP:nor#5.itm, COMP_LOOP:COMP_LOOP:nor#53.itm, COMP_LOOP:COMP_LOOP:nor#57.itm, COMP_LOOP:COMP_LOOP:nor#61.itm, COMP_LOOP:COMP_LOOP:nor#9.itm' (15 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 238.75 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-15)
+Creating shared register 'COMP_LOOP:nor#11.itm' for variables 'COMP_LOOP:nor#11.itm, COMP_LOOP:nor#131.itm, COMP_LOOP:nor#171.itm, COMP_LOOP:nor#211.itm, COMP_LOOP:nor#251.itm, COMP_LOOP:nor#291.itm, COMP_LOOP:nor#331.itm, COMP_LOOP:nor#371.itm, COMP_LOOP:nor#411.itm, COMP_LOOP:nor#451.itm, COMP_LOOP:nor#491.itm, COMP_LOOP:nor#51.itm, COMP_LOOP:nor#531.itm, COMP_LOOP:nor#571.itm, COMP_LOOP:nor#611.itm, COMP_LOOP:nor#91.itm, modExp:exp#1(0)#1.sva, modExp:exp#1(0)#10.sva, modExp:exp#1(0)#11.sva, modExp:exp#1(0)#12.sva, modExp:exp#1(0)#13.sva, modExp:exp#1(0)#14.sva, modExp:exp#1(0)#15.sva, modExp:exp#1(0)#2.sva, modExp:exp#1(0)#3.sva, modExp:exp#1(0)#4.sva, modExp:exp#1(0)#5.sva, modExp:exp#1(0)#6.sva, modExp:exp#1(0)#7.sva, modExp:exp#1(0)#8.sva, modExp:exp#1(0)#9.sva, modExp:exp#1(0).sva, operator%<64,false>:slc(modExp:exp)(0)#1.itm, operator><64,false>#1:slc(operator><64,false>#1:acc)(5).itm' (33 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:acc#10.cse(12:1)#1.sva' for variables 'COMP_LOOP:acc#10.cse(12:1)#1.sva, COMP_LOOP:acc#10.cse(12:1)#10.sva, COMP_LOOP:acc#10.cse(12:1)#11.sva, COMP_LOOP:acc#10.cse(12:1)#12.sva, COMP_LOOP:acc#10.cse(12:1)#13.sva, COMP_LOOP:acc#10.cse(12:1)#14.sva, COMP_LOOP:acc#10.cse(12:1)#15.sva, COMP_LOOP:acc#10.cse(12:1)#2.sva, COMP_LOOP:acc#10.cse(12:1)#3.sva, COMP_LOOP:acc#10.cse(12:1)#4.sva, COMP_LOOP:acc#10.cse(12:1)#5.sva, COMP_LOOP:acc#10.cse(12:1)#6.sva, COMP_LOOP:acc#10.cse(12:1)#7.sva, COMP_LOOP:acc#10.cse(12:1)#8.sva, COMP_LOOP:acc#10.cse(12:1)#9.sva, COMP_LOOP:acc#10.cse(12:1).sva' (15 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#147.itm' for variables 'COMP_LOOP:COMP_LOOP:and#147.itm, COMP_LOOP:COMP_LOOP:and#207.itm, COMP_LOOP:COMP_LOOP:and#267.itm, COMP_LOOP:COMP_LOOP:and#27.itm, COMP_LOOP:COMP_LOOP:and#327.itm, COMP_LOOP:COMP_LOOP:and#387.itm, COMP_LOOP:COMP_LOOP:and#447.itm, COMP_LOOP:COMP_LOOP:and#507.itm, COMP_LOOP:COMP_LOOP:and#567.itm, COMP_LOOP:COMP_LOOP:and#627.itm, COMP_LOOP:COMP_LOOP:and#687.itm, COMP_LOOP:COMP_LOOP:and#747.itm, COMP_LOOP:COMP_LOOP:and#807.itm, COMP_LOOP:COMP_LOOP:and#867.itm, COMP_LOOP:COMP_LOOP:and#87.itm, COMP_LOOP:COMP_LOOP:and#927.itm' (15 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 156.94 seconds, memory usage 3352548kB, peak memory usage 3418084kB (SOL-15)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#146.itm' for variables 'COMP_LOOP:COMP_LOOP:and#146.itm, COMP_LOOP:COMP_LOOP:and#206.itm, COMP_LOOP:COMP_LOOP:and#26.itm, COMP_LOOP:COMP_LOOP:and#266.itm, COMP_LOOP:COMP_LOOP:and#326.itm, COMP_LOOP:COMP_LOOP:and#386.itm, COMP_LOOP:COMP_LOOP:and#446.itm, COMP_LOOP:COMP_LOOP:and#506.itm, COMP_LOOP:COMP_LOOP:and#566.itm, COMP_LOOP:COMP_LOOP:and#626.itm, COMP_LOOP:COMP_LOOP:and#686.itm, COMP_LOOP:COMP_LOOP:and#746.itm, COMP_LOOP:COMP_LOOP:and#806.itm, COMP_LOOP:COMP_LOOP:and#86.itm, COMP_LOOP:COMP_LOOP:and#866.itm, COMP_LOOP:COMP_LOOP:and#926.itm' (15 registers deleted). (FSM-3)
+Creating shared register 'operator-<64,false>:acc.mut' for variables 'operator-<64,false>:acc.mut, operator>><64,false>:slc(modExp:exp)(63-1).itm, COMP_LOOP-10:acc#5.mut, COMP_LOOP-11:acc#5.mut, COMP_LOOP-12:acc#5.mut, COMP_LOOP-13:acc#5.mut, COMP_LOOP-14:acc#5.mut, COMP_LOOP-15:acc#5.mut, COMP_LOOP-16:acc#5.mut, COMP_LOOP-1:acc#5.mut, COMP_LOOP-2:acc#5.mut, COMP_LOOP-3:acc#5.mut, COMP_LOOP-4:acc#5.mut, COMP_LOOP-5:acc#5.mut, COMP_LOOP-6:acc#5.mut, COMP_LOOP-7:acc#5.mut, COMP_LOOP-8:acc#5.mut, COMP_LOOP-9:acc#5.mut, COMP_LOOP-10:modExp#1:while:if:mul.itm, COMP_LOOP-11:modExp#1:while:if:mul.itm, COMP_LOOP-12:modExp#1:while:if:mul.itm, COMP_LOOP-13:modExp#1:while:if:mul.itm, COMP_LOOP-14:modExp#1:while:if:mul.itm, COMP_LOOP-15:modExp#1:while:if:mul.itm, COMP_LOOP-16:modExp#1:while:if:mul.itm, COMP_LOOP-1:modExp#1:while:if:mul.mut, COMP_LOOP-2:modExp#1:while:if:mul.itm, COMP_LOOP-3:modExp#1:while:if:mul.itm, COMP_LOOP-4:modExp#1:while:if:mul.itm, COMP_LOOP-5:modExp#1:while:if:mul.itm, COMP_LOOP-6:modExp#1:while:if:mul.itm, COMP_LOOP-7:modExp#1:while:if:mul.itm, COMP_LOOP-8:modExp#1:while:if:mul.itm, COMP_LOOP-9:modExp#1:while:if:mul.itm, modExp:while:if:mul.mut, modExp#1:result#1.sva, modExp#1:result.sva, modExp#1:result#10.sva, modExp#1:result#11.sva, modExp#1:result#12.sva, modExp#1:result#13.sva, modExp#1:result#14.sva, modExp#1:result#15.sva, modExp#1:result#2.sva, modExp#1:result#3.sva, modExp#1:result#4.sva, modExp#1:result#5.sva, modExp#1:result#6.sva, modExp#1:result#7.sva, modExp#1:result#8.sva, modExp#1:result#9.sva, modExp#1:result#10.sva.dfm, modExp#1:result#11.sva.dfm, modExp#1:result#12.sva.dfm, modExp#1:result#13.sva.dfm, modExp#1:result#14.sva.dfm, modExp#1:result#15.sva.dfm, modExp#1:result#2.sva.dfm, modExp#1:result#3.sva.dfm, modExp#1:result#4.sva.dfm, modExp#1:result#5.sva.dfm, modExp#1:result#6.sva.dfm, modExp#1:result#7.sva.dfm, modExp#1:result#8.sva.dfm, modExp#1:result#9.sva.dfm, modExp#1:result.sva.dfm' (2 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#149.itm' for variables 'COMP_LOOP:COMP_LOOP:and#149.itm, COMP_LOOP:COMP_LOOP:and#209.itm, COMP_LOOP:COMP_LOOP:and#269.itm, COMP_LOOP:COMP_LOOP:and#29.itm, COMP_LOOP:COMP_LOOP:and#329.itm, COMP_LOOP:COMP_LOOP:and#389.itm, COMP_LOOP:COMP_LOOP:and#449.itm, COMP_LOOP:COMP_LOOP:and#509.itm, COMP_LOOP:COMP_LOOP:and#569.itm, COMP_LOOP:COMP_LOOP:and#629.itm, COMP_LOOP:COMP_LOOP:and#689.itm, COMP_LOOP:COMP_LOOP:and#749.itm, COMP_LOOP:COMP_LOOP:and#809.itm, COMP_LOOP:COMP_LOOP:and#869.itm, COMP_LOOP:COMP_LOOP:and#89.itm, COMP_LOOP:COMP_LOOP:and#929.itm' (15 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 208.74 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-15)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#148.itm' for variables 'COMP_LOOP:COMP_LOOP:and#148.itm, COMP_LOOP:COMP_LOOP:and#208.itm, COMP_LOOP:COMP_LOOP:and#268.itm, COMP_LOOP:COMP_LOOP:and#28.itm, COMP_LOOP:COMP_LOOP:and#328.itm, COMP_LOOP:COMP_LOOP:and#388.itm, COMP_LOOP:COMP_LOOP:and#448.itm, COMP_LOOP:COMP_LOOP:and#508.itm, COMP_LOOP:COMP_LOOP:and#568.itm, COMP_LOOP:COMP_LOOP:and#628.itm, COMP_LOOP:COMP_LOOP:and#688.itm, COMP_LOOP:COMP_LOOP:and#748.itm, COMP_LOOP:COMP_LOOP:and#808.itm, COMP_LOOP:COMP_LOOP:and#868.itm, COMP_LOOP:COMP_LOOP:and#88.itm, COMP_LOOP:COMP_LOOP:and#928.itm' (15 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 181.17 seconds, memory usage 3352548kB, peak memory usage 3418084kB (SOL-15)
+Creating shared register 'modExp:exp#1(5)#1.sva' for variables 'modExp:exp#1(5)#1.sva, modExp:exp#1(6)#10.sva, modExp:exp#1(6)#11.sva, modExp:exp#1(6)#12.sva, modExp:exp#1(6)#13.sva, modExp:exp#1(6)#14.sva, modExp:exp#1(6)#15.sva, modExp:exp#1(6)#2.sva, modExp:exp#1(6)#3.sva, modExp:exp#1(6)#4.sva, modExp:exp#1(6)#5.sva, modExp:exp#1(6)#6.sva, modExp:exp#1(6)#7.sva, modExp:exp#1(6)#8.sva, modExp:exp#1(6)#9.sva, modExp:exp#1(6).sva' (15 registers deleted). (FSM-3)
+Creating shared register 'modExp:exp#1(4)#1.sva' for variables 'modExp:exp#1(4)#1.sva, modExp:exp#1(5)#10.sva, modExp:exp#1(5)#11.sva, modExp:exp#1(5)#12.sva, modExp:exp#1(5)#13.sva, modExp:exp#1(5)#14.sva, modExp:exp#1(5)#15.sva, modExp:exp#1(5)#2.sva, modExp:exp#1(5)#3.sva, modExp:exp#1(5)#4.sva, modExp:exp#1(5)#5.sva, modExp:exp#1(5)#6.sva, modExp:exp#1(5)#7.sva, modExp:exp#1(5)#8.sva, modExp:exp#1(5)#9.sva, modExp:exp#1(5).sva' (15 registers deleted). (FSM-3)
+Creating shared register 'modExp:exp#1(7)#1.sva' for variables 'modExp:exp#1(7)#1.sva, modExp:exp#1(8)#10.sva, modExp:exp#1(8)#11.sva, modExp:exp#1(8)#12.sva, modExp:exp#1(8)#13.sva, modExp:exp#1(8)#14.sva, modExp:exp#1(8)#15.sva, modExp:exp#1(8)#2.sva, modExp:exp#1(8)#3.sva, modExp:exp#1(8)#4.sva, modExp:exp#1(8)#5.sva, modExp:exp#1(8)#6.sva, modExp:exp#1(8)#7.sva, modExp:exp#1(8)#8.sva, modExp:exp#1(8)#9.sva, modExp:exp#1(8).sva' (15 registers deleted). (FSM-3)
+Creating shared register 'modExp:exp#1(6)#1.sva' for variables 'modExp:exp#1(6)#1.sva, modExp:exp#1(7)#10.sva, modExp:exp#1(7)#11.sva, modExp:exp#1(7)#12.sva, modExp:exp#1(7)#13.sva, modExp:exp#1(7)#14.sva, modExp:exp#1(7)#15.sva, modExp:exp#1(7)#2.sva, modExp:exp#1(7)#3.sva, modExp:exp#1(7)#4.sva, modExp:exp#1(7)#5.sva, modExp:exp#1(7)#6.sva, modExp:exp#1(7)#7.sva, modExp:exp#1(7)#8.sva, modExp:exp#1(7)#9.sva, modExp:exp#1(7).sva' (15 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:nor#134.itm' for variables 'COMP_LOOP:nor#134.itm, COMP_LOOP:nor#14.itm, COMP_LOOP:nor#174.itm, COMP_LOOP:nor#214.itm, COMP_LOOP:nor#254.itm, COMP_LOOP:nor#294.itm, COMP_LOOP:nor#334.itm, COMP_LOOP:nor#374.itm, COMP_LOOP:nor#414.itm, COMP_LOOP:nor#454.itm, COMP_LOOP:nor#494.itm, COMP_LOOP:nor#534.itm, COMP_LOOP:nor#54.itm, COMP_LOOP:nor#574.itm, COMP_LOOP:nor#614.itm, COMP_LOOP:nor#94.itm, modExp:exp#1(1)#1.sva, modExp:exp#1(2)#10.sva, modExp:exp#1(2)#11.sva, modExp:exp#1(2)#12.sva, modExp:exp#1(2)#13.sva, modExp:exp#1(2)#14.sva, modExp:exp#1(2)#15.sva, modExp:exp#1(2)#2.sva, modExp:exp#1(2)#3.sva, modExp:exp#1(2)#4.sva, modExp:exp#1(2)#5.sva, modExp:exp#1(2)#6.sva, modExp:exp#1(2)#7.sva, modExp:exp#1(2)#8.sva, modExp:exp#1(2)#9.sva, modExp:exp#1(2).sva, modExp:exp#1(8)#1.sva' (32 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:nor#12.itm' for variables 'COMP_LOOP:nor#12.itm, COMP_LOOP:nor#132.itm, COMP_LOOP:nor#172.itm, COMP_LOOP:nor#212.itm, COMP_LOOP:nor#252.itm, COMP_LOOP:nor#292.itm, COMP_LOOP:nor#332.itm, COMP_LOOP:nor#372.itm, COMP_LOOP:nor#412.itm, COMP_LOOP:nor#452.itm, COMP_LOOP:nor#492.itm, COMP_LOOP:nor#52.itm, COMP_LOOP:nor#532.itm, COMP_LOOP:nor#572.itm, COMP_LOOP:nor#612.itm, COMP_LOOP:nor#92.itm, modExp:exp#1(0)#1.sva#1, modExp:exp#1(1)#10.sva, modExp:exp#1(1)#11.sva, modExp:exp#1(1)#12.sva, modExp:exp#1(1)#13.sva, modExp:exp#1(1)#14.sva, modExp:exp#1(1)#15.sva, modExp:exp#1(1)#2.sva, modExp:exp#1(1)#3.sva, modExp:exp#1(1)#4.sva, modExp:exp#1(1)#5.sva, modExp:exp#1(1)#6.sva, modExp:exp#1(1)#7.sva, modExp:exp#1(1)#8.sva, modExp:exp#1(1)#9.sva, modExp:exp#1(1).sva' (31 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:slc(COMP_LOOP:acc#12)(7).itm' for variables 'COMP_LOOP:slc(COMP_LOOP:acc#12)(7).itm, COMP_LOOP:slc(COMP_LOOP:acc#15)(6).itm, COMP_LOOP:slc(COMP_LOOP:acc#18)(7).itm, COMP_LOOP:slc(COMP_LOOP:acc#21)(5).itm, modExp:exp#1(3)#1.sva, modExp:exp#1(4)#10.sva, modExp:exp#1(4)#11.sva, modExp:exp#1(4)#12.sva, modExp:exp#1(4)#13.sva, modExp:exp#1(4)#14.sva, modExp:exp#1(4)#15.sva, modExp:exp#1(4)#2.sva, modExp:exp#1(4)#3.sva, modExp:exp#1(4)#4.sva, modExp:exp#1(4)#5.sva, modExp:exp#1(4)#6.sva, modExp:exp#1(4)#7.sva, modExp:exp#1(4)#8.sva, modExp:exp#1(4)#9.sva, modExp:exp#1(4).sva' (19 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:nor#137.itm' for variables 'COMP_LOOP:nor#137.itm, COMP_LOOP:nor#17.itm, COMP_LOOP:nor#177.itm, COMP_LOOP:nor#217.itm, COMP_LOOP:nor#257.itm, COMP_LOOP:nor#297.itm, COMP_LOOP:nor#337.itm, COMP_LOOP:nor#377.itm, COMP_LOOP:nor#417.itm, COMP_LOOP:nor#457.itm, COMP_LOOP:nor#497.itm, COMP_LOOP:nor#537.itm, COMP_LOOP:nor#57.itm, COMP_LOOP:nor#577.itm, COMP_LOOP:nor#617.itm, COMP_LOOP:nor#97.itm, modExp:exp#1(2)#1.sva, modExp:exp#1(3)#10.sva, modExp:exp#1(3)#11.sva, modExp:exp#1(3)#12.sva, modExp:exp#1(3)#13.sva, modExp:exp#1(3)#14.sva, modExp:exp#1(3)#15.sva, modExp:exp#1(3)#2.sva, modExp:exp#1(3)#3.sva, modExp:exp#1(3)#4.sva, modExp:exp#1(3)#5.sva, modExp:exp#1(3)#6.sva, modExp:exp#1(3)#7.sva, modExp:exp#1(3)#8.sva, modExp:exp#1(3)#9.sva, modExp:exp#1(3).sva' (31 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-10:acc#8.itm' for variables 'COMP_LOOP-10:acc#8.itm, COMP_LOOP-11:acc#8.itm, COMP_LOOP-12:acc#8.itm, COMP_LOOP-13:acc#8.itm, COMP_LOOP-14:acc#8.itm, COMP_LOOP-15:acc#8.itm, COMP_LOOP-16:acc#8.itm, COMP_LOOP-1:acc#8.itm, COMP_LOOP-2:acc#8.itm, COMP_LOOP-3:acc#8.itm, COMP_LOOP-4:acc#8.itm, COMP_LOOP-5:acc#8.itm, COMP_LOOP-6:acc#8.itm, COMP_LOOP-7:acc#8.itm, COMP_LOOP-8:acc#8.itm, COMP_LOOP-9:acc#8.itm, COMP_LOOP-10:modExp#1:while:mul.mut, COMP_LOOP-11:modExp#1:while:mul.mut, COMP_LOOP-12:modExp#1:while:mul.mut, COMP_LOOP-13:modExp#1:while:mul.mut, COMP_LOOP-14:modExp#1:while:mul.mut, COMP_LOOP-15:modExp#1:while:mul.mut, COMP_LOOP-16:modExp#1:while:mul.mut, COMP_LOOP-1:modExp#1:while:mul.itm, COMP_LOOP-2:modExp#1:while:mul.mut, COMP_LOOP-3:modExp#1:while:mul.mut, COMP_LOOP-4:modExp#1:while:mul.mut, COMP_LOOP-5:modExp#1:while:mul.mut, COMP_LOOP-6:modExp#1:while:mul.mut, COMP_LOOP-7:modExp#1:while:mul.mut, COMP_LOOP-8:modExp#1:while:mul.mut, COMP_LOOP-9:modExp#1:while:mul.mut, modExp:while:mul.itm' (32 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-10:acc#5.mut' for variables 'COMP_LOOP-10:acc#5.mut, COMP_LOOP-11:acc#5.mut, COMP_LOOP-12:acc#5.mut, COMP_LOOP-13:acc#5.mut, COMP_LOOP-14:acc#5.mut, COMP_LOOP-15:acc#5.mut, COMP_LOOP-16:acc#5.mut, COMP_LOOP-1:acc#5.mut, COMP_LOOP-2:acc#5.mut, COMP_LOOP-3:acc#5.mut, COMP_LOOP-4:acc#5.mut, COMP_LOOP-5:acc#5.mut, COMP_LOOP-6:acc#5.mut, COMP_LOOP-7:acc#5.mut, COMP_LOOP-8:acc#5.mut, COMP_LOOP-9:acc#5.mut, COMP_LOOP-10:modExp#1:while:if:mul.itm, COMP_LOOP-11:modExp#1:while:if:mul.itm, COMP_LOOP-12:modExp#1:while:if:mul.itm, COMP_LOOP-13:modExp#1:while:if:mul.itm, COMP_LOOP-14:modExp#1:while:if:mul.itm, COMP_LOOP-15:modExp#1:while:if:mul.itm, COMP_LOOP-16:modExp#1:while:if:mul.itm, COMP_LOOP-1:modExp#1:while:if:mul.mut, COMP_LOOP-2:modExp#1:while:if:mul.itm, COMP_LOOP-3:modExp#1:while:if:mul.itm, COMP_LOOP-4:modExp#1:while:if:mul.itm, COMP_LOOP-5:modExp#1:while:if:mul.itm, COMP_LOOP-6:modExp#1:while:if:mul.itm, COMP_LOOP-7:modExp#1:while:if:mul.itm, COMP_LOOP-8:modExp#1:while:if:mul.itm, COMP_LOOP-9:modExp#1:while:if:mul.itm, modExp:while:if:mul.mut, modExp#1:result#1.sva, modExp#1:result.sva, modExp#1:result#10.sva, modExp#1:result#11.sva, modExp#1:result#12.sva, modExp#1:result#13.sva, modExp#1:result#14.sva, modExp#1:result#15.sva, modExp#1:result#2.sva, modExp#1:result#3.sva, modExp#1:result#4.sva, modExp#1:result#5.sva, modExp#1:result#6.sva, modExp#1:result#7.sva, modExp#1:result#8.sva, modExp#1:result#9.sva, modExp#1:result#10.sva.dfm, modExp#1:result#11.sva.dfm, modExp#1:result#12.sva.dfm, modExp#1:result#13.sva.dfm, modExp#1:result#14.sva.dfm, modExp#1:result#15.sva.dfm, modExp#1:result#2.sva.dfm, modExp#1:result#3.sva.dfm, modExp#1:result#4.sva.dfm, modExp#1:result#5.sva.dfm, modExp#1:result#6.sva.dfm, modExp#1:result#7.sva.dfm, modExp#1:result#8.sva.dfm, modExp#1:result#9.sva.dfm, modExp#1:result.sva.dfm' (63 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-10:mul.mut' for variables 'COMP_LOOP-10:mul.mut, COMP_LOOP-11:mul.mut, COMP_LOOP-12:mul.mut, COMP_LOOP-13:mul.mut, COMP_LOOP-14:mul.mut, COMP_LOOP-15:mul.mut, COMP_LOOP-16:mul.mut, COMP_LOOP-1:mul.mut, COMP_LOOP-2:mul.mut, COMP_LOOP-3:mul.mut, COMP_LOOP-4:mul.mut, COMP_LOOP-5:mul.mut, COMP_LOOP-6:mul.mut, COMP_LOOP-7:mul.mut, COMP_LOOP-8:mul.mut, COMP_LOOP-9:mul.mut, modExp:base#1.sva, modExp:base#10.sva, modExp:base#11.sva, modExp:base#12.sva, modExp:base#13.sva, modExp:base#14.sva, modExp:base#15.sva, modExp:base#16.sva, modExp:base#3.sva, modExp:base#4.sva, modExp:base#5.sva, modExp:base#6.sva, modExp:base#7.sva, modExp:base#8.sva, modExp:base#9.sva, modExp:base#2.sva, modExp:base.sva, COMP_LOOP:mux1h#1.itm, COMP_LOOP:mux1h#19.itm, COMP_LOOP:mux1h#21.itm, COMP_LOOP:mux1h#23.itm, COMP_LOOP:mux1h#25.itm, COMP_LOOP:mux1h#27.itm, COMP_LOOP:mux1h#29.itm, COMP_LOOP:mux1h#3.itm, COMP_LOOP:mux1h#5.itm, COMP_LOOP:mux1h#7.itm, COMP_LOOP:mux1h#9.itm, COMP_LOOP:mux1h#11.itm, COMP_LOOP:mux1h#13.itm, COMP_LOOP:mux1h#15.itm, COMP_LOOP:mux1h#17.itm, COMP_LOOP:mux1h#31.itm, modulo#3:mux#1.itm, modulo#3:mux#10.itm, modulo#3:mux#11.itm, modulo#3:mux#12.itm, modulo#3:mux#13.itm, modulo#3:mux#14.itm, modulo#3:mux#15.itm, modulo#3:mux#2.itm, modulo#3:mux#3.itm, modulo#3:mux#4.itm, modulo#3:mux#5.itm, modulo#3:mux#6.itm, modulo#3:mux#7.itm, modulo#3:mux#8.itm, modulo#3:mux#9.itm' (63 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 132.54 seconds, memory usage 3418084kB, peak memory usage 3418084kB (SOL-15)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 84.10 seconds, memory usage 3352548kB, peak memory usage 3371936kB (SOL-15)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 54.10 seconds, memory usage 3287012kB, peak memory usage 3287012kB (SOL-15)
+Creating shared register 'tmp#10.lpi#4.dfm' for variables 'tmp#10.lpi#4.dfm, tmp#12.lpi#4.dfm, tmp#14.lpi#4.dfm, tmp#16.lpi#4.dfm, tmp#18.lpi#4.dfm, tmp#2.lpi#4.dfm, tmp#20.lpi#4.dfm, tmp#22.lpi#4.dfm, tmp#24.lpi#4.dfm, tmp#26.lpi#4.dfm, tmp#28.lpi#4.dfm, tmp#30.lpi#4.dfm, tmp#4.lpi#4.dfm, tmp#6.lpi#4.dfm, tmp#8.lpi#4.dfm, tmp.lpi#4.dfm, modExp:exp.sva' (16 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 108.33 seconds, memory usage 3352548kB, peak memory usage 3371936kB (SOL-15)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#143.itm' for variables 'COMP_LOOP:COMP_LOOP:and#143.itm, COMP_LOOP:COMP_LOOP:and#203.itm, COMP_LOOP:COMP_LOOP:and#23.itm, COMP_LOOP:COMP_LOOP:and#263.itm, COMP_LOOP:COMP_LOOP:and#323.itm, COMP_LOOP:COMP_LOOP:and#383.itm, COMP_LOOP:COMP_LOOP:and#443.itm, COMP_LOOP:COMP_LOOP:and#503.itm, COMP_LOOP:COMP_LOOP:and#563.itm, COMP_LOOP:COMP_LOOP:and#623.itm, COMP_LOOP:COMP_LOOP:and#683.itm, COMP_LOOP:COMP_LOOP:and#743.itm, COMP_LOOP:COMP_LOOP:and#803.itm, COMP_LOOP:COMP_LOOP:and#83.itm, COMP_LOOP:COMP_LOOP:and#863.itm, COMP_LOOP:COMP_LOOP:and#923.itm' (15 registers deleted). (FSM-3)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#141.itm' for variables 'COMP_LOOP:COMP_LOOP:and#141.itm, COMP_LOOP:COMP_LOOP:and#201.itm, COMP_LOOP:COMP_LOOP:and#21.itm, COMP_LOOP:COMP_LOOP:and#261.itm, COMP_LOOP:COMP_LOOP:and#321.itm, COMP_LOOP:COMP_LOOP:and#381.itm, COMP_LOOP:COMP_LOOP:and#441.itm, COMP_LOOP:COMP_LOOP:and#501.itm, COMP_LOOP:COMP_LOOP:and#561.itm, COMP_LOOP:COMP_LOOP:and#621.itm, COMP_LOOP:COMP_LOOP:and#681.itm, COMP_LOOP:COMP_LOOP:and#741.itm, COMP_LOOP:COMP_LOOP:and#801.itm, COMP_LOOP:COMP_LOOP:and#81.itm, COMP_LOOP:COMP_LOOP:and#861.itm, COMP_LOOP:COMP_LOOP:and#921.itm' (15 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIT.v43': elapsed time 24.32 seconds, memory usage 3221476kB, peak memory usage 3278924kB (SOL-15)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#145.itm' for variables 'COMP_LOOP:COMP_LOOP:and#145.itm, COMP_LOOP:COMP_LOOP:and#205.itm, COMP_LOOP:COMP_LOOP:and#25.itm, COMP_LOOP:COMP_LOOP:and#265.itm, COMP_LOOP:COMP_LOOP:and#325.itm, COMP_LOOP:COMP_LOOP:and#385.itm, COMP_LOOP:COMP_LOOP:and#445.itm, COMP_LOOP:COMP_LOOP:and#505.itm, COMP_LOOP:COMP_LOOP:and#565.itm, COMP_LOOP:COMP_LOOP:and#625.itm, COMP_LOOP:COMP_LOOP:and#685.itm, COMP_LOOP:COMP_LOOP:and#745.itm, COMP_LOOP:COMP_LOOP:and#805.itm, COMP_LOOP:COMP_LOOP:and#85.itm, COMP_LOOP:COMP_LOOP:and#865.itm, COMP_LOOP:COMP_LOOP:and#925.itm' (15 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#144.itm' for variables 'COMP_LOOP:COMP_LOOP:and#144.itm, COMP_LOOP:COMP_LOOP:and#204.itm, COMP_LOOP:COMP_LOOP:and#24.itm, COMP_LOOP:COMP_LOOP:and#264.itm, COMP_LOOP:COMP_LOOP:and#324.itm, COMP_LOOP:COMP_LOOP:and#384.itm, COMP_LOOP:COMP_LOOP:and#444.itm, COMP_LOOP:COMP_LOOP:and#504.itm, COMP_LOOP:COMP_LOOP:and#564.itm, COMP_LOOP:COMP_LOOP:and#624.itm, COMP_LOOP:COMP_LOOP:and#684.itm, COMP_LOOP:COMP_LOOP:and#744.itm, COMP_LOOP:COMP_LOOP:and#804.itm, COMP_LOOP:COMP_LOOP:and#84.itm, COMP_LOOP:COMP_LOOP:and#864.itm, COMP_LOOP:COMP_LOOP:and#924.itm' (15 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#137.itm' for variables 'COMP_LOOP:COMP_LOOP:and#137.itm, COMP_LOOP:COMP_LOOP:and#17.itm, COMP_LOOP:COMP_LOOP:and#197.itm, COMP_LOOP:COMP_LOOP:and#257.itm, COMP_LOOP:COMP_LOOP:and#317.itm, COMP_LOOP:COMP_LOOP:and#377.itm, COMP_LOOP:COMP_LOOP:and#437.itm, COMP_LOOP:COMP_LOOP:and#497.itm, COMP_LOOP:COMP_LOOP:and#557.itm, COMP_LOOP:COMP_LOOP:and#617.itm, COMP_LOOP:COMP_LOOP:and#677.itm, COMP_LOOP:COMP_LOOP:and#737.itm, COMP_LOOP:COMP_LOOP:and#77.itm, COMP_LOOP:COMP_LOOP:and#797.itm, COMP_LOOP:COMP_LOOP:and#857.itm, COMP_LOOP:COMP_LOOP:and#917.itm, exit:COMP_LOOP-1:modExp#1:while.sva, exit:modExp:while.sva' (17 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-10:slc(COMP_LOOP:acc)(9).itm' for variables 'COMP_LOOP-10:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-11:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-13:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-14:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-15:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-2:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-3:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-5:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-6:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-7:slc(COMP_LOOP:acc)(9).itm, COMP_LOOP-9:slc(COMP_LOOP:acc)(9).itm, operator><64,false>#1:slc(COMP_LOOP-10:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-11:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-12:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-13:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-14:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-15:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-16:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-2:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-3:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-4:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-5:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-6:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-7:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-8:operator><64,false>#1:acc)(8).itm, operator><64,false>#1:slc(COMP_LOOP-9:operator><64,false>#1:acc)(8).itm' (25 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#140.itm' for variables 'COMP_LOOP:COMP_LOOP:and#140.itm, COMP_LOOP:COMP_LOOP:and#20.itm, COMP_LOOP:COMP_LOOP:and#200.itm, COMP_LOOP:COMP_LOOP:and#260.itm, COMP_LOOP:COMP_LOOP:and#320.itm, COMP_LOOP:COMP_LOOP:and#380.itm, COMP_LOOP:COMP_LOOP:and#440.itm, COMP_LOOP:COMP_LOOP:and#500.itm, COMP_LOOP:COMP_LOOP:and#560.itm, COMP_LOOP:COMP_LOOP:and#620.itm, COMP_LOOP:COMP_LOOP:and#680.itm, COMP_LOOP:COMP_LOOP:and#740.itm, COMP_LOOP:COMP_LOOP:and#80.itm, COMP_LOOP:COMP_LOOP:and#800.itm, COMP_LOOP:COMP_LOOP:and#860.itm, COMP_LOOP:COMP_LOOP:and#920.itm' (15 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:COMP_LOOP:and#139.itm' for variables 'COMP_LOOP:COMP_LOOP:and#139.itm, COMP_LOOP:COMP_LOOP:and#19.itm, COMP_LOOP:COMP_LOOP:and#199.itm, COMP_LOOP:COMP_LOOP:and#259.itm, COMP_LOOP:COMP_LOOP:and#319.itm, COMP_LOOP:COMP_LOOP:and#379.itm, COMP_LOOP:COMP_LOOP:and#439.itm, COMP_LOOP:COMP_LOOP:and#499.itm, COMP_LOOP:COMP_LOOP:and#559.itm, COMP_LOOP:COMP_LOOP:and#619.itm, COMP_LOOP:COMP_LOOP:and#679.itm, COMP_LOOP:COMP_LOOP:and#739.itm, COMP_LOOP:COMP_LOOP:and#79.itm, COMP_LOOP:COMP_LOOP:and#799.itm, COMP_LOOP:COMP_LOOP:and#859.itm, COMP_LOOP:COMP_LOOP:and#919.itm' (15 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 26205, Real ops = 10026, Vars = 24225 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIT.v43': elapsed time 74.40 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-9)
+# Info: Running transformation 'instance' on solution 'inPlaceNTT_DIT.v43': elapsed time 49.52 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-15)
+# Info: Running transformation 'instance' on solution 'inPlaceNTT_DIT.v43': elapsed time 23.87 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-15)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 26165, Real ops = 10027, Vars = 1057 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIT.v43': elapsed time 152.89 seconds, memory usage 3681376kB, peak memory usage 3681376kB (SOL-9)
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIT.v43': elapsed time 99.67 seconds, memory usage 3681376kB, peak memory usage 3681376kB (SOL-15)
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Finished writing concatenated simulation file: /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v43/concat_sim_rtl.v
+Netlist written to file 'rtl.v' (NET-4)
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIT.v43': elapsed time 129.77 seconds, memory usage 3681376kB, peak memory usage 3681376kB (SOL-15)
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIT.v43': elapsed time 47.38 seconds, memory usage 3681376kB, peak memory usage 3681376kB (SOL-15)
+Finished writing concatenated simulation file: /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v43/concat_sim_rtl.vhdl
+Generating SCVerify testbench files
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.v
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIT.v43': elapsed time 70.99 seconds, memory usage 3681376kB, peak memory usage 3681376kB (SOL-15)
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+order file name is: rtl.v_order.txt
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_div_beh.vhd
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Finished writing concatenated file: /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v43/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Finished writing concatenated file: /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v43/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+order file name is: rtl.vhdl_order.txt
+generate concat
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIT.v43' (SOL-8)
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIT.v43': elapsed time 23.84 seconds, memory usage 3353696kB, peak memory usage 3418084kB (SOL-15)
+Report written to file 'rtl.rpt'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'

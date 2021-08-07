@@ -240,3 +240,15 @@ go extract
 # Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
 # Info: Completed transformation 'extract' on solution 'DIT_RELOOP.v2': elapsed time 5.89 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
 # Info: Design complexity at end of 'extract': Total ops = 362, Real ops = 77, Vars = 96 (SOL-21)
+flow package require MemGen
+# 10.0.0
+go compile
+solution library remove *
+# Info: Branching solution 'DIT_RELOOP.v3' at state 'compile' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v3/CDesignChecker/design_checker.sh'
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+quit
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult.ccs'. (PRJ-5)
+// Finish time Thu Jul 29 20:32:33 2021, time elapsed 9:33:37, peak memory 1.38GB, exit status 0

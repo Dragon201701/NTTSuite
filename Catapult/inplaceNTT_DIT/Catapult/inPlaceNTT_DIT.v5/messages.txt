@@ -1,0 +1,155 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT.v2': elapsed time 3.39 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Source file analysis completed (CIN-68)
+inPlaceNTT_DIT.v2
+# Info: Branching solution 'inPlaceNTT_DIT.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+go compile
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.33 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Moving session transcript to file "/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Source file analysis completed (CIN-68)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt_tb.cpp -exclude true
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIT.v2': elapsed time 2.65 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Optimizing block '/inPlaceNTT_DIT' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' iterated at most 9 times. (LOOP-2)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v2/CDesignChecker/design_checker.sh'
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Design 'inPlaceNTT_DIT' was read (SOL-1)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'operator>><64, false>' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator/<66, true>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIT' (CIN-13)
+Found top design routine 'inPlaceNTT_DIT' specified by directive (CIN-52)
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'inPlaceNTT_DIT' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIT.v2': elapsed time 0.28 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v5': elapsed time 0.14 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid5 ADD {} {VERSION v5 SID sid5 BRANCH_SID sid4 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIT}: Race condition
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v5/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT.v5' at state 'libraries' (PRJ-2)
+go assembly
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v2': elapsed time 0.14 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+go assembly
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 403, Real ops = 146, Vars = 120 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT.v5': elapsed time 1.29 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Loop '/inPlaceNTT_DIT/core/modExp#1:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/modExp:while' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' is being partially unrolled 2 times. (LOOP-3)
+N_UNROLL parameter 2 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+/inPlaceNTT_DIT/core/modExp:while/PIPELINE_INIT_INTERVAL 0
+directive set /inPlaceNTT_DIT/core/modExp:while -PIPELINE_INIT_INTERVAL 0
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+go extract
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/VEC_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Loop '/inPlaceNTT_DIT/core/main' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 453, Real ops = 146, Vars = 126 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIT.v5': elapsed time 0.65 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+I/O-Port Resource '/inPlaceNTT_DIT/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Resource '/inPlaceNTT_DIT/vec:rsc' split into 1 x 2 blocks (MEM-11)
+I/O-Port Resource '/inPlaceNTT_DIT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 2048 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 2048 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 453, Real ops = 146, Vars = 126 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIT.v5': elapsed time 0.08 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 853, Real ops = 232, Vars = 199 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIT.v5': elapsed time 1.27 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Design 'inPlaceNTT_DIT' contains '232' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+
+# Messages from "go allocate"
+
+# Error: Feedback path is too long to schedule design with current pipeline and clock constraints. (SCHD-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Error:   REM "VEC_LOOP-2:COMP_LOOP-2:modulo#2:result:rem" ntt.cpp(24,23,1), delay:  22cy+6.32087, mapped to: mgc_Xilinx-VIRTEX-7-2_beh.mgc_rem(64,64,1) (BASIC-25)
+# Error: Schedule failed, sequential delay violated. List of sequential operations and dependencies: (SCHD-20)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIT.v5' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT/core' (CRAAS-1)
+   from operation ACCU "VEC_LOOP-2:COMP_LOOP-2:modulo#2:qelse:acc" with delay  1.845 (SCHD-6)
+ ntt.cpp(25,61,1): chained data dependency at time 625cy (SCHD-6)
+   with output variable "modulo#2:_qr.sva#1" (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_add(64,0,64,0,64)" (SCHD-6)
+   from operation MUX1HOT "modExp#1:while:modExp#1:while:mux1h#5" with delay  0.55 (SCHD-6)
+ ntt.cpp(43,0,0): chained data dependency at time 625cy+1.845 (SCHD-6)
+   with output variable "modExp#1:result.sva.dfm" (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_mux1hot(64,3)" (SCHD-6)
+   from operation MUL "VEC_LOOP-2:COMP_LOOP-2:modExp#1:while:if:mul" with delay  6.68021 (SCHD-6)
+ ntt.cpp(44,25,1): chained data dependency at time 601cy (SCHD-6)
+ ntt.cpp(44,25,1): chained data dependency at time 600cy+2.395 (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_mul(64,0,64,0,64)" (SCHD-6)
+   from operation REM "VEC_LOOP-2:COMP_LOOP-2:modulo#2:result:rem" with delay  22cy+6.32087 (SCHD-6)
+ ntt.cpp(24,23,1): chained data dependency at time 601cy+8 (SCHD-6)
+   with output variable "modulo#2:result.sva" (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-2_beh.mgc_rem(64,64,1)" (SCHD-6)
+Netlist written to file 'schedule.gnt' (NET-4)
+ ac_int.h(2812,0,127008769): chained feedback data dependency at time 625cy+2.395 (SCHD-6)
+   from operation ASSIGN ASSIGN "modExp#1:while:if:asn#6" (SCHD-6)
+   with output variable "modExp#1:result.sva" (SCHD-6)
+   from operation ASSIGN ASSIGN "modExp#1:while:asn(modExp#1:result.sva)" (SCHD-6)

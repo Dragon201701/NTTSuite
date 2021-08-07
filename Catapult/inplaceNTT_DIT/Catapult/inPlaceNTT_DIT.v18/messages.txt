@@ -1,0 +1,147 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.66 seconds, memory usage 2231704kB, peak memory usage 2231704kB (SOL-9)
+Source file analysis completed (CIN-68)
+directive set DSP_EXTRACTION yes
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/DSP_EXTRACTION yes
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT.v2': elapsed time 3.39 seconds, memory usage 1585124kB, peak memory usage 1585124kB (SOL-9)
+Source file analysis completed (CIN-68)
+inPlaceNTT_DIT.v2
+# Info: Branching solution 'inPlaceNTT_DIT.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'inPlaceNTT_DIT.v2' (SOL-8)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+go compile
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.33 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Moving session transcript to file "/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Source file analysis completed (CIN-68)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt_tb.cpp -exclude true
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIT.v18': elapsed time 2.84 seconds, memory usage 2231704kB, peak memory usage 2231704kB (SOL-9)
+Optimizing block '/inPlaceNTT_DIT' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Design 'inPlaceNTT_DIT' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' iterated at most 9 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/fhe_accelerator/ntt/inplaceNTT_DIT/Catapult/inPlaceNTT_DIT.v18/CDesignChecker/design_checker.sh'
+Synthesizing routine 'inPlaceNTT_DIT' (CIN-13)
+Found top design routine 'inPlaceNTT_DIT' specified by directive (CIN-52)
+Inlining routine 'operator-<64, false>' (CIN-14)
+Inlining routine 'inPlaceNTT_DIT' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator/<66, true>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'modExp' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator%<64, false>' (CIN-14)
+Inlining routine 'operator><64, false>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.30 seconds, memory usage 2231704kB, peak memory usage 2231704kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 128, Real ops = 52, Vars = 42 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.11 seconds, memory usage 2239896kB, peak memory usage 2239896kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 226, Real ops = 83, Vars = 69 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.58 seconds, memory usage 2239896kB, peak memory usage 2239896kB (SOL-9)
+Loop '/inPlaceNTT_DIT/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/COMP_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Loop '/inPlaceNTT_DIT/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT/core/modExp:while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+N_UNROLL parameter 2 not an exact divisor of 513, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIT/core/modExp#1:while' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 252, Real ops = 83, Vars = 73 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.42 seconds, memory usage 2239896kB, peak memory usage 2239896kB (SOL-9)
+Resource '/inPlaceNTT_DIT/vec:rsc' split into 1 x 2 blocks (MEM-11)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 2048 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 2048 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIT/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 252, Real ops = 83, Vars = 73 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.08 seconds, memory usage 2239896kB, peak memory usage 2239896kB (SOL-9)
+go allocate
+/SCHED_USE_MULTICYCLE true
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.52 seconds, memory usage 2239896kB, peak memory usage 2239896kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 448, Real ops = 118, Vars = 110 (SOL-21)
+Design 'inPlaceNTT_DIT' contains '118' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 448, Real ops = 118, Vars = 110 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIT.v18': elapsed time 0.83 seconds, memory usage 2239896kB, peak memory usage 2239896kB (SOL-9)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Resource allocation and scheduling done. (CRAAS-2)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/STAGE_LOOP' (12 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/modExp:while' (25 c-steps) (SCHD-7)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/core:rlp' (0 c-steps) (SCHD-7)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIT/core': Latency = 368106, Area (Datapath, Register, Total) = 31784.23, 0.00, 31784.23 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/main' (2 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIT/core' (total length 368111 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-1:modExp#1:while' (25 c-steps) (SCHD-7)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIT/core': Latency = 576483, Area (Datapath, Register, Total) = 17599.37, 0.00, 17599.37 (CRAAS-12)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP-2:modExp#1:while' (25 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/VEC_LOOP' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT/core/COMP_LOOP' (109 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIT.v18' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)

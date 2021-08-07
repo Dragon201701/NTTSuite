@@ -1,0 +1,22 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n57[label="n57 : DOPER\n 625cy+1.845\n",shape=ellipse,style=filled,color=bisque];
+  n93[label="n93 : ZOPER\n 625cy+2.395\n",shape=ellipse];
+  n38[label="n38 : DOPER\n 625cy\n",shape=ellipse,style=filled,color=bisque];
+  n35[label="n35 : DOPER\n 601cy+8\n",shape=ellipse,style=filled,color=bisque];
+  n33[label="n33 : DOPER\n 601cy\n",shape=ellipse,style=filled,color=bisque];
+  n31[label="n31 : ZOPER\n 600cy+2.395\n",shape=ellipse];
+  n32[label="n32 : ZOPER\n 456cy+2.395\n",shape=ellipse];
+  n92[label="n92 : ZOPER\n 457cy+2.395\n",shape=ellipse];
+  m2[fontname=Fixed,labeljust=left,label="n57 : 0x7f980e0dc0b0 modExp#1:while:modExp#1:while:mux1h#1\ln93 : 0x7f9814b64cc0 modExp#1:while:asn(modExp#1:result.sva)\ln38 : 0x7f9814bb69d0 modulo#2:qelse:acc\ln35 : 0x7f98108e4720 modulo#2:result:rem\ln33 : 0x7f98109d47f0 modExp#1:while:if:mul\ln31 : 0x7f981487c940 modExp#1:while:if:asn\ln32 : 0x7f980eea7490 modExp#1:while:if:asn#1\ln92 : 0x7f98215bd650 modExp#1:while:asn#23\l",shape=none];
+  n57 -> n93[label="258 : 0",color=blue];
+  n38 -> n57[label="258 : 0",color=blue];
+  n35 -> n38[label="258 : 0",color=blue];
+  n33 -> n35[label="258 : 0",color=blue];
+  n31 -> n33[label="258 : 0",color=blue];
+  n93 -> n31[label="262 : 0",color=red, style=bold];
+  n32 -> n33[label="259 : 0",color=green2];
+  n92 -> n32[label="262 : 0",color=red, style=bold];
+}
+

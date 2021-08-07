@@ -1,0 +1,22 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n25[label="n25 : DOPER\n 625cy+1.845\n",shape=ellipse,style=filled,color=bisque];
+  n68[label="n68 : ZOPER\n 625cy+2.395\n",shape=ellipse];
+  n14[label="n14 : DOPER\n 625cy\n",shape=ellipse,style=filled,color=bisque];
+  n11[label="n11 : DOPER\n 601cy+8\n",shape=ellipse,style=filled,color=bisque];
+  n9[label="n9 : DOPER\n 601cy\n",shape=ellipse,style=filled,color=bisque];
+  n7[label="n7 : ZOPER\n 600cy+2.395\n",shape=ellipse];
+  n8[label="n8 : ZOPER\n 456cy+1.925\n",shape=ellipse];
+  n67[label="n67 : ZOPER\n 457cy+1.925\n",shape=ellipse];
+  m2[fontname=Fixed,labeljust=left,label="n25 : 0x7f9827426830 modExp#1:while:modExp#1:while:mux1h#5\ln68 : 0x7f980d1edcd0 modExp#1:while:asn(modExp#1:result.sva)\ln14 : 0x7f980fd903b0 VEC_LOOP-2:COMP_LOOP-2:modulo#2:qelse:acc\ln11 : 0x7f98271963d0 VEC_LOOP-2:COMP_LOOP-2:modulo#2:result:rem\ln9  : 0x7f9827196680 VEC_LOOP-2:COMP_LOOP-2:modExp#1:while:if:mul\ln7  : 0x7f980d27f1f0 modExp#1:while:if:asn#6\ln8  : 0x7f980d27af80 modExp#1:while:if:asn#7\ln67 : 0x7f980d2e5540 modulo#3:asn#1\l",shape=none];
+  n25 -> n68[label="258 : 0",color=blue];
+  n14 -> n25[label="258 : 0",color=blue];
+  n11 -> n14[label="258 : 0",color=blue];
+  n9 -> n11[label="258 : 0",color=blue];
+  n7 -> n9[label="258 : 0",color=blue];
+  n68 -> n7[label="262 : 0",color=red, style=bold];
+  n8 -> n9[label="259 : 0",color=green2];
+  n67 -> n8[label="262 : 0",color=red, style=bold];
+}
+

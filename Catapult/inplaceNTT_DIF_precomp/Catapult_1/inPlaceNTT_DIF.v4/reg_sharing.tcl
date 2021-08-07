@@ -1,0 +1,12 @@
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP:acc.psp.sva REGISTER_NAME COMP_LOOP:acc.psp.sva
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP:k(10:1).sva(8:0) REGISTER_NAME COMP_LOOP:acc.psp.sva
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-1:acc#8.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-2:acc#8.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP:modulo(return)#2.sva REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP:modulo(return)#5.sva REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-1:mul.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-2:mul.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/tmp#1.lpi#4.dfm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/tmp#2.lpi#4.dfm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP:tmp:mux.itm REGISTER_NAME COMP_LOOP:tmp:mux.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/tmp#5.sva#1 REGISTER_NAME COMP_LOOP:tmp:mux.itm

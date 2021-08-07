@@ -4,6 +4,8 @@
 #include "config.h"
 #include <math/mgc_ac_math.h>
 //#include <cmath>
+
+UINT64_T modulo(ac_int<64, true> base, UINT64_T m);
 /**
  * Perform the operation 'base^exp (mod m)' using the memory-efficient method
  *
@@ -14,6 +16,5 @@
  */
 UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m);
 
-void inPlaceNTT_DIF(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T result[VECTOR_SIZE]);
-
+void inPlaceNTT_DIF(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, UINT64_T twiddle[VECTOR_SIZE]);
 #endif /* NTT_H_ */

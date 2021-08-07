@@ -1,0 +1,13 @@
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/operator><64,false>#1:acc#1 RESOURCE_NAME COMP_LOOP:acc#10:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/COMP_LOOP:acc#10 RESOURCE_NAME COMP_LOOP:acc#10:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/VEC_LOOP:acc#1 RESOURCE_NAME COMP_LOOP:acc#10:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/COMP_LOOP:acc#13 RESOURCE_NAME COMP_LOOP:acc#13:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/operator><64,false>:acc#1 RESOURCE_NAME COMP_LOOP:acc#13:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/COMP_LOOP:acc#8 RESOURCE_NAME COMP_LOOP:acc#1:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/COMP_LOOP:acc#1 RESOURCE_NAME COMP_LOOP:acc#1:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/operator-<64,false>:acc RESOURCE_NAME COMP_LOOP:acc#1:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/operator><64,false>:acc RESOURCE_NAME COMP_LOOP:acc#1:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/COMP_LOOP:acc#9 RESOURCE_NAME COMP_LOOP:acc#1:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/operator><64,false>#1:acc RESOURCE_NAME COMP_LOOP:acc#1:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/modExp:while:if:mul RESOURCE_NAME modExp#1:while:if:mul:rg
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/inPlaceNTT_DIT:core:conc/modExp#1:while:if:mul RESOURCE_NAME modExp#1:while:if:mul:rg

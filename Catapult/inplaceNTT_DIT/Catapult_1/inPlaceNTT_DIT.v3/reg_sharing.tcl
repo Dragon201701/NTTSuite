@@ -1,0 +1,11 @@
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/operator-<64,false>:acc.mut REGISTER_NAME operator-<64,false>:acc.mut
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/COMP_LOOP:ac_int:cctor.sva REGISTER_NAME operator-<64,false>:acc.mut
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/COMP_LOOP:acc#8.itm REGISTER_NAME operator-<64,false>:acc.mut
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/modExp_dev#1:result.sva REGISTER_NAME operator-<64,false>:acc.mut
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/modExp_dev#1:while:mul.itm REGISTER_NAME operator-<64,false>:acc.mut
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/modExp_dev:while:mul.itm REGISTER_NAME operator-<64,false>:acc.mut
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/exit:modExp_dev#1:while.sva REGISTER_NAME exit:modExp_dev#1:while.sva
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/exit:modExp_dev:while.sva REGISTER_NAME exit:modExp_dev#1:while.sva
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/exit:COMP_LOOP.sva REGISTER_NAME exit:modExp_dev#1:while.sva
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/COMP_LOOP:acc#10.cse(10:1).sva REGISTER_NAME COMP_LOOP:acc#10.cse(10:1).sva
+directive set /inPlaceNTT_DIT/inPlaceNTT_DIT:core/core/modExp_dev:exp#1.sva(8:0) REGISTER_NAME COMP_LOOP:acc#10.cse(10:1).sva
