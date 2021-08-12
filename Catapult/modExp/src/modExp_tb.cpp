@@ -12,9 +12,10 @@ using namespace std;
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-UINT64_T modulo(INT64_T base, INT64_T m){
+UINT64_T modulo_golden(INT64_T base, INT64_T m){
 
 	INT64_T result = base % m;
+	
 	return (result >= 0) ? (UINT64_T)result : (UINT64_T)(result + m);
 
 }
@@ -35,15 +36,16 @@ UINT64_T modExp_golden(UINT64_T base, UINT64_T exp, UINT64_T m){
 
 		if(exp % 2){
 
-			result = modulo(result*base, m);
+			result = modulo_golden(result*base, m);
 
 		}
 
 		exp = exp >> 1;
-		base = modulo(base*base,m);
+		base = modulo_golden(base*base,m);
 	}
 
 	return result;
+
 
 }
 CCS_MAIN(int argc, char **argv){
