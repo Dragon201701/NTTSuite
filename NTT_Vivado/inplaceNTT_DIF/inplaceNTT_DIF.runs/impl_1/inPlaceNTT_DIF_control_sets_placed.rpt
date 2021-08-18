@@ -1,0 +1,253 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Aug 12 10:43:36 2021
+| Host         : DESKTOP-5VIDJ10 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file inPlaceNTT_DIF_control_sets_placed.rpt
+| Design       : inPlaceNTT_DIF
+| Device       : xcvu13p
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   175 |
+|    Minimum number of control sets                        |   175 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   175 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    13 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     6 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   149 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             204 |           89 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              26 |           12 |
+| Yes          | No                    | No                     |           18029 |         5247 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             356 |          100 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                                             Enable Signal                                            |                                           Set/Reset Signal                                           | Slice Load Count | Bel Load Count |
++----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/MUX_s_1_2_2579_return                     |                                                                                                      |                1 |              2 |
+|  clk_IBUF_BUFG |                                                                                                      | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/result                                    |                1 |              2 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1281_cse                | rst_IBUF_inst/O                                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1229_cse                | rst_IBUF_inst/O                                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1385_cse                | rst_IBUF_inst/O                                                                                      |                2 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1411_cse                | rst_IBUF_inst/O                                                                                      |                3 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1463_cse                | rst_IBUF_inst/O                                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1437_cse                | rst_IBUF_inst/O                                                                                      |                3 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1359_cse                | rst_IBUF_inst/O                                                                                      |                2 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/reg_ensig_cgo_cse_reg[0]                  | rst_IBUF_inst/O                                                                                      |                3 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1307_cse                | rst_IBUF_inst/O                                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1333_cse                | rst_IBUF_inst/O                                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1203_cse                | rst_IBUF_inst/O                                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/p_sva[63]_i_1_0[0]                        | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/STAGE_MAIN_LOOP_acc_1_psp_sva[3]_i_4_0[0] |                1 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1255_cse                | rst_IBUF_inst/O                                                                                      |                2 |              4 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/COMP_LOOP_k_9_2_sva_6_0[6]_i_4_0[0]       | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[7]_2[0]                 |                2 |              7 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/COMP_LOOP_acc_psp_sva_6_0[6]_i_5_0[0]     |                                                                                                      |                2 |              7 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/MUX_s_1_2_2579_return                     | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[6]_0                    |                2 |              8 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[1]_0[0]                 | rst_IBUF_inst/O                                                                                      |                2 |              9 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[7]_0                    | rst_IBUF_inst/O                                                                                      |                3 |             10 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[4]_1[0]                 | rst_IBUF_inst/O                                                                                      |                3 |             10 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[5]_1[0]                 | rst_IBUF_inst/O                                                                                      |                2 |             10 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[5]_2[0]                 | rst_IBUF_inst/O                                                                                      |                2 |             10 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[6]_1[0]                 | rst_IBUF_inst/O                                                                                      |                3 |             10 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[4]_0[0]                 | rst_IBUF_inst/O                                                                                      |                2 |             10 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/STAGE_VEC_LOOP_j_sva_9_00                 | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/rst                                       |                3 |             13 |
+|  clk_IBUF_BUFG |                                                                                                      | rst_IBUF_inst/O                                                                                      |               11 |             24 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/COMP_LOOP_1_modulo_dev_cmp_ccs_ccore_en   | rst_IBUF_inst/O                                                                                      |               13 |             24 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[7]_1[0]                 | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/modExp_dev_exp_1_sva_63_9[54]_i_4_0[0]    |                7 |             55 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/E[0]                                      |                                                                                                      |               33 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/operator_64_false_acc_cse_2_sva_reg[0][0] |                                                                                                      |               57 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/reg_ensig_cgo_cse_reg[0]                  |                                                                                                      |               36 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[5]_0[0]                 | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[6]_2[0]                 |               23 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/tmp_2_lpi_4_dfm[63]_i_8_0[0]              |                                                                                                      |               61 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1411_cse                |                                                                                                      |               46 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/result_sva_duc0             | rst_IBUF_inst/O                                                                                      |               29 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1463_cse                |                                                                                                      |               44 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1437_cse                |                                                                                                      |               46 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1359_cse                |                                                                                                      |               41 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1385_cse                |                                                                                                      |               44 |             64 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1295_cse                |                                                                                                      |               91 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1235_cse                |                                                                                                      |              110 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1259_cse                |                                                                                                      |               95 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1315_cse                |                                                                                                      |              103 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1271_cse                |                                                                                                      |               86 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1297_cse                |                                                                                                      |               79 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1321_cse                |                                                                                                      |               96 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1257_cse                |                                                                                                      |              116 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1337_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1343_cse                |                                                                                                      |               84 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1305_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1223_cse                |                                                                                                      |              110 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1279_cse                |                                                                                                      |              102 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1319_cse                |                                                                                                      |              118 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1323_cse                |                                                                                                      |               80 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1267_cse                |                                                                                                      |              117 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1289_cse                |                                                                                                      |              102 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1329_cse                |                                                                                                      |               87 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1237_cse                |                                                                                                      |               85 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1239_cse                |                                                                                                      |               87 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1219_cse                |                                                                                                      |               88 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1207_cse                |                                                                                                      |               93 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1263_cse                |                                                                                                      |               91 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1243_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1265_cse                |                                                                                                      |               82 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1205_cse                |                                                                                                      |              114 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1301_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1217_cse                |                                                                                                      |              101 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1309_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1313_cse                |                                                                                                      |              112 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1331_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1339_cse                |                                                                                                      |              110 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1227_cse                |                                                                                                      |              106 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1231_cse                |                                                                                                      |              114 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1253_cse                |                                                                                                      |              103 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1245_cse                |                                                                                                      |               94 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1211_cse                |                                                                                                      |              106 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1287_cse                |                                                                                                      |              102 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1291_cse                |                                                                                                      |               86 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1341_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1269_cse                |                                                                                                      |               94 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1345_cse                |                                                                                                      |              114 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1283_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1327_cse                |                                                                                                      |              111 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1209_cse                |                                                                                                      |              109 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1317_cse                |                                                                                                      |               86 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1215_cse                |                                                                                                      |              116 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1335_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1249_cse                |                                                                                                      |              112 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1213_cse                |                                                                                                      |               92 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1451_cse                |                                                                                                      |              104 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1349_cse                |                                                                                                      |               82 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1441_cse                |                                                                                                      |              101 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1381_cse                |                                                                                                      |               88 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1433_cse                |                                                                                                      |               87 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1405_cse                |                                                                                                      |              119 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1443_cse                |                                                                                                      |              107 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1383_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1449_cse                |                                                                                                      |              112 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/state_var_reg_rep[7]_3[0]                 |                                                                                                      |               59 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1233_cse                |                                                                                                      |               95 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1367_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1427_cse                |                                                                                                      |               92 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1401_cse                |                                                                                                      |               91 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1353_cse                |                                                                                                      |              112 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1311_cse                |                                                                                                      |               95 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1241_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1461_cse                |                                                                                                      |              101 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1347_cse                |                                                                                                      |              106 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1371_cse                |                                                                                                      |              121 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1431_cse                |                                                                                                      |              114 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1363_cse                |                                                                                                      |              101 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1357_cse                |                                                                                                      |               99 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1361_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1393_cse                |                                                                                                      |              100 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1395_cse                |                                                                                                      |               83 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1379_cse                |                                                                                                      |              115 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1397_cse                |                                                                                                      |              120 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1409_cse                |                                                                                                      |              103 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1375_cse                |                                                                                                      |               81 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1429_cse                |                                                                                                      |               98 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1389_cse                |                                                                                                      |               99 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1447_cse                |                                                                                                      |               79 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1387_cse                |                                                                                                      |              116 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1399_cse                |                                                                                                      |              104 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1453_cse                |                                                                                                      |               83 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1457_cse                |                                                                                                      |              116 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1435_cse                |                                                                                                      |              105 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1377_cse                |                                                                                                      |               92 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1417_cse                |                                                                                                      |              106 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1423_cse                |                                                                                                      |              120 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1391_cse                |                                                                                                      |              104 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1419_cse                |                                                                                                      |               99 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1261_cse                |                                                                                                      |              105 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1275_cse                |                                                                                                      |              111 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1439_cse                |                                                                                                      |              118 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1413_cse                |                                                                                                      |              118 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1415_cse                |                                                                                                      |               96 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1285_cse                |                                                                                                      |               97 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1293_cse                |                                                                                                      |              118 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1365_cse                |                                                                                                      |              108 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1445_cse                |                                                                                                      |               97 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_8_63_0[63]_i_1_n_0   |                                                                                                      |               93 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_11_63_0[63]_i_1_n_0  |                                                                                                      |               89 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_6_63_0[63]_i_1_n_0   |                                                                                                      |               91 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_8_63_0[63]_i_1_n_0   |                                                                                                      |               85 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_9_63_0[63]_i_1_n_0   |                                                                                                      |               84 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_14_3_63_0[63]_i_1_n_0   |                                                                                                      |              109 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_4_63_0[63]_i_1_n_0   |                                                                                                      |               97 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_2_63_0[63]_i_1_n_0   |                                                                                                      |               82 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_9_63_0[63]_i_1_n_0   |                                                                                                      |               97 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_10_3_63_0[63]_i_1_n_0   |                                                                                                      |               87 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_14_5_63_0[63]_i_1_n_0   |                                                                                                      |              104 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_10_63_0[63]_i_1_n_0  |                                                                                                      |               94 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_7_63_0[63]_i_1_n_0   |                                                                                                      |               95 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_2_63_0[63]_i_1_n_0   |                                                                                                      |               97 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_4_63_0[63]_i_1_n_0   |                                                                                                      |               91 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_22_10_63_0[63]_i_1_n_0  |                                                                                                      |               82 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_6_63_0[63]_i_1_n_0   |                                                                                                      |               96 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_10_5_63_0[63]_i_1_n_0   |                                                                                                      |               86 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/mut_18_11_63_0[63]_i_1_n_0  |                                                                                                      |               97 |            128 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1195_cse                |                                                                                                      |               59 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1173_cse                |                                                                                                      |               60 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1177_cse                |                                                                                                      |               65 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1181_cse                |                                                                                                      |               51 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1187_cse                |                                                                                                      |               65 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1189_cse                |                                                                                                      |               66 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1179_cse                |                                                                                                      |               51 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1183_cse                |                                                                                                      |               76 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1191_cse                |                                                                                                      |               70 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1185_cse                |                                                                                                      |               73 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1193_cse                |                                                                                                      |               65 |            131 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/COMP_LOOP_1_modulo_dev_cmp/modulo_dev_core_inst/and_1175_cse                |                                                                                                      |               49 |            131 |
+|  clk_IBUF_BUFG |                                                                                                      |                                                                                                      |               89 |            204 |
+|  clk_IBUF_BUFG | inPlaceNTT_DIF_core_inst/inPlaceNTT_DIF_core_core_fsm_inst/COMP_LOOP_1_modulo_dev_cmp_ccs_ccore_en   |                                                                                                      |               35 |            448 |
++----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

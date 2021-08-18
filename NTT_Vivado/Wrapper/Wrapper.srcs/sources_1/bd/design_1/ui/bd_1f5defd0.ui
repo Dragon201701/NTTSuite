@@ -1,0 +1,30 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port pcie_7x_mgt_rtl_0 -pg 1 -lvl 5 -x 1190 -y -260 -defaultsOSRD
+preplace port reset_rtl_0 -pg 1 -lvl 0 -x 0 -y -330 -defaultsOSRD
+preplace inst axi_pcie3_0 -pg 1 -lvl 1 -x 180 -y -320 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 790 -y -340 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -x 510 -y -410 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 180 -y -90 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 4 -x 1050 -y -350 -defaultsOSRD
+preplace netloc reset_rtl_0_1 1 0 1 NJ -330
+preplace netloc clk_wiz_clk_out1 1 0 2 20 -480 340J
+preplace netloc axi_pcie3_0_axi_aclk 1 1 2 370 -270 650J
+preplace netloc axi_pcie3_0_axi_aresetn 1 1 2 360 -250 660J
+preplace netloc axi_pcie3_0_pcie_7x_mgt 1 1 4 350 -260 NJ -260 NJ -260 NJ
+preplace netloc axi_pcie3_0_M_AXI 1 1 1 350 -490n
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 650 -420n
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 1 920J -360n
+preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 3 1 920 -340n
+levelinfo -pg 1 0 180 510 790 1050 1190
+pagesize -pg 1 -db -bbox -sgen -120 -700 1350 320
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"2",
+   "da_bram_cntlr_cnt":"2",
+   "da_clkrst_cnt":"1"
+}
