@@ -20,7 +20,9 @@ directive set DSP_EXTRACTION yes
 directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
 go assembly
 
-go extract
-
 go memories
 directive set SCHED_USE_MULTICYCLE true
+
+go extract
+
+

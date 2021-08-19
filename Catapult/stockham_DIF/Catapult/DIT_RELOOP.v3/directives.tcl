@@ -20,7 +20,6 @@ solution options set /Input/CppStandard c++11
 solution options set /Input/TargetPlatform x86_64
 solution options set /Output/GenerateCycleNetlist false
 solution options set /Flows/SCVerify/USE_CCS_BLOCK true
-flow package require /MemGen
 solution file add ./src/ntt.cpp -type C++
 solution file add ./src/ntt_tb.cpp -type C++ -exclude true
 directive set -DESIGN_GOAL area
@@ -53,7 +52,6 @@ directive set -READY_FLAG {}
 directive set -START_FLAG {}
 directive set -RESET_CLEARS_ALL_REGS use_library
 directive set -CLOCK_OVERHEAD 20.000000
-directive set -CLOCKS {clk {-CLOCK_PERIOD 0.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
 directive set -OPT_CONST_MULTS use_library
 directive set -CHARACTERIZE_ROM false
 directive set -PROTOTYPE_ROM true
@@ -67,6 +65,15 @@ directive set -CLUSTER_TYPE combinational
 directive set -PROTOTYPING_ENGINE oasys
 directive set -PIPELINE_RAMP_UP true
 go new
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
-solution library add Xilinx_RAMS
-go compile
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+solution library add ram_nangate-45nm_pipe_beh
+solution library add ccs_sample_mem
+go libraries
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
+go assembly
+directive set -SCHED_USE_MULTICYCLE true
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 4
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 4
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 4
+go architect
+go switching

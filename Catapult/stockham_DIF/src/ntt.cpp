@@ -26,10 +26,10 @@ UINT64_T modExp_dev(UINT64_T base, UINT64_T exp, UINT64_T m){
 	return result;
 }
 #pragma hls_design top
-void DIT_RELOOP(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T result[VECTOR_SIZE], VEC_T twiddle[VECTOR_SIZE]){
-	COPY_LOOP:for(unsigned i = 0; i < VECTOR_SIZE; i++){
+void DIT_RELOOP(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T twiddle[VECTOR_SIZE]){
+	/*COPY_LOOP:for(unsigned i = 0; i < VECTOR_SIZE; i++){
 		result[i] = vec[i];
-	}
+	}*/
 	STAGE_LOOP: for(unsigned i = 1; i <= VECTOR_ADDR_BIT; i++){
 		unsigned gp = 1 << (i - 1);
 		unsigned op =  VECTOR_SIZE >> i;
@@ -40,10 +40,10 @@ void DIT_RELOOP(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T result[VEC
 				unsigned idx2= idx1 + op;
 				//cout<<idx1<<" "<<idx2<<" "<<gp*t<<endl;
 				//butterFly(result, idx1, idx2, tf, p);
-				UINT64_T f1 = result[idx1];
-				UINT64_T f2 = result[idx2];
-				result[idx2] = (twiddle[t << (i-1)] * modulo_dev(f1 - f2, p)) % p;
-				result[idx1] = modulo_dev(f1 + f2, p);		
+				UINT64_T f1 = vec[idx1];
+				UINT64_T f2 = vec[idx2];
+				vec[idx2] = (twiddle[t << (i-1)] * modulo_dev(f1 - f2, p)) % p;
+				vec[idx1] = modulo_dev(f1 + f2, p);		
 			}
 		}
     	}

@@ -1,0 +1,539 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.86 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/2
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+solution file add ./src/ntt.cpp
+solution file add ./src/ntt_tb.cpp -exclude true
+/INPUTFILES/1
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'DIT_RELOOP' (CIN-6)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/catapult.log"
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 67, Real ops = 26, Vars = 27 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'DIT_RELOOP.v1': elapsed time 3.00 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 2049 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/CDesignChecker/design_checker.sh'
+Design 'DIT_RELOOP' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' iterated at most 1025 times. (LOOP-2)
+Inlining routine 'modulo_dev' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Optimizing block '/DIT_RELOOP/modulo_dev' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Found top design routine 'DIT_RELOOP' specified by directive (CIN-52)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Inlining routine 'DIT_RELOOP' (CIN-14)
+Synthesizing routine 'DIT_RELOOP' (CIN-13)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Optimizing block '/DIT_RELOOP' ... (CIN-4)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 67, Real ops = 26, Vars = 27 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'DIT_RELOOP.v1': elapsed time 0.63 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/ram_nangate-45nm_pipe_beh.lib' [ram_nangate-45nm_pipe_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add ram_nangate-45nm_pipe_beh
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+go libraries
+solution library add ccs_sample_mem
+# Info: Starting transformation 'libraries' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_sample_mem.lib' [ccs_sample_mem]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 26, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v5': elapsed time 0.29 seconds, memory usage 1511396kB, peak memory usage 1511460kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v5/CDesignChecker/design_checker.sh'
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'DIT_RELOOP.v5' (SOL-8)
+# Info: Branching solution 'DIT_RELOOP.v5' at state 'libraries' (PRJ-2)
+go extract
+/DIT_RELOOP/vec:rsc/INTERLEAVE 0
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 1
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 1
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v4/CDesignChecker/design_checker.sh'
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go libraries
+# Info: Branching solution 'DIT_RELOOP.v4' at state 'assembly' (PRJ-2)
+/DIT_RELOOP/vec:rsc/INTERLEAVE 1
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 1
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/DIT_RELOOP/core/IDX_LOOP/UNROLL no
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL no
+# Info: Design complexity at end of 'loops': Total ops = 181, Real ops = 57, Vars = 51 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v3': elapsed time 1.03 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Branching solution 'DIT_RELOOP.v3' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 4
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 4
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v3' (SOL-8)
+go extract
+/DIT_RELOOP/vec:rsc/INTERLEAVE 4
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 4
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 4
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 4 times. (LOOP-3)
+N_UNROLL parameter 4 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v3/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 36, Vars = 39 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v2': elapsed time 0.65 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v2/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'DIT_RELOOP.v2' at state 'assembly' (PRJ-2)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+N_UNROLL parameter 2 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 2
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 2
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v2' (SOL-8)
+go extract
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 2
+/DIT_RELOOP/vec:rsc/INTERLEAVE 2
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 2
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v1': elapsed time 0.09 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Error: Top-down synthesis of C-CORE 'modulo_dev' failed (ASM-2)
+# Error: go cluster: Failed Top-down CCORE Synthesis
+# Info: Design complexity at end of 'assembly': Total ops = 70, Real ops = 24, Vars = 25 (SOL-21)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+# Error: Couldn't find library component for operation 'rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v1': elapsed time 0.87 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 78, Real ops = 26, Vars = 33 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v1': elapsed time 0.41 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/twiddle:rsc' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v1' (SOL-8)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/vec:rsc' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v1': elapsed time 0.05 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 26, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v1': elapsed time 0.27 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'DIT_RELOOP.v1' (SOL-8)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 320, Real ops = 99, Vars = 73 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v8': elapsed time 1.58 seconds, memory usage 1519512kB, peak memory usage 1519512kB (SOL-9)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 8
+/DIT_RELOOP/vec:rsc/INTERLEAVE 8
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/CDesignChecker/design_checker.sh'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 8 times. (LOOP-3)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+go extract
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 8
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Info: Branching solution 'DIT_RELOOP.v8' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+CU_DIRECTIVE sid11 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+CU_DESIGN sid11 ADD {} {VERSION v8 SID sid11 BRANCH_SID sid10 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+CU_DIRECTIVE sid11 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 8
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 8
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v7': elapsed time 1.16 seconds, memory usage 1650692kB, peak memory usage 1650692kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 181, Real ops = 57, Vars = 51 (SOL-21)
+go extract
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 4
+N_UNROLL parameter 4 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v7' (SOL-8)
+# Info: Branching solution 'DIT_RELOOP.v7' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+CU_DIRECTIVE sid10 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+CU_DESIGN sid10 ADD {} {VERSION v7 SID sid10 BRANCH_SID sid9 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+CU_DIRECTIVE sid10 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 4
+/DIT_RELOOP/vec:rsc/INTERLEAVE 4
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 4
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 4
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7/CDesignChecker/design_checker.sh'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 36, Vars = 39 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v6': elapsed time 0.72 seconds, memory usage 1511396kB, peak memory usage 1511460kB (SOL-9)
+CU_DESIGN sid9 ADD {} {VERSION v6 SID sid9 BRANCH_SID sid7 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+CU_DIRECTIVE sid9 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+go extract
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v6/CDesignChecker/design_checker.sh'
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 2
+N_UNROLL parameter 2 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v6' (SOL-8)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 2
+/DIT_RELOOP/vec:rsc/INTERLEAVE 2
+# Info: Branching solution 'DIT_RELOOP.v6' at state 'assembly' (PRJ-2)
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 2
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 2
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid9 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v5': elapsed time 0.05 seconds, memory usage 1511396kB, peak memory usage 1511460kB (SOL-9)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v5' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 1269, Real ops = 99, Vars = 124 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v8': elapsed time 4.91 seconds, memory usage 1519512kB, peak memory usage 1519512kB (SOL-9)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(3)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(2)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(5)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(4)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Resource '/DIT_RELOOP/vec:rsc' split into 1 x 8 blocks (MEM-11)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(1)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(0)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Resource '/DIT_RELOOP/twiddle:rsc' split into 1 x 8 blocks (MEM-11)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(7)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(6)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v8' (SOL-8)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Merged 'IDX_LOOP:f2:switch#4' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#4' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# Info: Merged 'IDX_LOOP:f2:switch#3' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#3' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#6' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#6' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#5' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#5' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# Info: Merged 'IDX_LOOP:f2:switch' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# Info: Merged 'IDX_LOOP:f2:switch#2' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#2' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# Info: Merged 'IDX_LOOP:f2:switch#1' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#1' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#7' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#7' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Design complexity at end of 'cluster': Total ops = 1257, Real ops = 97, Vars = 115 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'DIT_RELOOP.v8': elapsed time 1.27 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-9)
+Module 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0' in the cache is valid & accepted for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' (TD-3)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v8' (SOL-8)
+Module for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' has been successfully synthesized (TD-4)
+# Info: Design complexity at end of 'architect': Total ops = 3331, Real ops = 761, Vars = 496 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'DIT_RELOOP.v8': elapsed time 5.21 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-9)
+Design 'DIT_RELOOP' contains '761' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'DIT_RELOOP.v8' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 3331, Real ops = 761, Vars = 496 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 958.09 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-9)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 386.89 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 365.90 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 437.74 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 416.74 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 293.77 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 264.20 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 344.70 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Prescheduled LOOP '/DIT_RELOOP/core/GROUP_LOOP' (1 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 323.60 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Prescheduled LOOP '/DIT_RELOOP/core/IDX_LOOP' (89 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 581.37 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Prescheduled LOOP '/DIT_RELOOP/core/main' (2 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 559.96 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Prescheduled LOOP '/DIT_RELOOP/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 632.15 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 602.99 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Starting transformation 'allocate' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 480.38 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 458.99 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 538.80 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 509.02 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 20.58 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Final schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7898.62, 239118.86 (CRAAS-12)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 785.14 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 47.01 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 755.29 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 826.77 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+Prescheduled SEQUENTIAL '/DIT_RELOOP/core' (total length 117690522 c-steps) (SCHD-8)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 806.02 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Prescheduled LOOP '/DIT_RELOOP/core/core:rlp' (0 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 682.82 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 661.94 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Initial schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 119012767, Area (Datapath, Register, Total) = 487225.10, 8568.00, 495793.10 (CRAAS-11)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 725.65 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 200.19 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 704.21 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 170.30 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 942.30 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 242.86 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 221.87 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 98.03 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 877.99 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 76.87 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 848.13 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 140.46 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 921.12 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 119.33 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 899.76 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+
+# Messages from "go schedule"
+
+# Info: Completed transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 77.10 seconds, memory usage 1576856kB, peak memory usage 1642392kB (SOL-9)
+# Info: Running transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 73.39 seconds, memory usage 1576856kB, peak memory usage 1642392kB (SOL-15)
+# Info: Design complexity at end of 'schedule': Total ops = 33336, Real ops = 632, Vars = 987 (SOL-21)
+Global signal 'vec:rsc(0)(7).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'DIT_RELOOP.v8' (SOL-8)
+Global signal 'p:rsc.dat' added to design 'DIT_RELOOP' for component 'p:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+Global signal 'vec:rsc(0)(0).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'DIT_RELOOP' for component 'r:rsci' (LIB-3)
+Global signal 'vec:rsc(0)(0).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+# Info: Running transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 43.60 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-15)
+Report written to file 'cycle.rpt'
+Global signal 'twiddle:rsc.triosy(0)(1).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(2).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(2):obj' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 21.65 seconds, memory usage 1576856kB, peak memory usage 1576856kB (SOL-15)
+Global signal 'twiddle:rsc.triosy(0)(0).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(3).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(4).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(1).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(2).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(7).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(5).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(6).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(5).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(6).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(3).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(4).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(0).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(7).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 6582, Real ops = 3137, Vars = 823 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'DIT_RELOOP.v8': elapsed time 37.24 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-9)
+# Warning: Extrapolation detected. Script '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/adjust_char_library.tcl' generated. (LIB-142)
+Creating shared register 'tmp#11.sva#23' for variables 'tmp#11.sva#23, tmp#15.sva#23, tmp#3.sva#23, tmp#7.sva#23, tmp#13.sva#22, tmp#5.sva#22, tmp#9.sva#22' (6 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#19' for variables 'tmp#11.sva#19, tmp#15.sva#19, tmp#3.sva#19, tmp#7.sva#19, tmp#13.sva#2, tmp#5.sva#2, tmp#9.sva#2, tmp#13.sva#28, tmp#5.sva#28, tmp#9.sva#28' (9 registers deleted). (FSM-3)
+Creating shared register 'IDX_LOOP:IDX_LOOP:nor#12.itm' for variables 'IDX_LOOP:IDX_LOOP:nor#12.itm, IDX_LOOP:IDX_LOOP:nor#15.itm, IDX_LOOP:IDX_LOOP:nor#18.itm, IDX_LOOP:IDX_LOOP:nor#21.itm, IDX_LOOP:IDX_LOOP:nor#3.itm, IDX_LOOP:IDX_LOOP:nor#6.itm, IDX_LOOP:IDX_LOOP:nor#9.itm, IDX_LOOP:IDX_LOOP:nor.itm' (7 registers deleted). (FSM-3)
+Creating shared register 'IDX_LOOP:IDX_LOOP:and#108.itm' for variables 'IDX_LOOP:IDX_LOOP:and#108.itm, IDX_LOOP:IDX_LOOP:and#125.itm, IDX_LOOP:IDX_LOOP:and#23.itm, IDX_LOOP:IDX_LOOP:and#40.itm, IDX_LOOP:IDX_LOOP:and#57.itm, IDX_LOOP:IDX_LOOP:and#6.itm, IDX_LOOP:IDX_LOOP:and#74.itm, IDX_LOOP:IDX_LOOP:and#91.itm' (7 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#7' for variables 'tmp#11.sva#7, tmp#15.sva#7, tmp#3.sva#7, tmp#7.sva#7' (3 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#5' for variables 'tmp#11.sva#5, tmp#15.sva#5, tmp#3.sva#5, tmp#7.sva#5' (3 registers deleted). (FSM-3)
+Creating shared register 'tmp#10.lpi#4.dfm' for variables 'tmp#10.lpi#4.dfm, tmp#12.lpi#4.dfm, tmp#14.lpi#4.dfm, tmp#2.lpi#4.dfm, tmp#4.lpi#4.dfm, tmp#6.lpi#4.dfm, tmp#8.lpi#4.dfm, tmp.lpi#4.dfm' (7 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#9' for variables 'tmp#11.sva#9, tmp#15.sva#9, tmp#3.sva#9, tmp#7.sva#9' (3 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#27' for variables 'tmp#11.sva#27, tmp#15.sva#27, tmp#3.sva#27, tmp#7.sva#27, tmp#13.sva#26, tmp#5.sva#26, tmp#9.sva#26, tmp#13.sva#4, tmp#5.sva#4, tmp#9.sva#4' (9 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#25' for variables 'tmp#11.sva#25, tmp#15.sva#25, tmp#3.sva#25, tmp#7.sva#25, tmp#13.sva#24, tmp#5.sva#24, tmp#9.sva#24' (6 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#3' for variables 'tmp#11.sva#3, tmp#15.sva#3, tmp#3.sva#3, tmp#7.sva#3, tmp#13.sva#8, tmp#5.sva#8, tmp#9.sva#8' (6 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#29' for variables 'tmp#11.sva#29, tmp#15.sva#29, tmp#3.sva#29, tmp#7.sva#29, tmp#13.sva#6, tmp#5.sva#6, tmp#9.sva#6' (6 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'DIT_RELOOP.v8': elapsed time 27.51 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-15)
+Creating shared register 'IDX_LOOP:modulo_dev(return)#1.sva' for variables 'IDX_LOOP:modulo_dev(return)#1.sva, IDX_LOOP:modulo_dev(return)#10.sva, IDX_LOOP:modulo_dev(return)#11.sva, IDX_LOOP:modulo_dev(return)#12.sva, IDX_LOOP:modulo_dev(return)#13.sva, IDX_LOOP:modulo_dev(return)#14.sva, IDX_LOOP:modulo_dev(return)#15.sva, IDX_LOOP:modulo_dev(return)#9.sva, tmp#1.lpi#4.dfm#4, tmp#11.lpi#4.dfm#4, tmp#13.lpi#4.dfm#4, tmp#15.lpi#4.dfm#4, tmp#3.lpi#4.dfm#4, tmp#5.lpi#4.dfm#4, tmp#7.lpi#4.dfm#4, tmp#9.lpi#4.dfm#4, tmp#11.sva#13, tmp#15.sva#13, tmp#3.sva#13, tmp#7.sva#13, tmp#13.sva#12, tmp#5.sva#12, tmp#9.sva#12, tmp#13.sva#18, tmp#5.sva#18, tmp#9.sva#18' (25 registers deleted). (FSM-3)
+Creating shared register 'IDX_LOOP-1:mul.mut' for variables 'IDX_LOOP-1:mul.mut, IDX_LOOP-2:mul.mut, IDX_LOOP-3:mul.mut, IDX_LOOP-4:mul.mut, IDX_LOOP-5:mul.mut, IDX_LOOP-6:mul.mut, IDX_LOOP-7:mul.mut, IDX_LOOP-8:mul.mut' (7 registers deleted). (FSM-3)
+# Info: Starting transformation 'dpfsm' on solution 'DIT_RELOOP.v8' (SOL-8)
+Creating shared register 'IDX_LOOP-1:lshift.idiv.sva' for variables 'IDX_LOOP-1:lshift.idiv.sva, IDX_LOOP-2:lshift.idiv.sva, IDX_LOOP-3:lshift.idiv.sva, IDX_LOOP-4:lshift.idiv.sva, IDX_LOOP-5:lshift.idiv.sva, IDX_LOOP-6:lshift.idiv.sva, IDX_LOOP-7:lshift.idiv.sva, IDX_LOOP-8:lshift.idiv.sva' (7 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'IDX_LOOP:IDX_LOOP:and#104.itm' for variables 'IDX_LOOP:IDX_LOOP:and#104.itm, IDX_LOOP:IDX_LOOP:and#121.itm, IDX_LOOP:IDX_LOOP:and#19.itm, IDX_LOOP:IDX_LOOP:and#2.itm, IDX_LOOP:IDX_LOOP:and#36.itm, IDX_LOOP:IDX_LOOP:and#53.itm, IDX_LOOP:IDX_LOOP:and#70.itm, IDX_LOOP:IDX_LOOP:and#87.itm, IDX_LOOP:f2:IDX_LOOP:f2:and#215.itm' (8 registers deleted). (FSM-3)
+Creating shared register 'IDX_LOOP:IDX_LOOP:and#107.itm' for variables 'IDX_LOOP:IDX_LOOP:and#107.itm, IDX_LOOP:IDX_LOOP:and#124.itm, IDX_LOOP:IDX_LOOP:and#22.itm, IDX_LOOP:IDX_LOOP:and#39.itm, IDX_LOOP:IDX_LOOP:and#5.itm, IDX_LOOP:IDX_LOOP:and#56.itm, IDX_LOOP:IDX_LOOP:and#73.itm, IDX_LOOP:IDX_LOOP:and#90.itm' (7 registers deleted). (FSM-3)
+Creating shared register 'IDX_LOOP:IDX_LOOP:and#106.itm' for variables 'IDX_LOOP:IDX_LOOP:and#106.itm, IDX_LOOP:IDX_LOOP:and#123.itm, IDX_LOOP:IDX_LOOP:and#21.itm, IDX_LOOP:IDX_LOOP:and#38.itm, IDX_LOOP:IDX_LOOP:and#4.itm, IDX_LOOP:IDX_LOOP:and#55.itm, IDX_LOOP:IDX_LOOP:and#72.itm, IDX_LOOP:IDX_LOOP:and#89.itm' (7 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#17' for variables 'tmp#11.sva#17, tmp#15.sva#17, tmp#3.sva#17, tmp#7.sva#17, tmp#13.sva#16, tmp#5.sva#16, tmp#9.sva#16' (6 registers deleted). (FSM-3)
+Creating shared register 'tmp#11.sva#15' for variables 'tmp#11.sva#15, tmp#15.sva#15, tmp#3.sva#15, tmp#7.sva#15, tmp#13.sva#14, tmp#5.sva#14, tmp#9.sva#14' (6 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 5358, Real ops = 2358, Vars = 4781 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'DIT_RELOOP.v8': elapsed time 12.68 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'DIT_RELOOP.v8' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'extract' on solution 'DIT_RELOOP.v8': elapsed time 40.49 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+# Info: Running transformation 'extract' on solution 'DIT_RELOOP.v8': elapsed time 38.08 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Design complexity at end of 'extract': Total ops = 5330, Real ops = 2370, Vars = 750 (SOL-21)
+order file name is: rtl.vhdl_order.txt
+generate concat
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+# Info: Starting transformation 'extract' on solution 'DIT_RELOOP.v8' (SOL-8)
+Report written to file 'rtl.rpt'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.vhdl
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Generating SCVerify testbench files
+# Info: Running transformation 'extract' on solution 'DIT_RELOOP.v8': elapsed time 16.29 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl

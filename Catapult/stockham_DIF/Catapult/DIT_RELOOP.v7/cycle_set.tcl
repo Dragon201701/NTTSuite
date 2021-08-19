@@ -1,0 +1,156 @@
+
+# Loop constraints
+directive set /DIT_RELOOP/core/core:rlp CSTEPS_FROM {{. == 0}}
+directive set /DIT_RELOOP/core/core:rlp/main CSTEPS_FROM {{. == 2} {.. == 0}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP CSTEPS_FROM {{. == 2} {.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP CSTEPS_FROM {{. == 1} {.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP CSTEPS_FROM {{. == 130} {.. == 0}}
+
+# IO operation constraints
+directive set /DIT_RELOOP/core/core:rlp/main/p:io_read(p:rsc.@) CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/r:io_read(r:rsc.@) CSTEPS_FROM {{.. == 1}}
+
+# Sync operation constraints
+
+# Real operation constraints
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:gp:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:gp:lshift CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:op:rshift CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:idx1:mul CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:idx1:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:idx2:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(0).@) CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#4 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#4 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#4 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#4 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(2).@) CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#5 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#5 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#5 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#5 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:mux CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:IDX_LOOP:f1:mux1h CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:acc#2 CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:modulo_dev() CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:lshift CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(0).@) CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(1).@) CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(2).@) CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(3).@) CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:mux1h#30 CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:mul CSTEPS_FROM {{.. == 7}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:IDX_LOOP:rem#1 CSTEPS_FROM {{.. == 7}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(0).@) CSTEPS_FROM {{.. == 32}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(1).@) CSTEPS_FROM {{.. == 32}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(2).@) CSTEPS_FROM {{.. == 32}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(3).@) CSTEPS_FROM {{.. == 32}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:acc#3 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:modulo_dev()#1 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(0).@)#1 CSTEPS_FROM {{.. == 33}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(2).@)#1 CSTEPS_FROM {{.. == 33}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:idx2:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(1).@)#1 CSTEPS_FROM {{.. == 33}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#6 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#6 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#6 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#6 CSTEPS_FROM {{.. == 33}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(3).@)#1 CSTEPS_FROM {{.. == 33}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#7 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#7 CSTEPS_FROM {{.. == 33}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#7 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#7 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:mux#2 CSTEPS_FROM {{.. == 34}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:IDX_LOOP:f1:mux1h#1 CSTEPS_FROM {{.. == 35}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:acc#2 CSTEPS_FROM {{.. == 35}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:modulo_dev() CSTEPS_FROM {{.. == 35}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:lshift CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(0).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(1).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(2).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(3).@)#1 CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:mux1h#1 CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:mul CSTEPS_FROM {{.. == 39}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:IDX_LOOP:rem#1 CSTEPS_FROM {{.. == 39}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(0).@)#2 CSTEPS_FROM {{.. == 64}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(1).@)#2 CSTEPS_FROM {{.. == 64}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(2).@)#2 CSTEPS_FROM {{.. == 64}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(3).@)#2 CSTEPS_FROM {{.. == 64}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:acc#3 CSTEPS_FROM {{.. == 36}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-2:modulo_dev()#1 CSTEPS_FROM {{.. == 36}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(1).@)#3 CSTEPS_FROM {{.. == 65}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(3).@)#3 CSTEPS_FROM {{.. == 65}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:idx1:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:idx2:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(0).@)#2 CSTEPS_FROM {{.. == 65}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#8 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#8 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#8 CSTEPS_FROM {{.. == 65}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#8 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(2).@)#2 CSTEPS_FROM {{.. == 65}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#9 CSTEPS_FROM {{.. == 65}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#9 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#9 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#9 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:mux#4 CSTEPS_FROM {{.. == 66}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:IDX_LOOP:f1:mux1h#2 CSTEPS_FROM {{.. == 67}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:acc#2 CSTEPS_FROM {{.. == 67}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:modulo_dev() CSTEPS_FROM {{.. == 67}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:lshift CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(0).@)#2 CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(1).@)#2 CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(2).@)#2 CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(3).@)#2 CSTEPS_FROM {{.. == 3}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:mux1h#2 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:mul CSTEPS_FROM {{.. == 71}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:IDX_LOOP:rem#1 CSTEPS_FROM {{.. == 71}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(0).@)#4 CSTEPS_FROM {{.. == 96}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(1).@)#4 CSTEPS_FROM {{.. == 96}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(2).@)#4 CSTEPS_FROM {{.. == 96}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(3).@)#4 CSTEPS_FROM {{.. == 96}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:acc#3 CSTEPS_FROM {{.. == 68}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-3:modulo_dev()#1 CSTEPS_FROM {{.. == 68}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(0).@)#5 CSTEPS_FROM {{.. == 97}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(2).@)#5 CSTEPS_FROM {{.. == 97}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:idx2:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(1).@)#3 CSTEPS_FROM {{.. == 97}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#10 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#10 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#10 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#10 CSTEPS_FROM {{.. == 97}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:read_mem(vec:rsc(0)(3).@)#3 CSTEPS_FROM {{.. == 97}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(0).@)#11 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(1).@)#11 CSTEPS_FROM {{.. == 97}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(2).@)#11 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f2:read_mem(vec:rsc(0)(3).@)#11 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:mux#6 CSTEPS_FROM {{.. == 98}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:f1:IDX_LOOP:f1:mux1h#3 CSTEPS_FROM {{.. == 99}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:acc#2 CSTEPS_FROM {{.. == 99}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:modulo_dev() CSTEPS_FROM {{.. == 99}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:lshift CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(0).@)#3 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(1).@)#3 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(2).@)#3 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:read_mem(twiddle:rsc(0)(3).@)#3 CSTEPS_FROM {{.. == 4}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:mux1h#3 CSTEPS_FROM {{.. == 5}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:mul CSTEPS_FROM {{.. == 103}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:IDX_LOOP:rem#1 CSTEPS_FROM {{.. == 103}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(0).@)#6 CSTEPS_FROM {{.. == 128}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(1).@)#6 CSTEPS_FROM {{.. == 128}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(2).@)#6 CSTEPS_FROM {{.. == 128}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(3).@)#6 CSTEPS_FROM {{.. == 128}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:acc#3 CSTEPS_FROM {{.. == 100}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-4:modulo_dev()#1 CSTEPS_FROM {{.. == 100}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(1).@)#7 CSTEPS_FROM {{.. == 129}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:write_mem(vec:rsc(0)(3).@)#7 CSTEPS_FROM {{.. == 129}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP:acc#5 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/IDX_LOOP/IDX_LOOP-1:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/GROUP_LOOP:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/GROUP_LOOP/GROUP_LOOP:acc CSTEPS_FROM {{.. == 1}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:acc#1 CSTEPS_FROM {{.. == 2}}
+directive set /DIT_RELOOP/core/core:rlp/main/STAGE_LOOP/STAGE_LOOP:acc CSTEPS_FROM {{.. == 2}}
+
+# Probe constraints

@@ -9,15 +9,7 @@
 //typedef ac_int<VECTOR_WIDTH, false>   VEC_T;
 typedef ac_int<64, false>   UINT64_T;
 
-/**
- * Perform the operation 'base^exp (mod m)' using the memory-efficient method
- *
- * @param base	The base of the expression
- * @param exp	The exponent of the expression
- * @param m	The modulus of the expression
- * @return 	The result of the expression
- */
-void modExp(UINT64_T base, UINT64_T exp, UINT64_T m, UINT64_T &result);
+void modExp(UINT64_T, UINT64_T, UINT64_T, UINT64_T &);
 
 #endif /* MODEXP_H_ */
 

@@ -4,31 +4,38 @@
 
 # Messages from "go analyze"
 
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.78 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-/INPUTFILES/2
-# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.86 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
 go compile
-# Warning: last line of file ends without a newline (CRD-1)
 Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'DIT_RELOOP' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp (CIN-69)
 solution file add ./src/ntt.cpp
+# Warning: last line of file ends without a newline (CRD-1)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/catapult.log"
 # Warning: last line of file ends without a newline (CRD-1)
 solution file add ./src/ntt_tb.cpp -exclude true
 /INPUTFILES/1
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp (CIN-69)
+/INPUTFILES/2
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-Source file analysis completed (CIN-68)
-Pragma 'hls_design<top>' detected on routine 'DIT_RELOOP' (CIN-6)
-quit
-quit
 
 # Messages from "go compile"
 
-# Info: Completed transformation 'compile' on solution 'DIT_RELOOP.v1': elapsed time 2.67 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'compile': Total ops = 75, Real ops = 27, Vars = 29 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'DIT_RELOOP.v1': elapsed time 3.00 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 67, Real ops = 26, Vars = 27 (SOL-21)
 Generating synthesis internal form... (CIN-3)
-# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/CDesignChecker/design_checker.sh'
 # Info: Starting transformation 'compile' on solution 'DIT_RELOOP.v1' (SOL-8)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Optimizing block '/DIT_RELOOP' ... (CIN-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 2049 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/CDesignChecker/design_checker.sh'
+Design 'DIT_RELOOP' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' iterated at most 1025 times. (LOOP-2)
 Inlining routine 'modulo_dev' (CIN-14)
 Synthesizing routine 'modulo_dev' (CIN-13)
 Optimizing block '/DIT_RELOOP/modulo_dev' ... (CIN-4)
@@ -36,39 +43,210 @@ Inlining routine 'operator>=<64, true>' (CIN-14)
 Found top design routine 'DIT_RELOOP' specified by directive (CIN-52)
 Found design routine 'modulo_dev' specified by directive (CIN-52)
 Inlining routine 'DIT_RELOOP' (CIN-14)
-Loop '/DIT_RELOOP/core/GROUP_LOOP' iterated at most 1025 times. (LOOP-2)
 Synthesizing routine 'DIT_RELOOP' (CIN-13)
-Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 1025 times. (LOOP-2)
-Loop '/DIT_RELOOP/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
-Loop '/DIT_RELOOP/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
-Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 2049 times. (LOOP-2)
-Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-Design 'DIT_RELOOP' was read (SOL-1)
-INOUT port 'vec' is only used as an input. (OPT-10)
-Optimizing block '/DIT_RELOOP' ... (CIN-4)
-INOUT port 'twiddle' is only used as an input. (OPT-10)
 
 # Messages from "go libraries"
 
-# Info: Design complexity at end of 'libraries': Total ops = 75, Real ops = 27, Vars = 29 (SOL-21)
-# Info: Completed transformation 'libraries' on solution 'DIT_RELOOP.v1': elapsed time 0.76 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
-# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
-solution library add Xilinx_RAMS
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Design complexity at end of 'libraries': Total ops = 67, Real ops = 26, Vars = 27 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'DIT_RELOOP.v1': elapsed time 0.63 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/ram_nangate-45nm_pipe_beh.lib' [ram_nangate-45nm_pipe_beh]... (LIB-49)
 # Info: Starting transformation 'libraries' on solution 'DIT_RELOOP.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+solution library add ram_nangate-45nm_pipe_beh
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
 go libraries
+solution library add ccs_sample_mem
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_sample_mem.lib' [ccs_sample_mem]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
 
 # Messages from "go assembly"
 
-directive set SCHED_USE_MULTICYCLE true
-go memories
-# Error: Clock Period is not set for process '/DIT_RELOOP/core'! (DIR-26)
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 26, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v1': elapsed time 0.27 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
 # Info: Starting transformation 'assembly' on solution 'DIT_RELOOP.v1' (SOL-8)
+go extract
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v1': elapsed time 0.09 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v1' (SOL-8)
+go memories
+# Error: Couldn't find library component for operation 'rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v1': elapsed time 0.87 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Error: Top-down synthesis of C-CORE 'modulo_dev' failed (ASM-2)
+# Error: go cluster: Failed Top-down CCORE Synthesis
+# Info: Design complexity at end of 'assembly': Total ops = 70, Real ops = 24, Vars = 25 (SOL-21)
+directive set SCHED_USE_MULTICYCLE true
+# Info: Design complexity at end of 'memories': Total ops = 78, Real ops = 26, Vars = 33 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v1': elapsed time 0.41 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Memory Resource '/DIT_RELOOP/twiddle:rsc' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/vec:rsc' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v1' (SOL-8)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v1': elapsed time 0.05 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 78, Real ops = 26, Vars = 33 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v1': elapsed time 0.38 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Memory Resource '/DIT_RELOOP/vec:rsc' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/DIT_RELOOP/twiddle:rsc' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v1' (SOL-8)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 66, Real ops = 24, Vars = 24 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'DIT_RELOOP.v1': elapsed time 3.06 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+go extract
+/SCHED_USE_MULTICYCLE true
+Module for CCORE 'modulo_dev' has been successfully synthesized (TD-4)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 86, Real ops = 24, Vars = 29 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'DIT_RELOOP.v1': elapsed time 0.24 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Design 'DIT_RELOOP' contains '24' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'DIT_RELOOP.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 86, Real ops = 24, Vars = 29 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'DIT_RELOOP.v1': elapsed time 0.36 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Prescheduled SEQUENTIAL '/DIT_RELOOP/core' (total length 168110272 c-steps) (SCHD-8)
+Prescheduled LOOP '/DIT_RELOOP/core/core:rlp' (0 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Initial schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 178616517, Area (Datapath, Register, Total) = 741804.89, 2428.88, 744233.76 (CRAAS-11)
+# Info: Final schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 630385267, Area (Datapath, Register, Total) = 354436.31, 2428.88, 356865.19 (CRAAS-12)
+Prescheduled LOOP '/DIT_RELOOP/core/GROUP_LOOP' (1 c-steps) (SCHD-7)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled LOOP '/DIT_RELOOP/core/IDX_LOOP' (16 c-steps) (SCHD-7)
+Prescheduled LOOP '/DIT_RELOOP/core/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/DIT_RELOOP/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+# Info: Completed transformation 'schedule' on solution 'DIT_RELOOP.v1': elapsed time 2.56 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1712, Real ops = 26, Vars = 92 (SOL-21)
+Global signal 'vec:rsc.d' added to design 'DIT_RELOOP' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.re' added to design 'DIT_RELOOP' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.q' added to design 'DIT_RELOOP' for component 'vec:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'DIT_RELOOP.v1' (SOL-8)
+Global signal 'vec:rsc.we' added to design 'DIT_RELOOP' for component 'vec:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+Global signal 'twiddle:rsc.radr' added to design 'DIT_RELOOP' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.re' added to design 'DIT_RELOOP' for component 'twiddle:rsci' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy:obj' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'DIT_RELOOP' for component 'p:rsci' (LIB-3)
+Global signal 'vec:rsc.radr' added to design 'DIT_RELOOP' for component 'vec:rsci' (LIB-3)
+Global signal 'twiddle:rsc.q' added to design 'DIT_RELOOP' for component 'twiddle:rsci' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'DIT_RELOOP' for component 'r:rsci' (LIB-3)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Report written to file 'cycle.rpt'
+Global signal 'twiddle:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.wadr' added to design 'DIT_RELOOP' for component 'vec:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 489, Real ops = 189, Vars = 116 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'DIT_RELOOP.v1': elapsed time 1.60 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Performing FSM extraction... (FSM-1)
+# Info: Starting transformation 'dpfsm' on solution 'DIT_RELOOP.v1' (SOL-8)
+Creating shared register 'IDX_LOOP:acc#3.itm' for variables 'IDX_LOOP:acc#3.itm, IDX_LOOP:modulo_dev(return)#1.sva, IDX_LOOP:f2.sva' (2 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 498, Real ops = 168, Vars = 378 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'DIT_RELOOP.v1': elapsed time 1.24 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'DIT_RELOOP.v1' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Design complexity at end of 'extract': Total ops = 490, Real ops = 171, Vars = 116 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'DIT_RELOOP.v1': elapsed time 8.11 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: ../td_ccore_solutions/modulo_dev_82693469b209adaad48c4c31f4adead96233_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ../td_ccore_solutions/modulo_dev_82693469b209adaad48c4c31f4adead96233_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Report written to file 'rtl.rpt'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Starting transformation 'extract' on solution 'DIT_RELOOP.v1' (SOL-8)
+Generating SCVerify testbench files
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+Generating scverify_top.cpp ()
+Netlist written to file 'rtl.vhdl' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order.txt
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/concat_rtl.vhdl
+Add dependent file: ../td_ccore_solutions/modulo_dev_82693469b209adaad48c4c31f4adead96233_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_82693469b209adaad48c4c31f4adead96233_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/concat_rtl.v

@@ -14,736 +14,181 @@
 //                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
 //                       DesignPad v2.78_1.0
 //  
-//  Start time Thu Jul 15 14:19:32 2021
+//  Start time Sat Aug 14 16:26:12 2021
 # -------------------------------------------------
-# Logging session transcript to file "/tmp/log55090f42ba3e2.0"
+# Logging session transcript to file "/tmp/log10502cc2bdde6.0"
 # Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
 project load /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult.ccs
 # Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/modExp/catapult.log"
+option set Input/CppStandard c++98
+# c++98
 flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
 # Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
-# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v5'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
 #     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
 # ============================================
 # Compiling C++ file: ../../src/modExp_tb.cpp
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
-# Start time: 14:21:10 on Jul 15,2021
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 16:37:48 on Aug 14,2021
 # 
 # Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
 # 
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h:106:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:41,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(96): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
 #   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:50:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(89): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h:101:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:50,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(101): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:53:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(89): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h:101:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:53,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(91): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:72:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(87): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:79:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(93): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:93:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(86): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:108:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(95): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:111:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(87): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:114:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(92): error: #error Please use C++11 or a later standard for compilation.
-#  #error Please use C++11 or a later standard for compilation.
-#   ^
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h:130:5: warning: identifier 'static_assert' is a keyword in C++11 [-Wc++0x-compat]
-#      static_assert(exp_int_bits <= 64, "imediate bitwidth calculation gives a very large value for integer bits. Consider reducing the number of input integer bits.");
-#      ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h:106:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:41,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'W'
-#    void ac_sqrt_pwl(const ac_fixed <W, I, false, Q, O> input, ac_fixed <outW, outI, false, outQ, outO> &output, const bool call_normalize = true)
-#                                                                                                                                                 ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(138): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'W'
-#    void ac_sqrt_pwl (const ac_float <W, I, E, Q> input, ac_float <outW, outI, outE, outQ> &output)
-#                                                                                                  ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(280): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'W'
-#    void ac_sqrt_pwl (const ac_complex <ac_fixed <W, I, true, Q, O> > input,  ac_complex <ac_fixed <outW, outI, true, outQ, outO> > &output)
-#                                                                                                                                           ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(449): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(503): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sqrt_pwl.h(503): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:41:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'W'
-#  )
-#  ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h(316): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h:101:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:50,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(151): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h:101:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:50,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(292): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(400): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(503): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(628): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl.h(628): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:50:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(124): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:50:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(245): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(353): error: no default argument for 'T_in'
-#    T_out ac_atan_pwl(const T_in &input)
-#                                       ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl.h(353): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h:101:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:53,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(141): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h:101:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:53,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(278): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(381): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(483): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(607): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_reciprocal_pwl_ha.h(607): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:53:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(124): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:53:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(226): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(339): error: no default argument for 'T_in'
-#    T_out ac_atan_pwl_ha(const T_in &input)
-#                                          ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_atan_pwl_ha.h(339): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:69:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'W1'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'I1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'q1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'o1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'W2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'I2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'q2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: no default argument for 'o2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(137): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'W1'
-#    void ac_inverse_sqrt_pwl (const ac_complex <ac_fixed <W1,I1,true, q1, o1> > &input, ac_complex <ac_fixed <W2, I2, true, q2, o2> > &output)
-#                                                                                                                                             ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'I1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'q1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'o1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'W2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'I2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'q2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: no default argument for 'o2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(270): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h: In function 'void ac_math::ac_inverse_sqrt_pwl(const mti_ac::ac_complex<mti_ac::ac_fixed<W, I, true, Q, O> >&, mti_ac::ac_complex<mti_ac::ac_fixed<outW, outI, true, outQ, outO> >&)':
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(290): error: '.' cannot appear in a constant-expression
-#      typedef ac_fixed <sqrt_W + inverse_sqrt.width, sqrt_I + inverse_sqrt.i_width, true, q_mode_temp> output_temp_type;
-#                                              ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(290): error: '.' cannot appear in a constant-expression
-#      typedef ac_fixed <sqrt_W + inverse_sqrt.width, sqrt_I + inverse_sqrt.i_width, true, q_mode_temp> output_temp_type;
-#                                                                           ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(290): error: template argument 1 is invalid
-#      typedef ac_fixed <sqrt_W + inverse_sqrt.width, sqrt_I + inverse_sqrt.i_width, true, q_mode_temp> output_temp_type;
-#                                                                                                     ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(290): error: template argument 2 is invalid
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h: At global scope:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'W1'
-#    void ac_inverse_sqrt_pwl (const ac_float <W1, I1, E1, q1> &input, ac_float <W2, I2, E2, q2> &output)
-#                                                                                                       ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'I1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'E1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'q1'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'W2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'I2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'E2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: no default argument for 'q2'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(388): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(500): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_inverse_sqrt_pwl.h(500): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:72:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'W'
-#    void ac_log2_pwl (const ac_fixed <W, I, false, Q, O> input, ac_fixed <outW, outI, outS, outQ, outO> &output, const bool call_normalize = true)
-#                                                                                                                                                 ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(122): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'W'
-#    void ac_log_pwl (const ac_fixed <W, I, false, Q, O> input, ac_fixed <outW, outI, outS, outQ, outO> &output)
-#                                                                                                              ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(239): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'W'
-#    void ac_log2_pwl(const ac_float<W, I, E, Q> input, ac_float<outW, outI, outE, outQ> &output)
-#                                                                                               ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(422): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'W'
-#    void ac_log_pwl(const ac_float<W, I, E, Q> input, ac_float<outW, outI, outE, outQ> &output)
-#                                                                                              ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(474): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(618): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(618): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(633): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_log_pwl.h(633): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:79:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(136): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:79:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(212): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(212): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(288): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(314): error: no default argument for 'T_in'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(314): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'baseW'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'baseI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'baseQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'baseO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'exponW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'exponI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'exponS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'exponQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'exponO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(381): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(410): error: no default argument for 'T_in_base'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(410): error: no default argument for 'T_in_expon'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_pow_pwl.h(410): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:93:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(119): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:93:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(213): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(302): error: no default argument for 'T_in'
-#    T_out ac_sigmoid_pwl(const T_in &input)
-#                                          ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_sigmoid_pwl.h(302): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:108:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(135): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:108:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(286): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(376): error: no default argument for 'T_in'
-#    T_out ac_tan_pwl(const T_in &input)
-#                                      ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tan_pwl.h(376): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:111:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'outS'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(120): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:111:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'W'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'E'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'outE'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(212): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(303): error: no default argument for 'T_in'
-#    T_out ac_tanh_pwl(const T_in &input)
-#                                       ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_tanh_pwl.h(303): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:114:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'K'
-#    )
-#    ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'W'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'I'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'S'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'Q'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'O'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'outW'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'outI'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'outQ'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: no default argument for 'outO'
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(119): error: default template arguments may not be used in function templates without -std=c++11 or -std=gnu++11
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:114:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h: In function 'void ac_math::ac_softmax_pwl(const mti_ac::ac_fixed<W, I, S, Q, O> (&)[K], mti_ac::ac_fixed<outW, outI, false, outQ, outO> (&)[K])':
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(130): error: there are no arguments to 'static_assert' that depend on a template parameter, so a declaration of 'static_assert' must be available [-fpermissive]
-#      static_assert(exp_int_bits <= 64, "imediate bitwidth calculation gives a very large value for integer bits. Consider reducing the number of input integer bits.");
-#                                                                                                                                                                      ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h:130(165): note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(131): error: 'exp_int_bits' cannot appear in a constant-expression
-#      typedef ac_fixed<exp_frac_bits + exp_int_bits, exp_int_bits, false, exp_Q, exp_O> T_exp;
-#                                       ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(131): error: 'exp_int_bits' cannot appear in a constant-expression
-#      typedef ac_fixed<exp_frac_bits + exp_int_bits, exp_int_bits, false, exp_Q, exp_O> T_exp;
-#                                                     ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(131): error: template argument 1 is invalid
-#      typedef ac_fixed<exp_frac_bits + exp_int_bits, exp_int_bits, false, exp_Q, exp_O> T_exp;
-#                                                                                      ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(131): error: template argument 2 is invalid
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(132): error: wrong number of template arguments (1, should be at least 2)
-#      typedef ac_fixed<T_exp::width + ac::log2_ceil<K>::val, T_exp::i_width + ac::log2_ceil<K>::val, false> T_sum;
-#                                                                                                          ^
-# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/ac_types/ac_int.h:69:0,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_abs.h:101,
-#                  from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:41,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_int.h:1850:69: note: provided for 'template<int W2, int I2, bool S2, mti_ac::ac_q_mode Q2, mti_ac::ac_o_mode O2> class mti_ac::ac_fixed'
-#  template<int W2, int I2, bool S2, ac_q_mode Q2, ac_o_mode O2> class ac_fixed;
-#                                                                      ^
-# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math.h:114:0,
-#                  from ../../src/../include/modExp.h:6,
-#                  from ../../src/modExp_tb.cpp:1:
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(136): error: 'T_sum' is not a class or namespace
-#      const int recip_W = or_r ? iW_r : T_sum::width + 20;
-#                                        ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(137): error: 'T_sum' is not a class or namespace
-#      const int recip_I = or_r ? iI_r : T_sum::width - T_sum::i_width + 1;
-#                                        ^
-# Error: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/ac_math/ac_softmax_pwl.h(137): error: 'T_sum' is not a class or namespace
-#      const int recip_I = or_r ? iI_r : T_sum::width - T_sum::i_width + 1;
-#                                                       ^
 # ** Error: (sccom-6142) Compilation failed.
-# End time: 14:21:14 on Jul 15,2021, Elapsed time: 0:00:04
+# End time: 16:37:51 on Aug 14,2021, Elapsed time: 0:00:03
 # Errors: 1, Warnings: 0
 # make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
-# Launching web browser to open http://www.mentor.com/hls-lp/catapult-high-level-synthesis/
-# Input file has changed
-solution new -state new -solution modExp.v5 modExp
-# Info: Branching solution 'modExp.v6' at state 'new' (PRJ-2)
-# modExp.v6
-# Input file has changed
-solution new -state new -solution modExp.v6 modExp
-# Info: Branching solution 'modExp.v7' at state 'new' (PRJ-2)
-# modExp.v7
-go libraries
-# Info: Starting transformation 'analyze' on solution 'modExp.v7' (SOL-8)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 16:55:09 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 16:55:12 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 16:55:24 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 16:55:27 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 17:03:57 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 17:04:00 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+et sfd [file dirname [info script]]
+solution new -state initial
+solution options defaults
+
+option set Input/TargetPlatform x86_64
+# Error: invalid command name "et"
+set sfd [file dirname [info script]]
+solution new -state initial
+solution options defaults
+
+option set Input/TargetPlatform x86_64
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# x86_64
+solution file add ./src/modExp_tb.cpp -exclude true
+# /INPUTFILES/1
+solution file add ./src/modExp.cpp
+# /INPUTFILES/2
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
 # Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/modExp/src/modExp.cpp (CIN-69)
 # Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-# $MGC_HOME/shared/include/ac_int.h(3048): Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
+# $PROJECT_HOME/src/modExp.cpp(10): Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
 # Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'modExp.v7': elapsed time 1.08 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Starting transformation 'compile' on solution 'modExp.v7' (SOL-8)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.87 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'modExp.v2' (SOL-8)
 # Generating synthesis internal form... (CIN-3)
-# $PROJECT_HOME/src/modExp.cpp(12): Found top design routine 'modExp' specified by directive (CIN-52)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Synthesizing routine 'modExp' (CIN-13)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Inlining routine 'modExp' (CIN-14)
+# $PROJECT_HOME/src/modExp.cpp(11): Found top design routine 'modExp' specified by directive (CIN-52)
+# $PROJECT_HOME/src/modExp.cpp(11): Synthesizing routine 'modExp' (CIN-13)
+# $PROJECT_HOME/src/modExp.cpp(11): Inlining routine 'modExp' (CIN-14)
 # $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator><64, false>' (CIN-14)
-# $MGC_HOME/shared/include/ac_int.h(2812): Optimizing block '/modExp' ... (CIN-4)
+# $PROJECT_HOME/src/modExp.cpp(11): Optimizing block '/modExp' ... (CIN-4)
 # Design 'modExp' was read (SOL-1)
 # Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/modExp.cpp for header dependencies.
-# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v7/CDesignChecker/design_checker.sh'
-# Info: Completed transformation 'compile' on solution 'modExp.v7': elapsed time 0.80 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'modExp.v2': elapsed time 1.21 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
 # Info: Design complexity at end of 'compile': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: Starting transformation 'libraries' on solution 'modExp.v7' (SOL-8)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+directive set DSP_EXTRACTION yes
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+go assembly
+# Info: Starting transformation 'libraries' on solution 'modExp.v2' (SOL-8)
 # Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-# Info: Completed transformation 'libraries' on solution 'modExp.v7': elapsed time 0.27 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'libraries' on solution 'modExp.v2': elapsed time 0.53 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'libraries': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-go extract
-# Info: Starting transformation 'assembly' on solution 'modExp.v7' (SOL-8)
-# Info: Completed transformation 'assembly' on solution 'modExp.v7': elapsed time 0.04 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'modExp.v2' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'modExp.v2': elapsed time 0.05 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'assembly': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: Starting transformation 'loops' on solution 'modExp.v7' (SOL-8)
-# $MGC_HOME/shared/include/ac_int.h(1993): Loop '/modExp/core/while' is left rolled. (LOOP-4)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Loop '/modExp/core/main' is left rolled. (LOOP-4)
-# Info: Completed transformation 'loops' on solution 'modExp.v7': elapsed time 0.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+go memories
+directive set SCHED_USE_MULTICYCLE true
+
+go extract
+# Info: Starting transformation 'loops' on solution 'modExp.v2' (SOL-8)
+# $PROJECT_HOME/src/modExp.cpp(14): Loop '/modExp/core/while' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/modExp.cpp(11): Loop '/modExp/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'modExp.v2': elapsed time 0.04 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Starting transformation 'memories' on solution 'modExp.v7' (SOL-8)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
-# Info: Completed transformation 'memories' on solution 'modExp.v7': elapsed time 0.07 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'memories' on solution 'modExp.v2' (SOL-8)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'modExp.v2': elapsed time 0.08 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'memories': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Starting transformation 'cluster' on solution 'modExp.v7' (SOL-8)
-# Info: Completed transformation 'cluster' on solution 'modExp.v7': elapsed time 0.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'modExp.v2' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'modExp.v2': elapsed time 0.03 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Starting transformation 'architect' on solution 'modExp.v7' (SOL-8)
+# Info: Starting transformation 'architect' on solution 'modExp.v2' (SOL-8)
 # Design 'modExp' contains '10' real operations. (SOL-11)
-# Info: Completed transformation 'architect' on solution 'modExp.v7': elapsed time 0.09 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'architect' on solution 'modExp.v2': elapsed time 0.21 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'architect': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
-# Info: Starting transformation 'allocate' on solution 'modExp.v7' (SOL-8)
+# Info: Starting transformation 'allocate' on solution 'modExp.v2' (SOL-8)
 # Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
 # Info: Select qualified components for data operations ... (CRAAS-3)
 # Info: Apply resource constraints on data operations ... (CRAAS-4)
-# $MGC_HOME/shared/include/ac_int.h(1993): Prescheduled LOOP '/modExp/core/while' (26 c-steps) (SCHD-7)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Prescheduled LOOP '/modExp/core/main' (3 c-steps) (SCHD-7)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Prescheduled LOOP '/modExp/core/core:rlp' (1 c-steps) (SCHD-7)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Prescheduled SEQUENTIAL '/modExp/core' (total length 30 c-steps) (SCHD-8)
-# Info: $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Initial schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-11)
+# $PROJECT_HOME/src/modExp.cpp(14): Prescheduled LOOP '/modExp/core/while' (26 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/modExp.cpp(11): Prescheduled LOOP '/modExp/core/main' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/modExp.cpp(11): Prescheduled LOOP '/modExp/core/core:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/modExp.cpp(11): Prescheduled SEQUENTIAL '/modExp/core' (total length 30 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/modExp.cpp(11): Initial schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-11)
 # At least one feasible schedule exists. (CRAAS-9)
-# Info: $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Final schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-12)
+# Info: $PROJECT_HOME/src/modExp.cpp(11): Final schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-12)
 # Resource allocation and scheduling done. (CRAAS-2)
 # Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'allocate' on solution 'modExp.v7': elapsed time 0.12 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'allocate' on solution 'modExp.v2': elapsed time 0.23 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'allocate': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
-# Info: Starting transformation 'schedule' on solution 'modExp.v7' (SOL-8)
+# Info: Starting transformation 'schedule' on solution 'modExp.v2' (SOL-8)
 # Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
 # Global signal 'base:rsc.dat' added to design 'modExp' for component 'base:rsci' (LIB-3)
 # Global signal 'exp:rsc.dat' added to design 'modExp' for component 'exp:rsci' (LIB-3)
@@ -756,17 +201,17 @@ go extract
 # Global signal 'm:rsc.triosy.lz' added to design 'modExp' for component 'm:rsc.triosy:obj' (LIB-3)
 # Global signal 'result:rsc.triosy.lz' added to design 'modExp' for component 'result:rsc.triosy:obj' (LIB-3)
 # Report written to file 'cycle.rpt'
-# Info: Completed transformation 'schedule' on solution 'modExp.v7': elapsed time 0.77 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'schedule' on solution 'modExp.v2': elapsed time 1.46 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'schedule': Total ops = 498, Real ops = 9, Vars = 58 (SOL-21)
-# Info: Starting transformation 'dpfsm' on solution 'modExp.v7' (SOL-8)
+# Info: Starting transformation 'dpfsm' on solution 'modExp.v2' (SOL-8)
 # Performing FSM extraction... (FSM-1)
-# Info: Completed transformation 'dpfsm' on solution 'modExp.v7': elapsed time 0.29 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'dpfsm' on solution 'modExp.v2': elapsed time 0.69 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'dpfsm': Total ops = 164, Real ops = 46, Vars = 56 (SOL-21)
-# Info: Starting transformation 'instance' on solution 'modExp.v7' (SOL-8)
+# Info: Starting transformation 'instance' on solution 'modExp.v2' (SOL-8)
 # Netlist written to file 'schematic.nlv' (NET-4)
-# Info: Completed transformation 'instance' on solution 'modExp.v7': elapsed time 0.33 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'instance' on solution 'modExp.v2': elapsed time 0.62 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'instance': Total ops = 154, Real ops = 38, Vars = 108 (SOL-21)
-# Info: Starting transformation 'extract' on solution 'modExp.v7' (SOL-8)
+# Info: Starting transformation 'extract' on solution 'modExp.v2' (SOL-8)
 # Report written to file 'rtl.rpt'
 # Generating scverify_top.cpp
 # Netlist written to file 'rtl.vhdl' (NET-4)
@@ -780,7 +225,7 @@ go extract
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
 # Add dependent file: ./rtl.vhdl
-# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v7/concat_rtl.vhdl
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.vhdl
 # order file name is: rtl.vhdl_order_sim.txt
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
@@ -790,12 +235,17 @@ go extract
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
 # Add dependent file: ./rtl.vhdl
-# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v7/concat_sim_rtl.vhdl
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.vhdl
 # Generating SCVerify testbench files
-# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/modExp.cpp for header dependencies.
 # Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
-# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
-# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'rtl.vhdl.psr'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'concat_rtl.vhdl.psr'
 # Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
 # Netlist written to file 'rtl.v' (NET-4)
 # generate concat
@@ -806,7 +256,7 @@ go extract
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
 # Add dependent file: ./rtl.v
-# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v7/concat_rtl.v
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.v
 # order file name is: rtl.v_order_sim.txt
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
@@ -814,16 +264,22 @@ go extract
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
 # Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
 # Add dependent file: ./rtl.v
-# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v7/concat_sim_rtl.v
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.v
 # Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
-# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
-# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'rtl.v.psr'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'concat_rtl.v.psr'
 # Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
-# Info: Completed transformation 'extract' on solution 'modExp.v7': elapsed time 4.05 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'extract' on solution 'modExp.v2': elapsed time 7.83 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
 # Info: Design complexity at end of 'extract': Total ops = 150, Real ops = 39, Vars = 56 (SOL-21)
 flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
 # Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
-# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v7'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2'
 #     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
 # ============================================
 # Creating simulation directory 'scverify/rtl_v_msim'
@@ -851,74 +307,74 @@ flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim s
 # Modifying scverify/rtl_v_msim/modelsim.ini
 # ============================================
 # Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/modExp.v7/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v7/.dut_inst_info.tcl ./Catapult/modExp.v7/.qwave_signal 
-# app_questasim.flo - Executing command 'create_wave_script ./Catapult/modExp.v7/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v7/.dut_inst_info.tcl ./Catapult/modExp.v7/.qwave_signal'...
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/modExp.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v2/.dut_inst_info.tcl ./Catapult/modExp.v2/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult/modExp.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v2/.dut_inst_info.tcl ./Catapult/modExp.v2/.qwave_signal'...
 # Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
 # ============================================
 # Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 14:39:32 on Jul 15,2021
+# Start time: 17:08:41 on Aug 14,2021
 # vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
 # -- Compiling module ccs_in_v1
 # 
 # Top level modules:
 # 	ccs_in_v1
-# End time: 14:39:32 on Jul 15,2021, Elapsed time: 0:00:00
+# End time: 17:08:41 on Aug 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 14:39:32 on Jul 15,2021
+# Start time: 17:08:41 on Aug 14,2021
 # vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v 
 # -- Compiling module mgc_inout_prereg_en_v1
 # 
 # Top level modules:
 # 	mgc_inout_prereg_en_v1
-# End time: 14:39:32 on Jul 15,2021, Elapsed time: 0:00:00
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 14:39:32 on Jul 15,2021
+# Start time: 17:08:42 on Aug 14,2021
 # vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
 # -- Compiling module mgc_io_sync_v2
 # 
 # Top level modules:
 # 	mgc_io_sync_v2
-# End time: 14:39:32 on Jul 15,2021, Elapsed time: 0:00:00
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 14:39:32 on Jul 15,2021
+# Start time: 17:08:42 on Aug 14,2021
 # vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v 
 # -- Compiling module mgc_rem
 # 
 # Top level modules:
 # 	mgc_rem
-# End time: 14:39:32 on Jul 15,2021, Elapsed time: 0:00:00
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 14:39:32 on Jul 15,2021
+# Start time: 17:08:42 on Aug 14,2021
 # vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v 
 # -- Compiling module mgc_mul_pipe
 # 
 # Top level modules:
 # 	mgc_mul_pipe
-# End time: 14:39:32 on Jul 15,2021, Elapsed time: 0:00:00
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling Verilog file: rtl.v
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 14:39:32 on Jul 15,2021
+# Start time: 17:08:42 on Aug 14,2021
 # vlog -work work rtl.v 
 # -- Compiling module modExp_core_core_fsm
 # -- Compiling module modExp_core_wait_dp
@@ -927,649 +383,66 @@ flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim s
 # 
 # Top level modules:
 # 	modExp
-# End time: 14:39:32 on Jul 15,2021, Elapsed time: 0:00:00
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling C++ file: ../../src/modExp_tb.cpp
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
-# Start time: 14:39:32 on Jul 15,2021
-# 
-# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
-# End time: 14:39:35 on Jul 15,2021, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling C++ file: ../../src/modExp.cpp
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp.cpp
-# Start time: 14:39:35 on Jul 15,2021
-# 
-# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
-# End time: 14:39:36 on Jul 15,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling C++ file: scverify/mc_testbench.cpp
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
-# Start time: 14:39:36 on Jul 15,2021
-# 
-# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
-# End time: 14:39:39 on Jul 15,2021, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling C++ file: scverify/scverify_top.cpp
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
-# Start time: 14:39:39 on Jul 15,2021
+# Start time: 17:08:42 on Aug 14,2021
 # 
 # Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
 # 
-# Error: scverify/scverify_top.cpp(70): error: redeclaration of 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: note: previous declaration 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(71): error: redeclaration of 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:67:53: note: previous declaration 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(72): error: redeclaration of 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: note: previous declaration 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(73): error: redeclaration of 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:69:53: note: previous declaration 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(74): error: redeclaration of 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: note: previous declaration 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(75): error: redeclaration of 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:67:53: note: previous declaration 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(76): error: redeclaration of 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: note: previous declaration 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(77): error: redeclaration of 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:69:53: note: previous declaration 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(78): error: redeclaration of 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: note: previous declaration 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(79): error: redeclaration of 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:67:53: note: previous declaration 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(82): error: redeclaration of 'mc_trios_inout_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_inout_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: note: previous declaration 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(83): error: redeclaration of 'mc_inout_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_inout_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:69:53: note: previous declaration 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp: In constructor 'scverify_top::scverify_top(const sc_core::sc_module_name&)':
-# scverify/scverify_top.cpp:69:53: warning: 'scverify_top::transactor_result' will be initialized after [-Wreorder]
-# scverify/scverify_top.cpp:66:53: warning:   'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result' [-Wreorder]
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_wait_ctrl_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::transactor_result'
-# scverify/scverify_top.cpp:69:53: warning: 'scverify_top::transactor_result' will be initialized after [-Wreorder]
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: warning:   'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result' [-Wreorder]
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_wait_ctrl_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::transactor_result'
-# scverify/scverify_top.cpp:69:53: warning: 'scverify_top::transactor_result' will be initialized after [-Wreorder]
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: warning:   'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result' [-Wreorder]
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_wait_ctrl_fifo_result'
-# scverify/scverify_top.cpp:81:53: warning: 'scverify_top::TLS_out_wait_ctrl_fifo_result' will be initialized after [-Wreorder]
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_out_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: warning:   'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST' [-Wreorder]
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::transactor_result'
-# Error: scverify/scverify_top.cpp(249): error: 'class mc_input_transactor<mti_ac::ac_int<64, false>, 64, false>' has no member named 'out_fifo'
-#      transactor_result.out_fifo(TLS_out_fifo_result);
-#                        ^
-# Error: scverify/scverify_top.cpp(250): error: 'class mc_input_transactor<mti_ac::ac_int<64, false>, 64, false>' has no member named 'out_wait_ctrl_fifo'
-#      transactor_result.out_wait_ctrl_fifo(TLS_out_wait_ctrl_fifo_result);
-#                        ^
-# scverify/scverify_top.cpp: In member function 'void scverify_top::setup_debug()':
-# Error: scverify/scverify_top.cpp(361): error: redeclaration of 'int transactor_result_flags'
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# scverify/scverify_top.cpp:360:14: note: 'int transactor_result_flags' previously declared here
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# Error: scverify/scverify_top.cpp(362): error: redeclaration of 'int transactor_result_flags'
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# scverify/scverify_top.cpp:360:14: note: 'int transactor_result_flags' previously declared here
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# Error: scverify/scverify_top.cpp(363): error: redeclaration of 'int transactor_result_flags'
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# scverify/scverify_top.cpp:360:14: note: 'int transactor_result_flags' previously declared here
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# Error: scverify/scverify_top.cpp(366): error: redeclaration of 'int transactor_result_count'
-#    static int transactor_result_count = -1;
-#               ^
-# scverify/scverify_top.cpp:365:14: note: 'int transactor_result_count' previously declared here
-#    static int transactor_result_count = -1;
-#               ^
-# Error: scverify/scverify_top.cpp(367): error: redeclaration of 'int transactor_result_count'
-#    static int transactor_result_count = -1;
-#               ^
-# scverify/scverify_top.cpp:365:14: note: 'int transactor_result_count' previously declared here
-#    static int transactor_result_count = -1;
-#               ^
-# Error: scverify/scverify_top.cpp(368): error: redeclaration of 'int transactor_result_count'
-#    static int transactor_result_count = -1;
-#               ^
-# scverify/scverify_top.cpp:365:14: note: 'int transactor_result_count' previously declared here
-#    static int transactor_result_count = -1;
-#               ^
-# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
-#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
-#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
-#                  from scverify/mc_testbench.h:30,
-#                  from scverify/scverify_top.cpp:4:
-# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
-# scverify/scverify_top.cpp:182:30:   required from here
-# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
-#      mutable sc_event* m_posedge_event_p; // positive edge event if present.
-#                        ^
-# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:740:23: warning:   'sc_dt::uint64 sc_core::sc_signal<sc_dt::sc_logic>::m_change_stamp' [-Wreorder]
-#      sc_dt::uint64     m_change_stamp;    // delta of last event
-#                        ^
-# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
-#      sc_signal()
-#      ^
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
 # ** Error: (sccom-6142) Compilation failed.
-# End time: 14:39:41 on Jul 15,2021, Elapsed time: 0:00:02
+# End time: 17:08:46 on Aug 14,2021, Elapsed time: 0:00:04
 # Errors: 1, Warnings: 0
-# make: *** [scverify/rtl_v_msim/scverify_top.cpp.cxxts] Error 11
-go compile
-solution library remove *
-# CU_DIRECTIVE sid9 SET {} {DSP_EXTRACTION yes}: Race condition
-# CU_DESIGN sid9 ADD {} {VERSION v8 SID sid9 BRANCH_SID sid8 BRANCH_STATE compile INCREMENTAL 0 STATE compile TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/ SYNTHESIS_FLOWPKG Vivado STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name modExp}: Race condition
-# Info: Branching solution 'modExp.v8' at state 'compile' (PRJ-2)
-# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/modExp.cpp for header dependencies.
-# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8/CDesignChecker/design_checker.sh'
-solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
-solution library add ram_nangate-45nm_pipe_beh
-solution library add ram_nangate-45nm-register-file_beh
-go extract
-# Info: Starting transformation 'libraries' on solution 'modExp.v8' (SOL-8)
-# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/nangate/ram_nangate-45nm_pipe_beh.lib' [ram_nangate-45nm_pipe_beh]... (LIB-49)
-# Reading component library '$MGC_HOME/pkgs/siflibs/nangate/ram_nangate-45nm-register-file_beh.lib' [ram_nangate-45nm-register-file_beh]... (LIB-49)
-# Info: Completed transformation 'libraries' on solution 'modExp.v8': elapsed time 0.42 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'libraries': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: Starting transformation 'assembly' on solution 'modExp.v8' (SOL-8)
-# Info: Completed transformation 'assembly' on solution 'modExp.v8': elapsed time 0.04 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'assembly': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: Starting transformation 'loops' on solution 'modExp.v8' (SOL-8)
-# $MGC_HOME/shared/include/ac_int.h(1993): Loop '/modExp/core/while' is left rolled. (LOOP-4)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Loop '/modExp/core/main' is left rolled. (LOOP-4)
-# Info: Completed transformation 'loops' on solution 'modExp.v8': elapsed time 0.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Starting transformation 'memories' on solution 'modExp.v8' (SOL-8)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
-# Info: Completed transformation 'memories' on solution 'modExp.v8': elapsed time 0.07 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'memories': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Starting transformation 'cluster' on solution 'modExp.v8' (SOL-8)
-# Info: Completed transformation 'cluster' on solution 'modExp.v8': elapsed time 0.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Starting transformation 'architect' on solution 'modExp.v8' (SOL-8)
-# Design 'modExp' contains '10' real operations. (SOL-11)
-# Warning: Extrapolation detected. Script '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8/adjust_char_library.tcl' generated. (LIB-142)
-# Info: Completed transformation 'architect' on solution 'modExp.v8': elapsed time 0.06 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
-# Info: Starting transformation 'allocate' on solution 'modExp.v8' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
-# Info: Select qualified components for data operations ... (CRAAS-3)
-# Info: Apply resource constraints on data operations ... (CRAAS-4)
-# $MGC_HOME/shared/include/ac_int.h(1993): Prescheduled LOOP '/modExp/core/while' (6 c-steps) (SCHD-7)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Prescheduled LOOP '/modExp/core/main' (3 c-steps) (SCHD-7)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Prescheduled LOOP '/modExp/core/core:rlp' (1 c-steps) (SCHD-7)
-# $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Prescheduled SEQUENTIAL '/modExp/core' (total length 10 c-steps) (SCHD-8)
-# Info: $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Initial schedule of SEQUENTIAL '/modExp/core': Latency = 6, Area (Datapath, Register, Total) = 82054.60, 1230.38, 83284.97 (CRAAS-11)
-# At least one feasible schedule exists. (CRAAS-9)
-# Info: $MGC_HOME/pkgs/dcs_gcc/gcc-4.9.2/include/c++/4.9.2/bits/istream.tcc(37): Final schedule of SEQUENTIAL '/modExp/core': Latency = 27, Area (Datapath, Register, Total) = 33492.21, 1230.38, 34722.59 (CRAAS-12)
-# Resource allocation and scheduling done. (CRAAS-2)
-# Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'allocate' on solution 'modExp.v8': elapsed time 0.15 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'allocate': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
-# Info: Starting transformation 'schedule' on solution 'modExp.v8' (SOL-8)
-# Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
-# Global signal 'base:rsc.dat' added to design 'modExp' for component 'base:rsci' (LIB-3)
-# Global signal 'exp:rsc.dat' added to design 'modExp' for component 'exp:rsci' (LIB-3)
-# Global signal 'm:rsc.dat' added to design 'modExp' for component 'm:rsci' (LIB-3)
-# Global signal 'result:rsc.zin' added to design 'modExp' for component 'result:rsci' (LIB-3)
-# Global signal 'result:rsc.lzout' added to design 'modExp' for component 'result:rsci' (LIB-3)
-# Global signal 'result:rsc.zout' added to design 'modExp' for component 'result:rsci' (LIB-3)
-# Global signal 'base:rsc.triosy.lz' added to design 'modExp' for component 'base:rsc.triosy:obj' (LIB-3)
-# Global signal 'exp:rsc.triosy.lz' added to design 'modExp' for component 'exp:rsc.triosy:obj' (LIB-3)
-# Global signal 'm:rsc.triosy.lz' added to design 'modExp' for component 'm:rsc.triosy:obj' (LIB-3)
-# Global signal 'result:rsc.triosy.lz' added to design 'modExp' for component 'result:rsc.triosy:obj' (LIB-3)
-# Report written to file 'cycle.rpt'
-# Info: Completed transformation 'schedule' on solution 'modExp.v8': elapsed time 0.44 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'schedule': Total ops = 381, Real ops = 9, Vars = 44 (SOL-21)
-# Info: Starting transformation 'dpfsm' on solution 'modExp.v8' (SOL-8)
-# Performing FSM extraction... (FSM-1)
-# Info: Completed transformation 'dpfsm' on solution 'modExp.v8': elapsed time 0.31 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'dpfsm': Total ops = 147, Real ops = 43, Vars = 49 (SOL-21)
-# Info: Starting transformation 'instance' on solution 'modExp.v8' (SOL-8)
-# Netlist written to file 'schematic.nlv' (NET-4)
-# Info: Completed transformation 'instance' on solution 'modExp.v8': elapsed time 0.33 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'instance': Total ops = 144, Real ops = 36, Vars = 103 (SOL-21)
-# Info: Starting transformation 'extract' on solution 'modExp.v8' (SOL-8)
-# Report written to file 'rtl.rpt'
-# Generating scverify_top.cpp
-# Netlist written to file 'rtl.vhdl' (NET-4)
-# generate concat
-# order file name is: rtl.vhdl_order.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
-# Add dependent file: ./rtl.vhdl
-# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8/concat_rtl.vhdl
-# order file name is: rtl.vhdl_order_sim.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
-# Add dependent file: ./rtl.vhdl
-# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8/concat_sim_rtl.vhdl
-# Generating SCVerify testbench files
-# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/modExp.cpp for header dependencies.
-# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
-# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
-# Netlist written to file 'rtl.v' (NET-4)
-# generate concat
-# order file name is: rtl.v_order.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-# Add dependent file: ./rtl.v
-# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8/concat_rtl.v
-# order file name is: rtl.v_order_sim.txt
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-# Add dependent file: ./rtl.v
-# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8/concat_sim_rtl.v
-# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
-# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
-# Info: Completed transformation 'extract' on solution 'modExp.v8': elapsed time 3.63 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'extract': Total ops = 141, Real ops = 37, Vars = 48 (SOL-21)
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
 flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
 # Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
-# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v8'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2'
 #     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
-# ============================================
-# Creating simulation directory 'scverify/rtl_v_msim'
-# mkdir -p scverify/rtl_v_msim
-# ============================================
-# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
-# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
-# ============================================
-# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
-# ============================================
-# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
-# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
-# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
-# Modifying scverify/rtl_v_msim/modelsim.ini
-# ============================================
-# Creating physical library 'scverify/rtl_v_msim/work'
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
-# ============================================
-# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
-# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
-# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
-# Modifying scverify/rtl_v_msim/modelsim.ini
-# ============================================
-# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
-# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/modExp.v8/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v8/.dut_inst_info.tcl ./Catapult/modExp.v8/.qwave_signal 
-# app_questasim.flo - Executing command 'create_wave_script ./Catapult/modExp.v8/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v8/.dut_inst_info.tcl ./Catapult/modExp.v8/.qwave_signal'...
-# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
-# ============================================
-# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 15:15:08 on Jul 15,2021
-# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
-# -- Compiling module ccs_in_v1
-# 
-# Top level modules:
-# 	ccs_in_v1
-# End time: 15:15:08 on Jul 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
-# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 15:15:08 on Jul 15,2021
-# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v 
-# -- Compiling module mgc_inout_prereg_en_v1
-# 
-# Top level modules:
-# 	mgc_inout_prereg_en_v1
-# End time: 15:15:08 on Jul 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 15:15:08 on Jul 15,2021
-# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
-# -- Compiling module mgc_io_sync_v2
-# 
-# Top level modules:
-# 	mgc_io_sync_v2
-# End time: 15:15:08 on Jul 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 15:15:08 on Jul 15,2021
-# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v 
-# -- Compiling module mgc_rem
-# 
-# Top level modules:
-# 	mgc_rem
-# End time: 15:15:08 on Jul 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# ============================================
-# Compiling Verilog file: rtl.v
-# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
-# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 15:15:08 on Jul 15,2021
-# vlog -work work rtl.v 
-# -- Compiling module modExp_core_core_fsm
-# -- Compiling module modExp_core
-# -- Compiling module modExp
-# 
-# Top level modules:
-# 	modExp
-# End time: 15:15:08 on Jul 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # ============================================
 # Compiling C++ file: ../../src/modExp_tb.cpp
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
-# Start time: 15:15:08 on Jul 15,2021
+# Start time: 17:09:34 on Aug 14,2021
 # 
 # Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
-# End time: 15:15:11 on Jul 15,2021, Elapsed time: 0:00:03
+# End time: 17:09:39 on Aug 14,2021, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling C++ file: ../../src/modExp.cpp
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp.cpp
-# Start time: 15:15:11 on Jul 15,2021
+# Start time: 17:09:39 on Aug 14,2021
 # 
 # Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
-# End time: 15:15:12 on Jul 15,2021, Elapsed time: 0:00:01
+# End time: 17:09:40 on Aug 14,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling C++ file: scverify/mc_testbench.cpp
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
-# Start time: 15:15:12 on Jul 15,2021
+# Start time: 17:09:40 on Aug 14,2021
 # 
 # Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
-# End time: 15:15:15 on Jul 15,2021, Elapsed time: 0:00:03
+# End time: 17:09:46 on Aug 14,2021, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
 # ============================================
 # Compiling C++ file: scverify/scverify_top.cpp
 # /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
-# Start time: 15:15:15 on Jul 15,2021
+# Start time: 17:09:46 on Aug 14,2021
 # 
 # Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
 # 
-# Error: scverify/scverify_top.cpp(70): error: redeclaration of 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: note: previous declaration 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(71): error: redeclaration of 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:67:53: note: previous declaration 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(72): error: redeclaration of 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: note: previous declaration 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(73): error: redeclaration of 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:69:53: note: previous declaration 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(74): error: redeclaration of 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: note: previous declaration 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(75): error: redeclaration of 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:67:53: note: previous declaration 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(76): error: redeclaration of 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: note: previous declaration 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(77): error: redeclaration of 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:69:53: note: previous declaration 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(78): error: redeclaration of 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: note: previous declaration 'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result'
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(79): error: redeclaration of 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:67:53: note: previous declaration 'tlm::tlm_fifo<mc_wait_ctrl> scverify_top::TLS_in_wait_ctrl_fifo_result'
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_in_wait_ctrl_fifo_result;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(82): error: redeclaration of 'mc_trios_inout_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_inout_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: note: previous declaration 'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# Error: scverify/scverify_top.cpp(83): error: redeclaration of 'mc_inout_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_inout_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:69:53: note: previous declaration 'mc_input_transactor<mti_ac::ac_int<64, false>, 64, false> scverify_top::transactor_result'
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp: In constructor 'scverify_top::scverify_top(const sc_core::sc_module_name&)':
-# scverify/scverify_top.cpp:69:53: warning: 'scverify_top::transactor_result' will be initialized after [-Wreorder]
-# scverify/scverify_top.cpp:66:53: warning:   'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result' [-Wreorder]
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_wait_ctrl_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::transactor_result'
-# scverify/scverify_top.cpp:69:53: warning: 'scverify_top::transactor_result' will be initialized after [-Wreorder]
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: warning:   'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result' [-Wreorder]
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_wait_ctrl_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::transactor_result'
-# scverify/scverify_top.cpp:69:53: warning: 'scverify_top::transactor_result' will be initialized after [-Wreorder]
-#    mc_input_transactor<ac_int<64, false >,64,false>  transactor_result;
-#                                                      ^
-# scverify/scverify_top.cpp:66:53: warning:   'tlm::tlm_fifo<mti_ac::ac_int<64, false> > scverify_top::TLS_in_fifo_result' [-Wreorder]
-#    tlm::tlm_fifo<ac_int<64, false > >                TLS_in_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_fifo_result'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::TLS_in_wait_ctrl_fifo_result'
-# scverify/scverify_top.cpp:81:53: warning: 'scverify_top::TLS_out_wait_ctrl_fifo_result' will be initialized after [-Wreorder]
-#    tlm::tlm_fifo<mc_wait_ctrl>                       TLS_out_wait_ctrl_fifo_result;
-#                                                      ^
-# scverify/scverify_top.cpp:68:53: warning:   'mc_trios_input_monitor scverify_top::trios_monitor_base_rsc_triosy_lz_INST' [-Wreorder]
-#    mc_trios_input_monitor                            trios_monitor_base_rsc_triosy_lz_INST;
-#                                                      ^
-# scverify/scverify_top.cpp:121:3: warning:   when initialized here [-Wreorder]
-#    scverify_top(const sc_module_name& name)
-#    ^
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::trios_monitor_base_rsc_triosy_lz_INST'
-# Error: scverify/scverify_top.cpp(121): error: multiple initializations given for 'scverify_top::transactor_result'
-# Error: scverify/scverify_top.cpp(249): error: 'class mc_input_transactor<mti_ac::ac_int<64, false>, 64, false>' has no member named 'out_fifo'
-#      transactor_result.out_fifo(TLS_out_fifo_result);
-#                        ^
-# Error: scverify/scverify_top.cpp(250): error: 'class mc_input_transactor<mti_ac::ac_int<64, false>, 64, false>' has no member named 'out_wait_ctrl_fifo'
-#      transactor_result.out_wait_ctrl_fifo(TLS_out_wait_ctrl_fifo_result);
-#                        ^
-# scverify/scverify_top.cpp: In member function 'void scverify_top::setup_debug()':
-# Error: scverify/scverify_top.cpp(361): error: redeclaration of 'int transactor_result_flags'
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# scverify/scverify_top.cpp:360:14: note: 'int transactor_result_flags' previously declared here
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# Error: scverify/scverify_top.cpp(362): error: redeclaration of 'int transactor_result_flags'
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# scverify/scverify_top.cpp:360:14: note: 'int transactor_result_flags' previously declared here
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# Error: scverify/scverify_top.cpp(363): error: redeclaration of 'int transactor_result_flags'
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# scverify/scverify_top.cpp:360:14: note: 'int transactor_result_flags' previously declared here
-#    static int transactor_result_flags = MC_TRANSACTOR_UNDERFLOW | MC_TRANSACTOR_WAIT;
-#               ^
-# Error: scverify/scverify_top.cpp(366): error: redeclaration of 'int transactor_result_count'
-#    static int transactor_result_count = -1;
-#               ^
-# scverify/scverify_top.cpp:365:14: note: 'int transactor_result_count' previously declared here
-#    static int transactor_result_count = -1;
-#               ^
-# Error: scverify/scverify_top.cpp(367): error: redeclaration of 'int transactor_result_count'
-#    static int transactor_result_count = -1;
-#               ^
-# scverify/scverify_top.cpp:365:14: note: 'int transactor_result_count' previously declared here
-#    static int transactor_result_count = -1;
-#               ^
-# Error: scverify/scverify_top.cpp(368): error: redeclaration of 'int transactor_result_count'
-#    static int transactor_result_count = -1;
-#               ^
-# scverify/scverify_top.cpp:365:14: note: 'int transactor_result_count' previously declared here
-#    static int transactor_result_count = -1;
-#               ^
 # In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
 #                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
 #                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
 #                  from scverify/mc_testbench.h:30,
 #                  from scverify/scverify_top.cpp:4:
 # /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
-# scverify/scverify_top.cpp:182:30:   required from here
+# scverify/scverify_top.cpp:170:30:   required from here
 # /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
 #      mutable sc_event* m_posedge_event_p; // positive edge event if present.
 #                        ^
@@ -1579,16 +452,59 @@ flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim s
 # /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
 #      sc_signal()
 #      ^
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 15:15:17 on Jul 15,2021, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 0
-# make: *** [scverify/rtl_v_msim/scverify_top.cpp.cxxts] Error 11
-flow run /Schematic/view ./schematic.nlv -state rtl
-flow run /Schematic/view ./schematic.nlv -state datapath
-flow run /Schematic/view ./schematic.nlv -state criticalpath
-flow run /Schematic/view ./schematic.nlv -state criticalmap
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 17:09:56 on Aug 14,2021, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 17:09:56 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 17:09:57 on Aug 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/modExp.v2/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:09:57 on Aug 14,2021
+# vopt "+acc=npr" -L ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls -L ./Catapult/modExp.v2/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module modExp
+# -- Loading module modExp_core
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_inout_prereg_en_v1
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_rem
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_mul_pipe
+# -- Loading module modExp_core_wait_dp
+# -- Loading module modExp_core_core_fsm
+# Optimizing 11 design-units (inlining 0/14 module instances, 0/0 UDP instances):
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_rem(fast)
+# -- Optimizing module modExp_core(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_mul_pipe(fast)
+# -- Optimizing module modExp_core_core_fsm(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_inout_prereg_en_v1(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__2)
+# -- Optimizing module modExp_core_wait_dp(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# -- Optimizing module modExp(fast)
+# Optimized design name is scverify_top_opt
+# End time: 17:09:57 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
 project save
 # Saving project file '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult.ccs'. (PRJ-5)
-quit
-# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult.ccs'. (PRJ-5)
-// Finish time Tue Jul 20 13:41:50 2021, time elapsed 119:22:18, peak memory 1.44GB, exit status 0

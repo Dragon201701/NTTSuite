@@ -1,0 +1,174 @@
+commit ec3b97b58542911e339d01d7b9d3b07b0de38318
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Wed Aug 11 22:32:47 2021 -0400
+
+    Delete unused and wrong catapult result.
+
+commit c0f2c3baa30da063f275c5239bcd3ab5b9f1876f
+Merge: e27aaa6 37ac05b
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Sat Aug 7 14:54:58 2021 -0400
+
+    Merge with remote.
+
+commit e27aaa634a3924bcc4fd8e0dd90fa41788da37b1
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Sat Aug 7 14:50:36 2021 -0400
+
+    Add inplaceNTT_DIT code.
+
+commit 37ac05bf7e59c2078c374cfc53ff1dbca948cecc
+Merge: 8a5f95e 51f618e
+Author: ls5382 <ls5382@newnano.poly.edu>
+Date:   Sat Jul 31 16:18:40 2021 -0400
+
+    Merge branch 'master' of https://github.com/Dragon201701/NTT_Xilinx
+    
+    Conflicts:
+    	Catapult/inplaceNTT_DIF/src/ntt.cpp
+
+commit 8a5f95e7d70a2a6a224781d141a38ce2f54c8597
+Author: ls5382 <ls5382@newnano.poly.edu>
+Date:   Sat Jul 31 16:14:56 2021 -0400
+
+    Update inplaceDIF with missing parameter
+
+commit 51f618ed618b8be67fc9e3cdad66b372802b3a1e
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Thu Jul 29 11:27:25 2021 -0400
+
+    Update inplaceNTT_DIF with ccore.
+
+commit 6bfbad35a58742c368307551fdcedf52a17f0748
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Wed Jul 28 22:16:34 2021 -0400
+
+    Stockham
+
+commit 2d4f62cf31c480d7c7b4e00c830046c3ec7f8830
+Merge: f6c0c6b 70bc549
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Thu Jul 1 04:29:15 2021 -0400
+
+    Merge branch 'master' of https://github.com/Dragon201701/NTT_Xilinx
+
+commit f6c0c6bd5ae172cbaa18cb0de3fd3867e2933874
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Thu Jul 1 04:27:46 2021 -0400
+
+    flat DIT
+
+commit 70bc549189f7cb73b1535410d86857b3990a6ebb
+Author: ls5382 <ls5382@newnano.poly.edu>
+Date:   Sat Jun 26 11:22:58 2021 -0400
+
+    DIT ntt.cpp
+
+commit e2ae3e4d1cc98a096994ffa26177b35a463f245f
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Sat Jun 26 10:53:53 2021 -0400
+
+    modification on DIF, pease
+
+commit b16317770dda2d23c47956e6961f37314b813903
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Wed Jun 23 20:35:18 2021 -0400
+
+    Fix PeaceNTT_precomp header.
+
+commit 974cd70090534879206a3ef8b507ae536c2cbd21
+Author: Lingbin <sunlingbinangela@gmail.com>
+Date:   Mon Jun 21 10:39:51 2021 -0400
+
+    Upload PeaceNTT origin
+
+commit 02aae75465a68a6466ea7d5ea27662ec756af7f5
+Merge: c10a089 4f20ec8
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 21 09:38:54 2021 -0400
+
+    peaceNTT log
+
+commit c10a089b03ac9f9e5e44d41403133c9c581cf26b
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 21 09:32:33 2021 -0400
+
+    peaceNTT Alg Update
+
+commit 4f20ec895c98ea420b49384982de9faea1b7fac8
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Wed Jun 16 23:32:47 2021 -0400
+
+    Add sc_verify.
+
+commit f8d609636d82932429339b0ff8e5c00b6fcc8176
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 14 22:55:36 2021 -0400
+
+    twiddle_update
+
+commit 58f001b0491eb4f4b7cef92083e89bd4b47d0e02
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 14 22:44:02 2021 -0400
+
+    twiddle
+
+commit 457479ae20699919db7a7d0527238c6f2708c5c4
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 14 22:20:14 2021 -0400
+
+    Optimization const fixed
+
+commit 388829bc2fb9a37ff1feac864d8d0af2b36df6ae
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 14 22:12:46 2021 -0400
+
+    Optimization const unsigned
+
+commit 2f3c613d931a9d0f40a7d735055dc0dd4493103f
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Mon Jun 14 22:01:36 2021 -0400
+
+    optimization
+
+commit 81a7409191c960bf7f36dcfd9b52b9a456cf2b33
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Thu Jun 10 12:13:08 2021 -0400
+
+    Compile and Extract on Catapult. Start optimizing and simulation.
+
+commit b9311c75abc5000685e999b94b6b6853445f3c96
+Author: jd4691 <jd4691@newnano.poly.edu>
+Date:   Thu Jun 10 09:10:26 2021 -0400
+
+    Peace-FPGA
+
+commit 134ce8b29c4b2806f65b07d049d29465a92f1149
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Wed Jun 9 22:12:52 2021 -0400
+
+    Update Makefile to catapult.
+
+commit 957c55923fd5dc3bbbef0c5acac9652f5e75fa65
+Author: DingJR <1048381723@qq.com>
+Date:   Sun Jun 6 00:11:25 2021 +0800
+
+    Pease CPU-version
+
+commit 848424cef53aeca7d72bae20a2e96f55a13fc427
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Thu Jun 3 15:35:08 2021 -0400
+
+    Add source code.
+
+commit c8c29df8281fd48af1295c8b669f9ed8b13d0929
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Wed Jun 2 00:18:39 2021 -0400
+
+    Connect IPs and add bram controller.
+
+commit 6c679a925c45fc1278b9d55f52666b17b0c5de22
+Author: Dragon201701 <liualbert1@gmail.com>
+Date:   Tue Jun 1 16:48:33 2021 -0400
+
+    Create Vivado project and start with interface IPs.

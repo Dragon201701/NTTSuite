@@ -1,0 +1,36 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.86 seconds, memory usage 1519104kB, peak memory usage 1519104kB (SOL-9)
+go compile
+solution.v2
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp (CIN-69)
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp' not found in input file list
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Source file analysis completed (CIN-68)
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Warning: last line of file ends without a newline (CRD-1)
+Input file has changed
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp' not found in input file list
+Pragma 'hls_design<top>' detected on routine 'DIT_RELOOP' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file add ./src/ntt_tb.cpp -exclude true
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp' not found in input file list
+Input file has changed
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp' not found in input file list
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp' not found in input file list
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+/INPUTFILES/1
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)

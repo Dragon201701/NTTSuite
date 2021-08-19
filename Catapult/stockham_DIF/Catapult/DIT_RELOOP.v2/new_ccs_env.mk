@@ -15,7 +15,7 @@ Option_CppStandard                                  := c++11
 export Option_CppStandard
 endif
 ifeq "$(SYN_DIR)" ""
-SYN_DIR                                             := gate_synthesis_xv
+SYN_DIR                                             := gate_synthesis_or
 export SYN_DIR
 endif
 ifeq "$(HLD_CONSTRAINT_FNAME)" ""
@@ -846,97 +846,113 @@ ifeq "$(CDesignChecker_XTERM_CMD)" ""
 CDesignChecker_XTERM_CMD                            := xterm
 export CDesignChecker_XTERM_CMD
 endif
-ifeq "$(Vivado_SynthesisFlowType)" ""
-Vivado_SynthesisFlowType                            := fpga
-export Vivado_SynthesisFlowType
+ifeq "$(OasysRTL_SynthesisFlowType)" ""
+OasysRTL_SynthesisFlowType                          := asic
+export OasysRTL_SynthesisFlowType
 endif
-ifeq "$(Vivado_FlowSuffix)" ""
-Vivado_FlowSuffix                                   := xv
-export Vivado_FlowSuffix
+ifeq "$(OasysRTL_FOLDERNAME)" ""
+OasysRTL_FOLDERNAME                                 := Oasys-RTL
+export OasysRTL_FOLDERNAME
 endif
-ifeq "$(Vivado_XILINX_VIVADO)" ""
-Vivado_XILINX_VIVADO                                := can't read "XILINX_VIVADO": no such variable
-export Vivado_XILINX_VIVADO
+ifeq "$(OasysRTL_Path)" ""
+OasysRTL_Path                                       := can't read "OASYS_HOME": no such variable
+export OasysRTL_Path
 endif
-ifeq "$(Vivado_Flags)" ""
-Vivado_Flags                                        := 
-export Vivado_Flags
+ifeq "$(OasysRTL_ShellExe)" ""
+OasysRTL_ShellExe                                   := oasys
+export OasysRTL_ShellExe
 endif
-ifeq "$(Vivado_addio)" ""
-Vivado_addio                                        := false
-export Vivado_addio
+ifeq "$(OasysRTL_Flags)" ""
+OasysRTL_Flags                                      := 
+export OasysRTL_Flags
 endif
-ifeq "$(Vivado_max_dsp)" ""
-Vivado_max_dsp                                      := -1
-export Vivado_max_dsp
+ifeq "$(OasysRTL_LicenseServer)" ""
+OasysRTL_LicenseServer                              := 
+export OasysRTL_LicenseServer
 endif
-ifeq "$(Vivado_RUN_PNR)" ""
-Vivado_RUN_PNR                                      := false
-export Vivado_RUN_PNR
+ifeq "$(OasysRTL_OutNetlistName)" ""
+OasysRTL_OutNetlistName                             := gate.or
+export OasysRTL_OutNetlistName
 endif
-ifeq "$(Vivado_BITGEN)" ""
-Vivado_BITGEN                                       := false
-export Vivado_BITGEN
+ifeq "$(OasysRTL_OutNetlistFormat)" ""
+OasysRTL_OutNetlistFormat                           := verilog
+export OasysRTL_OutNetlistFormat
 endif
-ifeq "$(Vivado_retiming)" ""
-Vivado_retiming                                     := false
-export Vivado_retiming
+ifeq "$(OasysRTL_TimingReportingMode)" ""
+OasysRTL_TimingReportingMode                        := base
+export OasysRTL_TimingReportingMode
 endif
-ifeq "$(Vivado_TimingReportingMode)" ""
-Vivado_TimingReportingMode                          := p2p
-export Vivado_TimingReportingMode
+ifeq "$(OasysRTL_ImportantBits)" ""
+OasysRTL_ImportantBits                              := 
+export OasysRTL_ImportantBits
 endif
-ifeq "$(Vivado_VivadoMode)" ""
-Vivado_VivadoMode                                   := Non-project
-export Vivado_VivadoMode
+ifeq "$(OasysRTL_GenerateGateSdc)" ""
+OasysRTL_GenerateGateSdc                            := true
+export OasysRTL_GenerateGateSdc
 endif
-ifeq "$(Vivado_PCL_CACHE)" ""
-Vivado_PCL_CACHE                                    := 
-export Vivado_PCL_CACHE
+ifeq "$(OasysRTL_ReportMapping)" ""
+OasysRTL_ReportMapping                              := true
+export OasysRTL_ReportMapping
 endif
-ifeq "$(Vivado_SIMLIBS_V)" ""
-Vivado_SIMLIBS_V                                    := 
-export Vivado_SIMLIBS_V
+ifeq "$(OasysRTL_MaxLoopIterations)" ""
+OasysRTL_MaxLoopIterations                          := 10000
+export OasysRTL_MaxLoopIterations
 endif
-ifeq "$(Vivado_SIMLIBS_VHD)" ""
-Vivado_SIMLIBS_VHD                                  := 
-export Vivado_SIMLIBS_VHD
+ifeq "$(OasysRTL_EnableClockGating)" ""
+OasysRTL_EnableClockGating                          := false
+export OasysRTL_EnableClockGating
 endif
-ifeq "$(Vivado_ALLOW_MCP)" ""
-Vivado_ALLOW_MCP                                    := false
-export Vivado_ALLOW_MCP
+ifeq "$(OasysRTL_EnableRetiming)" ""
+OasysRTL_EnableRetiming                             := true
+export OasysRTL_EnableRetiming
 endif
-ifeq "$(Vivado_BoardPart)" ""
-Vivado_BoardPart                                    := 
-export Vivado_BoardPart
+ifeq "$(OasysRTL_ClockGatingMinWidth)" ""
+OasysRTL_ClockGatingMinWidth                        := 4
+export OasysRTL_ClockGatingMinWidth
 endif
-ifeq "$(Vivado_CCS_IP_REPO)" ""
-Vivado_CCS_IP_REPO                                  := 
-export Vivado_CCS_IP_REPO
+ifeq "$(OasysRTL_MultiStageClockGating)" ""
+OasysRTL_MultiStageClockGating                      := false
+export OasysRTL_MultiStageClockGating
 endif
-ifeq "$(Vivado_IP_Taxonomy)" ""
-Vivado_IP_Taxonomy                                  := /Catapult
-export Vivado_IP_Taxonomy
+ifeq "$(OasysRTL_EnablePhysicalView)" ""
+OasysRTL_EnablePhysicalView                         := false
+export OasysRTL_EnablePhysicalView
 endif
-ifeq "$(Vivado_Force_DSP48)" ""
-Vivado_Force_DSP48                                  := false
-export Vivado_Force_DSP48
+ifeq "$(OasysRTL_EnableCapReporting)" ""
+OasysRTL_EnableCapReporting                         := true
+export OasysRTL_EnableCapReporting
 endif
-ifeq "$(Vivado_MAX_BRAM_CASCADE_HEIGHT)" ""
-Vivado_MAX_BRAM_CASCADE_HEIGHT                      := -1
-export Vivado_MAX_BRAM_CASCADE_HEIGHT
+ifeq "$(OasysRTL_CustomScriptDirPath)" ""
+OasysRTL_CustomScriptDirPath                        := 
+export OasysRTL_CustomScriptDirPath
 endif
-ifeq "$(Vivado_Path)" ""
-Vivado_Path                                         := 
-export Vivado_Path
+ifeq "$(OasysRTL_ChipUtil)" ""
+OasysRTL_ChipUtil                                   := 60
+export OasysRTL_ChipUtil
 endif
-ifeq "$(Vivado_ShellPrefix)" ""
-Vivado_ShellPrefix                                  := 
-export Vivado_ShellPrefix
+ifeq "$(OasysRTL_AspectRatio)" ""
+OasysRTL_AspectRatio                                := 1.0
+export OasysRTL_AspectRatio
 endif
-ifeq "$(Vivado_ShellExe)" ""
-Vivado_ShellExe                                     := vivado
-export Vivado_ShellExe
+ifeq "$(OasysRTL_AreaEffort)" ""
+OasysRTL_AreaEffort                                 := 1
+export OasysRTL_AreaEffort
+endif
+ifeq "$(OasysRTL_TimingEffort)" ""
+OasysRTL_TimingEffort                               := 1
+export OasysRTL_TimingEffort
+endif
+ifeq "$(OasysRTL_OasysCommMode)" ""
+OasysRTL_OasysCommMode                              := Script
+export OasysRTL_OasysCommMode
+endif
+ifeq "$(OasysRTL_CharacterizationEffort)" ""
+OasysRTL_CharacterizationEffort                     := 0
+export OasysRTL_CharacterizationEffort
+endif
+ifeq "$(OasysRTL_AreaOptParallelism)" ""
+OasysRTL_AreaOptParallelism                         := 1
+export OasysRTL_AreaOptParallelism
 endif
 ifeq "$(CoverCheck_QHOME)" ""
 CoverCheck_QHOME                                    := can't read "QHOME": no such variable
@@ -965,54 +981,6 @@ endif
 ifeq "$(CoverCheck_AUTO_APPLY)" ""
 CoverCheck_AUTO_APPLY                               := true
 export CoverCheck_AUTO_APPLY
-endif
-ifeq "$(Xilinx_SynthesisFlowType)" ""
-Xilinx_SynthesisFlowType                            := fpga
-export Xilinx_SynthesisFlowType
-endif
-ifeq "$(Xilinx_FlowSuffix)" ""
-Xilinx_FlowSuffix                                   := xv
-export Xilinx_FlowSuffix
-endif
-ifeq "$(Xilinx_XILINX)" ""
-Xilinx_XILINX                                       := /opt/Xilinx2018
-export Xilinx_XILINX
-endif
-ifeq "$(Xilinx_XILINX_LIB)" ""
-Xilinx_XILINX_LIB                                   := can't read "XILINX_LIB": no such variable
-export Xilinx_XILINX_LIB
-endif
-ifeq "$(Xilinx_XILINX_VHDL_LIB)" ""
-Xilinx_XILINX_VHDL_LIB                              := 
-export Xilinx_XILINX_VHDL_LIB
-endif
-ifeq "$(Xilinx_XILINX_VERILOG_LIB)" ""
-Xilinx_XILINX_VERILOG_LIB                           := 
-export Xilinx_XILINX_VERILOG_LIB
-endif
-ifeq "$(Xilinx_XILINX_SIM_LIBS)" ""
-Xilinx_XILINX_SIM_LIBS                              := 
-export Xilinx_XILINX_SIM_LIBS
-endif
-ifeq "$(Xilinx_NEW_SIMLIB_FLOW)" ""
-Xilinx_NEW_SIMLIB_FLOW                              := false
-export Xilinx_NEW_SIMLIB_FLOW
-endif
-ifeq "$(Xilinx_COMPXLIB_DIR)" ""
-Xilinx_COMPXLIB_DIR                                 := 
-export Xilinx_COMPXLIB_DIR
-endif
-ifeq "$(Xilinx_SIMLIBS_V)" ""
-Xilinx_SIMLIBS_V                                    := 
-export Xilinx_SIMLIBS_V
-endif
-ifeq "$(Xilinx_SIMLIBS_VHD)" ""
-Xilinx_SIMLIBS_VHD                                  := 
-export Xilinx_SIMLIBS_VHD
-endif
-ifeq "$(Xilinx_BITGEN)" ""
-Xilinx_BITGEN                                       := false
-export Xilinx_BITGEN
 endif
 ifeq "$(INLINEDPROPERTYLANG)" ""
 INLINEDPROPERTYLANG                                 := psl

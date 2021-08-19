@@ -1,0 +1,92 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.99 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+go compile
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: expected a declaration (CRD-169)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: identifier "factor1" is undefined (CRD-20)
+# Error: identifier "k" is undefined (CRD-20)
+# Error: identifier "p" is undefined (CRD-20)
+# Error: identifier "factor2" is undefined (CRD-20)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 3.75 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Warning: a user-provided literal suffix must begin with "_" (CRD-2506)
+# Error: expected a declaration (CRD-169)
+# Error: identifier "j" is undefined (CRD-20)
+solution file add ./src/ntt.cpp
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/ntt_tb.cpp -exclude true
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 3.03 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 48, Real ops = 24, Vars = 16 (SOL-21)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Found design routine 'modulo' specified by directive (CIN-52)
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+Inlining routine 'modulo_dev' (CIN-14)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_2/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 48, Real ops = 24, Vars = 16 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.54 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 48, Real ops = 24, Vars = 16 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.08 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+go assembly
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v1' (SOL-8)

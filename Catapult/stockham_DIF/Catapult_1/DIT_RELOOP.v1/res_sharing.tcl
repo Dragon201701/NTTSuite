@@ -1,0 +1,9 @@
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/STAGE_LOOP:gp:lshift RESOURCE_NAME IDX_LOOP:lshift:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/IDX_LOOP:lshift RESOURCE_NAME IDX_LOOP:lshift:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/IDX_LOOP:mul RESOURCE_NAME IDX_LOOP:idx1:mul:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/IDX_LOOP:idx1:mul RESOURCE_NAME IDX_LOOP:idx1:mul:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/IDX_LOOP:acc RESOURCE_NAME GROUP_LOOP:acc:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/GROUP_LOOP:acc RESOURCE_NAME GROUP_LOOP:acc:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/COPY_LOOP:acc#1 RESOURCE_NAME COPY_LOOP:acc#1:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/STAGE_LOOP:gp:acc RESOURCE_NAME COPY_LOOP:acc#1:rg
+directive set /DIT_RELOOP/DIT_RELOOP:core/DIT_RELOOP:core:conc/IDX_LOOP:acc#4 RESOURCE_NAME COPY_LOOP:acc#1:rg

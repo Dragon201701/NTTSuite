@@ -1,5 +1,4 @@
 #include "../include/modExp.h"
-using namespace std;
 /**
  * Perform the operation 'base^exp (mod m)' using the memory-efficient method
  *
@@ -9,14 +8,12 @@ using namespace std;
  * @return 	The result of the expression
  */
 #pragma hls_design top
-void modExp(UINT64_T base, UINT64_T exp, UINT64_T m, UINT64_T &result){
-
-	UINT64_T result = 1;
-	while(exp > 0){
+void modExp(const UINT64_T base, const UINT64_T exp, const UINT64_T m, UINT64_T &result){
+    UINT64_T exp_count = exp;
+	result = 1;
+	while(exp_count > 0){
         result = ((UINT64_T)(result * base) % m);
-        exp--;
+        exp_count--;
     }
-
-
 	//return result;
 }

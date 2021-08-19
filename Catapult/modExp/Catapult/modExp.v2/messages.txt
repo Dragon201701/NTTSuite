@@ -1,191 +1,194 @@
 
 # Messages from "go new"
 
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
 
 # Messages from "go analyze"
 
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.12 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
-go compile
-Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/modExp/catapult.log"
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.87 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
+Source file analysis completed (CIN-68)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
 Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/modExp/src/modExp.cpp (CIN-69)
 solution file add ./src/modExp_tb.cpp -exclude true
+x86_64
+Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
 solution file add ./src/modExp.cpp
 /INPUTFILES/1
-Source file analysis completed (CIN-68)
-Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+go compile
 /INPUTFILES/2
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
 
 # Messages from "go compile"
 
-# Info: Completed transformation 'compile' on solution 'modExp.v1': elapsed time 1.61 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
 # Info: Design complexity at end of 'compile': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1/CDesignChecker/design_checker.sh'
-Synthesizing routine 'modExp' (CIN-13)
-Design 'modExp' was read (SOL-1)
-Found top design routine 'modExp' specified by directive (CIN-52)
-Optimizing block '/modExp' ... (CIN-4)
+# Info: Completed transformation 'compile' on solution 'modExp.v2': elapsed time 1.21 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
 Inlining routine 'operator><64, false>' (CIN-14)
-Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
 Inlining routine 'modExp' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/CDesignChecker/design_checker.sh'
+Design 'modExp' was read (SOL-1)
+Optimizing block '/modExp' ... (CIN-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Synthesizing routine 'modExp' (CIN-13)
 Generating synthesis internal form... (CIN-3)
-# Info: Starting transformation 'compile' on solution 'modExp.v1' (SOL-8)
+Found top design routine 'modExp' specified by directive (CIN-52)
+# Info: Starting transformation 'compile' on solution 'modExp.v2' (SOL-8)
 
 # Messages from "go libraries"
 
 # Info: Design complexity at end of 'libraries': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: Completed transformation 'libraries' on solution 'modExp.v1': elapsed time 0.75 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-go libraries
-Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
-Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'modExp.v2': elapsed time 0.53 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+directive set DSP_EXTRACTION yes
+# Info: Starting transformation 'libraries' on solution 'modExp.v2' (SOL-8)
+go assembly
 # Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
 solution library add Xilinx_RAMS
-Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
-solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
-# Info: Starting transformation 'libraries' on solution 'modExp.v1' (SOL-8)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
 
 # Messages from "go assembly"
 
 # Info: Design complexity at end of 'assembly': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
-# Info: Completed transformation 'assembly' on solution 'modExp.v1': elapsed time 0.03 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
-directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
-# Info: Starting transformation 'assembly' on solution 'modExp.v1' (SOL-8)
-go extract
+# Info: Completed transformation 'assembly' on solution 'modExp.v2': elapsed time 0.05 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'modExp.v2' (SOL-8)
 
 # Messages from "go architect"
 
 # Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Completed transformation 'loops' on solution 'modExp.v1': elapsed time 0.01 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Loop '/modExp/core/while' is left rolled. (LOOP-4)
-# Info: Starting transformation 'loops' on solution 'modExp.v1' (SOL-8)
+# Info: Completed transformation 'loops' on solution 'modExp.v2': elapsed time 0.04 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 Loop '/modExp/core/main' is left rolled. (LOOP-4)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+go extract
+
+Loop '/modExp/core/while' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'modExp.v2' (SOL-8)
 # Info: Design complexity at end of 'memories': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Completed transformation 'memories' on solution 'modExp.v1': elapsed time 0.06 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'memories' on solution 'modExp.v2': elapsed time 0.08 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
 I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
-# Info: Starting transformation 'memories' on solution 'modExp.v1' (SOL-8)
+# Info: Starting transformation 'memories' on solution 'modExp.v2' (SOL-8)
 I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
 I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
 # Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Completed transformation 'cluster' on solution 'modExp.v2': elapsed time 0.01 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'cluster' on solution 'modExp.v2': elapsed time 0.03 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 # Info: Starting transformation 'cluster' on solution 'modExp.v2' (SOL-8)
-# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/CDesignChecker/design_checker.sh'
-go extract
-# Info: Branching solution 'modExp.v2' at state 'memories' (PRJ-2)
-Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-/SCHED_USE_MULTICYCLE true
-# Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
-# Info: Completed transformation 'cluster' on solution 'modExp.v1': elapsed time 0.02 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Starting transformation 'cluster' on solution 'modExp.v1' (SOL-8)
 # Info: Design complexity at end of 'architect': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
-# Info: Completed transformation 'architect' on solution 'modExp.v2': elapsed time 0.09 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'architect' on solution 'modExp.v2': elapsed time 0.21 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
 Design 'modExp' contains '10' real operations. (SOL-11)
 # Info: Starting transformation 'architect' on solution 'modExp.v2' (SOL-8)
 
 # Messages from "go allocate"
 
-# Info: Completed transformation 'allocate' on solution 'modExp.v2': elapsed time 0.25 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
 # Info: Design complexity at end of 'allocate': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'modExp.v2': elapsed time 0.23 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Final schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-12)
 Prescheduled LOOP '/modExp/core/main' (3 c-steps) (SCHD-7)
-Prescheduled LOOP '/modExp/core/while' (22 c-steps) (SCHD-7)
-Prescheduled SEQUENTIAL '/modExp/core' (total length 26 c-steps) (SCHD-8)
+Prescheduled LOOP '/modExp/core/while' (26 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/modExp/core' (total length 30 c-steps) (SCHD-8)
 Prescheduled LOOP '/modExp/core/core:rlp' (1 c-steps) (SCHD-7)
 Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
 # Info: Starting transformation 'allocate' on solution 'modExp.v2' (SOL-8)
 # Info: Apply resource constraints on data operations ... (CRAAS-4)
 # Info: Select qualified components for data operations ... (CRAAS-3)
-Netlist written to file 'schedule.gnt' (NET-4)
 At least one feasible schedule exists. (CRAAS-9)
-# Info: Initial schedule of SEQUENTIAL '/modExp/core': Latency = 22, Area (Datapath, Register, Total) = 13708.81, 0.00, 13708.81 (CRAAS-11)
+# Info: Initial schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-11)
 Resource allocation and scheduling done. (CRAAS-2)
-# Info: Final schedule of SEQUENTIAL '/modExp/core': Latency = 22, Area (Datapath, Register, Total) = 13708.81, 0.00, 13708.81 (CRAAS-12)
 
 # Messages from "go schedule"
 
-# Info: Completed transformation 'schedule' on solution 'modExp.v2': elapsed time 2.11 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'schedule': Total ops = 316, Real ops = 9, Vars = 44 (SOL-21)
-Global signal 'exp:rsc.triosy.lz' added to design 'modExp' for component 'exp:rsc.triosy:obj' (LIB-3)
+# Info: Design complexity at end of 'schedule': Total ops = 498, Real ops = 9, Vars = 58 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'modExp.v2': elapsed time 1.46 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+Global signal 'result:rsc.triosy.lz' added to design 'modExp' for component 'result:rsc.triosy:obj' (LIB-3)
 Global signal 'm:rsc.dat' added to design 'modExp' for component 'm:rsci' (LIB-3)
+Report written to file 'cycle.rpt'
 Global signal 'exp:rsc.dat' added to design 'modExp' for component 'exp:rsci' (LIB-3)
 Global signal 'result:rsc.lzout' added to design 'modExp' for component 'result:rsci' (LIB-3)
 Global signal 'result:rsc.zin' added to design 'modExp' for component 'result:rsci' (LIB-3)
-Global signal 'result:rsc.triosy.lz' added to design 'modExp' for component 'result:rsc.triosy:obj' (LIB-3)
-Report written to file 'cycle.rpt'
 # Info: Starting transformation 'schedule' on solution 'modExp.v2' (SOL-8)
 Global signal 'base:rsc.dat' added to design 'modExp' for component 'base:rsci' (LIB-3)
 Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
 Global signal 'base:rsc.triosy.lz' added to design 'modExp' for component 'base:rsc.triosy:obj' (LIB-3)
 Global signal 'result:rsc.zout' added to design 'modExp' for component 'result:rsci' (LIB-3)
 Global signal 'm:rsc.triosy.lz' added to design 'modExp' for component 'm:rsc.triosy:obj' (LIB-3)
+Global signal 'exp:rsc.triosy.lz' added to design 'modExp' for component 'exp:rsc.triosy:obj' (LIB-3)
 
 # Messages from "go dpfsm"
 
-# Info: Design complexity at end of 'dpfsm': Total ops = 142, Real ops = 43, Vars = 49 (SOL-21)
-# Info: Completed transformation 'dpfsm' on solution 'modExp.v2': elapsed time 0.27 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Completed transformation 'dpfsm' on solution 'modExp.v2': elapsed time 0.69 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 164, Real ops = 46, Vars = 56 (SOL-21)
 # Info: Starting transformation 'dpfsm' on solution 'modExp.v2' (SOL-8)
 Performing FSM extraction... (FSM-1)
 
 # Messages from "go extract"
 
-# Info: Design complexity at end of 'instance': Total ops = 132, Real ops = 35, Vars = 96 (SOL-21)
-# Info: Completed transformation 'instance' on solution 'modExp.v2': elapsed time 0.31 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 154, Real ops = 38, Vars = 108 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'modExp.v2': elapsed time 0.62 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
 Netlist written to file 'schematic.nlv' (NET-4)
 # Info: Starting transformation 'instance' on solution 'modExp.v2' (SOL-8)
-# Info: Design complexity at end of 'extract': Total ops = 128, Real ops = 36, Vars = 49 (SOL-21)
-# Info: Completed transformation 'extract' on solution 'modExp.v2': elapsed time 4.40 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Info: Design complexity at end of 'extract': Total ops = 150, Real ops = 39, Vars = 56 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'modExp.v2': elapsed time 7.83 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+# Info: Starting transformation 'extract' on solution 'modExp.v2' (SOL-8)
+Report written to file 'rtl.rpt'
+Synthesis script written to file 'rtl.v.psr'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Warning: No matching part found
+Synthesis script written to file 'concat_rtl.v.psr'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Warning: No matching part found
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Generating SCVerify testbench files
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+Synthesis script written to file 'rtl.vhdl.psr'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.v
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+# Warning: No matching part found
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Warning: No matching part found
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
 Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.vhdl
 Add dependent file: ./rtl.vhdl
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-Report written to file 'rtl.rpt'
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-Add dependent file: ./rtl.vhdl
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
-# Info: Starting transformation 'extract' on solution 'modExp.v2' (SOL-8)
 Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
 order file name is: rtl.vhdl_order_sim.txt
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
-# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
-Generating SCVerify testbench files
-Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.vhdl
-order file name is: rtl.vhdl_order.txt
-generate concat
-# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
-Netlist written to file 'rtl.vhdl' (NET-4)
-Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
-Generating scverify_top.cpp ()
-# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
-Netlist written to file 'rtl.v' (NET-4)
-Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Synthesis script written to file 'concat_rtl.vhdl.psr'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
 order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
 generate concat
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
-Add dependent file: ./rtl.v
-# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
-Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.v
-Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
-Add dependent file: ./rtl.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-order file name is: rtl.v_order_sim.txt
-# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
-Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.v
-Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Generating scverify_top.cpp ()

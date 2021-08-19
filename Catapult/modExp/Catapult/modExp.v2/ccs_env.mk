@@ -11,11 +11,11 @@ CXX_VCO                                             := aol
 export CXX_VCO
 endif
 ifeq "$(Option_CppStandard)" ""
-Option_CppStandard                                  := c++11
+Option_CppStandard                                  := c++98
 export Option_CppStandard
 endif
 ifeq "$(SYN_DIR)" ""
-SYN_DIR                                             := gate_synthesis_xv
+SYN_DIR                                             := gate_synthesis_psr
 export SYN_DIR
 endif
 ifeq "$(HLD_CONSTRAINT_FNAME)" ""
@@ -463,7 +463,7 @@ SCVerify_GENERATE_STAGES                            := schedule extract switchin
 export SCVerify_GENERATE_STAGES
 endif
 ifeq "$(SCVerify_USE_CCS_BLOCK)" ""
-SCVerify_USE_CCS_BLOCK                              := true
+SCVerify_USE_CCS_BLOCK                              := false
 export SCVerify_USE_CCS_BLOCK
 endif
 ifeq "$(SCVerify_AUTOWAIT)" ""
@@ -846,6 +846,154 @@ ifeq "$(CDesignChecker_XTERM_CMD)" ""
 CDesignChecker_XTERM_CMD                            := xterm
 export CDesignChecker_XTERM_CMD
 endif
+ifeq "$(Precision_SynthesisFlowType)" ""
+Precision_SynthesisFlowType                         := fpga
+export Precision_SynthesisFlowType
+endif
+ifeq "$(Precision_FlowSuffix)" ""
+Precision_FlowSuffix                                := psr
+export Precision_FlowSuffix
+endif
+ifeq "$(Precision_Path)" ""
+Precision_Path                                      := can't read "PRECISION_HOME": no such variable
+export Precision_Path
+endif
+ifeq "$(Precision_Flags)" ""
+Precision_Flags                                     := 
+export Precision_Flags
+endif
+ifeq "$(Precision_addio)" ""
+Precision_addio                                     := false
+export Precision_addio
+endif
+ifeq "$(Precision_retiming)" ""
+Precision_retiming                                  := true
+export Precision_retiming
+endif
+ifeq "$(Precision_run_pnr)" ""
+Precision_run_pnr                                   := false
+export Precision_run_pnr
+endif
+ifeq "$(Precision_newgui)" ""
+Precision_newgui                                    := true
+export Precision_newgui
+endif
+ifeq "$(Precision_pa_synth)" ""
+Precision_pa_synth                                  := false
+export Precision_pa_synth
+endif
+ifeq "$(Precision_OutputEDIF)" ""
+Precision_OutputEDIF                                := true
+export Precision_OutputEDIF
+endif
+ifeq "$(Precision_bottom_up_flow)" ""
+Precision_bottom_up_flow                            := false
+export Precision_bottom_up_flow
+endif
+ifeq "$(Precision_PlaceAndRouteInstallPath)" ""
+Precision_PlaceAndRouteInstallPath                  := 
+export Precision_PlaceAndRouteInstallPath
+endif
+ifeq "$(Precision_PrecisionTool)" ""
+Precision_PrecisionTool                             := RTL
+export Precision_PrecisionTool
+endif
+ifeq "$(Precision_TimingReportingMode)" ""
+Precision_TimingReportingMode                       := p2p
+export Precision_TimingReportingMode
+endif
+ifeq "$(Precision_EnableClockGating)" ""
+Precision_EnableClockGating                         := true
+export Precision_EnableClockGating
+endif
+ifeq "$(Precision_ALLOW_MCP)" ""
+Precision_ALLOW_MCP                                 := false
+export Precision_ALLOW_MCP
+endif
+ifeq "$(Precision_ConstraintsMode)" ""
+Precision_ConstraintsMode                           := wildcard
+export Precision_ConstraintsMode
+endif
+ifeq "$(Precision_PrecisionCommMode)" ""
+Precision_PrecisionCommMode                         := Script
+export Precision_PrecisionCommMode
+endif
+ifeq "$(CoverCheck_QHOME)" ""
+CoverCheck_QHOME                                    := can't read "QHOME": no such variable
+export CoverCheck_QHOME
+endif
+ifeq "$(CoverCheck_LICENSE_QUEUING)" ""
+CoverCheck_LICENSE_QUEUING                          := false
+export CoverCheck_LICENSE_QUEUING
+endif
+ifeq "$(CoverCheck_WITNESS_WAVEFORM)" ""
+CoverCheck_WITNESS_WAVEFORM                         := false
+export CoverCheck_WITNESS_WAVEFORM
+endif
+ifeq "$(CoverCheck_JOBS)" ""
+CoverCheck_JOBS                                     := 2
+export CoverCheck_JOBS
+endif
+ifeq "$(CoverCheck_TIMEOUT)" ""
+CoverCheck_TIMEOUT                                  := 
+export CoverCheck_TIMEOUT
+endif
+ifeq "$(CoverCheck_SCRIPT_DIR)" ""
+CoverCheck_SCRIPT_DIR                               := 
+export CoverCheck_SCRIPT_DIR
+endif
+ifeq "$(CoverCheck_AUTO_APPLY)" ""
+CoverCheck_AUTO_APPLY                               := true
+export CoverCheck_AUTO_APPLY
+endif
+ifeq "$(Xilinx_SynthesisFlowType)" ""
+Xilinx_SynthesisFlowType                            := fpga
+export Xilinx_SynthesisFlowType
+endif
+ifeq "$(Xilinx_FlowSuffix)" ""
+Xilinx_FlowSuffix                                   := xv
+export Xilinx_FlowSuffix
+endif
+ifeq "$(Xilinx_XILINX)" ""
+Xilinx_XILINX                                       := /opt/Xilinx2018
+export Xilinx_XILINX
+endif
+ifeq "$(Xilinx_XILINX_LIB)" ""
+Xilinx_XILINX_LIB                                   := can't read "XILINX_LIB": no such variable
+export Xilinx_XILINX_LIB
+endif
+ifeq "$(Xilinx_XILINX_VHDL_LIB)" ""
+Xilinx_XILINX_VHDL_LIB                              := 
+export Xilinx_XILINX_VHDL_LIB
+endif
+ifeq "$(Xilinx_XILINX_VERILOG_LIB)" ""
+Xilinx_XILINX_VERILOG_LIB                           := 
+export Xilinx_XILINX_VERILOG_LIB
+endif
+ifeq "$(Xilinx_XILINX_SIM_LIBS)" ""
+Xilinx_XILINX_SIM_LIBS                              := 
+export Xilinx_XILINX_SIM_LIBS
+endif
+ifeq "$(Xilinx_NEW_SIMLIB_FLOW)" ""
+Xilinx_NEW_SIMLIB_FLOW                              := false
+export Xilinx_NEW_SIMLIB_FLOW
+endif
+ifeq "$(Xilinx_COMPXLIB_DIR)" ""
+Xilinx_COMPXLIB_DIR                                 := 
+export Xilinx_COMPXLIB_DIR
+endif
+ifeq "$(Xilinx_SIMLIBS_V)" ""
+Xilinx_SIMLIBS_V                                    := 
+export Xilinx_SIMLIBS_V
+endif
+ifeq "$(Xilinx_SIMLIBS_VHD)" ""
+Xilinx_SIMLIBS_VHD                                  := 
+export Xilinx_SIMLIBS_VHD
+endif
+ifeq "$(Xilinx_BITGEN)" ""
+Xilinx_BITGEN                                       := false
+export Xilinx_BITGEN
+endif
 ifeq "$(Vivado_SynthesisFlowType)" ""
 Vivado_SynthesisFlowType                            := fpga
 export Vivado_SynthesisFlowType
@@ -937,82 +1085,6 @@ endif
 ifeq "$(Vivado_ShellExe)" ""
 Vivado_ShellExe                                     := vivado
 export Vivado_ShellExe
-endif
-ifeq "$(CoverCheck_QHOME)" ""
-CoverCheck_QHOME                                    := can't read "QHOME": no such variable
-export CoverCheck_QHOME
-endif
-ifeq "$(CoverCheck_LICENSE_QUEUING)" ""
-CoverCheck_LICENSE_QUEUING                          := false
-export CoverCheck_LICENSE_QUEUING
-endif
-ifeq "$(CoverCheck_WITNESS_WAVEFORM)" ""
-CoverCheck_WITNESS_WAVEFORM                         := false
-export CoverCheck_WITNESS_WAVEFORM
-endif
-ifeq "$(CoverCheck_JOBS)" ""
-CoverCheck_JOBS                                     := 2
-export CoverCheck_JOBS
-endif
-ifeq "$(CoverCheck_TIMEOUT)" ""
-CoverCheck_TIMEOUT                                  := 
-export CoverCheck_TIMEOUT
-endif
-ifeq "$(CoverCheck_SCRIPT_DIR)" ""
-CoverCheck_SCRIPT_DIR                               := 
-export CoverCheck_SCRIPT_DIR
-endif
-ifeq "$(CoverCheck_AUTO_APPLY)" ""
-CoverCheck_AUTO_APPLY                               := true
-export CoverCheck_AUTO_APPLY
-endif
-ifeq "$(Xilinx_SynthesisFlowType)" ""
-Xilinx_SynthesisFlowType                            := fpga
-export Xilinx_SynthesisFlowType
-endif
-ifeq "$(Xilinx_FlowSuffix)" ""
-Xilinx_FlowSuffix                                   := xv
-export Xilinx_FlowSuffix
-endif
-ifeq "$(Xilinx_XILINX)" ""
-Xilinx_XILINX                                       := /opt/Xilinx2018
-export Xilinx_XILINX
-endif
-ifeq "$(Xilinx_XILINX_LIB)" ""
-Xilinx_XILINX_LIB                                   := can't read "XILINX_LIB": no such variable
-export Xilinx_XILINX_LIB
-endif
-ifeq "$(Xilinx_XILINX_VHDL_LIB)" ""
-Xilinx_XILINX_VHDL_LIB                              := 
-export Xilinx_XILINX_VHDL_LIB
-endif
-ifeq "$(Xilinx_XILINX_VERILOG_LIB)" ""
-Xilinx_XILINX_VERILOG_LIB                           := 
-export Xilinx_XILINX_VERILOG_LIB
-endif
-ifeq "$(Xilinx_XILINX_SIM_LIBS)" ""
-Xilinx_XILINX_SIM_LIBS                              := 
-export Xilinx_XILINX_SIM_LIBS
-endif
-ifeq "$(Xilinx_NEW_SIMLIB_FLOW)" ""
-Xilinx_NEW_SIMLIB_FLOW                              := false
-export Xilinx_NEW_SIMLIB_FLOW
-endif
-ifeq "$(Xilinx_COMPXLIB_DIR)" ""
-Xilinx_COMPXLIB_DIR                                 := 
-export Xilinx_COMPXLIB_DIR
-endif
-ifeq "$(Xilinx_SIMLIBS_V)" ""
-Xilinx_SIMLIBS_V                                    := 
-export Xilinx_SIMLIBS_V
-endif
-ifeq "$(Xilinx_SIMLIBS_VHD)" ""
-Xilinx_SIMLIBS_VHD                                  := 
-export Xilinx_SIMLIBS_VHD
-endif
-ifeq "$(Xilinx_BITGEN)" ""
-Xilinx_BITGEN                                       := false
-export Xilinx_BITGEN
 endif
 ifeq "$(INLINEDPROPERTYLANG)" ""
 INLINEDPROPERTYLANG                                 := psl

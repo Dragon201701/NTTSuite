@@ -1,0 +1,43 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.99 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+go compile
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: expected a declaration (CRD-169)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: identifier "factor1" is undefined (CRD-20)
+# Error: identifier "k" is undefined (CRD-20)
+# Error: identifier "p" is undefined (CRD-20)
+# Error: identifier "factor2" is undefined (CRD-20)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 3.75 seconds, memory usage 1445344kB, peak memory usage 1445344kB (SOL-9)
+# Warning: a user-provided literal suffix must begin with "_" (CRD-2506)
+# Error: expected a declaration (CRD-169)
+# Error: identifier "j" is undefined (CRD-20)
+solution file add ./src/ntt.cpp
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/ntt_tb.cpp -exclude true
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)

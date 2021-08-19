@@ -1,0 +1,11 @@
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/factor2#1.sva REGISTER_NAME factor2#1.sva
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/factor2.sva REGISTER_NAME factor2#1.sva
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-1:acc#6.mut REGISTER_NAME COMP_LOOP-1:acc#6.mut
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-1:mul.itm REGISTER_NAME COMP_LOOP-1:acc#6.mut
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-2:acc#6.mut REGISTER_NAME COMP_LOOP-1:acc#6.mut
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-2:mul.mut REGISTER_NAME COMP_LOOP-1:acc#6.mut
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-1:acc#8.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/COMP_LOOP-2:acc#8.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/factor1#1.sva REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/factor1.sva REGISTER_NAME COMP_LOOP-1:acc#8.itm
+directive set /inPlaceNTT_DIF/inPlaceNTT_DIF:core/core/modulo_dev#2:result:asn.itm REGISTER_NAME COMP_LOOP-1:acc#8.itm

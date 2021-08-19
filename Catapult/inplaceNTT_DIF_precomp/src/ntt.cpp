@@ -46,26 +46,15 @@ UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
 
 }
 #pragma hls_design top
-<<<<<<< HEAD
 void inPlaceNTT_DIF(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, UINT64_T twiddle[VECTOR_SIZE]){
     UINT64_T factor1, factor2;
-=======
-void inPlaceNTT_DIF(VEC_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, VEC_T result[VECTOR_SIZE], UINT64_T twiddle[VECTOR_SIZE]){
-	COPY_LOOP:for(unsigned i = 0; i < VECTOR_SIZE; i++){
-		result[i] = vec[i];
-	}
-    	UINT64_T factor1, factor2;
->>>>>>> 37ac05bf7e59c2078c374cfc53ff1dbca948cecc
+
 	unsigned m;
 	STAGE_LOOP: for(unsigned i = VECTOR_ADDR_BIT; i > 0; i--){ 
 		m = 1 << i;
 		VEC_LOOP: for(unsigned  j = 0; j < VECTOR_SIZE; j+=m){
 			COMP_LOOP: for(unsigned k = 0; k < m >> 1; k++){
-<<<<<<< HEAD
 		        UINT64_T tmp = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
-=======
-		        VEC_T tmp = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
->>>>>>> 37ac05bf7e59c2078c374cfc53ff1dbca948cecc
 				factor1 = vec[j + k];
 				factor2 = vec[j + k + m >> 1];
 				vec[j + k + m >> 1] = modulo_dev(tmp * modulo_dev(factor1 - factor2, p), p);

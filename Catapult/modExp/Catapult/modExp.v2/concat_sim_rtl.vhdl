@@ -2705,6 +2705,142 @@ BEGIN
        std_logic_vector(  signed(a) rem   signed(b));
 END beh;
 
+--------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd 
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.all;
+
+ENTITY mgc_mul_pipe IS
+  GENERIC (
+    width_a       : NATURAL;
+    signd_a       : NATURAL;
+    width_b       : NATURAL;
+    signd_b       : NATURAL;
+    width_z       : NATURAL; -- <= width_a + width_b
+    clock_edge    : NATURAL; -- 0 to 1
+    enable_active : NATURAL; -- 0 to 1
+    a_rst_active  : NATURAL; -- 0 to 1 IGNORED
+    s_rst_active  : NATURAL; -- 0 to 1 IGNORED
+    stages        : NATURAL;    
+    n_inreg       : NATURAL := 0 -- default for backwards compatability 
+
+  );
+  PORT (
+    a     : in  std_logic_vector(width_a-1 DOWNTO 0);
+    b     : in  std_logic_vector(width_b-1 DOWNTO 0);
+    clk   : in  std_logic;
+    en    : in  std_logic;
+    a_rst : in  std_logic;
+    s_rst : in  std_logic;
+    z     : out std_logic_vector(width_z-1 DOWNTO 0)
+  );
+END mgc_mul_pipe;
+
+LIBRARY IEEE;
+
+USE ieee.std_logic_arith.all;
+
+ARCHITECTURE beh OF mgc_mul_pipe IS
+  TYPE reg_array_type is array(natural range<>) of std_logic_vector(width_z-1 DOWNTO 0); 
+  SIGNAL xz : std_logic_vector(width_a+width_b DOWNTO 0);
+
+--MF Added pipelined input
+    signal a_f     : STD_LOGIC_VECTOR(width_a-1 downto 0); 
+    signal b_f     : STD_LOGIC_VECTOR(width_b-1 downto 0);
+   type a_array is array (natural range <>) of STD_LOGIC_VECTOR(width_a-1 downto 0);
+   type b_array is array (natural range <>) of STD_LOGIC_VECTOR(width_b-1 downto 0);
+BEGIN
+  n_inreg_gt_0: if n_inreg > 0 generate
+    GENPOS_INREG: IF clock_edge = 1 GENERATE
+     I0: process(clk)
+        variable a_in_reg: a_array(n_inreg-1 downto 0);
+        variable b_in_reg: b_array(n_inreg-1 downto 0);
+      begin
+        if (clk'event and clk = '1' ) then
+          if (conv_integer(en) = enable_active) then
+            for i in n_inreg - 2 downto 0 loop
+              a_in_reg(i+1) := a_in_reg(i);
+              b_in_reg(i+1) := b_in_reg(i);
+            end loop;                                                                                                                             
+            a_in_reg(0) := a;
+            b_in_reg(0) := b;
+
+            a_f <= a_in_reg(n_inreg-1);             
+            b_f <= b_in_reg(n_inreg-1);    
+                                                   
+          end if;
+        end if;
+      end process;
+    END GENERATE;
+  
+   GENNEG_INREG: IF clock_edge = 0 GENERATE
+     I0: process(clk)
+        variable a_in_reg: a_array(n_inreg-1 downto 0);
+        variable b_in_reg: b_array(n_inreg-1 downto 0);
+      begin
+        if (clk'event and clk = '0' ) then
+          if (conv_integer(en) = enable_active) then
+            for i in n_inreg - 2 downto 0 loop
+              a_in_reg(i+1) := a_in_reg(i);
+              b_in_reg(i+1) := b_in_reg(i);
+            end loop;                                                                                                                             
+            a_in_reg(0) := a;
+            b_in_reg(0) := b;            
+                                 
+            a_f <= a_in_reg(n_inreg-1);             
+            b_f <= b_in_reg(n_inreg-1);
+                                                        
+          end if;
+        end if;
+      end process;
+    END GENERATE;
+  END GENERATE;
+
+  n_inreg_eq_0: if n_inreg = 0 generate
+    a_f <= a;
+    b_f <= b;
+  end generate n_inreg_eq_0;
+
+  xz <= '0'&(unsigned(a_f) * unsigned(b_f)) WHEN signd_a = 0 AND signd_b = 0 ELSE
+            (  signed(a_f) * unsigned(b_f)) WHEN signd_a = 1 AND signd_b = 0 ELSE
+            (unsigned(a_f) *   signed(b_f)) WHEN signd_a = 0 AND signd_b = 1 ELSE
+        '0'&(  signed(a_f) *   signed(b_f));
+
+  GENPOS: IF clock_edge = 1 GENERATE
+    PROCESS (clk)
+    VARIABLE reg_array: reg_array_type(stages-2 DOWNTO 0);
+    BEGIN
+      IF ( clk'EVENT AND clk = '1') THEN
+        IF ( conv_integer(en) = enable_active) THEN
+          FOR I IN stages-2 DOWNTO 1 LOOP
+            reg_array(I) := reg_array(I-1);
+          END LOOP;
+          reg_array(0) := xz(width_z-1 DOWNTO 0);
+          z <= reg_array(stages-2);
+        END IF;
+      END IF;
+    END PROCESS;
+  END GENERATE;
+
+  GENNEG: IF clock_edge = 0 GENERATE
+    PROCESS (clk)
+    VARIABLE reg_array: reg_array_type(stages-2 DOWNTO 0);
+    BEGIN
+      IF ( clk'EVENT AND clk = '0') THEN
+        IF ( conv_integer(en) = enable_active) THEN
+          FOR I IN stages-2 DOWNTO 1 LOOP
+            reg_array(I) := reg_array(I-1);
+          END LOOP;
+          reg_array(0) := xz(width_z-1 DOWNTO 0);
+          z <= reg_array(stages-2);
+        END IF;
+      END IF;
+    END PROCESS;
+  END GENERATE;
+END beh;
+
 --------> ./rtl.vhdl 
 -- ----------------------------------------------------------------------
 --  HLS HDL:        VHDL Netlister
@@ -2712,7 +2848,7 @@ END beh;
 --  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
 -- 
 --  Generated by:   yl7897@newnano.poly.edu
---  Generated date: Mon Jul  5 14:37:10 2021
+--  Generated date: Sat Aug 14 17:08:26 2021
 -- ----------------------------------------------------------------------
 
 -- 
@@ -2736,9 +2872,9 @@ ENTITY modExp_core_core_fsm IS
   PORT(
     clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
-    fsm_output : OUT STD_LOGIC_VECTOR (25 DOWNTO 0);
+    fsm_output : OUT STD_LOGIC_VECTOR (29 DOWNTO 0);
     main_C_1_tr0 : IN STD_LOGIC;
-    while_C_21_tr0 : IN STD_LOGIC
+    while_C_25_tr0 : IN STD_LOGIC
   );
 END modExp_core_core_fsm;
 
@@ -2750,101 +2886,113 @@ ARCHITECTURE v2 OF modExp_core_core_fsm IS
       while_C_1, while_C_2, while_C_3, while_C_4, while_C_5, while_C_6, while_C_7,
       while_C_8, while_C_9, while_C_10, while_C_11, while_C_12, while_C_13, while_C_14,
       while_C_15, while_C_16, while_C_17, while_C_18, while_C_19, while_C_20, while_C_21,
-      main_C_2);
+      while_C_22, while_C_23, while_C_24, while_C_25, main_C_2);
 
   SIGNAL state_var : modExp_core_core_fsm_1_ST;
   SIGNAL state_var_NS : modExp_core_core_fsm_1_ST;
 
 BEGIN
-  modExp_core_core_fsm_1 : PROCESS (main_C_1_tr0, while_C_21_tr0, state_var)
+  modExp_core_core_fsm_1 : PROCESS (main_C_1_tr0, while_C_25_tr0, state_var)
   BEGIN
     CASE state_var IS
       WHEN main_C_0 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000000000010");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000000000010");
         state_var_NS <= main_C_1;
       WHEN main_C_1 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000000000100");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000000000100");
         IF ( main_C_1_tr0 = '1' ) THEN
           state_var_NS <= main_C_2;
         ELSE
           state_var_NS <= while_C_0;
         END IF;
       WHEN while_C_0 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000000001000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000000001000");
         state_var_NS <= while_C_1;
       WHEN while_C_1 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000000010000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000000010000");
         state_var_NS <= while_C_2;
       WHEN while_C_2 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000000100000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000000100000");
         state_var_NS <= while_C_3;
       WHEN while_C_3 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000001000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000001000000");
         state_var_NS <= while_C_4;
       WHEN while_C_4 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000010000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000010000000");
         state_var_NS <= while_C_5;
       WHEN while_C_5 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000100000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000100000000");
         state_var_NS <= while_C_6;
       WHEN while_C_6 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000001000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000001000000000");
         state_var_NS <= while_C_7;
       WHEN while_C_7 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000010000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000010000000000");
         state_var_NS <= while_C_8;
       WHEN while_C_8 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000100000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000100000000000");
         state_var_NS <= while_C_9;
       WHEN while_C_9 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000001000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000001000000000000");
         state_var_NS <= while_C_10;
       WHEN while_C_10 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000010000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000010000000000000");
         state_var_NS <= while_C_11;
       WHEN while_C_11 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000100000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000100000000000000");
         state_var_NS <= while_C_12;
       WHEN while_C_12 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000001000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000001000000000000000");
         state_var_NS <= while_C_13;
       WHEN while_C_13 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000010000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000010000000000000000");
         state_var_NS <= while_C_14;
       WHEN while_C_14 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000100000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000100000000000000000");
         state_var_NS <= while_C_15;
       WHEN while_C_15 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000001000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000001000000000000000000");
         state_var_NS <= while_C_16;
       WHEN while_C_16 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000010000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000010000000000000000000");
         state_var_NS <= while_C_17;
       WHEN while_C_17 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000100000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000100000000000000000000");
         state_var_NS <= while_C_18;
       WHEN while_C_18 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00001000000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000001000000000000000000000");
         state_var_NS <= while_C_19;
       WHEN while_C_19 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00010000000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000010000000000000000000000");
         state_var_NS <= while_C_20;
       WHEN while_C_20 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00100000000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000100000000000000000000000");
         state_var_NS <= while_C_21;
       WHEN while_C_21 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "01000000000000000000000000");
-        IF ( while_C_21_tr0 = '1' ) THEN
+        fsm_output <= STD_LOGIC_VECTOR'( "000001000000000000000000000000");
+        state_var_NS <= while_C_22;
+      WHEN while_C_22 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "000010000000000000000000000000");
+        state_var_NS <= while_C_23;
+      WHEN while_C_23 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "000100000000000000000000000000");
+        state_var_NS <= while_C_24;
+      WHEN while_C_24 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "001000000000000000000000000000");
+        state_var_NS <= while_C_25;
+      WHEN while_C_25 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "010000000000000000000000000000");
+        IF ( while_C_25_tr0 = '1' ) THEN
           state_var_NS <= main_C_2;
         ELSE
           state_var_NS <= while_C_0;
         END IF;
       WHEN main_C_2 =>
-        fsm_output <= STD_LOGIC_VECTOR'( "10000000000000000000000000");
+        fsm_output <= STD_LOGIC_VECTOR'( "100000000000000000000000000000");
         state_var_NS <= main_C_0;
       -- core_rlp_C_0
       WHEN OTHERS =>
-        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000000000000001");
+        fsm_output <= STD_LOGIC_VECTOR'( "000000000000000000000000000001");
         state_var_NS <= main_C_0;
     END CASE;
   END PROCESS modExp_core_core_fsm_1;
@@ -2860,6 +3008,36 @@ BEGIN
     END IF;
   END PROCESS modExp_core_core_fsm_1_REG;
 
+END v2;
+
+-- ------------------------------------------------------------------
+--  Design Unit:    modExp_core_wait_dp
+-- ------------------------------------------------------------------
+
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+USE work.ccs_in_pkg_v1.ALL;
+USE work.mgc_inout_prereg_en_pkg_v1.ALL;
+USE work.mgc_io_sync_pkg_v2.ALL;
+USE work.mgc_comps.ALL;
+
+
+ENTITY modExp_core_wait_dp IS
+  PORT(
+    ensig_cgo_iro : IN STD_LOGIC;
+    ensig_cgo : IN STD_LOGIC;
+    while_mul_cmp_en : OUT STD_LOGIC
+  );
+END modExp_core_wait_dp;
+
+ARCHITECTURE v2 OF modExp_core_wait_dp IS
+  -- Default Constants
+
+BEGIN
+  while_mul_cmp_en <= ensig_cgo OR ensig_cgo_iro;
 END v2;
 
 -- ------------------------------------------------------------------
@@ -2896,6 +3074,7 @@ END modExp_core;
 
 ARCHITECTURE v2 OF modExp_core IS
   -- Default Constants
+  CONSTANT PWR : STD_LOGIC := '1';
 
   -- Interconnect Declarations
   SIGNAL base_rsci_idat : STD_LOGIC_VECTOR (63 DOWNTO 0);
@@ -2905,20 +3084,24 @@ ARCHITECTURE v2 OF modExp_core IS
   SIGNAL while_rem_cmp_a : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL while_rem_cmp_b : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL while_rem_cmp_z : STD_LOGIC_VECTOR (63 DOWNTO 0);
-  SIGNAL fsm_output : STD_LOGIC_VECTOR (25 DOWNTO 0);
-  SIGNAL and_dcpl_12 : STD_LOGIC;
-  SIGNAL or_tmp_5 : STD_LOGIC;
+  SIGNAL while_mul_cmp_en : STD_LOGIC;
+  SIGNAL while_mul_cmp_z : STD_LOGIC_VECTOR (63 DOWNTO 0);
+  SIGNAL fsm_output : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL and_dcpl_6 : STD_LOGIC;
+  SIGNAL and_dcpl_15 : STD_LOGIC;
+  SIGNAL or_tmp_6 : STD_LOGIC;
   SIGNAL exit_while_sva : STD_LOGIC;
   SIGNAL reg_base_rsc_triosy_obj_ld_cse : STD_LOGIC;
+  SIGNAL reg_ensig_cgo_cse : STD_LOGIC;
+  SIGNAL or_10_rmff : STD_LOGIC;
   SIGNAL base_sva : STD_LOGIC_VECTOR (63 DOWNTO 0);
-  SIGNAL exp_sva : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL m_sva : STD_LOGIC_VECTOR (63 DOWNTO 0);
+  SIGNAL exp_count_sva : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL while_mul_mut : STD_LOGIC_VECTOR (63 DOWNTO 0);
-  SIGNAL while_mul_mut_mx0w0 : STD_LOGIC_VECTOR (63 DOWNTO 0);
-  SIGNAL exp_sva_2 : STD_LOGIC_VECTOR (63 DOWNTO 0);
+  SIGNAL exp_count_sva_2 : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL z_out_64 : STD_LOGIC;
 
-  SIGNAL nor_5_nl : STD_LOGIC;
+  SIGNAL nor_nl : STD_LOGIC;
   SIGNAL operator_64_false_acc_nl : STD_LOGIC_VECTOR (64 DOWNTO 0);
   SIGNAL operator_64_false_mux_3_nl : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL base_rsci_dat : STD_LOGIC_VECTOR (63 DOWNTO 0);
@@ -2940,17 +3123,34 @@ ARCHITECTURE v2 OF modExp_core IS
   SIGNAL while_rem_cmp_b_1 : STD_LOGIC_VECTOR (63 DOWNTO 0);
   SIGNAL while_rem_cmp_z_1 : STD_LOGIC_VECTOR (63 DOWNTO 0);
 
+  SIGNAL while_mul_cmp_a : STD_LOGIC_VECTOR (63 DOWNTO 0);
+  SIGNAL while_mul_cmp_b : STD_LOGIC_VECTOR (63 DOWNTO 0);
+  SIGNAL while_mul_cmp_z_1 : STD_LOGIC_VECTOR (63 DOWNTO 0);
+
+  COMPONENT modExp_core_wait_dp
+    PORT(
+      ensig_cgo_iro : IN STD_LOGIC;
+      ensig_cgo : IN STD_LOGIC;
+      while_mul_cmp_en : OUT STD_LOGIC
+    );
+  END COMPONENT;
   COMPONENT modExp_core_core_fsm
     PORT(
       clk : IN STD_LOGIC;
       rst : IN STD_LOGIC;
-      fsm_output : OUT STD_LOGIC_VECTOR (25 DOWNTO 0);
+      fsm_output : OUT STD_LOGIC_VECTOR (29 DOWNTO 0);
       main_C_1_tr0 : IN STD_LOGIC;
-      while_C_21_tr0 : IN STD_LOGIC
+      while_C_25_tr0 : IN STD_LOGIC
     );
   END COMPONENT;
-  SIGNAL modExp_core_core_fsm_inst_fsm_output : STD_LOGIC_VECTOR (25 DOWNTO 0);
+  SIGNAL modExp_core_core_fsm_inst_fsm_output : STD_LOGIC_VECTOR (29 DOWNTO 0);
   SIGNAL modExp_core_core_fsm_inst_main_C_1_tr0 : STD_LOGIC;
+
+  FUNCTION CONV_SL_1_1(input_val:BOOLEAN)
+  RETURN STD_LOGIC IS
+  BEGIN
+    IF input_val THEN RETURN '1';ELSE RETURN '0';END IF;
+  END;
 
   FUNCTION MUX_s_1_2_2(input_0 : STD_LOGIC;
   input_1 : STD_LOGIC;
@@ -3035,9 +3235,9 @@ BEGIN
       zout => result_rsci_zout
     );
   result_rsci_din <= result_rsci_din_1;
-  result_rsci_ldout <= (fsm_output(23)) OR (fsm_output(1));
+  result_rsci_ldout <= (fsm_output(27)) OR (fsm_output(1));
   result_rsci_dout <= MUX_v_64_2_2(STD_LOGIC_VECTOR'( "0000000000000000000000000000000000000000000000000000000000000001"),
-      while_rem_cmp_z, fsm_output(23));
+      while_rem_cmp_z, fsm_output(27));
   result_rsci_zin <= result_rsc_zin;
   result_rsc_zout <= result_rsci_zout;
 
@@ -3088,45 +3288,80 @@ BEGIN
   while_rem_cmp_b_1 <= while_rem_cmp_b;
   while_rem_cmp_z <= while_rem_cmp_z_1;
 
+  while_mul_cmp : work.mgc_comps.mgc_mul_pipe
+    GENERIC MAP(
+      width_a => 64,
+      signd_a => 0,
+      width_b => 64,
+      signd_b => 0,
+      width_z => 64,
+      clock_edge => 1,
+      enable_active => 1,
+      a_rst_active => 0,
+      s_rst_active => 1,
+      stages => 3,
+      n_inreg => 1
+      )
+    PORT MAP(
+      a => while_mul_cmp_a,
+      b => while_mul_cmp_b,
+      clk => clk,
+      en => while_mul_cmp_en,
+      a_rst => '1',
+      s_rst => rst,
+      z => while_mul_cmp_z_1
+    );
+  while_mul_cmp_a <= result_rsci_din;
+  while_mul_cmp_b <= base_sva;
+  while_mul_cmp_z <= while_mul_cmp_z_1;
+
+  modExp_core_wait_dp_inst : modExp_core_wait_dp
+    PORT MAP(
+      ensig_cgo_iro => or_10_rmff,
+      ensig_cgo => reg_ensig_cgo_cse,
+      while_mul_cmp_en => while_mul_cmp_en
+    );
   modExp_core_core_fsm_inst : modExp_core_core_fsm
     PORT MAP(
       clk => clk,
       rst => rst,
       fsm_output => modExp_core_core_fsm_inst_fsm_output,
       main_C_1_tr0 => modExp_core_core_fsm_inst_main_C_1_tr0,
-      while_C_21_tr0 => exit_while_sva
+      while_C_25_tr0 => exit_while_sva
     );
   fsm_output <= modExp_core_core_fsm_inst_fsm_output;
   modExp_core_core_fsm_inst_main_C_1_tr0 <= NOT exit_while_sva;
 
-  while_mul_mut_mx0w0 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED'( UNSIGNED(result_rsci_din)
-      * UNSIGNED(base_sva)), 64));
-  exp_sva_2 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(exp_sva) + UNSIGNED'( "1111111111111111111111111111111111111111111111111111111111111111"),
-      64));
-  and_dcpl_12 <= NOT((fsm_output(25)) OR (fsm_output(0)));
-  or_tmp_5 <= and_dcpl_12 AND (NOT (fsm_output(1)));
+  or_10_rmff <= CONV_SL_1_1(fsm_output(5 DOWNTO 3)/=STD_LOGIC_VECTOR'("000"));
+  exp_count_sva_2 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(exp_count_sva) + UNSIGNED'(
+      "1111111111111111111111111111111111111111111111111111111111111111"), 64));
+  and_dcpl_6 <= NOT((fsm_output(1)) OR (fsm_output(3)));
+  and_dcpl_15 <= NOT((fsm_output(29)) OR (fsm_output(0)));
+  or_tmp_6 <= and_dcpl_15 AND (NOT (fsm_output(1)));
   PROCESS (clk)
   BEGIN
     IF clk'EVENT AND ( clk = '1' ) THEN
       IF (rst = '1') THEN
         reg_base_rsc_triosy_obj_ld_cse <= '0';
+        reg_ensig_cgo_cse <= '0';
       ELSE
         reg_base_rsc_triosy_obj_ld_cse <= ((NOT exit_while_sva) AND (fsm_output(2)))
-            OR (exit_while_sva AND (fsm_output(24)));
+            OR (exit_while_sva AND (fsm_output(28)));
+        reg_ensig_cgo_cse <= or_10_rmff;
       END IF;
     END IF;
   END PROCESS;
   PROCESS (clk)
   BEGIN
     IF clk'EVENT AND ( clk = '1' ) THEN
-      while_rem_cmp_a <= MUX_v_64_2_2(while_mul_mut_mx0w0, while_mul_mut, nor_5_nl);
+      while_rem_cmp_a <= MUX_v_64_2_2(while_mul_cmp_z, while_mul_mut, nor_nl);
       while_rem_cmp_b <= m_sva;
     END IF;
   END PROCESS;
   PROCESS (clk)
   BEGIN
     IF clk'EVENT AND ( clk = '1' ) THEN
-      IF ( or_tmp_5 = '0' ) THEN
+      IF ( or_tmp_6 = '0' ) THEN
         m_sva <= m_rsci_idat;
       END IF;
     END IF;
@@ -3134,16 +3369,15 @@ BEGIN
   PROCESS (clk)
   BEGIN
     IF clk'EVENT AND ( clk = '1' ) THEN
-      IF ( (NOT(and_dcpl_12 AND (NOT((fsm_output(1)) OR (fsm_output(3)))))) = '1'
-          ) THEN
-        exp_sva <= MUX_v_64_2_2(exp_rsci_idat, exp_sva_2, fsm_output(3));
+      IF ( (NOT(and_dcpl_15 AND and_dcpl_6)) = '1' ) THEN
+        exp_count_sva <= MUX_v_64_2_2(exp_rsci_idat, exp_count_sva_2, fsm_output(3));
       END IF;
     END IF;
   END PROCESS;
   PROCESS (clk)
   BEGIN
     IF clk'EVENT AND ( clk = '1' ) THEN
-      IF ( or_tmp_5 = '0' ) THEN
+      IF ( or_tmp_6 = '0' ) THEN
         base_sva <= base_rsci_idat;
       END IF;
     END IF;
@@ -3161,14 +3395,15 @@ BEGIN
   PROCESS (clk)
   BEGIN
     IF clk'EVENT AND ( clk = '1' ) THEN
-      IF ( (fsm_output(3)) = '1' ) THEN
-        while_mul_mut <= while_mul_mut_mx0w0;
+      IF ( (fsm_output(6)) = '1' ) THEN
+        while_mul_mut <= while_mul_cmp_z;
       END IF;
     END IF;
   END PROCESS;
-  nor_5_nl <= NOT((fsm_output(24)) OR (fsm_output(25)) OR (fsm_output(23)) OR (fsm_output(0))
-      OR (fsm_output(2)) OR (fsm_output(1)) OR (fsm_output(3)));
-  operator_64_false_mux_3_nl <= MUX_v_64_2_2((NOT exp_rsci_idat), (NOT exp_sva_2),
+  nor_nl <= NOT((fsm_output(28)) OR (fsm_output(29)) OR (fsm_output(0)) OR (fsm_output(2))
+      OR (fsm_output(5)) OR (fsm_output(4)) OR (fsm_output(27)) OR (fsm_output(6))
+      OR (NOT and_dcpl_6));
+  operator_64_false_mux_3_nl <= MUX_v_64_2_2((NOT exp_rsci_idat), (NOT exp_count_sva_2),
       fsm_output(3));
   operator_64_false_acc_nl <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED('1' & operator_64_false_mux_3_nl)
       + UNSIGNED'( "00000000000000000000000000000000000000000000000000000000000000001"),
@@ -3210,6 +3445,7 @@ END modExp;
 
 ARCHITECTURE v2 OF modExp IS
   -- Default Constants
+  CONSTANT PWR : STD_LOGIC := '1';
 
   COMPONENT modExp_core
     PORT(

@@ -1,0 +1,329 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.86 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/2
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+solution file add ./src/ntt.cpp
+solution file add ./src/ntt_tb.cpp -exclude true
+/INPUTFILES/1
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'DIT_RELOOP' (CIN-6)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/catapult.log"
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 67, Real ops = 26, Vars = 27 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'DIT_RELOOP.v1': elapsed time 3.00 seconds, memory usage 1445260kB, peak memory usage 1445260kB (SOL-9)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 2049 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/IDX_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v1/CDesignChecker/design_checker.sh'
+Design 'DIT_RELOOP' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' iterated at most 1025 times. (LOOP-2)
+Inlining routine 'modulo_dev' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Optimizing block '/DIT_RELOOP/modulo_dev' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Found top design routine 'DIT_RELOOP' specified by directive (CIN-52)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Inlining routine 'DIT_RELOOP' (CIN-14)
+Synthesizing routine 'DIT_RELOOP' (CIN-13)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Optimizing block '/DIT_RELOOP' ... (CIN-4)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 67, Real ops = 26, Vars = 27 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'DIT_RELOOP.v1': elapsed time 0.63 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/ram_nangate-45nm_pipe_beh.lib' [ram_nangate-45nm_pipe_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add ram_nangate-45nm_pipe_beh
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+go libraries
+solution library add ccs_sample_mem
+# Info: Starting transformation 'libraries' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_sample_mem.lib' [ccs_sample_mem]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 26, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v5': elapsed time 0.29 seconds, memory usage 1511396kB, peak memory usage 1511460kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v5/CDesignChecker/design_checker.sh'
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'DIT_RELOOP.v5' (SOL-8)
+# Info: Branching solution 'DIT_RELOOP.v5' at state 'libraries' (PRJ-2)
+go extract
+/DIT_RELOOP/vec:rsc/INTERLEAVE 0
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 1
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 1
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v4/CDesignChecker/design_checker.sh'
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go libraries
+# Info: Branching solution 'DIT_RELOOP.v4' at state 'assembly' (PRJ-2)
+/DIT_RELOOP/vec:rsc/INTERLEAVE 1
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 1
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/DIT_RELOOP/core/IDX_LOOP/UNROLL no
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL no
+# Info: Design complexity at end of 'loops': Total ops = 181, Real ops = 57, Vars = 51 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v3': elapsed time 1.03 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Branching solution 'DIT_RELOOP.v3' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 4
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 4
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v3' (SOL-8)
+go extract
+/DIT_RELOOP/vec:rsc/INTERLEAVE 4
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 4
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 4
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 4 times. (LOOP-3)
+N_UNROLL parameter 4 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v3/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 36, Vars = 39 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v2': elapsed time 0.65 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v2/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'DIT_RELOOP.v2' at state 'assembly' (PRJ-2)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+N_UNROLL parameter 2 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 2
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 2
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v2' (SOL-8)
+go extract
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 2
+/DIT_RELOOP/vec:rsc/INTERLEAVE 2
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 2
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v1': elapsed time 0.09 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Error: Top-down synthesis of C-CORE 'modulo_dev' failed (ASM-2)
+# Error: go cluster: Failed Top-down CCORE Synthesis
+# Info: Design complexity at end of 'assembly': Total ops = 70, Real ops = 24, Vars = 25 (SOL-21)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+# Error: Couldn't find library component for operation 'rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v1': elapsed time 0.87 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 78, Real ops = 26, Vars = 33 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v1': elapsed time 0.41 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/twiddle:rsc' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v1' (SOL-8)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/vec:rsc' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v1': elapsed time 0.05 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v1' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 26, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'DIT_RELOOP.v1': elapsed time 0.27 seconds, memory usage 1445860kB, peak memory usage 1511396kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'DIT_RELOOP.v1' (SOL-8)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 598, Real ops = 183, Vars = 117 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v9': elapsed time 2.30 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+CU_DIRECTIVE sid12 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 16
+CU_DESIGN sid12 ADD {} {VERSION v9 SID sid12 BRANCH_SID sid11 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+/DIT_RELOOP/vec:rsc/INTERLEAVE 16
+CU_DIRECTIVE sid12 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 16
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 16
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v9/CDesignChecker/design_checker.sh'
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v9' (SOL-8)
+go extract
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 16 times. (LOOP-3)
+N_UNROLL parameter 16 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 16
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult.ccs'. (PRJ-5)
+project save
+# Info: Branching solution 'DIT_RELOOP.v9' at state 'assembly' (PRJ-2)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 320, Real ops = 99, Vars = 73 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v8': elapsed time 1.58 seconds, memory usage 1519512kB, peak memory usage 1519512kB (SOL-9)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 8
+/DIT_RELOOP/vec:rsc/INTERLEAVE 8
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/CDesignChecker/design_checker.sh'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 8 times. (LOOP-3)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+go extract
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 8
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Info: Branching solution 'DIT_RELOOP.v8' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+CU_DIRECTIVE sid11 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+CU_DESIGN sid11 ADD {} {VERSION v8 SID sid11 BRANCH_SID sid10 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+CU_DIRECTIVE sid11 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 8
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 8
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v7': elapsed time 1.16 seconds, memory usage 1650692kB, peak memory usage 1650692kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 181, Real ops = 57, Vars = 51 (SOL-21)
+go extract
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 4
+N_UNROLL parameter 4 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v7' (SOL-8)
+# Info: Branching solution 'DIT_RELOOP.v7' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+CU_DIRECTIVE sid10 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+CU_DESIGN sid10 ADD {} {VERSION v7 SID sid10 BRANCH_SID sid9 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+CU_DIRECTIVE sid10 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 4
+/DIT_RELOOP/vec:rsc/INTERLEAVE 4
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 4
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 4
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7/CDesignChecker/design_checker.sh'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 4 times. (LOOP-3)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 106, Real ops = 36, Vars = 39 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v6': elapsed time 0.72 seconds, memory usage 1511396kB, peak memory usage 1511460kB (SOL-9)
+CU_DESIGN sid9 ADD {} {VERSION v6 SID sid9 BRANCH_SID sid7 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+CU_DIRECTIVE sid9 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+go extract
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v6/CDesignChecker/design_checker.sh'
+/DIT_RELOOP/core/IDX_LOOP/UNROLL 2
+N_UNROLL parameter 2 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v6' (SOL-8)
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 2
+/DIT_RELOOP/vec:rsc/INTERLEAVE 2
+# Info: Branching solution 'DIT_RELOOP.v6' at state 'assembly' (PRJ-2)
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 2
+/DIT_RELOOP/twiddle:rsc/INTERLEAVE 2
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 2 times. (LOOP-3)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid9 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+# Info: Design complexity at end of 'loops': Total ops = 77, Real ops = 26, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v5': elapsed time 0.05 seconds, memory usage 1511396kB, peak memory usage 1511460kB (SOL-9)
+Loop '/DIT_RELOOP/core/IDX_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v5' (SOL-8)
+Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 6475, Real ops = 183, Vars = 224 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v9': elapsed time 59.16 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v9' (SOL-8)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Resource '/DIT_RELOOP/twiddle:rsc' split into 1 x 16 blocks (MEM-11)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(15)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(14)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(8)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(10)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(9)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(3)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(2)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(5)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(4)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Resource '/DIT_RELOOP/vec:rsc' split into 1 x 16 blocks (MEM-11)
+I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(1)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(0)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(11)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(10)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(13)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(12)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(7)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(6)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(9)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/vec:rsc(0)(8)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(15)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(12)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(11)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(14)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(13)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# Info: Running transformation 'memories' on solution 'DIT_RELOOP.v9': elapsed time 27.60 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Merged 'IDX_LOOP:f2:switch#15' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#15' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Running transformation 'memories' on solution 'DIT_RELOOP.v9': elapsed time 57.44 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Merged 'IDX_LOOP:f2:switch#4' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#4' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#3' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#3' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#6' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#6' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#5' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#5' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#2' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#2' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#1' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#1' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#12' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#12' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#11' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#11' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#14' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#14' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#13' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#13' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#8' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#8' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#7' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#7' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#10' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#10' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#9' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#9' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Design complexity at end of 'cluster': Total ops = 6463, Real ops = 181, Vars = 215 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'DIT_RELOOP.v9': elapsed time 16.99 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+Module 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0' in the cache is valid & accepted for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' (TD-3)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v9' (SOL-8)
+Module for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' has been successfully synthesized (TD-4)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/.sif/solIndex_2_3fe98673-9cb0-4143-9483-0d03b237d875.xml' ... (LIB-129)
+# Info: Completed transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 104.70 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 23269, Real ops = 4901, Vars = 2764 (SOL-21)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 43.94 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 22.44 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+Design 'DIT_RELOOP' contains '4901' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'DIT_RELOOP.v9' (SOL-8)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 95.89 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 73.91 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-15)
