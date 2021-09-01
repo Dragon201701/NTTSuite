@@ -16,12 +16,12 @@
  * @return 	The result of the expression
  */
 #pragma hls_design inline
-VEC_T modulo(INT64_T base, PARAM_T m){
+UINT64_T modulo(INT64_T base, UINT64_T m){
 
 	INT64_T q;
 	
 	INT64_T result = base % m;
-	return (result >= 0) ? (VEC_T)result : (VEC_T)(result + m);
+	return (result >= 0) ? (UINT64_T)result : (UINT64_T)(result + m);
 
 }
 /**
@@ -38,14 +38,14 @@ VEC_T modulo(INT64_T base, PARAM_T m){
  * @return 		The transformed vector
  */
 #pragma hls_design top
-void inPlaceNTT_DIT_precomp(VEC_T vec[VECTOR_SIZE],  PARAM_T p, PARAM_T r, VEC_T twiddle[VECTOR_SIZE]){
-	VEC_T factor1, factor2;
+void inPlaceNTT_DIT_precomp(UINT64_T vec[VECTOR_SIZE],  UINT64_T p, UINT64_T r, UINT64_T twiddle[VECTOR_SIZE]){
+	UINT64_T factor1, factor2;
 	unsigned m;
 	STAGE_LOOP: for(unsigned i = 1; i < VECTOR_ADDR_BIT; i++){ 
 		m = 1 << i;
 		VEC_LOOP: for(unsigned  j = 0; j < VECTOR_SIZE; j+=m){
 		COMP_LOOP: for(unsigned k = 0; k < m >> 1; k++){
-		        VEC_T tmp = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
+		        UINT64_T tmp = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
 				factor1 = vec[j + k];
 				factor2 = modulo(tmp * vec[j + k + m/2],p);
 				vec[j + k] = modulo(factor1 + factor2, p);

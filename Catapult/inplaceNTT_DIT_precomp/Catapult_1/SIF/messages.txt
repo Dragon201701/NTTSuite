@@ -1,0 +1,19 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 4.34 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+/INPUTFILES/2
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/ntt.cpp
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/src/ntt.cpp (CIN-69)
+solution file add ./src/ntt_tb.cpp -exclude true
+go compile
+/INPUTFILES/1
+Source file analysis completed (CIN-68)
+quit

@@ -1,0 +1,279 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.41 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+go compile
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.26 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution select inPlaceNTT_DIF.v6
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+go compile
+solution.v1
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.85 seconds, memory usage 1510776kB, peak memory usage 1510776kB (SOL-9)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.75 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+go analyze
+# Error: identifier "modulo" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.65 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+go compile
+# Error: go analyze: Failed analyze
+solution file add ./src/ntt_tb.cpp -exclude true
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.71 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+solution file add ./src/ntt.cpp
+# Error: identifier "modulo" is undefined (CRD-20)
+# Error: identifier "twiddle" is undefined (CRD-20)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v17': elapsed time 2.24 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 57, Real ops = 21, Vars = 24 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v17/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modulo_dev' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF/modulo_dev' ... (CIN-4)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Generating synthesis internal form... (CIN-3)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 57, Real ops = 21, Vars = 24 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.53 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+go libraries
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 59, Real ops = 21, Vars = 26 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.16 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+go extract
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 68, Real ops = 21, Vars = 32 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.07 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 70, Real ops = 21, Vars = 31 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.38 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 61, Real ops = 20, Vars = 24 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.18 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Module 'modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69_0' in the cache is valid & accepted for CCORE 'modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69' (TD-3)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+Module for CCORE 'modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69' has been successfully synthesized (TD-4)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/td_ccore_solutions/modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69_0/.sif/solIndex_2_bde06759-b12d-4c80-b32c-563c02e06c83.xml' ... (LIB-129)
+# Info: Design complexity at end of 'architect': Total ops = 77, Real ops = 20, Vars = 28 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.23 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Design 'inPlaceNTT_DIF' contains '20' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 77, Real ops = 20, Vars = 28 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.33 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 297277, Area (Datapath, Register, Total) = 70376.91, 0.00, 70376.91 (CRAAS-12)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIF/core' (total length 287032 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/core:rlp' (0 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 297277, Area (Datapath, Register, Total) = 133877.48, 0.00, 133877.48 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/VEC_LOOP' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/COMP_LOOP' (28 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/main' (2 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 808, Real ops = 23, Vars = 78 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF.v17': elapsed time 2.09 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Report written to file 'cycle.rpt'
+Global signal 'vec:rsc.we' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.d' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+Global signal 'vec:rsc.q' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'r:rsci' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'p:rsci' (LIB-3)
+Global signal 'twiddle:rsc.radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 261, Real ops = 83, Vars = 78 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.72 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Performing FSM extraction... (FSM-1)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+Creating shared register 'COMP_LOOP:acc#8.itm' for variables 'COMP_LOOP:acc#8.itm, COMP_LOOP:modulo_dev(return)#2.sva, factor2.sva' (2 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF.v17': elapsed time 0.67 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 254, Real ops = 64, Vars = 177 (SOL-21)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 251, Real ops = 66, Vars = 75 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF.v17': elapsed time 6.93 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order.txt
+Generating scverify_top.cpp ()
+Netlist written to file 'rtl.vhdl' (NET-4)
+Add dependent file: ../td_ccore_solutions/modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v17/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v17/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Generating SCVerify testbench files
+Add dependent file: ../td_ccore_solutions/modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v17/concat_sim_rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Report written to file 'rtl.rpt'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF.v17' (SOL-8)
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+order file name is: rtl.v_order.txt
+generate concat
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_dev_5aba70be30c71e06949afd4ea79f22a65a69_0/rtl.v
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v17/concat_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v

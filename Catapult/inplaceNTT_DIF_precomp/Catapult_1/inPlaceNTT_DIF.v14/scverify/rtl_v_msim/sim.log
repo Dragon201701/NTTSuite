@@ -1,0 +1,225 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 3.10.0-1062.4.1.el7.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/vsim.wlf -l ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/sim.log -L ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/work scverify_top_opt -do "do {./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 12:59:03 on Aug 31,2021
+# Loading /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '20 ns'
+# Loading work.inPlaceNTT_DIF(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_20_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_21_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_22_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_23_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_24_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_25_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_26_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_27_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_28_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_29_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_30_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_31_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_32_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_33_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_34_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_35_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_36_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_37_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_38_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_39_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_40_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_41_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_42_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_43_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_44_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_45_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_46_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_47_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_48_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_49_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_50_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_51_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_52_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_53_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_54_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_55_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_56_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_57_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_58_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_59_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_60_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_61_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_62_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_63_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_64_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_65_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_66_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_67_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_68_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_69_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_70_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_71_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_72_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_73_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_74_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_75_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_76_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_77_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_78_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_79_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_80_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_81_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_82_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_83_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_84_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_85_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_86_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_87_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_88_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_89_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_90_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_91_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_92_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_93_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_94_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_95_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_96_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_97_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_98_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_99_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_100_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_101_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_102_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_103_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_104_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_105_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_106_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_107_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_108_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_109_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_110_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_111_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_112_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_113_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_114_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_115_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_116_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_117_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_118_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_119_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_120_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_121_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_122_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_123_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_124_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_125_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_126_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_127_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_128_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_129_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_130_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_131_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_132_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_133_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_134_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_135_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_136_4_64_16_16_64_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_core(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# Loading work.modulo_dev(fast)
+# Loading work.modulo_dev_core(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__2)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__3)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.mgc_rem(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__1)
+# Loading work.inPlaceNTT_DIF_core_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_core_core_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/vec_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_twiddle'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_twiddle'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_r'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_r'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_p'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_p'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# Disabling STALL_FLAG toggling
+# do {./Catapult_1/inPlaceNTT_DIF.v14/scverify/rtl_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult_1/inPlaceNTT_DIF.v14/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run -all
+# [6,15,6,7,9,3,10,4,2,16,1,5,8,12,14,11,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]
+# ../../src/ntt_tb.cpp:127 - End of testbench.
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
+# 
+# Info: Collecting data completed
+#    captured 0 values of vec_IN
+#    captured 0 values of vec
+#    captured 0 values of p
+#    captured 0 values of r
+#    captured 0 values of twiddle
+# Info: HW reset: TLS_rst active @ 0 s
+# Info: scverify_top/user_tb: Simulation completed
+# 
+# Checking results
+# 'vec'
+#    capture count        = 0
+#    comparison count     = 0
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+#    Error: output 'vec' has no golden values to compare against
+# 
+# Error: Nothing to compare, all output capture counts are zero.
+# Info: scverify_top/user_tb: Simulation FAILED @ 0 s
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 
+# Info: scverify_top/Monitor: runs with constant clock period 0 s
+# Info: scverify_top/Monitor: Throughput: 1 transaction per 0 s
+# Info: scverify_top/Monitor: No transactions completed.  Skipping latency and throughput reports
+# End time: 13:04:41 on Aug 31,2021, Elapsed time: 0:05:38
+# Errors: 0, Warnings: 11, Suppressed Warnings: 2

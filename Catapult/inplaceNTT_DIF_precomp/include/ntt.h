@@ -5,7 +5,6 @@
 #include <math/mgc_ac_math.h>
 //#include <cmath>
 
-UINT64_T modulo(ac_int<64, true> base, UINT64_T m);
 /**
  * Perform the operation 'base^exp (mod m)' using the memory-efficient method
  *

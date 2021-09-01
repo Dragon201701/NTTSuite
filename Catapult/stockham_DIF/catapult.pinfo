@@ -1,5 +1,5 @@
 ==============================================================================
-[56] Catapult 10.5c/896140 - Thu Aug 19 09:20:39 2021
+[103] Catapult 10.5c/896140 - Thu Aug 19 09:51:03 2021
 ------------------------------------------------------------------------------
 [New LWP 55589]
 [New LWP 55590]
@@ -184,150 +184,34 @@ Thread 5 (Thread 0x7f702ffff700 (LWP 55685)):
 #5  0x00007f704565996d in clone () from /lib64/libc.so.6
 
 Thread 4 (Thread 0x7f7037fff700 (LWP 55591)):
-#0  0x0000000000e1f6dd in SIF_CD_Node::mtype (this=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/aol/Isrc/dataflow/sif_df_graph.h:198
-#1  SIF_SchedUsage::lookup_select (this=0x7f6fce186f90, pSelNode=0x7f6fe35854a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/aol/Isrc/schedule/sif_sc_sched.h:1296
-#2  usage_update_self_and_sub (pUsage=pUsage@entry=0x7f6fce186f90, pNode=0x7f6fd4385f40, s=s@entry=235, e=e@entry=235) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:10497
-#3  0x0000000000e36747 in SIF_SchedUsage::incr (this=0x7f6fce186f90, pChoice=0x7f6fe2d11850, s=<optimized out>, sched_index=5) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:10832
-#4  0x0000000000e375db in SIF_SchedUsage::available (this=this@entry=0x7f6fce186f90, pChoice=pChoice@entry=0x7f6fe2d11850, s=s@entry=234, sc_idx=sc_idx@entry=5) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:10919
-#5  0x0000000000e3fd08 in SIF_SchedUsage::earliest_start (noII=true, sc_idx=5, s=234, pChoice=0x7f6fe2d11850, this=0x7f6fce186f90) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:10932
-#6  sc_node_adjust (pNodeList=0x7f7037ffdc00, tt=..., ft=..., index=5, pAdjNode=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4577
-#7  SIF_SchedEdge::sc_edge_adjust (this=<optimized out>, index=index@entry=5, fixed_new=fixed_new@entry=false, pNodeList=pNodeList@entry=0x7f7037ffdc00) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:8744
-#8  0x0000000000e406a0 in sc_node_asap_rek (index=5, pNode=0x7f6fd4187040, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4630
-#9  0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4182b40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#10 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd417c540, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#11 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd417c240, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#12 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4163040, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#13 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4162d40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#14 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4162740, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#15 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4162440, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#16 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4162140, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#17 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4161e40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#18 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd409e240, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#19 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4090a40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#20 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4089540, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#21 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4088340, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#22 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd4088040, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#23 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd406ee40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#24 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd406eb40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#25 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd406e540, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#26 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fd406e240, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#27 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3f8fa20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#28 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3f56d20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#29 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3f41d20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#30 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3f41120, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#31 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3f40e20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#32 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2996890, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#33 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2996570, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#34 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2995f30, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#35 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2995c10, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#36 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe29958f0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#37 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe29955d0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#38 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe28aaee0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#39 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe289c7a0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#40 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2894780, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#41 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe28934c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#42 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe28931a0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#43 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2878ee0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#44 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2878bc0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#45 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2878580, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#46 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2878260, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#47 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe27e3200, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#48 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe27a7f20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#49 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe27917c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#50 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2790b40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#51 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2790820, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#52 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2776560, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#53 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2776240, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#54 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2775c00, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#55 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe27758e0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#56 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe27755c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#57 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe27752a0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#58 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe26a9420, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#59 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe269b320, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#60 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2693940, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#61 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2692680, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#62 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2692360, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#63 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe26780a0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#64 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2677d80, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#65 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2677740, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#66 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2677420, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#67 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe25e23c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#68 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe25a70e0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#69 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe25912e0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#70 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2590660, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#71 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2590340, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#72 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2576080, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#73 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2575d60, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#74 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2575720, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#75 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2575400, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#76 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe25750e0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#77 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2574dc0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#78 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe24a8f40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#79 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe249a800, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#80 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe24927e0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#81 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2491520, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#82 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2491200, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#83 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2476f40, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#84 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2476c20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#85 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe24765e0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#86 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe24762c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#87 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3d59590, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#88 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe324c330, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#89 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2a06640, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#90 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2a059c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#91 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2a056a0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#92 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fde913560, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#93 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fde913240, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#94 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fde912c00, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#95 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3ea97f0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#96 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3ea94d0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#97 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3ea91b0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#98 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fde94f6b0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#99 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fdf569930, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#100 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fdf1f6480, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#101 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3021210, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#102 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3020ef0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#103 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2a53d70, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#104 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2a53a50, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#105 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2d28840, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#106 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2d28520, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#107 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe1cf1e00, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#108 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3a82180, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#109 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2be9080, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#110 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3a4b790, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#111 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe3a4b470, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#112 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe22aee20, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#113 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fdee42b90, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#114 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fde823860, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#115 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fde823540, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#116 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fded9d6c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#117 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fded9d3a0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#118 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe2a787c0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#119 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe393a770, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#120 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe1fa9cc0, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#121 0x0000000000e40739 in sc_node_asap_rek (index=5, pNode=0x7f6fe1e5f450, pEdgeStack=0x7f7037ffdc70, pAvoided=0x0, pNodeList=0x7f7037ffdc00, count_limit=7) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:4643
-#122 0x0000000000e4341a in sc_block_schedule_rsc (pScBlock=pScBlock@entry=0x7f6fe2a50f80, pNodeList=pNodeList@entry=0x7f7037ffdf40, index=index@entry=5) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:5992
-#123 0x0000000000e44688 in perform_ms (cstep=<optimized out>, blk_min_score=0x7f7037ffdd90, changedNodes=0x7f7037ffde60, msnodes=0x7f7037ffded0, blk=0x7f6fe2a50f80) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:6216
-#124 SIF_SchedBlock::block_opt_intrams (this=this@entry=0x7f6fe2a50f80) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:6400
-#125 0x0000000000e4e4f8 in SIF_Scheduler::opt_schedule (this=this@entry=0x7f6fe32a7960) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:3396
-#126 0x00000000005b812f in SIF_AllocData::update_schedule (this=this@entry=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_alloc.cxx:1465
-#127 0x0000000000a2e525 in sif_compute_schedule_cmd_rek (lres=..., design=design@entry=0x7f6fe3d992e0, hpart=hpart@entry=0x7f6fe5d75a10) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_allocation.cxx:1475
-#128 0x0000000000a330d2 in sif_compute_schedule_cmd (interp=0x7f703002f400, solution=0x7f70325e99e0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_allocation.cxx:1557
-#129 0x00000000008a582b in (anonymous namespace)::ise_go_transform (stateSetCWD=..., solution=@0x7f7037ffe9b8: 0x7f70325e99e0, cmd=..., lres=...) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2089
-#130 TUC_Go::ise_go (interp=interp@entry=0x7f703002f400, cmd=..., solution=@0x7f7037ffe9b8: 0x7f70325e99e0, state=state@entry=SDS::Sextract) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2261
-#131 0x00000000008a7c4c in TUC_Go::TclCommand::Command (this=<optimized out>, objcIdx=<optimized out>, clientData=<optimized out>, interp=0x7f703002f400, objc=<optimized out>, objv=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2441
-#132 0x000000000085c4b5 in SIF_TclCommand::Process (objv=0x7f703003e860, objc=2, interp=0x7f703002f400, clientData=0x0, objcIdx=1, this=0x7f703024cc40) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.cxx:271
-#133 SIF_TclTopCommand::tclCommand (clientData=<optimized out>, interp=0x7f703002f400, objc=2, objv=0x7f703003e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.h:255
-#134 0x00007f7046b318a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#135 0x00007f7046b3318c in TclEvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#136 0x00007f7046b33793 in Tcl_EvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#137 0x0000000000a1e41d in TTclThread::Handler::EventEval::Process (this=0x7f702dffa9a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1595
-#138 0x0000000000a12b63 in TTclThread::Event::EventProc (evPtr=<optimized out>, flags=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1026
-#139 0x00007f7046ba736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#140 0x00007f7046ba75b5 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
-#141 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f703803e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
-#142 0x00007f7046168ea5 in start_thread () from /lib64/libpthread.so.0
-#143 0x00007f704565996d in clone () from /lib64/libc.so.6
+#0  0x0000000000e559be in pmul (cmax=225, cmin=1, t=0x7f6fceb839e0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:134
+#1  SC_FinalNode::push_gain (this=0x7f6fd895caa0, tmp=tmp@entry=0x7f6fceb839e0, maxc=514) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:162
+#2  0x0000000000e562c5 in SC_FinalDep::calc_gain (this=this@entry=0x7f7037ffd940) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:312
+#3  0x0000000000e56746 in SC_FinalDep::optimize (this=this@entry=0x7f7037ffd940) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:385
+#4  0x0000000000e578bb in sif_sc_final (blk=blk@entry=0x7f6fe30f2e20, alloc=alloc@entry=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:578
+#5  0x0000000000e57727 in sif_sc_final (blk=blk@entry=0x7f6fe2f20fa0, alloc=alloc@entry=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
+#6  0x0000000000e57727 in sif_sc_final (blk=blk@entry=0x7f6fdf71fc20, alloc=alloc@entry=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
+#7  0x0000000000e57727 in sif_sc_final (blk=blk@entry=0x7f6fde63d4e0, alloc=alloc@entry=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
+#8  0x0000000000e57727 in sif_sc_final (blk=0x7f6fe3c27940, alloc=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_final.cxx:559
+#9  0x0000000000e4fc4c in SIF_Scheduler::post_schedule (this=this@entry=0x7f6fe32a7960) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/schedule/sif_sc_sched.cxx:3834
+#10 0x00000000005b8146 in SIF_AllocData::update_schedule (this=this@entry=0x7f703129c830) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_alloc.cxx:1469
+#11 0x0000000000a2e525 in sif_compute_schedule_cmd_rek (lres=..., design=design@entry=0x7f6fe3d992e0, hpart=hpart@entry=0x7f6fe5d75a10) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_allocation.cxx:1475
+#12 0x0000000000a330d2 in sif_compute_schedule_cmd (interp=0x7f703002f400, solution=0x7f70325e99e0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_allocation.cxx:1557
+#13 0x00000000008a582b in (anonymous namespace)::ise_go_transform (stateSetCWD=..., solution=@0x7f7037ffe9b8: 0x7f70325e99e0, cmd=..., lres=...) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2089
+#14 TUC_Go::ise_go (interp=interp@entry=0x7f703002f400, cmd=..., solution=@0x7f7037ffe9b8: 0x7f70325e99e0, state=state@entry=SDS::Sextract) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2261
+#15 0x00000000008a7c4c in TUC_Go::TclCommand::Command (this=<optimized out>, objcIdx=<optimized out>, clientData=<optimized out>, interp=0x7f703002f400, objc=<optimized out>, objv=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2441
+#16 0x000000000085c4b5 in SIF_TclCommand::Process (objv=0x7f703003e860, objc=2, interp=0x7f703002f400, clientData=0x0, objcIdx=1, this=0x7f703024cc40) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.cxx:271
+#17 SIF_TclTopCommand::tclCommand (clientData=<optimized out>, interp=0x7f703002f400, objc=2, objv=0x7f703003e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.h:255
+#18 0x00007f7046b318a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
+#19 0x00007f7046b3318c in TclEvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
+#20 0x00007f7046b33793 in Tcl_EvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
+#21 0x0000000000a1e41d in TTclThread::Handler::EventEval::Process (this=0x7f702dffa9a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1595
+#22 0x0000000000a12b63 in TTclThread::Event::EventProc (evPtr=<optimized out>, flags=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1026
+#23 0x00007f7046ba736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
+#24 0x00007f7046ba75b5 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtcl8.5t.so
+#25 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f703803e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#26 0x00007f7046168ea5 in start_thread () from /lib64/libpthread.so.0
+#27 0x00007f704565996d in clone () from /lib64/libc.so.6
 
 Thread 3 (Thread 0x7f703d9dc700 (LWP 55590)):
 #0  0x00007f70456509a3 in select () from /lib64/libc.so.6

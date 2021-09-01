@@ -1,0 +1,525 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.26 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution select inPlaceNTT_DIF.v6
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+go compile
+solution.v1
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.85 seconds, memory usage 1510776kB, peak memory usage 1510776kB (SOL-9)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.75 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+go analyze
+# Error: identifier "modulo" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.65 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+go compile
+# Error: go analyze: Failed analyze
+solution file add ./src/ntt_tb.cpp -exclude true
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.71 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+solution file add ./src/ntt.cpp
+# Error: identifier "modulo" is undefined (CRD-20)
+# Error: identifier "twiddle" is undefined (CRD-20)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 58, Real ops = 22, Vars = 24 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v11': elapsed time 2.24 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Found design routine 'modulo' specified by directive (CIN-52)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v11/CDesignChecker/design_checker.sh'
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Optimizing block '/inPlaceNTT_DIF/modulo_dev' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 58, Real ops = 22, Vars = 24 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v11': elapsed time 0.40 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+go libraries
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 60, Real ops = 22, Vars = 26 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v11': elapsed time 0.12 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 355, Real ops = 95, Vars = 91 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v12': elapsed time 1.45 seconds, memory usage 2166760kB, peak memory usage 2166760kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 16
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 16
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+go extract
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/core/COMP_LOOP {UNROLL 16}: Race condition
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+# Info: Branching solution 'inPlaceNTT_DIF.v12' at state 'assembly' (PRJ-2)
+CU_DESIGN sid16 ADD {} {VERSION v12 SID sid16 BRANCH_SID sid14 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF}: Race condition
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/twiddle:rsc {INTERLEAVE 16}: Race condition
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/vec:rsc {INTERLEAVE 16}: Race condition
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v12/CDesignChecker/design_checker.sh'
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 16
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 355, Real ops = 95, Vars = 91 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v11': elapsed time 0.85 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+project save
+go extract
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 8
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1.ccs'. (PRJ-5)
+directive set /inPlaceNTT_DIF/core/COMP_LOOP -UNROLL 8
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 8
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+directive set /inPlaceNTT_DIF/vec:rsc -INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 1613, Real ops = 95, Vars = 158 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v12': elapsed time 9.52 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-9)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(15)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Resource '/inPlaceNTT_DIF/vec:rsc' split into 1 x 16 blocks (MEM-11)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(9)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(8)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(15)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(14)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(11)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(10)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(13)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc(0)(12)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Resource '/inPlaceNTT_DIF/twiddle:rsc' split into 1 x 16 blocks (MEM-11)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(12)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(11)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(14)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(13)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(8)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(10)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc(0)(9)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 64 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 1604, Real ops = 94, Vars = 151 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v12': elapsed time 31.92 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-9)
+Module for CCORE 'modulo_dev' has been successfully synthesized (TD-4)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 4119, Real ops = 752, Vars = 489 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v12': elapsed time 14.28 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-9)
+Design 'inPlaceNTT_DIF' contains '752' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 4119, Real ops = 752, Vars = 489 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 734.25 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-9)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIF/core' (total length 279962 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/core:rlp' (0 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 290277, Area (Datapath, Register, Total) = 149179.93, 0.00, 149179.93 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/VEC_LOOP' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/COMP_LOOP' (217 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/main' (2 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 466.04 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 446.04 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 509.08 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 486.98 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 374.11 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 352.96 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 415.91 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 394.46 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 652.44 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 632.00 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 694.91 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 673.61 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 558.88 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 539.08 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 602.00 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 579.28 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 93.92 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 73.86 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 137.14 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 114.33 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Optimized LOOP '/inPlaceNTT_DIF/core/COMP_LOOP': Latency = 290277, Area (Datapath, Register, Total) = 80989.39, 0.00, 80989.39 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 20.48 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 43.87 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 290277, Area (Datapath, Register, Total) = 80989.39, 0.00, 80989.39 (CRAAS-12)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 280.72 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 260.03 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 322.96 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 300.96 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 188.46 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 167.15 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 230.03 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 208.80 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Running transformation 'allocate' on solution 'inPlaceNTT_DIF.v12': elapsed time 724.89 seconds, memory usage 2166760kB, peak memory usage 2232296kB (SOL-15)
+Netlist written to file 'schedule.gnt' (NET-4)
+
+# Messages from "go schedule"
+
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 262.95 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-9)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 260.08 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-15)
+# Info: Design complexity at end of 'schedule': Total ops = 44103, Real ops = 574, Vars = 1210 (SOL-21)
+Global signal 'vec:rsc.triosy(0)(15).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(15):obj' (LIB-3)
+Global signal 'twiddle:rsc(0)(15).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(13).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(13):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(14).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(14):obj' (LIB-3)
+Global signal 'twiddle:rsc(0)(14).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(14)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(13).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(13)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(15).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(15)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(14).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(7).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(8).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(8):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(5).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(6).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(11).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(11):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(12).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(12):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(9).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(9):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(10).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(10):obj' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(0).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(15).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(15):obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(3).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(4).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(1).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(2).lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(9).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(9):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(10).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(10):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(7).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(8).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(8):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(13).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(13):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(14).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(14):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(11).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(11):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(12).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(12):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(1).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(2).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(2):obj' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 22.64 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+Global signal 'twiddle:rsc.triosy(0)(0).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(5).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(6).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(3).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(4).lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy(0)(4):obj' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 165.97 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 145.94 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 186.41 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 74.07 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 52.64 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 115.95 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 94.84 seconds, memory usage 2232296kB, peak memory usage 2232296kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 238.64 seconds, memory usage 2232296kB, peak memory usage 2297832kB (SOL-15)
+Report written to file 'cycle.rpt'
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF.v12': elapsed time 208.60 seconds, memory usage 2232296kB, peak memory usage 2297832kB (SOL-15)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Global signal 'vec:rsc(0)(0).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'r:rsci' (LIB-3)
+Global signal 'vec:rsc(0)(0).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'p:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+Global signal 'vec:rsc(0)(1).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(9)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(9)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(9)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(8).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(8)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(9)i' (LIB-3)
+Global signal 'vec:rsc(0)(9).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(9)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(10).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(10)i' (LIB-3)
+Global signal 'vec:rsc(0)(12).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(12).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(12).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(11).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(11)i' (LIB-3)
+Global signal 'vec:rsc(0)(12).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(12).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(12)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'vec:rsc(0)(14).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(14)i' (LIB-3)
+Global signal 'vec:rsc(0)(13).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(13)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).q' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).d' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'vec:rsc(0)(15).we' added to design 'inPlaceNTT_DIF' for component 'vec:rsc(0)(15)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(3).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(8).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(8)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(9).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(9)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(8).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(8)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(7).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(12).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(12)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(11).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(11)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(13).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(13)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(12).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(12)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(10).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(10)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(9).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(9)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(11).q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(11)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(10).radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc(0)(10)i' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 11446, Real ops = 4878, Vars = 925 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v12': elapsed time 59.50 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-9)
+Creating shared register 'COMP_LOOP:tmp:nor#19.itm' for variables 'COMP_LOOP:tmp:nor#19.itm, COMP_LOOP:tmp:nor#29.itm, COMP_LOOP:tmp:nor.itm, COMP_LOOP:tmp:nor#42.itm, COMP_LOOP:nor#17.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:nor#16.itm' for variables 'COMP_LOOP:tmp:nor#16.itm, COMP_LOOP:tmp:nor#26.itm, COMP_LOOP:tmp:nor#6.itm, COMP_LOOP:tmp:nor#39.itm, COMP_LOOP:nor#14.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'tmp#21.sva#11' for variables 'tmp#21.sva#11, tmp#23.sva#11, tmp#22.sva#7' (2 registers deleted). (FSM-3)
+Creating shared register 'tmp#21.sva#1' for variables 'tmp#21.sva#1, tmp#23.sva#1, COMP_LOOP:tmp:mux1h#6.itm, tmp#22.sva#3' (3 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v12': elapsed time 42.30 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-15)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+# Info: Running transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v12': elapsed time 21.16 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-15)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'COMP_LOOP-1:acc#8.itm' for variables 'COMP_LOOP-1:acc#8.itm, COMP_LOOP-2:acc#8.itm, COMP_LOOP-3:acc#8.itm, COMP_LOOP-4:acc#8.itm, COMP_LOOP-5:acc#8.itm, COMP_LOOP-6:acc#8.itm, COMP_LOOP-7:acc#8.itm, COMP_LOOP-8:acc#8.itm, COMP_LOOP:modulo_dev(return)#17.sva, COMP_LOOP:modulo_dev(return)#18.sva, COMP_LOOP:modulo_dev(return)#19.sva, COMP_LOOP:modulo_dev(return)#2.sva, COMP_LOOP:modulo_dev(return)#20.sva, COMP_LOOP:modulo_dev(return)#21.sva, COMP_LOOP:modulo_dev(return)#22.sva, COMP_LOOP:modulo_dev(return)#23.sva, tmp#1.lpi#4.dfm, tmp#10.lpi#4.dfm, tmp#12.lpi#4.dfm, tmp#14.lpi#4.dfm, tmp#2.lpi#4.dfm, tmp#4.lpi#4.dfm, tmp#6.lpi#4.dfm, tmp#8.lpi#4.dfm, tmp#21.sva#10, tmp#23.sva#10, tmp#22.sva#5' (26 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#11.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#11.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#19.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#26.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#38.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#59.itm, COMP_LOOP:COMP_LOOP:and#19.itm' (5 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#10.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#10.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#17.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#24.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#37.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#57.itm, COMP_LOOP:COMP_LOOP:and#17.itm' (5 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#13.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#13.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#21.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#28.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#42.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#64.itm, COMP_LOOP:COMP_LOOP:and#21.itm' (5 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#12.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#12.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#20.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#27.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#39.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#60.itm, COMP_LOOP:COMP_LOOP:and#20.itm' (5 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-2:tmp:mul.idiv.sva' for variables 'COMP_LOOP-2:tmp:mul.idiv.sva, COMP_LOOP-4:tmp:mul.idiv.sva, COMP_LOOP-6:tmp:mul.idiv.sva' (2 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#35.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#35.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#50.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#72.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#8.itm, COMP_LOOP:COMP_LOOP:and#28.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#34.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#34.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#49.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#6.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#71.itm, COMP_LOOP:COMP_LOOP:and#27.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#52.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#52.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#74.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:nor#2.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:nor.itm, COMP_LOOP:COMP_LOOP:nor#1.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#36.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#36.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#51.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#73.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#9.itm, COMP_LOOP:COMP_LOOP:and#29.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#2.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#2.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#31.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#45.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#67.itm, COMP_LOOP:COMP_LOOP:and#24.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#14.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#14.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#30.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#44.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#66.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:nor#1.itm, COMP_LOOP:COMP_LOOP:and#23.itm' (5 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#33.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#33.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#48.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#5.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#70.itm, COMP_LOOP:COMP_LOOP:and#26.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#32.itm' for variables 'COMP_LOOP:tmp:COMP_LOOP:tmp:and#32.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#4.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#46.itm, COMP_LOOP:tmp:COMP_LOOP:tmp:and#68.itm, COMP_LOOP:COMP_LOOP:and#25.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:nor#14.itm' for variables 'COMP_LOOP:tmp:nor#14.itm, COMP_LOOP:tmp:nor#24.itm, COMP_LOOP:tmp:nor#3.itm, COMP_LOOP:tmp:nor#37.itm, COMP_LOOP:nor#12.itm' (4 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:tmp:nor#1.itm' for variables 'COMP_LOOP:tmp:nor#1.itm, COMP_LOOP:tmp:nor#13.itm, COMP_LOOP:tmp:nor#23.itm, COMP_LOOP:tmp:nor#36.itm, COMP_LOOP:nor#11.itm' (4 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 10054, Real ops = 4082, Vars = 9329 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF.v12': elapsed time 24.62 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Running transformation 'instance' on solution 'inPlaceNTT_DIF.v12': elapsed time 21.36 seconds, memory usage 2297832kB, peak memory usage 2297832kB (SOL-15)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 10024, Real ops = 4083, Vars = 904 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF.v12': elapsed time 62.18 seconds, memory usage 2428904kB, peak memory usage 2428904kB (SOL-9)
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Generating SCVerify testbench files
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIF.v12': elapsed time 20.71 seconds, memory usage 2428904kB, peak memory usage 2428904kB (SOL-15)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v12/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v12/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIF.v12': elapsed time 46.43 seconds, memory usage 2428904kB, peak memory usage 2428904kB (SOL-15)
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v12/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v12/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Report written to file 'rtl.rpt'
+Generating scverify_top.cpp ()
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'

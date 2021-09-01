@@ -1,0 +1,235 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 4.30 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Source file analysis completed (CIN-68)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt.cpp
+solution file add ./src/ntt_tb.cpp -exclude true
+/INPUTFILES/1
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v1': elapsed time 2.87 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult/inPlaceNTT_DIT_precomp.v1/CDesignChecker/design_checker.sh'
+Synthesizing routine 'inPlaceNTT_DIT_precomp' (CIN-13)
+Found top design routine 'inPlaceNTT_DIT_precomp' specified by directive (CIN-52)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'inPlaceNTT_DIT_precomp' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+Design 'inPlaceNTT_DIT_precomp' was read (SOL-1)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v1' (SOL-8)
+Optimizing block '/inPlaceNTT_DIT_precomp' ... (CIN-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' iterated at most 9 times. (LOOP-2)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
+Inlining routine 'modulo' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIT_precomp.v1': elapsed time 1.04 seconds, memory usage 1445848kB, peak memory usage 1445848kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+go libraries
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-uplus-3_beh.lib' [mgc_Xilinx-VIRTEX-uplus-3_beh]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIT_precomp.v1' (SOL-8)
+solution library remove *
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT_precomp.v1': elapsed time 0.13 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT_precomp.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.06 seconds, memory usage 1511432kB, peak memory usage 1511432kB (SOL-9)
+Loop '/inPlaceNTT_DIT_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIT_precomp/vec:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_1R1W_RBW
+/inPlaceNTT_DIT_precomp/twiddle:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_1R1W_RBW
+directive set /inPlaceNTT_DIT_precomp/twiddle:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_1R1W_RBW
+Loop '/inPlaceNTT_DIT_precomp/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult/inPlaceNTT_DIT_precomp.v3/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIT_precomp.v3' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+go extract
+# Info: Design complexity at end of 'loops': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT_precomp.v1': elapsed time 0.02 seconds, memory usage 1454080kB, peak memory usage 1454080kB (SOL-9)
+go extract
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Opening Catapult Ultra Synthesis "Datasheet" in PDF Viewer...
+Loop '/inPlaceNTT_DIT_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT_precomp.v1' (SOL-8)
+Loop '/inPlaceNTT_DIT_precomp/core/main' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.92 seconds, memory usage 1519624kB, peak memory usage 1519624kB (SOL-9)
+Memory Resource '/inPlaceNTT_DIT_precomp/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+Memory Resource '/inPlaceNTT_DIT_precomp/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIT_precomp/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIT_precomp/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.03 seconds, memory usage 1519624kB, peak memory usage 1519624kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 94, Real ops = 32, Vars = 29 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.23 seconds, memory usage 1519624kB, peak memory usage 1519624kB (SOL-9)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+Design 'inPlaceNTT_DIT_precomp' contains '32' real operations. (SOL-11)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 94, Real ops = 32, Vars = 29 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.29 seconds, memory usage 1519624kB, peak memory usage 1519624kB (SOL-9)
+Prescheduled LOOP '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' (28 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT_precomp/core/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT_precomp/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIT_precomp/core': Latency = 180087, Area (Datapath, Register, Total) = 13165.42, 0.00, 13165.42 (CRAAS-12)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIT_precomp/core' (total length 129305 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIT_precomp/core/core:rlp' (0 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIT_precomp/core': Latency = 129300, Area (Datapath, Register, Total) = 19692.10, 0.00, 19692.10 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIT_precomp/core/VEC_LOOP' (1 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 837, Real ops = 28, Vars = 71 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 5.81 seconds, memory usage 1511432kB, peak memory usage 1519624kB (SOL-9)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIT_precomp' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIT_precomp' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIT_precomp' for component 'r:rsci' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIT_precomp' for component 'p:rsci' (LIB-3)
+Global signal 'twiddle:rsc.radr' added to design 'inPlaceNTT_DIT_precomp' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.q' added to design 'inPlaceNTT_DIT_precomp' for component 'twiddle:rsci' (LIB-3)
+Global signal 'vec:rsc.we' added to design 'inPlaceNTT_DIT_precomp' for component 'vec:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+Global signal 'vec:rsc.radr' added to design 'inPlaceNTT_DIT_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.q' added to design 'inPlaceNTT_DIT_precomp' for component 'vec:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT_precomp/core' (CRAAS-1)
+Global signal 'vec:rsc.wadr' added to design 'inPlaceNTT_DIT_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.d' added to design 'inPlaceNTT_DIT_precomp' for component 'vec:rsci' (LIB-3)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIT_precomp' for component 'p:rsc.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIT_precomp' for component 'vec:rsc.triosy:obj' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.64 seconds, memory usage 1511432kB, peak memory usage 1519624kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 290, Real ops = 83, Vars = 77 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+Performing FSM extraction... (FSM-1)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 280, Real ops = 62, Vars = 198 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 0.73 seconds, memory usage 1511432kB, peak memory usage 1519624kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 275, Real ops = 64, Vars = 74 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIT_precomp.v3': elapsed time 7.31 seconds, memory usage 1511432kB, peak memory usage 1519624kB (SOL-9)
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+Synthesis script written to file 'concat_rtl.v.psr'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult/inPlaceNTT_DIT_precomp.v3/concat_sim_rtl.vhdl
+order file name is: rtl.vhdl_order.txt
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+generate concat
+Synthesis script written to file 'rtl.vhdl.psr'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Netlist written to file 'rtl.vhdl' (NET-4)
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+Generating scverify_top.cpp ()
+# Warning: No matching part found
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+order file name is: rtl.vhdl_order_sim.txt
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIT_precomp.v3' (SOL-8)
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult/inPlaceNTT_DIT_precomp.v3/concat_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Report written to file 'rtl.rpt'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult/inPlaceNTT_DIT_precomp.v3/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult/inPlaceNTT_DIT_precomp.v3/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Synthesis script written to file 'rtl.v.psr'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Warning: No matching part found
+Synthesis script written to file 'concat_rtl.vhdl.psr'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'

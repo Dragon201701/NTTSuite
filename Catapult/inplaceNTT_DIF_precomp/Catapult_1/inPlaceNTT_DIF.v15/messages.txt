@@ -1,0 +1,365 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.26 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution select inPlaceNTT_DIF.v6
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+go compile
+solution.v1
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.85 seconds, memory usage 1510776kB, peak memory usage 1510776kB (SOL-9)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.75 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+go analyze
+# Error: identifier "modulo" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.65 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+go compile
+# Error: go analyze: Failed analyze
+solution file add ./src/ntt_tb.cpp -exclude true
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.71 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+solution file add ./src/ntt.cpp
+# Error: identifier "modulo" is undefined (CRD-20)
+# Error: identifier "twiddle" is undefined (CRD-20)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 58, Real ops = 22, Vars = 24 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v11': elapsed time 2.24 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Found design routine 'modulo' specified by directive (CIN-52)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v11/CDesignChecker/design_checker.sh'
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Optimizing block '/inPlaceNTT_DIF/modulo_dev' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 58, Real ops = 22, Vars = 24 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v11': elapsed time 0.40 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+go libraries
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 60, Real ops = 22, Vars = 26 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v11': elapsed time 0.12 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 69, Real ops = 22, Vars = 32 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.07 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 1
+CU_DIRECTIVE sid20 SET /inPlaceNTT_DIF/core/COMP_LOOP {UNROLL 16}: Race condition
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 1
+CU_DIRECTIVE sid20 SET /inPlaceNTT_DIF/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL no
+directive set /inPlaceNTT_DIF/core/COMP_LOOP -UNROLL no
+# Info: Branching solution 'inPlaceNTT_DIF.v15' at state 'assembly' (PRJ-2)
+CU_DESIGN sid20 ADD {} {VERSION v15 SID sid20 BRANCH_SID sid19 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF}: Race condition
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 0
+CU_DIRECTIVE sid20 SET /inPlaceNTT_DIF/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 0
+/inPlaceNTT_DIF/twiddle:rsc/BLOCK_SIZE 0
+CU_DIRECTIVE sid20 SET /inPlaceNTT_DIF/twiddle:rsc {INTERLEAVE 16}: Race condition
+directive set /inPlaceNTT_DIF/twiddle:rsc -BLOCK_SIZE 0
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid20 SET /inPlaceNTT_DIF/vec:rsc {INTERLEAVE 16}: Race condition
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v15/CDesignChecker/design_checker.sh'
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 1
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+go extract
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v14': elapsed time 1.65 seconds, memory usage 2986060kB, peak memory usage 2986060kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 355, Real ops = 95, Vars = 91 (SOL-21)
+CU_DIRECTIVE sid19 SET /inPlaceNTT_DIF/core/COMP_LOOP {UNROLL 16}: Race condition
+CU_DIRECTIVE sid19 SET /inPlaceNTT_DIF/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+# Info: Branching solution 'inPlaceNTT_DIF.v14' at state 'assembly' (PRJ-2)
+CU_DESIGN sid19 ADD {} {VERSION v14 SID sid19 BRANCH_SID sid18 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF}: Race condition
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/vec:rsc/BLOCK_SIZE 16
+directive set /inPlaceNTT_DIF/vec:rsc -BLOCK_SIZE 16
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 64
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 64
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v14/CDesignChecker/design_checker.sh'
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 64
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/twiddle:rsc/BLOCK_SIZE 16
+directive set /inPlaceNTT_DIF/twiddle:rsc -BLOCK_SIZE 16
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v14' (SOL-8)
+go extract
+CU_DIRECTIVE sid19 SET /inPlaceNTT_DIF/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+CU_DIRECTIVE sid19 SET /inPlaceNTT_DIF/twiddle:rsc {INTERLEAVE 16}: Race condition
+CU_DIRECTIVE sid19 SET /inPlaceNTT_DIF/vec:rsc {INTERLEAVE 16}: Race condition
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'loops': Total ops = 355, Real ops = 95, Vars = 91 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v13': elapsed time 1.60 seconds, memory usage 2494440kB, peak memory usage 2494440kB (SOL-9)
+go extract
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v13/CDesignChecker/design_checker.sh'
+CU_DIRECTIVE sid18 SET /inPlaceNTT_DIF/core/COMP_LOOP {UNROLL 16}: Race condition
+CU_DIRECTIVE sid18 SET /inPlaceNTT_DIF/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 32
+# Info: Branching solution 'inPlaceNTT_DIF.v13' at state 'assembly' (PRJ-2)
+CU_DESIGN sid18 ADD {} {VERSION v13 SID sid18 BRANCH_SID sid16 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF}: Race condition
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid18 SET /inPlaceNTT_DIF/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+CU_DIRECTIVE sid18 SET /inPlaceNTT_DIF/twiddle:rsc {INTERLEAVE 16}: Race condition
+CU_DIRECTIVE sid18 SET /inPlaceNTT_DIF/vec:rsc {INTERLEAVE 16}: Race condition
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 32
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 32
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v13' (SOL-8)
+# Info: Design complexity at end of 'loops': Total ops = 355, Real ops = 95, Vars = 91 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v12': elapsed time 1.45 seconds, memory usage 2166760kB, peak memory usage 2166760kB (SOL-9)
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 16
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 16
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v12' (SOL-8)
+go extract
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/core/COMP_LOOP {UNROLL 16}: Race condition
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/core/COMP_LOOP {PIPELINE_INIT_INTERVAL 0}: Race condition
+# Info: Branching solution 'inPlaceNTT_DIF.v12' at state 'assembly' (PRJ-2)
+CU_DESIGN sid16 ADD {} {VERSION v12 SID sid16 BRANCH_SID sid14 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF}: Race condition
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/twiddle:rsc {INTERLEAVE 16}: Race condition
+CU_DIRECTIVE sid16 SET /inPlaceNTT_DIF/vec:rsc {INTERLEAVE 16}: Race condition
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v12/CDesignChecker/design_checker.sh'
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 16
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 355, Real ops = 95, Vars = 91 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v11': elapsed time 0.85 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+project save
+go extract
+/inPlaceNTT_DIF/core/COMP_LOOP/UNROLL 8
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1.ccs'. (PRJ-5)
+directive set /inPlaceNTT_DIF/core/COMP_LOOP -UNROLL 8
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+/inPlaceNTT_DIF/vec:rsc/INTERLEAVE 8
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v11' (SOL-8)
+directive set /inPlaceNTT_DIF/vec:rsc -INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+/inPlaceNTT_DIF/twiddle:rsc/INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+directive set /inPlaceNTT_DIF/twiddle:rsc -INTERLEAVE 8
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.44 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 71, Real ops = 22, Vars = 31 (SOL-21)
+I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 62, Real ops = 21, Vars = 24 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.17 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+Module for CCORE 'modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b' has been successfully synthesized (TD-4)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/.sif/solIndex_2_1c012333-a7db-4f8b-b165-4a03c501ae54.xml' ... (LIB-129)
+Module 'modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0' in the cache is valid & accepted for CCORE 'modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b' (TD-3)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 78, Real ops = 21, Vars = 28 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.29 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+Design 'inPlaceNTT_DIF' contains '21' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 78, Real ops = 21, Vars = 28 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.42 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 297277, Area (Datapath, Register, Total) = 70370.91, 0.00, 70370.91 (CRAAS-12)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIF/core' (total length 287032 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/core:rlp' (0 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 297277, Area (Datapath, Register, Total) = 134538.48, 0.00, 134538.48 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/VEC_LOOP' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/COMP_LOOP' (28 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/main' (2 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 809, Real ops = 24, Vars = 78 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF.v15': elapsed time 2.86 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'r:rsci' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'p:rsci' (LIB-3)
+Global signal 'twiddle:rsc.radr' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.q' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+Report written to file 'cycle.rpt'
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Global signal 'vec:rsc.we' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.radr' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.wadr' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.d' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+Global signal 'vec:rsc.q' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy:obj' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 263, Real ops = 85, Vars = 78 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.72 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+Creating shared register 'COMP_LOOP:acc#8.itm' for variables 'COMP_LOOP:acc#8.itm, COMP_LOOP:modulo_dev(return)#2.sva, factor2.sva' (2 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 269, Real ops = 67, Vars = 190 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF.v15': elapsed time 0.86 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Design complexity at end of 'extract': Total ops = 264, Real ops = 70, Vars = 76 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF.v15': elapsed time 7.84 seconds, memory usage 4058900kB, peak memory usage 4059524kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v15/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v15/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.vhdl
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v15/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Netlist written to file 'rtl.v' (NET-4)
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+generate concat
+Report written to file 'rtl.rpt'
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF.v15' (SOL-8)
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v
+order file name is: rtl.v_order_sim.txt
+order file name is: rtl.vhdl_order.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v15/concat_rtl.v
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd

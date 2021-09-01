@@ -1,18 +1,35 @@
+#include <cstdlib> 		/* malloc() */
+#include <iostream>
 
-#include "../include/ntt_tb.h"
+#include <mc_scverify.h>
+
 #include "../include/ntt.h"
 #include "../include/config.h"
+
 using namespace std;
 
-void printVec(uint64_t *vec){
+void printVec(UINT64_T *vec){
 
 	std::cout << "[";
-	for(uint64_t i = 0; i < VECTOR_SIZE; i++){
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
 
 		std::cout << vec[i] << ",";
 
 	}
 	std::cout << "]" << std::endl;
+
+}
+/**
+ * Perform the operation 'base (mod m)'
+ *
+ * @param base	The base of the expression
+ * @param m	The modulus of the expression
+ * @return 	The result of the expression
+ */
+UINT64_T modulo(INT64_T base, UINT64_T m){
+
+	INT64_T result = base % m;
+	return (result >= 0) ? (UINT64_T)result : (UINT64_T)(result + m);
 
 }
 
@@ -24,9 +41,9 @@ void printVec(uint64_t *vec){
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m){
+UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
 
-	uint64_t result = 1;
+	UINT64_T result = 1;
 	
 	while(exp > 0){
 
@@ -44,19 +61,7 @@ uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m){
 
 }
 
-/**
- * Perform the operation 'base (mod m)'
- *
- * @param base	The base of the expression
- * @param m	The modulus of the expression
- * @return 	The result of the expression
- */
-uint64_t modulo(int64_t base, int64_t m){
 
-	int64_t result = base % m;
-	return (result >= 0) ? result : result + m;
-
-}
 /**
  * Perform an in-place iterative breadth-first decimation-in-frequency Cooley-Tukey NTT on an input vector and return the result
  *
@@ -67,72 +72,104 @@ uint64_t modulo(int64_t base, int64_t m){
  * @param rev	Whether to perform bit reversal on the output vector
  * @return 	The transformed vector
  */
-uint64_t *inPlaceNTT_DIF_golden(uint64_t *vec, uint64_t n, uint64_t p, uint64_t r){
+UINT64_T *inPlaceNTT_DIF_golden(UINT64_T *vec, UINT64_T p, UINT64_T r){
 
-	uint64_t *result;
-	result = (uint64_t *) malloc(n*sizeof(uint64_t));
+	UINT64_T *result;
+	result = (UINT64_T *) malloc(VECTOR_SIZE*sizeof(UINT64_T));
 
-	for(uint64_t i = 0; i < n; i++){
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
 		result[i] = vec[i];
 	}
 
-	uint64_t m,k_,a,factor1,factor2;
-	for(uint64_t i = log2(n); i >= 1; i--){
+	UINT64_T m,k_,a,factor1,factor2;
+	for(unsigned i = VECTOR_ADDR_BIT; i >= 1; i--){
 
-		m = pow(2,i);
+		m = 1 << i;
 
 		k_ = (p - 1)/m;
 		a = modExp(r,k_,p);
 
-		for(uint64_t j = 0; j < n; j+=m){
+		for(unsigned j = 0; j < VECTOR_SIZE; j+=m){
 
-			for(uint64_t k = 0; k < m/2; k++){
+			for(unsigned k = 0; k < m/2; k++){
 
-				factor1 = result[j + k];
-				factor2 = result[j + k + m/2];
+				factor1 = result[(UINT64_T)(j + k)];
+				factor2 = result[(UINT64_T)(j + k + m/2)];
 
-				result[j + k] 		= modulo(factor1 + factor2,p);
-				result[j + k + m/2]	= modulo(modExp(a,k,p)*modulo(factor1 - factor2,p),p);
+				result[(UINT64_T)(j + k)] 		= modulo((UINT64_T)(factor1 + factor2),p);
+				result[(UINT64_T)(j + k + m/2)]	= modulo((UINT64_T)(modExp(a,k,p)*modulo(factor1 - factor2,p)),p);
 
 			}
 		}
 	}
 	
-	/*if(rev){
-		return bit_reverse(result,n);
-	}else{
-		return result;
-	}*/
     return result;
 }
 
+UINT64_T *randVec(UINT64_T max){
+	UINT64_T *vec = (UINT64_T *)malloc(VECTOR_SIZE * sizeof(UINT64_T));
+	srand(time(0));
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
+		vec[i] = rand() % (max + 1);
+	}
+	return vec;
+}
+void randVec(UINT64_T * vec, UINT64_T max){
+	srand(time(0));
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
+		vec[i] = rand() % (max + 1);
+	}
+}
+void randVec(UINT64_T * vec, UINT64_T * vec2, UINT64_T max){
+	srand(time(0));
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
+		UINT64_T value = rand() % (max + 1);
+		vec[i] = value;
+		vec2[i] = value;
+	}
+}
+bool compVec(UINT64_T *vec1, UINT64_T *vec2, bool debug){
+	bool comp = true;
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
+
+		if(vec1[i] != vec2[i]){
+			comp = false;
+
+			if(debug){
+				std::cout << "(vec1[" << i << "] : " << vec1[i] << ")";
+				std::cout << "!= (vec2[" << i << "] : " << vec2[i] << ")";
+				std::cout << std::endl;
+			}else{
+				break;
+			}
+		}
+	}
+	return comp;
+}
+void gettwiddle(UINT64_T *twiddle, UINT64_T p, UINT64_T r){
+	for(unsigned i = VECTOR_ADDR_BIT; i >= 1; i--){
+		unsigned m = 1 << i;
+		UINT64_T k_ = (p - 1)/m;
+		UINT64_T a = modExp(r, k_, p);
+		for(unsigned k = 0; k < m/2; k++){
+			twiddle[m/2 - 1 + k] = modExp(a, k, p);
+		}
+	}
+}
 CCS_MAIN(int argc, char **argv){
 
-	UINT64_T p = 17;
-	UINT64_T r = 3;	
+	UINT64_T p = 68719403009;
+	UINT64_T r = 36048964756;	
 
-	VEC_T vec[VECTOR_SIZE], output[VECTOR_SIZE], twiddle[VECTOR_SIZE];
-	uint64_t * vec2 = (uint64_t *)malloc(VECTOR_SIZE * sizeof(uint64_t));
-	uint64_t * golden_output;
-	for (size_t i = 0; i < VECTOR_SIZE; i++){
-		vec[i] = (VEC_T)i;
-		vec2[i] = (uint64_t)i;
-	}
-	
+	UINT64_T vec[VECTOR_SIZE], vec2[VECTOR_SIZE], twiddle[VECTOR_SIZE];
+	UINT64_T * golden_output;
+	randVec(vec, vec2, 1000);
+	gettwiddle(twiddle, p, r);
 
 	//printVec(inPlaceNTT_DIT_precomp(vec,n,p,r),n);
-	CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, output, twiddle);
-    golden_output = inPlaceNTT_DIF_golden(vec2, VECTOR_SIZE, p, r);
-	printVec(golden_output);
-/*	
-	//uint64_t *vec = randVec(n,10);
-
-	uint64_t *out1 = naiveNTT(vec,n,p,r);
-	printVec(out1,n);
-
-	uint64_t *out2 = fourStepNTT(vec,n,p,r,2);
-	printVec(out2,n);
-*/
+	CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, twiddle);
+    golden_output = inPlaceNTT_DIF_golden(vec2, p, r);
+	compVec(vec, golden_output, true);
 	cout << __FILE__ << ":" << __LINE__ << " - End of testbench." << endl;
 	CCS_RETURN(0);
 

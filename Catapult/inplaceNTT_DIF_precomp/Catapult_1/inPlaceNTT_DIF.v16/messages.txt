@@ -1,0 +1,143 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.25 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Source file analysis completed (CIN-68)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+go compile
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.26 seconds, memory usage 2166752kB, peak memory usage 2166752kB (SOL-9)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution select inPlaceNTT_DIF.v6
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+go compile
+solution.v1
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.85 seconds, memory usage 1510776kB, peak memory usage 1510776kB (SOL-9)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.75 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<>' detected on routine 'modulo' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+go analyze
+# Error: identifier "modulo" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_dev' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.65 seconds, memory usage 1445864kB, peak memory usage 1445864kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Error: Compilation aborted (CIN-5)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+go compile
+# Error: go analyze: Failed analyze
+solution file add ./src/ntt_tb.cpp -exclude true
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.71 seconds, memory usage 1445856kB, peak memory usage 1445856kB (SOL-9)
+solution file add ./src/ntt.cpp
+# Error: identifier "modulo" is undefined (CRD-20)
+# Error: identifier "twiddle" is undefined (CRD-20)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v16': elapsed time 2.27 seconds, memory usage 4059004kB, peak memory usage 4059524kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 56, Real ops = 19, Vars = 24 (SOL-21)
+Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+Found design routine 'modulo_dev' specified by directive (CIN-52)
+Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v16' (SOL-8)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modulo_dev' (CIN-14)
+Synthesizing routine 'modulo_dev' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF/modulo_dev' ... (CIN-4)
+Inlining routine 'operator>=<64, false>' (CIN-14)
+Design 'inPlaceNTT_DIF' was read (SOL-1)
+Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v16/CDesignChecker/design_checker.sh'

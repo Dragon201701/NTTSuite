@@ -1,0 +1,126 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 4.34 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+/INPUTFILES/2
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/ntt.cpp
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/src/ntt.cpp (CIN-69)
+solution file add ./src/ntt_tb.cpp -exclude true
+go compile
+/INPUTFILES/1
+Source file analysis completed (CIN-68)
+quit
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v1': elapsed time 3.15 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIT_precomp' (CIN-13)
+Found top design routine 'inPlaceNTT_DIT_precomp' specified by directive (CIN-52)
+Inlining routine 'modulo' (CIN-14)
+Design 'inPlaceNTT_DIT_precomp' was read (SOL-1)
+Inlining routine 'inPlaceNTT_DIT_precomp' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Generating synthesis internal form... (CIN-3)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' iterated at most 9 times. (LOOP-2)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v1' (SOL-8)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' iterated at most 513 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult_1/inPlaceNTT_DIT_precomp.v1/CDesignChecker/design_checker.sh'
+Optimizing block '/inPlaceNTT_DIT_precomp' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIT_precomp.v2': elapsed time 0.82 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp/Catapult_1/inPlaceNTT_DIT_precomp.v2/CDesignChecker/design_checker.sh'
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-uplus-3_beh.lib' [mgc_Xilinx-VIRTEX-uplus-3_beh]... (LIB-49)
+# Info: Branching solution 'inPlaceNTT_DIT_precomp.v2' at state 'compile' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+solution library add Xilinx_RAMS
+# Info: Design complexity at end of 'libraries': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIT_precomp.v1': elapsed time 1.06 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-uplus-3_beh.lib' [mgc_Xilinx-VIRTEX-uplus-3_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+go libraries
+solution library add amba
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIT_precomp.v1' (SOL-8)
+solution library remove *
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 62, Real ops = 29, Vars = 20 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIT_precomp.v2': elapsed time 0.11 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIT_precomp.v2': elapsed time 0.06 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT_precomp/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+go extract
+Loop '/inPlaceNTT_DIT_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIT_precomp.v2': elapsed time 0.25 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Memory Resource '/inPlaceNTT_DIT_precomp/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIT_precomp/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIT_precomp/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/inPlaceNTT_DIT_precomp/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIT_precomp.v2': elapsed time 0.03 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 70, Real ops = 29, Vars = 24 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 94, Real ops = 32, Vars = 29 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIT_precomp.v2': elapsed time 0.36 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+Design 'inPlaceNTT_DIT_precomp' contains '32' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+
+# Messages from "go allocate"
+
+# Error: Couldn't find library component for operation 'modulo:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIT_precomp.v2' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIT_precomp/core' (CRAAS-1)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Error: Couldn't find library component for operation 'modulo#2:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo#1:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)

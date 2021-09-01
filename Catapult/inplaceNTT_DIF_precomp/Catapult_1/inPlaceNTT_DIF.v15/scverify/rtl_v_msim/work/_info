@@ -1,0 +1,194 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_1/inPlaceNTT_DIF.v15
+vinPlaceNTT_DIF
+Z1 !s110 1630432084
+!i10b 1
+!s100 i<gACo9lDOI@0bFHIilBQ2
+IH7MYb9Ibfm893I3GJzVJn1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1630431802
+Z4 8rtl.v
+Z5 Frtl.v
+L0 721
+Z6 OL;L;10.6;65
+r1
+!s85 0
+31
+Z7 !s108 1630432084.000000
+Z8 !s107 rtl.v|
+Z9 !s90 -work|work|rtl.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+nin@place@n@t@t_@d@i@f
+vinPlaceNTT_DIF_core
+R1
+!i10b 1
+!s100 Eh:Y3]Nf9C3c<GN5Td4cU1
+I1RY_FNaiSIQeWH[[oZ:GI3
+R2
+R0
+R3
+R4
+R5
+L0 318
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_core
+vinPlaceNTT_DIF_core_core_fsm
+R1
+!i10b 1
+!s100 ===_L4HmV=JGiWgY2S@BE3
+IlXT:QFERQWFR__7KhFYFZ0
+R2
+R0
+R3
+R4
+R5
+L0 72
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_core_core_fsm
+vinPlaceNTT_DIF_core_wait_dp
+R1
+!i10b 1
+!s100 @B;M2zhc4zOeP>dAM[l>A2
+ImHkE;LlD`43AVY4[0GA4Z2
+R2
+R0
+R3
+R4
+R5
+L0 300
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_core_wait_dp
+vinPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_7_10_64_1024_1024_64_1_gen
+R1
+!i10b 1
+!s100 HC9B=ZB^i@DUz7hW2WB^K1
+IF1cg0cHmi5jDgUKb_?MB53
+R2
+R0
+R3
+R4
+R5
+Z12 L0 16
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_@xilinx_@r@a@m@s_@b@l@o@c@k_1@r1@w_@r@b@w_rport_7_10_64_1024_1024_64_1_gen
+vinPlaceNTT_DIF_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_4_10_64_1024_1024_64_1_gen
+R1
+!i10b 1
+!s100 hlcLWA?oB<K0jRDaUkk7Z3
+I<E;]7Mz@Dg3`:TBECT??h2
+R2
+R0
+R3
+R4
+R5
+L0 38
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nin@place@n@t@t_@d@i@f_@xilinx_@r@a@m@s_@b@l@o@c@k_1@r1@w_@r@b@w_rwport_4_10_64_1024_1024_64_1_gen
+vmodulo_dev
+Z13 !s110 1630429563
+!i10b 1
+!s100 Sb`4ag506amNWdFaaVBaY3
+I;KZ246P4L5^UEJH@3WUIb1
+R2
+R0
+Z14 w1629956246
+Z15 8../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v
+Z16 F../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v
+L0 4558
+R6
+r1
+!s85 0
+31
+Z17 !s108 1630429563.000000
+Z18 !s107 ../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v|
+Z19 !s90 -work|work|../td_ccore_solutions/modulo_dev_d3e65941ee7586d7daaa2e36d0d005555a5b_0/rtl.v|
+!i113 0
+R10
+R11
+vmodulo_dev_core
+R13
+!i10b 1
+!s100 iGAZ]>]la>[ZQF37`^RCW3
+IcOGkFk[43cMd_?<JVg8Ha1
+R2
+R0
+R14
+R15
+R16
+R12
+R6
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 0
+R10
+R11
+sscverify_top
+R0
+Tscverify_top_opt
+!s110 1630462154
+VV:NZCDVQAP9KgAHZ>bJJz1
+04 12 0 work scverify_top 0
+o+acc=npr -L ./Catapult_1/inPlaceNTT_DIF.v15/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/inPlaceNTT_DIF.v15/scverify/rtl_v_msim/work
+R11
+nscverify_top_opt
+OL;O;10.6;65
