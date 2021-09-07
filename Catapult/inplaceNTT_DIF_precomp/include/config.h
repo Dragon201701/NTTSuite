@@ -4,11 +4,12 @@
 #include <ac_int.h>
 
 const unsigned VECTOR_SIZE = 1024;
-const unsigned VECTOR_WIDTH = 64;
+const unsigned VECTOR_WIDTH = 32;
 const unsigned VECTOR_ADDR_BIT = 10;
-const unsigned PARAM_WIDTH = 64;
-typedef ac_int<64, false>   UINT64_T;
-typedef ac_int<64, true>   INT64_T;
+const unsigned PARAM_WIDTH = 32;
+typedef ac_int<32, false>   DATA_TYPE;
+typedef ac_int<64, false>   DATA_TYPE_TMP; //temporary result type after DATA_TYPE * DATA_TYPE
+typedef ac_int<32, true>	DATA_TYPE_SIGNED;
 typedef ac_int<VECTOR_WIDTH, false>   VEC_T;
 typedef ac_int<PARAM_WIDTH, false>   PARAM_T;
 typedef ac_int<VECTOR_ADDR_BIT, false>  VEC_INDEX_T;

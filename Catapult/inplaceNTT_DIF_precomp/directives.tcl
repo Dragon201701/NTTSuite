@@ -1,4 +1,3 @@
-set sfd [file dirname [info script]]
 solution new -state initial
 solution options defaults
 
@@ -18,9 +17,10 @@ go libraries
 
 directive set DSP_EXTRACTION yes
 directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+go memories
+directive set SCHED_USE_MULTICYCLE true
 go assembly
+go architect
 
 go extract
 
-go memories
-directive set SCHED_USE_MULTICYCLE true

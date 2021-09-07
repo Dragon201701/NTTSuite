@@ -13,9 +13,9 @@
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-UINT64_T modulo_dev(UINT64_T base, UINT64_T m); 
+DATA_TYPE modulo(DATA_TYPE_SIGNED base, DATA_TYPE_SIGNED m);
  
-UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m);
+DATA_TYPE modExp(DATA_TYPE base, DATA_TYPE exp, DATA_TYPE m);
 
-void inPlaceNTT_DIF(UINT64_T vec[VECTOR_SIZE], UINT64_T p, UINT64_T r, UINT64_T twiddle[VECTOR_SIZE]);
+void inPlaceNTT_DIF(DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE]);
 #endif /* NTT_H_ */
