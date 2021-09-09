@@ -50,6 +50,7 @@ int main(int argc, char **argv){
     uint64_t * result_g = naiveNTT(vec, VECTOR_SIZE, p, r);
     uint64_t * result1 = (uint64_t *)malloc(VECTOR_SIZE * sizeof(uint64_t));
     uint64_t * result2 = (uint64_t *)malloc(VECTOR_SIZE * sizeof(uint64_t));
+    uint64_t * result3 = (uint64_t *)malloc(VECTOR_SIZE * sizeof(uint64_t));
     inPlaceNTT_DIF(vec, p, r, result1);
     inPlaceNTT_DIT(vec, VECTOR_SIZE, p, r, false, result2);
     //printVec(result_g, VECTOR_SIZE);

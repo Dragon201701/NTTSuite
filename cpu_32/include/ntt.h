@@ -57,5 +57,17 @@ void inPlaceNTT_DIF(uint64_t *vec, uint64_t p, uint64_t r, uint64_t * result);
  */
 void inPlaceNTT_DIT(uint64_t *vec, uint64_t n, uint64_t p, uint64_t r, bool rev, uint64_t * result);
 
+
+/**
+ * ???
+ *
+ * @param vec 	The input vector to be transformed
+ * @param n	The size of the input vector
+ * @param p	The prime to be used as the modulus of the transformation
+ * @param r	The primitive root of the prime
+ * @param n2	The second factor of the vector decomposition
+ * @return 	The transformed vector
+ */
+void fourStepNTT(uint64_t *vec, uint64_t n, uint64_t p, uint64_t r, uint64_t n2, uint64_t * result);
 #endif
 
