@@ -84,11 +84,6 @@ UINT64_T *inPlaceNTT_DIF_golden(UINT64_T *vec, UINT64_T n, uint64_t p, uint64_t 
 		}
 	}
 	
-	/*if(rev){
-		return bit_reverse(result,n);
-	}else{
-		return result;
-	}*/
     return result;
 }
 
