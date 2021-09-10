@@ -8,12 +8,11 @@
 // const unsigned VECTOR_ADDR_BIT = 10;
 // const unsigned PARAM_WIDTH = 32;
 
-#define VECTOR_SIZE 1024
-#define VECTOR_WIDTH 64
-// #define VECTOR_SIZE_LOG2 log2(VECTOR_SIZE)
-#define VECTOR_SIZE_LOG2 10
+const unsigned VECTOR_SIZE = 1024;
+const unsigned VECTOR_WIDTH = 64;
+const unsigned VECTOR_SIZE_LOG2 = 10;
 
-#define PARAM_WIDTH 32
+const unsigned PARAM_WIDTH = 32;
 
 typedef uint32_t DATA_TYPE;
 typedef uint64_t DATA_TYPE_TMP;
