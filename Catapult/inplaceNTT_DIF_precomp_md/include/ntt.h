@@ -1,7 +1,7 @@
 #ifndef NTT_H_
 #define NTT_H_
 
-#include <ac_sync.h>
+#include "ac_sync.h"
 
 #include "config.h"
 /**

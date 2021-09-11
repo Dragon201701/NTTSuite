@@ -58,6 +58,7 @@ void inPlaceNTT_DIF_precomp(ac_sync & run, DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE
 				DATA_TYPE twiddle_f = twiddle[(1 << (VECTOR_SIZE_LOG2 - i)) * k];
 				DATA_TYPE twiddle_help = twiddle_h[(1 << (VECTOR_SIZE_LOG2 - i)) * k];
 				VEC_LOOP: for(unsigned  j = 0; j < VECTOR_SIZE; j+=m){
+					
 					factor1 = vec[j + k];
 					factor2 = vec[j + k + m/2];
 					vec[j + k] = modulo_add(factor1 + factor2, p);

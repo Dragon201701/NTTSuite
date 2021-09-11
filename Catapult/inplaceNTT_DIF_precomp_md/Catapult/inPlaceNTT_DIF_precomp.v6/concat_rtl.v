@@ -1,0 +1,5760 @@
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v 
+////////////////////////////////////////////////////////////////////////////////
+// Catapult Synthesis - Custom Interfaces
+//
+// Copyright (c) 2018 Mentor Graphics Corp.
+//       All Rights Reserved
+// 
+// This document contains information that is proprietary to Mentor Graphics
+// Corp. The original recipient of this document may duplicate this  
+// document in whole or in part for internal business purposes only, provided  
+// that this entire notice appears in all copies. In duplicating any part of  
+// this document, the recipient agrees to make every reasonable effort to  
+// prevent the unauthorized use and distribution of the proprietary information.
+// 
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in prepartion for creating
+// their own custom interfaces. This design does not present a complete
+// implementation of the named protocol or standard.
+//
+// NO WARRANTY.
+// MENTOR GRAPHICS CORP. EXPRESSLY DISCLAIMS ALL WARRANTY
+// FOR THE SOFTWARE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE
+// LAW, THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS"
+// AND WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+// PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR
+// DISTRIBUTION OF THE SOFTWARE REMAINS WITH YOU.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+// --------------------------------------------------------------------------
+// DESIGN UNIT:        ccs_axi4_lite_slave_insync
+//
+// DESCRIPTION:
+//   Implement an AXI4-writable sync - with handshake - input.  
+//   Behaves as ccs_sync_in_wait on catapult "side" and AXI4-Slave Memory 
+//   to the system.
+//
+//   - When core is "ready", AXI AWREADY will be asserted (otherwise not).
+//   - When BASE_ADDRESS is written (WVALID asserted) into (any data value), ivld 
+//       is asserted to the core.  
+//   - AWREADY will be deasserted for at least one cycle after a successful write.
+//   - ivld is asserted until ivld&&irdy on clockedge
+//
+//  Read channels dont do anything.
+//
+// CHANGE LOG:
+//  04/29/2019 - Initial implementation
+//
+// --------------------------------------------------------------------------
+// Uncomment this for lots of messages
+//`define SLAVE_DBG 1
+
+`define AXI4_AxBURST_FIXED      2'b00
+`define AXI4_AxBURST_INCR       2'b01
+`define AXI4_AxBURST_WRAP       2'b10
+`define AXI4_AxBURST_RESERVED   2'b11
+`define AXI4_AxSIZE_001_BYTE    3'b000
+`define AXI4_AxSIZE_002_BYTE    3'b001
+`define AXI4_AxSIZE_004_BYTE    3'b010
+`define AXI4_AxSIZE_008_BYTE    3'b011
+`define AXI4_AxSIZE_016_BYTE    3'b100
+`define AXI4_AxSIZE_032_BYTE    3'b101
+`define AXI4_AxSIZE_064_BYTE    3'b110
+`define AXI4_AxSIZE_128_BYTE    3'b111
+`define AXI4_AxLOCK_NORMAL      1'b0
+`define AXI4_AxLOCK_EXCLUSIVE   1'b1
+
+`define AXI3_AxLOCK_NORMAL      2'b00
+`define AXI3_AxLOCK_EXCLUSIVE   2'b01
+`define AXI3_AxLOCK_LOCKED      2'b10
+`define AXI3_AxLOCK_RESERVED    2'b11
+
+`define AXI4_AxCACHE_NORM_NN    4'b0010
+
+// W and R cache consts are almost the same
+`define AXI4_AWCACHE_NB        4'b0000
+`define AXI4_AWCACHE_B         4'b0001
+`define AXI4_AWCACHE_NORM_NCNB 4'b0010
+`define AXI4_AWCACHE_NORM_NCB  4'b0011
+`define AXI4_AWCACHE_WTNA      4'b0110
+`define AXI4_AWCACHE_WTRA      4'b0110
+`define AXI4_AWCACHE_WTWA      4'b1110
+`define AXI4_AWCACHE_WTRWA     4'b1110
+`define AXI4_AWCACHE_WBNA      4'b0111
+`define AXI4_AWCACHE_WBRA      4'b0111
+`define AXI4_WACACHE_WBWA      4'b1111
+`define AXI4_AWCACHE_WBRWA     4'b1111
+`define AXI4_ARCACHE_NB        4'b0000
+`define AXI4_ARCACHE_B         4'b0001
+`define AXI4_ARCACHE_NORM_NCNB 4'b0010
+`define AXI4_ARCACHE_NORM_NCB  4'b0011
+`define AXI4_ARCACHE_WTNA      4'b1010
+`define AXI4_ARCACHE_WTRA      4'b1110
+`define AXI4_ARCACHE_WTWA      4'b1010
+`define AXI4_ARCACHE_WTRWA     4'b1110
+`define AXI4_ARCACHE_WBNA      4'b1011
+`define AXI4_ARCACHE_WBRA      4'b1111
+`define AXI4_ARCACHE_WBWA      4'b1011
+`define AXI4_ARCACHE_WBRWA     4'b1111
+
+`define AXI4_AxPROT_b0_UNPRIV     1'b0
+`define AXI4_AxPROT_b0_PRIV       1'b1
+`define AXI4_AxPROT_b1_SECURE     1'b0
+`define AXI4_AxPROT_b1_UNSECURE   1'b1
+`define AXI4_AxPROT_b2_DATA       1'b0
+`define AXI4_AxPROT_b2_INSTR      1'b1
+`define AXI4_AxQOS_NONE           4'b0000
+`define AXI4_xRESP_OKAY           2'b00
+`define AXI4_xRESP_EXOKAY         2'b01
+`define AXI4_xRESP_SLVERR         2'b10
+`define AXI4_xRESP_DECERR         2'b11
+
+`define CLOG2(x) \
+      (x <= 1) ?   0 : \
+      (x <= 2) ?   1 : \
+      (x <= 4) ?   2 : \
+      (x <= 8) ?   3 : \
+      (x <= 16) ?  4 : \
+      (x <= 32) ?  5 : \
+      (x <= 64) ?  6 : \
+      (x <= 128) ? 7 : \
+      -1
+
+module ccs_axi4_lite_slave_insync ( ACLK, ARESETn, 
+  AWADDR, AWVALID, AWREADY,
+  WDATA, WSTRB, WVALID, WREADY,
+  BRESP, BVALID, BREADY,
+  ARADDR, ARVALID, ARREADY,
+  RDATA, RRESP, RVALID, RREADY,
+  irdy, ivld, triosy);
+   
+
+   parameter rscid = 1;           // Required resource ID parameter
+   parameter rst_ph = 0;          // Reset phase.  1= Positive edge. Default is AXI negative edge
+   parameter ADDR_WIDTH = 32;     // AXI4 address width (must be >= addr_w)
+   parameter DATA_WIDTH = 32;     // AXI4 data width (must be between 8 and 1024, and power of 2
+   parameter BASE_ADDRESS = 0;    // AXI4 Address that the register is seen at
+   
+   // AXI Clocking
+   input                               ACLK;                           // Rising edge clock
+   input                               ARESETn;                        // Active LOW asynchronous reset
+   wire                                int_ARESETn;
+   assign int_ARESETn = rst_ph ? ~ARESETn : ARESETn;
+
+   // ============== AXI4 Slave Read Address Channel Signals
+   input [ADDR_WIDTH-1:0]              ARADDR;                         // Read address
+   input                               ARVALID;                        // Read address valid
+   output                              ARREADY;                        // Read address ready
+   
+   // ============== AXI4 Slave Read Data Channel Signals
+   output [DATA_WIDTH-1:0]             RDATA;                          // Read data
+   output [1:0]                        RRESP;                          // Read response
+   output                              RVALID;                         // Read valid
+   input                               RREADY;                         // Read ready
+
+   // ============== AXI4 Slave Write Address Channel Signals
+   input [ADDR_WIDTH-1:0]              AWADDR;                         // Write address
+   input                               AWVALID;                        // Write address valid
+   output                              AWREADY;                        // Write address ready
+   
+   // ============== AXI4 Slave Write Data Channel
+   input [DATA_WIDTH-1:0]              WDATA;                          // Write data
+   input [DATA_WIDTH/8 - 1:0]          WSTRB;                          // Write strobe (bytewise)
+   input                               WVALID;                         // Write data is valid
+   output                              WREADY;                         // Write ready
+
+   // ============== AXI4 Slave Write Response Channel Signals
+   output [1:0]                        BRESP;                          // Write response (of slave)
+   output                              BVALID;                         // Write response valid
+   input                               BREADY;                         // Response ready
+
+   assign ARREADY = 0;
+   assign RDATA = 0;
+   assign RRESP = 0;
+   assign RVALID = 0;
+
+   reg                                 AWREADY_reg;
+   assign AWREADY = AWREADY_reg;
+   reg                                 WREADY_reg;
+   assign WREADY = WREADY_reg;
+   reg [1:0]                           BRESP_reg;
+   assign BRESP = BRESP_reg;
+   reg                                 BVALID_reg;
+   assign BVALID = BVALID_reg;
+   
+   // Catapult interface
+   input                               irdy;
+   output                              ivld;
+   output                              triosy;  // transactor uses 
+   
+   reg                   ivld_reg;
+   assign ivld = ivld_reg;
+
+   reg                   triosy_reg;
+   assign triosy = triosy_reg;
+   
+   // Statemachine for read and write operations are separate
+   localparam [2:0] axi4w_idle=0, axi4w_wait_for_addr=1, axi4w_write=2, axi4w_write_done=3;
+
+   reg [2:0]     write_state;
+   wire [ADDR_WIDTH-1:0] base_address;
+   assign base_address = BASE_ADDRESS;
+   
+   // AXI write processing.
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         AWREADY_reg <= 0;
+         WREADY_reg <= 0;
+         BRESP_reg <= `AXI4_xRESP_OKAY;
+         BVALID_reg <= 0;
+         write_state <= axi4w_idle;
+         ivld_reg <= 0;
+         triosy_reg <= 0;
+      end else begin
+         if ((write_state == axi4w_idle) && (irdy == 1)) begin
+`ifdef SLAVE_DBG
+            $display("AXI inSync - irdy asserted T=%t", $time);
+`endif
+            triosy_reg <= 0;
+            WREADY_reg <= 1;
+            AWREADY_reg <= 1;
+            write_state <= axi4w_wait_for_addr;
+         end else if (write_state == axi4w_wait_for_addr) begin : waitAddr
+            reg [1:0]   tmpBRESP;
+            tmpBRESP = `AXI4_xRESP_OKAY;
+            if (AWVALID) begin
+`ifdef SLAVE_DBG
+               $display("AXI inSync sees AWVALID AWADDR=%h at T=%t", AWADDR, $time);
+`endif
+               AWREADY_reg <= 0;
+               if (AWADDR != base_address) begin
+                  // error check.  Let the write happen anyway
+                  tmpBRESP = `AXI4_xRESP_DECERR;
+                  // synopsys translate_off
+                  if (AWADDR != base_address)
+                    $display("Warning: AWADDR address(%h) not the BASE_ADDRESS of this device:%h", AWADDR, base_address);
+                  // synopsys translate_on
+               end 
+               if (WVALID == 1) begin
+`ifdef SLAVE_DBG
+                  $display("  WVALID WDATA=%h WSTRB=%h at T=%t", WDATA, WSTRB, $time);
+`endif
+                  // allow for address and data to be presented in one cycle
+                  // Check for the write to be masked
+                  if (WSTRB == 0) begin // all or nothing in our usage
+                     // synopsys translate_off
+                     $display("Warning:  WSTRB for inSync ignored at T=%t", $time);
+                     // synopsys translate_on
+                     tmpBRESP = `AXI4_xRESP_DECERR;
+                  end
+`ifdef SLAVE_DBG
+                  $display("AXI inSync write:%h at T=%t", WDATA, $time);
+`endif
+                  ivld_reg <= 1;
+                  BRESP_reg <= tmpBRESP;
+                  BVALID_reg <= 1;
+                  write_state <= axi4w_write_done;
+               end else begin
+                  write_state <= axi4w_write;
+               end
+            end
+         end else if (write_state == axi4w_write) begin : write
+            reg [1:0]   tmpBRESP2;
+            tmpBRESP2 = `AXI4_xRESP_OKAY;
+            if (WVALID == 1) begin
+`ifdef SLAVE_DBG
+               $display("AXI inSync write:%h strb=%h at T=%t", WDATA, WSTRB, $time);
+`endif
+               tmpBRESP2 = `AXI4_xRESP_OKAY;
+               if (WSTRB == 0) begin // all or nothing in our usage
+                  // synopsys translate_off
+                  $display("Warning:  WSTRB for inSync ignored at T=%t", $time);
+                  // synopsys translate_on
+                  tmpBRESP2 = `AXI4_xRESP_DECERR;
+               end
+               ivld_reg <= 1;               
+               BRESP_reg <= tmpBRESP2;
+               BVALID_reg <= 1;
+               write_state <= axi4w_write_done;
+            end // if (WVALID == 1)
+         end else if (write_state == axi4w_write_done) begin : done  // if (write_state == axi4w_write)
+            reg    donePlease;
+            donePlease = 0;
+            if (irdy) begin
+               ivld_reg <= 0;
+               if ((BREADY == 1) || (WREADY_reg == 1)) begin
+                  donePlease = 1;
+               end
+            end
+            if (BREADY == 1) begin
+               WREADY_reg <= 0;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 0;
+               if (ivld_reg == 0) begin
+                  donePlease = 1;
+               end
+            end
+            if (donePlease == 1) begin
+               write_state <= axi4w_idle;
+               triosy_reg <= 1;
+            end
+         end else begin
+            triosy_reg <= 0;
+            ivld_reg <= 0;
+         end
+      end 
+   end
+
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v 
+////////////////////////////////////////////////////////////////////////////////
+// Catapult Synthesis - Custom Interfaces
+//
+// Copyright (c) 2018 Mentor Graphics Corp.
+//       All Rights Reserved
+// 
+// This document contains information that is proprietary to Mentor Graphics
+// Corp. The original recipient of this document may duplicate this  
+// document in whole or in part for internal business purposes only, provided  
+// that this entire notice appears in all copies. In duplicating any part of  
+// this document, the recipient agrees to make every reasonable effort to  
+// prevent the unauthorized use and distribution of the proprietary information.
+// 
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in prepartion for creating
+// their own custom interfaces. This design does not present a complete
+// implementation of the named protocol or standard.
+//
+// NO WARRANTY.
+// MENTOR GRAPHICS CORP. EXPRESSLY DISCLAIMS ALL WARRANTY
+// FOR THE SOFTWARE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE
+// LAW, THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS"
+// AND WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+// PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR
+// DISTRIBUTION OF THE SOFTWARE REMAINS WITH YOU.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+// --------------------------------------------------------------------------
+// DESIGN UNIT:        ccs_axi4_slave_mem
+//
+// DESCRIPTION:
+//   This model implements an AXI4 Slave memory interface for use in 
+//   Interface Synthesis in Catapult. The component details are described in the datasheet
+//
+//   AXI/Catapult read/write to the same address in the same cycle is non-determinant
+//
+// Notes:
+//  1. This model implements a local memory of size {cwidth x depth}.
+//     If the Catapult operation requires a memory width cwidth <= AXI bus width
+//     this model will zero-pad the high end bits as necessary.
+// CHANGE LOG:
+//
+//  01/29/19 - Add reset phase and separate base address for read/write channels
+//  11/26/18 - Add burst and other tweaks
+//  02/28/18 - Initial implementation
+//
+// --------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------
+//  Memory Organization
+//   This model is designed to provide storage for only the bits/elements that
+//   the Catapult core actually interacts with.
+//   The user supplies a base address for the AXI memory store via BASE_ADDRESS
+//   parameter.  
+// Example:
+//   C++ array declared as "ac_int<7,false>  coeffs[4];"
+//   results in a Catapult operator width (op_width) of 7,
+//   and cwidth=7 and addr_w=2 (addressing 4 element locations).
+//   The library forces DATA_WIDTH to be big enough to hold
+//   cwidth bits, rounded up to power-of-2 as needed.
+// 
+//   The AXI address scheme addresses bytes and so increments
+//   by number-of-bytes per data transaction, plus the BASE_ADDRESS. 
+//   The top and left describe the AXI view of the memory. 
+//   The bottom and right describe the Catapult view of the memory.
+//
+//      AXI-4 SIGNALS
+//      ADDR_WIDTH=4        DATA_WIDTH=32
+//        AxADDR               xDATA
+//                    31                       0
+//                    +------------+-----------+
+//      BA+0000       |            |           |
+//                    +------------+-----------+
+//      BA+0000       |            |           |
+//                    +------------+===========+
+//      BA+1100       |            |  elem3    |    11
+//                    +------------+===========+
+//      BA+1000       |            |  elem2    |    10
+//                    +------------+===========+
+//      BA+0100       |            |  elem1    |    01
+//                    +------------+===========+
+//      BA+0000       |            |  elem0    |    00
+//                    +------------+===========+
+//                                 6           0
+//                                   s_din/out     s_addr
+//                                   cwidth=7      addr_w=2
+//                                         CATAPULT SIGNALS
+//
+// -------------------------------------------------------------------------------
+
+// Uncomment this for lots of messages
+//`define SLAVE_DBG_READ 1
+//`define SLAVE_DBG_WRITE 1
+
+`define AXI4_AxBURST_FIXED      2'b00
+`define AXI4_AxBURST_INCR       2'b01
+`define AXI4_AxBURST_WRAP       2'b10
+`define AXI4_AxBURST_RESERVED   2'b11
+`define AXI4_AxSIZE_001_BYTE    3'b000
+`define AXI4_AxSIZE_002_BYTE    3'b001
+`define AXI4_AxSIZE_004_BYTE    3'b010
+`define AXI4_AxSIZE_008_BYTE    3'b011
+`define AXI4_AxSIZE_016_BYTE    3'b100
+`define AXI4_AxSIZE_032_BYTE    3'b101
+`define AXI4_AxSIZE_064_BYTE    3'b110
+`define AXI4_AxSIZE_128_BYTE    3'b111
+`define AXI4_AxLOCK_NORMAL      1'b0
+`define AXI4_AxLOCK_EXCLUSIVE   1'b1
+
+`define AXI3_AxLOCK_NORMAL      2'b00
+`define AXI3_AxLOCK_EXCLUSIVE   2'b01
+`define AXI3_AxLOCK_LOCKED      2'b10
+`define AXI3_AxLOCK_RESERVED    2'b11
+
+`define AXI4_AxCACHE_NORM_NN    4'b0010
+
+// W and R cache consts are almost the same
+`define AXI4_AWCACHE_NB        4'b0000
+`define AXI4_AWCACHE_B         4'b0001
+`define AXI4_AWCACHE_NORM_NCNB 4'b0010
+`define AXI4_AWCACHE_NORM_NCB  4'b0011
+`define AXI4_AWCACHE_WTNA      4'b0110
+`define AXI4_AWCACHE_WTRA      4'b0110
+`define AXI4_AWCACHE_WTWA      4'b1110
+`define AXI4_AWCACHE_WTRWA     4'b1110
+`define AXI4_AWCACHE_WBNA      4'b0111
+`define AXI4_AWCACHE_WBRA      4'b0111
+`define AXI4_WACACHE_WBWA      4'b1111
+`define AXI4_AWCACHE_WBRWA     4'b1111
+`define AXI4_ARCACHE_NB        4'b0000
+`define AXI4_ARCACHE_B         4'b0001
+`define AXI4_ARCACHE_NORM_NCNB 4'b0010
+`define AXI4_ARCACHE_NORM_NCB  4'b0011
+`define AXI4_ARCACHE_WTNA      4'b1010
+`define AXI4_ARCACHE_WTRA      4'b1110
+`define AXI4_ARCACHE_WTWA      4'b1010
+`define AXI4_ARCACHE_WTRWA     4'b1110
+`define AXI4_ARCACHE_WBNA      4'b1011
+`define AXI4_ARCACHE_WBRA      4'b1111
+`define AXI4_ARCACHE_WBWA      4'b1011
+`define AXI4_ARCACHE_WBRWA     4'b1111
+
+`define AXI4_AxPROT_b0_UNPRIV     1'b0
+`define AXI4_AxPROT_b0_PRIV       1'b1
+`define AXI4_AxPROT_b1_SECURE     1'b0
+`define AXI4_AxPROT_b1_UNSECURE   1'b1
+`define AXI4_AxPROT_b2_DATA       1'b0
+`define AXI4_AxPROT_b2_INSTR      1'b1
+`define AXI4_AxQOS_NONE           4'b0000
+`define AXI4_xRESP_OKAY           2'b00
+`define AXI4_xRESP_EXOKAY         2'b01
+`define AXI4_xRESP_SLVERR         2'b10
+`define AXI4_xRESP_DECERR         2'b11
+
+`define CLOG2(x) \
+      (x <= 1) ?   0 : \
+      (x <= 2) ?   1 : \
+      (x <= 4) ?   2 : \
+      (x <= 8) ?   3 : \
+      (x <= 16) ?  4 : \
+      (x <= 32) ?  5 : \
+      (x <= 64) ?  6 : \
+      (x <= 128) ? 7 : \
+      -1
+
+module ccs_axi4_slave_mem ( ACLK, ARESETn, 
+  AWID, AWADDR, AWLEN, AWSIZE, AWBURST, AWLOCK, AWCACHE, AWPROT, AWQOS, AWREGION, AWUSER, AWVALID, AWREADY,
+  WDATA, WSTRB, WLAST, WUSER, WVALID, WREADY,
+  BID, BRESP, BUSER, BVALID, BREADY,
+  ARID, ARADDR, ARLEN, ARSIZE, ARBURST, ARLOCK, ARCACHE, ARPROT, ARQOS, ARREGION, ARUSER, ARVALID, ARREADY,
+  RID, RDATA, RRESP, RLAST, RUSER, RVALID, RREADY,
+  s_re, s_we, s_raddr, s_waddr, s_din, s_dout, s_rrdy, s_wrdy, is_idle, tr_write_done, s_tdone);
+
+   parameter rscid = 1;           // Required resource ID parameter
+   parameter depth  = 16;         // Number of addressable elements
+   parameter op_width = 1;        // dummy parameter for cwidth calculation
+   parameter cwidth = 8;          // Internal memory data width
+   parameter addr_w = 4;          // Internal memory address width
+   parameter nopreload = 0;       // 1= no preload before Catapult can read
+   parameter rst_ph = 0;          // Reset phase.  1= Positive edge. Default is AXI negative edge
+   parameter ADDR_WIDTH = 32;     // AXI4 address width (must be >= addr_w)
+   parameter DATA_WIDTH = 32;     // AXI4 data width (must be between 8 and 1024, and power of 2
+   parameter ID_WIDTH    = 1;     // AXI4 ID field width (ignored in this model)
+   parameter USER_WIDTH  = 1;     // AXI4 User field width (ignored in this model)
+   parameter REGION_MAP_SIZE = 1; // AXI4 Region Map (ignored in this model)
+   parameter wBASE_ADDRESS = 0;    // AXI4 write channel base address
+   parameter rBASE_ADDRESS = 0;    // AXI4 read channel base address
+   
+   // AXI Clocking
+   input                               ACLK;                           // Rising edge clock
+   input                               ARESETn;                        // Active LOW asynchronous reset
+   wire                                int_ARESETn;
+   assign int_ARESETn = rst_ph ? ~ARESETn : ARESETn;
+
+   // ============== AXI4 Slave Write Address Channel Signals
+   input [ID_WIDTH-1:0]                AWID;                           // Write Transaction ID
+   input [ADDR_WIDTH-1:0]              AWADDR;                         // Write address
+   input [7:0]                         AWLEN;                          // Write burst length in beats
+   input [2:0]                         AWSIZE;                         // Write burst size - encoding(above)
+   input [1:0]                         AWBURST;                        // Write burst mode
+   input                               AWLOCK;                         // Lock type
+   input [3:0]                         AWCACHE;                        // Memory type
+   input [2:0]                         AWPROT;                         // Protection Type
+   input [3:0]                         AWQOS;                          // Quality of Service
+   input [3:0]                         AWREGION;                       // Region identifier
+   input [USER_WIDTH-1:0]              AWUSER;                         // User signal
+   input                               AWVALID;                        // Write address valid
+   output                              AWREADY;                        // Write address ready
+   
+   // ============== AXI4 Slave Write Data Channel
+   input [DATA_WIDTH-1:0]              WDATA;                          // Write data
+   input [DATA_WIDTH/8 - 1:0]          WSTRB;                          // Write strobe (bytewise)
+   input                               WLAST;                          // Write last
+   input [USER_WIDTH-1:0]              WUSER;                          // User signal
+   input                               WVALID;                         // Write data is valid
+   output                              WREADY;                         // Write ready
+
+   // ============== AXI4 Slave Write Response Channel Signals
+   output [ID_WIDTH-1:0]               BID;                            // Response Transaction ID tag
+   output [1:0]                        BRESP;                          // Write response (of slave)
+   output [USER_WIDTH-1:0]             BUSER;                          // User signal
+   output                              BVALID;                         // Write response valid
+   input                               BREADY;                         // Response ready
+
+   // ============== AXI4 Slave Read Address Channel Signals
+   input [ID_WIDTH-1:0]                ARID;                           // Read Transaction ID
+   input [ADDR_WIDTH-1:0]              ARADDR;                         // Read address
+   input [7:0]                         ARLEN;                          // Read burst length in beats
+   input [2:0]                         ARSIZE;                         // Read burst size - encoding(above)
+   input [1:0]                         ARBURST;                        // Read burst mode
+   input                               ARLOCK;                         // Lock type
+   input [3:0]                         ARCACHE;                        // Memory type
+   input [2:0]                         ARPROT;                         // Protection Type
+   input [3:0]                         ARQOS;                          // Quality of Service
+   input [3:0]                         ARREGION;                       // Region identifier
+   input [USER_WIDTH-1:0]              ARUSER;                         // User signal
+   input                               ARVALID;                        // Read address valid
+   output                              ARREADY;                        // Read address ready
+   
+   // ============== AXI4 Slave Read Data Channel Signals
+   output [ID_WIDTH-1:0]               RID;                            // Read Transaction ID tag
+   output [DATA_WIDTH-1:0]             RDATA;                          // Read data
+   output [1:0]                        RRESP;                          // Read response
+   output                              RLAST;                          // Read last
+   output [USER_WIDTH-1:0]             RUSER;                          // User signal
+   output                              RVALID;                         // Read valid
+   input                               RREADY;                         // Read ready
+
+   reg                                 AWREADY_reg;
+   assign AWREADY = AWREADY_reg;
+   reg                                 WREADY_reg;
+   assign WREADY = WREADY_reg;
+   reg [ID_WIDTH-1:0]                  AWID_reg;
+   assign BID = AWID_reg;
+   reg [1:0]                           BRESP_reg;
+   assign BRESP = BRESP_reg;
+   assign BUSER = 0;
+   reg                                 BVALID_reg;
+   assign BVALID = BVALID_reg;
+   
+   reg                                 ARREADY_reg;
+   assign ARREADY = ARREADY_reg;
+
+   reg [ID_WIDTH-1:0]                  ARID_reg;
+   assign RID = ARID_reg;   
+   reg [DATA_WIDTH-1:0]                RDATA_reg;
+   assign RDATA = RDATA_reg;
+   reg [1:0]                           RRESP_reg;
+   assign RRESP = RRESP_reg;
+   reg                                 RLAST_reg;
+   assign RLAST = RLAST_reg;
+   assign RUSER = 0;
+   reg                                 RVALID_reg;
+   assign RVALID = RVALID_reg;
+   
+   // Catapult interface
+   input                               s_re;     // Catapult attempting read of slave memory
+   input                               s_we;     // Catapult attempting write to slave memory
+   input [addr_w-1:0]                  s_raddr;  // Catapult addressing into memory
+   input [addr_w-1:0]                  s_waddr;  // Catapult addressing into memory
+   output [cwidth-1:0]                 s_din;    // Data into catapult block through this interface
+   input [cwidth-1:0]                  s_dout;   // Data out to slave from catapult
+   output                              s_rrdy;   // Slave memory ready for access by Catapult (1=ready)
+   output                              s_wrdy;   // Slave memory ready for access by Catapult (1=ready)
+   output                              is_idle;  // The component is idle - clock can be suppressed
+   input                               tr_write_done;  // transactor resource preload write done
+   input                               s_tdone;        // Transaction_done in scverify
+   
+   reg [cwidth-1:0]                    s_din_reg;
+   assign s_din = s_din_reg;
+   reg                                 s_rrdy_reg;
+
+   wire                                rCatOutOfOrder;
+   reg                                 catIsReading;
+   integer                             next_raddr;
+   
+   assign s_rrdy = s_rrdy_reg && !rCatOutOfOrder;
+   
+   reg                                 s_wrdy_reg;
+   assign s_wrdy = s_wrdy_reg && !s_tdone;
+   assign is_idle = 0;
+   
+   // Statemachine for read and write operations are separate
+   localparam [2:0] axi4r_idle=0, axi4r_read=1;   
+   localparam [2:0] axi4w_idle=0, axi4w_write=1, axi4w_write_done=2,  axi4w_catwrite=3, axi4w_catwrite_done=4;
+   localparam addrShift = `CLOG2(DATA_WIDTH/8);
+
+   reg [2:0]     read_state;
+   reg [2:0]     write_state;
+   
+   reg [7:0]     readBurstCnt;  // how many are left
+
+  // Memory embedded in this slave
+   reg [cwidth-1:0] mem[depth-1:0];
+
+   wire [ADDR_WIDTH-1:0] wbase_address;
+   wire [ADDR_WIDTH-1:0] rbase_address;
+   assign wbase_address = wBASE_ADDRESS;
+   assign rbase_address = rBASE_ADDRESS;
+   
+   reg [ADDR_WIDTH-1:0] address;
+      
+   // AXI4 Bus Read processing
+   reg [ADDR_WIDTH-1:0] useAddr ;
+
+   // The "last" catapult address processed in a burst
+   integer readAddr;
+
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         read_state <= axi4r_idle;
+         ARREADY_reg <= 1;
+         ARID_reg <= 0;
+         RDATA_reg <= 0;
+         RRESP_reg <= `AXI4_xRESP_OKAY;
+         RLAST_reg <= 0;
+         RVALID_reg <= 0;
+         readAddr <= 0;
+         readBurstCnt <= 0;
+      end else begin
+         if ((read_state == axi4r_idle) && (ARVALID == 1)) begin
+            useAddr = (ARADDR - rbase_address) >> addrShift;
+            // Protect from out of range addressing
+
+`ifdef SLAVE_DBG_WRITE
+            $display("ARADDR=%d rbase_address=%d addrShift=%d useAddr=%d at T=%t",
+                     ARADDR, rbase_address, addrShift, useAddr, $time);
+`endif
+            if (useAddr < depth) begin
+               if (cwidth < DATA_WIDTH) begin
+                  //RDATA_reg[DATA_WIDTH-1:cwidth] <= 0;   // vcs doesnt like this
+                  //RDATA_reg[cwidth-1:0] <= mem[useAddr];
+                  RDATA_reg <= {{DATA_WIDTH - cwidth{1'b0}}, mem[useAddr]};
+               end else begin
+                  RDATA_reg <= mem[useAddr];
+               end
+`ifdef SLAVE_DBG_READ
+               $display("Slave AXI1 read:mem[%d]=%h at T=%t", useAddr, mem[useAddr], $time);
+`endif
+            end else begin
+               // synopsys translate_off               
+               $display("Error:  Out-of-range AXI memory read access:%h at T=%t", ARADDR, $time);
+               // synopsys translate_on
+            end
+            RRESP_reg <= `AXI4_xRESP_OKAY;
+            readAddr <= useAddr;            
+            readBurstCnt <= ARLEN;
+            if (ARLEN== 0) begin
+               ARREADY_reg <= 0;        
+               RLAST_reg <= 1;
+            end
+            RVALID_reg <= 1;
+            ARID_reg <= ARID;
+            read_state <= axi4r_read;
+         end else if (read_state == axi4r_read) begin
+            if (RREADY == 1) begin
+               if (readBurstCnt == 0) begin
+                  // we already sent the last data
+                  ARREADY_reg <= 1;
+                  RRESP_reg <= `AXI4_xRESP_OKAY;
+                  RLAST_reg <= 0;
+                  RVALID_reg <= 0;
+                  read_state <= axi4r_idle;               
+               end else begin 
+                  useAddr = readAddr + 1;
+                  readAddr <= readAddr + 1;
+                  // Protect from out of range addressing
+                  if (useAddr < depth) begin
+                     if (cwidth < DATA_WIDTH) begin
+                        //RDATA_reg[DATA_WIDTH-1:cwidth] <= 0;  // vcs errors on this
+                        //RDATA_reg[cwidth-1:0] <= mem[useAddr];
+                        RDATA_reg <= {{DATA_WIDTH - cwidth{1'b0}}, mem[useAddr]};
+                     end else begin
+                        RDATA_reg <= mem[useAddr];
+                     end
+`ifdef SLAVE_DBG_READ
+                     $display("Slave AXI2 read:mem[%d]=%h at T=%t", useAddr, mem[useAddr], $time);
+`endif
+                  end else begin
+                     // We bursted right off the end of the array
+                     // synopsys translate_off               
+                     $display("Error:  Out-of-range AXI memory read access:%h at T=%t", ARADDR, $time);
+                     // synopsys translate_on
+                  end
+                  readBurstCnt <= readBurstCnt - 1;
+                  if ((readBurstCnt - 1) == 0) begin
+                     ARREADY_reg <= 0;        
+                     RRESP_reg <= `AXI4_xRESP_OKAY;
+                     RLAST_reg <= 1;
+                  end
+                  RVALID_reg <= 1;
+               end // else: !if(readBurstCnt == 0)
+            end // if (RREADY == 1)
+         end // if (read_state == axi4r_read)
+      end // else: !if(~int_ARESETn)
+   end // always@ (posedge ACLK or negedge int_ARESETn)
+   
+
+   // AXI and catapult write processing.
+   // Catapult write is one-cycle long so basically a write can happen
+   // in any axi state.  AXI has precedence in that catapult write is processed
+   // first at each cycle
+   integer writeAddr;  // last cat addr written
+   integer i;
+   
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         AWREADY_reg <= 1;
+         AWID_reg <= 0;
+         WREADY_reg <= 1;
+         BRESP_reg <= `AXI4_xRESP_OKAY;
+         BVALID_reg <= 0;
+         write_state <= axi4w_idle;
+         writeAddr <= 0;
+         s_wrdy_reg <= 0;
+         // synopsys translate_off
+         for (i=0; i<depth; i=i+1) begin
+            mem[i] <= 0;
+         end
+         // synopsys translate_on
+      end else begin
+         // When in idle state, catapult and AXI can both initiate writes.
+         // If to the same address, then AXI wins...
+         if ((s_we == 1) && (write_state == axi4w_idle) && !s_tdone) begin
+            mem[s_waddr] <= s_dout;
+`ifdef SLAVE_DBG_WRITE
+            $display("Slave CAT write:mem[%d]=%h at T=%t", s_waddr, s_dout, $time);
+`endif
+         end
+         if ((write_state == axi4w_idle) && (AWVALID == 1)) begin
+            s_wrdy_reg <= 0;
+            AWREADY_reg <= 0;
+            AWID_reg <= AWID;
+            useAddr = (AWADDR - wbase_address) >> addrShift;
+`ifdef SLAVE_DBG_WRITE
+            $display("AWADDR=%d wbase_address=%d addrShift=%d useAddr=%d at T=%t",
+                     AWADDR, wbase_address, addrShift, useAddr, $time);
+`endif
+            if (WVALID == 1) begin
+               // allow for address and data to be presented in one cycle
+               // Check for the write to be masked
+               if (WSTRB != 0) begin // a byte at a time.  Watch for cwidth much less than DATA_WIDTH
+                  if (useAddr < depth) begin
+                     for (i=0; i<(DATA_WIDTH/8);i=i+1) begin
+                        if (WSTRB[i] == 1) begin
+                           if ((8*i) < cwidth) begin
+                              mem[useAddr][8*i +: 8] <= WDATA[8*i +: 8];
+                           end
+                        end
+                     end
+`ifdef SLAVE_DBG_WRITE
+                     $display("Slave AXI1 write:mem[%d]=%h at T=%t", useAddr, WDATA, $time);
+`endif
+                  end else begin
+                     // synopsys translate_off               
+                     $display("Error:  Out-of-range AXI memory write access:%h at T=%t", AWADDR, $time);
+                     // synopsys translate_on
+                  end
+               end
+            end
+            writeAddr <= useAddr;
+            if ((WLAST == 1) && (WVALID == 1)) begin
+               write_state <= axi4w_write_done;
+               WREADY_reg <= 0;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 1;
+            end else begin
+               write_state <= axi4w_write;
+            end
+         end else if (write_state == axi4w_write) begin
+            if (WVALID == 1) begin
+               useAddr = writeAddr+1;
+               if (WSTRB != 0) begin // a byte at a time.  Watch for cwidth much less than DATA_WIDTH
+                  if (useAddr < depth) begin
+                     for (i=0; i<(DATA_WIDTH/8);i=i+1) begin
+                        if (WSTRB[i] == 1) begin
+                           if ((8*i) < cwidth) begin
+                              mem[useAddr][8*i +: 8] <= WDATA[8*i +: 8];
+                           end
+                        end
+                     end
+`ifdef SLAVE_DBG_WRITE
+                     $display("SLAVE AXI2 write:mem[%d]=%h at T=%t", useAddr, WDATA, $time);
+`endif
+                  end else begin
+                     // synopsys translate_off
+                     $display("Error:  Out-of-range AXI memory write access:%h at T=%t", AWADDR, $time);
+                     // synopsys translate_on
+                  end
+               end
+               writeAddr <= useAddr;
+               if (WLAST == 1) begin
+                  write_state <= axi4w_write_done;
+                  WREADY_reg <= 0;
+                  BRESP_reg <= `AXI4_xRESP_OKAY;
+                  BVALID_reg <= 1;
+               end 
+            end // if (WVALID == 1)
+         end else if (write_state == axi4w_write_done) begin // if (write_state == axi4w_write)
+            if (BREADY == 1) begin
+               AWREADY_reg <= 1;
+               WREADY_reg <= 1;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 0;
+               write_state <= axi4w_idle;
+               s_wrdy_reg <= 1;
+            end
+         end else begin
+            s_wrdy_reg <= 1;
+         end
+      end // else: !if(~int_ARESETn)
+   end // always@ (posedge ACLK or negedge int_ARESETn)
+
+   assign rCatOutOfOrder = s_re && s_rrdy_reg && catIsReading && (next_raddr != s_raddr+1);
+   
+   // Catapult read processing
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         s_din_reg <= 0;
+         s_rrdy_reg <= 0;
+         catIsReading <= 0;
+         next_raddr <= 0;
+      end else begin
+         // Catapult has read access to memory
+         if (tr_write_done == 1'b1) begin
+            if (s_re == 1'b1) begin
+`ifdef SLAVE_DBG_READ
+               $display("Slave CAT read.  Addr=%d nextAddr=%d Data=%d OOO=%d isReading=%d T=%t", s_raddr, next_raddr, 
+                        mem[s_raddr], rCatOutOfOrder, catIsReading, $time);
+`endif
+               if (catIsReading && !rCatOutOfOrder) begin 
+                  if (next_raddr < depth) begin
+                     s_din_reg <= mem[next_raddr];
+                     next_raddr <= next_raddr+1;                  
+`ifdef SLAVE_DBG_READ
+                     $display("  Burst continues");                  
+`endif
+                  end else begin
+                     s_rrdy_reg <= 0;
+                     catIsReading <= 0;
+                     next_raddr <= 0;                  
+                  end
+               end else begin
+                  s_din_reg <= mem[s_raddr];
+                  s_rrdy_reg <= 1;
+                  next_raddr <= s_raddr+1;                  
+                  if (catIsReading && rCatOutOfOrder) begin
+`ifdef SLAVE_DBG_READ
+                     $display("  OutOfOrder");                  
+`endif                  
+                     catIsReading <= 0;  // a hiccup
+                  end else begin
+                     catIsReading <= 1;
+                  end
+               end
+            end else begin
+               s_rrdy_reg <= 0;
+               catIsReading <= 0;
+               next_raddr <= 0;
+            end
+         end else begin 
+            s_rrdy_reg <= 0;
+            catIsReading <= 0;
+            next_raddr <= 0;
+         end
+      end
+   end
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v 
+////////////////////////////////////////////////////////////////////////////////
+// Catapult Synthesis - Custom Interfaces
+//
+// Copyright (c) 2018 Mentor Graphics Corp.
+//       All Rights Reserved
+// 
+// This document contains information that is proprietary to Mentor Graphics
+// Corp. The original recipient of this document may duplicate this  
+// document in whole or in part for internal business purposes only, provided  
+// that this entire notice appears in all copies. In duplicating any part of  
+// this document, the recipient agrees to make every reasonable effort to  
+// prevent the unauthorized use and distribution of the proprietary information.
+// 
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in prepartion for creating
+// their own custom interfaces. This design does not present a complete
+// implementation of the named protocol or standard.
+//
+// NO WARRANTY.
+// MENTOR GRAPHICS CORP. EXPRESSLY DISCLAIMS ALL WARRANTY
+// FOR THE SOFTWARE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE
+// LAW, THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS"
+// AND WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+// PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR
+// DISTRIBUTION OF THE SOFTWARE REMAINS WITH YOU.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+// --------------------------------------------------------------------------
+// DESIGN UNIT:        ccs_axi4_lite_slave_indirect
+//
+// DESCRIPTION:
+//   Implement an AXI4-LITE read/write into a non-handshake "wire"
+//   Behaves as ccs_in and/or ccs_out on catapult "side" and AXI4-LITE Slave 
+//   Memory to the system.
+//
+//   Read/Write to BASE_ADDRESS write/loads the register for Catapult.  Write to any other
+//   address is ignored, and response is an error.
+//
+//   Read channels will read out the currently programmed register value
+//
+// CHANGE LOG:
+//  05/07/2019 - Initial implementation
+//
+// --------------------------------------------------------------------------
+// Uncomment this for lots of messages
+//`define SLAVE_DBG 1
+
+`define AXI4_AxBURST_FIXED      2'b00
+`define AXI4_AxBURST_INCR       2'b01
+`define AXI4_AxBURST_WRAP       2'b10
+`define AXI4_AxBURST_RESERVED   2'b11
+`define AXI4_AxSIZE_001_BYTE    3'b000
+`define AXI4_AxSIZE_002_BYTE    3'b001
+`define AXI4_AxSIZE_004_BYTE    3'b010
+`define AXI4_AxSIZE_008_BYTE    3'b011
+`define AXI4_AxSIZE_016_BYTE    3'b100
+`define AXI4_AxSIZE_032_BYTE    3'b101
+`define AXI4_AxSIZE_064_BYTE    3'b110
+`define AXI4_AxSIZE_128_BYTE    3'b111
+`define AXI4_AxLOCK_NORMAL      1'b0
+`define AXI4_AxLOCK_EXCLUSIVE   1'b1
+
+`define AXI3_AxLOCK_NORMAL      2'b00
+`define AXI3_AxLOCK_EXCLUSIVE   2'b01
+`define AXI3_AxLOCK_LOCKED      2'b10
+`define AXI3_AxLOCK_RESERVED    2'b11
+
+`define AXI4_AxCACHE_NORM_NN    4'b0010
+
+// W and R cache consts are almost the same
+`define AXI4_AWCACHE_NB        4'b0000
+`define AXI4_AWCACHE_B         4'b0001
+`define AXI4_AWCACHE_NORM_NCNB 4'b0010
+`define AXI4_AWCACHE_NORM_NCB  4'b0011
+`define AXI4_AWCACHE_WTNA      4'b0110
+`define AXI4_AWCACHE_WTRA      4'b0110
+`define AXI4_AWCACHE_WTWA      4'b1110
+`define AXI4_AWCACHE_WTRWA     4'b1110
+`define AXI4_AWCACHE_WBNA      4'b0111
+`define AXI4_AWCACHE_WBRA      4'b0111
+`define AXI4_WACACHE_WBWA      4'b1111
+`define AXI4_AWCACHE_WBRWA     4'b1111
+`define AXI4_ARCACHE_NB        4'b0000
+`define AXI4_ARCACHE_B         4'b0001
+`define AXI4_ARCACHE_NORM_NCNB 4'b0010
+`define AXI4_ARCACHE_NORM_NCB  4'b0011
+`define AXI4_ARCACHE_WTNA      4'b1010
+`define AXI4_ARCACHE_WTRA      4'b1110
+`define AXI4_ARCACHE_WTWA      4'b1010
+`define AXI4_ARCACHE_WTRWA     4'b1110
+`define AXI4_ARCACHE_WBNA      4'b1011
+`define AXI4_ARCACHE_WBRA      4'b1111
+`define AXI4_ARCACHE_WBWA      4'b1011
+`define AXI4_ARCACHE_WBRWA     4'b1111
+
+`define AXI4_AxPROT_b0_UNPRIV     1'b0
+`define AXI4_AxPROT_b0_PRIV       1'b1
+`define AXI4_AxPROT_b1_SECURE     1'b0
+`define AXI4_AxPROT_b1_UNSECURE   1'b1
+`define AXI4_AxPROT_b2_DATA       1'b0
+`define AXI4_AxPROT_b2_INSTR      1'b1
+`define AXI4_AxQOS_NONE           4'b0000
+`define AXI4_xRESP_OKAY           2'b00
+`define AXI4_xRESP_EXOKAY         2'b01
+`define AXI4_xRESP_SLVERR         2'b10
+`define AXI4_xRESP_DECERR         2'b11
+
+`define CLOG2(x) \
+      (x <= 1) ?   0 : \
+      (x <= 2) ?   1 : \
+      (x <= 4) ?   2 : \
+      (x <= 8) ?   3 : \
+      (x <= 16) ?  4 : \
+      (x <= 32) ?  5 : \
+      (x <= 64) ?  6 : \
+      (x <= 128) ? 7 : \
+      -1
+
+module ccs_axi4_lite_slave_indirect ( ACLK, ARESETn, 
+
+  AWADDR, AWVALID, AWREADY,
+  WDATA, WSTRB, WVALID, WREADY,
+  BRESP, BVALID, BREADY,
+  ARADDR, ARVALID, ARREADY,
+  RDATA, RRESP, RVALID, RREADY,
+  idat);
+   
+
+   parameter rscid = 1;           // Required resource ID parameter
+   parameter op_width = 1;        // dummy parameter for cwidth calculation
+   parameter cwidth = 8;          // Internal memory data width
+   parameter rst_ph = 0;          // Reset phase.  1= Positive edge. Default is AXI negative edge
+   parameter ADDR_WIDTH = 32;     // AXI4 address width (must be >= addr_w)
+   parameter DATA_WIDTH = 32;     // AXI4 data width (must be between 8 and 1024, and power of 2
+   parameter BASE_ADDRESS = 0;    // AXI4 Address that the register is seen at
+   
+   // AXI Clocking
+   input                               ACLK;                           // Rising edge clock
+   input                               ARESETn;                        // Active LOW asynchronous reset
+   wire                                int_ARESETn;
+   assign int_ARESETn = rst_ph ? ~ARESETn : ARESETn;
+
+   // ============== AXI4 Slave Write Address Channel Signals
+   input [ADDR_WIDTH-1:0]              AWADDR;                         // Write address
+   input                               AWVALID;                        // Write address valid
+   output                              AWREADY;                        // Write address ready
+   
+   // ============== AXI4 Slave Write Data Channel
+   input [DATA_WIDTH-1:0]              WDATA;                          // Write data
+   input [DATA_WIDTH/8 - 1:0]          WSTRB;                          // Write strobe (bytewise) - not used in LITE 
+   input                               WVALID;                         // Write data is valid
+   output                              WREADY;                         // Write ready
+
+   // ============== AXI4 Slave Write Response Channel Signals
+   output [1:0]                        BRESP;                          // Write response (of slave)
+   output                              BVALID;                         // Write response valid
+   input                               BREADY;                         // Response ready
+
+   // ============== AXI4 Slave Read Address Channel Signals
+   input [ADDR_WIDTH-1:0]              ARADDR;                         // Read address
+   input                               ARVALID;                        // Read address valid
+   output                              ARREADY;                        // Read address ready
+   
+   // ============== AXI4 Slave Read Data Channel Signals
+   output [DATA_WIDTH-1:0]             RDATA;                          // Read data
+   output [1:0]                        RRESP;                          // Read response
+   output                              RVALID;                         // Read valid (slave providing RDATA)
+   input                               RREADY;                         // Read ready
+
+   // Catapult interface
+   output [cwidth-1:0]   idat; // Data into catapult block through this interface
+
+   reg                                 AWREADY_reg;
+   assign AWREADY = AWREADY_reg;
+   reg                                 WREADY_reg;
+   assign WREADY = WREADY_reg;
+   reg [1:0]                           BRESP_reg;
+   assign BRESP = BRESP_reg;
+   reg                                 BVALID_reg;
+   assign BVALID = BVALID_reg;
+
+   reg                                 ARREADY_reg;
+   assign ARREADY = ARREADY_reg;
+   reg [DATA_WIDTH-1:0]                RDATA_reg;
+   assign RDATA = RDATA_reg;
+   reg [1:0]                           RRESP_reg;
+   assign RRESP = RRESP_reg;
+   reg                                 RVALID_reg;
+   assign RVALID = RVALID_reg;
+   
+   // Statemachine for read and write operations are separate
+   localparam [2:0] axi4r_idle=0, axi4r_read=1;   
+   localparam [2:0] axi4w_idle=0, axi4w_write=1, axi4w_write_done=2,  axi4w_catwrite=3, axi4w_catwrite_done=4;
+   reg [2:0]     write_state;
+   reg [2:0]     read_state;
+
+   // AXI4 Bus Read processing
+   reg [ADDR_WIDTH-1:0] useAddr ;
+   localparam addrShift = `CLOG2(DATA_WIDTH/8);
+
+   // data register - At BASE_ADDRESS in AXI-Space
+   reg [cwidth-1:0]      idat_reg;
+   assign idat = idat_reg;
+
+   reg [ADDR_WIDTH-1:0] save_address;
+   wire [ADDR_WIDTH-1:0] base_address;
+   assign base_address = BASE_ADDRESS;
+
+
+   // AXI write processing.
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         AWREADY_reg <= 1;
+         WREADY_reg <= 0;
+         BRESP_reg <= `AXI4_xRESP_OKAY;
+         BVALID_reg <= 0;
+         save_address <= 0;
+         write_state <= axi4w_idle;         
+         idat_reg <= 0;
+      end else begin
+         if ((write_state == axi4w_idle) && (AWVALID == 1)) begin
+`ifdef SLAVE_DBG
+            $display("AXI inReg AWADDR=%d base_address=%d at T=%t",
+                     AWADDR, base_address, $time);
+`endif
+            AWREADY_reg <= 0;
+            WREADY_reg <= 1;
+            save_address <= AWADDR;
+            if (AWADDR != base_address) begin
+               // synopsys translate_off
+               $display("Warning: AWADDR address(%h) not the BASE_ADDRESS of this device:%h", AWADDR, base_address);
+               // synopsys translate_on
+            end
+            // Dont recognize WVALID here since we just asserted WREADY
+            write_state <= axi4w_write;
+         end else if (write_state == axi4w_write) begin
+            if (WVALID == 1) begin
+               WREADY_reg <= 0;
+               if (save_address == base_address) begin
+                  idat_reg <= WDATA;
+`ifdef SLAVE_DBG
+                  $display("AXI inReg1 write:%h at T=%t", WDATA, $time);
+`endif
+               end
+               write_state <= axi4w_write_done;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 1;
+            end // if (WVALID == 1)
+         end else if (write_state == axi4w_write_done) begin
+            if (BREADY == 1) begin
+               AWREADY_reg <= 1;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 0;
+               write_state <= axi4w_idle;
+            end
+         end 
+      end 
+   end // AXI Write 
+
+      // Service AXI read
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         read_state <= axi4r_idle;
+         ARREADY_reg <= 1;
+         RDATA_reg <= 0;
+         RRESP_reg <= `AXI4_xRESP_OKAY;
+         RVALID_reg <= 0;
+      end else begin
+         if ((read_state == axi4r_idle) && (ARVALID == 1)) begin
+            ARREADY_reg <= 0;
+            useAddr = (ARADDR - base_address) >> addrShift;
+`ifdef SLAVE_DBG
+
+            $display("AXI OutReg ARADDR=%d base_address=%d addrShift=%d useAddr=%d at T=%t",
+                     ARADDR, base_address, addrShift, useAddr, $time);
+`endif
+            if (cwidth < DATA_WIDTH) begin
+               //RDATA_reg[DATA_WIDTH-1:cwidth] <= 0;  // vcs doesnt like this
+               //RDATA_reg[cwidth-1:0] <= idat_reg;
+               RDATA_reg <= {{DATA_WIDTH - cwidth{1'b0}}, idat_reg};
+            end else begin
+               RDATA_reg <= idat_reg;
+            end
+`ifdef SLAVE_DBG
+            $display("AXI OutReg read:%h at T=%t", reg0, $time);
+`endif
+            RVALID_reg <= 1;
+            read_state <= axi4r_read;
+
+            RRESP_reg <= `AXI4_xRESP_OKAY;
+            if (useAddr != 0) begin
+               // synopsys translate_off
+               $display("Warning: ARADDR address(%h) not the BASE_ADDRESS of this device:%h", ARADDR, base_address);
+               // synopsys translate_on
+            end
+         end else if (read_state == axi4r_read) begin
+            if (RREADY == 1) begin
+               ARREADY_reg <= 1;
+               RRESP_reg <= `AXI4_xRESP_OKAY;
+               RVALID_reg <= 0;
+               read_state <= axi4r_idle;               
+            end
+         end
+      end
+   end
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v 
+////////////////////////////////////////////////////////////////////////////////
+// Catapult Synthesis - Custom Interfaces
+//
+// Copyright (c) 2018 Mentor Graphics Corp.
+//       All Rights Reserved
+// 
+// This document contains information that is proprietary to Mentor Graphics
+// Corp. The original recipient of this document may duplicate this  
+// document in whole or in part for internal business purposes only, provided  
+// that this entire notice appears in all copies. In duplicating any part of  
+// this document, the recipient agrees to make every reasonable effort to  
+// prevent the unauthorized use and distribution of the proprietary information.
+// 
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in prepartion for creating
+// their own custom interfaces. This design does not present a complete
+// implementation of the named protocol or standard.
+//
+// NO WARRANTY.
+// MENTOR GRAPHICS CORP. EXPRESSLY DISCLAIMS ALL WARRANTY
+// FOR THE SOFTWARE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE
+// LAW, THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS"
+// AND WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+// PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR
+// DISTRIBUTION OF THE SOFTWARE REMAINS WITH YOU.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+// --------------------------------------------------------------------------
+// DESIGN UNIT:        ccs_axi4_lite_slave_outsync
+//
+// DESCRIPTION:
+// Implement an AXI-readable sync - with handshake - output
+// Behaves like ccs_sync_out_wait on catapult "side", but Axi 
+// slave protocol for read when ARADDR == BASE_ADDRESS.  
+// Includes non-AXI valid/interrupt external signal 
+//
+//   - When the system is "ready", assert ARVALID with ARADDR=BASE_ADDRESS.
+//        This Asserts irdy to catapult
+//   - When catapult responds with ivld, ARREADY is asserted
+//   - If ARADDR is BASE_ADDRESS, 1 is returned on RDATA and RVALID is asserted
+//      If ARADDR is not BASE_ADDRESS, 0 is returned on RDATA with bad status
+//   - When RREADY signifies completion, ARREADY is deasserted for at
+//       least one cycle before the process repeats
+//
+//   Write channels - The component supports the notion of timeout threshold.
+//   If the threshold is non-zero, then we will wait that many cycles for ivld 
+//   to be raised.  To set the threshold, write to address==BASE_ADDRESS.
+//
+//  Notes:
+//    - BASE_ADDRESS defines what is register address wrt the AXI system
+//    - Address other than BASE_ADDRESS returns 0 with bad status
+//
+// CHANGE LOG:
+//  04/29/2019 - Initial implementation
+//
+// -------------------------------------------------------------------------------
+
+// Uncomment this for lots of messages
+//`define SLAVE_DBG 1
+
+`define AXI4_AxBURST_FIXED      2'b00
+`define AXI4_AxBURST_INCR       2'b01
+`define AXI4_AxBURST_WRAP       2'b10
+`define AXI4_AxBURST_RESERVED   2'b11
+`define AXI4_AxSIZE_001_BYTE    3'b000
+`define AXI4_AxSIZE_002_BYTE    3'b001
+`define AXI4_AxSIZE_004_BYTE    3'b010
+`define AXI4_AxSIZE_008_BYTE    3'b011
+`define AXI4_AxSIZE_016_BYTE    3'b100
+`define AXI4_AxSIZE_032_BYTE    3'b101
+`define AXI4_AxSIZE_064_BYTE    3'b110
+`define AXI4_AxSIZE_128_BYTE    3'b111
+`define AXI4_AxLOCK_NORMAL      1'b0
+`define AXI4_AxLOCK_EXCLUSIVE   1'b1
+
+`define AXI3_AxLOCK_NORMAL      2'b00
+`define AXI3_AxLOCK_EXCLUSIVE   2'b01
+`define AXI3_AxLOCK_LOCKED      2'b10
+`define AXI3_AxLOCK_RESERVED    2'b11
+
+`define AXI4_AxCACHE_NORM_NN    4'b0010
+
+// W and R cache consts are almost the same
+`define AXI4_AWCACHE_NB        4'b0000
+`define AXI4_AWCACHE_B         4'b0001
+`define AXI4_AWCACHE_NORM_NCNB 4'b0010
+`define AXI4_AWCACHE_NORM_NCB  4'b0011
+`define AXI4_AWCACHE_WTNA      4'b0110
+`define AXI4_AWCACHE_WTRA      4'b0110
+`define AXI4_AWCACHE_WTWA      4'b1110
+`define AXI4_AWCACHE_WTRWA     4'b1110
+`define AXI4_AWCACHE_WBNA      4'b0111
+`define AXI4_AWCACHE_WBRA      4'b0111
+`define AXI4_WACACHE_WBWA      4'b1111
+`define AXI4_AWCACHE_WBRWA     4'b1111
+`define AXI4_ARCACHE_NB        4'b0000
+`define AXI4_ARCACHE_B         4'b0001
+`define AXI4_ARCACHE_NORM_NCNB 4'b0010
+`define AXI4_ARCACHE_NORM_NCB  4'b0011
+`define AXI4_ARCACHE_WTNA      4'b1010
+`define AXI4_ARCACHE_WTRA      4'b1110
+`define AXI4_ARCACHE_WTWA      4'b1010
+`define AXI4_ARCACHE_WTRWA     4'b1110
+`define AXI4_ARCACHE_WBNA      4'b1011
+`define AXI4_ARCACHE_WBRA      4'b1111
+`define AXI4_ARCACHE_WBWA      4'b1011
+`define AXI4_ARCACHE_WBRWA     4'b1111
+
+`define AXI4_AxPROT_b0_UNPRIV     1'b0
+`define AXI4_AxPROT_b0_PRIV       1'b1
+`define AXI4_AxPROT_b1_SECURE     1'b0
+`define AXI4_AxPROT_b1_UNSECURE   1'b1
+`define AXI4_AxPROT_b2_DATA       1'b0
+`define AXI4_AxPROT_b2_INSTR      1'b1
+`define AXI4_AxQOS_NONE           4'b0000
+`define AXI4_xRESP_OKAY           2'b00
+`define AXI4_xRESP_EXOKAY         2'b01
+`define AXI4_xRESP_SLVERR         2'b10
+`define AXI4_xRESP_DECERR         2'b11
+
+module ccs_axi4_lite_slave_outsync ( ACLK, ARESETn, 
+  AWADDR, AWVALID, AWREADY,
+  WDATA, WSTRB, WVALID, WREADY,
+  BRESP, BVALID, BREADY,
+  ARADDR, ARVALID, ARREADY,
+  RDATA, RRESP, RVALID, RREADY,
+  irdy, ivld, triosy);
+
+   parameter rscid = 1;           // Required resource ID parameter
+   parameter rst_ph = 0;          // Reset phase.  1= Positive edge. Default is AXI negative edge
+   parameter ADDR_WIDTH = 32;     // AXI4 address width (must be >= addr_w)
+   parameter DATA_WIDTH = 32;     // AXI4 data width (must be between 8 and 1024, and power of 2
+   parameter BASE_ADDRESS = 0;    // AXI4 Address that the register is seen at
+   
+   // AXI Clocking
+   input                               ACLK;                           // Rising edge clock
+   input                               ARESETn;                        // Active LOW asynchronous reset
+   wire                                int_ARESETn;
+   assign int_ARESETn = rst_ph ? ~ARESETn : ARESETn;
+
+   // ============== AXI4 Slave Write Address Channel Signals
+   input [ADDR_WIDTH-1:0]              AWADDR;                         // Write address
+   input                               AWVALID;                        // Write address valid
+   output                              AWREADY;                        // Write address ready
+   
+   // ============== AXI4 Slave Write Data Channel
+   input [DATA_WIDTH-1:0]              WDATA;                          // Write data
+   input [DATA_WIDTH/8 - 1:0]          WSTRB;                          // Write strobe (bytewise) - not used in LITE 
+   input                               WVALID;                         // Write data is valid
+   output                              WREADY;                         // Write ready
+
+   // ============== AXI4 Slave Write Response Channel Signals
+   output [1:0]                        BRESP;                          // Write response (of slave)
+   output                              BVALID;                         // Write response valid
+   input                               BREADY;                         // Response ready
+
+   // ============== AXI4 Slave Read Address Channel Signals
+   input [ADDR_WIDTH-1:0]              ARADDR;                         // Read address
+   input                               ARVALID;                        // Read address valid
+   output                              ARREADY;                        // Read address ready
+   
+   // ============== AXI4 Slave Read Data Channel Signals
+   output [DATA_WIDTH-1:0]             RDATA;                          // Read data
+   output [1:0]                        RRESP;                          // Read response
+   output                              RVALID;                         // Read valid
+   input                               RREADY;                         // Read ready
+
+   reg                                 AWREADY_reg;
+   assign AWREADY = AWREADY_reg;
+   reg                                 WREADY_reg;
+   assign WREADY = WREADY_reg;
+   reg [1:0]                           BRESP_reg;
+   assign BRESP = BRESP_reg;
+   reg                                 BVALID_reg;
+   assign BVALID = BVALID_reg;
+
+   reg                                 ARREADY_reg;
+   assign ARREADY = ARREADY_reg;
+   reg [DATA_WIDTH-1:0]                RDATA_reg;
+   assign RDATA = RDATA_reg;
+   reg [1:0]                           RRESP_reg;
+   assign RRESP = RRESP_reg;
+   reg                                 RVALID_reg;
+   assign RVALID = RVALID_reg;
+   
+   // Catapult interface
+   output                              irdy;   // System ready to be done
+   input                               ivld;   // Catapult responds
+   output                              triosy; // Transaction done
+   
+   reg                                 irdy_reg;
+   assign irdy = irdy_reg;
+
+   reg                                 triosy_reg;
+   assign triosy = triosy_reg;
+   
+   localparam [2:0] axi4r_idle=0, axi4r_wait_ivld=1, axi4r_done=2;   
+   localparam [2:0] axi4w_idle=0, axi4w_write=1, axi4w_write_done=2,  axi4w_catwrite=3, axi4w_catwrite_done=4;
+   reg [2:0]     write_state;
+   reg [2:0]     read_state;
+   reg [31:0]    timeoutMax;  // 0 means infinite
+   reg [31:0]    timeoutCnt;   
+   reg           setTimeout;
+   
+   wire [ADDR_WIDTH-1:0] base_address;
+   assign base_address = BASE_ADDRESS;
+   
+   // AXI write processing.
+   // Simply cycle through the states so the axiRead process can notice and clear itself
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         AWREADY_reg <= 1;
+         WREADY_reg <= 0;
+         BRESP_reg <= `AXI4_xRESP_OKAY;
+         BVALID_reg <= 0;
+         write_state <= axi4w_idle;
+         timeoutMax <= 0;
+         setTimeout <= 0;
+      end else begin
+         if ((write_state == axi4w_idle) && (AWVALID == 1)) begin
+`ifdef SLAVE_DBG
+            $display("AXI outSync AWADDR=%d base_address=%d at T=%t",
+                     AWADDR, base_address, $time);
+`endif
+            AWREADY_reg <= 0;
+            WREADY_reg <= 1;
+            if (AWADDR != base_address) begin
+               // synopsys translate_off
+               $display("Warning: AWADDR address(%h) not the BASE_ADDRESS of this device:%h", AWADDR, base_address);
+               // synopsys translate_on
+               setTimeout <= 0;
+            end else begin
+               setTimeout <= 1;
+            end
+            // Dont recognize WVALID here since we just asserted WREADY
+            write_state <= axi4w_write;
+         end else if (write_state == axi4w_write) begin
+            if (WVALID == 1) begin
+               WREADY_reg <= 0;
+               write_state <= axi4w_write_done;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 1;
+               if (setTimeout) begin
+                  timeoutMax <= WDATA;
+`ifdef SLAVE_DBG
+                  $display("AXI outSync sets timeout to %d at T=%t", WDATA, $timeout);
+`endif
+               end
+            end // if (WVALID == 1)
+         end else if (write_state == axi4w_write_done) begin
+            if (BREADY == 1) begin
+               AWREADY_reg <= 1;
+               BRESP_reg <= `AXI4_xRESP_OKAY;
+               BVALID_reg <= 0;
+               write_state <= axi4w_idle;
+            end
+         end 
+      end 
+   end // AXI Write 
+   
+   // Service AXI read
+   always @(posedge ACLK or negedge int_ARESETn) begin
+      if (~int_ARESETn) begin
+         read_state <= axi4r_idle;
+         ARREADY_reg <= 0;
+         RDATA_reg <= 0;
+         RRESP_reg <= `AXI4_xRESP_OKAY;
+         RVALID_reg <= 0;
+         irdy_reg <= 0;
+         triosy_reg <= 0;
+         timeoutCnt <= 0;
+      end else begin
+         if ((read_state == axi4r_idle) && (ARVALID == 1)) begin : startRead
+            reg [1:0]   tmpRRESP;
+            tmpRRESP = `AXI4_xRESP_OKAY;
+`ifdef SLAVE_DBG
+
+            $display("AXI outSync ARADDR=%d base_address=%d at T=%t",
+                     ARADDR, base_address, $time);
+`endif
+            triosy_reg <= 0;
+            irdy_reg <= 1;
+            if (ARADDR != base_address) begin
+               tmpRRESP = `AXI4_xRESP_DECERR;
+               // synopsys translate_off
+               $display("Warning: ARADDR address(%h) not the BASE_ADDRESS of this device:%h", ARADDR, base_address);
+               // synopsys translate_on
+            end
+
+            // Set rresp and rdata here since we have valid ADDR right here
+            RRESP_reg <= tmpRRESP;
+            if (tmpRRESP != `AXI4_xRESP_OKAY) begin
+               RDATA_reg <= 0;
+            end else begin
+               RDATA_reg <= 1;
+            end
+
+            // Dont check ivld here since irdy and ivld need to be high
+            // at the same active clock edge to constitute a valid handshake
+            read_state <= axi4r_wait_ivld;
+            timeoutCnt <= 0;
+         end else if (read_state == axi4r_wait_ivld) begin
+            if (ivld || (timeoutMax > 0) && (timeoutCnt > timeoutMax)) begin
+               irdy_reg <= 0;
+               ARREADY_reg <= 1;
+               RVALID_reg <= 1;
+               read_state <= axi4r_done;
+            end else begin // UNMATCHED !!
+               timeoutCnt <= timeoutCnt+1;
+            end
+         end else if (read_state == axi4r_done) begin
+            if (RREADY == 1) begin
+               ARREADY_reg <= 0;
+               RDATA_reg <= 0;
+               RRESP_reg <= `AXI4_xRESP_OKAY;
+               RVALID_reg <= 0;
+               triosy_reg <= 1;             
+               read_state <= axi4r_idle;
+            end
+         end else begin
+            triosy_reg <= 0;
+         end
+      end
+   end
+   
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2017 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+
+module mgc_io_sync_v2 (ld, lz);
+    parameter valid = 0;
+
+    input  ld;
+    output lz;
+
+    wire   lz;
+
+    assign lz = ld;
+
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2017 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+
+module ccs_in_v1 (idat, dat);
+
+  parameter integer rscid = 1;
+  parameter integer width = 8;
+
+  output [width-1:0] idat;
+  input  [width-1:0] dat;
+
+  wire   [width-1:0] idat;
+
+  assign idat = dat;
+
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2017 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+
+module mgc_out_dreg_v2 (d, z);
+
+  parameter integer rscid = 1;
+  parameter integer width = 8;
+
+  input    [width-1:0] d;
+  output   [width-1:0] z;
+
+  wire     [width-1:0] z;
+
+  assign z = d;
+
+endmodule
+
+//------> ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   yl7897@newnano.poly.edu
+//  Generated date: Sat Sep 11 12:20:08 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    mult_core_wait_dp
+// ------------------------------------------------------------------
+
+
+module mult_core_wait_dp (
+  ccs_ccore_clk, ccs_ccore_en, t_mul_cmp_z, z_mul_cmp_z, z_mul_cmp_1_z, t_mul_cmp_z_oreg,
+      z_mul_cmp_z_oreg, z_mul_cmp_1_z_oreg
+);
+  input ccs_ccore_clk;
+  input ccs_ccore_en;
+  input [63:0] t_mul_cmp_z;
+  input [31:0] z_mul_cmp_z;
+  input [31:0] z_mul_cmp_1_z;
+  output [31:0] t_mul_cmp_z_oreg;
+  output [31:0] z_mul_cmp_z_oreg;
+  reg [31:0] z_mul_cmp_z_oreg;
+  output [31:0] z_mul_cmp_1_z_oreg;
+  reg [31:0] z_mul_cmp_1_z_oreg;
+
+
+  // Interconnect Declarations
+  reg [31:0] t_mul_cmp_z_oreg_pconst_63_32;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign t_mul_cmp_z_oreg = t_mul_cmp_z_oreg_pconst_63_32;
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en ) begin
+      t_mul_cmp_z_oreg_pconst_63_32 <= t_mul_cmp_z[63:32];
+      z_mul_cmp_z_oreg <= z_mul_cmp_z;
+      z_mul_cmp_1_z_oreg <= z_mul_cmp_1_z;
+    end
+  end
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    mult_core
+// ------------------------------------------------------------------
+
+
+module mult_core (
+  x_rsc_dat, y_rsc_dat, y_rsc_dat_1, p_rsc_dat, return_rsc_z, ccs_ccore_start_rsc_dat,
+      ccs_ccore_clk, ccs_ccore_srst, ccs_ccore_en, t_mul_cmp_a, t_mul_cmp_b, t_mul_cmp_z,
+      z_mul_cmp_b, z_mul_cmp_z, z_mul_cmp_1_a, z_mul_cmp_1_b, z_mul_cmp_1_z
+);
+  input [31:0] x_rsc_dat;
+  input [31:0] y_rsc_dat;
+  input [31:0] y_rsc_dat_1;
+  input [31:0] p_rsc_dat;
+  output [31:0] return_rsc_z;
+  input ccs_ccore_start_rsc_dat;
+  input ccs_ccore_clk;
+  input ccs_ccore_srst;
+  input ccs_ccore_en;
+  output [31:0] t_mul_cmp_a;
+  output [31:0] t_mul_cmp_b;
+  reg [31:0] t_mul_cmp_b;
+  input [63:0] t_mul_cmp_z;
+  output [31:0] z_mul_cmp_b;
+  reg [31:0] z_mul_cmp_b;
+  input [31:0] z_mul_cmp_z;
+  output [31:0] z_mul_cmp_1_a;
+  reg [31:0] z_mul_cmp_1_a;
+  output [31:0] z_mul_cmp_1_b;
+  reg [31:0] z_mul_cmp_1_b;
+  input [31:0] z_mul_cmp_1_z;
+
+
+  // Interconnect Declarations
+  wire [31:0] x_rsci_idat;
+  wire [31:0] y_rsci_idat;
+  wire [31:0] y_rsci_idat_1;
+  wire [31:0] p_rsci_idat;
+  reg [31:0] return_rsci_d;
+  wire ccs_ccore_start_rsci_idat;
+  wire [31:0] t_mul_cmp_z_oreg;
+  wire [31:0] z_mul_cmp_z_oreg;
+  wire [31:0] z_mul_cmp_1_z_oreg;
+  reg main_stage_0_2;
+  reg VEC_LOOP_asn_itm_1;
+  reg main_stage_0_3;
+  reg VEC_LOOP_asn_itm_2;
+  wire [31:0] res_sva_1;
+  wire [32:0] nl_res_sva_1;
+  reg [31:0] p_buf_sva_4;
+  reg [31:0] reg_t_mul_cmp_a_cse;
+  reg main_stage_0_4;
+  reg [31:0] p_buf_sva_1;
+  reg [31:0] p_buf_sva_2;
+  reg [31:0] z_asn_itm_1;
+  reg [31:0] z_asn_itm_2;
+  reg VEC_LOOP_asn_itm_3;
+  wire p_and_cse;
+
+  wire[31:0] if_acc_nl;
+  wire[32:0] nl_if_acc_nl;
+  wire[32:0] acc_nl;
+  wire[33:0] nl_acc_nl;
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_in_v1 #(.rscid(32'sd7),
+  .width(32'sd32)) x_rsci (
+      .dat(x_rsc_dat),
+      .idat(x_rsci_idat)
+    );
+  ccs_in_v1 #(.rscid(32'sd8),
+  .width(32'sd32)) y_rsci (
+      .dat(y_rsc_dat),
+      .idat(y_rsci_idat)
+    );
+  ccs_in_v1 #(.rscid(32'sd9),
+  .width(32'sd32)) y_rsci_1 (
+      .dat(y_rsc_dat_1),
+      .idat(y_rsci_idat_1)
+    );
+  ccs_in_v1 #(.rscid(32'sd10),
+  .width(32'sd32)) p_rsci (
+      .dat(p_rsc_dat),
+      .idat(p_rsci_idat)
+    );
+  mgc_out_dreg_v2 #(.rscid(32'sd11),
+  .width(32'sd32)) return_rsci (
+      .d(return_rsci_d),
+      .z(return_rsc_z)
+    );
+  ccs_in_v1 #(.rscid(32'sd19),
+  .width(32'sd1)) ccs_ccore_start_rsci (
+      .dat(ccs_ccore_start_rsc_dat),
+      .idat(ccs_ccore_start_rsci_idat)
+    );
+  mult_core_wait_dp mult_core_wait_dp_inst (
+      .ccs_ccore_clk(ccs_ccore_clk),
+      .ccs_ccore_en(ccs_ccore_en),
+      .t_mul_cmp_z(t_mul_cmp_z),
+      .z_mul_cmp_z(z_mul_cmp_z),
+      .z_mul_cmp_1_z(z_mul_cmp_1_z),
+      .t_mul_cmp_z_oreg(t_mul_cmp_z_oreg),
+      .z_mul_cmp_z_oreg(z_mul_cmp_z_oreg),
+      .z_mul_cmp_1_z_oreg(z_mul_cmp_1_z_oreg)
+    );
+  assign p_and_cse = ccs_ccore_en & main_stage_0_4 & VEC_LOOP_asn_itm_3;
+  assign t_mul_cmp_a = reg_t_mul_cmp_a_cse;
+  assign nl_res_sva_1 = z_asn_itm_2 - z_mul_cmp_1_z_oreg;
+  assign res_sva_1 = nl_res_sva_1[31:0];
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en ) begin
+      return_rsci_d <= MUX_v_32_2_2(if_acc_nl, res_sva_1, readslicef_33_1_32(acc_nl));
+      z_mul_cmp_1_b <= p_buf_sva_2;
+      z_mul_cmp_1_a <= t_mul_cmp_z_oreg;
+      t_mul_cmp_b <= y_rsci_idat_1;
+      reg_t_mul_cmp_a_cse <= x_rsci_idat;
+      z_mul_cmp_b <= y_rsci_idat;
+    end
+  end
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_srst ) begin
+      VEC_LOOP_asn_itm_2 <= 1'b0;
+      main_stage_0_3 <= 1'b0;
+      VEC_LOOP_asn_itm_1 <= 1'b0;
+      VEC_LOOP_asn_itm_3 <= 1'b0;
+      main_stage_0_2 <= 1'b0;
+      main_stage_0_4 <= 1'b0;
+    end
+    else if ( ccs_ccore_en ) begin
+      VEC_LOOP_asn_itm_2 <= VEC_LOOP_asn_itm_1;
+      main_stage_0_3 <= main_stage_0_2;
+      VEC_LOOP_asn_itm_1 <= ccs_ccore_start_rsci_idat;
+      VEC_LOOP_asn_itm_3 <= VEC_LOOP_asn_itm_2;
+      main_stage_0_2 <= 1'b1;
+      main_stage_0_4 <= main_stage_0_3;
+    end
+  end
+  always @(posedge ccs_ccore_clk) begin
+    if ( p_and_cse ) begin
+      p_buf_sva_4 <= z_mul_cmp_1_b;
+      z_asn_itm_2 <= z_asn_itm_1;
+    end
+  end
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en & main_stage_0_2 & VEC_LOOP_asn_itm_1 ) begin
+      p_buf_sva_2 <= p_buf_sva_1;
+    end
+  end
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en & main_stage_0_3 & VEC_LOOP_asn_itm_2 ) begin
+      z_asn_itm_1 <= z_mul_cmp_z_oreg;
+    end
+  end
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en & ccs_ccore_start_rsci_idat ) begin
+      p_buf_sva_1 <= p_rsci_idat;
+    end
+  end
+  assign nl_if_acc_nl = res_sva_1 - p_buf_sva_4;
+  assign if_acc_nl = nl_if_acc_nl[31:0];
+  assign nl_acc_nl = ({1'b1 , res_sva_1}) + conv_u2u_32_33(~ p_buf_sva_4) + 33'b000000000000000000000000000000001;
+  assign acc_nl = nl_acc_nl[32:0];
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [0:0] readslicef_33_1_32;
+    input [32:0] vector;
+    reg [32:0] tmp;
+  begin
+    tmp = vector >> 32;
+    readslicef_33_1_32 = tmp[0:0];
+  end
+  endfunction
+
+
+  function automatic [32:0] conv_u2u_32_33 ;
+    input [31:0]  vector ;
+  begin
+    conv_u2u_32_33 = {1'b0, vector};
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    mult
+// ------------------------------------------------------------------
+
+
+module mult (
+  x_rsc_dat, y_rsc_dat, y_rsc_dat_1, p_rsc_dat, return_rsc_z, ccs_ccore_start_rsc_dat,
+      ccs_ccore_clk, ccs_ccore_srst, ccs_ccore_en
+);
+  input [31:0] x_rsc_dat;
+  input [31:0] y_rsc_dat;
+  input [31:0] y_rsc_dat_1;
+  input [31:0] p_rsc_dat;
+  output [31:0] return_rsc_z;
+  input ccs_ccore_start_rsc_dat;
+  input ccs_ccore_clk;
+  input ccs_ccore_srst;
+  input ccs_ccore_en;
+
+
+  // Interconnect Declarations
+  wire [31:0] t_mul_cmp_a;
+  wire [31:0] t_mul_cmp_b;
+  wire [31:0] z_mul_cmp_b;
+  wire [31:0] z_mul_cmp_1_a;
+  wire [31:0] z_mul_cmp_1_b;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  wire [63:0] nl_mult_core_inst_t_mul_cmp_z;
+  assign nl_mult_core_inst_t_mul_cmp_z = conv_u2u_64_64(t_mul_cmp_a * t_mul_cmp_b);
+  wire [31:0] nl_mult_core_inst_z_mul_cmp_z;
+  assign nl_mult_core_inst_z_mul_cmp_z = conv_u2u_64_32(t_mul_cmp_a * z_mul_cmp_b);
+  wire [31:0] nl_mult_core_inst_z_mul_cmp_1_z;
+  assign nl_mult_core_inst_z_mul_cmp_1_z = conv_u2u_64_32(z_mul_cmp_1_a * z_mul_cmp_1_b);
+  mult_core mult_core_inst (
+      .x_rsc_dat(x_rsc_dat),
+      .y_rsc_dat(y_rsc_dat),
+      .y_rsc_dat_1(y_rsc_dat_1),
+      .p_rsc_dat(p_rsc_dat),
+      .return_rsc_z(return_rsc_z),
+      .ccs_ccore_start_rsc_dat(ccs_ccore_start_rsc_dat),
+      .ccs_ccore_clk(ccs_ccore_clk),
+      .ccs_ccore_srst(ccs_ccore_srst),
+      .ccs_ccore_en(ccs_ccore_en),
+      .t_mul_cmp_a(t_mul_cmp_a),
+      .t_mul_cmp_b(t_mul_cmp_b),
+      .t_mul_cmp_z(nl_mult_core_inst_t_mul_cmp_z[63:0]),
+      .z_mul_cmp_b(z_mul_cmp_b),
+      .z_mul_cmp_z(nl_mult_core_inst_z_mul_cmp_z[31:0]),
+      .z_mul_cmp_1_a(z_mul_cmp_1_a),
+      .z_mul_cmp_1_b(z_mul_cmp_1_b),
+      .z_mul_cmp_1_z(nl_mult_core_inst_z_mul_cmp_1_z[31:0])
+    );
+
+  function automatic [31:0] conv_u2u_64_32 ;
+    input [63:0]  vector ;
+  begin
+    conv_u2u_64_32 = vector[31:0];
+  end
+  endfunction
+
+
+  function automatic [63:0] conv_u2u_64_64 ;
+    input [63:0]  vector ;
+  begin
+    conv_u2u_64_64 = vector;
+  end
+  endfunction
+
+endmodule
+
+
+
+
+//------> ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   yl7897@newnano.poly.edu
+//  Generated date: Sat Sep 11 12:20:09 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    modulo_sub_core
+// ------------------------------------------------------------------
+
+
+module modulo_sub_core (
+  base_rsc_dat, m_rsc_dat, return_rsc_z, ccs_ccore_clk, ccs_ccore_en
+);
+  input [31:0] base_rsc_dat;
+  input [31:0] m_rsc_dat;
+  output [31:0] return_rsc_z;
+  input ccs_ccore_clk;
+  input ccs_ccore_en;
+
+
+  // Interconnect Declarations
+  wire [31:0] base_rsci_idat;
+  wire [31:0] m_rsci_idat;
+  reg [31:0] return_rsci_d;
+
+  wire[31:0] qif_acc_nl;
+  wire[32:0] nl_qif_acc_nl;
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_in_v1 #(.rscid(32'sd4),
+  .width(32'sd32)) base_rsci (
+      .dat(base_rsc_dat),
+      .idat(base_rsci_idat)
+    );
+  ccs_in_v1 #(.rscid(32'sd5),
+  .width(32'sd32)) m_rsci (
+      .dat(m_rsc_dat),
+      .idat(m_rsci_idat)
+    );
+  mgc_out_dreg_v2 #(.rscid(32'sd6),
+  .width(32'sd32)) return_rsci (
+      .d(return_rsci_d),
+      .z(return_rsc_z)
+    );
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en ) begin
+      return_rsci_d <= MUX_v_32_2_2(({1'b0 , (base_rsci_idat[30:0])}), qif_acc_nl,
+          base_rsci_idat[31]);
+    end
+  end
+  assign nl_qif_acc_nl = ({1'b1 , (base_rsci_idat[30:0])}) + m_rsci_idat;
+  assign qif_acc_nl = nl_qif_acc_nl[31:0];
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    modulo_sub
+// ------------------------------------------------------------------
+
+
+module modulo_sub (
+  base_rsc_dat, m_rsc_dat, return_rsc_z, ccs_ccore_start_rsc_dat, ccs_ccore_clk,
+      ccs_ccore_srst, ccs_ccore_en
+);
+  input [31:0] base_rsc_dat;
+  input [31:0] m_rsc_dat;
+  output [31:0] return_rsc_z;
+  input ccs_ccore_start_rsc_dat;
+  input ccs_ccore_clk;
+  input ccs_ccore_srst;
+  input ccs_ccore_en;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  modulo_sub_core modulo_sub_core_inst (
+      .base_rsc_dat(base_rsc_dat),
+      .m_rsc_dat(m_rsc_dat),
+      .return_rsc_z(return_rsc_z),
+      .ccs_ccore_clk(ccs_ccore_clk),
+      .ccs_ccore_en(ccs_ccore_en)
+    );
+endmodule
+
+
+
+
+//------> ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   yl7897@newnano.poly.edu
+//  Generated date: Sat Sep 11 12:20:11 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    modulo_add_core
+// ------------------------------------------------------------------
+
+
+module modulo_add_core (
+  base_rsc_dat, m_rsc_dat, return_rsc_z, ccs_ccore_clk, ccs_ccore_en
+);
+  input [31:0] base_rsc_dat;
+  input [31:0] m_rsc_dat;
+  output [31:0] return_rsc_z;
+  input ccs_ccore_clk;
+  input ccs_ccore_en;
+
+
+  // Interconnect Declarations
+  wire [31:0] base_rsci_idat;
+  wire [31:0] m_rsci_idat;
+  reg [31:0] return_rsci_d;
+
+  wire[31:0] qif_acc_nl;
+  wire[32:0] nl_qif_acc_nl;
+  wire[33:0] acc_nl;
+  wire[34:0] nl_acc_nl;
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_in_v1 #(.rscid(32'sd1),
+  .width(32'sd32)) base_rsci (
+      .dat(base_rsc_dat),
+      .idat(base_rsci_idat)
+    );
+  ccs_in_v1 #(.rscid(32'sd2),
+  .width(32'sd32)) m_rsci (
+      .dat(m_rsc_dat),
+      .idat(m_rsci_idat)
+    );
+  mgc_out_dreg_v2 #(.rscid(32'sd3),
+  .width(32'sd32)) return_rsci (
+      .d(return_rsci_d),
+      .z(return_rsc_z)
+    );
+  always @(posedge ccs_ccore_clk) begin
+    if ( ccs_ccore_en ) begin
+      return_rsci_d <= MUX_v_32_2_2(base_rsci_idat, qif_acc_nl, readslicef_34_1_33(acc_nl));
+    end
+  end
+  assign nl_qif_acc_nl = base_rsci_idat - m_rsci_idat;
+  assign qif_acc_nl = nl_qif_acc_nl[31:0];
+  assign nl_acc_nl = conv_u2u_32_34(m_rsci_idat) - conv_s2u_32_34(base_rsci_idat);
+  assign acc_nl = nl_acc_nl[33:0];
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [0:0] readslicef_34_1_33;
+    input [33:0] vector;
+    reg [33:0] tmp;
+  begin
+    tmp = vector >> 33;
+    readslicef_34_1_33 = tmp[0:0];
+  end
+  endfunction
+
+
+  function automatic [33:0] conv_s2u_32_34 ;
+    input [31:0]  vector ;
+  begin
+    conv_s2u_32_34 = {{2{vector[31]}}, vector};
+  end
+  endfunction
+
+
+  function automatic [33:0] conv_u2u_32_34 ;
+    input [31:0]  vector ;
+  begin
+    conv_u2u_32_34 = {{2{1'b0}}, vector};
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    modulo_add
+// ------------------------------------------------------------------
+
+
+module modulo_add (
+  base_rsc_dat, m_rsc_dat, return_rsc_z, ccs_ccore_start_rsc_dat, ccs_ccore_clk,
+      ccs_ccore_srst, ccs_ccore_en
+);
+  input [31:0] base_rsc_dat;
+  input [31:0] m_rsc_dat;
+  output [31:0] return_rsc_z;
+  input ccs_ccore_start_rsc_dat;
+  input ccs_ccore_clk;
+  input ccs_ccore_srst;
+  input ccs_ccore_en;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  modulo_add_core modulo_add_core_inst (
+      .base_rsc_dat(base_rsc_dat),
+      .m_rsc_dat(m_rsc_dat),
+      .return_rsc_z(return_rsc_z),
+      .ccs_ccore_clk(ccs_ccore_clk),
+      .ccs_ccore_en(ccs_ccore_en)
+    );
+endmodule
+
+
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v 
+module mgc_shift_l_v5(a,s,z);
+   parameter    width_a = 4;
+   parameter    signd_a = 1;
+   parameter    width_s = 2;
+   parameter    width_z = 8;
+
+   input [width_a-1:0] a;
+   input [width_s-1:0] s;
+   output [width_z -1:0] z;
+
+   generate
+   if (signd_a)
+   begin: SGNED
+      assign z = fshl_u(a,s,a[width_a-1]);
+   end
+   else
+   begin: UNSGNED
+      assign z = fshl_u(a,s,1'b0);
+   end
+   endgenerate
+
+   //Shift-left - unsigned shift argument one bit more
+   function [width_z-1:0] fshl_u_1;
+      input [width_a  :0] arg1;
+      input [width_s-1:0] arg2;
+      input sbit;
+      parameter olen = width_z;
+      parameter ilen = width_a+1;
+      parameter len = (ilen >= olen) ? ilen : olen;
+      reg [len-1:0] result;
+      reg [len-1:0] result_t;
+      begin
+        result_t = {(len){sbit}};
+        result_t[ilen-1:0] = arg1;
+        result = result_t <<< arg2;
+        fshl_u_1 =  result[olen-1:0];
+      end
+   endfunction // fshl_u
+
+   //Shift-left - unsigned shift argument
+   function [width_z-1:0] fshl_u;
+      input [width_a-1:0] arg1;
+      input [width_s-1:0] arg2;
+      input sbit;
+      fshl_u = fshl_u_1({sbit,arg1} ,arg2, sbit);
+   endfunction // fshl_u
+
+endmodule
+
+//------> ./rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   yl7897@newnano.poly.edu
+//  Generated date: Sat Sep 11 12:20:30 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_core_fsm
+//  FSM Module
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_core_fsm (
+  clk, rst, core_wen, fsm_output, main_C_0_tr0, VEC_LOOP_C_9_tr0, COMP_LOOP_C_2_tr0,
+      STAGE_LOOP_C_1_tr0
+);
+  input clk;
+  input rst;
+  input core_wen;
+  output [18:0] fsm_output;
+  reg [18:0] fsm_output;
+  input main_C_0_tr0;
+  input VEC_LOOP_C_9_tr0;
+  input COMP_LOOP_C_2_tr0;
+  input STAGE_LOOP_C_1_tr0;
+
+
+  // FSM State Type Declaration for inPlaceNTT_DIF_precomp_core_core_fsm_1
+  parameter
+    core_rlp_C_0 = 5'd0,
+    main_C_0 = 5'd1,
+    STAGE_LOOP_C_0 = 5'd2,
+    COMP_LOOP_C_0 = 5'd3,
+    COMP_LOOP_C_1 = 5'd4,
+    VEC_LOOP_C_0 = 5'd5,
+    VEC_LOOP_C_1 = 5'd6,
+    VEC_LOOP_C_2 = 5'd7,
+    VEC_LOOP_C_3 = 5'd8,
+    VEC_LOOP_C_4 = 5'd9,
+    VEC_LOOP_C_5 = 5'd10,
+    VEC_LOOP_C_6 = 5'd11,
+    VEC_LOOP_C_7 = 5'd12,
+    VEC_LOOP_C_8 = 5'd13,
+    VEC_LOOP_C_9 = 5'd14,
+    COMP_LOOP_C_2 = 5'd15,
+    STAGE_LOOP_C_1 = 5'd16,
+    main_C_1 = 5'd17,
+    main_C_2 = 5'd18;
+
+  reg [4:0] state_var;
+  reg [4:0] state_var_NS;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  always @(*)
+  begin : inPlaceNTT_DIF_precomp_core_core_fsm_1
+    case (state_var)
+      main_C_0 : begin
+        fsm_output = 19'b0000000000000000010;
+        if ( main_C_0_tr0 ) begin
+          state_var_NS = main_C_1;
+        end
+        else begin
+          state_var_NS = STAGE_LOOP_C_0;
+        end
+      end
+      STAGE_LOOP_C_0 : begin
+        fsm_output = 19'b0000000000000000100;
+        state_var_NS = COMP_LOOP_C_0;
+      end
+      COMP_LOOP_C_0 : begin
+        fsm_output = 19'b0000000000000001000;
+        state_var_NS = COMP_LOOP_C_1;
+      end
+      COMP_LOOP_C_1 : begin
+        fsm_output = 19'b0000000000000010000;
+        state_var_NS = VEC_LOOP_C_0;
+      end
+      VEC_LOOP_C_0 : begin
+        fsm_output = 19'b0000000000000100000;
+        state_var_NS = VEC_LOOP_C_1;
+      end
+      VEC_LOOP_C_1 : begin
+        fsm_output = 19'b0000000000001000000;
+        state_var_NS = VEC_LOOP_C_2;
+      end
+      VEC_LOOP_C_2 : begin
+        fsm_output = 19'b0000000000010000000;
+        state_var_NS = VEC_LOOP_C_3;
+      end
+      VEC_LOOP_C_3 : begin
+        fsm_output = 19'b0000000000100000000;
+        state_var_NS = VEC_LOOP_C_4;
+      end
+      VEC_LOOP_C_4 : begin
+        fsm_output = 19'b0000000001000000000;
+        state_var_NS = VEC_LOOP_C_5;
+      end
+      VEC_LOOP_C_5 : begin
+        fsm_output = 19'b0000000010000000000;
+        state_var_NS = VEC_LOOP_C_6;
+      end
+      VEC_LOOP_C_6 : begin
+        fsm_output = 19'b0000000100000000000;
+        state_var_NS = VEC_LOOP_C_7;
+      end
+      VEC_LOOP_C_7 : begin
+        fsm_output = 19'b0000001000000000000;
+        state_var_NS = VEC_LOOP_C_8;
+      end
+      VEC_LOOP_C_8 : begin
+        fsm_output = 19'b0000010000000000000;
+        state_var_NS = VEC_LOOP_C_9;
+      end
+      VEC_LOOP_C_9 : begin
+        fsm_output = 19'b0000100000000000000;
+        if ( VEC_LOOP_C_9_tr0 ) begin
+          state_var_NS = COMP_LOOP_C_2;
+        end
+        else begin
+          state_var_NS = VEC_LOOP_C_0;
+        end
+      end
+      COMP_LOOP_C_2 : begin
+        fsm_output = 19'b0001000000000000000;
+        if ( COMP_LOOP_C_2_tr0 ) begin
+          state_var_NS = STAGE_LOOP_C_1;
+        end
+        else begin
+          state_var_NS = COMP_LOOP_C_0;
+        end
+      end
+      STAGE_LOOP_C_1 : begin
+        fsm_output = 19'b0010000000000000000;
+        if ( STAGE_LOOP_C_1_tr0 ) begin
+          state_var_NS = main_C_1;
+        end
+        else begin
+          state_var_NS = STAGE_LOOP_C_0;
+        end
+      end
+      main_C_1 : begin
+        fsm_output = 19'b0100000000000000000;
+        state_var_NS = main_C_2;
+      end
+      main_C_2 : begin
+        fsm_output = 19'b1000000000000000000;
+        state_var_NS = main_C_0;
+      end
+      // core_rlp_C_0
+      default : begin
+        fsm_output = 19'b0000000000000000001;
+        state_var_NS = main_C_0;
+      end
+    endcase
+  end
+
+  always @(posedge clk) begin
+    if ( rst ) begin
+      state_var <= core_rlp_C_0;
+    end
+    else if ( core_wen ) begin
+      state_var <= state_var_NS;
+    end
+  end
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_staller
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_staller (
+  clk, rst, core_wen, core_wten, vec_rsci_wen_comp, vec_rsci_wen_comp_1, twiddle_rsci_wen_comp,
+      twiddle_h_rsci_wen_comp, complete_rsci_wen_comp
+);
+  input clk;
+  input rst;
+  output core_wen;
+  output core_wten;
+  reg core_wten;
+  input vec_rsci_wen_comp;
+  input vec_rsci_wen_comp_1;
+  input twiddle_rsci_wen_comp;
+  input twiddle_h_rsci_wen_comp;
+  input complete_rsci_wen_comp;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign core_wen = vec_rsci_wen_comp & vec_rsci_wen_comp_1 & twiddle_rsci_wen_comp
+      & twiddle_h_rsci_wen_comp & complete_rsci_wen_comp;
+  always @(posedge clk) begin
+    if ( rst ) begin
+      core_wten <= 1'b0;
+    end
+    else begin
+      core_wten <= ~ core_wen;
+    end
+  end
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+    (
+  core_wten, twiddle_h_rsc_triosy_obj_iswt0, twiddle_h_rsc_triosy_obj_ld_core_sct
+);
+  input core_wten;
+  input twiddle_h_rsc_triosy_obj_iswt0;
+  output twiddle_h_rsc_triosy_obj_ld_core_sct;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign twiddle_h_rsc_triosy_obj_ld_core_sct = twiddle_h_rsc_triosy_obj_iswt0 &
+      (~ core_wten);
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+    (
+  core_wten, twiddle_rsc_triosy_obj_iswt0, twiddle_rsc_triosy_obj_ld_core_sct
+);
+  input core_wten;
+  input twiddle_rsc_triosy_obj_iswt0;
+  output twiddle_rsc_triosy_obj_ld_core_sct;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign twiddle_rsc_triosy_obj_ld_core_sct = twiddle_rsc_triosy_obj_iswt0 & (~ core_wten);
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl (
+  core_wten, r_rsc_triosy_obj_iswt0, r_rsc_triosy_obj_ld_core_sct
+);
+  input core_wten;
+  input r_rsc_triosy_obj_iswt0;
+  output r_rsc_triosy_obj_ld_core_sct;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign r_rsc_triosy_obj_ld_core_sct = r_rsc_triosy_obj_iswt0 & (~ core_wten);
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl (
+  core_wten, p_rsc_triosy_obj_iswt0, p_rsc_triosy_obj_ld_core_sct
+);
+  input core_wten;
+  input p_rsc_triosy_obj_iswt0;
+  output p_rsc_triosy_obj_ld_core_sct;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign p_rsc_triosy_obj_ld_core_sct = p_rsc_triosy_obj_iswt0 & (~ core_wten);
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl (
+  core_wten, vec_rsc_triosy_obj_iswt0, vec_rsc_triosy_obj_ld_core_sct
+);
+  input core_wten;
+  input vec_rsc_triosy_obj_iswt0;
+  output vec_rsc_triosy_obj_ld_core_sct;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign vec_rsc_triosy_obj_ld_core_sct = vec_rsc_triosy_obj_iswt0 & (~ core_wten);
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp (
+  clk, rst, complete_rsci_oswt, complete_rsci_wen_comp, complete_rsci_biwt, complete_rsci_bdwt,
+      complete_rsci_bcwt
+);
+  input clk;
+  input rst;
+  input complete_rsci_oswt;
+  output complete_rsci_wen_comp;
+  input complete_rsci_biwt;
+  input complete_rsci_bdwt;
+  output complete_rsci_bcwt;
+  reg complete_rsci_bcwt;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign complete_rsci_wen_comp = (~ complete_rsci_oswt) | complete_rsci_biwt | complete_rsci_bcwt;
+  always @(posedge clk) begin
+    if ( rst ) begin
+      complete_rsci_bcwt <= 1'b0;
+    end
+    else begin
+      complete_rsci_bcwt <= ~((~(complete_rsci_bcwt | complete_rsci_biwt)) | complete_rsci_bdwt);
+    end
+  end
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl (
+  core_wen, complete_rsci_oswt, complete_rsci_irdy, complete_rsci_biwt, complete_rsci_bdwt,
+      complete_rsci_bcwt, complete_rsci_ivld_core_sct
+);
+  input core_wen;
+  input complete_rsci_oswt;
+  input complete_rsci_irdy;
+  output complete_rsci_biwt;
+  output complete_rsci_bdwt;
+  input complete_rsci_bcwt;
+  output complete_rsci_ivld_core_sct;
+
+
+  // Interconnect Declarations
+  wire complete_rsci_ogwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign complete_rsci_bdwt = complete_rsci_oswt & core_wen;
+  assign complete_rsci_biwt = complete_rsci_ogwt & complete_rsci_irdy;
+  assign complete_rsci_ogwt = complete_rsci_oswt & (~ complete_rsci_bcwt);
+  assign complete_rsci_ivld_core_sct = complete_rsci_ogwt;
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp (
+  clk, rst, twiddle_h_rsci_oswt, twiddle_h_rsci_wen_comp, twiddle_h_rsci_s_raddr_core,
+      twiddle_h_rsci_s_din_mxwt, twiddle_h_rsci_biwt, twiddle_h_rsci_bdwt, twiddle_h_rsci_bcwt,
+      twiddle_h_rsci_s_raddr, twiddle_h_rsci_s_raddr_core_sct, twiddle_h_rsci_s_din
+);
+  input clk;
+  input rst;
+  input twiddle_h_rsci_oswt;
+  output twiddle_h_rsci_wen_comp;
+  input [9:0] twiddle_h_rsci_s_raddr_core;
+  output [31:0] twiddle_h_rsci_s_din_mxwt;
+  input twiddle_h_rsci_biwt;
+  input twiddle_h_rsci_bdwt;
+  output twiddle_h_rsci_bcwt;
+  reg twiddle_h_rsci_bcwt;
+  output [9:0] twiddle_h_rsci_s_raddr;
+  input twiddle_h_rsci_s_raddr_core_sct;
+  input [31:0] twiddle_h_rsci_s_din;
+
+
+  // Interconnect Declarations
+  reg [31:0] twiddle_h_rsci_s_din_bfwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign twiddle_h_rsci_wen_comp = (~ twiddle_h_rsci_oswt) | twiddle_h_rsci_biwt
+      | twiddle_h_rsci_bcwt;
+  assign twiddle_h_rsci_s_raddr = MUX_v_10_2_2(10'b0000000000, twiddle_h_rsci_s_raddr_core,
+      twiddle_h_rsci_s_raddr_core_sct);
+  assign twiddle_h_rsci_s_din_mxwt = MUX_v_32_2_2(twiddle_h_rsci_s_din, twiddle_h_rsci_s_din_bfwt,
+      twiddle_h_rsci_bcwt);
+  always @(posedge clk) begin
+    if ( rst ) begin
+      twiddle_h_rsci_bcwt <= 1'b0;
+    end
+    else begin
+      twiddle_h_rsci_bcwt <= ~((~(twiddle_h_rsci_bcwt | twiddle_h_rsci_biwt)) | twiddle_h_rsci_bdwt);
+    end
+  end
+  always @(posedge clk) begin
+    if ( twiddle_h_rsci_biwt ) begin
+      twiddle_h_rsci_s_din_bfwt <= twiddle_h_rsci_s_din;
+    end
+  end
+
+  function automatic [9:0] MUX_v_10_2_2;
+    input [9:0] input_0;
+    input [9:0] input_1;
+    input [0:0] sel;
+    reg [9:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_10_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl (
+  core_wen, twiddle_h_rsci_oswt, twiddle_h_rsci_biwt, twiddle_h_rsci_bdwt, twiddle_h_rsci_bcwt,
+      twiddle_h_rsci_s_re_core_sct, twiddle_h_rsci_s_rrdy
+);
+  input core_wen;
+  input twiddle_h_rsci_oswt;
+  output twiddle_h_rsci_biwt;
+  output twiddle_h_rsci_bdwt;
+  input twiddle_h_rsci_bcwt;
+  output twiddle_h_rsci_s_re_core_sct;
+  input twiddle_h_rsci_s_rrdy;
+
+
+  // Interconnect Declarations
+  wire twiddle_h_rsci_ogwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign twiddle_h_rsci_bdwt = twiddle_h_rsci_oswt & core_wen;
+  assign twiddle_h_rsci_biwt = twiddle_h_rsci_ogwt & twiddle_h_rsci_s_rrdy;
+  assign twiddle_h_rsci_ogwt = twiddle_h_rsci_oswt & (~ twiddle_h_rsci_bcwt);
+  assign twiddle_h_rsci_s_re_core_sct = twiddle_h_rsci_ogwt;
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp (
+  clk, rst, twiddle_rsci_oswt, twiddle_rsci_wen_comp, twiddle_rsci_s_raddr_core,
+      twiddle_rsci_s_din_mxwt, twiddle_rsci_biwt, twiddle_rsci_bdwt, twiddle_rsci_bcwt,
+      twiddle_rsci_s_raddr, twiddle_rsci_s_raddr_core_sct, twiddle_rsci_s_din
+);
+  input clk;
+  input rst;
+  input twiddle_rsci_oswt;
+  output twiddle_rsci_wen_comp;
+  input [9:0] twiddle_rsci_s_raddr_core;
+  output [31:0] twiddle_rsci_s_din_mxwt;
+  input twiddle_rsci_biwt;
+  input twiddle_rsci_bdwt;
+  output twiddle_rsci_bcwt;
+  reg twiddle_rsci_bcwt;
+  output [9:0] twiddle_rsci_s_raddr;
+  input twiddle_rsci_s_raddr_core_sct;
+  input [31:0] twiddle_rsci_s_din;
+
+
+  // Interconnect Declarations
+  reg [31:0] twiddle_rsci_s_din_bfwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign twiddle_rsci_wen_comp = (~ twiddle_rsci_oswt) | twiddle_rsci_biwt | twiddle_rsci_bcwt;
+  assign twiddle_rsci_s_raddr = MUX_v_10_2_2(10'b0000000000, twiddle_rsci_s_raddr_core,
+      twiddle_rsci_s_raddr_core_sct);
+  assign twiddle_rsci_s_din_mxwt = MUX_v_32_2_2(twiddle_rsci_s_din, twiddle_rsci_s_din_bfwt,
+      twiddle_rsci_bcwt);
+  always @(posedge clk) begin
+    if ( rst ) begin
+      twiddle_rsci_bcwt <= 1'b0;
+    end
+    else begin
+      twiddle_rsci_bcwt <= ~((~(twiddle_rsci_bcwt | twiddle_rsci_biwt)) | twiddle_rsci_bdwt);
+    end
+  end
+  always @(posedge clk) begin
+    if ( twiddle_rsci_biwt ) begin
+      twiddle_rsci_s_din_bfwt <= twiddle_rsci_s_din;
+    end
+  end
+
+  function automatic [9:0] MUX_v_10_2_2;
+    input [9:0] input_0;
+    input [9:0] input_1;
+    input [0:0] sel;
+    reg [9:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_10_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl (
+  core_wen, twiddle_rsci_oswt, twiddle_rsci_biwt, twiddle_rsci_bdwt, twiddle_rsci_bcwt,
+      twiddle_rsci_s_re_core_sct, twiddle_rsci_s_rrdy
+);
+  input core_wen;
+  input twiddle_rsci_oswt;
+  output twiddle_rsci_biwt;
+  output twiddle_rsci_bdwt;
+  input twiddle_rsci_bcwt;
+  output twiddle_rsci_s_re_core_sct;
+  input twiddle_rsci_s_rrdy;
+
+
+  // Interconnect Declarations
+  wire twiddle_rsci_ogwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign twiddle_rsci_bdwt = twiddle_rsci_oswt & core_wen;
+  assign twiddle_rsci_biwt = twiddle_rsci_ogwt & twiddle_rsci_s_rrdy;
+  assign twiddle_rsci_ogwt = twiddle_rsci_oswt & (~ twiddle_rsci_bcwt);
+  assign twiddle_rsci_s_re_core_sct = twiddle_rsci_ogwt;
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_r_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_r_rsci (
+  clk, r_rsc_RREADY, r_rsc_RVALID, r_rsc_RRESP, r_rsc_RDATA, r_rsc_ARREADY, r_rsc_ARVALID,
+      r_rsc_ARADDR, r_rsc_BREADY, r_rsc_BVALID, r_rsc_BRESP, r_rsc_WREADY, r_rsc_WVALID,
+      r_rsc_WSTRB, r_rsc_WDATA, r_rsc_AWREADY, r_rsc_AWVALID, r_rsc_AWADDR
+);
+  input clk;
+  input r_rsc_RREADY;
+  output r_rsc_RVALID;
+  output [1:0] r_rsc_RRESP;
+  output [31:0] r_rsc_RDATA;
+  output r_rsc_ARREADY;
+  input r_rsc_ARVALID;
+  input [11:0] r_rsc_ARADDR;
+  input r_rsc_BREADY;
+  output r_rsc_BVALID;
+  output [1:0] r_rsc_BRESP;
+  output r_rsc_WREADY;
+  input r_rsc_WVALID;
+  input [3:0] r_rsc_WSTRB;
+  input [31:0] r_rsc_WDATA;
+  output r_rsc_AWREADY;
+  input r_rsc_AWVALID;
+  input [11:0] r_rsc_AWADDR;
+
+
+  // Interconnect Declarations
+  wire [31:0] r_rsci_idat;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_lite_slave_indirect #(.rscid(32'sd15),
+  .op_width(32'sd32),
+  .cwidth(32'sd32),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .BASE_ADDRESS(32'sd0)) r_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWADDR(r_rsc_AWADDR),
+      .AWVALID(r_rsc_AWVALID),
+      .AWREADY(r_rsc_AWREADY),
+      .WDATA(r_rsc_WDATA),
+      .WSTRB(r_rsc_WSTRB),
+      .WVALID(r_rsc_WVALID),
+      .WREADY(r_rsc_WREADY),
+      .BRESP(r_rsc_BRESP),
+      .BVALID(r_rsc_BVALID),
+      .BREADY(r_rsc_BREADY),
+      .ARADDR(r_rsc_ARADDR),
+      .ARVALID(r_rsc_ARVALID),
+      .ARREADY(r_rsc_ARREADY),
+      .RDATA(r_rsc_RDATA),
+      .RRESP(r_rsc_RRESP),
+      .RVALID(r_rsc_RVALID),
+      .RREADY(r_rsc_RREADY),
+      .idat(r_rsci_idat)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp (
+  clk, rst, p_rsci_idat_mxwt, p_rsci_idat, p_rsci_biwt, p_rsci_bdwt
+);
+  input clk;
+  input rst;
+  output [31:0] p_rsci_idat_mxwt;
+  input [31:0] p_rsci_idat;
+  input p_rsci_biwt;
+  input p_rsci_bdwt;
+
+
+  // Interconnect Declarations
+  reg p_rsci_bcwt;
+  reg [31:0] p_rsci_idat_bfwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign p_rsci_idat_mxwt = MUX_v_32_2_2(p_rsci_idat, p_rsci_idat_bfwt, p_rsci_bcwt);
+  always @(posedge clk) begin
+    if ( rst ) begin
+      p_rsci_bcwt <= 1'b0;
+    end
+    else begin
+      p_rsci_bcwt <= ~((~(p_rsci_bcwt | p_rsci_biwt)) | p_rsci_bdwt);
+    end
+  end
+  always @(posedge clk) begin
+    if ( p_rsci_biwt ) begin
+      p_rsci_idat_bfwt <= p_rsci_idat;
+    end
+  end
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl (
+  core_wen, core_wten, p_rsci_oswt, p_rsci_biwt, p_rsci_bdwt
+);
+  input core_wen;
+  input core_wten;
+  input p_rsci_oswt;
+  output p_rsci_biwt;
+  output p_rsci_bdwt;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign p_rsci_bdwt = p_rsci_oswt & core_wen;
+  assign p_rsci_biwt = (~ core_wten) & p_rsci_oswt;
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp (
+  clk, rst, vec_rsci_oswt, vec_rsci_wen_comp, vec_rsci_oswt_1, vec_rsci_wen_comp_1,
+      vec_rsci_s_raddr_core, vec_rsci_s_waddr_core, vec_rsci_s_din_mxwt, vec_rsci_s_dout_core,
+      vec_rsci_biwt, vec_rsci_bdwt, vec_rsci_bcwt, vec_rsci_biwt_1, vec_rsci_bdwt_2,
+      vec_rsci_bcwt_1, vec_rsci_s_raddr, vec_rsci_s_raddr_core_sct, vec_rsci_s_waddr,
+      vec_rsci_s_waddr_core_sct, vec_rsci_s_din, vec_rsci_s_dout
+);
+  input clk;
+  input rst;
+  input vec_rsci_oswt;
+  output vec_rsci_wen_comp;
+  input vec_rsci_oswt_1;
+  output vec_rsci_wen_comp_1;
+  input [9:0] vec_rsci_s_raddr_core;
+  input [9:0] vec_rsci_s_waddr_core;
+  output [31:0] vec_rsci_s_din_mxwt;
+  input [31:0] vec_rsci_s_dout_core;
+  input vec_rsci_biwt;
+  input vec_rsci_bdwt;
+  output vec_rsci_bcwt;
+  reg vec_rsci_bcwt;
+  input vec_rsci_biwt_1;
+  input vec_rsci_bdwt_2;
+  output vec_rsci_bcwt_1;
+  reg vec_rsci_bcwt_1;
+  output [9:0] vec_rsci_s_raddr;
+  input vec_rsci_s_raddr_core_sct;
+  output [9:0] vec_rsci_s_waddr;
+  input vec_rsci_s_waddr_core_sct;
+  input [31:0] vec_rsci_s_din;
+  output [31:0] vec_rsci_s_dout;
+
+
+  // Interconnect Declarations
+  reg [31:0] vec_rsci_s_din_bfwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign vec_rsci_wen_comp = (~ vec_rsci_oswt) | vec_rsci_biwt | vec_rsci_bcwt;
+  assign vec_rsci_wen_comp_1 = (~ vec_rsci_oswt_1) | vec_rsci_biwt_1 | vec_rsci_bcwt_1;
+  assign vec_rsci_s_raddr = MUX_v_10_2_2(10'b0000000000, vec_rsci_s_raddr_core, vec_rsci_s_raddr_core_sct);
+  assign vec_rsci_s_waddr = MUX_v_10_2_2(10'b0000000000, vec_rsci_s_waddr_core, vec_rsci_s_waddr_core_sct);
+  assign vec_rsci_s_din_mxwt = MUX_v_32_2_2(vec_rsci_s_din, vec_rsci_s_din_bfwt,
+      vec_rsci_bcwt);
+  assign vec_rsci_s_dout = MUX_v_32_2_2(32'b00000000000000000000000000000000, vec_rsci_s_dout_core,
+      vec_rsci_s_waddr_core_sct);
+  always @(posedge clk) begin
+    if ( rst ) begin
+      vec_rsci_bcwt <= 1'b0;
+      vec_rsci_bcwt_1 <= 1'b0;
+    end
+    else begin
+      vec_rsci_bcwt <= ~((~(vec_rsci_bcwt | vec_rsci_biwt)) | vec_rsci_bdwt);
+      vec_rsci_bcwt_1 <= ~((~(vec_rsci_bcwt_1 | vec_rsci_biwt_1)) | vec_rsci_bdwt_2);
+    end
+  end
+  always @(posedge clk) begin
+    if ( vec_rsci_biwt ) begin
+      vec_rsci_s_din_bfwt <= vec_rsci_s_din;
+    end
+  end
+
+  function automatic [9:0] MUX_v_10_2_2;
+    input [9:0] input_0;
+    input [9:0] input_1;
+    input [0:0] sel;
+    reg [9:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_10_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl (
+  core_wen, vec_rsci_oswt, vec_rsci_oswt_1, vec_rsci_biwt, vec_rsci_bdwt, vec_rsci_bcwt,
+      vec_rsci_s_re_core_sct, vec_rsci_biwt_1, vec_rsci_bdwt_2, vec_rsci_bcwt_1,
+      vec_rsci_s_we_core_sct, vec_rsci_s_rrdy, vec_rsci_s_wrdy
+);
+  input core_wen;
+  input vec_rsci_oswt;
+  input vec_rsci_oswt_1;
+  output vec_rsci_biwt;
+  output vec_rsci_bdwt;
+  input vec_rsci_bcwt;
+  output vec_rsci_s_re_core_sct;
+  output vec_rsci_biwt_1;
+  output vec_rsci_bdwt_2;
+  input vec_rsci_bcwt_1;
+  output vec_rsci_s_we_core_sct;
+  input vec_rsci_s_rrdy;
+  input vec_rsci_s_wrdy;
+
+
+  // Interconnect Declarations
+  wire vec_rsci_ogwt;
+  wire vec_rsci_ogwt_1;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign vec_rsci_bdwt = vec_rsci_oswt & core_wen;
+  assign vec_rsci_biwt = vec_rsci_ogwt & vec_rsci_s_rrdy;
+  assign vec_rsci_ogwt = vec_rsci_oswt & (~ vec_rsci_bcwt);
+  assign vec_rsci_s_re_core_sct = vec_rsci_ogwt;
+  assign vec_rsci_bdwt_2 = vec_rsci_oswt_1 & core_wen;
+  assign vec_rsci_biwt_1 = vec_rsci_ogwt_1 & vec_rsci_s_wrdy;
+  assign vec_rsci_ogwt_1 = vec_rsci_oswt_1 & (~ vec_rsci_bcwt_1);
+  assign vec_rsci_s_we_core_sct = vec_rsci_ogwt_1;
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp (
+  clk, rst, run_rsci_ivld_mxwt, run_rsci_ivld, run_rsci_biwt, run_rsci_bdwt
+);
+  input clk;
+  input rst;
+  output run_rsci_ivld_mxwt;
+  input run_rsci_ivld;
+  input run_rsci_biwt;
+  input run_rsci_bdwt;
+
+
+  // Interconnect Declarations
+  reg run_rsci_bcwt;
+  reg run_rsci_ivld_bfwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign run_rsci_ivld_mxwt = MUX_s_1_2_2(run_rsci_ivld, run_rsci_ivld_bfwt, run_rsci_bcwt);
+  always @(posedge clk) begin
+    if ( rst ) begin
+      run_rsci_bcwt <= 1'b0;
+    end
+    else begin
+      run_rsci_bcwt <= ~((~(run_rsci_bcwt | run_rsci_biwt)) | run_rsci_bdwt);
+    end
+  end
+  always @(posedge clk) begin
+    if ( run_rsci_biwt ) begin
+      run_rsci_ivld_bfwt <= run_rsci_ivld;
+    end
+  end
+
+  function automatic [0:0] MUX_s_1_2_2;
+    input [0:0] input_0;
+    input [0:0] input_1;
+    input [0:0] sel;
+    reg [0:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_s_1_2_2 = result;
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl (
+  core_wen, run_rsci_oswt, core_wten, run_rsci_biwt, run_rsci_bdwt
+);
+  input core_wen;
+  input run_rsci_oswt;
+  input core_wten;
+  output run_rsci_biwt;
+  output run_rsci_bdwt;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign run_rsci_bdwt = run_rsci_oswt & core_wen;
+  assign run_rsci_biwt = (~ core_wten) & run_rsci_oswt;
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_wait_dp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_wait_dp (
+  ensig_cgo_iro, ensig_cgo_iro_1, core_wen, ensig_cgo, mult_cmp_ccs_ccore_en, ensig_cgo_1,
+      modulo_sub_cmp_ccs_ccore_en
+);
+  input ensig_cgo_iro;
+  input ensig_cgo_iro_1;
+  input core_wen;
+  input ensig_cgo;
+  output mult_cmp_ccs_ccore_en;
+  input ensig_cgo_1;
+  output modulo_sub_cmp_ccs_ccore_en;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign mult_cmp_ccs_ccore_en = core_wen & (ensig_cgo | ensig_cgo_iro);
+  assign modulo_sub_cmp_ccs_ccore_en = core_wen & (ensig_cgo_1 | ensig_cgo_iro_1);
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj (
+  twiddle_h_rsc_triosy_lz, core_wten, twiddle_h_rsc_triosy_obj_iswt0
+);
+  output twiddle_h_rsc_triosy_lz;
+  input core_wten;
+  input twiddle_h_rsc_triosy_obj_iswt0;
+
+
+  // Interconnect Declarations
+  wire twiddle_h_rsc_triosy_obj_ld_core_sct;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  mgc_io_sync_v2 #(.valid(32'sd0)) twiddle_h_rsc_triosy_obj (
+      .ld(twiddle_h_rsc_triosy_obj_ld_core_sct),
+      .lz(twiddle_h_rsc_triosy_lz)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+      inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl_inst
+      (
+      .core_wten(core_wten),
+      .twiddle_h_rsc_triosy_obj_iswt0(twiddle_h_rsc_triosy_obj_iswt0),
+      .twiddle_h_rsc_triosy_obj_ld_core_sct(twiddle_h_rsc_triosy_obj_ld_core_sct)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj (
+  twiddle_rsc_triosy_lz, core_wten, twiddle_rsc_triosy_obj_iswt0
+);
+  output twiddle_rsc_triosy_lz;
+  input core_wten;
+  input twiddle_rsc_triosy_obj_iswt0;
+
+
+  // Interconnect Declarations
+  wire twiddle_rsc_triosy_obj_ld_core_sct;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  mgc_io_sync_v2 #(.valid(32'sd0)) twiddle_rsc_triosy_obj (
+      .ld(twiddle_rsc_triosy_obj_ld_core_sct),
+      .lz(twiddle_rsc_triosy_lz)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+      inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl_inst
+      (
+      .core_wten(core_wten),
+      .twiddle_rsc_triosy_obj_iswt0(twiddle_rsc_triosy_obj_iswt0),
+      .twiddle_rsc_triosy_obj_ld_core_sct(twiddle_rsc_triosy_obj_ld_core_sct)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj (
+  r_rsc_triosy_lz, core_wten, r_rsc_triosy_obj_iswt0
+);
+  output r_rsc_triosy_lz;
+  input core_wten;
+  input r_rsc_triosy_obj_iswt0;
+
+
+  // Interconnect Declarations
+  wire r_rsc_triosy_obj_ld_core_sct;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  mgc_io_sync_v2 #(.valid(32'sd0)) r_rsc_triosy_obj (
+      .ld(r_rsc_triosy_obj_ld_core_sct),
+      .lz(r_rsc_triosy_lz)
+    );
+  inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl_inst
+      (
+      .core_wten(core_wten),
+      .r_rsc_triosy_obj_iswt0(r_rsc_triosy_obj_iswt0),
+      .r_rsc_triosy_obj_ld_core_sct(r_rsc_triosy_obj_ld_core_sct)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj (
+  p_rsc_triosy_lz, core_wten, p_rsc_triosy_obj_iswt0
+);
+  output p_rsc_triosy_lz;
+  input core_wten;
+  input p_rsc_triosy_obj_iswt0;
+
+
+  // Interconnect Declarations
+  wire p_rsc_triosy_obj_ld_core_sct;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  mgc_io_sync_v2 #(.valid(32'sd0)) p_rsc_triosy_obj (
+      .ld(p_rsc_triosy_obj_ld_core_sct),
+      .lz(p_rsc_triosy_lz)
+    );
+  inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl_inst
+      (
+      .core_wten(core_wten),
+      .p_rsc_triosy_obj_iswt0(p_rsc_triosy_obj_iswt0),
+      .p_rsc_triosy_obj_ld_core_sct(p_rsc_triosy_obj_ld_core_sct)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj (
+  vec_rsc_triosy_lz, core_wten, vec_rsc_triosy_obj_iswt0
+);
+  output vec_rsc_triosy_lz;
+  input core_wten;
+  input vec_rsc_triosy_obj_iswt0;
+
+
+  // Interconnect Declarations
+  wire vec_rsc_triosy_obj_ld_core_sct;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  mgc_io_sync_v2 #(.valid(32'sd0)) vec_rsc_triosy_obj (
+      .ld(vec_rsc_triosy_obj_ld_core_sct),
+      .lz(vec_rsc_triosy_lz)
+    );
+  inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl_inst
+      (
+      .core_wten(core_wten),
+      .vec_rsc_triosy_obj_iswt0(vec_rsc_triosy_obj_iswt0),
+      .vec_rsc_triosy_obj_ld_core_sct(vec_rsc_triosy_obj_ld_core_sct)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_complete_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_complete_rsci (
+  clk, rst, complete_rsc_triosy, complete_rsc_RREADY, complete_rsc_RVALID, complete_rsc_RRESP,
+      complete_rsc_RDATA, complete_rsc_ARREADY, complete_rsc_ARVALID, complete_rsc_ARADDR,
+      complete_rsc_BREADY, complete_rsc_BVALID, complete_rsc_BRESP, complete_rsc_WREADY,
+      complete_rsc_WVALID, complete_rsc_WSTRB, complete_rsc_WDATA, complete_rsc_AWREADY,
+      complete_rsc_AWVALID, complete_rsc_AWADDR, core_wen, complete_rsci_oswt, complete_rsci_wen_comp
+);
+  input clk;
+  input rst;
+  output complete_rsc_triosy;
+  input complete_rsc_RREADY;
+  output complete_rsc_RVALID;
+  output [1:0] complete_rsc_RRESP;
+  output [31:0] complete_rsc_RDATA;
+  output complete_rsc_ARREADY;
+  input complete_rsc_ARVALID;
+  input [11:0] complete_rsc_ARADDR;
+  input complete_rsc_BREADY;
+  output complete_rsc_BVALID;
+  output [1:0] complete_rsc_BRESP;
+  output complete_rsc_WREADY;
+  input complete_rsc_WVALID;
+  input [3:0] complete_rsc_WSTRB;
+  input [31:0] complete_rsc_WDATA;
+  output complete_rsc_AWREADY;
+  input complete_rsc_AWVALID;
+  input [11:0] complete_rsc_AWADDR;
+  input core_wen;
+  input complete_rsci_oswt;
+  output complete_rsci_wen_comp;
+
+
+  // Interconnect Declarations
+  wire complete_rsci_irdy;
+  wire complete_rsci_biwt;
+  wire complete_rsci_bdwt;
+  wire complete_rsci_bcwt;
+  wire complete_rsci_ivld_core_sct;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_lite_slave_outsync #(.rscid(32'sd18),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .BASE_ADDRESS(32'sd0)) complete_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWADDR(complete_rsc_AWADDR),
+      .AWVALID(complete_rsc_AWVALID),
+      .AWREADY(complete_rsc_AWREADY),
+      .WDATA(complete_rsc_WDATA),
+      .WSTRB(complete_rsc_WSTRB),
+      .WVALID(complete_rsc_WVALID),
+      .WREADY(complete_rsc_WREADY),
+      .BRESP(complete_rsc_BRESP),
+      .BVALID(complete_rsc_BVALID),
+      .BREADY(complete_rsc_BREADY),
+      .ARADDR(complete_rsc_ARADDR),
+      .ARVALID(complete_rsc_ARVALID),
+      .ARREADY(complete_rsc_ARREADY),
+      .RDATA(complete_rsc_RDATA),
+      .RRESP(complete_rsc_RRESP),
+      .RVALID(complete_rsc_RVALID),
+      .RREADY(complete_rsc_RREADY),
+      .irdy(complete_rsci_irdy),
+      .ivld(complete_rsci_ivld_core_sct),
+      .triosy(complete_rsc_triosy)
+    );
+  inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl_inst
+      (
+      .core_wen(core_wen),
+      .complete_rsci_oswt(complete_rsci_oswt),
+      .complete_rsci_irdy(complete_rsci_irdy),
+      .complete_rsci_biwt(complete_rsci_biwt),
+      .complete_rsci_bdwt(complete_rsci_bdwt),
+      .complete_rsci_bcwt(complete_rsci_bcwt),
+      .complete_rsci_ivld_core_sct(complete_rsci_ivld_core_sct)
+    );
+  inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .complete_rsci_oswt(complete_rsci_oswt),
+      .complete_rsci_wen_comp(complete_rsci_wen_comp),
+      .complete_rsci_biwt(complete_rsci_biwt),
+      .complete_rsci_bdwt(complete_rsci_bdwt),
+      .complete_rsci_bcwt(complete_rsci_bcwt)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_h_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci (
+  clk, rst, twiddle_h_rsc_s_tdone, twiddle_h_rsc_tr_write_done, twiddle_h_rsc_RREADY,
+      twiddle_h_rsc_RVALID, twiddle_h_rsc_RUSER, twiddle_h_rsc_RLAST, twiddle_h_rsc_RRESP,
+      twiddle_h_rsc_RDATA, twiddle_h_rsc_RID, twiddle_h_rsc_ARREADY, twiddle_h_rsc_ARVALID,
+      twiddle_h_rsc_ARUSER, twiddle_h_rsc_ARREGION, twiddle_h_rsc_ARQOS, twiddle_h_rsc_ARPROT,
+      twiddle_h_rsc_ARCACHE, twiddle_h_rsc_ARLOCK, twiddle_h_rsc_ARBURST, twiddle_h_rsc_ARSIZE,
+      twiddle_h_rsc_ARLEN, twiddle_h_rsc_ARADDR, twiddle_h_rsc_ARID, twiddle_h_rsc_BREADY,
+      twiddle_h_rsc_BVALID, twiddle_h_rsc_BUSER, twiddle_h_rsc_BRESP, twiddle_h_rsc_BID,
+      twiddle_h_rsc_WREADY, twiddle_h_rsc_WVALID, twiddle_h_rsc_WUSER, twiddle_h_rsc_WLAST,
+      twiddle_h_rsc_WSTRB, twiddle_h_rsc_WDATA, twiddle_h_rsc_AWREADY, twiddle_h_rsc_AWVALID,
+      twiddle_h_rsc_AWUSER, twiddle_h_rsc_AWREGION, twiddle_h_rsc_AWQOS, twiddle_h_rsc_AWPROT,
+      twiddle_h_rsc_AWCACHE, twiddle_h_rsc_AWLOCK, twiddle_h_rsc_AWBURST, twiddle_h_rsc_AWSIZE,
+      twiddle_h_rsc_AWLEN, twiddle_h_rsc_AWADDR, twiddle_h_rsc_AWID, core_wen, twiddle_h_rsci_oswt,
+      twiddle_h_rsci_wen_comp, twiddle_h_rsci_s_raddr_core, twiddle_h_rsci_s_din_mxwt
+);
+  input clk;
+  input rst;
+  input twiddle_h_rsc_s_tdone;
+  input twiddle_h_rsc_tr_write_done;
+  input twiddle_h_rsc_RREADY;
+  output twiddle_h_rsc_RVALID;
+  output twiddle_h_rsc_RUSER;
+  output twiddle_h_rsc_RLAST;
+  output [1:0] twiddle_h_rsc_RRESP;
+  output [31:0] twiddle_h_rsc_RDATA;
+  output twiddle_h_rsc_RID;
+  output twiddle_h_rsc_ARREADY;
+  input twiddle_h_rsc_ARVALID;
+  input twiddle_h_rsc_ARUSER;
+  input [3:0] twiddle_h_rsc_ARREGION;
+  input [3:0] twiddle_h_rsc_ARQOS;
+  input [2:0] twiddle_h_rsc_ARPROT;
+  input [3:0] twiddle_h_rsc_ARCACHE;
+  input twiddle_h_rsc_ARLOCK;
+  input [1:0] twiddle_h_rsc_ARBURST;
+  input [2:0] twiddle_h_rsc_ARSIZE;
+  input [7:0] twiddle_h_rsc_ARLEN;
+  input [11:0] twiddle_h_rsc_ARADDR;
+  input twiddle_h_rsc_ARID;
+  input twiddle_h_rsc_BREADY;
+  output twiddle_h_rsc_BVALID;
+  output twiddle_h_rsc_BUSER;
+  output [1:0] twiddle_h_rsc_BRESP;
+  output twiddle_h_rsc_BID;
+  output twiddle_h_rsc_WREADY;
+  input twiddle_h_rsc_WVALID;
+  input twiddle_h_rsc_WUSER;
+  input twiddle_h_rsc_WLAST;
+  input [3:0] twiddle_h_rsc_WSTRB;
+  input [31:0] twiddle_h_rsc_WDATA;
+  output twiddle_h_rsc_AWREADY;
+  input twiddle_h_rsc_AWVALID;
+  input twiddle_h_rsc_AWUSER;
+  input [3:0] twiddle_h_rsc_AWREGION;
+  input [3:0] twiddle_h_rsc_AWQOS;
+  input [2:0] twiddle_h_rsc_AWPROT;
+  input [3:0] twiddle_h_rsc_AWCACHE;
+  input twiddle_h_rsc_AWLOCK;
+  input [1:0] twiddle_h_rsc_AWBURST;
+  input [2:0] twiddle_h_rsc_AWSIZE;
+  input [7:0] twiddle_h_rsc_AWLEN;
+  input [11:0] twiddle_h_rsc_AWADDR;
+  input twiddle_h_rsc_AWID;
+  input core_wen;
+  input twiddle_h_rsci_oswt;
+  output twiddle_h_rsci_wen_comp;
+  input [9:0] twiddle_h_rsci_s_raddr_core;
+  output [31:0] twiddle_h_rsci_s_din_mxwt;
+
+
+  // Interconnect Declarations
+  wire twiddle_h_rsci_biwt;
+  wire twiddle_h_rsci_bdwt;
+  wire twiddle_h_rsci_bcwt;
+  wire twiddle_h_rsci_s_re_core_sct;
+  wire [9:0] twiddle_h_rsci_s_raddr;
+  wire [31:0] twiddle_h_rsci_s_din;
+  wire twiddle_h_rsci_s_rrdy;
+  wire twiddle_h_rsci_s_wrdy;
+  wire twiddle_h_rsc_is_idle;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_slave_mem #(.rscid(32'sd0),
+  .depth(32'sd1024),
+  .op_width(32'sd32),
+  .cwidth(32'sd32),
+  .addr_w(32'sd10),
+  .nopreload(32'sd0),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .ID_WIDTH(32'sd1),
+  .USER_WIDTH(32'sd1),
+  .REGION_MAP_SIZE(32'sd1),
+  .wBASE_ADDRESS(32'sd0),
+  .rBASE_ADDRESS(32'sd0)) twiddle_h_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWID(twiddle_h_rsc_AWID),
+      .AWADDR(twiddle_h_rsc_AWADDR),
+      .AWLEN(twiddle_h_rsc_AWLEN),
+      .AWSIZE(twiddle_h_rsc_AWSIZE),
+      .AWBURST(twiddle_h_rsc_AWBURST),
+      .AWLOCK(twiddle_h_rsc_AWLOCK),
+      .AWCACHE(twiddle_h_rsc_AWCACHE),
+      .AWPROT(twiddle_h_rsc_AWPROT),
+      .AWQOS(twiddle_h_rsc_AWQOS),
+      .AWREGION(twiddle_h_rsc_AWREGION),
+      .AWUSER(twiddle_h_rsc_AWUSER),
+      .AWVALID(twiddle_h_rsc_AWVALID),
+      .AWREADY(twiddle_h_rsc_AWREADY),
+      .WDATA(twiddle_h_rsc_WDATA),
+      .WSTRB(twiddle_h_rsc_WSTRB),
+      .WLAST(twiddle_h_rsc_WLAST),
+      .WUSER(twiddle_h_rsc_WUSER),
+      .WVALID(twiddle_h_rsc_WVALID),
+      .WREADY(twiddle_h_rsc_WREADY),
+      .BID(twiddle_h_rsc_BID),
+      .BRESP(twiddle_h_rsc_BRESP),
+      .BUSER(twiddle_h_rsc_BUSER),
+      .BVALID(twiddle_h_rsc_BVALID),
+      .BREADY(twiddle_h_rsc_BREADY),
+      .ARID(twiddle_h_rsc_ARID),
+      .ARADDR(twiddle_h_rsc_ARADDR),
+      .ARLEN(twiddle_h_rsc_ARLEN),
+      .ARSIZE(twiddle_h_rsc_ARSIZE),
+      .ARBURST(twiddle_h_rsc_ARBURST),
+      .ARLOCK(twiddle_h_rsc_ARLOCK),
+      .ARCACHE(twiddle_h_rsc_ARCACHE),
+      .ARPROT(twiddle_h_rsc_ARPROT),
+      .ARQOS(twiddle_h_rsc_ARQOS),
+      .ARREGION(twiddle_h_rsc_ARREGION),
+      .ARUSER(twiddle_h_rsc_ARUSER),
+      .ARVALID(twiddle_h_rsc_ARVALID),
+      .ARREADY(twiddle_h_rsc_ARREADY),
+      .RID(twiddle_h_rsc_RID),
+      .RDATA(twiddle_h_rsc_RDATA),
+      .RRESP(twiddle_h_rsc_RRESP),
+      .RLAST(twiddle_h_rsc_RLAST),
+      .RUSER(twiddle_h_rsc_RUSER),
+      .RVALID(twiddle_h_rsc_RVALID),
+      .RREADY(twiddle_h_rsc_RREADY),
+      .s_re(twiddle_h_rsci_s_re_core_sct),
+      .s_we(1'b0),
+      .s_raddr(twiddle_h_rsci_s_raddr),
+      .s_waddr(10'b0000000000),
+      .s_din(twiddle_h_rsci_s_din),
+      .s_dout(32'b00000000000000000000000000000000),
+      .s_rrdy(twiddle_h_rsci_s_rrdy),
+      .s_wrdy(twiddle_h_rsci_s_wrdy),
+      .is_idle(twiddle_h_rsc_is_idle),
+      .tr_write_done(twiddle_h_rsc_tr_write_done),
+      .s_tdone(twiddle_h_rsc_s_tdone)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl_inst
+      (
+      .core_wen(core_wen),
+      .twiddle_h_rsci_oswt(twiddle_h_rsci_oswt),
+      .twiddle_h_rsci_biwt(twiddle_h_rsci_biwt),
+      .twiddle_h_rsci_bdwt(twiddle_h_rsci_bdwt),
+      .twiddle_h_rsci_bcwt(twiddle_h_rsci_bcwt),
+      .twiddle_h_rsci_s_re_core_sct(twiddle_h_rsci_s_re_core_sct),
+      .twiddle_h_rsci_s_rrdy(twiddle_h_rsci_s_rrdy)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .twiddle_h_rsci_oswt(twiddle_h_rsci_oswt),
+      .twiddle_h_rsci_wen_comp(twiddle_h_rsci_wen_comp),
+      .twiddle_h_rsci_s_raddr_core(twiddle_h_rsci_s_raddr_core),
+      .twiddle_h_rsci_s_din_mxwt(twiddle_h_rsci_s_din_mxwt),
+      .twiddle_h_rsci_biwt(twiddle_h_rsci_biwt),
+      .twiddle_h_rsci_bdwt(twiddle_h_rsci_bdwt),
+      .twiddle_h_rsci_bcwt(twiddle_h_rsci_bcwt),
+      .twiddle_h_rsci_s_raddr(twiddle_h_rsci_s_raddr),
+      .twiddle_h_rsci_s_raddr_core_sct(twiddle_h_rsci_s_re_core_sct),
+      .twiddle_h_rsci_s_din(twiddle_h_rsci_s_din)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_twiddle_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_twiddle_rsci (
+  clk, rst, twiddle_rsc_s_tdone, twiddle_rsc_tr_write_done, twiddle_rsc_RREADY, twiddle_rsc_RVALID,
+      twiddle_rsc_RUSER, twiddle_rsc_RLAST, twiddle_rsc_RRESP, twiddle_rsc_RDATA,
+      twiddle_rsc_RID, twiddle_rsc_ARREADY, twiddle_rsc_ARVALID, twiddle_rsc_ARUSER,
+      twiddle_rsc_ARREGION, twiddle_rsc_ARQOS, twiddle_rsc_ARPROT, twiddle_rsc_ARCACHE,
+      twiddle_rsc_ARLOCK, twiddle_rsc_ARBURST, twiddle_rsc_ARSIZE, twiddle_rsc_ARLEN,
+      twiddle_rsc_ARADDR, twiddle_rsc_ARID, twiddle_rsc_BREADY, twiddle_rsc_BVALID,
+      twiddle_rsc_BUSER, twiddle_rsc_BRESP, twiddle_rsc_BID, twiddle_rsc_WREADY,
+      twiddle_rsc_WVALID, twiddle_rsc_WUSER, twiddle_rsc_WLAST, twiddle_rsc_WSTRB,
+      twiddle_rsc_WDATA, twiddle_rsc_AWREADY, twiddle_rsc_AWVALID, twiddle_rsc_AWUSER,
+      twiddle_rsc_AWREGION, twiddle_rsc_AWQOS, twiddle_rsc_AWPROT, twiddle_rsc_AWCACHE,
+      twiddle_rsc_AWLOCK, twiddle_rsc_AWBURST, twiddle_rsc_AWSIZE, twiddle_rsc_AWLEN,
+      twiddle_rsc_AWADDR, twiddle_rsc_AWID, core_wen, twiddle_rsci_oswt, twiddle_rsci_wen_comp,
+      twiddle_rsci_s_raddr_core, twiddle_rsci_s_din_mxwt
+);
+  input clk;
+  input rst;
+  input twiddle_rsc_s_tdone;
+  input twiddle_rsc_tr_write_done;
+  input twiddle_rsc_RREADY;
+  output twiddle_rsc_RVALID;
+  output twiddle_rsc_RUSER;
+  output twiddle_rsc_RLAST;
+  output [1:0] twiddle_rsc_RRESP;
+  output [31:0] twiddle_rsc_RDATA;
+  output twiddle_rsc_RID;
+  output twiddle_rsc_ARREADY;
+  input twiddle_rsc_ARVALID;
+  input twiddle_rsc_ARUSER;
+  input [3:0] twiddle_rsc_ARREGION;
+  input [3:0] twiddle_rsc_ARQOS;
+  input [2:0] twiddle_rsc_ARPROT;
+  input [3:0] twiddle_rsc_ARCACHE;
+  input twiddle_rsc_ARLOCK;
+  input [1:0] twiddle_rsc_ARBURST;
+  input [2:0] twiddle_rsc_ARSIZE;
+  input [7:0] twiddle_rsc_ARLEN;
+  input [11:0] twiddle_rsc_ARADDR;
+  input twiddle_rsc_ARID;
+  input twiddle_rsc_BREADY;
+  output twiddle_rsc_BVALID;
+  output twiddle_rsc_BUSER;
+  output [1:0] twiddle_rsc_BRESP;
+  output twiddle_rsc_BID;
+  output twiddle_rsc_WREADY;
+  input twiddle_rsc_WVALID;
+  input twiddle_rsc_WUSER;
+  input twiddle_rsc_WLAST;
+  input [3:0] twiddle_rsc_WSTRB;
+  input [31:0] twiddle_rsc_WDATA;
+  output twiddle_rsc_AWREADY;
+  input twiddle_rsc_AWVALID;
+  input twiddle_rsc_AWUSER;
+  input [3:0] twiddle_rsc_AWREGION;
+  input [3:0] twiddle_rsc_AWQOS;
+  input [2:0] twiddle_rsc_AWPROT;
+  input [3:0] twiddle_rsc_AWCACHE;
+  input twiddle_rsc_AWLOCK;
+  input [1:0] twiddle_rsc_AWBURST;
+  input [2:0] twiddle_rsc_AWSIZE;
+  input [7:0] twiddle_rsc_AWLEN;
+  input [11:0] twiddle_rsc_AWADDR;
+  input twiddle_rsc_AWID;
+  input core_wen;
+  input twiddle_rsci_oswt;
+  output twiddle_rsci_wen_comp;
+  input [9:0] twiddle_rsci_s_raddr_core;
+  output [31:0] twiddle_rsci_s_din_mxwt;
+
+
+  // Interconnect Declarations
+  wire twiddle_rsci_biwt;
+  wire twiddle_rsci_bdwt;
+  wire twiddle_rsci_bcwt;
+  wire twiddle_rsci_s_re_core_sct;
+  wire [9:0] twiddle_rsci_s_raddr;
+  wire [31:0] twiddle_rsci_s_din;
+  wire twiddle_rsci_s_rrdy;
+  wire twiddle_rsci_s_wrdy;
+  wire twiddle_rsc_is_idle;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_slave_mem #(.rscid(32'sd0),
+  .depth(32'sd1024),
+  .op_width(32'sd32),
+  .cwidth(32'sd32),
+  .addr_w(32'sd10),
+  .nopreload(32'sd0),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .ID_WIDTH(32'sd1),
+  .USER_WIDTH(32'sd1),
+  .REGION_MAP_SIZE(32'sd1),
+  .wBASE_ADDRESS(32'sd0),
+  .rBASE_ADDRESS(32'sd0)) twiddle_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWID(twiddle_rsc_AWID),
+      .AWADDR(twiddle_rsc_AWADDR),
+      .AWLEN(twiddle_rsc_AWLEN),
+      .AWSIZE(twiddle_rsc_AWSIZE),
+      .AWBURST(twiddle_rsc_AWBURST),
+      .AWLOCK(twiddle_rsc_AWLOCK),
+      .AWCACHE(twiddle_rsc_AWCACHE),
+      .AWPROT(twiddle_rsc_AWPROT),
+      .AWQOS(twiddle_rsc_AWQOS),
+      .AWREGION(twiddle_rsc_AWREGION),
+      .AWUSER(twiddle_rsc_AWUSER),
+      .AWVALID(twiddle_rsc_AWVALID),
+      .AWREADY(twiddle_rsc_AWREADY),
+      .WDATA(twiddle_rsc_WDATA),
+      .WSTRB(twiddle_rsc_WSTRB),
+      .WLAST(twiddle_rsc_WLAST),
+      .WUSER(twiddle_rsc_WUSER),
+      .WVALID(twiddle_rsc_WVALID),
+      .WREADY(twiddle_rsc_WREADY),
+      .BID(twiddle_rsc_BID),
+      .BRESP(twiddle_rsc_BRESP),
+      .BUSER(twiddle_rsc_BUSER),
+      .BVALID(twiddle_rsc_BVALID),
+      .BREADY(twiddle_rsc_BREADY),
+      .ARID(twiddle_rsc_ARID),
+      .ARADDR(twiddle_rsc_ARADDR),
+      .ARLEN(twiddle_rsc_ARLEN),
+      .ARSIZE(twiddle_rsc_ARSIZE),
+      .ARBURST(twiddle_rsc_ARBURST),
+      .ARLOCK(twiddle_rsc_ARLOCK),
+      .ARCACHE(twiddle_rsc_ARCACHE),
+      .ARPROT(twiddle_rsc_ARPROT),
+      .ARQOS(twiddle_rsc_ARQOS),
+      .ARREGION(twiddle_rsc_ARREGION),
+      .ARUSER(twiddle_rsc_ARUSER),
+      .ARVALID(twiddle_rsc_ARVALID),
+      .ARREADY(twiddle_rsc_ARREADY),
+      .RID(twiddle_rsc_RID),
+      .RDATA(twiddle_rsc_RDATA),
+      .RRESP(twiddle_rsc_RRESP),
+      .RLAST(twiddle_rsc_RLAST),
+      .RUSER(twiddle_rsc_RUSER),
+      .RVALID(twiddle_rsc_RVALID),
+      .RREADY(twiddle_rsc_RREADY),
+      .s_re(twiddle_rsci_s_re_core_sct),
+      .s_we(1'b0),
+      .s_raddr(twiddle_rsci_s_raddr),
+      .s_waddr(10'b0000000000),
+      .s_din(twiddle_rsci_s_din),
+      .s_dout(32'b00000000000000000000000000000000),
+      .s_rrdy(twiddle_rsci_s_rrdy),
+      .s_wrdy(twiddle_rsci_s_wrdy),
+      .is_idle(twiddle_rsc_is_idle),
+      .tr_write_done(twiddle_rsc_tr_write_done),
+      .s_tdone(twiddle_rsc_s_tdone)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl_inst
+      (
+      .core_wen(core_wen),
+      .twiddle_rsci_oswt(twiddle_rsci_oswt),
+      .twiddle_rsci_biwt(twiddle_rsci_biwt),
+      .twiddle_rsci_bdwt(twiddle_rsci_bdwt),
+      .twiddle_rsci_bcwt(twiddle_rsci_bcwt),
+      .twiddle_rsci_s_re_core_sct(twiddle_rsci_s_re_core_sct),
+      .twiddle_rsci_s_rrdy(twiddle_rsci_s_rrdy)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .twiddle_rsci_oswt(twiddle_rsci_oswt),
+      .twiddle_rsci_wen_comp(twiddle_rsci_wen_comp),
+      .twiddle_rsci_s_raddr_core(twiddle_rsci_s_raddr_core),
+      .twiddle_rsci_s_din_mxwt(twiddle_rsci_s_din_mxwt),
+      .twiddle_rsci_biwt(twiddle_rsci_biwt),
+      .twiddle_rsci_bdwt(twiddle_rsci_bdwt),
+      .twiddle_rsci_bcwt(twiddle_rsci_bcwt),
+      .twiddle_rsci_s_raddr(twiddle_rsci_s_raddr),
+      .twiddle_rsci_s_raddr_core_sct(twiddle_rsci_s_re_core_sct),
+      .twiddle_rsci_s_din(twiddle_rsci_s_din)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_p_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_p_rsci (
+  clk, rst, p_rsc_RREADY, p_rsc_RVALID, p_rsc_RRESP, p_rsc_RDATA, p_rsc_ARREADY,
+      p_rsc_ARVALID, p_rsc_ARADDR, p_rsc_BREADY, p_rsc_BVALID, p_rsc_BRESP, p_rsc_WREADY,
+      p_rsc_WVALID, p_rsc_WSTRB, p_rsc_WDATA, p_rsc_AWREADY, p_rsc_AWVALID, p_rsc_AWADDR,
+      core_wen, core_wten, p_rsci_oswt, p_rsci_idat_mxwt
+);
+  input clk;
+  input rst;
+  input p_rsc_RREADY;
+  output p_rsc_RVALID;
+  output [1:0] p_rsc_RRESP;
+  output [31:0] p_rsc_RDATA;
+  output p_rsc_ARREADY;
+  input p_rsc_ARVALID;
+  input [11:0] p_rsc_ARADDR;
+  input p_rsc_BREADY;
+  output p_rsc_BVALID;
+  output [1:0] p_rsc_BRESP;
+  output p_rsc_WREADY;
+  input p_rsc_WVALID;
+  input [3:0] p_rsc_WSTRB;
+  input [31:0] p_rsc_WDATA;
+  output p_rsc_AWREADY;
+  input p_rsc_AWVALID;
+  input [11:0] p_rsc_AWADDR;
+  input core_wen;
+  input core_wten;
+  input p_rsci_oswt;
+  output [31:0] p_rsci_idat_mxwt;
+
+
+  // Interconnect Declarations
+  wire [31:0] p_rsci_idat;
+  wire p_rsci_biwt;
+  wire p_rsci_bdwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_lite_slave_indirect #(.rscid(32'sd14),
+  .op_width(32'sd32),
+  .cwidth(32'sd32),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .BASE_ADDRESS(32'sd0)) p_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWADDR(p_rsc_AWADDR),
+      .AWVALID(p_rsc_AWVALID),
+      .AWREADY(p_rsc_AWREADY),
+      .WDATA(p_rsc_WDATA),
+      .WSTRB(p_rsc_WSTRB),
+      .WVALID(p_rsc_WVALID),
+      .WREADY(p_rsc_WREADY),
+      .BRESP(p_rsc_BRESP),
+      .BVALID(p_rsc_BVALID),
+      .BREADY(p_rsc_BREADY),
+      .ARADDR(p_rsc_ARADDR),
+      .ARVALID(p_rsc_ARVALID),
+      .ARREADY(p_rsc_ARREADY),
+      .RDATA(p_rsc_RDATA),
+      .RRESP(p_rsc_RRESP),
+      .RVALID(p_rsc_RVALID),
+      .RREADY(p_rsc_RREADY),
+      .idat(p_rsci_idat)
+    );
+  inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl_inst
+      (
+      .core_wen(core_wen),
+      .core_wten(core_wten),
+      .p_rsci_oswt(p_rsci_oswt),
+      .p_rsci_biwt(p_rsci_biwt),
+      .p_rsci_bdwt(p_rsci_bdwt)
+    );
+  inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .p_rsci_idat_mxwt(p_rsci_idat_mxwt),
+      .p_rsci_idat(p_rsci_idat),
+      .p_rsci_biwt(p_rsci_biwt),
+      .p_rsci_bdwt(p_rsci_bdwt)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_vec_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_vec_rsci (
+  clk, rst, vec_rsc_s_tdone, vec_rsc_tr_write_done, vec_rsc_RREADY, vec_rsc_RVALID,
+      vec_rsc_RUSER, vec_rsc_RLAST, vec_rsc_RRESP, vec_rsc_RDATA, vec_rsc_RID, vec_rsc_ARREADY,
+      vec_rsc_ARVALID, vec_rsc_ARUSER, vec_rsc_ARREGION, vec_rsc_ARQOS, vec_rsc_ARPROT,
+      vec_rsc_ARCACHE, vec_rsc_ARLOCK, vec_rsc_ARBURST, vec_rsc_ARSIZE, vec_rsc_ARLEN,
+      vec_rsc_ARADDR, vec_rsc_ARID, vec_rsc_BREADY, vec_rsc_BVALID, vec_rsc_BUSER,
+      vec_rsc_BRESP, vec_rsc_BID, vec_rsc_WREADY, vec_rsc_WVALID, vec_rsc_WUSER,
+      vec_rsc_WLAST, vec_rsc_WSTRB, vec_rsc_WDATA, vec_rsc_AWREADY, vec_rsc_AWVALID,
+      vec_rsc_AWUSER, vec_rsc_AWREGION, vec_rsc_AWQOS, vec_rsc_AWPROT, vec_rsc_AWCACHE,
+      vec_rsc_AWLOCK, vec_rsc_AWBURST, vec_rsc_AWSIZE, vec_rsc_AWLEN, vec_rsc_AWADDR,
+      vec_rsc_AWID, core_wen, vec_rsci_oswt, vec_rsci_wen_comp, vec_rsci_oswt_1,
+      vec_rsci_wen_comp_1, vec_rsci_s_raddr_core, vec_rsci_s_waddr_core, vec_rsci_s_din_mxwt,
+      vec_rsci_s_dout_core
+);
+  input clk;
+  input rst;
+  input vec_rsc_s_tdone;
+  input vec_rsc_tr_write_done;
+  input vec_rsc_RREADY;
+  output vec_rsc_RVALID;
+  output vec_rsc_RUSER;
+  output vec_rsc_RLAST;
+  output [1:0] vec_rsc_RRESP;
+  output [31:0] vec_rsc_RDATA;
+  output vec_rsc_RID;
+  output vec_rsc_ARREADY;
+  input vec_rsc_ARVALID;
+  input vec_rsc_ARUSER;
+  input [3:0] vec_rsc_ARREGION;
+  input [3:0] vec_rsc_ARQOS;
+  input [2:0] vec_rsc_ARPROT;
+  input [3:0] vec_rsc_ARCACHE;
+  input vec_rsc_ARLOCK;
+  input [1:0] vec_rsc_ARBURST;
+  input [2:0] vec_rsc_ARSIZE;
+  input [7:0] vec_rsc_ARLEN;
+  input [11:0] vec_rsc_ARADDR;
+  input vec_rsc_ARID;
+  input vec_rsc_BREADY;
+  output vec_rsc_BVALID;
+  output vec_rsc_BUSER;
+  output [1:0] vec_rsc_BRESP;
+  output vec_rsc_BID;
+  output vec_rsc_WREADY;
+  input vec_rsc_WVALID;
+  input vec_rsc_WUSER;
+  input vec_rsc_WLAST;
+  input [3:0] vec_rsc_WSTRB;
+  input [31:0] vec_rsc_WDATA;
+  output vec_rsc_AWREADY;
+  input vec_rsc_AWVALID;
+  input vec_rsc_AWUSER;
+  input [3:0] vec_rsc_AWREGION;
+  input [3:0] vec_rsc_AWQOS;
+  input [2:0] vec_rsc_AWPROT;
+  input [3:0] vec_rsc_AWCACHE;
+  input vec_rsc_AWLOCK;
+  input [1:0] vec_rsc_AWBURST;
+  input [2:0] vec_rsc_AWSIZE;
+  input [7:0] vec_rsc_AWLEN;
+  input [11:0] vec_rsc_AWADDR;
+  input vec_rsc_AWID;
+  input core_wen;
+  input vec_rsci_oswt;
+  output vec_rsci_wen_comp;
+  input vec_rsci_oswt_1;
+  output vec_rsci_wen_comp_1;
+  input [9:0] vec_rsci_s_raddr_core;
+  input [9:0] vec_rsci_s_waddr_core;
+  output [31:0] vec_rsci_s_din_mxwt;
+  input [31:0] vec_rsci_s_dout_core;
+
+
+  // Interconnect Declarations
+  wire vec_rsci_biwt;
+  wire vec_rsci_bdwt;
+  wire vec_rsci_bcwt;
+  wire vec_rsci_s_re_core_sct;
+  wire vec_rsci_biwt_1;
+  wire vec_rsci_bdwt_2;
+  wire vec_rsci_bcwt_1;
+  wire vec_rsci_s_we_core_sct;
+  wire [9:0] vec_rsci_s_raddr;
+  wire [9:0] vec_rsci_s_waddr;
+  wire [31:0] vec_rsci_s_din;
+  wire [31:0] vec_rsci_s_dout;
+  wire vec_rsci_s_rrdy;
+  wire vec_rsci_s_wrdy;
+  wire vec_rsc_is_idle_1;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_slave_mem #(.rscid(32'sd0),
+  .depth(32'sd1024),
+  .op_width(32'sd32),
+  .cwidth(32'sd32),
+  .addr_w(32'sd10),
+  .nopreload(32'sd0),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .ID_WIDTH(32'sd1),
+  .USER_WIDTH(32'sd1),
+  .REGION_MAP_SIZE(32'sd1),
+  .wBASE_ADDRESS(32'sd0),
+  .rBASE_ADDRESS(32'sd0)) vec_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWID(vec_rsc_AWID),
+      .AWADDR(vec_rsc_AWADDR),
+      .AWLEN(vec_rsc_AWLEN),
+      .AWSIZE(vec_rsc_AWSIZE),
+      .AWBURST(vec_rsc_AWBURST),
+      .AWLOCK(vec_rsc_AWLOCK),
+      .AWCACHE(vec_rsc_AWCACHE),
+      .AWPROT(vec_rsc_AWPROT),
+      .AWQOS(vec_rsc_AWQOS),
+      .AWREGION(vec_rsc_AWREGION),
+      .AWUSER(vec_rsc_AWUSER),
+      .AWVALID(vec_rsc_AWVALID),
+      .AWREADY(vec_rsc_AWREADY),
+      .WDATA(vec_rsc_WDATA),
+      .WSTRB(vec_rsc_WSTRB),
+      .WLAST(vec_rsc_WLAST),
+      .WUSER(vec_rsc_WUSER),
+      .WVALID(vec_rsc_WVALID),
+      .WREADY(vec_rsc_WREADY),
+      .BID(vec_rsc_BID),
+      .BRESP(vec_rsc_BRESP),
+      .BUSER(vec_rsc_BUSER),
+      .BVALID(vec_rsc_BVALID),
+      .BREADY(vec_rsc_BREADY),
+      .ARID(vec_rsc_ARID),
+      .ARADDR(vec_rsc_ARADDR),
+      .ARLEN(vec_rsc_ARLEN),
+      .ARSIZE(vec_rsc_ARSIZE),
+      .ARBURST(vec_rsc_ARBURST),
+      .ARLOCK(vec_rsc_ARLOCK),
+      .ARCACHE(vec_rsc_ARCACHE),
+      .ARPROT(vec_rsc_ARPROT),
+      .ARQOS(vec_rsc_ARQOS),
+      .ARREGION(vec_rsc_ARREGION),
+      .ARUSER(vec_rsc_ARUSER),
+      .ARVALID(vec_rsc_ARVALID),
+      .ARREADY(vec_rsc_ARREADY),
+      .RID(vec_rsc_RID),
+      .RDATA(vec_rsc_RDATA),
+      .RRESP(vec_rsc_RRESP),
+      .RLAST(vec_rsc_RLAST),
+      .RUSER(vec_rsc_RUSER),
+      .RVALID(vec_rsc_RVALID),
+      .RREADY(vec_rsc_RREADY),
+      .s_re(vec_rsci_s_re_core_sct),
+      .s_we(vec_rsci_s_we_core_sct),
+      .s_raddr(vec_rsci_s_raddr),
+      .s_waddr(vec_rsci_s_waddr),
+      .s_din(vec_rsci_s_din),
+      .s_dout(vec_rsci_s_dout),
+      .s_rrdy(vec_rsci_s_rrdy),
+      .s_wrdy(vec_rsci_s_wrdy),
+      .is_idle(vec_rsc_is_idle_1),
+      .tr_write_done(vec_rsc_tr_write_done),
+      .s_tdone(vec_rsc_s_tdone)
+    );
+  inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl_inst
+      (
+      .core_wen(core_wen),
+      .vec_rsci_oswt(vec_rsci_oswt),
+      .vec_rsci_oswt_1(vec_rsci_oswt_1),
+      .vec_rsci_biwt(vec_rsci_biwt),
+      .vec_rsci_bdwt(vec_rsci_bdwt),
+      .vec_rsci_bcwt(vec_rsci_bcwt),
+      .vec_rsci_s_re_core_sct(vec_rsci_s_re_core_sct),
+      .vec_rsci_biwt_1(vec_rsci_biwt_1),
+      .vec_rsci_bdwt_2(vec_rsci_bdwt_2),
+      .vec_rsci_bcwt_1(vec_rsci_bcwt_1),
+      .vec_rsci_s_we_core_sct(vec_rsci_s_we_core_sct),
+      .vec_rsci_s_rrdy(vec_rsci_s_rrdy),
+      .vec_rsci_s_wrdy(vec_rsci_s_wrdy)
+    );
+  inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .vec_rsci_oswt(vec_rsci_oswt),
+      .vec_rsci_wen_comp(vec_rsci_wen_comp),
+      .vec_rsci_oswt_1(vec_rsci_oswt_1),
+      .vec_rsci_wen_comp_1(vec_rsci_wen_comp_1),
+      .vec_rsci_s_raddr_core(vec_rsci_s_raddr_core),
+      .vec_rsci_s_waddr_core(vec_rsci_s_waddr_core),
+      .vec_rsci_s_din_mxwt(vec_rsci_s_din_mxwt),
+      .vec_rsci_s_dout_core(vec_rsci_s_dout_core),
+      .vec_rsci_biwt(vec_rsci_biwt),
+      .vec_rsci_bdwt(vec_rsci_bdwt),
+      .vec_rsci_bcwt(vec_rsci_bcwt),
+      .vec_rsci_biwt_1(vec_rsci_biwt_1),
+      .vec_rsci_bdwt_2(vec_rsci_bdwt_2),
+      .vec_rsci_bcwt_1(vec_rsci_bcwt_1),
+      .vec_rsci_s_raddr(vec_rsci_s_raddr),
+      .vec_rsci_s_raddr_core_sct(vec_rsci_s_re_core_sct),
+      .vec_rsci_s_waddr(vec_rsci_s_waddr),
+      .vec_rsci_s_waddr_core_sct(vec_rsci_s_we_core_sct),
+      .vec_rsci_s_din(vec_rsci_s_din),
+      .vec_rsci_s_dout(vec_rsci_s_dout)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core_run_rsci
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core_run_rsci (
+  clk, rst, run_rsc_triosy, run_rsc_RREADY, run_rsc_RVALID, run_rsc_RRESP, run_rsc_RDATA,
+      run_rsc_ARREADY, run_rsc_ARVALID, run_rsc_ARADDR, run_rsc_BREADY, run_rsc_BVALID,
+      run_rsc_BRESP, run_rsc_WREADY, run_rsc_WVALID, run_rsc_WSTRB, run_rsc_WDATA,
+      run_rsc_AWREADY, run_rsc_AWVALID, run_rsc_AWADDR, core_wen, run_rsci_oswt,
+      core_wten, run_rsci_ivld_mxwt
+);
+  input clk;
+  input rst;
+  output run_rsc_triosy;
+  input run_rsc_RREADY;
+  output run_rsc_RVALID;
+  output [1:0] run_rsc_RRESP;
+  output [31:0] run_rsc_RDATA;
+  output run_rsc_ARREADY;
+  input run_rsc_ARVALID;
+  input [11:0] run_rsc_ARADDR;
+  input run_rsc_BREADY;
+  output run_rsc_BVALID;
+  output [1:0] run_rsc_BRESP;
+  output run_rsc_WREADY;
+  input run_rsc_WVALID;
+  input [3:0] run_rsc_WSTRB;
+  input [31:0] run_rsc_WDATA;
+  output run_rsc_AWREADY;
+  input run_rsc_AWVALID;
+  input [11:0] run_rsc_AWADDR;
+  input core_wen;
+  input run_rsci_oswt;
+  input core_wten;
+  output run_rsci_ivld_mxwt;
+
+
+  // Interconnect Declarations
+  wire run_rsci_ivld;
+  wire run_rsci_biwt;
+  wire run_rsci_bdwt;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  ccs_axi4_lite_slave_insync #(.rscid(32'sd12),
+  .rst_ph(32'sd0),
+  .ADDR_WIDTH(32'sd12),
+  .DATA_WIDTH(32'sd32),
+  .BASE_ADDRESS(32'sd0)) run_rsci (
+      .ACLK(clk),
+      .ARESETn(1'b1),
+      .AWADDR(run_rsc_AWADDR),
+      .AWVALID(run_rsc_AWVALID),
+      .AWREADY(run_rsc_AWREADY),
+      .WDATA(run_rsc_WDATA),
+      .WSTRB(run_rsc_WSTRB),
+      .WVALID(run_rsc_WVALID),
+      .WREADY(run_rsc_WREADY),
+      .BRESP(run_rsc_BRESP),
+      .BVALID(run_rsc_BVALID),
+      .BREADY(run_rsc_BREADY),
+      .ARADDR(run_rsc_ARADDR),
+      .ARVALID(run_rsc_ARVALID),
+      .ARREADY(run_rsc_ARREADY),
+      .RDATA(run_rsc_RDATA),
+      .RRESP(run_rsc_RRESP),
+      .RVALID(run_rsc_RVALID),
+      .RREADY(run_rsc_RREADY),
+      .ivld(run_rsci_ivld),
+      .irdy(run_rsci_biwt),
+      .triosy(run_rsc_triosy)
+    );
+  inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl_inst
+      (
+      .core_wen(core_wen),
+      .run_rsci_oswt(run_rsci_oswt),
+      .core_wten(core_wten),
+      .run_rsci_biwt(run_rsci_biwt),
+      .run_rsci_bdwt(run_rsci_bdwt)
+    );
+  inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .run_rsci_ivld_mxwt(run_rsci_ivld_mxwt),
+      .run_rsci_ivld(run_rsci_ivld),
+      .run_rsci_biwt(run_rsci_biwt),
+      .run_rsci_bdwt(run_rsci_bdwt)
+    );
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp_core
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp_core (
+  clk, rst, run_rsc_triosy, run_rsc_RREADY, run_rsc_RVALID, run_rsc_RRESP, run_rsc_RDATA,
+      run_rsc_ARREADY, run_rsc_ARVALID, run_rsc_ARADDR, run_rsc_BREADY, run_rsc_BVALID,
+      run_rsc_BRESP, run_rsc_WREADY, run_rsc_WVALID, run_rsc_WSTRB, run_rsc_WDATA,
+      run_rsc_AWREADY, run_rsc_AWVALID, run_rsc_AWADDR, vec_rsc_s_tdone, vec_rsc_tr_write_done,
+      vec_rsc_RREADY, vec_rsc_RVALID, vec_rsc_RUSER, vec_rsc_RLAST, vec_rsc_RRESP,
+      vec_rsc_RDATA, vec_rsc_RID, vec_rsc_ARREADY, vec_rsc_ARVALID, vec_rsc_ARUSER,
+      vec_rsc_ARREGION, vec_rsc_ARQOS, vec_rsc_ARPROT, vec_rsc_ARCACHE, vec_rsc_ARLOCK,
+      vec_rsc_ARBURST, vec_rsc_ARSIZE, vec_rsc_ARLEN, vec_rsc_ARADDR, vec_rsc_ARID,
+      vec_rsc_BREADY, vec_rsc_BVALID, vec_rsc_BUSER, vec_rsc_BRESP, vec_rsc_BID,
+      vec_rsc_WREADY, vec_rsc_WVALID, vec_rsc_WUSER, vec_rsc_WLAST, vec_rsc_WSTRB,
+      vec_rsc_WDATA, vec_rsc_AWREADY, vec_rsc_AWVALID, vec_rsc_AWUSER, vec_rsc_AWREGION,
+      vec_rsc_AWQOS, vec_rsc_AWPROT, vec_rsc_AWCACHE, vec_rsc_AWLOCK, vec_rsc_AWBURST,
+      vec_rsc_AWSIZE, vec_rsc_AWLEN, vec_rsc_AWADDR, vec_rsc_AWID, vec_rsc_triosy_lz,
+      p_rsc_RREADY, p_rsc_RVALID, p_rsc_RRESP, p_rsc_RDATA, p_rsc_ARREADY, p_rsc_ARVALID,
+      p_rsc_ARADDR, p_rsc_BREADY, p_rsc_BVALID, p_rsc_BRESP, p_rsc_WREADY, p_rsc_WVALID,
+      p_rsc_WSTRB, p_rsc_WDATA, p_rsc_AWREADY, p_rsc_AWVALID, p_rsc_AWADDR, p_rsc_triosy_lz,
+      r_rsc_RREADY, r_rsc_RVALID, r_rsc_RRESP, r_rsc_RDATA, r_rsc_ARREADY, r_rsc_ARVALID,
+      r_rsc_ARADDR, r_rsc_BREADY, r_rsc_BVALID, r_rsc_BRESP, r_rsc_WREADY, r_rsc_WVALID,
+      r_rsc_WSTRB, r_rsc_WDATA, r_rsc_AWREADY, r_rsc_AWVALID, r_rsc_AWADDR, r_rsc_triosy_lz,
+      twiddle_rsc_s_tdone, twiddle_rsc_tr_write_done, twiddle_rsc_RREADY, twiddle_rsc_RVALID,
+      twiddle_rsc_RUSER, twiddle_rsc_RLAST, twiddle_rsc_RRESP, twiddle_rsc_RDATA,
+      twiddle_rsc_RID, twiddle_rsc_ARREADY, twiddle_rsc_ARVALID, twiddle_rsc_ARUSER,
+      twiddle_rsc_ARREGION, twiddle_rsc_ARQOS, twiddle_rsc_ARPROT, twiddle_rsc_ARCACHE,
+      twiddle_rsc_ARLOCK, twiddle_rsc_ARBURST, twiddle_rsc_ARSIZE, twiddle_rsc_ARLEN,
+      twiddle_rsc_ARADDR, twiddle_rsc_ARID, twiddle_rsc_BREADY, twiddle_rsc_BVALID,
+      twiddle_rsc_BUSER, twiddle_rsc_BRESP, twiddle_rsc_BID, twiddle_rsc_WREADY,
+      twiddle_rsc_WVALID, twiddle_rsc_WUSER, twiddle_rsc_WLAST, twiddle_rsc_WSTRB,
+      twiddle_rsc_WDATA, twiddle_rsc_AWREADY, twiddle_rsc_AWVALID, twiddle_rsc_AWUSER,
+      twiddle_rsc_AWREGION, twiddle_rsc_AWQOS, twiddle_rsc_AWPROT, twiddle_rsc_AWCACHE,
+      twiddle_rsc_AWLOCK, twiddle_rsc_AWBURST, twiddle_rsc_AWSIZE, twiddle_rsc_AWLEN,
+      twiddle_rsc_AWADDR, twiddle_rsc_AWID, twiddle_rsc_triosy_lz, twiddle_h_rsc_s_tdone,
+      twiddle_h_rsc_tr_write_done, twiddle_h_rsc_RREADY, twiddle_h_rsc_RVALID, twiddle_h_rsc_RUSER,
+      twiddle_h_rsc_RLAST, twiddle_h_rsc_RRESP, twiddle_h_rsc_RDATA, twiddle_h_rsc_RID,
+      twiddle_h_rsc_ARREADY, twiddle_h_rsc_ARVALID, twiddle_h_rsc_ARUSER, twiddle_h_rsc_ARREGION,
+      twiddle_h_rsc_ARQOS, twiddle_h_rsc_ARPROT, twiddle_h_rsc_ARCACHE, twiddle_h_rsc_ARLOCK,
+      twiddle_h_rsc_ARBURST, twiddle_h_rsc_ARSIZE, twiddle_h_rsc_ARLEN, twiddle_h_rsc_ARADDR,
+      twiddle_h_rsc_ARID, twiddle_h_rsc_BREADY, twiddle_h_rsc_BVALID, twiddle_h_rsc_BUSER,
+      twiddle_h_rsc_BRESP, twiddle_h_rsc_BID, twiddle_h_rsc_WREADY, twiddle_h_rsc_WVALID,
+      twiddle_h_rsc_WUSER, twiddle_h_rsc_WLAST, twiddle_h_rsc_WSTRB, twiddle_h_rsc_WDATA,
+      twiddle_h_rsc_AWREADY, twiddle_h_rsc_AWVALID, twiddle_h_rsc_AWUSER, twiddle_h_rsc_AWREGION,
+      twiddle_h_rsc_AWQOS, twiddle_h_rsc_AWPROT, twiddle_h_rsc_AWCACHE, twiddle_h_rsc_AWLOCK,
+      twiddle_h_rsc_AWBURST, twiddle_h_rsc_AWSIZE, twiddle_h_rsc_AWLEN, twiddle_h_rsc_AWADDR,
+      twiddle_h_rsc_AWID, twiddle_h_rsc_triosy_lz, complete_rsc_triosy, complete_rsc_RREADY,
+      complete_rsc_RVALID, complete_rsc_RRESP, complete_rsc_RDATA, complete_rsc_ARREADY,
+      complete_rsc_ARVALID, complete_rsc_ARADDR, complete_rsc_BREADY, complete_rsc_BVALID,
+      complete_rsc_BRESP, complete_rsc_WREADY, complete_rsc_WVALID, complete_rsc_WSTRB,
+      complete_rsc_WDATA, complete_rsc_AWREADY, complete_rsc_AWVALID, complete_rsc_AWADDR
+);
+  input clk;
+  input rst;
+  output run_rsc_triosy;
+  input run_rsc_RREADY;
+  output run_rsc_RVALID;
+  output [1:0] run_rsc_RRESP;
+  output [31:0] run_rsc_RDATA;
+  output run_rsc_ARREADY;
+  input run_rsc_ARVALID;
+  input [11:0] run_rsc_ARADDR;
+  input run_rsc_BREADY;
+  output run_rsc_BVALID;
+  output [1:0] run_rsc_BRESP;
+  output run_rsc_WREADY;
+  input run_rsc_WVALID;
+  input [3:0] run_rsc_WSTRB;
+  input [31:0] run_rsc_WDATA;
+  output run_rsc_AWREADY;
+  input run_rsc_AWVALID;
+  input [11:0] run_rsc_AWADDR;
+  input vec_rsc_s_tdone;
+  input vec_rsc_tr_write_done;
+  input vec_rsc_RREADY;
+  output vec_rsc_RVALID;
+  output vec_rsc_RUSER;
+  output vec_rsc_RLAST;
+  output [1:0] vec_rsc_RRESP;
+  output [31:0] vec_rsc_RDATA;
+  output vec_rsc_RID;
+  output vec_rsc_ARREADY;
+  input vec_rsc_ARVALID;
+  input vec_rsc_ARUSER;
+  input [3:0] vec_rsc_ARREGION;
+  input [3:0] vec_rsc_ARQOS;
+  input [2:0] vec_rsc_ARPROT;
+  input [3:0] vec_rsc_ARCACHE;
+  input vec_rsc_ARLOCK;
+  input [1:0] vec_rsc_ARBURST;
+  input [2:0] vec_rsc_ARSIZE;
+  input [7:0] vec_rsc_ARLEN;
+  input [11:0] vec_rsc_ARADDR;
+  input vec_rsc_ARID;
+  input vec_rsc_BREADY;
+  output vec_rsc_BVALID;
+  output vec_rsc_BUSER;
+  output [1:0] vec_rsc_BRESP;
+  output vec_rsc_BID;
+  output vec_rsc_WREADY;
+  input vec_rsc_WVALID;
+  input vec_rsc_WUSER;
+  input vec_rsc_WLAST;
+  input [3:0] vec_rsc_WSTRB;
+  input [31:0] vec_rsc_WDATA;
+  output vec_rsc_AWREADY;
+  input vec_rsc_AWVALID;
+  input vec_rsc_AWUSER;
+  input [3:0] vec_rsc_AWREGION;
+  input [3:0] vec_rsc_AWQOS;
+  input [2:0] vec_rsc_AWPROT;
+  input [3:0] vec_rsc_AWCACHE;
+  input vec_rsc_AWLOCK;
+  input [1:0] vec_rsc_AWBURST;
+  input [2:0] vec_rsc_AWSIZE;
+  input [7:0] vec_rsc_AWLEN;
+  input [11:0] vec_rsc_AWADDR;
+  input vec_rsc_AWID;
+  output vec_rsc_triosy_lz;
+  input p_rsc_RREADY;
+  output p_rsc_RVALID;
+  output [1:0] p_rsc_RRESP;
+  output [31:0] p_rsc_RDATA;
+  output p_rsc_ARREADY;
+  input p_rsc_ARVALID;
+  input [11:0] p_rsc_ARADDR;
+  input p_rsc_BREADY;
+  output p_rsc_BVALID;
+  output [1:0] p_rsc_BRESP;
+  output p_rsc_WREADY;
+  input p_rsc_WVALID;
+  input [3:0] p_rsc_WSTRB;
+  input [31:0] p_rsc_WDATA;
+  output p_rsc_AWREADY;
+  input p_rsc_AWVALID;
+  input [11:0] p_rsc_AWADDR;
+  output p_rsc_triosy_lz;
+  input r_rsc_RREADY;
+  output r_rsc_RVALID;
+  output [1:0] r_rsc_RRESP;
+  output [31:0] r_rsc_RDATA;
+  output r_rsc_ARREADY;
+  input r_rsc_ARVALID;
+  input [11:0] r_rsc_ARADDR;
+  input r_rsc_BREADY;
+  output r_rsc_BVALID;
+  output [1:0] r_rsc_BRESP;
+  output r_rsc_WREADY;
+  input r_rsc_WVALID;
+  input [3:0] r_rsc_WSTRB;
+  input [31:0] r_rsc_WDATA;
+  output r_rsc_AWREADY;
+  input r_rsc_AWVALID;
+  input [11:0] r_rsc_AWADDR;
+  output r_rsc_triosy_lz;
+  input twiddle_rsc_s_tdone;
+  input twiddle_rsc_tr_write_done;
+  input twiddle_rsc_RREADY;
+  output twiddle_rsc_RVALID;
+  output twiddle_rsc_RUSER;
+  output twiddle_rsc_RLAST;
+  output [1:0] twiddle_rsc_RRESP;
+  output [31:0] twiddle_rsc_RDATA;
+  output twiddle_rsc_RID;
+  output twiddle_rsc_ARREADY;
+  input twiddle_rsc_ARVALID;
+  input twiddle_rsc_ARUSER;
+  input [3:0] twiddle_rsc_ARREGION;
+  input [3:0] twiddle_rsc_ARQOS;
+  input [2:0] twiddle_rsc_ARPROT;
+  input [3:0] twiddle_rsc_ARCACHE;
+  input twiddle_rsc_ARLOCK;
+  input [1:0] twiddle_rsc_ARBURST;
+  input [2:0] twiddle_rsc_ARSIZE;
+  input [7:0] twiddle_rsc_ARLEN;
+  input [11:0] twiddle_rsc_ARADDR;
+  input twiddle_rsc_ARID;
+  input twiddle_rsc_BREADY;
+  output twiddle_rsc_BVALID;
+  output twiddle_rsc_BUSER;
+  output [1:0] twiddle_rsc_BRESP;
+  output twiddle_rsc_BID;
+  output twiddle_rsc_WREADY;
+  input twiddle_rsc_WVALID;
+  input twiddle_rsc_WUSER;
+  input twiddle_rsc_WLAST;
+  input [3:0] twiddle_rsc_WSTRB;
+  input [31:0] twiddle_rsc_WDATA;
+  output twiddle_rsc_AWREADY;
+  input twiddle_rsc_AWVALID;
+  input twiddle_rsc_AWUSER;
+  input [3:0] twiddle_rsc_AWREGION;
+  input [3:0] twiddle_rsc_AWQOS;
+  input [2:0] twiddle_rsc_AWPROT;
+  input [3:0] twiddle_rsc_AWCACHE;
+  input twiddle_rsc_AWLOCK;
+  input [1:0] twiddle_rsc_AWBURST;
+  input [2:0] twiddle_rsc_AWSIZE;
+  input [7:0] twiddle_rsc_AWLEN;
+  input [11:0] twiddle_rsc_AWADDR;
+  input twiddle_rsc_AWID;
+  output twiddle_rsc_triosy_lz;
+  input twiddle_h_rsc_s_tdone;
+  input twiddle_h_rsc_tr_write_done;
+  input twiddle_h_rsc_RREADY;
+  output twiddle_h_rsc_RVALID;
+  output twiddle_h_rsc_RUSER;
+  output twiddle_h_rsc_RLAST;
+  output [1:0] twiddle_h_rsc_RRESP;
+  output [31:0] twiddle_h_rsc_RDATA;
+  output twiddle_h_rsc_RID;
+  output twiddle_h_rsc_ARREADY;
+  input twiddle_h_rsc_ARVALID;
+  input twiddle_h_rsc_ARUSER;
+  input [3:0] twiddle_h_rsc_ARREGION;
+  input [3:0] twiddle_h_rsc_ARQOS;
+  input [2:0] twiddle_h_rsc_ARPROT;
+  input [3:0] twiddle_h_rsc_ARCACHE;
+  input twiddle_h_rsc_ARLOCK;
+  input [1:0] twiddle_h_rsc_ARBURST;
+  input [2:0] twiddle_h_rsc_ARSIZE;
+  input [7:0] twiddle_h_rsc_ARLEN;
+  input [11:0] twiddle_h_rsc_ARADDR;
+  input twiddle_h_rsc_ARID;
+  input twiddle_h_rsc_BREADY;
+  output twiddle_h_rsc_BVALID;
+  output twiddle_h_rsc_BUSER;
+  output [1:0] twiddle_h_rsc_BRESP;
+  output twiddle_h_rsc_BID;
+  output twiddle_h_rsc_WREADY;
+  input twiddle_h_rsc_WVALID;
+  input twiddle_h_rsc_WUSER;
+  input twiddle_h_rsc_WLAST;
+  input [3:0] twiddle_h_rsc_WSTRB;
+  input [31:0] twiddle_h_rsc_WDATA;
+  output twiddle_h_rsc_AWREADY;
+  input twiddle_h_rsc_AWVALID;
+  input twiddle_h_rsc_AWUSER;
+  input [3:0] twiddle_h_rsc_AWREGION;
+  input [3:0] twiddle_h_rsc_AWQOS;
+  input [2:0] twiddle_h_rsc_AWPROT;
+  input [3:0] twiddle_h_rsc_AWCACHE;
+  input twiddle_h_rsc_AWLOCK;
+  input [1:0] twiddle_h_rsc_AWBURST;
+  input [2:0] twiddle_h_rsc_AWSIZE;
+  input [7:0] twiddle_h_rsc_AWLEN;
+  input [11:0] twiddle_h_rsc_AWADDR;
+  input twiddle_h_rsc_AWID;
+  output twiddle_h_rsc_triosy_lz;
+  output complete_rsc_triosy;
+  input complete_rsc_RREADY;
+  output complete_rsc_RVALID;
+  output [1:0] complete_rsc_RRESP;
+  output [31:0] complete_rsc_RDATA;
+  output complete_rsc_ARREADY;
+  input complete_rsc_ARVALID;
+  input [11:0] complete_rsc_ARADDR;
+  input complete_rsc_BREADY;
+  output complete_rsc_BVALID;
+  output [1:0] complete_rsc_BRESP;
+  output complete_rsc_WREADY;
+  input complete_rsc_WVALID;
+  input [3:0] complete_rsc_WSTRB;
+  input [31:0] complete_rsc_WDATA;
+  output complete_rsc_AWREADY;
+  input complete_rsc_AWVALID;
+  input [11:0] complete_rsc_AWADDR;
+
+
+  // Interconnect Declarations
+  wire core_wen;
+  wire core_wten;
+  wire run_rsci_ivld_mxwt;
+  wire vec_rsci_wen_comp;
+  wire vec_rsci_wen_comp_1;
+  reg [9:0] vec_rsci_s_raddr_core;
+  reg [9:0] vec_rsci_s_waddr_core;
+  wire [31:0] vec_rsci_s_din_mxwt;
+  reg [31:0] vec_rsci_s_dout_core;
+  wire [31:0] p_rsci_idat_mxwt;
+  wire twiddle_rsci_wen_comp;
+  wire [31:0] twiddle_rsci_s_din_mxwt;
+  wire twiddle_h_rsci_wen_comp;
+  wire [31:0] twiddle_h_rsci_s_din_mxwt;
+  wire complete_rsci_wen_comp;
+  wire [31:0] mult_cmp_return_rsc_z;
+  wire mult_cmp_ccs_ccore_en;
+  wire [31:0] modulo_sub_cmp_return_rsc_z;
+  wire modulo_sub_cmp_ccs_ccore_en;
+  wire [31:0] modulo_add_cmp_return_rsc_z;
+  wire [18:0] fsm_output;
+  wire and_dcpl_9;
+  wire and_dcpl_11;
+  reg [9:0] VEC_LOOP_acc_1_cse_sva;
+  reg [10:0] STAGE_LOOP_lshift_psp_sva;
+  reg [10:0] VEC_LOOP_j_10_0_sva_1;
+  reg run_ac_sync_tmp_dobj_sva;
+  reg reg_run_rsci_oswt_cse;
+  reg reg_vec_rsci_oswt_cse;
+  reg reg_vec_rsci_oswt_1_cse;
+  reg reg_p_rsci_oswt_cse;
+  reg reg_twiddle_rsci_oswt_cse;
+  reg [9:0] reg_twiddle_rsci_s_raddr_core_cse;
+  wire [19:0] nl_reg_twiddle_rsci_s_raddr_core_cse;
+  reg reg_complete_rsci_oswt_cse;
+  reg reg_vec_rsc_triosy_obj_iswt0_cse;
+  reg reg_ensig_cgo_cse;
+  reg reg_ensig_cgo_1_cse;
+  wire VEC_LOOP_j_and_cse;
+  wire or_23_rmff;
+  wire or_25_rmff;
+  reg [31:0] COMP_LOOP_twiddle_f_sva;
+  reg [31:0] COMP_LOOP_twiddle_help_sva;
+  reg [31:0] factor2_sva;
+  reg [31:0] p_sva;
+  wire [10:0] z_out;
+  wire [10:0] z_out_1;
+  wire [10:0] z_out_2;
+  wire [11:0] nl_z_out_2;
+  reg [3:0] STAGE_LOOP_i_3_0_sva;
+  reg [9:0] VEC_LOOP_acc_10_cse_sva;
+  reg [9:0] COMP_LOOP_k_10_0_sva_9_0;
+  wire [9:0] VEC_LOOP_acc_10_cse_sva_mx0w0;
+  wire [11:0] nl_VEC_LOOP_acc_10_cse_sva_mx0w0;
+  wire COMP_LOOP_twiddle_help_and_cse;
+  wire STAGE_LOOP_acc_itm_4_1;
+
+  wire[0:0] COMP_LOOP_k_not_1_nl;
+  wire[9:0] COMP_LOOP_k_mux_nl;
+  wire[9:0] VEC_LOOP_acc_1_nl;
+  wire[10:0] nl_VEC_LOOP_acc_1_nl;
+  wire[0:0] VEC_LOOP_not_1_nl;
+  wire[4:0] STAGE_LOOP_acc_nl;
+  wire[5:0] nl_STAGE_LOOP_acc_nl;
+  wire[11:0] acc_nl;
+  wire[12:0] nl_acc_nl;
+  wire[10:0] VEC_LOOP_mux_16_nl;
+  wire[0:0] VEC_LOOP_or_2_nl;
+  wire[10:0] VEC_LOOP_mux_17_nl;
+  wire[9:0] STAGE_LOOP_mux_3_nl;
+
+  // Interconnect Declarations for Component Instantiations 
+  wire [31:0] nl_mult_cmp_y_rsc_dat;
+  assign nl_mult_cmp_y_rsc_dat = COMP_LOOP_twiddle_f_sva;
+  wire [31:0] nl_mult_cmp_y_rsc_dat_1;
+  assign nl_mult_cmp_y_rsc_dat_1 = COMP_LOOP_twiddle_help_sva;
+  wire [31:0] nl_mult_cmp_p_rsc_dat;
+  assign nl_mult_cmp_p_rsc_dat = p_sva;
+  wire [0:0] nl_mult_cmp_ccs_ccore_start_rsc_dat;
+  assign nl_mult_cmp_ccs_ccore_start_rsc_dat = fsm_output[8];
+  wire [31:0] nl_modulo_sub_cmp_base_rsc_dat;
+  assign nl_modulo_sub_cmp_base_rsc_dat = vec_rsci_s_din_mxwt - factor2_sva;
+  wire [31:0] nl_modulo_sub_cmp_m_rsc_dat;
+  assign nl_modulo_sub_cmp_m_rsc_dat = p_sva;
+  wire [0:0] nl_modulo_sub_cmp_ccs_ccore_start_rsc_dat;
+  assign nl_modulo_sub_cmp_ccs_ccore_start_rsc_dat = fsm_output[7];
+  wire [31:0] nl_modulo_add_cmp_base_rsc_dat;
+  assign nl_modulo_add_cmp_base_rsc_dat = vec_rsci_s_din_mxwt + factor2_sva;
+  wire [31:0] nl_modulo_add_cmp_m_rsc_dat;
+  assign nl_modulo_add_cmp_m_rsc_dat = p_sva;
+  wire [0:0] nl_modulo_add_cmp_ccs_ccore_start_rsc_dat;
+  assign nl_modulo_add_cmp_ccs_ccore_start_rsc_dat = fsm_output[7];
+  wire[3:0] COMP_LOOP_twiddle_f_acc_nl;
+  wire[4:0] nl_COMP_LOOP_twiddle_f_acc_nl;
+  wire [3:0] nl_COMP_LOOP_twiddle_f_lshift_rg_s;
+  assign nl_COMP_LOOP_twiddle_f_acc_nl = (~ STAGE_LOOP_i_3_0_sva) + 4'b1011;
+  assign COMP_LOOP_twiddle_f_acc_nl = nl_COMP_LOOP_twiddle_f_acc_nl[3:0];
+  assign nl_COMP_LOOP_twiddle_f_lshift_rg_s = MUX_v_4_2_2(COMP_LOOP_twiddle_f_acc_nl,
+      STAGE_LOOP_i_3_0_sva, fsm_output[2]);
+  wire [0:0] nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_main_C_0_tr0;
+  assign nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_main_C_0_tr0 = ~ run_ac_sync_tmp_dobj_sva;
+  wire [0:0] nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_VEC_LOOP_C_9_tr0;
+  assign nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_VEC_LOOP_C_9_tr0 = VEC_LOOP_j_10_0_sva_1[10];
+  wire [0:0] nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_COMP_LOOP_C_2_tr0;
+  assign nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_COMP_LOOP_C_2_tr0 = ~ (z_out_1[10]);
+  wire [0:0] nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_STAGE_LOOP_C_1_tr0;
+  assign nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_STAGE_LOOP_C_1_tr0 = ~ STAGE_LOOP_acc_itm_4_1;
+  mult  mult_cmp (
+      .x_rsc_dat(modulo_sub_cmp_return_rsc_z),
+      .y_rsc_dat(nl_mult_cmp_y_rsc_dat[31:0]),
+      .y_rsc_dat_1(nl_mult_cmp_y_rsc_dat_1[31:0]),
+      .p_rsc_dat(nl_mult_cmp_p_rsc_dat[31:0]),
+      .return_rsc_z(mult_cmp_return_rsc_z),
+      .ccs_ccore_start_rsc_dat(nl_mult_cmp_ccs_ccore_start_rsc_dat[0:0]),
+      .ccs_ccore_clk(clk),
+      .ccs_ccore_srst(rst),
+      .ccs_ccore_en(mult_cmp_ccs_ccore_en)
+    );
+  modulo_sub  modulo_sub_cmp (
+      .base_rsc_dat(nl_modulo_sub_cmp_base_rsc_dat[31:0]),
+      .m_rsc_dat(nl_modulo_sub_cmp_m_rsc_dat[31:0]),
+      .return_rsc_z(modulo_sub_cmp_return_rsc_z),
+      .ccs_ccore_start_rsc_dat(nl_modulo_sub_cmp_ccs_ccore_start_rsc_dat[0:0]),
+      .ccs_ccore_clk(clk),
+      .ccs_ccore_srst(rst),
+      .ccs_ccore_en(modulo_sub_cmp_ccs_ccore_en)
+    );
+  modulo_add  modulo_add_cmp (
+      .base_rsc_dat(nl_modulo_add_cmp_base_rsc_dat[31:0]),
+      .m_rsc_dat(nl_modulo_add_cmp_m_rsc_dat[31:0]),
+      .return_rsc_z(modulo_add_cmp_return_rsc_z),
+      .ccs_ccore_start_rsc_dat(nl_modulo_add_cmp_ccs_ccore_start_rsc_dat[0:0]),
+      .ccs_ccore_clk(clk),
+      .ccs_ccore_srst(rst),
+      .ccs_ccore_en(modulo_sub_cmp_ccs_ccore_en)
+    );
+  mgc_shift_l_v5 #(.width_a(32'sd1),
+  .signd_a(32'sd0),
+  .width_s(32'sd4),
+  .width_z(32'sd11)) COMP_LOOP_twiddle_f_lshift_rg (
+      .a(1'b1),
+      .s(nl_COMP_LOOP_twiddle_f_lshift_rg_s[3:0]),
+      .z(z_out)
+    );
+  inPlaceNTT_DIF_precomp_core_wait_dp inPlaceNTT_DIF_precomp_core_wait_dp_inst (
+      .ensig_cgo_iro(or_23_rmff),
+      .ensig_cgo_iro_1(or_25_rmff),
+      .core_wen(core_wen),
+      .ensig_cgo(reg_ensig_cgo_cse),
+      .mult_cmp_ccs_ccore_en(mult_cmp_ccs_ccore_en),
+      .ensig_cgo_1(reg_ensig_cgo_1_cse),
+      .modulo_sub_cmp_ccs_ccore_en(modulo_sub_cmp_ccs_ccore_en)
+    );
+  inPlaceNTT_DIF_precomp_core_run_rsci inPlaceNTT_DIF_precomp_core_run_rsci_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .run_rsc_triosy(run_rsc_triosy),
+      .run_rsc_RREADY(run_rsc_RREADY),
+      .run_rsc_RVALID(run_rsc_RVALID),
+      .run_rsc_RRESP(run_rsc_RRESP),
+      .run_rsc_RDATA(run_rsc_RDATA),
+      .run_rsc_ARREADY(run_rsc_ARREADY),
+      .run_rsc_ARVALID(run_rsc_ARVALID),
+      .run_rsc_ARADDR(run_rsc_ARADDR),
+      .run_rsc_BREADY(run_rsc_BREADY),
+      .run_rsc_BVALID(run_rsc_BVALID),
+      .run_rsc_BRESP(run_rsc_BRESP),
+      .run_rsc_WREADY(run_rsc_WREADY),
+      .run_rsc_WVALID(run_rsc_WVALID),
+      .run_rsc_WSTRB(run_rsc_WSTRB),
+      .run_rsc_WDATA(run_rsc_WDATA),
+      .run_rsc_AWREADY(run_rsc_AWREADY),
+      .run_rsc_AWVALID(run_rsc_AWVALID),
+      .run_rsc_AWADDR(run_rsc_AWADDR),
+      .core_wen(core_wen),
+      .run_rsci_oswt(reg_run_rsci_oswt_cse),
+      .core_wten(core_wten),
+      .run_rsci_ivld_mxwt(run_rsci_ivld_mxwt)
+    );
+  inPlaceNTT_DIF_precomp_core_vec_rsci inPlaceNTT_DIF_precomp_core_vec_rsci_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .vec_rsc_s_tdone(vec_rsc_s_tdone),
+      .vec_rsc_tr_write_done(vec_rsc_tr_write_done),
+      .vec_rsc_RREADY(vec_rsc_RREADY),
+      .vec_rsc_RVALID(vec_rsc_RVALID),
+      .vec_rsc_RUSER(vec_rsc_RUSER),
+      .vec_rsc_RLAST(vec_rsc_RLAST),
+      .vec_rsc_RRESP(vec_rsc_RRESP),
+      .vec_rsc_RDATA(vec_rsc_RDATA),
+      .vec_rsc_RID(vec_rsc_RID),
+      .vec_rsc_ARREADY(vec_rsc_ARREADY),
+      .vec_rsc_ARVALID(vec_rsc_ARVALID),
+      .vec_rsc_ARUSER(vec_rsc_ARUSER),
+      .vec_rsc_ARREGION(vec_rsc_ARREGION),
+      .vec_rsc_ARQOS(vec_rsc_ARQOS),
+      .vec_rsc_ARPROT(vec_rsc_ARPROT),
+      .vec_rsc_ARCACHE(vec_rsc_ARCACHE),
+      .vec_rsc_ARLOCK(vec_rsc_ARLOCK),
+      .vec_rsc_ARBURST(vec_rsc_ARBURST),
+      .vec_rsc_ARSIZE(vec_rsc_ARSIZE),
+      .vec_rsc_ARLEN(vec_rsc_ARLEN),
+      .vec_rsc_ARADDR(vec_rsc_ARADDR),
+      .vec_rsc_ARID(vec_rsc_ARID),
+      .vec_rsc_BREADY(vec_rsc_BREADY),
+      .vec_rsc_BVALID(vec_rsc_BVALID),
+      .vec_rsc_BUSER(vec_rsc_BUSER),
+      .vec_rsc_BRESP(vec_rsc_BRESP),
+      .vec_rsc_BID(vec_rsc_BID),
+      .vec_rsc_WREADY(vec_rsc_WREADY),
+      .vec_rsc_WVALID(vec_rsc_WVALID),
+      .vec_rsc_WUSER(vec_rsc_WUSER),
+      .vec_rsc_WLAST(vec_rsc_WLAST),
+      .vec_rsc_WSTRB(vec_rsc_WSTRB),
+      .vec_rsc_WDATA(vec_rsc_WDATA),
+      .vec_rsc_AWREADY(vec_rsc_AWREADY),
+      .vec_rsc_AWVALID(vec_rsc_AWVALID),
+      .vec_rsc_AWUSER(vec_rsc_AWUSER),
+      .vec_rsc_AWREGION(vec_rsc_AWREGION),
+      .vec_rsc_AWQOS(vec_rsc_AWQOS),
+      .vec_rsc_AWPROT(vec_rsc_AWPROT),
+      .vec_rsc_AWCACHE(vec_rsc_AWCACHE),
+      .vec_rsc_AWLOCK(vec_rsc_AWLOCK),
+      .vec_rsc_AWBURST(vec_rsc_AWBURST),
+      .vec_rsc_AWSIZE(vec_rsc_AWSIZE),
+      .vec_rsc_AWLEN(vec_rsc_AWLEN),
+      .vec_rsc_AWADDR(vec_rsc_AWADDR),
+      .vec_rsc_AWID(vec_rsc_AWID),
+      .core_wen(core_wen),
+      .vec_rsci_oswt(reg_vec_rsci_oswt_cse),
+      .vec_rsci_wen_comp(vec_rsci_wen_comp),
+      .vec_rsci_oswt_1(reg_vec_rsci_oswt_1_cse),
+      .vec_rsci_wen_comp_1(vec_rsci_wen_comp_1),
+      .vec_rsci_s_raddr_core(vec_rsci_s_raddr_core),
+      .vec_rsci_s_waddr_core(vec_rsci_s_waddr_core),
+      .vec_rsci_s_din_mxwt(vec_rsci_s_din_mxwt),
+      .vec_rsci_s_dout_core(vec_rsci_s_dout_core)
+    );
+  inPlaceNTT_DIF_precomp_core_p_rsci inPlaceNTT_DIF_precomp_core_p_rsci_inst (
+      .clk(clk),
+      .rst(rst),
+      .p_rsc_RREADY(p_rsc_RREADY),
+      .p_rsc_RVALID(p_rsc_RVALID),
+      .p_rsc_RRESP(p_rsc_RRESP),
+      .p_rsc_RDATA(p_rsc_RDATA),
+      .p_rsc_ARREADY(p_rsc_ARREADY),
+      .p_rsc_ARVALID(p_rsc_ARVALID),
+      .p_rsc_ARADDR(p_rsc_ARADDR),
+      .p_rsc_BREADY(p_rsc_BREADY),
+      .p_rsc_BVALID(p_rsc_BVALID),
+      .p_rsc_BRESP(p_rsc_BRESP),
+      .p_rsc_WREADY(p_rsc_WREADY),
+      .p_rsc_WVALID(p_rsc_WVALID),
+      .p_rsc_WSTRB(p_rsc_WSTRB),
+      .p_rsc_WDATA(p_rsc_WDATA),
+      .p_rsc_AWREADY(p_rsc_AWREADY),
+      .p_rsc_AWVALID(p_rsc_AWVALID),
+      .p_rsc_AWADDR(p_rsc_AWADDR),
+      .core_wen(core_wen),
+      .core_wten(core_wten),
+      .p_rsci_oswt(reg_p_rsci_oswt_cse),
+      .p_rsci_idat_mxwt(p_rsci_idat_mxwt)
+    );
+  inPlaceNTT_DIF_precomp_core_r_rsci inPlaceNTT_DIF_precomp_core_r_rsci_inst (
+      .clk(clk),
+      .r_rsc_RREADY(r_rsc_RREADY),
+      .r_rsc_RVALID(r_rsc_RVALID),
+      .r_rsc_RRESP(r_rsc_RRESP),
+      .r_rsc_RDATA(r_rsc_RDATA),
+      .r_rsc_ARREADY(r_rsc_ARREADY),
+      .r_rsc_ARVALID(r_rsc_ARVALID),
+      .r_rsc_ARADDR(r_rsc_ARADDR),
+      .r_rsc_BREADY(r_rsc_BREADY),
+      .r_rsc_BVALID(r_rsc_BVALID),
+      .r_rsc_BRESP(r_rsc_BRESP),
+      .r_rsc_WREADY(r_rsc_WREADY),
+      .r_rsc_WVALID(r_rsc_WVALID),
+      .r_rsc_WSTRB(r_rsc_WSTRB),
+      .r_rsc_WDATA(r_rsc_WDATA),
+      .r_rsc_AWREADY(r_rsc_AWREADY),
+      .r_rsc_AWVALID(r_rsc_AWVALID),
+      .r_rsc_AWADDR(r_rsc_AWADDR)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_rsci inPlaceNTT_DIF_precomp_core_twiddle_rsci_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .twiddle_rsc_s_tdone(twiddle_rsc_s_tdone),
+      .twiddle_rsc_tr_write_done(twiddle_rsc_tr_write_done),
+      .twiddle_rsc_RREADY(twiddle_rsc_RREADY),
+      .twiddle_rsc_RVALID(twiddle_rsc_RVALID),
+      .twiddle_rsc_RUSER(twiddle_rsc_RUSER),
+      .twiddle_rsc_RLAST(twiddle_rsc_RLAST),
+      .twiddle_rsc_RRESP(twiddle_rsc_RRESP),
+      .twiddle_rsc_RDATA(twiddle_rsc_RDATA),
+      .twiddle_rsc_RID(twiddle_rsc_RID),
+      .twiddle_rsc_ARREADY(twiddle_rsc_ARREADY),
+      .twiddle_rsc_ARVALID(twiddle_rsc_ARVALID),
+      .twiddle_rsc_ARUSER(twiddle_rsc_ARUSER),
+      .twiddle_rsc_ARREGION(twiddle_rsc_ARREGION),
+      .twiddle_rsc_ARQOS(twiddle_rsc_ARQOS),
+      .twiddle_rsc_ARPROT(twiddle_rsc_ARPROT),
+      .twiddle_rsc_ARCACHE(twiddle_rsc_ARCACHE),
+      .twiddle_rsc_ARLOCK(twiddle_rsc_ARLOCK),
+      .twiddle_rsc_ARBURST(twiddle_rsc_ARBURST),
+      .twiddle_rsc_ARSIZE(twiddle_rsc_ARSIZE),
+      .twiddle_rsc_ARLEN(twiddle_rsc_ARLEN),
+      .twiddle_rsc_ARADDR(twiddle_rsc_ARADDR),
+      .twiddle_rsc_ARID(twiddle_rsc_ARID),
+      .twiddle_rsc_BREADY(twiddle_rsc_BREADY),
+      .twiddle_rsc_BVALID(twiddle_rsc_BVALID),
+      .twiddle_rsc_BUSER(twiddle_rsc_BUSER),
+      .twiddle_rsc_BRESP(twiddle_rsc_BRESP),
+      .twiddle_rsc_BID(twiddle_rsc_BID),
+      .twiddle_rsc_WREADY(twiddle_rsc_WREADY),
+      .twiddle_rsc_WVALID(twiddle_rsc_WVALID),
+      .twiddle_rsc_WUSER(twiddle_rsc_WUSER),
+      .twiddle_rsc_WLAST(twiddle_rsc_WLAST),
+      .twiddle_rsc_WSTRB(twiddle_rsc_WSTRB),
+      .twiddle_rsc_WDATA(twiddle_rsc_WDATA),
+      .twiddle_rsc_AWREADY(twiddle_rsc_AWREADY),
+      .twiddle_rsc_AWVALID(twiddle_rsc_AWVALID),
+      .twiddle_rsc_AWUSER(twiddle_rsc_AWUSER),
+      .twiddle_rsc_AWREGION(twiddle_rsc_AWREGION),
+      .twiddle_rsc_AWQOS(twiddle_rsc_AWQOS),
+      .twiddle_rsc_AWPROT(twiddle_rsc_AWPROT),
+      .twiddle_rsc_AWCACHE(twiddle_rsc_AWCACHE),
+      .twiddle_rsc_AWLOCK(twiddle_rsc_AWLOCK),
+      .twiddle_rsc_AWBURST(twiddle_rsc_AWBURST),
+      .twiddle_rsc_AWSIZE(twiddle_rsc_AWSIZE),
+      .twiddle_rsc_AWLEN(twiddle_rsc_AWLEN),
+      .twiddle_rsc_AWADDR(twiddle_rsc_AWADDR),
+      .twiddle_rsc_AWID(twiddle_rsc_AWID),
+      .core_wen(core_wen),
+      .twiddle_rsci_oswt(reg_twiddle_rsci_oswt_cse),
+      .twiddle_rsci_wen_comp(twiddle_rsci_wen_comp),
+      .twiddle_rsci_s_raddr_core(reg_twiddle_rsci_s_raddr_core_cse),
+      .twiddle_rsci_s_din_mxwt(twiddle_rsci_s_din_mxwt)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_h_rsci inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .twiddle_h_rsc_s_tdone(twiddle_h_rsc_s_tdone),
+      .twiddle_h_rsc_tr_write_done(twiddle_h_rsc_tr_write_done),
+      .twiddle_h_rsc_RREADY(twiddle_h_rsc_RREADY),
+      .twiddle_h_rsc_RVALID(twiddle_h_rsc_RVALID),
+      .twiddle_h_rsc_RUSER(twiddle_h_rsc_RUSER),
+      .twiddle_h_rsc_RLAST(twiddle_h_rsc_RLAST),
+      .twiddle_h_rsc_RRESP(twiddle_h_rsc_RRESP),
+      .twiddle_h_rsc_RDATA(twiddle_h_rsc_RDATA),
+      .twiddle_h_rsc_RID(twiddle_h_rsc_RID),
+      .twiddle_h_rsc_ARREADY(twiddle_h_rsc_ARREADY),
+      .twiddle_h_rsc_ARVALID(twiddle_h_rsc_ARVALID),
+      .twiddle_h_rsc_ARUSER(twiddle_h_rsc_ARUSER),
+      .twiddle_h_rsc_ARREGION(twiddle_h_rsc_ARREGION),
+      .twiddle_h_rsc_ARQOS(twiddle_h_rsc_ARQOS),
+      .twiddle_h_rsc_ARPROT(twiddle_h_rsc_ARPROT),
+      .twiddle_h_rsc_ARCACHE(twiddle_h_rsc_ARCACHE),
+      .twiddle_h_rsc_ARLOCK(twiddle_h_rsc_ARLOCK),
+      .twiddle_h_rsc_ARBURST(twiddle_h_rsc_ARBURST),
+      .twiddle_h_rsc_ARSIZE(twiddle_h_rsc_ARSIZE),
+      .twiddle_h_rsc_ARLEN(twiddle_h_rsc_ARLEN),
+      .twiddle_h_rsc_ARADDR(twiddle_h_rsc_ARADDR),
+      .twiddle_h_rsc_ARID(twiddle_h_rsc_ARID),
+      .twiddle_h_rsc_BREADY(twiddle_h_rsc_BREADY),
+      .twiddle_h_rsc_BVALID(twiddle_h_rsc_BVALID),
+      .twiddle_h_rsc_BUSER(twiddle_h_rsc_BUSER),
+      .twiddle_h_rsc_BRESP(twiddle_h_rsc_BRESP),
+      .twiddle_h_rsc_BID(twiddle_h_rsc_BID),
+      .twiddle_h_rsc_WREADY(twiddle_h_rsc_WREADY),
+      .twiddle_h_rsc_WVALID(twiddle_h_rsc_WVALID),
+      .twiddle_h_rsc_WUSER(twiddle_h_rsc_WUSER),
+      .twiddle_h_rsc_WLAST(twiddle_h_rsc_WLAST),
+      .twiddle_h_rsc_WSTRB(twiddle_h_rsc_WSTRB),
+      .twiddle_h_rsc_WDATA(twiddle_h_rsc_WDATA),
+      .twiddle_h_rsc_AWREADY(twiddle_h_rsc_AWREADY),
+      .twiddle_h_rsc_AWVALID(twiddle_h_rsc_AWVALID),
+      .twiddle_h_rsc_AWUSER(twiddle_h_rsc_AWUSER),
+      .twiddle_h_rsc_AWREGION(twiddle_h_rsc_AWREGION),
+      .twiddle_h_rsc_AWQOS(twiddle_h_rsc_AWQOS),
+      .twiddle_h_rsc_AWPROT(twiddle_h_rsc_AWPROT),
+      .twiddle_h_rsc_AWCACHE(twiddle_h_rsc_AWCACHE),
+      .twiddle_h_rsc_AWLOCK(twiddle_h_rsc_AWLOCK),
+      .twiddle_h_rsc_AWBURST(twiddle_h_rsc_AWBURST),
+      .twiddle_h_rsc_AWSIZE(twiddle_h_rsc_AWSIZE),
+      .twiddle_h_rsc_AWLEN(twiddle_h_rsc_AWLEN),
+      .twiddle_h_rsc_AWADDR(twiddle_h_rsc_AWADDR),
+      .twiddle_h_rsc_AWID(twiddle_h_rsc_AWID),
+      .core_wen(core_wen),
+      .twiddle_h_rsci_oswt(reg_twiddle_rsci_oswt_cse),
+      .twiddle_h_rsci_wen_comp(twiddle_h_rsci_wen_comp),
+      .twiddle_h_rsci_s_raddr_core(reg_twiddle_rsci_s_raddr_core_cse),
+      .twiddle_h_rsci_s_din_mxwt(twiddle_h_rsci_s_din_mxwt)
+    );
+  inPlaceNTT_DIF_precomp_core_complete_rsci inPlaceNTT_DIF_precomp_core_complete_rsci_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .complete_rsc_triosy(complete_rsc_triosy),
+      .complete_rsc_RREADY(complete_rsc_RREADY),
+      .complete_rsc_RVALID(complete_rsc_RVALID),
+      .complete_rsc_RRESP(complete_rsc_RRESP),
+      .complete_rsc_RDATA(complete_rsc_RDATA),
+      .complete_rsc_ARREADY(complete_rsc_ARREADY),
+      .complete_rsc_ARVALID(complete_rsc_ARVALID),
+      .complete_rsc_ARADDR(complete_rsc_ARADDR),
+      .complete_rsc_BREADY(complete_rsc_BREADY),
+      .complete_rsc_BVALID(complete_rsc_BVALID),
+      .complete_rsc_BRESP(complete_rsc_BRESP),
+      .complete_rsc_WREADY(complete_rsc_WREADY),
+      .complete_rsc_WVALID(complete_rsc_WVALID),
+      .complete_rsc_WSTRB(complete_rsc_WSTRB),
+      .complete_rsc_WDATA(complete_rsc_WDATA),
+      .complete_rsc_AWREADY(complete_rsc_AWREADY),
+      .complete_rsc_AWVALID(complete_rsc_AWVALID),
+      .complete_rsc_AWADDR(complete_rsc_AWADDR),
+      .core_wen(core_wen),
+      .complete_rsci_oswt(reg_complete_rsci_oswt_cse),
+      .complete_rsci_wen_comp(complete_rsci_wen_comp)
+    );
+  inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_inst
+      (
+      .vec_rsc_triosy_lz(vec_rsc_triosy_lz),
+      .core_wten(core_wten),
+      .vec_rsc_triosy_obj_iswt0(reg_vec_rsc_triosy_obj_iswt0_cse)
+    );
+  inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_inst
+      (
+      .p_rsc_triosy_lz(p_rsc_triosy_lz),
+      .core_wten(core_wten),
+      .p_rsc_triosy_obj_iswt0(reg_vec_rsc_triosy_obj_iswt0_cse)
+    );
+  inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_inst
+      (
+      .r_rsc_triosy_lz(r_rsc_triosy_lz),
+      .core_wten(core_wten),
+      .r_rsc_triosy_obj_iswt0(reg_vec_rsc_triosy_obj_iswt0_cse)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_inst
+      (
+      .twiddle_rsc_triosy_lz(twiddle_rsc_triosy_lz),
+      .core_wten(core_wten),
+      .twiddle_rsc_triosy_obj_iswt0(reg_vec_rsc_triosy_obj_iswt0_cse)
+    );
+  inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_inst
+      (
+      .twiddle_h_rsc_triosy_lz(twiddle_h_rsc_triosy_lz),
+      .core_wten(core_wten),
+      .twiddle_h_rsc_triosy_obj_iswt0(reg_vec_rsc_triosy_obj_iswt0_cse)
+    );
+  inPlaceNTT_DIF_precomp_core_staller inPlaceNTT_DIF_precomp_core_staller_inst (
+      .clk(clk),
+      .rst(rst),
+      .core_wen(core_wen),
+      .core_wten(core_wten),
+      .vec_rsci_wen_comp(vec_rsci_wen_comp),
+      .vec_rsci_wen_comp_1(vec_rsci_wen_comp_1),
+      .twiddle_rsci_wen_comp(twiddle_rsci_wen_comp),
+      .twiddle_h_rsci_wen_comp(twiddle_h_rsci_wen_comp),
+      .complete_rsci_wen_comp(complete_rsci_wen_comp)
+    );
+  inPlaceNTT_DIF_precomp_core_core_fsm inPlaceNTT_DIF_precomp_core_core_fsm_inst
+      (
+      .clk(clk),
+      .rst(rst),
+      .core_wen(core_wen),
+      .fsm_output(fsm_output),
+      .main_C_0_tr0(nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_main_C_0_tr0[0:0]),
+      .VEC_LOOP_C_9_tr0(nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_VEC_LOOP_C_9_tr0[0:0]),
+      .COMP_LOOP_C_2_tr0(nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_COMP_LOOP_C_2_tr0[0:0]),
+      .STAGE_LOOP_C_1_tr0(nl_inPlaceNTT_DIF_precomp_core_core_fsm_inst_STAGE_LOOP_C_1_tr0[0:0])
+    );
+  assign or_23_rmff = (fsm_output[12:8]!=5'b00000);
+  assign or_25_rmff = (fsm_output[8:7]!=2'b00);
+  assign COMP_LOOP_twiddle_help_and_cse = core_wen & ((fsm_output[2]) | (fsm_output[3])
+      | (fsm_output[0]) | (fsm_output[18]) | (fsm_output[17]) | (fsm_output[1]) |
+      (fsm_output[4]) | (fsm_output[15]) | (fsm_output[16]));
+  assign VEC_LOOP_j_and_cse = core_wen & (fsm_output[5]);
+  assign nl_VEC_LOOP_acc_10_cse_sva_mx0w0 = VEC_LOOP_acc_1_cse_sva + COMP_LOOP_k_10_0_sva_9_0
+      + (STAGE_LOOP_lshift_psp_sva[10:1]);
+  assign VEC_LOOP_acc_10_cse_sva_mx0w0 = nl_VEC_LOOP_acc_10_cse_sva_mx0w0[9:0];
+  assign and_dcpl_9 = ~((fsm_output[0]) | (fsm_output[18]));
+  assign and_dcpl_11 = ~((fsm_output[17]) | (fsm_output[1]));
+  assign nl_STAGE_LOOP_acc_nl = ({1'b1 , (~ (z_out_2[3:0]))}) + 5'b00001;
+  assign STAGE_LOOP_acc_nl = nl_STAGE_LOOP_acc_nl[4:0];
+  assign STAGE_LOOP_acc_itm_4_1 = readslicef_5_1_4(STAGE_LOOP_acc_nl);
+  always @(posedge clk) begin
+    if ( core_wen ) begin
+      vec_rsci_s_raddr_core <= MUX_v_10_2_2(VEC_LOOP_acc_10_cse_sva_mx0w0, VEC_LOOP_acc_1_cse_sva,
+          fsm_output[6]);
+      vec_rsci_s_waddr_core <= MUX_v_10_2_2(VEC_LOOP_acc_1_cse_sva, VEC_LOOP_acc_10_cse_sva,
+          fsm_output[13]);
+      vec_rsci_s_dout_core <= MUX_v_32_2_2(modulo_add_cmp_return_rsc_z, mult_cmp_return_rsc_z,
+          fsm_output[13]);
+      reg_twiddle_rsci_s_raddr_core_cse <= nl_reg_twiddle_rsci_s_raddr_core_cse[9:0];
+      factor2_sva <= vec_rsci_s_din_mxwt;
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      reg_run_rsci_oswt_cse <= 1'b0;
+      reg_vec_rsci_oswt_cse <= 1'b0;
+      reg_vec_rsci_oswt_1_cse <= 1'b0;
+      reg_p_rsci_oswt_cse <= 1'b0;
+      reg_twiddle_rsci_oswt_cse <= 1'b0;
+      reg_complete_rsci_oswt_cse <= 1'b0;
+      reg_vec_rsc_triosy_obj_iswt0_cse <= 1'b0;
+      reg_ensig_cgo_cse <= 1'b0;
+      reg_ensig_cgo_1_cse <= 1'b0;
+    end
+    else if ( core_wen ) begin
+      reg_run_rsci_oswt_cse <= fsm_output[1];
+      reg_vec_rsci_oswt_cse <= (fsm_output[6:5]!=2'b00);
+      reg_vec_rsci_oswt_1_cse <= (fsm_output[13]) | (fsm_output[8]);
+      reg_p_rsci_oswt_cse <= ~ and_dcpl_9;
+      reg_twiddle_rsci_oswt_cse <= fsm_output[3];
+      reg_complete_rsci_oswt_cse <= (~ STAGE_LOOP_acc_itm_4_1) & (fsm_output[16]);
+      reg_vec_rsc_triosy_obj_iswt0_cse <= fsm_output[17];
+      reg_ensig_cgo_cse <= or_23_rmff;
+      reg_ensig_cgo_1_cse <= or_25_rmff;
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      run_ac_sync_tmp_dobj_sva <= 1'b0;
+    end
+    else if ( core_wen & (fsm_output[17]) ) begin
+      run_ac_sync_tmp_dobj_sva <= run_rsci_ivld_mxwt;
+    end
+  end
+  always @(posedge clk) begin
+    if ( core_wen & ((fsm_output[1]) | (fsm_output[16])) ) begin
+      STAGE_LOOP_i_3_0_sva <= MUX_v_4_2_2(4'b1010, (z_out_2[3:0]), fsm_output[16]);
+    end
+  end
+  always @(posedge clk) begin
+    if ( core_wen & (~(and_dcpl_9 & and_dcpl_11)) ) begin
+      p_sva <= p_rsci_idat_mxwt;
+    end
+  end
+  always @(posedge clk) begin
+    if ( core_wen & ((fsm_output[2]) | (fsm_output[0]) | (fsm_output[18]) | (~ and_dcpl_11)
+        | (fsm_output[16])) ) begin
+      STAGE_LOOP_lshift_psp_sva <= z_out;
+    end
+  end
+  always @(posedge clk) begin
+    if ( core_wen & ((fsm_output[2]) | (fsm_output[15])) ) begin
+      COMP_LOOP_k_10_0_sva_9_0 <= MUX_v_10_2_2(10'b0000000000, (z_out_2[9:0]), COMP_LOOP_k_not_1_nl);
+    end
+  end
+  always @(posedge clk) begin
+    if ( COMP_LOOP_twiddle_help_and_cse ) begin
+      COMP_LOOP_twiddle_help_sva <= twiddle_h_rsci_s_din_mxwt;
+      COMP_LOOP_twiddle_f_sva <= twiddle_rsci_s_din_mxwt;
+    end
+  end
+  always @(posedge clk) begin
+    if ( core_wen & ((fsm_output[14]) | (fsm_output[4]) | (fsm_output[5])) ) begin
+      VEC_LOOP_acc_1_cse_sva <= MUX_v_10_2_2(10'b0000000000, COMP_LOOP_k_mux_nl,
+          VEC_LOOP_not_1_nl);
+    end
+  end
+  always @(posedge clk) begin
+    if ( VEC_LOOP_j_and_cse ) begin
+      VEC_LOOP_acc_10_cse_sva <= VEC_LOOP_acc_10_cse_sva_mx0w0;
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      VEC_LOOP_j_10_0_sva_1 <= 11'b00000000000;
+    end
+    else if ( VEC_LOOP_j_and_cse ) begin
+      VEC_LOOP_j_10_0_sva_1 <= z_out_1;
+    end
+  end
+  assign nl_reg_twiddle_rsci_s_raddr_core_cse  = (z_out[9:0]) * COMP_LOOP_k_10_0_sva_9_0;
+  assign COMP_LOOP_k_not_1_nl = ~ (fsm_output[2]);
+  assign nl_VEC_LOOP_acc_1_nl = VEC_LOOP_acc_1_cse_sva + COMP_LOOP_k_10_0_sva_9_0;
+  assign VEC_LOOP_acc_1_nl = nl_VEC_LOOP_acc_1_nl[9:0];
+  assign COMP_LOOP_k_mux_nl = MUX_v_10_2_2(VEC_LOOP_acc_1_nl, (VEC_LOOP_j_10_0_sva_1[9:0]),
+      fsm_output[14]);
+  assign VEC_LOOP_not_1_nl = ~ (fsm_output[4]);
+  assign VEC_LOOP_mux_16_nl = MUX_v_11_2_2(({1'b0 , VEC_LOOP_acc_1_cse_sva}), z_out_2,
+      fsm_output[15]);
+  assign VEC_LOOP_or_2_nl = (~ (fsm_output[5])) | (fsm_output[15]);
+  assign VEC_LOOP_mux_17_nl = MUX_v_11_2_2(STAGE_LOOP_lshift_psp_sva, ({1'b1 , (~
+      (STAGE_LOOP_lshift_psp_sva[10:1]))}), fsm_output[15]);
+  assign nl_acc_nl = ({VEC_LOOP_mux_16_nl , VEC_LOOP_or_2_nl}) + ({VEC_LOOP_mux_17_nl
+      , 1'b1});
+  assign acc_nl = nl_acc_nl[11:0];
+  assign z_out_1 = readslicef_12_11_1(acc_nl);
+  assign STAGE_LOOP_mux_3_nl = MUX_v_10_2_2(({6'b000000 , STAGE_LOOP_i_3_0_sva}),
+      COMP_LOOP_k_10_0_sva_9_0, fsm_output[15]);
+  assign nl_z_out_2 = conv_u2u_10_11(STAGE_LOOP_mux_3_nl) + conv_s2u_2_11({(~ (fsm_output[15]))
+      , 1'b1});
+  assign z_out_2 = nl_z_out_2[10:0];
+
+  function automatic [9:0] MUX_v_10_2_2;
+    input [9:0] input_0;
+    input [9:0] input_1;
+    input [0:0] sel;
+    reg [9:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_10_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [10:0] MUX_v_11_2_2;
+    input [10:0] input_0;
+    input [10:0] input_1;
+    input [0:0] sel;
+    reg [10:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_11_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [3:0] MUX_v_4_2_2;
+    input [3:0] input_0;
+    input [3:0] input_1;
+    input [0:0] sel;
+    reg [3:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_4_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [10:0] readslicef_12_11_1;
+    input [11:0] vector;
+    reg [11:0] tmp;
+  begin
+    tmp = vector >> 1;
+    readslicef_12_11_1 = tmp[10:0];
+  end
+  endfunction
+
+
+  function automatic [0:0] readslicef_5_1_4;
+    input [4:0] vector;
+    reg [4:0] tmp;
+  begin
+    tmp = vector >> 4;
+    readslicef_5_1_4 = tmp[0:0];
+  end
+  endfunction
+
+
+  function automatic [10:0] conv_s2u_2_11 ;
+    input [1:0]  vector ;
+  begin
+    conv_s2u_2_11 = {{9{vector[1]}}, vector};
+  end
+  endfunction
+
+
+  function automatic [10:0] conv_u2u_10_11 ;
+    input [9:0]  vector ;
+  begin
+    conv_u2u_10_11 = {1'b0, vector};
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    inPlaceNTT_DIF_precomp
+// ------------------------------------------------------------------
+
+
+module inPlaceNTT_DIF_precomp (
+  clk, rst, run_rsc_triosy, run_rsc_RREADY, run_rsc_RVALID, run_rsc_RRESP, run_rsc_RDATA,
+      run_rsc_ARREADY, run_rsc_ARVALID, run_rsc_ARADDR, run_rsc_BREADY, run_rsc_BVALID,
+      run_rsc_BRESP, run_rsc_WREADY, run_rsc_WVALID, run_rsc_WSTRB, run_rsc_WDATA,
+      run_rsc_AWREADY, run_rsc_AWVALID, run_rsc_AWADDR, vec_rsc_s_tdone, vec_rsc_tr_write_done,
+      vec_rsc_RREADY, vec_rsc_RVALID, vec_rsc_RUSER, vec_rsc_RLAST, vec_rsc_RRESP,
+      vec_rsc_RDATA, vec_rsc_RID, vec_rsc_ARREADY, vec_rsc_ARVALID, vec_rsc_ARUSER,
+      vec_rsc_ARREGION, vec_rsc_ARQOS, vec_rsc_ARPROT, vec_rsc_ARCACHE, vec_rsc_ARLOCK,
+      vec_rsc_ARBURST, vec_rsc_ARSIZE, vec_rsc_ARLEN, vec_rsc_ARADDR, vec_rsc_ARID,
+      vec_rsc_BREADY, vec_rsc_BVALID, vec_rsc_BUSER, vec_rsc_BRESP, vec_rsc_BID,
+      vec_rsc_WREADY, vec_rsc_WVALID, vec_rsc_WUSER, vec_rsc_WLAST, vec_rsc_WSTRB,
+      vec_rsc_WDATA, vec_rsc_AWREADY, vec_rsc_AWVALID, vec_rsc_AWUSER, vec_rsc_AWREGION,
+      vec_rsc_AWQOS, vec_rsc_AWPROT, vec_rsc_AWCACHE, vec_rsc_AWLOCK, vec_rsc_AWBURST,
+      vec_rsc_AWSIZE, vec_rsc_AWLEN, vec_rsc_AWADDR, vec_rsc_AWID, vec_rsc_triosy_lz,
+      p_rsc_RREADY, p_rsc_RVALID, p_rsc_RRESP, p_rsc_RDATA, p_rsc_ARREADY, p_rsc_ARVALID,
+      p_rsc_ARADDR, p_rsc_BREADY, p_rsc_BVALID, p_rsc_BRESP, p_rsc_WREADY, p_rsc_WVALID,
+      p_rsc_WSTRB, p_rsc_WDATA, p_rsc_AWREADY, p_rsc_AWVALID, p_rsc_AWADDR, p_rsc_triosy_lz,
+      r_rsc_RREADY, r_rsc_RVALID, r_rsc_RRESP, r_rsc_RDATA, r_rsc_ARREADY, r_rsc_ARVALID,
+      r_rsc_ARADDR, r_rsc_BREADY, r_rsc_BVALID, r_rsc_BRESP, r_rsc_WREADY, r_rsc_WVALID,
+      r_rsc_WSTRB, r_rsc_WDATA, r_rsc_AWREADY, r_rsc_AWVALID, r_rsc_AWADDR, r_rsc_triosy_lz,
+      twiddle_rsc_s_tdone, twiddle_rsc_tr_write_done, twiddle_rsc_RREADY, twiddle_rsc_RVALID,
+      twiddle_rsc_RUSER, twiddle_rsc_RLAST, twiddle_rsc_RRESP, twiddle_rsc_RDATA,
+      twiddle_rsc_RID, twiddle_rsc_ARREADY, twiddle_rsc_ARVALID, twiddle_rsc_ARUSER,
+      twiddle_rsc_ARREGION, twiddle_rsc_ARQOS, twiddle_rsc_ARPROT, twiddle_rsc_ARCACHE,
+      twiddle_rsc_ARLOCK, twiddle_rsc_ARBURST, twiddle_rsc_ARSIZE, twiddle_rsc_ARLEN,
+      twiddle_rsc_ARADDR, twiddle_rsc_ARID, twiddle_rsc_BREADY, twiddle_rsc_BVALID,
+      twiddle_rsc_BUSER, twiddle_rsc_BRESP, twiddle_rsc_BID, twiddle_rsc_WREADY,
+      twiddle_rsc_WVALID, twiddle_rsc_WUSER, twiddle_rsc_WLAST, twiddle_rsc_WSTRB,
+      twiddle_rsc_WDATA, twiddle_rsc_AWREADY, twiddle_rsc_AWVALID, twiddle_rsc_AWUSER,
+      twiddle_rsc_AWREGION, twiddle_rsc_AWQOS, twiddle_rsc_AWPROT, twiddle_rsc_AWCACHE,
+      twiddle_rsc_AWLOCK, twiddle_rsc_AWBURST, twiddle_rsc_AWSIZE, twiddle_rsc_AWLEN,
+      twiddle_rsc_AWADDR, twiddle_rsc_AWID, twiddle_rsc_triosy_lz, twiddle_h_rsc_s_tdone,
+      twiddle_h_rsc_tr_write_done, twiddle_h_rsc_RREADY, twiddle_h_rsc_RVALID, twiddle_h_rsc_RUSER,
+      twiddle_h_rsc_RLAST, twiddle_h_rsc_RRESP, twiddle_h_rsc_RDATA, twiddle_h_rsc_RID,
+      twiddle_h_rsc_ARREADY, twiddle_h_rsc_ARVALID, twiddle_h_rsc_ARUSER, twiddle_h_rsc_ARREGION,
+      twiddle_h_rsc_ARQOS, twiddle_h_rsc_ARPROT, twiddle_h_rsc_ARCACHE, twiddle_h_rsc_ARLOCK,
+      twiddle_h_rsc_ARBURST, twiddle_h_rsc_ARSIZE, twiddle_h_rsc_ARLEN, twiddle_h_rsc_ARADDR,
+      twiddle_h_rsc_ARID, twiddle_h_rsc_BREADY, twiddle_h_rsc_BVALID, twiddle_h_rsc_BUSER,
+      twiddle_h_rsc_BRESP, twiddle_h_rsc_BID, twiddle_h_rsc_WREADY, twiddle_h_rsc_WVALID,
+      twiddle_h_rsc_WUSER, twiddle_h_rsc_WLAST, twiddle_h_rsc_WSTRB, twiddle_h_rsc_WDATA,
+      twiddle_h_rsc_AWREADY, twiddle_h_rsc_AWVALID, twiddle_h_rsc_AWUSER, twiddle_h_rsc_AWREGION,
+      twiddle_h_rsc_AWQOS, twiddle_h_rsc_AWPROT, twiddle_h_rsc_AWCACHE, twiddle_h_rsc_AWLOCK,
+      twiddle_h_rsc_AWBURST, twiddle_h_rsc_AWSIZE, twiddle_h_rsc_AWLEN, twiddle_h_rsc_AWADDR,
+      twiddle_h_rsc_AWID, twiddle_h_rsc_triosy_lz, complete_rsc_triosy, complete_rsc_RREADY,
+      complete_rsc_RVALID, complete_rsc_RRESP, complete_rsc_RDATA, complete_rsc_ARREADY,
+      complete_rsc_ARVALID, complete_rsc_ARADDR, complete_rsc_BREADY, complete_rsc_BVALID,
+      complete_rsc_BRESP, complete_rsc_WREADY, complete_rsc_WVALID, complete_rsc_WSTRB,
+      complete_rsc_WDATA, complete_rsc_AWREADY, complete_rsc_AWVALID, complete_rsc_AWADDR
+);
+  input clk;
+  input rst;
+  output run_rsc_triosy;
+  input run_rsc_RREADY;
+  output run_rsc_RVALID;
+  output [1:0] run_rsc_RRESP;
+  output [31:0] run_rsc_RDATA;
+  output run_rsc_ARREADY;
+  input run_rsc_ARVALID;
+  input [11:0] run_rsc_ARADDR;
+  input run_rsc_BREADY;
+  output run_rsc_BVALID;
+  output [1:0] run_rsc_BRESP;
+  output run_rsc_WREADY;
+  input run_rsc_WVALID;
+  input [3:0] run_rsc_WSTRB;
+  input [31:0] run_rsc_WDATA;
+  output run_rsc_AWREADY;
+  input run_rsc_AWVALID;
+  input [11:0] run_rsc_AWADDR;
+  input vec_rsc_s_tdone;
+  input vec_rsc_tr_write_done;
+  input vec_rsc_RREADY;
+  output vec_rsc_RVALID;
+  output vec_rsc_RUSER;
+  output vec_rsc_RLAST;
+  output [1:0] vec_rsc_RRESP;
+  output [31:0] vec_rsc_RDATA;
+  output vec_rsc_RID;
+  output vec_rsc_ARREADY;
+  input vec_rsc_ARVALID;
+  input vec_rsc_ARUSER;
+  input [3:0] vec_rsc_ARREGION;
+  input [3:0] vec_rsc_ARQOS;
+  input [2:0] vec_rsc_ARPROT;
+  input [3:0] vec_rsc_ARCACHE;
+  input vec_rsc_ARLOCK;
+  input [1:0] vec_rsc_ARBURST;
+  input [2:0] vec_rsc_ARSIZE;
+  input [7:0] vec_rsc_ARLEN;
+  input [11:0] vec_rsc_ARADDR;
+  input vec_rsc_ARID;
+  input vec_rsc_BREADY;
+  output vec_rsc_BVALID;
+  output vec_rsc_BUSER;
+  output [1:0] vec_rsc_BRESP;
+  output vec_rsc_BID;
+  output vec_rsc_WREADY;
+  input vec_rsc_WVALID;
+  input vec_rsc_WUSER;
+  input vec_rsc_WLAST;
+  input [3:0] vec_rsc_WSTRB;
+  input [31:0] vec_rsc_WDATA;
+  output vec_rsc_AWREADY;
+  input vec_rsc_AWVALID;
+  input vec_rsc_AWUSER;
+  input [3:0] vec_rsc_AWREGION;
+  input [3:0] vec_rsc_AWQOS;
+  input [2:0] vec_rsc_AWPROT;
+  input [3:0] vec_rsc_AWCACHE;
+  input vec_rsc_AWLOCK;
+  input [1:0] vec_rsc_AWBURST;
+  input [2:0] vec_rsc_AWSIZE;
+  input [7:0] vec_rsc_AWLEN;
+  input [11:0] vec_rsc_AWADDR;
+  input vec_rsc_AWID;
+  output vec_rsc_triosy_lz;
+  input p_rsc_RREADY;
+  output p_rsc_RVALID;
+  output [1:0] p_rsc_RRESP;
+  output [31:0] p_rsc_RDATA;
+  output p_rsc_ARREADY;
+  input p_rsc_ARVALID;
+  input [11:0] p_rsc_ARADDR;
+  input p_rsc_BREADY;
+  output p_rsc_BVALID;
+  output [1:0] p_rsc_BRESP;
+  output p_rsc_WREADY;
+  input p_rsc_WVALID;
+  input [3:0] p_rsc_WSTRB;
+  input [31:0] p_rsc_WDATA;
+  output p_rsc_AWREADY;
+  input p_rsc_AWVALID;
+  input [11:0] p_rsc_AWADDR;
+  output p_rsc_triosy_lz;
+  input r_rsc_RREADY;
+  output r_rsc_RVALID;
+  output [1:0] r_rsc_RRESP;
+  output [31:0] r_rsc_RDATA;
+  output r_rsc_ARREADY;
+  input r_rsc_ARVALID;
+  input [11:0] r_rsc_ARADDR;
+  input r_rsc_BREADY;
+  output r_rsc_BVALID;
+  output [1:0] r_rsc_BRESP;
+  output r_rsc_WREADY;
+  input r_rsc_WVALID;
+  input [3:0] r_rsc_WSTRB;
+  input [31:0] r_rsc_WDATA;
+  output r_rsc_AWREADY;
+  input r_rsc_AWVALID;
+  input [11:0] r_rsc_AWADDR;
+  output r_rsc_triosy_lz;
+  input twiddle_rsc_s_tdone;
+  input twiddle_rsc_tr_write_done;
+  input twiddle_rsc_RREADY;
+  output twiddle_rsc_RVALID;
+  output twiddle_rsc_RUSER;
+  output twiddle_rsc_RLAST;
+  output [1:0] twiddle_rsc_RRESP;
+  output [31:0] twiddle_rsc_RDATA;
+  output twiddle_rsc_RID;
+  output twiddle_rsc_ARREADY;
+  input twiddle_rsc_ARVALID;
+  input twiddle_rsc_ARUSER;
+  input [3:0] twiddle_rsc_ARREGION;
+  input [3:0] twiddle_rsc_ARQOS;
+  input [2:0] twiddle_rsc_ARPROT;
+  input [3:0] twiddle_rsc_ARCACHE;
+  input twiddle_rsc_ARLOCK;
+  input [1:0] twiddle_rsc_ARBURST;
+  input [2:0] twiddle_rsc_ARSIZE;
+  input [7:0] twiddle_rsc_ARLEN;
+  input [11:0] twiddle_rsc_ARADDR;
+  input twiddle_rsc_ARID;
+  input twiddle_rsc_BREADY;
+  output twiddle_rsc_BVALID;
+  output twiddle_rsc_BUSER;
+  output [1:0] twiddle_rsc_BRESP;
+  output twiddle_rsc_BID;
+  output twiddle_rsc_WREADY;
+  input twiddle_rsc_WVALID;
+  input twiddle_rsc_WUSER;
+  input twiddle_rsc_WLAST;
+  input [3:0] twiddle_rsc_WSTRB;
+  input [31:0] twiddle_rsc_WDATA;
+  output twiddle_rsc_AWREADY;
+  input twiddle_rsc_AWVALID;
+  input twiddle_rsc_AWUSER;
+  input [3:0] twiddle_rsc_AWREGION;
+  input [3:0] twiddle_rsc_AWQOS;
+  input [2:0] twiddle_rsc_AWPROT;
+  input [3:0] twiddle_rsc_AWCACHE;
+  input twiddle_rsc_AWLOCK;
+  input [1:0] twiddle_rsc_AWBURST;
+  input [2:0] twiddle_rsc_AWSIZE;
+  input [7:0] twiddle_rsc_AWLEN;
+  input [11:0] twiddle_rsc_AWADDR;
+  input twiddle_rsc_AWID;
+  output twiddle_rsc_triosy_lz;
+  input twiddle_h_rsc_s_tdone;
+  input twiddle_h_rsc_tr_write_done;
+  input twiddle_h_rsc_RREADY;
+  output twiddle_h_rsc_RVALID;
+  output twiddle_h_rsc_RUSER;
+  output twiddle_h_rsc_RLAST;
+  output [1:0] twiddle_h_rsc_RRESP;
+  output [31:0] twiddle_h_rsc_RDATA;
+  output twiddle_h_rsc_RID;
+  output twiddle_h_rsc_ARREADY;
+  input twiddle_h_rsc_ARVALID;
+  input twiddle_h_rsc_ARUSER;
+  input [3:0] twiddle_h_rsc_ARREGION;
+  input [3:0] twiddle_h_rsc_ARQOS;
+  input [2:0] twiddle_h_rsc_ARPROT;
+  input [3:0] twiddle_h_rsc_ARCACHE;
+  input twiddle_h_rsc_ARLOCK;
+  input [1:0] twiddle_h_rsc_ARBURST;
+  input [2:0] twiddle_h_rsc_ARSIZE;
+  input [7:0] twiddle_h_rsc_ARLEN;
+  input [11:0] twiddle_h_rsc_ARADDR;
+  input twiddle_h_rsc_ARID;
+  input twiddle_h_rsc_BREADY;
+  output twiddle_h_rsc_BVALID;
+  output twiddle_h_rsc_BUSER;
+  output [1:0] twiddle_h_rsc_BRESP;
+  output twiddle_h_rsc_BID;
+  output twiddle_h_rsc_WREADY;
+  input twiddle_h_rsc_WVALID;
+  input twiddle_h_rsc_WUSER;
+  input twiddle_h_rsc_WLAST;
+  input [3:0] twiddle_h_rsc_WSTRB;
+  input [31:0] twiddle_h_rsc_WDATA;
+  output twiddle_h_rsc_AWREADY;
+  input twiddle_h_rsc_AWVALID;
+  input twiddle_h_rsc_AWUSER;
+  input [3:0] twiddle_h_rsc_AWREGION;
+  input [3:0] twiddle_h_rsc_AWQOS;
+  input [2:0] twiddle_h_rsc_AWPROT;
+  input [3:0] twiddle_h_rsc_AWCACHE;
+  input twiddle_h_rsc_AWLOCK;
+  input [1:0] twiddle_h_rsc_AWBURST;
+  input [2:0] twiddle_h_rsc_AWSIZE;
+  input [7:0] twiddle_h_rsc_AWLEN;
+  input [11:0] twiddle_h_rsc_AWADDR;
+  input twiddle_h_rsc_AWID;
+  output twiddle_h_rsc_triosy_lz;
+  output complete_rsc_triosy;
+  input complete_rsc_RREADY;
+  output complete_rsc_RVALID;
+  output [1:0] complete_rsc_RRESP;
+  output [31:0] complete_rsc_RDATA;
+  output complete_rsc_ARREADY;
+  input complete_rsc_ARVALID;
+  input [11:0] complete_rsc_ARADDR;
+  input complete_rsc_BREADY;
+  output complete_rsc_BVALID;
+  output [1:0] complete_rsc_BRESP;
+  output complete_rsc_WREADY;
+  input complete_rsc_WVALID;
+  input [3:0] complete_rsc_WSTRB;
+  input [31:0] complete_rsc_WDATA;
+  output complete_rsc_AWREADY;
+  input complete_rsc_AWVALID;
+  input [11:0] complete_rsc_AWADDR;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  inPlaceNTT_DIF_precomp_core inPlaceNTT_DIF_precomp_core_inst (
+      .clk(clk),
+      .rst(rst),
+      .run_rsc_triosy(run_rsc_triosy),
+      .run_rsc_RREADY(run_rsc_RREADY),
+      .run_rsc_RVALID(run_rsc_RVALID),
+      .run_rsc_RRESP(run_rsc_RRESP),
+      .run_rsc_RDATA(run_rsc_RDATA),
+      .run_rsc_ARREADY(run_rsc_ARREADY),
+      .run_rsc_ARVALID(run_rsc_ARVALID),
+      .run_rsc_ARADDR(run_rsc_ARADDR),
+      .run_rsc_BREADY(run_rsc_BREADY),
+      .run_rsc_BVALID(run_rsc_BVALID),
+      .run_rsc_BRESP(run_rsc_BRESP),
+      .run_rsc_WREADY(run_rsc_WREADY),
+      .run_rsc_WVALID(run_rsc_WVALID),
+      .run_rsc_WSTRB(run_rsc_WSTRB),
+      .run_rsc_WDATA(run_rsc_WDATA),
+      .run_rsc_AWREADY(run_rsc_AWREADY),
+      .run_rsc_AWVALID(run_rsc_AWVALID),
+      .run_rsc_AWADDR(run_rsc_AWADDR),
+      .vec_rsc_s_tdone(vec_rsc_s_tdone),
+      .vec_rsc_tr_write_done(vec_rsc_tr_write_done),
+      .vec_rsc_RREADY(vec_rsc_RREADY),
+      .vec_rsc_RVALID(vec_rsc_RVALID),
+      .vec_rsc_RUSER(vec_rsc_RUSER),
+      .vec_rsc_RLAST(vec_rsc_RLAST),
+      .vec_rsc_RRESP(vec_rsc_RRESP),
+      .vec_rsc_RDATA(vec_rsc_RDATA),
+      .vec_rsc_RID(vec_rsc_RID),
+      .vec_rsc_ARREADY(vec_rsc_ARREADY),
+      .vec_rsc_ARVALID(vec_rsc_ARVALID),
+      .vec_rsc_ARUSER(vec_rsc_ARUSER),
+      .vec_rsc_ARREGION(vec_rsc_ARREGION),
+      .vec_rsc_ARQOS(vec_rsc_ARQOS),
+      .vec_rsc_ARPROT(vec_rsc_ARPROT),
+      .vec_rsc_ARCACHE(vec_rsc_ARCACHE),
+      .vec_rsc_ARLOCK(vec_rsc_ARLOCK),
+      .vec_rsc_ARBURST(vec_rsc_ARBURST),
+      .vec_rsc_ARSIZE(vec_rsc_ARSIZE),
+      .vec_rsc_ARLEN(vec_rsc_ARLEN),
+      .vec_rsc_ARADDR(vec_rsc_ARADDR),
+      .vec_rsc_ARID(vec_rsc_ARID),
+      .vec_rsc_BREADY(vec_rsc_BREADY),
+      .vec_rsc_BVALID(vec_rsc_BVALID),
+      .vec_rsc_BUSER(vec_rsc_BUSER),
+      .vec_rsc_BRESP(vec_rsc_BRESP),
+      .vec_rsc_BID(vec_rsc_BID),
+      .vec_rsc_WREADY(vec_rsc_WREADY),
+      .vec_rsc_WVALID(vec_rsc_WVALID),
+      .vec_rsc_WUSER(vec_rsc_WUSER),
+      .vec_rsc_WLAST(vec_rsc_WLAST),
+      .vec_rsc_WSTRB(vec_rsc_WSTRB),
+      .vec_rsc_WDATA(vec_rsc_WDATA),
+      .vec_rsc_AWREADY(vec_rsc_AWREADY),
+      .vec_rsc_AWVALID(vec_rsc_AWVALID),
+      .vec_rsc_AWUSER(vec_rsc_AWUSER),
+      .vec_rsc_AWREGION(vec_rsc_AWREGION),
+      .vec_rsc_AWQOS(vec_rsc_AWQOS),
+      .vec_rsc_AWPROT(vec_rsc_AWPROT),
+      .vec_rsc_AWCACHE(vec_rsc_AWCACHE),
+      .vec_rsc_AWLOCK(vec_rsc_AWLOCK),
+      .vec_rsc_AWBURST(vec_rsc_AWBURST),
+      .vec_rsc_AWSIZE(vec_rsc_AWSIZE),
+      .vec_rsc_AWLEN(vec_rsc_AWLEN),
+      .vec_rsc_AWADDR(vec_rsc_AWADDR),
+      .vec_rsc_AWID(vec_rsc_AWID),
+      .vec_rsc_triosy_lz(vec_rsc_triosy_lz),
+      .p_rsc_RREADY(p_rsc_RREADY),
+      .p_rsc_RVALID(p_rsc_RVALID),
+      .p_rsc_RRESP(p_rsc_RRESP),
+      .p_rsc_RDATA(p_rsc_RDATA),
+      .p_rsc_ARREADY(p_rsc_ARREADY),
+      .p_rsc_ARVALID(p_rsc_ARVALID),
+      .p_rsc_ARADDR(p_rsc_ARADDR),
+      .p_rsc_BREADY(p_rsc_BREADY),
+      .p_rsc_BVALID(p_rsc_BVALID),
+      .p_rsc_BRESP(p_rsc_BRESP),
+      .p_rsc_WREADY(p_rsc_WREADY),
+      .p_rsc_WVALID(p_rsc_WVALID),
+      .p_rsc_WSTRB(p_rsc_WSTRB),
+      .p_rsc_WDATA(p_rsc_WDATA),
+      .p_rsc_AWREADY(p_rsc_AWREADY),
+      .p_rsc_AWVALID(p_rsc_AWVALID),
+      .p_rsc_AWADDR(p_rsc_AWADDR),
+      .p_rsc_triosy_lz(p_rsc_triosy_lz),
+      .r_rsc_RREADY(r_rsc_RREADY),
+      .r_rsc_RVALID(r_rsc_RVALID),
+      .r_rsc_RRESP(r_rsc_RRESP),
+      .r_rsc_RDATA(r_rsc_RDATA),
+      .r_rsc_ARREADY(r_rsc_ARREADY),
+      .r_rsc_ARVALID(r_rsc_ARVALID),
+      .r_rsc_ARADDR(r_rsc_ARADDR),
+      .r_rsc_BREADY(r_rsc_BREADY),
+      .r_rsc_BVALID(r_rsc_BVALID),
+      .r_rsc_BRESP(r_rsc_BRESP),
+      .r_rsc_WREADY(r_rsc_WREADY),
+      .r_rsc_WVALID(r_rsc_WVALID),
+      .r_rsc_WSTRB(r_rsc_WSTRB),
+      .r_rsc_WDATA(r_rsc_WDATA),
+      .r_rsc_AWREADY(r_rsc_AWREADY),
+      .r_rsc_AWVALID(r_rsc_AWVALID),
+      .r_rsc_AWADDR(r_rsc_AWADDR),
+      .r_rsc_triosy_lz(r_rsc_triosy_lz),
+      .twiddle_rsc_s_tdone(twiddle_rsc_s_tdone),
+      .twiddle_rsc_tr_write_done(twiddle_rsc_tr_write_done),
+      .twiddle_rsc_RREADY(twiddle_rsc_RREADY),
+      .twiddle_rsc_RVALID(twiddle_rsc_RVALID),
+      .twiddle_rsc_RUSER(twiddle_rsc_RUSER),
+      .twiddle_rsc_RLAST(twiddle_rsc_RLAST),
+      .twiddle_rsc_RRESP(twiddle_rsc_RRESP),
+      .twiddle_rsc_RDATA(twiddle_rsc_RDATA),
+      .twiddle_rsc_RID(twiddle_rsc_RID),
+      .twiddle_rsc_ARREADY(twiddle_rsc_ARREADY),
+      .twiddle_rsc_ARVALID(twiddle_rsc_ARVALID),
+      .twiddle_rsc_ARUSER(twiddle_rsc_ARUSER),
+      .twiddle_rsc_ARREGION(twiddle_rsc_ARREGION),
+      .twiddle_rsc_ARQOS(twiddle_rsc_ARQOS),
+      .twiddle_rsc_ARPROT(twiddle_rsc_ARPROT),
+      .twiddle_rsc_ARCACHE(twiddle_rsc_ARCACHE),
+      .twiddle_rsc_ARLOCK(twiddle_rsc_ARLOCK),
+      .twiddle_rsc_ARBURST(twiddle_rsc_ARBURST),
+      .twiddle_rsc_ARSIZE(twiddle_rsc_ARSIZE),
+      .twiddle_rsc_ARLEN(twiddle_rsc_ARLEN),
+      .twiddle_rsc_ARADDR(twiddle_rsc_ARADDR),
+      .twiddle_rsc_ARID(twiddle_rsc_ARID),
+      .twiddle_rsc_BREADY(twiddle_rsc_BREADY),
+      .twiddle_rsc_BVALID(twiddle_rsc_BVALID),
+      .twiddle_rsc_BUSER(twiddle_rsc_BUSER),
+      .twiddle_rsc_BRESP(twiddle_rsc_BRESP),
+      .twiddle_rsc_BID(twiddle_rsc_BID),
+      .twiddle_rsc_WREADY(twiddle_rsc_WREADY),
+      .twiddle_rsc_WVALID(twiddle_rsc_WVALID),
+      .twiddle_rsc_WUSER(twiddle_rsc_WUSER),
+      .twiddle_rsc_WLAST(twiddle_rsc_WLAST),
+      .twiddle_rsc_WSTRB(twiddle_rsc_WSTRB),
+      .twiddle_rsc_WDATA(twiddle_rsc_WDATA),
+      .twiddle_rsc_AWREADY(twiddle_rsc_AWREADY),
+      .twiddle_rsc_AWVALID(twiddle_rsc_AWVALID),
+      .twiddle_rsc_AWUSER(twiddle_rsc_AWUSER),
+      .twiddle_rsc_AWREGION(twiddle_rsc_AWREGION),
+      .twiddle_rsc_AWQOS(twiddle_rsc_AWQOS),
+      .twiddle_rsc_AWPROT(twiddle_rsc_AWPROT),
+      .twiddle_rsc_AWCACHE(twiddle_rsc_AWCACHE),
+      .twiddle_rsc_AWLOCK(twiddle_rsc_AWLOCK),
+      .twiddle_rsc_AWBURST(twiddle_rsc_AWBURST),
+      .twiddle_rsc_AWSIZE(twiddle_rsc_AWSIZE),
+      .twiddle_rsc_AWLEN(twiddle_rsc_AWLEN),
+      .twiddle_rsc_AWADDR(twiddle_rsc_AWADDR),
+      .twiddle_rsc_AWID(twiddle_rsc_AWID),
+      .twiddle_rsc_triosy_lz(twiddle_rsc_triosy_lz),
+      .twiddle_h_rsc_s_tdone(twiddle_h_rsc_s_tdone),
+      .twiddle_h_rsc_tr_write_done(twiddle_h_rsc_tr_write_done),
+      .twiddle_h_rsc_RREADY(twiddle_h_rsc_RREADY),
+      .twiddle_h_rsc_RVALID(twiddle_h_rsc_RVALID),
+      .twiddle_h_rsc_RUSER(twiddle_h_rsc_RUSER),
+      .twiddle_h_rsc_RLAST(twiddle_h_rsc_RLAST),
+      .twiddle_h_rsc_RRESP(twiddle_h_rsc_RRESP),
+      .twiddle_h_rsc_RDATA(twiddle_h_rsc_RDATA),
+      .twiddle_h_rsc_RID(twiddle_h_rsc_RID),
+      .twiddle_h_rsc_ARREADY(twiddle_h_rsc_ARREADY),
+      .twiddle_h_rsc_ARVALID(twiddle_h_rsc_ARVALID),
+      .twiddle_h_rsc_ARUSER(twiddle_h_rsc_ARUSER),
+      .twiddle_h_rsc_ARREGION(twiddle_h_rsc_ARREGION),
+      .twiddle_h_rsc_ARQOS(twiddle_h_rsc_ARQOS),
+      .twiddle_h_rsc_ARPROT(twiddle_h_rsc_ARPROT),
+      .twiddle_h_rsc_ARCACHE(twiddle_h_rsc_ARCACHE),
+      .twiddle_h_rsc_ARLOCK(twiddle_h_rsc_ARLOCK),
+      .twiddle_h_rsc_ARBURST(twiddle_h_rsc_ARBURST),
+      .twiddle_h_rsc_ARSIZE(twiddle_h_rsc_ARSIZE),
+      .twiddle_h_rsc_ARLEN(twiddle_h_rsc_ARLEN),
+      .twiddle_h_rsc_ARADDR(twiddle_h_rsc_ARADDR),
+      .twiddle_h_rsc_ARID(twiddle_h_rsc_ARID),
+      .twiddle_h_rsc_BREADY(twiddle_h_rsc_BREADY),
+      .twiddle_h_rsc_BVALID(twiddle_h_rsc_BVALID),
+      .twiddle_h_rsc_BUSER(twiddle_h_rsc_BUSER),
+      .twiddle_h_rsc_BRESP(twiddle_h_rsc_BRESP),
+      .twiddle_h_rsc_BID(twiddle_h_rsc_BID),
+      .twiddle_h_rsc_WREADY(twiddle_h_rsc_WREADY),
+      .twiddle_h_rsc_WVALID(twiddle_h_rsc_WVALID),
+      .twiddle_h_rsc_WUSER(twiddle_h_rsc_WUSER),
+      .twiddle_h_rsc_WLAST(twiddle_h_rsc_WLAST),
+      .twiddle_h_rsc_WSTRB(twiddle_h_rsc_WSTRB),
+      .twiddle_h_rsc_WDATA(twiddle_h_rsc_WDATA),
+      .twiddle_h_rsc_AWREADY(twiddle_h_rsc_AWREADY),
+      .twiddle_h_rsc_AWVALID(twiddle_h_rsc_AWVALID),
+      .twiddle_h_rsc_AWUSER(twiddle_h_rsc_AWUSER),
+      .twiddle_h_rsc_AWREGION(twiddle_h_rsc_AWREGION),
+      .twiddle_h_rsc_AWQOS(twiddle_h_rsc_AWQOS),
+      .twiddle_h_rsc_AWPROT(twiddle_h_rsc_AWPROT),
+      .twiddle_h_rsc_AWCACHE(twiddle_h_rsc_AWCACHE),
+      .twiddle_h_rsc_AWLOCK(twiddle_h_rsc_AWLOCK),
+      .twiddle_h_rsc_AWBURST(twiddle_h_rsc_AWBURST),
+      .twiddle_h_rsc_AWSIZE(twiddle_h_rsc_AWSIZE),
+      .twiddle_h_rsc_AWLEN(twiddle_h_rsc_AWLEN),
+      .twiddle_h_rsc_AWADDR(twiddle_h_rsc_AWADDR),
+      .twiddle_h_rsc_AWID(twiddle_h_rsc_AWID),
+      .twiddle_h_rsc_triosy_lz(twiddle_h_rsc_triosy_lz),
+      .complete_rsc_triosy(complete_rsc_triosy),
+      .complete_rsc_RREADY(complete_rsc_RREADY),
+      .complete_rsc_RVALID(complete_rsc_RVALID),
+      .complete_rsc_RRESP(complete_rsc_RRESP),
+      .complete_rsc_RDATA(complete_rsc_RDATA),
+      .complete_rsc_ARREADY(complete_rsc_ARREADY),
+      .complete_rsc_ARVALID(complete_rsc_ARVALID),
+      .complete_rsc_ARADDR(complete_rsc_ARADDR),
+      .complete_rsc_BREADY(complete_rsc_BREADY),
+      .complete_rsc_BVALID(complete_rsc_BVALID),
+      .complete_rsc_BRESP(complete_rsc_BRESP),
+      .complete_rsc_WREADY(complete_rsc_WREADY),
+      .complete_rsc_WVALID(complete_rsc_WVALID),
+      .complete_rsc_WSTRB(complete_rsc_WSTRB),
+      .complete_rsc_WDATA(complete_rsc_WDATA),
+      .complete_rsc_AWREADY(complete_rsc_AWREADY),
+      .complete_rsc_AWVALID(complete_rsc_AWVALID),
+      .complete_rsc_AWADDR(complete_rsc_AWADDR)
+    );
+endmodule
+
+
+

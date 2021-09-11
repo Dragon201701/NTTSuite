@@ -1,6 +1,7 @@
 #include <cstdlib> 		/* malloc() */
 #include <iostream>
 #include <mc_scverify.h>
+#include <ac_sync.h>
 
 #include "../include/ntt.h"
 #include "../include/config.h"
@@ -8,7 +9,8 @@
 
 using namespace std;
 
-void randVec(DATA_TYPE * vec, DATA_TYPE * vec2, DATA_TYPE max){
+void randVec(DATA_TYPE * vec, DATA_TYPE * vec2, DATA_TYPE seed, DATA_TYPE max){
+	srand(seed);
 	for(unsigned i = 0; i < VECTOR_SIZE; i++){
 		DATA_TYPE value = rand() % (max + 1);
 		value = i;
@@ -59,6 +61,10 @@ void gettwiddle(DATA_TYPE *twiddle, DATA_TYPE *twiddle_h, DATA_TYPE p, DATA_TYPE
 }
 
 CCS_MAIN(int argc, char** argv){
+
+	const unsigned VECTOR_COUNT = 3;  // number of vectors to test
+	unsigned       error_count = 0;
+
     // Modulo
 	DATA_TYPE p = (479  << 21) + 1;
 	// Root
@@ -67,18 +73,34 @@ CCS_MAIN(int argc, char** argv){
     // input vector and twiddles
     DATA_TYPE vec[VECTOR_SIZE], vec2[VECTOR_SIZE], twiddle[VECTOR_SIZE], twiddle_h[VECTOR_SIZE];
 	DATA_TYPE naiveResult[VECTOR_SIZE], nttResult[VECTOR_SIZE];
-	randVec(vec, vec2, 1000);
-
-	gettwiddle(twiddle, twiddle_h, p, r);
 	ac_sync        run, complete;
 
-	run.sync_out();
-    CCS_DESIGN(inPlaceNTT_DIF_precomp)(run, vec, p, r, twiddle, twiddle_h, complete);
-	complete.sync_in();
+	gettwiddle(twiddle, twiddle_h, p, r);
 
-	naiveNTT(vec2, VECTOR_SIZE, p, r, twiddle, twiddle_h, naiveResult);
-	bit_reverse(vec, nttResult);
+	for(unsigned itr = 0; itr < VECTOR_COUNT; itr++){
+		randVec(vec, vec2, itr, 1000);
+		run.sync_out();
+#ifdef CCS_SCVERIFY
+		if (itr==0) {
+		// due to the nb_sync_in, we need to ignore the first output compare
+		// because result will not have been initialized with any values
+		//testbench::result_ignore = true;
+		}
+#endif
+		CCS_DESIGN(inPlaceNTT_DIF_precomp)(run, vec, p, r, twiddle, twiddle_h, complete);
+		complete.sync_in();
+		naiveNTT(vec2, VECTOR_SIZE, p, r, twiddle, twiddle_h, naiveResult);
+		bit_reverse(vec, nttResult);
+		error_count += compVec(nttResult, naiveResult, VECTOR_SIZE, true);
+	}
+	
 
-	CCS_RETURN(compVec(nttResult, naiveResult, VECTOR_SIZE, true));
+	
+	  cout << __FILE__ <<
+       ":Testbench Complete with " << error_count <<
+       " mismatches, after running " << VECTOR_COUNT << " iteration(s)." <<
+       endl;
+
+	CCS_RETURN(error_count);
 
 }

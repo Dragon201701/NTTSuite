@@ -1,12 +1,14 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include <cstdint> 	/* int64_t, DATA_TYPE */
+//#include <cstdint> 	/* int64_t, DATA_TYPE */
 #include <cstdlib>	/* RAND_MAX */
 #include <cmath>
 #include <iostream>
 
 #include "config.h"
+
+#include <mc_scverify.h>
 
 
 /**
@@ -28,7 +30,7 @@ DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE *result);
  * @param debug	Whether to print debug information (will run entire vector)
  * @return 	Whether the two vectors are element-wise equivalent
  */
-bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug);
+unsigned compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug);
 
 /**
  * Perform the operation 'base^exp (mod m)' using the memory-efficient method
@@ -41,7 +43,8 @@ bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug);
 DATA_TYPE modExp(DATA_TYPE base, DATA_TYPE exp, DATA_TYPE m);
 
 /**
- * Perform the operation 'base (mod m)'
+ * Perform the operation 'base 
+ * (mod m)'
  *
  * @param base	The base of the expression
  * @param m	The modulus of the expression

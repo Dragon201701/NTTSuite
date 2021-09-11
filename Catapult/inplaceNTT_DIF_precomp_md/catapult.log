@@ -1,0 +1,1761 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Sat Sep 11 11:15:05 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log24705f82c55e1.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+project load /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult.ccs
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/catapult.log"
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/mult_2d54321464f3e8a5caae298ecf027ed470cc_0/.sif/solIndex_2_0a16f2aa-d2e1-49d5-aed0-3233afadeed0.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_sub_28e09f5253b28fe0a06f378161cc4ed6635d_0/.sif/solIndex_2_da418552-a123-4ed0-b6a4-9563552954b8.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_add_7c07f6e37fa644e396647dc3a3826a1c60d4_0/.sif/solIndex_2_605bc868-c120-4a1c-9585-38387c41b1f4.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/mult_3eae8f08f013d2486c316934aa28d4f070bd_0/.sif/solIndex_2_e8ff8da9-bc01-4a8a-bb10-4933feb1650d.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_sub_0862bdaa6ac028d3bc8e20cdcb7ac85e6351_0/.sif/solIndex_2_100d4175-3607-40d6-bb6d-059707511014.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_add_036ce25c2a2243113f91b3e523e8840b60c8_0/.sif/solIndex_2_67ff5e91-80af-4df2-a573-7a66dda4df92.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/mult_c3d87980142fdbe72da25f2460c5a41a70cb_0/.sif/solIndex_2_a0cbb43a-0792-4440-800a-47dcc6bc590f.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_sub_f56c3138e5ca6733a13aa39bf1e29fd2635c_0/.sif/solIndex_2_fd8a1fce-162f-4032-8561-a776381445fc.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_add_1a78f3a034bed933e402bbf0ca446af860d3_0/.sif/solIndex_2_4d7e0f76-6d38-4a18-ae9d-1748f05a1c02.xml' ... (LIB-129)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 11:16:49 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 11:16:50 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 11:16:50 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 11:16:50 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 11:16:50 on Sep 11,2021
+# vopt "+acc=npr" -L ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls -L ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module inPlaceNTT_DIF_precomp
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_16_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_17_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module mult
+# -- Loading module mult_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2
+# -- Loading module modulo_sub
+# -- Loading module modulo_sub_core
+# -- Loading module modulo_add
+# -- Loading module modulo_add_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_staller
+# -- Loading module inPlaceNTT_DIF_precomp_core_core_fsm
+# Incremental compilation check found no design-units have changed.
+# Optimized design name is scverify_top_opt
+# End time: 11:16:50 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 11:30:36 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:54:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# End time: 11:30:39 on Sep 11,2021, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/ntt.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt.cpp
+# Start time: 11:30:39 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 11:30:40 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 11:30:40 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/utils.cpp: In function 'bool compVec(DATA_TYPE*, DATA_TYPE*, unsigned int, bool)':
+# Error: ../../src/utils.cpp(45): error: 'testbench' has not been declared
+#    testbench::result_ignore = true;
+#    ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 11:30:41 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/utils.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 11:31:25 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/utils.cpp: In function 'bool compVec(DATA_TYPE*, DATA_TYPE*, unsigned int, bool)':
+# Error: ../../src/utils.cpp(45): error: 'result_ignore' is not a member of 'testbench'
+#    testbench::result_ignore = true;
+#    ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 11:31:28 on Sep 11,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/utils.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 11:42:13 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# ../../src/main.cpp: In member function 'int testbench::main()':
+# Error: ../../src/main.cpp(87): error: 'result_ignore' is not a member of 'testbench'
+#        testbench::result_ignore = true;
+#        ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 11:42:16 on Sep 11,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/main.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 11:49:18 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# ../../src/main.cpp: In member function 'int testbench::main()':
+# Error: ../../src/main.cpp(87): error: 'result_ignore' is not a member of 'testbench'
+#    testbench::result_ignore = true;
+#    ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 11:49:21 on Sep 11,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/main.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 11:49:48 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# End time: 11:49:52 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 11:49:52 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 11:49:56 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 11:49:56 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 11:49:57 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 11:49:57 on Sep 11,2021
+# vopt "+acc=npr" -L ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls -L ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module inPlaceNTT_DIF_precomp
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_16_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_17_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module mult
+# -- Loading module mult_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2
+# -- Loading module modulo_sub
+# -- Loading module modulo_sub_core
+# -- Loading module modulo_add
+# -- Loading module modulo_add_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v5/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_staller
+# -- Loading module inPlaceNTT_DIF_precomp_core_core_fsm
+# Incremental compilation check found no design-units have changed.
+# Optimized design name is scverify_top_opt
+# End time: 11:49:57 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+solution select inPlaceNTT_DIF_precomp.v2
+# inPlaceNTT_DIF_precomp.v2
+solution select inPlaceNTT_DIF_precomp.v5
+# inPlaceNTT_DIF_precomp.v5
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# make: Nothing to be done for `build'.
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+go compile
+solution library remove *
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v6' at state 'compile' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/CDesignChecker/design_checker.sh'
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+solution library add amba
+go libraries
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-uplus-3_beh.lib' [mgc_Xilinx-VIRTEX-uplus-3_beh]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 0.99 seconds, memory usage 1511396kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go assembly
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 0.22 seconds, memory usage 1511396kB, peak memory usage 1511396kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 105, Real ops = 34, Vars = 51 (SOL-21)
+directive set /inPlaceNTT_DIF_precomp/run:rsc -MAP_TO_MODULE amba.ccs_axi4_lite_slave_insync
+# Warning: AXI4 Component 'amba.ccs_axi4_lite_slave_insync' requires asynchronous reset when processing MAP_TO_MODULE directive (DIR-48)
+# /inPlaceNTT_DIF_precomp/run:rsc/MAP_TO_MODULE amba.ccs_axi4_lite_slave_insync
+directive set /inPlaceNTT_DIF_precomp/p:rsc -MAP_TO_MODULE amba.ccs_axi4_lite_slave_indirect
+# /inPlaceNTT_DIF_precomp/p:rsc/MAP_TO_MODULE amba.ccs_axi4_lite_slave_indirect
+directive set /inPlaceNTT_DIF_precomp/r:rsc -MAP_TO_MODULE amba.ccs_axi4_lite_slave_indirect
+# /inPlaceNTT_DIF_precomp/r:rsc/MAP_TO_MODULE amba.ccs_axi4_lite_slave_indirect
+directive set /inPlaceNTT_DIF_precomp/complete:rsc -MAP_TO_MODULE amba.ccs_axi4_lite_slave_outsync
+# Warning: AXI4 Component 'amba.ccs_axi4_lite_slave_outsync' requires asynchronous reset when processing MAP_TO_MODULE directive (DIR-48)
+# /inPlaceNTT_DIF_precomp/complete:rsc/MAP_TO_MODULE amba.ccs_axi4_lite_slave_outsync
+go extract
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(60): Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(57): Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(55): Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(49): Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 0.09 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 118, Real ops = 34, Vars = 62 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/x:rsc' (from var: x) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y_:rsc' (from var: y_) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(49): Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc' (from var: vec) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(49): I/O-Port Resource '/inPlaceNTT_DIF_precomp/p:rsc' (from var: p) mapped to 'amba.ccs_axi4_lite_slave_indirect' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(49): I/O-Port Resource '/inPlaceNTT_DIF_precomp/r:rsc' (from var: r) mapped to 'amba.ccs_axi4_lite_slave_indirect' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(50): Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(50): Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc' (from var: twiddle_h) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 1.24 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 121, Real ops = 34, Vars = 59 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting synthesis of module for CCORE 'mult'... (TD-2)
+# CU_DESIGN sid10 ADD {} {VERSION v1 SID sid10 BRANCH_SID sid9 BRANCH_STATE memories INCREMENTAL 0 STATE memories TRANSFORMING 0 SOLUTION_DIR /home/yl7897/.catapult/Cache/10_5c_896140/CCORE/1631377206fa6f9751.1 CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209 /CONFIG/PARAMETERS/Vivado/PARAMETERS/amba/240} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name mult_b2c38bf0c7290d57699e4384f1b60d6970f0 LOC_INFO b5be8b6c-3686-4c62-b651-03674c8cdeb0-1 OBJECT_HANDLE b5be8b6c-3686-4c62-b651-03674c8cdeb0--1}: Race condition
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Module for CCORE 'mult' has been successfully synthesized (TD-4)
+# Info: Starting synthesis of module for CCORE 'modulo_sub'... (TD-2)
+# CU_DESIGN sid11 ADD {} {VERSION v1 SID sid11 BRANCH_SID sid9 BRANCH_STATE memories INCREMENTAL 0 STATE memories TRANSFORMING 0 SOLUTION_DIR /home/yl7897/.catapult/Cache/10_5c_896140/CCORE/1631377208f97489d1.3 CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209 /CONFIG/PARAMETERS/Vivado/PARAMETERS/amba/240} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name modulo_sub_4b9d4a8c3392ffaece13b91b879140226381 LOC_INFO 18b33518-3896-4a01-865c-03cb875e9fa5-1 OBJECT_HANDLE 18b33518-3896-4a01-865c-03cb875e9fa5--1}: Race condition
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Module for CCORE 'modulo_sub' has been successfully synthesized (TD-4)
+# Info: Starting synthesis of module for CCORE 'modulo_add'... (TD-2)
+# CU_DESIGN sid12 ADD {} {VERSION v1 SID sid12 BRANCH_SID sid9 BRANCH_STATE memories INCREMENTAL 0 STATE memories TRANSFORMING 0 SOLUTION_DIR /home/yl7897/.catapult/Cache/10_5c_896140/CCORE/1631377210c418ac51.4 CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209 /CONFIG/PARAMETERS/Vivado/PARAMETERS/amba/240} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8 LOC_INFO a10298ef-67c5-4ba3-8506-eac2494d386c-1 OBJECT_HANDLE a10298ef-67c5-4ba3-8506-eac2494d386c--1}: Race condition
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Module for CCORE 'modulo_add' has been successfully synthesized (TD-4)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 6.23 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 70, Real ops = 20, Vars = 31 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Design 'inPlaceNTT_DIF_precomp' contains '20' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 0.29 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 86, Real ops = 20, Vars = 35 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/src/ntt.cpp(60): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' (9 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(57): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(55): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(49): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/main' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(49): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/core:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(49): Prescheduled SEQUENTIAL '/inPlaceNTT_DIF_precomp/core' (total length 123024 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 133268, Area (Datapath, Register, Total) = 13677.33, 0.00, 13677.33 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Final schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 133268, Area (Datapath, Register, Total) = 13677.33, 0.00, 13677.33 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 0.33 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 86, Real ops = 20, Vars = 35 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Global signal 'run:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(54): Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+# Global signal 'run:rsc.triosy' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWLEN' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWSIZE' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWBURST' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWLOCK' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWCACHE' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWPROT' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWQOS' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWREGION' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WLAST' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARLEN' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARSIZE' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARBURST' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARLOCK' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARCACHE' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARPROT' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARQOS' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARREGION' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RLAST' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(61): Creating buffer for wait controller for component 'vec:rsc' (SCHD-46)
+# Global signal 'vec:rsc.tr_write_done' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.s_tdone' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Global signal 'p:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
+# Global signal 'r:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Global signal 'r:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.AWID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWLEN' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWSIZE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWBURST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWLOCK' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWCACHE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWPROT' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWQOS' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWREGION' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WLAST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARLEN' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARSIZE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARBURST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARLOCK' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARCACHE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARPROT' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARQOS' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARREGION' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RLAST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(58): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Info: $PROJECT_HOME/src/ntt.cpp(58): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.tr_write_done' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.s_tdone' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWLEN' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWSIZE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWBURST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWLOCK' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWCACHE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWPROT' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWQOS' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWREGION' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WLAST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARLEN' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARSIZE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARBURST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARLOCK' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARCACHE' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARPROT' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARQOS' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARREGION' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RLAST' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RUSER' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(59): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Info: $PROJECT_HOME/src/ntt.cpp(59): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Global signal 'twiddle_h:rsc.tr_write_done' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.s_tdone' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'complete:rsc.AWADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.AWVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.AWREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.WDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.WSTRB' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.WVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.WREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.BRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.BVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.BREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.ARADDR' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.ARVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.ARREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.RDATA' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.RRESP' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.RVALID' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.RREADY' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.triosy' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle_h:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 5.51 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 2349, Real ops = 127, Vars = 1063 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 2.39 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 1224, Real ops = 190, Vars = 965 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 4.24 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 1207, Real ops = 169, Vars = 1125 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v6' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.vhdl
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.vhdl
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v6': elapsed time 12.12 seconds, memory usage 1511916kB, peak memory usage 1511916kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 1204, Real ops = 171, Vars = 960 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/inPlaceNTT_DIF_precomp.v6/.dut_inst_info.tcl ./Catapult/inPlaceNTT_DIF_precomp.v6/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/inPlaceNTT_DIF_precomp.v6/.dut_inst_info.tcl ./Catapult/inPlaceNTT_DIF_precomp.v6/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:45 on Sep 11,2021
+# vlog -work work /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v 
+# -- Compiling module ccs_axi4_lite_slave_insync
+# 
+# Top level modules:
+# 	ccs_axi4_lite_slave_insync
+# End time: 12:20:45 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:45 on Sep 11,2021
+# vlog -work work /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v 
+# -- Compiling module ccs_axi4_slave_mem
+# 
+# Top level modules:
+# 	ccs_axi4_slave_mem
+# End time: 12:20:45 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:45 on Sep 11,2021
+# vlog -work work /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v 
+# -- Compiling module ccs_axi4_lite_slave_indirect
+# 
+# Top level modules:
+# 	ccs_axi4_lite_slave_indirect
+# End time: 12:20:45 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:45 on Sep 11,2021
+# vlog -work work /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v 
+# -- Compiling module ccs_axi4_lite_slave_outsync
+# 
+# Top level modules:
+# 	ccs_axi4_lite_slave_outsync
+# End time: 12:20:45 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:45 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 12:20:45 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v 
+# -- Compiling module mgc_out_dreg_v2
+# 
+# Top level modules:
+# 	mgc_out_dreg_v2
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work work ../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v 
+# -- Compiling module mult_core_wait_dp
+# -- Compiling module mult_core
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work work ../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v 
+# -- Compiling module modulo_sub_core
+# -- Compiling module modulo_sub
+# 
+# Top level modules:
+# 	modulo_sub
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work work ../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v 
+# -- Compiling module modulo_add_core
+# -- Compiling module modulo_add
+# 
+# Top level modules:
+# 	modulo_add
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v 
+# -- Compiling module mgc_shift_l_v5
+# 
+# Top level modules:
+# 	mgc_shift_l_v5
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:20:46 on Sep 11,2021
+# vlog -work work rtl.v 
+# -- Compiling module inPlaceNTT_DIF_precomp_core_core_fsm
+# -- Compiling module inPlaceNTT_DIF_precomp_core_staller
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core
+# -- Compiling module inPlaceNTT_DIF_precomp
+# 
+# Top level modules:
+# 	inPlaceNTT_DIF_precomp
+# End time: 12:20:46 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 12:20:46 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# End time: 12:20:50 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/ntt.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt.cpp
+# Start time: 12:20:50 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:20:50 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 12:20:50 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:20:54 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 12:20:54 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:20:58 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 12:20:58 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
+#                  from scverify/mc_testbench.h:30,
+#                  from scverify/scverify_top.cpp:4:
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
+# scverify/scverify_top.cpp:707:30:   required from here
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
+#      mutable sc_event* m_posedge_event_p; // positive edge event if present.
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:740:23: warning:   'sc_dt::uint64 sc_core::sc_signal<sc_dt::sc_logic>::m_change_stamp' [-Wreorder]
+#      sc_dt::uint64     m_change_stamp;    // delta of last event
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
+#      sc_signal()
+#      ^
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 12:21:09 on Sep 11,2021, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 12:21:09 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:21:10 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/work" -L "./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:21:10 on Sep 11,2021
+# vopt "+acc=npr" -L ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/work -L ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '5 ns'
+# -- Loading module inPlaceNTT_DIF_precomp
+# -- Loading module inPlaceNTT_DIF_precomp_core
+# -- Loading module mult
+# -- Loading module mult_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2
+# -- Loading module mult_core_wait_dp
+# -- Loading module modulo_sub
+# -- Loading module modulo_sub_core
+# -- Loading module modulo_add
+# -- Loading module modulo_add_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5
+# -- Loading module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Loading module ccs_axi4_lite_slave_insync
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci
+# -- Loading module ccs_axi4_slave_mem
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsci
+# -- Loading module ccs_axi4_lite_slave_indirect
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsci
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Loading module ccs_axi4_lite_slave_outsync
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_staller
+# -- Loading module inPlaceNTT_DIF_precomp_core_core_fsm
+# Optimizing 53 design-units (inlining 0/66 module instances, 0/0 UDP instances):
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core(fast)
+# -- Optimizing module ccs_axi4_slave_mem(fast)
+# -- Optimizing module ccs_axi4_lite_slave_indirect(fast)
+# -- Optimizing module ccs_axi4_lite_slave_indirect(fast__1)
+# -- Optimizing module ccs_axi4_lite_slave_outsync(fast)
+# -- Optimizing module ccs_axi4_lite_slave_insync(fast)
+# -- Optimizing module mult_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_core_fsm(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_dp(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v6/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast)
+# -- Optimizing module modulo_add_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp(fast)
+# -- Optimizing module mult(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsci(fast)
+# -- Optimizing module modulo_sub_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_vec_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_staller(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp(fast)
+# -- Optimizing module mult_core_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_twiddle_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsci_p_rsc_wait_ctrl(fast)
+# -- Optimizing module modulo_sub(fast)
+# -- Optimizing module modulo_add(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj(fast)
+# Optimized design name is scverify_top_opt
+# End time: 12:21:10 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+go compile
+solution library remove *
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v7' at state 'compile' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/CDesignChecker/design_checker.sh'
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+go libraries
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 0.45 seconds, memory usage 1511396kB, peak memory usage 1577452kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+go assembly
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 0.51 seconds, memory usage 1519000kB, peak memory usage 1577452kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 105, Real ops = 34, Vars = 51 (SOL-21)
+# Error: internal assertion failed (!(is_ac_sync() ^ (d_module_type==selmod_ac_sync))) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ifsyn/sif_tcl_mem_alloc.cxx line 1449 (ASSERT-1)
+# Error: internal assertion failed (!(is_ac_sync() ^ (d_module_type==selmod_ac_sync))) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ifsyn/sif_tcl_mem_alloc.cxx line 1449 (ASSERT-1)
+# Error: internal assertion failed (!(is_ac_sync() ^ (d_module_type==selmod_ac_sync))) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ifsyn/sif_tcl_mem_alloc.cxx line 1449 (ASSERT-1)
+# Error: internal assertion failed (!(is_ac_sync() ^ (d_module_type==selmod_ac_sync))) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ifsyn/sif_tcl_mem_alloc.cxx line 1449 (ASSERT-1)
+directive set /inPlaceNTT_DIF_precomp/run:rsc -MAP_TO_MODULE ccs_ioport.ccs_sync_in_wait
+# /inPlaceNTT_DIF_precomp/run:rsc/MAP_TO_MODULE ccs_ioport.ccs_sync_in_wait
+directive set /inPlaceNTT_DIF_precomp/p:rsc -MAP_TO_MODULE ccs_ioport.ccs_in
+# /inPlaceNTT_DIF_precomp/p:rsc/MAP_TO_MODULE ccs_ioport.ccs_in
+directive set /inPlaceNTT_DIF_precomp/p:rsc -PACKING_MODE sidebyside
+# /inPlaceNTT_DIF_precomp/p:rsc/PACKING_MODE sidebyside
+directive set /inPlaceNTT_DIF_precomp/r:rsc -MAP_TO_MODULE ccs_ioport.ccs_in
+# /inPlaceNTT_DIF_precomp/r:rsc/MAP_TO_MODULE ccs_ioport.ccs_in
+directive set /inPlaceNTT_DIF_precomp/r:rsc -PACKING_MODE sidebyside
+# /inPlaceNTT_DIF_precomp/r:rsc/PACKING_MODE sidebyside
+directive set /inPlaceNTT_DIF_precomp/complete:rsc -MAP_TO_MODULE ccs_ioport.ccs_sync_out_wait
+# /inPlaceNTT_DIF_precomp/complete:rsc/MAP_TO_MODULE ccs_ioport.ccs_sync_out_wait
+go extract
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(60): Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(57): Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(55): Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(49): Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 0.10 seconds, memory usage 1519000kB, peak memory usage 1577452kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 118, Real ops = 34, Vars = 62 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(12): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(25): I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/x:rsc' (from var: x) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y_:rsc' (from var: y_) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(49): Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(49): I/O-Port Resource '/inPlaceNTT_DIF_precomp/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(49): I/O-Port Resource '/inPlaceNTT_DIF_precomp/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(50): Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(50): Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 0.97 seconds, memory usage 1519000kB, peak memory usage 1577452kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 121, Real ops = 34, Vars = 59 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Info: Starting synthesis of module for CCORE 'mult'... (TD-2)
+# CU_DESIGN sid14 ADD {} {VERSION v1 SID sid14 BRANCH_SID sid13 BRANCH_STATE memories INCREMENTAL 0 STATE memories TRANSFORMING 0 SOLUTION_DIR /home/yl7897/.catapult/Cache/10_5c_896140/CCORE/1631377679c1ed64b1.5 CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name mult_59151e092748153366e044431725dce770ca LOC_INFO a7f18d29-1b1f-4e9f-8b33-d835ad42a28d-1 OBJECT_HANDLE a7f18d29-1b1f-4e9f-8b33-d835ad42a28d--1}: Race condition
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Module for CCORE 'mult' has been successfully synthesized (TD-4)
+# Info: Starting synthesis of module for CCORE 'modulo_sub'... (TD-2)
+# CU_DESIGN sid15 ADD {} {VERSION v1 SID sid15 BRANCH_SID sid13 BRANCH_STATE memories INCREMENTAL 0 STATE memories TRANSFORMING 0 SOLUTION_DIR /home/yl7897/.catapult/Cache/10_5c_896140/CCORE/1631377681c3fc2541.6 CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name modulo_sub_20a309095b5a6fe8364d291159fdb443635b LOC_INFO f36b3c20-5329-4374-b199-bd7e35f865b3-1 OBJECT_HANDLE f36b3c20-5329-4374-b199-bd7e35f865b3--1}: Race condition
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Module for CCORE 'modulo_sub' has been successfully synthesized (TD-4)
+# Info: Starting synthesis of module for CCORE 'modulo_add'... (TD-2)
+# CU_DESIGN sid16 ADD {} {VERSION v1 SID sid16 BRANCH_SID sid13 BRANCH_STATE memories INCREMENTAL 0 STATE memories TRANSFORMING 0 SOLUTION_DIR /home/yl7897/.catapult/Cache/10_5c_896140/CCORE/1631377682ac89c511.7 CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/-3/PARAMETERS/xcvu13p-flga2577-3-e/PARAMETERS/mgc_Xilinx-VIRTEX-uplus-3_beh/203 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-uplus/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2 LOC_INFO 36e8d96a-a96c-4af3-b2f3-eec8f9872faf-1 OBJECT_HANDLE 36e8d96a-a96c-4af3-b2f3-eec8f9872faf--1}: Race condition
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Module for CCORE 'modulo_add' has been successfully synthesized (TD-4)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 7.03 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 70, Real ops = 20, Vars = 31 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Design 'inPlaceNTT_DIF_precomp' contains '20' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 0.32 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 86, Real ops = 20, Vars = 35 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/src/ntt.cpp(60): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' (9 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(57): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(55): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(49): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/main' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(49): Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(49): Prescheduled SEQUENTIAL '/inPlaceNTT_DIF_precomp/core' (total length 123023 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 133267, Area (Datapath, Register, Total) = 7857.33, 0.00, 7857.33 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Final schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 133267, Area (Datapath, Register, Total) = 7857.33, 0.00, 7857.33 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 0.30 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 86, Real ops = 20, Vars = 35 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Global signal 'run:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Global signal 'run:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(54): Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+# Global signal 'vec:rsc.q' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.radr' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.we' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.d' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.wadr' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(61): Creating buffer for wait controller for component 'vec:rsc' (SCHD-46)
+# Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
+# Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.q' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.radr' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(58): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Global signal 'twiddle_h:rsc.q' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.radr' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(59): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Global signal 'complete:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'complete:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle_h:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/src/ntt.cpp(49): Input port 'r:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 3.78 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1457, Real ops = 95, Vars = 374 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 1.70 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 550, Real ops = 163, Vars = 307 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 2.24 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 537, Real ops = 142, Vars = 451 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v7' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.vhdl
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.vhdl
+# Add dependent file: ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.vhdl
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.v
+# Add dependent file: ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v7': elapsed time 8.36 seconds, memory usage 1584536kB, peak memory usage 1584536kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 534, Real ops = 144, Vars = 303 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/inPlaceNTT_DIF_precomp.v7/.dut_inst_info.tcl ./Catapult/inPlaceNTT_DIF_precomp.v7/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/inPlaceNTT_DIF_precomp.v7/.dut_inst_info.tcl ./Catapult/inPlaceNTT_DIF_precomp.v7/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v 
+# -- Compiling module ccs_sync_in_wait_v1
+# 
+# Top level modules:
+# 	ccs_sync_in_wait_v1
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v 
+# -- Compiling module ccs_sync_out_wait_v1
+# 
+# Top level modules:
+# 	ccs_sync_out_wait_v1
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v 
+# -- Compiling module mgc_out_dreg_v2
+# 
+# Top level modules:
+# 	mgc_out_dreg_v2
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work work ../td_ccore_solutions/mult_59151e092748153366e044431725dce770ca_0/rtl.v 
+# -- Compiling module mult_core_wait_dp
+# -- Compiling module mult_core
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work work ../td_ccore_solutions/modulo_sub_20a309095b5a6fe8364d291159fdb443635b_0/rtl.v 
+# -- Compiling module modulo_sub_core
+# -- Compiling module modulo_sub
+# 
+# Top level modules:
+# 	modulo_sub
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work work ../td_ccore_solutions/modulo_add_cc63cafac97d74f1eed42d0ce4f58b4f60d2_0/rtl.v 
+# -- Compiling module modulo_add_core
+# -- Compiling module modulo_add
+# 
+# Top level modules:
+# 	modulo_add
+# End time: 12:29:56 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:56 on Sep 11,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v 
+# -- Compiling module mgc_shift_l_v5
+# 
+# Top level modules:
+# 	mgc_shift_l_v5
+# End time: 12:29:57 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:29:57 on Sep 11,2021
+# vlog -work work rtl.v 
+# -- Compiling module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_17_10_32_1024_1024_32_1_gen
+# -- Compiling module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_16_10_32_1024_1024_32_1_gen
+# -- Compiling module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_10_32_1024_1024_32_1_gen
+# -- Compiling module inPlaceNTT_DIF_precomp_core_core_fsm
+# -- Compiling module inPlaceNTT_DIF_precomp_core_staller
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_1
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core
+# -- Compiling module inPlaceNTT_DIF_precomp
+# 
+# Top level modules:
+# 	inPlaceNTT_DIF_precomp
+# End time: 12:29:57 on Sep 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 12:29:57 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# End time: 12:30:00 on Sep 11,2021, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/ntt.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt.cpp
+# Start time: 12:30:00 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:30:01 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 12:30:01 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:30:05 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 12:30:05 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:30:09 on Sep 11,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 12:30:09 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
+#                  from scverify/mc_testbench.h:30,
+#                  from scverify/scverify_top.cpp:4:
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
+# scverify/scverify_top.cpp:246:30:   required from here
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
+#      mutable sc_event* m_posedge_event_p; // positive edge event if present.
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:740:23: warning:   'sc_dt::uint64 sc_core::sc_signal<sc_dt::sc_logic>::m_change_stamp' [-Wreorder]
+#      sc_dt::uint64     m_change_stamp;    // delta of last event
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
+#      sc_signal()
+#      ^
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 12:30:18 on Sep 11,2021, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 12:30:18 on Sep 11,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 12:30:19 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 12:30:19 on Sep 11,2021
+# vopt "+acc=npr" -L ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls -L ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '5 ns'
+# -- Loading module inPlaceNTT_DIF_precomp
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_16_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_17_10_32_1024_1024_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module mult
+# -- Loading module mult_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2
+# -- Loading module mult_core_wait_dp
+# -- Loading module modulo_sub
+# -- Loading module modulo_sub_core
+# -- Loading module modulo_add
+# -- Loading module modulo_add_core
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Loading module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_staller
+# -- Loading module inPlaceNTT_DIF_precomp_core_core_fsm
+# Optimizing 49 design-units (inlining 0/61 module instances, 0/0 UDP instances):
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core(fast)
+# -- Optimizing module mult_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_core_fsm(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast)
+# -- Optimizing module modulo_add_core(fast)
+# -- Optimizing module mult(fast)
+# -- Optimizing module modulo_sub_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_10_32_1024_1024_32_1_gen(fast)
+# -- Optimizing module mult_core_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_staller(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl(fast)
+# -- Optimizing module modulo_sub(fast)
+# -- Optimizing module modulo_add(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_16_10_32_1024_1024_32_1_gen(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_17_10_32_1024_1024_32_1_gen(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module ./Catapult/inPlaceNTT_DIF_precomp.v7/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast)
+# Optimized design name is scverify_top_opt
+# End time: 12:30:20 on Sep 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# make: Nothing to be done for `build'.
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+project save
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult.ccs'. (PRJ-5)

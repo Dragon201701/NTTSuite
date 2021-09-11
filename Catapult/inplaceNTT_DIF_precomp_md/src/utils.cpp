@@ -34,14 +34,14 @@ DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE *result){
  * @param debug	Whether to print debug information (will run entire vector)
  * @return 	Whether the two vectors are element-wise equivalent
  */
-bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug){
+unsigned compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug){
 
 	bool comp = true;
+	unsigned       error_count = 0;
 	for(DATA_TYPE i = 0; i < n; i++){
-
 		if(vec1[i] != vec2[i]){
 			comp = false;
-
+			error_count++;
 			if(debug){
 				std::cout << "(vec1[" << i << "] : " << vec1[i] << ")";
 				std::cout << "!= (vec2[" << i << "] : " << vec2[i] << ")";
@@ -57,7 +57,7 @@ bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug){
 		std::cout<<"Test Failed"<<std::endl;
 	}
 
-	return comp;
+	return error_count;
 }
 
 /**
@@ -106,18 +106,5 @@ void printVec(DATA_TYPE *vec, DATA_TYPE n){
 	}
 	std::cout << "]" << std::endl;
 }
-/**
- * Generate an array of arbitrary length containing random positive integers 
- *
- * @param n	The length of the array
- * @param max	The maximum value for an array element [Default: RAND_MAX]
- */
-DATA_TYPE *randVec(DATA_TYPE max){
-	DATA_TYPE *vec;
-	vec = (DATA_TYPE *)malloc(VECTOR_SIZE*sizeof(DATA_TYPE));
-	srand(time(0));
-	for(DATA_TYPE i = 0; i < VECTOR_SIZE; i++){
-		vec[i] = rand()%(max + 1);
-	}
-	return vec;
-}
+
+
