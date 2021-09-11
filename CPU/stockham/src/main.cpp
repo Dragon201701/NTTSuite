@@ -2,6 +2,16 @@
 
 using namespace std;
 
+void randVec(DATA_TYPE * vec, DATA_TYPE * vec2, DATA_TYPE * vec3, DATA_TYPE max){
+	for(unsigned i = 0; i < VECTOR_SIZE; i++){
+		DATA_TYPE value = rand() % (max + 1);
+		value = i;
+		vec[i] = value;
+		vec2[i] = value;
+		vec3[i] = value;
+	}
+}
+
 /**
  * Perform a basic NTT on an input vector and return the result
  *
@@ -99,23 +109,40 @@ int main(int argc, char *argv[]){
  	DATA_TYPE p = (479  << 21) + 1;
   	DATA_TYPE r = 3;
 
-	DATA_TYPE vec[VECTOR_SIZE], vec2[VECTOR_SIZE];
-	DATA_TYPE *result1, *result2;
+	// DATA_TYPE vec[VECTOR_SIZE], vec2[VECTOR_SIZE];
+	// DATA_TYPE *result1, *result2;
 
-	for (int i = 0; i < VECTOR_SIZE; i++){
-		vec[i] = i;
-		vec2[i] = i;
-	}
-	result2 = naiveNTT(vec2, n, p, r);
-	for(int i=0;i<100;i++){
-		result1 = stockham_dit(vec, n,  p, r, true);
-		free(result1);
-	}
-	//printVec(result, VECTOR_SIZE);
+	// for (int i = 0; i < VECTOR_SIZE; i++){
+	// 	vec[i] = i;
+	// 	vec2[i] = i;
+	// }
+	// result2 = naiveNTT(vec2, n, p, r);
+	// for(int i=0;i<100;i++){
+	// 	result1 = stockham_dit(vec, n,  p, r);
+	// 	free(result1);
+	// }
+	// printVec(result1, VECTOR_SIZE);
 
+	DATA_TYPE vec[VECTOR_SIZE], vec2[VECTOR_SIZE], vec3[VECTOR_SIZE];
+	randVec(vec, vec2, vec3, 1000);
+	DATA_TYPE *sdif_result, *sdit_result, *naive_result;
+
+	sdif_result = stockham_dif(vec, n, p, r, true);
+	sdit_result = stockham_dif(vec2, n, p, r, true);
+	naive_result = naiveNTT(vec3, n, p, r);
+
+	bool comp1 = compVec(sdif_result, naive_result, VECTOR_SIZE, true);
+	if (comp1) {
+		cout << "Stockham DIF Test Passed!" << endl;
+	}
+	bool comp2 = compVec(sdit_result, naive_result, VECTOR_SIZE, true);
+	if (comp2) {
+		cout << "Stockham DIT Test Passed!" << endl;
+	}
 	//cout<<"Compare result: "<<compVec(result1, result2, n, true);
-	//free(result1);
-	//free(result2);
+//	free(sdif_result);
+//	free(sdit_result);
+	free(naive_result);
 /*	
 	//DATA_TYPE *vec = randVec(n,10);
 

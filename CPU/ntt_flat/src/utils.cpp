@@ -13,18 +13,15 @@
  * @param n   The length of the vector, must be a power of two
  * @return    The bit reversed vector
  */
-DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE n){
+void bit_reverse(DATA_TYPE *vec, DATA_TYPE n, DATA_TYPE *result){
 
 	DATA_TYPE num_bits = log2(n);
 
-	DATA_TYPE *result;
-	result = (DATA_TYPE *) malloc(n*sizeof(DATA_TYPE));
-
-	DATA_TYPE reverse_num;
-	for(DATA_TYPE i = 0; i < n; i++){
+	unsigned reverse_num;
+	for(unsigned i = 0; i < n; i++){
 
 		reverse_num = 0;
-		for(DATA_TYPE j = 0; j < num_bits; j++){
+		for(unsigned j = 0; j < num_bits; j++){
 
 			reverse_num = reverse_num << 1;
 			if(i & (1 << j)){
@@ -35,8 +32,6 @@ DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE n){
 		result[reverse_num] = vec[i];
 
 	}
-
-	return result;
 }
 
 /**
@@ -48,7 +43,7 @@ DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE n){
  * @param debug	Whether to print debug information (will run entire vector)
  * @return 	Whether the two vectors are element-wise equivalent
  */
-bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, DATA_TYPE n, bool debug){
+bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, unsigned n, bool debug){
 
 	bool comp = true;
 	for(DATA_TYPE i = 0; i < n; i++){
@@ -64,6 +59,11 @@ bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, DATA_TYPE n, bool debug){
 				break;
 			}
 		}
+	}
+	if(comp){
+		std::cout<<"Test Passed"<<std::endl;
+	} else{
+		std::cout<<"Test Failed"<<std::endl;
 	}
 
 	return comp;
@@ -85,15 +85,16 @@ DATA_TYPE modExp(DATA_TYPE base, DATA_TYPE exp, DATA_TYPE m){
 
 		if(exp % 2){
 
-			result = modulo(result*base, m);
+			result = ((DATA_TYPE_TMP)result * base) % m;
 
 		}
 
 		exp = exp >> 1;
-		base = modulo(base*base,m);
+		base = ((DATA_TYPE_TMP)base * base) % m;
 	}
 
 	return result;
+
 }
 
 /**
@@ -103,8 +104,8 @@ DATA_TYPE modExp(DATA_TYPE base, DATA_TYPE exp, DATA_TYPE m){
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-DATA_TYPE modulo(int64_t base, int64_t m){
-	int64_t result = base % m;
+DATA_TYPE modulo(DATA_TYPE_SIGNED base, DATA_TYPE_SIGNED m){
+	DATA_TYPE_SIGNED result = base % m;
 	//return result;
 	//return base - m*floor(base/m);
 	return result >= 0? result : result + m;
@@ -126,24 +127,3 @@ void printVec(DATA_TYPE *vec, DATA_TYPE n){
 	}
 	std::cout << "]" << std::endl;
 }
-
-// /**
-//  * Generate an array of arbitrary length containing random positive integers 
-//  *
-//  * @param n	The length of the array
-//  * @param max	The maximum value for an array element [Default: RAND_MAX]
-//  */
-// DATA_TYPE *randVec(DATA_TYPE n, DATA_TYPE max){
-
-// 	DATA_TYPE *vec;
-// 	vec = (DATA_TYPE *)malloc(n*sizeof(DATA_TYPE));
-
-// 	srand(time(0));
-// 	for(DATA_TYPE i = 0; i < n; i++){
-
-// 		vec[i] = rand()%(max + 1);
-
-// 	}
-
-// 	return vec;
-// }

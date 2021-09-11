@@ -58,7 +58,7 @@ DATA_TYPE* stockham_dit(DATA_TYPE * vec, DATA_TYPE n, DATA_TYPE p, DATA_TYPE g, 
     DATA_TYPE * xt = vec;
     DATA_TYPE * yt = (DATA_TYPE*)calloc(n, sizeof(DATA_TYPE));
 
-    cout<<"Stockham NTT\nt: "<<t<<endl;
+//    cout<<"Stockham NTT\nt: "<<t<<endl;
     DATA_TYPE * twiddle = (DATA_TYPE*)malloc(n * sizeof(DATA_TYPE));
     DATA_TYPE w0 = modExp(g, (p - 1) / n, p);
     DATA_TYPE witer = 1;
@@ -124,7 +124,7 @@ DATA_TYPE* stockham_dif(DATA_TYPE * vec, DATA_TYPE n, DATA_TYPE p, DATA_TYPE g, 
     DATA_TYPE * xt = vec;
     DATA_TYPE * yt = (DATA_TYPE*)calloc(n, sizeof(DATA_TYPE));
 
-    cout<<"Stockham NTT\nt: "<<t<<endl;
+//    cout<<"Stockham NTT\nt: "<<t<<endl;
     DATA_TYPE * twiddle = (DATA_TYPE*)malloc(n * sizeof(DATA_TYPE));
     DATA_TYPE w0 = modExp(g, (p - 1) / n, p);
     DATA_TYPE witer = 1;
