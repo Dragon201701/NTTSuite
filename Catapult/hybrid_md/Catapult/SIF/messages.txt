@@ -1,0 +1,19 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v4': elapsed time 3.78 seconds, memory usage 5869560kB, peak memory usage 5869560kB (SOL-9)
+solution.v4
+# Info: Branching solution 'solution.v4' at state 'new' (PRJ-2)
+Source file analysis completed (CIN-68)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/hybird/src/ntt.cpp /home/jd4691/research/NTT_CPU/hybird/src/utils.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'hybrid' (CIN-6)
+go libraries
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/hybird/src/utils.cpp" (CRD-1)

@@ -1,0 +1,14 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n8088[label="n8088 : DOPER\n 26cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n3666[label="n3666 : DOPER\n 24cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n7550[label="n7550 : DOPER\n 25cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n4204[label="n4204 : DOPER\n 24cy+4\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n8088 : 0x7fdd8cd37540 butterFly#1:write_mem(xx:rsc(0)(0).@)#1\ln3666 : 0x7fddb4706d50 butterFly:write_mem(xx:rsc(0)(0).@)\ln7550 : 0x7fdd84b75450 butterFly#1:write_mem(xx:rsc(0)(0).@)\ln4204 : 0x7fdc8c9f0520 butterFly:write_mem(xx:rsc(0)(0).@)#1\l",shape=none];
+  n8088 -> n3666[label="262 : 0",color=red, style=bold];
+  n7550 -> n8088[label="258 : 0",color=blue];
+  n4204 -> n7550[label="258 : 0",color=blue];
+  n3666 -> n4204[label="258 : 0",color=blue];
+}
+

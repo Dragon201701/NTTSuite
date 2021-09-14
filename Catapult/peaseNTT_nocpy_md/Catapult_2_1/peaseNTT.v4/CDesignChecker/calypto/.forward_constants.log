@@ -1,0 +1,135 @@
+-- FORWARD_CONSTANTS #  1 ---------------------------------------------------
+180 always-same-constant, 20 always-constant, 4 sometime-constant
+10 applied via ports, 0 discarded via ports 99 applied via edges, 0 discarded via edges
+UFT_STATS: -- FORWARD_CONSTANTS_#1 --
+         402 nodes
+        1248 ports
+         420 edges
+         157 miter edges
+         263 normal edges
+        2879 max slots
+        2528 peak slots
+         244 total miters
+UFT_STATS: ------------------------------------------
+*** Statistics for __top__slec____0__ ***********
+      675 gates
+       44 flops
+NODE_STATS: -----Node Distribution Statistics----------------
+NODE_STATS:         F        UF       UFT
+NODE_STATS:         6         6         4 CPL_HIER
+NODE_STATS:        70        70         0 CPL_BBOX
+NODE_STATS:        35        35         0 CPL_BUF
+NODE_STATS:        44        44        37 CPL_FF
+NODE_STATS:        20        20        12 CPL_ADD
+NODE_STATS:        26        26        18 CPL_SUB
+NODE_STATS:        12        12        12 CPL_MULT
+NODE_STATS:         8         8         4 CPL_GT
+NODE_STATS:        24        24        20 CPL_GE
+NODE_STATS:        10        10         5 CPL_LT
+NODE_STATS:        24        24        18 CPL_LE
+NODE_STATS:        42        42        32 CPL_NOT
+NODE_STATS:         8         8         3 CPL_AND
+NODE_STATS:         8         8         2 CPL_LOR
+NODE_STATS:        57        57        39 CPL_LAND
+NODE_STATS:         9         9         1 CPL_EQ
+NODE_STATS:        12        12         7 CPL_LASFT
+NODE_STATS:         4         4         4 CPL_RASFT
+NODE_STATS:        60        60        40 CPL_TYPE
+NODE_STATS:       127       127        62 CPL_CONST
+NODE_STATS:        89        89        64 CPL_MUX
+NODE_STATS:        16        16        16 CPL_MEM_READ
+NODE_STATS:         8         8         2 CPL_MEM_WRITE
+NODE_STATS: -------------------------------------------------
+*************************************************
+-----------------------------------------------------------------------------
+
+-- FORWARD_CONSTANTS #  2 ---------------------------------------------------
+0 always-same-constant, 0 always-constant, 0 sometime-constant
+0 applied via ports, 0 discarded via ports 0 applied via edges, 0 discarded via edges
+UFT_STATS: -- FORWARD_CONSTANTS_#2 --
+           0 nodes
+         344 ports
+         322 edges
+         171 miter edges
+         151 normal edges
+        3486 max slots
+        2528 peak slots
+         395 total miters
+UFT_STATS: ------------------------------------------
+*** Statistics for __top__slec____0__ ***********
+      675 gates
+       44 flops
+NODE_STATS: -----Node Distribution Statistics----------------
+NODE_STATS:         F        UF       UFT
+NODE_STATS:         6         6         0 CPL_HIER
+NODE_STATS:        70        70         0 CPL_BBOX
+NODE_STATS:        35        35         0 CPL_BUF
+NODE_STATS:        44        44         0 CPL_FF
+NODE_STATS:        20        20         0 CPL_ADD
+NODE_STATS:        26        26         0 CPL_SUB
+NODE_STATS:        12        12         0 CPL_MULT
+NODE_STATS:         8         8         0 CPL_GT
+NODE_STATS:        24        24         0 CPL_GE
+NODE_STATS:        10        10         0 CPL_LT
+NODE_STATS:        24        24         0 CPL_LE
+NODE_STATS:        42        42         0 CPL_NOT
+NODE_STATS:         8         8         0 CPL_AND
+NODE_STATS:         8         8         0 CPL_LOR
+NODE_STATS:        57        57         0 CPL_LAND
+NODE_STATS:         9         9         0 CPL_EQ
+NODE_STATS:        12        12         0 CPL_LASFT
+NODE_STATS:         4         4         0 CPL_RASFT
+NODE_STATS:        60        60         0 CPL_TYPE
+NODE_STATS:       127       127         0 CPL_CONST
+NODE_STATS:        89        89         0 CPL_MUX
+NODE_STATS:        16        16         0 CPL_MEM_READ
+NODE_STATS:         8         8         0 CPL_MEM_WRITE
+NODE_STATS: -------------------------------------------------
+*************************************************
+-----------------------------------------------------------------------------
+
+-- FORWARD_CONSTANTS #  3 ---------------------------------------------------
+0 always-same-constant, 0 always-constant, 0 sometime-constant
+0 applied via ports, 0 discarded via ports 579 applied via edges, 0 discarded via edges
+UFT_STATS: -- FORWARD_CONSTANTS_#3 --
+         406 nodes
+        1389 ports
+         669 edges
+         172 miter edges
+         497 normal edges
+        5323 max slots
+        2528 peak slots
+         399 total miters
+UFT_STATS: ------------------------------------------
+*** Statistics for __top__slec____0__ ***********
+      675 gates
+       44 flops
+NODE_STATS: -----Node Distribution Statistics----------------
+NODE_STATS:         F        UF       UFT
+NODE_STATS:         6         6         4 CPL_HIER
+NODE_STATS:        70        70         0 CPL_BBOX
+NODE_STATS:        35        35         0 CPL_BUF
+NODE_STATS:        44        44         2 CPL_FF
+NODE_STATS:        20        20        20 CPL_ADD
+NODE_STATS:        26        26        22 CPL_SUB
+NODE_STATS:        12        12        12 CPL_MULT
+NODE_STATS:         8         8         8 CPL_GT
+NODE_STATS:        24        24        20 CPL_GE
+NODE_STATS:        10        10         8 CPL_LT
+NODE_STATS:        24        24        18 CPL_LE
+NODE_STATS:        42        42        32 CPL_NOT
+NODE_STATS:         8         8         4 CPL_AND
+NODE_STATS:         8         8         7 CPL_LOR
+NODE_STATS:        57        57        40 CPL_LAND
+NODE_STATS:         9         9         8 CPL_EQ
+NODE_STATS:        12        12         8 CPL_LASFT
+NODE_STATS:         4         4         4 CPL_RASFT
+NODE_STATS:        60        60        56 CPL_TYPE
+NODE_STATS:       127       127        30 CPL_CONST
+NODE_STATS:        89        89        79 CPL_MUX
+NODE_STATS:        16        16        16 CPL_MEM_READ
+NODE_STATS:         8         8         8 CPL_MEM_WRITE
+NODE_STATS: -------------------------------------------------
+*************************************************
+-----------------------------------------------------------------------------
+

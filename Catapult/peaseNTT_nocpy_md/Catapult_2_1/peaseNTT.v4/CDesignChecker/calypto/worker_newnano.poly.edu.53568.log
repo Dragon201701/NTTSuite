@@ -1,0 +1,317 @@
+[00:00:23] /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/worker_bootstrap started with ID newnano.poly.edu.53568
+[00:00:23] Trying to connect to 128.238.147.29:45928
+[00:00:23] Connected to the master
+[00:00:23] Sending REQ_SET_WORKER_ID + newnano.poly.edu.53568
+[00:00:23] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_2
+[00:00:23] Master issued REQ_EXEC.  Forked PID 53572 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_2/.snapshot_72.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_2/.cex_57.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:23] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_2/.stdout_6
+[00:00:23] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_2/.stdout_6_err
+[00:00:23] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:24] Child process 53572 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:25] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_3
+[00:00:25] Master issued REQ_EXEC.  Forked PID 53711 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_3/.snapshot_234.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_3/.cex_117.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:25] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_3/.stdout_13
+[00:00:25] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_3/.stdout_13_err
+[00:00:25] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:26] Child process 53711 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:27] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_5
+[00:00:27] Master issued REQ_EXEC.  Forked PID 53913 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_5/.snapshot_487.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_5/.cex_207.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:27] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_5/.stdout_23
+[00:00:27] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_5/.stdout_23_err
+[00:00:27] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:28] Child process 53913 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:29] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_6
+[00:00:29] Master issued REQ_EXEC.  Forked PID 54508 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_6/.snapshot_649.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_6/.cex_267.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:29] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_6/.stdout_30
+[00:00:29] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_6/.stdout_30_err
+[00:00:29] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:30] Child process 54508 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:31] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_7
+[00:00:31] Master issued REQ_EXEC.  Forked PID 54875 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_7/.snapshot_811.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_7/.cex_327.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:31] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_7/.stdout_37
+[00:00:31] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_7/.stdout_37_err
+[00:00:31] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:32] Child process 54875 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:33] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_8
+[00:00:33] Master issued REQ_EXEC.  Forked PID 55433 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_8/.snapshot_973.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_8/.cex_387.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:33] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_8/.stdout_44
+[00:00:33] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_8/.stdout_44_err
+[00:00:33] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:34] Child process 55433 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:34] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_9
+[00:00:34] Master issued REQ_EXEC.  Forked PID 55703 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_9/.snapshot_1135.aig ; bmc3 -T 0 -C 0 -F 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_9/.cex_446.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:34] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_9/.stdout_51
+[00:00:34] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_9/.stdout_51_err
+[00:00:34] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:35] Child process 55703 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:36] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_10
+[00:00:36] Master issued REQ_EXEC.  Forked PID 55746 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_10/.snapshot_1368.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_10/.cex_537.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:36] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_10/.stdout_59
+[00:00:36] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_10/.stdout_59_err
+[00:00:36] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:37] Child process 55746 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:39] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_13
+[00:00:39] Master issued REQ_EXEC.  Forked PID 55847 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_13/.snapshot_1712.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_13/.cex_657.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:39] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_13/.stdout_72
+[00:00:39] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_13/.stdout_72_err
+[00:00:39] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:40] Child process 55847 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:41] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_14
+[00:00:41] Master issued REQ_EXEC.  Forked PID 55887 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_14/.snapshot_1874.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_14/.cex_717.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:41] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_14/.stdout_79
+[00:00:41] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_14/.stdout_79_err
+[00:00:41] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:42] Child process 55887 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:42] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_15
+[00:00:42] Master issued REQ_EXEC.  Forked PID 55926 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_15/.snapshot_2036.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_15/.cex_777.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:42] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_15/.stdout_86
+[00:00:42] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_15/.stdout_86_err
+[00:00:42] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:43] Child process 55926 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:44] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_16
+[00:00:44] Master issued REQ_EXEC.  Forked PID 56013 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_16/.snapshot_2198.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_16/.cex_837.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:44] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_16/.stdout_93
+[00:00:44] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_16/.stdout_93_err
+[00:00:44] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:45] Child process 56013 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:45] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_17
+[00:00:45] Master issued REQ_EXEC.  Forked PID 56052 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_17/.snapshot_2360.aig ; bmc3 -T 0 -C 0 -F 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_17/.cex_896.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:45] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_17/.stdout_100
+[00:00:45] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_17/.stdout_100_err
+[00:00:45] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:46] Child process 56052 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:48] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_19
+[00:00:48] Master issued REQ_EXEC.  Forked PID 56125 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_19/.snapshot_2613.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_19/.cex_987.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:48] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_19/.stdout_110
+[00:00:48] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_19/.stdout_110_err
+[00:00:48] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:49] Child process 56125 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:50] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_21
+[00:00:50] Master issued REQ_EXEC.  Forked PID 56190 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_21/.snapshot_2866.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_21/.cex_1077.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:50] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_21/.stdout_120
+[00:00:50] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_21/.stdout_120_err
+[00:00:50] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:51] Child process 56190 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:52] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_22
+[00:00:52] Master issued REQ_EXEC.  Forked PID 56229 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_22/.snapshot_3099.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_22/.cex_1167.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:52] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_22/.stdout_128
+[00:00:52] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_22/.stdout_128_err
+[00:00:52] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:53] Child process 56229 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:53] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_23
+[00:00:53] Master issued REQ_EXEC.  Forked PID 56267 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_23/.snapshot_3261.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_23/.cex_1227.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:53] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_23/.stdout_135
+[00:00:53] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_23/.stdout_135_err
+[00:00:53] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:54] Child process 56267 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:55] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_24
+[00:00:55] Master issued REQ_EXEC.  Forked PID 56329 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_24/.snapshot_3423.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_24/.cex_1287.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:55] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_24/.stdout_142
+[00:00:55] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_24/.stdout_142_err
+[00:00:55] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:56] Child process 56329 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:00:57] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_25
+[00:00:57] Master issued REQ_EXEC.  Forked PID 56372 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_25/.snapshot_3656.aig ; bmc3 -T 0 -C 0 -F 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_25/.cex_1376.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:57] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_25/.stdout_150
+[00:00:57] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_0_wlindex_25/.stdout_150_err
+[00:00:57] --> time limit: 1 sec, mem limit: 4000 MB
+[00:00:57] Child process 56372 finished with return value 0 (signaled: 0, exited: 1, exit status 0)
+[00:00:58] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_2
+[00:00:58] Master issued REQ_EXEC.  Forked PID 56486 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_2/.snapshot_3909.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_2/.cex_1467.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:00:58] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_2/.stdout_160
+[00:00:58] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_2/.stdout_160_err
+[00:00:58] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:02] Child process 56486 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:03] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_3
+[00:01:03] Master issued REQ_EXEC.  Forked PID 56590 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_3/.snapshot_4071.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_3/.cex_1527.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:03] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_3/.stdout_167
+[00:01:03] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_3/.stdout_167_err
+[00:01:03] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:07] Child process 56590 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:08] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_5
+[00:01:08] Master issued REQ_EXEC.  Forked PID 56766 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_5/.snapshot_4233.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_5/.cex_1587.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:08] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_5/.stdout_174
+[00:01:08] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_5/.stdout_174_err
+[00:01:08] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:12] Child process 56766 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:13] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_6
+[00:01:13] Master issued REQ_EXEC.  Forked PID 56869 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_6/.snapshot_4395.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_6/.cex_1647.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:13] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_6/.stdout_181
+[00:01:13] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_6/.stdout_181_err
+[00:01:13] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:17] Child process 56869 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:18] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_7
+[00:01:18] Master issued REQ_EXEC.  Forked PID 56914 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_7/.snapshot_4628.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_7/.cex_1737.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:18] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_7/.stdout_189
+[00:01:18] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_7/.stdout_189_err
+[00:01:18] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:22] Child process 56914 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:23] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_8
+[00:01:23] Master issued REQ_EXEC.  Forked PID 56958 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_8/.snapshot_4790.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_8/.cex_1797.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:23] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_8/.stdout_196
+[00:01:23] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_8/.stdout_196_err
+[00:01:23] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:27] Child process 56958 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:28] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_9
+[00:01:28] Master issued REQ_EXEC.  Forked PID 57027 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_9/.snapshot_5023.aig ; bmc3 -T 0 -C 0 -F 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_9/.cex_1886.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:28] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_9/.stdout_204
+[00:01:28] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_9/.stdout_204_err
+[00:01:28] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:29] Child process 57027 finished with return value 0 (signaled: 0, exited: 1, exit status 0)
+[00:01:30] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_10
+[00:01:30] Master issued REQ_EXEC.  Forked PID 57089 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_10/.snapshot_5256.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_10/.cex_1977.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:30] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_10/.stdout_212
+[00:01:30] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_10/.stdout_212_err
+[00:01:30] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:34] Child process 57089 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:35] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_11
+[00:01:35] Master issued REQ_EXEC.  Forked PID 57157 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_11/.snapshot_5418.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_11/.cex_2037.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:35] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_11/.stdout_219
+[00:01:35] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_11/.stdout_219_err
+[00:01:35] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:39] Child process 57157 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:40] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_13
+[00:01:40] Master issued REQ_EXEC.  Forked PID 57202 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_13/.snapshot_5651.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_13/.cex_2127.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:40] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_13/.stdout_227
+[00:01:40] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_13/.stdout_227_err
+[00:01:40] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:44] Child process 57202 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:45] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_14
+[00:01:45] Master issued REQ_EXEC.  Forked PID 57248 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_14/.snapshot_5884.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_14/.cex_2217.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:45] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_14/.stdout_235
+[00:01:45] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_14/.stdout_235_err
+[00:01:45] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:49] Child process 57248 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:50] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_15
+[00:01:50] Master issued REQ_EXEC.  Forked PID 57290 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_15/.snapshot_6046.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_15/.cex_2277.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:50] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_15/.stdout_242
+[00:01:50] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_15/.stdout_242_err
+[00:01:50] --> time limit: 3 sec, mem limit: 4000 MB
+[00:01:53] Child process 57290 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:54] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_16
+[00:01:54] Master issued REQ_EXEC.  Forked PID 57335 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_16/.snapshot_6279.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_16/.cex_2367.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:54] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_16/.stdout_250
+[00:01:54] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_16/.stdout_250_err
+[00:01:54] --> time limit: 4 sec, mem limit: 4000 MB
+[00:01:58] Child process 57335 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:01:58] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_18
+[00:01:58] Master issued REQ_EXEC.  Forked PID 57405 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_18/.snapshot_6441.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_18/.cex_2427.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:01:58] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_18/.stdout_257
+[00:01:58] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_18/.stdout_257_err
+[00:01:58] --> time limit: 4 sec, mem limit: 4000 MB
+[00:02:02] Child process 57405 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:03] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_19
+[00:02:03] Master issued REQ_EXEC.  Forked PID 57460 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_19/.snapshot_6603.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_19/.cex_2487.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:03] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_19/.stdout_264
+[00:02:03] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_19/.stdout_264_err
+[00:02:03] --> time limit: 4 sec, mem limit: 4000 MB
+[00:02:07] Child process 57460 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:08] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_21
+[00:02:08] Master issued REQ_EXEC.  Forked PID 57503 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_21/.snapshot_6836.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_21/.cex_2577.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:08] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_21/.stdout_272
+[00:02:08] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_21/.stdout_272_err
+[00:02:08] --> time limit: 4 sec, mem limit: 4000 MB
+[00:02:12] Child process 57503 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:12] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_22
+[00:02:12] Master issued REQ_EXEC.  Forked PID 57546 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_22/.snapshot_7069.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_22/.cex_2667.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:12] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_22/.stdout_280
+[00:02:12] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_22/.stdout_280_err
+[00:02:12] --> time limit: 4 sec, mem limit: 4000 MB
+[00:02:16] Child process 57546 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:17] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_23
+[00:02:17] Master issued REQ_EXEC.  Forked PID 57585 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_23/.snapshot_7231.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_23/.cex_2727.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:17] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_23/.stdout_287
+[00:02:17] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_23/.stdout_287_err
+[00:02:17] --> time limit: 4 sec, mem limit: 4000 MB
+[00:02:21] Child process 57585 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:22] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_24
+[00:02:22] Master issued REQ_EXEC.  Forked PID 57627 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_24/.snapshot_7464.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_24/.cex_2817.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:22] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_24/.stdout_295
+[00:02:22] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_1_wlindex_24/.stdout_295_err
+[00:02:22] --> time limit: 4 sec, mem limit: 4000 MB
+[00:02:26] Child process 57627 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:27] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_2
+[00:02:27] Master issued REQ_EXEC.  Forked PID 57671 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_2/.snapshot_7697.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_2/.cex_2907.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:27] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_2/.stdout_303
+[00:02:27] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_2/.stdout_303_err
+[00:02:27] --> time limit: 16 sec, mem limit: 4000 MB
+[00:02:43] Child process 57671 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:02:44] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_3
+[00:02:44] Master issued REQ_EXEC.  Forked PID 57771 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_3/.snapshot_7930.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_3/.cex_2997.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:02:44] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_3/.stdout_311
+[00:02:44] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_3/.stdout_311_err
+[00:02:44] --> time limit: 16 sec, mem limit: 4000 MB
+[00:03:00] Child process 57771 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:03:01] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_5
+[00:03:01] Master issued REQ_EXEC.  Forked PID 57855 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_5/.snapshot_8092.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_5/.cex_3057.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:03:01] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_5/.stdout_318
+[00:03:01] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_5/.stdout_318_err
+[00:03:01] --> time limit: 16 sec, mem limit: 4000 MB
+[00:03:17] Child process 57855 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:03:18] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_6
+[00:03:18] Master issued REQ_EXEC.  Forked PID 57936 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_6/.snapshot_8325.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_6/.cex_3147.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:03:18] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_6/.stdout_326
+[00:03:18] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_6/.stdout_326_err
+[00:03:18] --> time limit: 16 sec, mem limit: 4000 MB
+[00:03:34] Child process 57936 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:03:35] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_7
+[00:03:35] Master issued REQ_EXEC.  Forked PID 58061 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_7/.snapshot_8558.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_7/.cex_3237.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:03:35] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_7/.stdout_334
+[00:03:35] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_7/.stdout_334_err
+[00:03:35] --> time limit: 16 sec, mem limit: 4000 MB
+[00:03:51] Child process 58061 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:03:52] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_8
+[00:03:52] Master issued REQ_EXEC.  Forked PID 58142 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_8/.snapshot_8791.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_8/.cex_3327.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:03:52] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_8/.stdout_342
+[00:03:52] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_8/.stdout_342_err
+[00:03:52] --> time limit: 16 sec, mem limit: 4000 MB
+[00:04:08] Child process 58142 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:04:09] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_10
+[00:04:09] Master issued REQ_EXEC.  Forked PID 58250 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_10/.snapshot_9024.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_10/.cex_3417.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:04:09] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_10/.stdout_350
+[00:04:09] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_10/.stdout_350_err
+[00:04:09] --> time limit: 16 sec, mem limit: 4000 MB
+[00:04:25] Child process 58250 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:04:26] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_11
+[00:04:26] Master issued REQ_EXEC.  Forked PID 58298 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_11/.snapshot_9257.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_11/.cex_3507.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:04:26] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_11/.stdout_358
+[00:04:26] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_11/.stdout_358_err
+[00:04:26] --> time limit: 16 sec, mem limit: 4000 MB
+[00:04:42] Child process 58298 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:04:42] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_13
+[00:04:42] Master issued REQ_EXEC.  Forked PID 58406 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_13/.snapshot_9490.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_13/.cex_3597.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:04:42] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_13/.stdout_366
+[00:04:42] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_13/.stdout_366_err
+[00:04:42] --> time limit: 16 sec, mem limit: 4000 MB
+[00:04:58] Child process 58406 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:04:59] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_14
+[00:04:59] Master issued REQ_EXEC.  Forked PID 58461 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_14/.snapshot_9652.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_14/.cex_3657.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:04:59] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_14/.stdout_373
+[00:04:59] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_14/.stdout_373_err
+[00:04:59] --> time limit: 16 sec, mem limit: 4000 MB
+[00:05:15] Child process 58461 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:05:16] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_15
+[00:05:16] Master issued REQ_EXEC.  Forked PID 59713 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_15/.snapshot_9885.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_15/.cex_3747.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:05:16] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_15/.stdout_381
+[00:05:16] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_15/.stdout_381_err
+[00:05:16] --> time limit: 15 sec, mem limit: 4000 MB
+[00:05:31] Child process 59713 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:05:32] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_16
+[00:05:32] Master issued REQ_EXEC.  Forked PID 59916 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_16/.snapshot_10118.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_16/.cex_3837.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:05:32] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_16/.stdout_389
+[00:05:32] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_16/.stdout_389_err
+[00:05:32] --> time limit: 16 sec, mem limit: 4000 MB
+[00:05:48] Child process 59916 finished with return value 9 (signaled: 1, exited: 0, exit status 0)
+[00:05:49] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_18
+[00:05:49] Master issued REQ_EXEC.  Forked PID 60031 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_18/.snapshot_10351.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_18/.cex_3927.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:05:49] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_18/.stdout_397
+[00:05:49] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_18/.stdout_397_err
+[00:05:49] --> time limit: 16 sec, mem limit: 4000 MB
+[00:05:56] Child process 60031 finished with return value 0 (signaled: 0, exited: 1, exit status 0)
+[00:05:56] Master issued REQ_CHDIR + /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_19
+[00:05:56] Master issued REQ_EXEC.  Forked PID 60117 and executing '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc -d -c read_aiger /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_19/.snapshot_10513.aig ; sim3 -T 0 -v ; write_cex -nmsvz /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_19/.cex_3987.txt ; echo ExtSeqAlgorithmFinished ;'
+[00:05:56] --> stdout will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_19/.stdout_404
+[00:05:56] --> stderr will be redirected to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/calypto/.extseq/iter_2_wlindex_19/.stdout_404_err
+[00:05:56] --> time limit: 16 sec, mem limit: 4000 MB
+[00:06:03] Child process 60117 finished with return value 0 (signaled: 0, exited: 1, exit status 0)
+[00:06:16] Exiting because an error occurred: Connection reset by peer

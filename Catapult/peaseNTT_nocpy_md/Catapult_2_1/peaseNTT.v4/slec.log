@@ -1,0 +1,607 @@
+<WRN>[CEG-SCVER]  SystemC 2.2 compatibility is currently selected but the built-in installation (i.e. '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/tools/systemc2.2/') does not point to such SystemC installation.
+<WRN>[CEG-BSCI]   The SystemC installation in built-in SystemC (i.e. '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/tools/systemc2.2/') cannot be used and will be ignored.
++-----------------------------------------------------------------------+
+|                                                                       |
+|                                                                       |
+|                             MENTOR(tm)                                |
+|                                                                       |
+|                         SLEC(tm) Software                             |
+|                                                                       |
+|                          Enabling ESL(tm)                             |
+|                                                                       |
+|                                                                       |
+| This program contains confidential, trade secret information of       |
+| Mentor Graphics Corporation.  Any reproduction, use or disclosure     |
+| of this program, including any attempt to obtain a human-readable     |
+| version of this program, without the express, prior written consent   |
+| of Mentor Graphics Corporation is strictly prohibited.                |
+|                                                                       |
+|       Copyright (c) 2002 - 2020, Mentor Graphics Corporation          |
+|                         All rights reserved.                          |
+|                                                                       |
+| Mentor acknowledges trademarks or registered trademarks of other      |
+| organizations for their respective products and services.             |
+|                                                                       |
+| SLEC-design-checking-10.5c/892744  (Aug 23 2020)  linux64  S2008232321 |
+|                                                                       |
+|                                                                       |
+| 64-bit mode                                                           |
+| Red Hat Enterprise Linux Server release 7.7 (Maipo) x86_64            |
+| Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz x 24                         |
+| 263932760 kB                                                          |
+| newnano.poly.edu                             Sat Sep 11 23:59:57 2021 |
+|                                                                       |
++-----------------------------------------------------------------------+
+Command-line: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/slec -connect 6318 -workdir /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/./CDesignChecker/calypto
+
+     [APP-RSS]    Reading startup script '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/slecrc'
+slec> cd /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/./CDesignChecker
+slec> set SLEC_CPC_PROTOCOL 0
+0
+
+slec> set_global message_wrap_at 10000
+10000
+
+slec> global env
+slec> set env(SLEC_FROM_CATAPULT) 1
+1
+
+slec> set env(SLEC_FROM_CATAPULT_IPC) 1
+1
+
+slec> set cat2slec_args {-cat2slec_work_dir .cat2slec -workdir .. -cpc -symbolic_memory_threshold_size 256}
+-cat2slec_work_dir .cat2slec -workdir .. -cpc -symbolic_memory_threshold_size 256
+
+slec> source /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/platform/common/slec/cat2slec.itcl
+<WRN>[CTS-UTDL]   ".cat2slec/cat2slec.debug" could not be opened for writing. No debug-file will be generated.
+     [UI-STATS]   SLEC process is using 27 MB, peak 33 MB, and 1 seconds [+27MB, +33MB, +1s] @ Sun Sep 12 00:00:03 2021
+
+     [CTS-SVI]    Detected SLEC Version : SLEC design-checking-10.5c
+     [CTS-CCFN]   The tool command file will be written to "cat2slec.cmd".
+     [CTS-CVI]    Detected Catapult Version : 8.2
+     [CTS-ETN]    Extracting information for the block "peaseNTT".
+     [CTS-CAH]    Encountered active high clock "clk".
+     [CTS-RAH]    Encountered active high reset "rst".
+<WRN>[CTS-ITAIC]  Found the following INOUTs at the interface: "xt". They will be treated as inputs while generating the setup.
+    ######################################################################
+    Generating SystemC and RTL wrappers for the specified design
+    ######################################################################
+     [CTS-SWF]    SPEC Wrapper file(s) is/are : "spec_wrapper.h spec_wrapper.cpp".
+     [CTS-SWTMN]  SPEC Design top module name is now "spec_wrapper".
+     [CTS-PSW]    Printing SPEC Wrapper files.
+     [UI-STATS]   SLEC process is using 28 MB, peak 33 MB, and 1 seconds [+1MB, +0MB, +0s] @ Sun Sep 12 00:00:03 2021
+
+     [CTS-FSSN]   Final SLEC script is generated at: /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/run_design_checker.tcl
+     [CTS-SFCI]   cat2slec is running via IPC from Catapult - not exiting TCL shell.
+slec> set_global message_wrap_at 10000
+10000
+
+slec> set env(SLEC_FROM_CATAPULT) 1
+1
+
+slec> rename exit exitproc
+slec> proc exit {} {}
+slec> set Run_Formal_Part_One 1
+1
+
+slec> set Run_Formal_Part_Two 0
+0
+
+slec> source run_design_checker.tcl
+     [SOL-SCL]    Solver cache location set to 'workdir'.
+# # This file is automatically generated by Catapult each time CDesignChecker is
+# # is launched from Catapult. Any user-applied edits will be overwritten.
+# 
+# set ::env(SLEC_GCC_HOME) /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2
+# # Property checks
+# 
+# # add Verification Mode settings
+# set_verification_mode -c_property_checks -overflow_checks
+     [APP-SCP]    Setting the currently running product to SLEC CPC.
+set_global -if_unchanged systemc_version                            2.3
+set_global -if_unchanged print_slec_summary                           0
+config_trace_files -disable
+set_global -if_unchanged enable_hierarchy_synthesis                   1
+set_global -if_unchanged ctrl_c_unattended_mode                       1
+set_global -if_unchanged honor_loop_unroll_pragma                     1
+set_global -if_unchanged reduce_memory_exprs                          1
+set_global -if_unchanged _enable_pragma_hls_exclude                   0
+set_global -if_unchanged ceg_flat_sysc_tb                             1
+set_global -if_unchanged ceg_generate_testbenches_for              spec
+set_global -if_unchanged ceg_generate_checkers                        0
+set_global -if_unchanged orc_binary_sim                               1
+set_global -if_unchanged orc_generate_waveforms_for                spec
+set_global -if_unchanged stop_at_first_falsification                  0
+set_global -if_unchanged _dump_pristine_trace_file                    0
+;#WHY?!
+set_global -if_unchanged testbenches_dump_waveforms                   0
+set_global -if_unchanged find_invariants                              0
+set_global -if_unchanged output_problem_time_limit_delta              0
+set_global -if_unchanged seq_perform_state_checks              only_bec
+set_global -if_unchanged seq_level3_solver_granularity         wordwise
+set_global -if_unchanged max_num_testbenches                          0
+set_global -if_unchanged output_problem_time_limit                    1
+set_global -if_unchanged output_problem_time_limit_factor           4.0
+set_global -if_unchanged sim_max_transactions                       200
+set_global -if_unchanged sim_based_validation_timeout               900
+set_global -if_unchanged stop_solvers_after_num_falsifications       30
+set_global -if_unchanged soft_runtime_limit                        7200
+set_global -if_unchanged number_of_ll3_iterations                     3
+set_global -if_unchanged generate_testbenches                         0
+# 
+# # Symbolic Memory Control
+# set_global symbolic_memory_threshold_size 256
+# 
+# # verification effort
+# set_verification_effort -medium
+set_global output_problem_time_limit 1
+set_global output_problem_time_limit_factor 4.0
+set_global sim_max_transactions 200
+set_global sim_based_validation_timeout 900
+set_global soft_runtime_limit 7200
+set_global number_of_ll3_iterations 3
+set_global __sol_use_engine_time_limit_for_last_output 0
+# 
+### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_One'
+### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_Two'
+# # CDesignChecker Pre-build-design user options
+     [UI-BDLM]    Please refer to /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/./CDesignChecker/calypto/build_design.log for a comprehensive list of messages and warnings issued in build_design. These may provide hints for debugging issues (if any) related to performance, potential out of bound accesses etc.
+
+                  (Subsequent repetitions of this message will be suppressed.
+                   Use 'enable_msg UI-BDLM' to show all repetitions.)
+
+     [CPT-RDF]    Reading design files into the 'spec' design library.
+     [CPT-SC21]   SystemC version 2.3 features will be used.
+     [CPT-UGV]    Using GCC 4.9.2 to parse system function interfaces and STL.
+<WRN>[SC-1]       "./../../../src/../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/utils.cpp", line 134: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/ntt.h", line 19: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/ntt.h", line 19: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/main.cpp", line 97: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../include/ntt.h", line 19: warning: last line of file ends without a newline
+
+
+
+     [CPT-FRD]    Finished reading SystemC files into the 'spec' design library.
+     [CPT-LDF]    Linking the 'spec' design library.
+     [CPT-CETI]   SC_MODULE class "spec_wrapper" identified as top module for C++ elaboration. The class is defined at (/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.h:35)
+     [CPT-AID]    Array 'yt' at (/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:85,12) is treated as symbolic memory for verification. The initialization, if any, will be dropped and UMR checking will be skipped for this array.
+     [CPT-AID]    Array 'xt' at (/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.cpp:133,28) is treated as symbolic memory for verification. The initialization, if any, will be dropped and UMR checking will be skipped for this array.
+     [CPT-AID]    Array 'twiddle' at (/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.cpp:134,28) is treated as symbolic memory for verification. The initialization, if any, will be dropped and UMR checking will be skipped for this array.
+     [CPT-AID]    Array 'twiddle_h' at (/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.cpp:135,28) is treated as symbolic memory for verification. The initialization, if any, will be dropped and UMR checking will be skipped for this array.
+     [CPT-RCD]    Generating design_checks.db file.
+     [CPT-OLX]    Generating design_checks.xml file.
+     [CPT-OLT]    Generating design check reports.
+slec> set Run_Formal_Part_One 0
+0
+
+slec> set Run_Formal_Part_Two 1
+1
+
+slec> source run_design_checker.tcl
+     [SOL-SCL]    Solver cache location set to 'workdir'.
+### Reading user-provided value '1' from the Tcl variable '_Design_Already_Read'
+### Reading user-provided value '0' from the Tcl variable 'Run_Lint_Only'
+### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_One'
+### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_Two'
+### Reading user-provided value '0' from the Tcl variable 'Enable_DB_Flow'
+### Reading user-provided value '1' from the Tcl variable 'Induction_Depth'
+     [CPT-STN]    Synthesizing the 'spec' design library.
+     [CDB-STH]    Setting 'spec_wrapper' as the top module of the 'spec' design library.
+     [CPT-FBD]    Finished synthesizing the 'spec' design library.
+     [CDB-WDF]    Saving the netlist database to 'design.db'.
+# # CDesignChecker user constraints
+     [UI-STATS]   SLEC process is using 32 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [UI-GIM]     Created 32 property check(s).
+     [ORC-SPN]    Started netlist transformations on spec and impl designs to make them verification friendly.
+     [ORC-FPN]    Finished netlist transformations.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+1MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [TA-BBCT]    Bit-blasting the clock tree.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [PSS-SDM]    Started mapping the 'spec' and 'impl' designs.
+<WRN>[TDB-DRF]    Some flops have been removed by dead/unmapped logic pruning. Please refer to '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/./CDesignChecker/calypto/mapping.log' for the list of removed flops.
+     [PSS-FDM]    Finished mapping the 'spec' and 'impl' designs.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+<WRN>[ORC-WIPCC]  Consistency checks have identified at least one non-fatal design violation in the spec design. Please refer to the file 'CDesignChecker/calypto/ccheck_spec.log' for details.
+     [TA-ACDD]    Determining input clock domains.
+     [TA-ADCA]    Setting clock ## Clock : _Ideal_Clk_ (Period : 100, Rising edge : 2, Falling edge : 52) is set on spec.clk on automatically inferred clock port 'spec.clk'.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [TA-BBCT]    Bit-blasting the clock tree.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [ORC-SPCM]   Started processing of constraints and maps.
+     [TDB-EUS]    Unmapped ports/flops exist. Please refer to the file 'CDesignChecker/calypto/mapping.log' for the complete list of unmapped inputs, outputs and flops.
+     [TDB-TNM]    If unmapped flops exist, explicitly specify flop maps or use the command "create_namemap_rule" to make SLEC infer flop maps based on flop names.
+     [ORC-FPCM]   Finished processing of constraints and maps.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [ORC-SPR]    Started processing reset.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.slecIN_p_idx_0' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+
+                  (Subsequent repetitions of this message will be suppressed.
+                   Use 'enable_msg SIM-NOX' to show all repetitions.)
+
+<WRN>[SLEC-RFNI]  Design 'spec' has uninitialized flops.
+                  Please try 'help SLEC-RFNI' for more detailed help.
+     [ORC-FPR]    Finished processing reset. For the list of reset-values, please refer to calypto/reset.log.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 13 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:16 2021
+
+     [SIM-SSBV]   Started performing simulation-based validation (see 'help sim_based_validation').
+     [SIM-FAM]    Simulation will attempt to find all mismatches within 200 transactions (see 'help sim_finds_only_earliest_mismatches' and 'help sim_max_transactions').
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln44 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln43 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln42 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln41 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln89 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln65 latency=1) in transaction 6.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln66 latency=1) in transaction 12.
+     [SIM-FSBV]   Finished performing simulation-based validation.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 14 seconds [+0MB, +0MB, +1s] @ Sun Sep 12 00:00:17 2021
+
+     [ORC-SSRAO]  Started performing optimizations.
+     [ORC-FSRAO]  Finished performing optimizations.
+     [UI-STATS]   SLEC process is using 33 MB, peak 181 MB, and 14 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:17 2021
+
+     [ORC-SCCIV]  Started performing consistency checks in the spec and impl designs.
+     [ORC-FCCIV]  Finished performing consistency checks in the spec and impl designs.
+     [UI-STATS]   SLEC process is using 34 MB, peak 181 MB, and 14 seconds [+1MB, +0MB, +0s] @ Sun Sep 12 00:00:17 2021
+
+     [ORC-UDM]    Starting to unroll the design to obtain outputs and flops for transaction 1.
+     [TDB-STAC]   Starting to apply constraints for sequential analysis.
+     [TDB-DAC]    Finished application of constraints for sequential analysis.
+     [UI-STATS]   SLEC process is using 34 MB, peak 181 MB, and 14 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:17 2021
+
+     [CDBO-ODU]   Finished performing optimization-enabled design unrolling.
+     [UI-STATS]   SLEC process is using 34 MB, peak 181 MB, and 14 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:17 2021
+
+     [ORC-UDDM]   Finished unrolling design to obtain outputs and flops for transaction 1.
+     [ORC-SSA]    Started sequential analysis.
+     [UI-STATS]   SLEC process is using 34 MB, peak 181 MB, and 14 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:17 2021
+
+     [SEQ-SSCP]   Starting state checks to classify flops as inductive or non-inductive.
+     [SEQ-DSCP]   Finished state checks to classify flops as inductive or non-inductive: 29 non-inductive, 0 inductive.
+     [UI-STATS]   SLEC process is using 34 MB, peak 338 MB, and 17 seconds [+0MB, +157MB, +3s] @ Sun Sep 12 00:00:20 2021
+
+     [SEQ-PO1M]   Started normalizing spec and impl netlists for sequential analysis.
+<WRN>[SEQ-SRFC]   Map application for intermediate/induct maps was sub-optimal for 1 maps. Please look at the .spec_redux.log file in the work directory for more details.
+     [SEQ-SMA]    Started memory abstraction on normalized netlist.
+     [SEQ-FMA]    Finished memory abstraction on normalized netlist.
+     [UI-STATS]   SLEC process is using 36 MB, peak 338 MB, and 17 seconds [+2MB, +0MB, +0s] @ Sun Sep 12 00:00:20 2021
+
+     [SEQ-SOX]    Started optimizations on normalized netlist.
+     [SEQ-FOX]    Finished optimizations on normalized netlist.
+     [UI-STATS]   SLEC process is using 36 MB, peak 338 MB, and 18 seconds [+0MB, +0MB, +1s] @ Sun Sep 12 00:00:22 2021
+
+     [SEQ-ASD]    Determined 5 to be the acyclic sequential depth of the normalized spec and impl netlists.
+     [SEQ-O1M]    Finished normalizing spec and impl netlists for sequential analysis.
+     [UI-STATS]   SLEC process is using 36 MB, peak 338 MB, and 18 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:22 2021
+
+     [SEQ-SIIC]   Starting high-effort induct map init checks.
+     [SEQ-NIIPP]  Posing 1 induct map init check problems.
+     [SEQ-SWTWP]  Current Solver Progress : 1 init_check problems proven, 0 falsified, 0 remaining : 18 seconds elapsed.
+     [SEQ-FIIC]   Finished high-effort induct map init checks.
+     [SEQ-OOP]    Overall Progress : 1 induct init check problems proven, 7 falsified, 0 remaining.
+     [UI-STATS]   SLEC process is using 36 MB, peak 338 MB, and 19 seconds [+0MB, +0MB, +1s] @ Sun Sep 12 00:00:22 2021
+
+     [SEQ-TTPS]   Starting sequential analysis (Engine L0).
+     [SEQ-OOP]    Overall Progress : 1 output problems proven, 7 falsified, 25 remaining.
+     [SEQ-DTPS]   Finished sequential analysis (Engine L0).
+     [UI-STATS]   SLEC process is using 36 MB, peak 338 MB, and 19 seconds [+0MB, +0MB, +0s] @ Sun Sep 12 00:00:22 2021
+
+     [SEQ-TSI]    Starting sequential analysis (Engine HL3).
+     [SEQ-NSPP]   Posing 25 problems for level 3 sequential analysis (sequential search).
+     [SEQ-LTLPP]  Attempting proofs with a time limit of 1 second(s) per problem (0 implies no limit).
+     [SEQ-SSP]    Level 3 progress so far: problems proven    0, falsified    0, aborted    1, remaining   24.
+     [SEQ-OOP]    Overall Progress : 1 output problems proven, 7 falsified, 25 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    0, falsified    0, aborted    2, remaining   23.
+     [SEQ-OOP]    Overall Progress : 1 output problems proven, 7 falsified, 25 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    2, remaining   22.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    3, remaining   21.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    4, remaining   20.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    5, remaining   19.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    6, remaining   18.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    7, remaining   17.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    8, remaining   16.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    1, falsified    0, aborted    9, remaining   15.
+     [SEQ-OOP]    Overall Progress : 2 output problems proven, 7 falsified, 24 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted    9, remaining   14.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   10, remaining   13.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   11, remaining   12.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   12, remaining   11.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   13, remaining   10.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   14, remaining    9.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   15, remaining    8.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    2, falsified    0, aborted   16, remaining    7.
+     [SEQ-OOP]    Overall Progress : 3 output problems proven, 7 falsified, 23 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    3, falsified    0, aborted   16, remaining    6.
+     [SEQ-OOP]    Overall Progress : 4 output problems proven, 7 falsified, 22 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    3, falsified    0, aborted   17, remaining    5.
+     [SEQ-OOP]    Overall Progress : 4 output problems proven, 7 falsified, 22 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    3, falsified    0, aborted   18, remaining    4.
+     [SEQ-OOP]    Overall Progress : 4 output problems proven, 7 falsified, 22 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    3, falsified    0, aborted   19, remaining    3.
+     [SEQ-OOP]    Overall Progress : 4 output problems proven, 7 falsified, 22 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    3, falsified    0, aborted   20, remaining    2.
+     [SEQ-OOP]    Overall Progress : 4 output problems proven, 7 falsified, 22 remaining.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln114' latency=1) falsified in transaction 513.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    3, falsified    1, aborted   20, remaining    1.
+     [SEQ-OOP]    Overall Progress : 4 output problems proven, 8 falsified, 21 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted   20, remaining    0.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+     [SEQ-LTLPP]  Attempting proofs with a time limit of 4 second(s) per problem (0 implies no limit).
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted    1, remaining   19.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted    2, remaining   18.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted    3, remaining   17.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted    4, remaining   16.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted    5, remaining   15.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    1, aborted    6, remaining   14.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 8 falsified, 20 remaining.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln162' latency=1) falsified in transaction 3581.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln140' latency=1) falsified in transaction 3582.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    5, remaining   13.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    6, remaining   12.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    7, remaining   11.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    8, remaining   10.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    9, remaining    9.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   10, remaining    8.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   11, remaining    7.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   12, remaining    6.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   13, remaining    5.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   14, remaining    4.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   15, remaining    3.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   16, remaining    2.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   17, remaining    1.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-LTLPP]  Attempting proofs with a time limit of 16 second(s) per problem (0 implies no limit).
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    1, remaining   17.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    2, remaining   16.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    3, remaining   15.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    4, remaining   14.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    5, remaining   13.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    6, remaining   12.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    7, remaining   11.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    8, remaining   10.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted    9, remaining    9.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   10, remaining    8.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   11, remaining    7.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+     [SEQ-SWTWP]  Current Solver Progress : 4 output problems proven, 3 falsified, 11 aborted, 7 remaining : 334 seconds elapsed.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    3, aborted   12, remaining    6.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 10 falsified, 18 remaining.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln66_1' latency=1) falsified in transaction 513.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln43_1' latency=1) falsified in transaction 514.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln42_1' latency=1) falsified in transaction 514.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln41_1' latency=1) falsified in transaction 514.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    7, aborted    9, remaining    5.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 14 falsified, 14 remaining.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln65_1' latency=1) falsified in transaction 513.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln44_1' latency=1) falsified in transaction 514.
+     [SEQ-SSP]    Level 3 progress so far: problems proven    4, falsified    9, aborted    8, remaining    4.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 16 falsified, 12 remaining.
+     [SEQ-OOP]    Overall Progress : 5 output problems proven, 16 falsified, 12 remaining.
+     [SEQ-SWTWP]  Current Solver Progress : 4 output problems proven, 9 falsified, 12 remaining : 368 seconds elapsed.
+     [SEQ-DSI]    Finished sequential analysis (Engine HL3).
+     [UI-STATS]   SLEC process is using 60 MB, peak 338 MB, and 369 seconds, 6:09 [+24MB, +0MB, +350s] @ Sun Sep 12 00:06:05 2021
+
+<WRN>[ORC-FAF]    SLEC found one or more falsifications.
+     [UI-STATS]   SLEC process is using 60 MB, peak 338 MB, and 369 seconds, 6:09 [+0MB, +0MB, +0s] @ Sun Sep 12 00:06:05 2021
+
+     [SIM-SCXV]   Started validating counterexample for (spec.prop_ovf_spec_wrapper_ln66_1, impl.cc_const_value_1u_h0_impl).
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln89 latency=1) in transaction 1.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln66_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln43_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln42_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln41_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln114 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln65_1 latency=1) in transaction 515.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln44_1 latency=1) in transaction 515.
+     [SIM-FCXV]   Finished validating counterexample for (spec.prop_ovf_spec_wrapper_ln66_1, impl.cc_const_value_1u_h0_impl).
+     [UI-STATS]   SLEC process is using 68 MB, peak 338 MB, and 370 seconds, 6:10 [+8MB, +0MB, +1s] @ Sun Sep 12 00:06:06 2021
+
+     [SIM-SCXV]   Started validating counterexample for (spec.prop_ovf_spec_wrapper_ln65_1, impl.cc_const_value_1u_h0_impl).
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln89 latency=1) in transaction 1.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln65_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln44_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln43_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln42_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln41_1 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln114 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln66_1 latency=1) in transaction 514.
+     [SIM-FCXV]   Finished validating counterexample for (spec.prop_ovf_spec_wrapper_ln65_1, impl.cc_const_value_1u_h0_impl).
+     [UI-STATS]   SLEC process is using 68 MB, peak 338 MB, and 371 seconds, 6:11 [+0MB, +0MB, +1s] @ Sun Sep 12 00:06:07 2021
+
+     [SIM-SCXV]   Started validating counterexample for (spec.prop_ovf_spec_wrapper_ln114, impl.cc_const_value_1u_h0_impl).
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln89 latency=1) in transaction 1.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln114 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln66_1 latency=1) in transaction 514.
+     [SIM-FCXV]   Finished validating counterexample for (spec.prop_ovf_spec_wrapper_ln114, impl.cc_const_value_1u_h0_impl).
+     [UI-STATS]   SLEC process is using 66 MB, peak 338 MB, and 372 seconds, 6:12 [-2MB, +0MB, +1s] @ Sun Sep 12 00:06:08 2021
+
+     [SIM-SCXV]   Started validating counterexample for (spec.prop_ovf_spec_wrapper_ln162, impl.cc_const_value_1u_h0_impl).
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln89 latency=1) in transaction 1.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln114 latency=1) in transaction 512.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln140 latency=1) in transaction 3069.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln162 latency=1) in transaction 3580.
+     [SIM-VPF]    Simulation verified the falsification for property (spec.prop_ovf_spec_wrapper_ln76_1 latency=1) in transaction 3581.
+     [SIM-FCXV]   Finished validating counterexample for (spec.prop_ovf_spec_wrapper_ln162, impl.cc_const_value_1u_h0_impl).
+     [UI-STATS]   SLEC process is using 100 MB, peak 338 MB, and 379 seconds, 6:19 [+34MB, +0MB, +7s] @ Sun Sep 12 00:06:15 2021
+
+
+List of falsifying maps (please see calypto/results.log for the complete result):
+
+[FALSIFIED          1] Property                          : spec.prop_ovf_spec_wrapper_ln89 ( PROP, ovf )  'h1 @ 103  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED          1] Property                          : spec.prop_ovf_spec_wrapper_ln41 ( PROP, ovf )  'h1 @ 103  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED          1] Property                          : spec.prop_ovf_spec_wrapper_ln42 ( PROP, ovf )  'h1 @ 103  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED          1] Property                          : spec.prop_ovf_spec_wrapper_ln43 ( PROP, ovf )  'h1 @ 103  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED          1] Property                          : spec.prop_ovf_spec_wrapper_ln44 ( PROP, ovf )  'h1 @ 103  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED          6] Property                          : spec.prop_ovf_spec_wrapper_ln65 ( PROP, ovf )  'h1 @ 603  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED         12] Property                          : spec.prop_ovf_spec_wrapper_ln66 ( PROP, ovf )  'h1 @ 1203  CDesignChecker/calypto/trace_sbv 
+ 
+[FALSIFIED        512] Property                          : spec.prop_ovf_spec_wrapper_ln114 ( PROP, ovf )  'h1 @ 51203  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED        512] Property                          : spec.prop_ovf_spec_wrapper_ln41_1 ( PROP, ovf )  'h1 @ 51203  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED        512] Property                          : spec.prop_ovf_spec_wrapper_ln42_1 ( PROP, ovf )  'h1 @ 51203  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED        512] Property                          : spec.prop_ovf_spec_wrapper_ln43_1 ( PROP, ovf )  'h1 @ 51203  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED        512] Property                          : spec.prop_ovf_spec_wrapper_ln44_1 ( PROP, ovf )  'h1 @ 51503  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED        512] Property                          : spec.prop_ovf_spec_wrapper_ln65_1 ( PROP, ovf )  'h1 @ 51503  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED        514] Property                          : spec.prop_ovf_spec_wrapper_ln66_1 ( PROP, ovf )  'h1 @ 51203  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED       3069] Property                          : spec.prop_ovf_spec_wrapper_ln140 ( PROP, ovf )  'h1 @ 306903  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED       3580] Property                          : spec.prop_ovf_spec_wrapper_ln162 ( PROP, ovf )  'h1 @ 358003  CDesignChecker/calypto/trace_formal_1 
+ 
+[FALSIFIED       3581] Property                          : spec.prop_ovf_spec_wrapper_ln76_1 ( PROP, ovf )  'h1 @ 358103  CDesignChecker/calypto/trace_formal_1 
+ 
+
+
+     [CPT-RCD]    Generating design_checks.db file.
+     [CPT-OLX]    Generating design_checks.xml file.
+     [CPT-OLT]    Generating design check reports.
+
+================================================================================
+*************************** Status of Property Checks **************************
+================================================================================
+
+
+                                                            Violated  Waived    
+================================================================================
+FATAL                                                          0        0       
+================================================================================
+
+================================================================================
+ERROR                                                          11       0       
+================================================================================
+OVL (Overflow)                                                 11       0       
+
+================================================================================
+WARNING                                                        0        0       
+================================================================================
+
+================================================================================
+INFO                                                           0        0       
+================================================================================
+
+PDD (Platform Dependant Datatype (long))                    DISABLED 
+CIA (Comparison Instead of Assignment)                      DISABLED 
+RRT (Reset reference in thread)                             DISABLED 
+ACS (Accumulator of AC / SC Fixed type)                     DISABLED 
+CWB (Case Without Break)                                    DISABLED 
+LRC (Long reset cycle)                                      DISABLED 
+ISE (Illegal Shift Error)                                   DISABLED 
+ACC (Accumulator of C++ native type)                        DISABLED 
+CCC (Static Constant Comparison)                            DISABLED 
+AOB (Arithmetic Operator with Boolean)                      DISABLED 
+ABW (Array Bounds Write)                                    DISABLED 
+AIC (Assignment used Instead of Comparison)                 DISABLED 
+CAS (Incomplete Switch Case)                                DISABLED 
+STF (Funcs with statics called multiple times)              DISABLED 
+APT (Array Dimension Power of Two)                          DISABLED 
+DBZ (Divide By Zero)                                        DISABLED 
+MXS (Mixed signed and unsigned data types)                  DISABLED 
+CNS (Constant condition of if/switch)                       DISABLED 
+ABR (Array Bounds Read)                                     DISABLED 
+FXD (Fixed datatype check)                                  DISABLED 
+SAT (Sub-optimal adder logic)                               DISABLED 
+ALS (ac_int left shift)                                     DISABLED 
+UMR (Uninitialized Memory Read)                             DISABLED 
+SUD (Suboptimal Use of Divide and Modulus Operator)         DISABLED 
+CMC (Memory of Native C type)                               DISABLED 
+
+================================================================================
+
+39 warning, 0 error messages
+356.086u 23.094s 379.179 6:19.000   38.204m 337.945p
+(SLEC process used 338 MB and 379 seconds, 6:19)

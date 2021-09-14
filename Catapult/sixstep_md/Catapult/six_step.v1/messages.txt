@@ -1,0 +1,148 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 8.92 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-9)
+Source file analysis completed (CIN-68)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/sixstep/src/ntt.cpp /home/jd4691/research/NTT_CPU/sixstep/src/utils.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'six_step' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/sixstep/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: no suitable conversion function from "ac_int<96, false>" to "size_t" exists (CRD-413)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/sixstep/src/utils.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/sixstep/src/ntt.cpp /home/jd4691/research/NTT_CPU/sixstep/src/utils.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<top>' detected on routine 'six_step' (CIN-6)
+# Error:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/sixstep/src/utils.cpp" (CRD-413)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 7.51 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-9)
+go compile
+# Error: Compilation aborted (CIN-5)
+# Error: go analyze: Failed analyze
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: go analyze: Failed analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+option set Input/CppStandard c++11
+go compile
+option set Input/TargetPlatform x86_64
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+solution file add ./src/utils.cpp
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/ntt.cpp
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.08 seconds, memory usage 1314188kB, peak memory usage 1314188kB (SOL-9)
+/INPUTFILES/1
+# Error: Compilation aborted (CIN-5)
+go compile
+c++11
+Moving session transcript to file "/home/jd4691/research/NTT_CPU/sixstep/catapult.log"
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/sixstep/src/ntt.cpp /home/jd4691/research/NTT_CPU/sixstep/src/utils.cpp (CIN-69)
+/INPUTFILES/2
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'six_step.v1': elapsed time 5.34 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 297, Real ops = 90, Vars = 66 (SOL-21)
+Design 'six_step' was read (SOL-1)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Loop '/six_step/core/S2_COPY_LOOP:for' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Loop '/six_step/core/S2_OUTER_LOOP' iterated at most 5 times. (LOOP-2)
+Inlining routine 'mult' (CIN-14)
+Loop '/six_step/core/S34_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator*<32, false>' (CIN-14)
+Loop '/six_step/core/S2_COPY_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Loop '/six_step/core/S1_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Loop '/six_step/core/S2_INNER_LOOP' iterated at most 16 times. (LOOP-2)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Loop '/six_step/core/S2_GROUP_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Loop '/six_step/core/S6_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Loop '/six_step/core/S5_COPY_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Loop '/six_step/core/S5_INNER_LOOP' iterated at most 16 times. (LOOP-2)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Loop '/six_step/core/S5_GROUP_LOOP' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Loop '/six_step/core/S5_COPY_LOOP:for' iterated at most 32 times. (LOOP-2)
+Inlining routine 'operator*<20, false>' (CIN-14)
+Loop '/six_step/core/S5_OUTER_LOOP' iterated at most 5 times. (LOOP-2)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Inlining routine 'operator*<20, false>' (CIN-14)
+Synthesizing routine 'six_step' (CIN-13)
+Found top design routine 'six_step' specified by directive (CIN-52)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'six_step' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_CPU/sixstep/Catapult/six_step.v1/CDesignChecker/design_checker.sh'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'six_step.v1' (SOL-8)
+INOUT port 'tw_h' is only used as an input. (OPT-10)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator*<32, false>' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'tw' is only used as an input. (OPT-10)
+INOUT port 'revArr' is only used as an input. (OPT-10)
+Inlining routine 'operator*<20, false>' (CIN-14)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Optimizing block '/six_step' ... (CIN-4)
+Inlining routine 'operator*<20, false>' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 297, Real ops = 90, Vars = 66 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'six_step.v1': elapsed time 1.02 seconds, memory usage 1642408kB, peak memory usage 1642468kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'six_step.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-1_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -1 -part xc7vx485tffg1157-1
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-1_beh.lib' [mgc_Xilinx-VIRTEX-7-1_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 297, Real ops = 90, Vars = 66 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'six_step.v1': elapsed time 0.28 seconds, memory usage 1642980kB, peak memory usage 1642980kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'six_step.v1' (SOL-8)
+go assembly

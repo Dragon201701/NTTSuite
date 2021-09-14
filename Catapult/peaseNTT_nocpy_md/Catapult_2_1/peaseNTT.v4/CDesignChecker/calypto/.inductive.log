@@ -1,0 +1,73 @@
+
+#
+# state check status in iterative 1TU Optimization 
+#
+
+# @ iter    1 [SOLWTW]    29 posed     0 proven    29 falsified     0 unknown 
+# @ iter    2 [SOLWTW]     0 posed     0 proven     0 falsified     0 unknown 
+
+#
+# 0 'spec' inductive flops
+#
+
+
+
+#
+# 0 'impl' inductive flops
+#
+
+
+#
+# set_inductive flop assumptions
+#
+
+
+
+#source script below to effectively bypass state checks
+set_global sim_based_validation 0
+
+#set as inductive 'spec' flops
+
+#set as inductive 'impl' flops
+
+#set as noninductive flops
+set_global _flops_assumed_noninductive {\
+  spec.Calypto_transaction_done \
+  spec._Calypto_present_state_0 \
+  spec.prop_ovf_spec_wrapper_ln114 \
+  spec.prop_ovf_spec_wrapper_ln140 \
+  spec.prop_ovf_spec_wrapper_ln162 \
+  spec.prop_ovf_spec_wrapper_ln41_1 \
+  spec.prop_ovf_spec_wrapper_ln41_2 \
+  spec.prop_ovf_spec_wrapper_ln41_3 \
+  spec.prop_ovf_spec_wrapper_ln42_1 \
+  spec.prop_ovf_spec_wrapper_ln42_2 \
+  spec.prop_ovf_spec_wrapper_ln42_3 \
+  spec.prop_ovf_spec_wrapper_ln43_1 \
+  spec.prop_ovf_spec_wrapper_ln43_2 \
+  spec.prop_ovf_spec_wrapper_ln43_3 \
+  spec.prop_ovf_spec_wrapper_ln44_1 \
+  spec.prop_ovf_spec_wrapper_ln44_2 \
+  spec.prop_ovf_spec_wrapper_ln44_3 \
+  spec.prop_ovf_spec_wrapper_ln46 \
+  spec.prop_ovf_spec_wrapper_ln46_1 \
+  spec.prop_ovf_spec_wrapper_ln46_2 \
+  spec.prop_ovf_spec_wrapper_ln46_3 \
+  spec.prop_ovf_spec_wrapper_ln65_1 \
+  spec.prop_ovf_spec_wrapper_ln66_1 \
+  spec.prop_ovf_spec_wrapper_ln75 \
+  spec.prop_ovf_spec_wrapper_ln75_1 \
+  spec.prop_ovf_spec_wrapper_ln76 \
+  spec.prop_ovf_spec_wrapper_ln76_1 \
+  spec.spec_wrapper::doit#0@base \
+  spec.spec_wrapper::doit#0@base_3 \
+  spec.spec_wrapper::doit#0@c \
+  spec.spec_wrapper::doit#0@p \
+  spec.spec_wrapper::doit#0@r \
+  spec.spec_wrapper::doit#0@r_0 \
+  spec.spec_wrapper::doit#0@r_1 \
+  spec.spec_wrapper::doit#0@r_2 \
+  spec.spec_wrapper::doit#0@xt \
+  spec.spec_wrapper::doit#0@yt \
+}
+

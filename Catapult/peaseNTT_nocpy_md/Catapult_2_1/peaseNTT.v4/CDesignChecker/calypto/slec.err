@@ -1,0 +1,79 @@
+<WRN>[CEG-SCVER]  SystemC 2.2 compatibility is currently selected but the built-in installation (i.e. '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/tools/systemc2.2/') does not point to such SystemC installation.
+<WRN>[CEG-BSCI]   The SystemC installation in built-in SystemC (i.e. '/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/cds_cpc/rls/tools/systemc2.2/') cannot be used and will be ignored.
+<WRN>[CTS-UTDL]   ".cat2slec/cat2slec.debug" could not be opened for writing. No debug-file will be generated.
+<WRN>[CTS-ITAIC]  Found the following INOUTs at the interface: "xt". They will be treated as inputs while generating the setup.
+<WRN>[SC-1]       "./../../../src/../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/utils.cpp", line 134: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/ntt.h", line 19: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/../include/ntt.h", line 19: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../src/main.cpp", line 97: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../include/config.h", line 18: warning: last line of file ends without a newline
+
+
+
+<WRN>[SC-1]       "./../../../include/ntt.h", line 19: warning: last line of file ends without a newline
+
+
+
+<WRN>[TDB-DRF]    Some flops have been removed by dead/unmapped logic pruning. Please refer to '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/./CDesignChecker/calypto/mapping.log' for the list of removed flops.
+<WRN>[ORC-WIPCC]  Consistency checks have identified at least one non-fatal design violation in the spec design. Please refer to the file 'CDesignChecker/calypto/ccheck_spec.log' for details.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.slecIN_p_idx_0' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+
+                  (Subsequent repetitions of this message will be suppressed.
+                   Use 'enable_msg SIM-NOX' to show all repetitions.)
+
+<WRN>[SLEC-RFNI]  Design 'spec' has uninitialized flops.
+                  Please try 'help SLEC-RFNI' for more detailed help.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln44 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln43 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln42 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln41 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln89 latency=1) in transaction 1.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln65 latency=1) in transaction 6.
+<WRN>[SIM-PFF]    Simulation found a falsification for property (spec.prop_ovf_spec_wrapper_ln66 latency=1) in transaction 12.
+<WRN>[SEQ-SRFC]   Map application for intermediate/induct maps was sub-optimal for 1 maps. Please look at the .spec_redux.log file in the work directory for more details.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln114' latency=1) falsified in transaction 513.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln162' latency=1) falsified in transaction 3581.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln140' latency=1) falsified in transaction 3582.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln66_1' latency=1) falsified in transaction 513.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln43_1' latency=1) falsified in transaction 514.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln42_1' latency=1) falsified in transaction 514.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln41_1' latency=1) falsified in transaction 514.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln65_1' latency=1) falsified in transaction 513.
+<WRN>[SEQ-PFBS]   Property ('spec.prop_ovf_spec_wrapper_ln44_1' latency=1) falsified in transaction 514.
+<WRN>[ORC-FAF]    SLEC found one or more falsifications.
+39 warning, 0 error messages
+356.086u 23.094s 379.179 6:19.000   38.204m 337.945p
+(SLEC process used 338 MB and 379 seconds, 6:19)

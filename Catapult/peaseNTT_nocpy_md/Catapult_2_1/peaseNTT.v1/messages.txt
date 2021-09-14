@@ -1,0 +1,473 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 5.40 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+/INPUTFILES/3
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'peaseNTT' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Source file analysis completed (CIN-68)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+/INPUTFILES/2
+solution file add ./src/main.cpp
+solution file add ./src/utils.cpp
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+solution file add ./src/ntt.cpp
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/1
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 199, Real ops = 45, Vars = 74 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'peaseNTT.v1': elapsed time 3.80 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Loop '/peaseNTT/core/INNER_LOOP3' iterated at most 512 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP2' iterated at most 512 times. (LOOP-2)
+Loop '/peaseNTT/core/STAGE_LOOP1' iterated at most 3 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP4' iterated at most 512 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP1' iterated at most 512 times. (LOOP-2)
+Loop '/peaseNTT/core/STAGE_LOOP' iterated at most 3 times. (LOOP-2)
+Loop '/peaseNTT/core/STAGE_LOOP1' iterated at most 2 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v1/CDesignChecker/design_checker.sh'
+Design 'peaseNTT' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Optimizing block '/peaseNTT' ... (CIN-4)
+Inlining routine 'operator-=<20, false>' (CIN-14)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator+=<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'peaseNTT.v1' (SOL-8)
+Inlining routine 'peaseNTT' (CIN-14)
+Inlining routine 'butterFly2' (CIN-14)
+Synthesizing routine 'peaseNTT' (CIN-13)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator>=<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Inlining routine 'operator>=<20, false>' (CIN-14)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Inlining routine 'operator-=<20, false>' (CIN-14)
+Found top design routine 'peaseNTT' specified by directive (CIN-52)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Found design routine 'mult' specified by directive (CIN-52)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'butterFly2' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator+=<20, false>' (CIN-14)
+Optimizing block '/peaseNTT/modulo_sub' ... (CIN-4)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator+=<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Optimizing block '/peaseNTT/modulo_add' ... (CIN-4)
+Inlining routine 'modulo_sub' (CIN-14)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator+=<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'butterFly1' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'mult' (CIN-13)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'butterFly1' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Optimizing block '/peaseNTT/mult' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 199, Real ops = 45, Vars = 74 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaseNTT.v1': elapsed time 1.36 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'peaseNTT.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-1_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -1 -part xc7vx485tffg1157-1
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-1_beh.lib' [mgc_Xilinx-VIRTEX-7-1_beh]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 201, Real ops = 45, Vars = 76 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'peaseNTT.v1': elapsed time 0.34 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+go allocate
+/CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'peaseNTT.v1' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 214, Real ops = 45, Vars = 87 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaseNTT.v1': elapsed time 0.09 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Loop '/peaseNTT/core/INNER_LOOP3' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/INNER_LOOP2' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/STAGE_LOOP1' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/INNER_LOOP1' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/INNER_LOOP4' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'peaseNTT.v1' (SOL-8)
+# Info: Design complexity at end of 'memories': Total ops = 229, Real ops = 45, Vars = 84 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'peaseNTT.v1': elapsed time 1.65 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+I/O-Port Resource '/peaseNTT/modulo_sub/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/peaseNTT/core/yt:rsc' (from var: yt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/peaseNTT/modulo_sub/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+I/O-Port Resource '/peaseNTT/modulo_add/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/modulo_add/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/modulo_sub/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/modulo_add/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/peaseNTT/twiddle_h:rsc' (from var: twiddle_h) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/peaseNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/peaseNTT/xt:rsc' (from var: xt) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+Memory Resource '/peaseNTT/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/peaseNTT/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/mult/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/mult/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/modulo_add/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/mult/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+I/O-Port Resource '/peaseNTT/mult/x:rsc' (from var: x) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'peaseNTT.v1' (SOL-8)
+I/O-Port Resource '/peaseNTT/mult/y_:rsc' (from var: y_) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/mult/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/peaseNTT/modulo_sub/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 178, Real ops = 31, Vars = 56 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'peaseNTT.v1': elapsed time 9.32 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'peaseNTT.v1' (SOL-8)
+Module for CCORE 'mult' has been successfully synthesized (TD-4)
+# Info: Design complexity at end of 'architect': Total ops = 222, Real ops = 30, Vars = 61 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'peaseNTT.v1': elapsed time 0.34 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Design 'peaseNTT' contains '30' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'peaseNTT.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 222, Real ops = 30, Vars = 61 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'peaseNTT.v1': elapsed time 0.50 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Prescheduled LOOP '/peaseNTT/core/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaseNTT/core/INNER_LOOP3' (13 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaseNTT/core/INNER_LOOP4' (14 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaseNTT/core/INNER_LOOP1' (13 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/peaseNTT/core' (CRAAS-1)
+Prescheduled LOOP '/peaseNTT/core/INNER_LOOP2' (14 c-steps) (SCHD-7)
+# Info: Starting transformation 'allocate' on solution 'peaseNTT.v1' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Initial schedule of SEQUENTIAL '/peaseNTT/core': Latency = 74250, Area (Datapath, Register, Total) = 10765.42, 0.00, 10765.42 (CRAAS-11)
+Prescheduled SEQUENTIAL '/peaseNTT/core' (total length 69132 c-steps) (SCHD-8)
+# Info: Final schedule of SEQUENTIAL '/peaseNTT/core': Latency = 74250, Area (Datapath, Register, Total) = 10758.43, 0.00, 10758.43 (CRAAS-12)
+At least one feasible schedule exists. (CRAAS-9)
+Prescheduled LOOP '/peaseNTT/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaseNTT/core/STAGE_LOOP1' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/peaseNTT/core/core:rlp' (0 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 5465, Real ops = 110, Vars = 822 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'peaseNTT.v1': elapsed time 9.84 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Global signal 'yt:rsc.d' added to design 'peaseNTT' for component 'yt:rsci' (LIB-3)
+Global signal 'yt:rsc.we' added to design 'peaseNTT' for component 'yt:rsci' (LIB-3)
+Global signal 'xt:rsc.triosy.lz' added to design 'peaseNTT' for component 'xt:rsc.triosy:obj' (LIB-3)
+Global signal 'yt:rsc.wadr' added to design 'peaseNTT' for component 'yt:rsci' (LIB-3)
+Report written to file 'cycle.rpt'
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Global signal 'twiddle:rsc.AWCACHE' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWLOCK' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWQOS' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWPROT' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWLEN' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWADDR' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWBURST' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWSIZE' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.WSTRB' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.WDATA' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.WUSER' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.WLAST' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWUSER' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWREGION' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWREADY' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.AWVALID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.BVALID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.BUSER' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.BREADY' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.WREADY' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.WVALID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.BRESP' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.BID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARCACHE' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARLOCK' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARQOS' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARPROT' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARLEN' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARADDR' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARBURST' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARSIZE' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.RDATA' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.RID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.RLAST' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.RRESP' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARUSER' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARREGION' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARREADY' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.ARVALID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.s_tdone' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.tr_write_done' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWADDR' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle:rsc.RVALID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.RUSER' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+Global signal 'twiddle:rsc.RREADY' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWPROT' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWCACHE' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWREGION' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWQOS' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWSIZE' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWLEN' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWLOCK' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWBURST' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.WLAST' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.WSTRB' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.WVALID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.WUSER' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWVALID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWUSER' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.WDATA' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.AWREADY' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'xt:rsc.AWADDR' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWSIZE' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWLEN' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'peaseNTT.v1' (SOL-8)
+go extract
+Performing concurrent resource allocation and scheduling on '/peaseNTT/core' (CRAAS-1)
+Global signal 'xt:rsc.AWREGION' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWQOS' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWVALID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWUSER' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWLOCK' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWBURST' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWPROT' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWCACHE' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.WVALID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.WUSER' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.BID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.WREADY' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.WDATA' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.AWREADY' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.WLAST' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.WSTRB' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARADDR' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARSIZE' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARLEN' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.BUSER' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.BRESP' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.BREADY' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.BVALID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARREGION' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARQOS' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARVALID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARUSER' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARLOCK' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARBURST' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARPROT' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARCACHE' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RUSER' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RLAST' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RREADY' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RVALID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RID' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.ARREADY' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RRESP' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'xt:rsc.RDATA' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'peaseNTT' for component 'r:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
+Global signal 'twiddle:rsc.AWID' added to design 'peaseNTT' for component 'twiddle:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+Global signal 'xt:rsc.tr_write_done' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'xt:rsc' (SCHD-46)
+Global signal 'p:rsc.dat' added to design 'peaseNTT' for component 'p:rsci' (LIB-3)
+Global signal 'xt:rsc.s_tdone' added to design 'peaseNTT' for component 'xt:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.BREADY' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.BVALID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARADDR' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.BID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.WREADY' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.BUSER' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.BRESP' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARPROT' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARCACHE' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARREGION' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARQOS' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARSIZE' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARLEN' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARLOCK' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARBURST' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RRESP' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RDATA' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RUSER' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RLAST' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARVALID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARUSER' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.ARREADY' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'yt:rsc.clken' added to design 'peaseNTT' for component 'yt:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.s_tdone' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'yt:rsc.radr' added to design 'peaseNTT' for component 'yt:rsci' (LIB-3)
+Global signal 'yt:rsc.q' added to design 'peaseNTT' for component 'yt:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RREADY' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.RVALID' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.tr_write_done' added to design 'peaseNTT' for component 'twiddle_h:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+Global signal 'r:rsc.triosy.lz' added to design 'peaseNTT' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'peaseNTT' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy.lz' added to design 'peaseNTT' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'peaseNTT' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 1361, Real ops = 338, Vars = 758 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'peaseNTT.v1': elapsed time 3.71 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'peaseNTT.v1' (SOL-8)
+Creating shared register 'INNER_LOOP1:r(9:0).sva#1' for variables 'INNER_LOOP1:r(9:0).sva#1, INNER_LOOP2:r(9:0).sva#1, INNER_LOOP3:r(9:0).sva#1, INNER_LOOP4:r(9:0).sva#1' (3 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'butterFly1#1:f1.sva' for variables 'butterFly1#1:f1.sva, butterFly1:f1.sva, butterFly2#1:f1.sva, butterFly2:f1.sva, butterFly1#1:f2:asn.itm, butterFly1#1:modulo_add(return).sva, butterFly1:modulo_add(return).sva, butterFly2#1:f2:asn.itm, butterFly2#1:modulo_add(return).sva, butterFly2:modulo_add(return).sva' (9 registers deleted). (FSM-3)
+Creating shared register 'INNER_LOOP1:r(9:0).sva(8:0)' for variables 'INNER_LOOP1:r(9:0).sva(8:0), INNER_LOOP2:r(9:0).sva(8:0), INNER_LOOP3:r(9:0).sva(8:0), INNER_LOOP4:r(9:0).sva(8:0)' (3 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 1317, Real ops = 312, Vars = 1172 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'peaseNTT.v1': elapsed time 4.00 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'peaseNTT.v1' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 1314, Real ops = 313, Vars = 760 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'peaseNTT.v1': elapsed time 14.45 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_d22d4e56d0fd87f6f51ef32934ff0f756384_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Finished writing concatenated file: /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v1/concat_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ../td_ccore_solutions/modulo_add_97cb7d6ad622a5f581172b2bf5ebdd7b605c_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ../td_ccore_solutions/modulo_sub_d22d4e56d0fd87f6f51ef32934ff0f756384_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v1/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/mult_b8e95c9af18dbe611a0083cdf405ba8270ef_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_bl_beh_v5.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not determine clock name for resource /peaseNTT/core/yt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /peaseNTT/core/yt:rsc. Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Netlist written to file 'rtl.vhdl' (NET-4)
+Finished writing concatenated simulation file: /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v1/concat_sim_rtl.v
+Generating scverify_top.cpp ()
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+Add dependent file: ../td_ccore_solutions/modulo_add_97cb7d6ad622a5f581172b2bf5ebdd7b605c_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_bl_beh_v5.v
+Add dependent file: ../td_ccore_solutions/mult_b8e95c9af18dbe611a0083cdf405ba8270ef_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Warning: Could not determine clock name for resource /peaseNTT/core/yt:rsc. Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+order file name is: rtl.vhdl_order.txt
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/mult_b8e95c9af18dbe611a0083cdf405ba8270ef_0/rtl.vhdl
+Add dependent file: ../td_ccore_solutions/modulo_sub_d22d4e56d0fd87f6f51ef32934ff0f756384_0/rtl.vhdl
+# Warning: Could not determine clock name for resource /peaseNTT/core/yt:rsc. Defaulting to 'clk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ../td_ccore_solutions/modulo_add_97cb7d6ad622a5f581172b2bf5ebdd7b605c_0/rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v1/concat_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_bl_beh_v5.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_bl_beh_v5.v
+Report written to file 'rtl.rpt'
+Add dependent file: ../td_ccore_solutions/mult_b8e95c9af18dbe611a0083cdf405ba8270ef_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_d22d4e56d0fd87f6f51ef32934ff0f756384_0/rtl.v
+# Info: Starting transformation 'extract' on solution 'peaseNTT.v1' (SOL-8)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+Add dependent file: ../td_ccore_solutions/modulo_add_97cb7d6ad622a5f581172b2bf5ebdd7b605c_0/rtl.v

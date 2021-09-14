@@ -1,0 +1,83 @@
+-- Catapult System Level Synthesis: C Design Checker Formal Rules Report by Rule Status
+
+Current Option Settings
+  Option                          Description                                          Value
+  ------------------------------  --------------------------------------------------   -----
+  WAIVER_FILE                     C Design Checker Waiver file                         
+  SYMBOLIC_MEMSIZE_THRESHOLD      Symbolic Memory Size Threshold                       256
+  VERIFICATION_EFFORT             Verification Effort                                  medium
+  VERIFICATION_MODE               Verification modes of CDesignChecker run             Custom
+  GLOBAL_OPTIONS                  Global Options                                       
+  ABR                             ABR - Array Bounds Read                              DISABLED
+  ABW                             ABW - Array Bounds Write                             DISABLED
+  ACC                             ACC - Accumulator of native C type                   DISABLED
+  ACS                             ACS - Accumulator of saturated type                  DISABLED
+  AIC                             AIC - Assignment used Instead of Comparison          DISABLED
+  ALS                             ALS - Ac_int Left Shift check                        DISABLED
+  AOB                             AOB - Arithmetic Operator with Boolean               DISABLED
+  APT                             APT - Array Dimension Power of Two                   DISABLED
+  CAS                             CAS - Incomplete Switch-Case                         DISABLED
+  CCC                             CCC - Static constant comparison                     DISABLED
+  CIA                             CIA - Comparison Instead of Assignment               DISABLED
+  CMC                             CMC - C style Memory Check                           DISABLED
+  CNS                             CNS - Constant condition of if/switch                DISABLED
+  CWB                             CWB - Case Without Break                             DISABLED
+  DBZ                             DBZ - Divide By Zero                                 DISABLED
+  FXD                             FXD - Mixed fixed and non-fixed datatypes            DISABLED
+  ISE                             ISE - Illegal Shift Error                            DISABLED
+  LRC                             LRC - Long Reset Cycle                               DISABLED
+  MXS                             MXS - Mixed signed and unsigned datatypes            DISABLED
+  OVL                             OVL - Overflow/Underflow                             SKIPPED
+  PDD                             PDD - Platform dependent datatype (long)             DISABLED
+  RRT                             RRT - Reset referenced in thread                     DISABLED
+  SAT                             SAT - Sub-optimal Adder Tree                         DISABLED
+  STF                             STF - Funcs with statics called multiple times       DISABLED
+  SUD                             SUD - Suboptimal Use of Divide and Modulus Operator  DISABLED
+  UMR                             UMR - Uninitialized Memory Read                      DISABLED
+
+FATAL                                                   Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+ERROR                                                   Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+WARNING                                                 Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+INFO                                                    Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+DISABLED                                              
+----------------------------------------------------- 
+ABR - Array Bounds Read                               
+ABW - Array Bounds Write                              
+ACC - Accumulator of native C type                    
+ACS - Accumulator of saturated type                   
+AIC - Assignment used Instead of Comparison           
+ALS - Ac_int Left Shift check                         
+AOB - Arithmetic Operator with Boolean                
+APT - Array Dimension Power of Two                    
+CAS - Incomplete Switch-Case                          
+CCC - Static constant comparison                      
+CIA - Comparison Instead of Assignment                
+CMC - C style Memory Check                            
+CNS - Constant condition of if/switch                 
+CWB - Case Without Break                              
+DBZ - Divide By Zero                                  
+FXD - Mixed fixed and non-fixed datatypes             
+ISE - Illegal Shift Error                             
+LRC - Long Reset Cycle                                
+MXS - Mixed signed and unsigned datatypes             
+PDD - Platform dependent datatype (long)              
+RRT - Reset referenced in thread                      
+SAT - Sub-optimal Adder Tree                          
+STF - Funcs with statics called multiple times        
+SUD - Suboptimal Use of Divide and Modulus Operator   
+UMR - Uninitialized Memory Read                       
+
+Violations - 0                                              
+                                                            
+Waived - 0                                                  
+                                                            
+
+End of Report

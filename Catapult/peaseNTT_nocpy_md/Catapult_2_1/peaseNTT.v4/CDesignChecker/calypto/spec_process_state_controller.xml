@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<design>
+  <process name="proc_ln127"  src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.cpp:127:0">
+    <control_states controller="_Calypto_present_state_0">
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.cpp:129:0" control_value="001" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:91:0" control_value="010" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:115:0" control_value="011" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:87:0" control_value="100" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:141:0" control_value="101" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:163:0" control_value="110" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp:139:0" control_value="111" is_transaction_boundary="0"/>
+      <state src="/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v4/CDesignChecker/spec_wrapper.cpp:154:0" control_value="001" is_transaction_boundary="0"/>
+    </control_states>
+    <reset_info>
+      <reset name="rst" is_active_high="true"/>
+    </reset_info>
+    <clock_info>
+      <clock name="clk"/>
+    </clock_info>
+  </process>
+</design>

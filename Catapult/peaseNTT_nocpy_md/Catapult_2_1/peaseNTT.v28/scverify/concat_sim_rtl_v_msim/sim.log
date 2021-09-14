@@ -1,0 +1,122 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 3.10.0-1062.4.1.el7.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/vsim.wlf -l ./Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/sim.log -L ./Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/work scverify_top_opt -do "do {./Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 01:35:32 on Sep 12,2021
+# Loading /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '5 ns'
+# Loading work.peaseNTT(fast)
+# Loading work.BLOCK_1R1W_RBW(fast)
+# Loading work.peaseNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_en_6_10_32_1024_1024_32_1_gen(fast)
+# Loading work.peaseNTT_core(fast)
+# Loading work.ccs_in_v1(fast)
+# Loading work.mgc_mul_pipe(fast)
+# Loading work.mgc_shift_bl_v5(fast)
+# Loading work.mgc_shift_bl_v5(fast__1)
+# Loading work.mgc_shift_l_v5(fast)
+# Loading work.peaseNTT_core_wait_dp(fast)
+# Loading work.peaseNTT_core_xt_rsci(fast)
+# Loading work.ccs_axi4_slave_mem(fast)
+# Loading work.peaseNTT_core_xt_rsci_xt_rsc_wait_ctrl(fast)
+# Loading work.peaseNTT_core_xt_rsci_xt_rsc_wait_dp(fast)
+# Loading work.peaseNTT_core_twiddle_rsci(fast)
+# Loading work.peaseNTT_core_twiddle_rsci_twiddle_rsc_wait_ctrl(fast)
+# Loading work.peaseNTT_core_twiddle_rsci_twiddle_rsc_wait_dp(fast)
+# Loading work.peaseNTT_core_twiddle_h_rsci(fast)
+# Loading work.peaseNTT_core_twiddle_h_rsci_twiddle_h_rsc_wait_ctrl(fast)
+# Loading work.peaseNTT_core_twiddle_h_rsci_twiddle_h_rsc_wait_dp(fast)
+# Loading work.peaseNTT_core_xt_rsc_triosy_obj(fast)
+# Loading work.mgc_io_sync_v2(fast)
+# Loading work.peaseNTT_core_xt_rsc_triosy_obj_xt_rsc_triosy_wait_ctrl(fast)
+# Loading work.peaseNTT_core_p_rsc_triosy_obj(fast)
+# Loading work.peaseNTT_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl(fast)
+# Loading work.peaseNTT_core_r_rsc_triosy_obj(fast)
+# Loading work.peaseNTT_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl(fast)
+# Loading work.peaseNTT_core_twiddle_rsc_triosy_obj(fast)
+# Loading work.peaseNTT_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl(fast)
+# Loading work.peaseNTT_core_twiddle_h_rsc_triosy_obj(fast)
+# Loading work.peaseNTT_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl(fast)
+# Loading work.peaseNTT_core_staller(fast)
+# Loading work.peaseNTT_core_core_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/xt_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_twiddle_h'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_twiddle_h'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_twiddle'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_twiddle'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_r'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_r'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_p'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_p'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_xt'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_xt'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_xt'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_xt'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-3991) The variable '_phase' in the class 'ccs_axi4_slave_mem_trans_rsc<1024, 32, 32, false, 0, 12, 32, 1, 1, 1, 0U, 0U>' is undebuggable because its name
+# collides with a variable in its base class. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem_trans_rsc.h, 656)
+# ** Warning: (vsim-3991) The variable '_phase' in the class 'ccs_axi4_slave_mem_trans_rsc<1024, 32, 32, false, 0, 12, 32, 1, 1, 1, 0U, 0U>' is undebuggable because its name
+# collides with a variable in its base class. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem_trans_rsc.h, 656)
+# ** Warning: (vsim-3991) The variable '_phase' in the class 'ccs_axi4_slave_mem_trans_rsc<1024, 32, 32, false, 0, 12, 32, 1, 1, 1, 0U, 0U>' is undebuggable because its name
+# collides with a variable in its base class. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem_trans_rsc.h, 656)
+# Disabling STALL_FLAG toggling
+# do {./Catapult_2_1/peaseNTT.v28/scverify/concat_sim_rtl_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult_2_1/peaseNTT.v28/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run
+# Info: HW reset: TLS_rst active @ 0 s
+# ../../src/main.cpp:Testbench Complete with 3 mismatches, after running 1 iteration(s).
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 3
+# 
+# Info: Collecting data completed
+#    captured 1 values of xt_IN
+#    captured 1 values of xt
+#    captured 1 values of p
+#    captured 1 values of r
+#    captured 1 values of twiddle
+#    captured 1 values of twiddle_h
+# Info: scverify_top/user_tb: Testbench exited early or ran into deadlock
+# 
+# Checking results
+# 'xt'
+#    capture count        = 1
+#    comparison count     = 0
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+#    Error: output 'xt' has incomplete comparisons
+# 
+# Error: C++ Testbench 'main()' returned a non-zero exit code (3). Check your testbench.
+# Info: scverify_top/user_tb: Simulation FAILED @ 100 ps
+# Info: scverify_top/Monitor: runs with constant clock period 0 s
+# Info: scverify_top/Monitor: Throughput: 1 transaction per 0 s
+# Info: scverify_top/Monitor: No transactions completed.  Skipping latency and throughput reports
+# End time: 01:39:49 on Sep 12,2021, Elapsed time: 0:04:17
+# Errors: 0, Warnings: 16, Suppressed Warnings: 2

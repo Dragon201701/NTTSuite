@@ -1,0 +1,25 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n1609[label="n1609 : DOPER\n 143cy+2.925\n",shape=ellipse,style=filled,color=bisque];
+  n1744[label="n1744 : DOPER\n 144cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n1605[label="n1605 : ZOPER\n 143cy+2.925\n",shape=ellipse];
+  n1604[label="n1604 : DOPER\n 143cy+1.455\n",shape=ellipse,style=filled,color=bisque];
+  n1603[label="n1603 : ZOPER\n 143cy+1.455\n",shape=ellipse];
+  n1601[label="n1601 : DOPER\n 143cy\n",shape=ellipse,style=filled,color=bisque];
+  n955[label="n955 : DOPER\n 142cy\n",shape=ellipse,style=filled,color=bisque];
+  n320[label="n320 : DOPER\n 140cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n1964[label="n1964 : DOPER\n 142cy+4\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n1609 : 0x7fdd608f6a80 modulo_add#1:mux\ln1744 : 0x7fdd61d10cd0 butterFly#1:write_mem(xx:rsc(32)(0).@)\ln1605 : 0x7fdd60594980 modulo_add#1:slc()(32)\ln1604 : 0x7fdd64cdebb0 modulo_add#1:acc#1\ln1603 : 0x7fdd60593c40 butterFly#1:not\ln1601 : 0x7fdd608eab50 butterFly#1:acc#1\ln955  : 0x7fdd5d750a30 butterFly#1:f1:mux1h\ln320  : 0x7fdd6519ba30 butterFly#1:f1:read_mem(xx:rsc(32)(0).@)\ln1964 : 0x7fdd7311ef50 butterFly#1:write_mem(xx:rsc(32)(0).@)#1\l",shape=none];
+  n1609 -> n1744[label="258 : 0+1.520",color=blue];
+  n1605 -> n1609[label="258 : 0",color=blue];
+  n1604 -> n1605[label="259 : 0",color=green2];
+  n1603 -> n1604[label="259 : 0",color=green2];
+  n1601 -> n1603[label="258 : 0",color=blue];
+  n955 -> n1601[label="258 : 0",color=blue];
+  n320 -> n955[label="258 : 0",color=blue];
+  n1964 -> n320[label="262 : 0+1.205",color=red, style=bold];
+  n1744 -> n1964[label="258 : 0",color=blue];
+  n1744 -> n320[label="262 : 0+1.205",color=red, style=bold];
+}
+

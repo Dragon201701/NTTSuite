@@ -1,0 +1,120 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 9.29 seconds, memory usage 1641952kB, peak memory usage 1641952kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT/src/utils.cpp" (CRD-1)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/peaseNTT/src/ntt.cpp /home/jd4691/research/NTT_CPU/peaseNTT/src/utils.cpp (CIN-69)
+/INPUTFILES/2
+Source file analysis completed (CIN-68)
+option set Input/TargetPlatform x86_64
+Pragma 'hls_design<top>' detected on routine 'peaseNTT' (CIN-6)
+solution file add ./src/utils.cpp
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+Moving session transcript to file "/home/jd4691/research/NTT_CPU/peaseNTT/catapult.log"
+c++11
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 181, Real ops = 75, Vars = 44 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'peaseNTT.v1': elapsed time 5.37 seconds, memory usage 1641952kB, peak memory usage 1641952kB (SOL-9)
+Design 'peaseNTT' was read (SOL-1)
+Loop '/peaseNTT/core/cpyVec:for' iterated at most 16384 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_CPU/peaseNTT/Catapult/peaseNTT.v1/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/peaseNTT/core/INNER_LOOP' iterated at most 2048 times. (LOOP-2)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Synthesizing routine 'peaseNTT' (CIN-13)
+Found top design routine 'peaseNTT' specified by directive (CIN-52)
+Inlining routine 'operator>=<20, false>' (CIN-14)
+Inlining routine 'peaseNTT' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Inlining routine 'modulo_add' (CIN-14)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'operator+=<20, false>' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Optimizing block '/peaseNTT' ... (CIN-4)
+Inlining routine 'mult' (CIN-14)
+Inlining routine 'cpyVec' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'peaseNTT.v1' (SOL-8)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 181, Real ops = 75, Vars = 44 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaseNTT.v1': elapsed time 1.19 seconds, memory usage 1642472kB, peak memory usage 1642472kB (SOL-9)
+solution library add amba
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'peaseNTT.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-1_beh.lib' [mgc_Xilinx-VIRTEX-7-1_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-1_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -1 -part xc7vx485tffg1157-1
+go libraries
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 181, Real ops = 75, Vars = 44 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'peaseNTT.v1': elapsed time 0.29 seconds, memory usage 1642472kB, peak memory usage 1642472kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'peaseNTT.v1' (SOL-8)
+go assembly

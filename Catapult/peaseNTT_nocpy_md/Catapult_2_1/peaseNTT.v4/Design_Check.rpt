@@ -1,0 +1,166 @@
+-- Catapult System Level Synthesis: C Design Checker Formal Rules Report by Rule Status
+
+Current Option Settings
+  Option                          Description                                          Value
+  ------------------------------  --------------------------------------------------   -----
+  WAIVER_FILE                     C Design Checker Waiver file                         
+  SYMBOLIC_MEMSIZE_THRESHOLD      Symbolic Memory Size Threshold                       256
+  VERIFICATION_EFFORT             Verification Effort                                  medium
+  VERIFICATION_MODE               Verification modes of CDesignChecker run             Custom
+  GLOBAL_OPTIONS                  Global Options                                       
+  ABR                             ABR - Array Bounds Read                              DISABLED
+  ABW                             ABW - Array Bounds Write                             DISABLED
+  ACC                             ACC - Accumulator of native C type                   DISABLED
+  ACS                             ACS - Accumulator of saturated type                  DISABLED
+  AIC                             AIC - Assignment used Instead of Comparison          DISABLED
+  ALS                             ALS - Ac_int Left Shift check                        DISABLED
+  AOB                             AOB - Arithmetic Operator with Boolean               DISABLED
+  APT                             APT - Array Dimension Power of Two                   DISABLED
+  CAS                             CAS - Incomplete Switch-Case                         DISABLED
+  CCC                             CCC - Static constant comparison                     DISABLED
+  CIA                             CIA - Comparison Instead of Assignment               DISABLED
+  CMC                             CMC - C style Memory Check                           DISABLED
+  CNS                             CNS - Constant condition of if/switch                DISABLED
+  CWB                             CWB - Case Without Break                             DISABLED
+  DBZ                             DBZ - Divide By Zero                                 DISABLED
+  FXD                             FXD - Mixed fixed and non-fixed datatypes            DISABLED
+  ISE                             ISE - Illegal Shift Error                            DISABLED
+  LRC                             LRC - Long Reset Cycle                               DISABLED
+  MXS                             MXS - Mixed signed and unsigned datatypes            DISABLED
+  OVL                             OVL - Overflow/Underflow                             CHECKED
+  PDD                             PDD - Platform dependent datatype (long)             DISABLED
+  RRT                             RRT - Reset referenced in thread                     DISABLED
+  SAT                             SAT - Sub-optimal Adder Tree                         DISABLED
+  STF                             STF - Funcs with statics called multiple times       DISABLED
+  SUD                             SUD - Suboptimal Use of Divide and Modulus Operator  DISABLED
+  UMR                             UMR - Uninitialized Memory Read                      DISABLED
+
+FATAL                                                   Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+ERROR                                                   Violated     Waived
+----------------------------------------------------- ---------- ----------
+OVL - Overflow/Underflow                                      11          0
+
+WARNING                                                 Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+INFO                                                    Violated     Waived
+----------------------------------------------------- ---------- ----------
+
+DISABLED                                              
+----------------------------------------------------- 
+ABR - Array Bounds Read                               
+ABW - Array Bounds Write                              
+ACC - Accumulator of native C type                    
+ACS - Accumulator of saturated type                   
+AIC - Assignment used Instead of Comparison           
+ALS - Ac_int Left Shift check                         
+AOB - Arithmetic Operator with Boolean                
+APT - Array Dimension Power of Two                    
+CAS - Incomplete Switch-Case                          
+CCC - Static constant comparison                      
+CIA - Comparison Instead of Assignment                
+CMC - C style Memory Check                            
+CNS - Constant condition of if/switch                 
+CWB - Case Without Break                              
+DBZ - Divide By Zero                                  
+FXD - Mixed fixed and non-fixed datatypes             
+ISE - Illegal Shift Error                             
+LRC - Long Reset Cycle                                
+MXS - Mixed signed and unsigned datatypes             
+PDD - Platform dependent datatype (long)              
+RRT - Reset referenced in thread                      
+SAT - Sub-optimal Adder Tree                          
+STF - Funcs with statics called multiple times        
+SUD - Suboptimal Use of Divide and Modulus Operator   
+UMR - Uninitialized Memory Read                       
+
+Violations - 14                                             
+FATAL                                                       
+ERROR                                                       
+  OVL - Overflow/Underflow - 14                             
+    ntt.cpp:42:12                                           
+      | 40   DATA_TYPE mult(DATA_TYPE x, DATA_TYPE y, DATA_TYPE y_, DATA_TYPE p){
+      | 41   	DATA_TYPE z = (DATA_TYPE_TMP)x * y;                
+      > 42   	DATA_TYPE t = ((DATA_TYPE_TMP)x * y_) >> PARAM_WIDTH; 
+      | 43   	DATA_TYPE z_ = (DATA_TYPE_TMP)t * p;               
+      | 44   	DATA_TYPE res = z - z_;                            
+                                                            
+    ntt.cpp:114:15                                          
+      | 112          	}                                          
+      | 113                                                      
+      > 114          	base = -1 << (c - 2);                      
+      | 115          	INNER_LOOP2: for (PARAMS_TYPE r = 0; r < mid; r += 1){
+      | 116  			DATA_TYPE tw = twiddle[base & r];                
+                                                            
+    ntt.cpp:89:22                                           
+      | 87   	STAGE_LOOP: for (c = VECTOR_ADDR_BIT; c >= 6; c -= 2){
+      | 88                                                       
+      > 89           	PARAMS_TYPE base = -1 << (c - 1);          
+      | 90                                                       
+      | 91           	INNER_LOOP1: for (PARAMS_TYPE r = 0; r < mid; r += 1){
+                                                            
+    ntt.cpp:140:15                                          
+      | 138      	}                                              
+      | 139  	STAGE_LOOP1: for (; c >= 2; c -= 2){               
+      > 140  		PARAMS_TYPE base = -1 << (c - 1);                 
+      | 141          	INNER_LOOP3: for (PARAMS_TYPE r = 0; r < mid; r += 1){
+      | 142  			butterFly2(xt, yt, r + 0, p, base, twiddle, twiddle_h);
+                                                            
+    ntt.cpp:44:12                                           
+      | 42   	DATA_TYPE t = ((DATA_TYPE_TMP)x * y_) >> PARAM_WIDTH; 
+      | 43   	DATA_TYPE z_ = (DATA_TYPE_TMP)t * p;               
+      > 44   	DATA_TYPE res = z - z_;                            
+      | 45   	if(res >= p)                                       
+      | 46   		res = res - p;                                    
+                                                            
+    ntt.cpp:66:43                                           
+      | 64   	DATA_TYPE f2 = mult(xt[(r << 1) + 1], tw, tw_h, p);
+      | 65   	yt[r]       = modulo_add(f1 + f2, p);              
+      > 66   	yt[r + (VECTOR_SIZE >> 1)]  = modulo_sub(f1 - f2, p);
+      | 67   }                                                   
+      | 68                                                       
+                                                            
+    ntt.cpp:65:27                                           
+      | 63   	DATA_TYPE f1 = xt[r << 1];                         
+      | 64   	DATA_TYPE f2 = mult(xt[(r << 1) + 1], tw, tw_h, p);
+      > 65   	yt[r]       = modulo_add(f1 + f2, p);              
+      | 66   	yt[r + (VECTOR_SIZE >> 1)]  = modulo_sub(f1 - f2, p);
+      | 67   }                                                   
+                                                            
+    ntt.cpp:41:12                                           
+      | 39   #pragma hls_design inline                           
+      | 40   DATA_TYPE mult(DATA_TYPE x, DATA_TYPE y, DATA_TYPE y_, DATA_TYPE p){
+      > 41   	DATA_TYPE z = (DATA_TYPE_TMP)x * y;                
+      | 42   	DATA_TYPE t = ((DATA_TYPE_TMP)x * y_) >> PARAM_WIDTH; 
+      | 43   	DATA_TYPE z_ = (DATA_TYPE_TMP)t * p;               
+                                                            
+    ntt.cpp:76:43                                           
+      | 74   	DATA_TYPE f2 = mult(xt[(r << 1) + 1], tw, tw_h, p);
+      | 75   	yt[r]       = modulo_add(f1 + f2, p);              
+      > 76   	yt[r + (VECTOR_SIZE >> 1)]  = modulo_sub(f1 - f2, p);
+      | 77   }                                                   
+      | 78                                                       
+                                                            
+    ntt.cpp:43:12                                           
+      | 41   	DATA_TYPE z = (DATA_TYPE_TMP)x * y;                
+      | 42   	DATA_TYPE t = ((DATA_TYPE_TMP)x * y_) >> PARAM_WIDTH; 
+      > 43   	DATA_TYPE z_ = (DATA_TYPE_TMP)t * p;               
+      | 44   	DATA_TYPE res = z - z_;                            
+      | 45   	if(res >= p)                                       
+                                                            
+    ntt.cpp:162:15                                          
+      | 160          	}                                          
+      | 161                                                      
+      > 162          	base = -1 << (c - 2);                      
+      | 163          	INNER_LOOP4: for (PARAMS_TYPE r = 0; r < mid; r += 1){
+      | 164  			butterFly2(yt, xt, r + 0, p, base, twiddle, twiddle_h);
+                                                            
+WARNING                                                     
+INFO                                                        
+                                                            
+Waived - 0                                                  
+                                                            
+
+End of Report

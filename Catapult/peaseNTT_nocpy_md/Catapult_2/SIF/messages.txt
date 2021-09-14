@@ -1,0 +1,91 @@
+
+# Messages from "go new"
+
+# Error: Cannot execute command(SELECT - sid1), core busy
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v5': elapsed time 5.88 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp (CIN-69)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v5' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaseNTT' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v5' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Completed transformation 'new' on solution 'solution.v5': elapsed time 5.20 seconds, memory usage 5050344kB, peak memory usage 5050344kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+Input file has changed
+# Error: go analyze: Failed analyze
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go libraries
+# Error: solution file set: File '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp' not found in input file list
+# Error: solution file set: File '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp' not found in input file list
+solution file set {$PROJECT_HOME/src/main.cpp} -updated
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Error: identifier "naiveNTT" is undefined (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: solution file set: File '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp' not found in input file list
+solution file set {$PROJECT_HOME/src/main.cpp} -updated
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+go libraries
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v5': elapsed time 5.41 seconds, memory usage 5050344kB, peak memory usage 5050344kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: Compilation aborted (CIN-5)
+# Error: identifier "mult" is undefined (CRD-20)
+Input file has changed
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: go analyze: Failed analyze
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v5' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: solution file set: File '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp' not found in input file list
+solution file set {$PROJECT_HOME/src/utils.cpp} -updated
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp (CIN-69)
+go libraries
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v5' (SOL-8)
+go libraries
+# Error: identifier "mult" is undefined (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-20)
+solution.v5
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v5' at state 'new' (PRJ-2)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/ntt.cpp" (CRD-1)
+solution file set {$PROJECT_HOME/src/main.cpp} -updated
+Input file has changed
+Input file has changed
+# Error: solution file set: File '/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/main.cpp' not found in input file list
+# Error: Compilation aborted (CIN-5)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/peaseNTT_nocpy/src/utils.cpp" (CRD-1)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v5': elapsed time 5.09 seconds, memory usage 4984808kB, peak memory usage 5050344kB (SOL-9)
