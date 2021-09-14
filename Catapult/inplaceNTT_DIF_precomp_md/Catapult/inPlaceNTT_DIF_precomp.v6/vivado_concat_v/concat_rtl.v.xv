@@ -32,11 +32,11 @@ create_project -force tcl_concat_v
 # set up XPM libraries for XPM-related IP like the Catapult Xilinx_FIFO
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY XPM_FIFO} [current_project]
 read_xdc $outputDir/concat_rtl.v.xv.sdc
-set_property part xcvu13p-flga2577-3-e [current_project]
+set_property part xc7vx690tffg1761-2 [current_project]
 #
 # STEP#2: run synthesis, report utilization and timing estimates, write checkpoint design
 #
-synth_design   -top inPlaceNTT_DIF_precomp -part xcvu13p-flga2577-3-e -mode out_of_context  -include_dirs ""
+synth_design   -top inPlaceNTT_DIF_precomp -part xc7vx690tffg1761-2 -mode out_of_context  -include_dirs ""
 write_checkpoint -force $outputDir/post_synth
 set viv_report_dir /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/vivado_concat_v
 report_utilization -file $viv_report_dir/utilization_synth.rpt

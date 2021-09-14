@@ -53,438 +53,58 @@ public:
   // Interface Ports
   sc_in<bool> clk;
   sc_in<sc_logic> rst;
-  sc_out<sc_logic> run_rsc_triosy;
-  sc_in<sc_logic> run_rsc_RREADY;
-  sc_out<sc_logic> run_rsc_RVALID;
-  sc_out<sc_lv<2> > run_rsc_RRESP;
-  sc_out<sc_lv<32> > run_rsc_RDATA;
-  sc_out<sc_logic> run_rsc_ARREADY;
-  sc_in<sc_logic> run_rsc_ARVALID;
-  sc_in<sc_lv<12> > run_rsc_ARADDR;
-  sc_in<sc_logic> run_rsc_BREADY;
-  sc_out<sc_logic> run_rsc_BVALID;
-  sc_out<sc_lv<2> > run_rsc_BRESP;
-  sc_out<sc_logic> run_rsc_WREADY;
-  sc_in<sc_logic> run_rsc_WVALID;
-  sc_in<sc_lv<4> > run_rsc_WSTRB;
-  sc_in<sc_lv<32> > run_rsc_WDATA;
-  sc_out<sc_logic> run_rsc_AWREADY;
-  sc_in<sc_logic> run_rsc_AWVALID;
-  sc_in<sc_lv<12> > run_rsc_AWADDR;
-  sc_in<sc_logic> vec_rsc_s_tdone;
-  sc_in<sc_logic> vec_rsc_tr_write_done;
-  sc_in<sc_logic> vec_rsc_RREADY;
-  sc_out<sc_logic> vec_rsc_RVALID;
-  sc_out<sc_logic> vec_rsc_RUSER;
-  sc_out<sc_logic> vec_rsc_RLAST;
-  sc_out<sc_lv<2> > vec_rsc_RRESP;
-  sc_out<sc_lv<32> > vec_rsc_RDATA;
-  sc_out<sc_logic> vec_rsc_RID;
-  sc_out<sc_logic> vec_rsc_ARREADY;
-  sc_in<sc_logic> vec_rsc_ARVALID;
-  sc_in<sc_logic> vec_rsc_ARUSER;
-  sc_in<sc_lv<4> > vec_rsc_ARREGION;
-  sc_in<sc_lv<4> > vec_rsc_ARQOS;
-  sc_in<sc_lv<3> > vec_rsc_ARPROT;
-  sc_in<sc_lv<4> > vec_rsc_ARCACHE;
-  sc_in<sc_logic> vec_rsc_ARLOCK;
-  sc_in<sc_lv<2> > vec_rsc_ARBURST;
-  sc_in<sc_lv<3> > vec_rsc_ARSIZE;
-  sc_in<sc_lv<8> > vec_rsc_ARLEN;
-  sc_in<sc_lv<12> > vec_rsc_ARADDR;
-  sc_in<sc_logic> vec_rsc_ARID;
-  sc_in<sc_logic> vec_rsc_BREADY;
-  sc_out<sc_logic> vec_rsc_BVALID;
-  sc_out<sc_logic> vec_rsc_BUSER;
-  sc_out<sc_lv<2> > vec_rsc_BRESP;
-  sc_out<sc_logic> vec_rsc_BID;
-  sc_out<sc_logic> vec_rsc_WREADY;
-  sc_in<sc_logic> vec_rsc_WVALID;
-  sc_in<sc_logic> vec_rsc_WUSER;
-  sc_in<sc_logic> vec_rsc_WLAST;
-  sc_in<sc_lv<4> > vec_rsc_WSTRB;
-  sc_in<sc_lv<32> > vec_rsc_WDATA;
-  sc_out<sc_logic> vec_rsc_AWREADY;
-  sc_in<sc_logic> vec_rsc_AWVALID;
-  sc_in<sc_logic> vec_rsc_AWUSER;
-  sc_in<sc_lv<4> > vec_rsc_AWREGION;
-  sc_in<sc_lv<4> > vec_rsc_AWQOS;
-  sc_in<sc_lv<3> > vec_rsc_AWPROT;
-  sc_in<sc_lv<4> > vec_rsc_AWCACHE;
-  sc_in<sc_logic> vec_rsc_AWLOCK;
-  sc_in<sc_lv<2> > vec_rsc_AWBURST;
-  sc_in<sc_lv<3> > vec_rsc_AWSIZE;
-  sc_in<sc_lv<8> > vec_rsc_AWLEN;
-  sc_in<sc_lv<12> > vec_rsc_AWADDR;
-  sc_in<sc_logic> vec_rsc_AWID;
+  sc_out<sc_logic> run_rsc_rdy;
+  sc_in<sc_logic> run_rsc_vld;
+  sc_out<sc_lv<10> > vec_rsc_adra;
+  sc_out<sc_lv<32> > vec_rsc_da;
+  sc_out<sc_logic> vec_rsc_wea;
+  sc_in<sc_lv<32> > vec_rsc_qa;
+  sc_out<sc_lv<10> > vec_rsc_adrb;
+  sc_out<sc_lv<32> > vec_rsc_db;
+  sc_out<sc_logic> vec_rsc_web;
+  sc_in<sc_lv<32> > vec_rsc_qb;
   sc_out<sc_logic> vec_rsc_triosy_lz;
-  sc_in<sc_logic> p_rsc_RREADY;
-  sc_out<sc_logic> p_rsc_RVALID;
-  sc_out<sc_lv<2> > p_rsc_RRESP;
-  sc_out<sc_lv<32> > p_rsc_RDATA;
-  sc_out<sc_logic> p_rsc_ARREADY;
-  sc_in<sc_logic> p_rsc_ARVALID;
-  sc_in<sc_lv<12> > p_rsc_ARADDR;
-  sc_in<sc_logic> p_rsc_BREADY;
-  sc_out<sc_logic> p_rsc_BVALID;
-  sc_out<sc_lv<2> > p_rsc_BRESP;
-  sc_out<sc_logic> p_rsc_WREADY;
-  sc_in<sc_logic> p_rsc_WVALID;
-  sc_in<sc_lv<4> > p_rsc_WSTRB;
-  sc_in<sc_lv<32> > p_rsc_WDATA;
-  sc_out<sc_logic> p_rsc_AWREADY;
-  sc_in<sc_logic> p_rsc_AWVALID;
-  sc_in<sc_lv<12> > p_rsc_AWADDR;
+  sc_in<sc_lv<32> > p_rsc_dat;
   sc_out<sc_logic> p_rsc_triosy_lz;
-  sc_in<sc_logic> r_rsc_RREADY;
-  sc_out<sc_logic> r_rsc_RVALID;
-  sc_out<sc_lv<2> > r_rsc_RRESP;
-  sc_out<sc_lv<32> > r_rsc_RDATA;
-  sc_out<sc_logic> r_rsc_ARREADY;
-  sc_in<sc_logic> r_rsc_ARVALID;
-  sc_in<sc_lv<12> > r_rsc_ARADDR;
-  sc_in<sc_logic> r_rsc_BREADY;
-  sc_out<sc_logic> r_rsc_BVALID;
-  sc_out<sc_lv<2> > r_rsc_BRESP;
-  sc_out<sc_logic> r_rsc_WREADY;
-  sc_in<sc_logic> r_rsc_WVALID;
-  sc_in<sc_lv<4> > r_rsc_WSTRB;
-  sc_in<sc_lv<32> > r_rsc_WDATA;
-  sc_out<sc_logic> r_rsc_AWREADY;
-  sc_in<sc_logic> r_rsc_AWVALID;
-  sc_in<sc_lv<12> > r_rsc_AWADDR;
+  sc_in<sc_lv<32> > r_rsc_dat;
   sc_out<sc_logic> r_rsc_triosy_lz;
-  sc_in<sc_logic> twiddle_rsc_s_tdone;
-  sc_in<sc_logic> twiddle_rsc_tr_write_done;
-  sc_in<sc_logic> twiddle_rsc_RREADY;
-  sc_out<sc_logic> twiddle_rsc_RVALID;
-  sc_out<sc_logic> twiddle_rsc_RUSER;
-  sc_out<sc_logic> twiddle_rsc_RLAST;
-  sc_out<sc_lv<2> > twiddle_rsc_RRESP;
-  sc_out<sc_lv<32> > twiddle_rsc_RDATA;
-  sc_out<sc_logic> twiddle_rsc_RID;
-  sc_out<sc_logic> twiddle_rsc_ARREADY;
-  sc_in<sc_logic> twiddle_rsc_ARVALID;
-  sc_in<sc_logic> twiddle_rsc_ARUSER;
-  sc_in<sc_lv<4> > twiddle_rsc_ARREGION;
-  sc_in<sc_lv<4> > twiddle_rsc_ARQOS;
-  sc_in<sc_lv<3> > twiddle_rsc_ARPROT;
-  sc_in<sc_lv<4> > twiddle_rsc_ARCACHE;
-  sc_in<sc_logic> twiddle_rsc_ARLOCK;
-  sc_in<sc_lv<2> > twiddle_rsc_ARBURST;
-  sc_in<sc_lv<3> > twiddle_rsc_ARSIZE;
-  sc_in<sc_lv<8> > twiddle_rsc_ARLEN;
-  sc_in<sc_lv<12> > twiddle_rsc_ARADDR;
-  sc_in<sc_logic> twiddle_rsc_ARID;
-  sc_in<sc_logic> twiddle_rsc_BREADY;
-  sc_out<sc_logic> twiddle_rsc_BVALID;
-  sc_out<sc_logic> twiddle_rsc_BUSER;
-  sc_out<sc_lv<2> > twiddle_rsc_BRESP;
-  sc_out<sc_logic> twiddle_rsc_BID;
-  sc_out<sc_logic> twiddle_rsc_WREADY;
-  sc_in<sc_logic> twiddle_rsc_WVALID;
-  sc_in<sc_logic> twiddle_rsc_WUSER;
-  sc_in<sc_logic> twiddle_rsc_WLAST;
-  sc_in<sc_lv<4> > twiddle_rsc_WSTRB;
-  sc_in<sc_lv<32> > twiddle_rsc_WDATA;
-  sc_out<sc_logic> twiddle_rsc_AWREADY;
-  sc_in<sc_logic> twiddle_rsc_AWVALID;
-  sc_in<sc_logic> twiddle_rsc_AWUSER;
-  sc_in<sc_lv<4> > twiddle_rsc_AWREGION;
-  sc_in<sc_lv<4> > twiddle_rsc_AWQOS;
-  sc_in<sc_lv<3> > twiddle_rsc_AWPROT;
-  sc_in<sc_lv<4> > twiddle_rsc_AWCACHE;
-  sc_in<sc_logic> twiddle_rsc_AWLOCK;
-  sc_in<sc_lv<2> > twiddle_rsc_AWBURST;
-  sc_in<sc_lv<3> > twiddle_rsc_AWSIZE;
-  sc_in<sc_lv<8> > twiddle_rsc_AWLEN;
-  sc_in<sc_lv<12> > twiddle_rsc_AWADDR;
-  sc_in<sc_logic> twiddle_rsc_AWID;
+  sc_out<sc_lv<10> > twiddle_rsc_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_qb;
   sc_out<sc_logic> twiddle_rsc_triosy_lz;
-  sc_in<sc_logic> twiddle_h_rsc_s_tdone;
-  sc_in<sc_logic> twiddle_h_rsc_tr_write_done;
-  sc_in<sc_logic> twiddle_h_rsc_RREADY;
-  sc_out<sc_logic> twiddle_h_rsc_RVALID;
-  sc_out<sc_logic> twiddle_h_rsc_RUSER;
-  sc_out<sc_logic> twiddle_h_rsc_RLAST;
-  sc_out<sc_lv<2> > twiddle_h_rsc_RRESP;
-  sc_out<sc_lv<32> > twiddle_h_rsc_RDATA;
-  sc_out<sc_logic> twiddle_h_rsc_RID;
-  sc_out<sc_logic> twiddle_h_rsc_ARREADY;
-  sc_in<sc_logic> twiddle_h_rsc_ARVALID;
-  sc_in<sc_logic> twiddle_h_rsc_ARUSER;
-  sc_in<sc_lv<4> > twiddle_h_rsc_ARREGION;
-  sc_in<sc_lv<4> > twiddle_h_rsc_ARQOS;
-  sc_in<sc_lv<3> > twiddle_h_rsc_ARPROT;
-  sc_in<sc_lv<4> > twiddle_h_rsc_ARCACHE;
-  sc_in<sc_logic> twiddle_h_rsc_ARLOCK;
-  sc_in<sc_lv<2> > twiddle_h_rsc_ARBURST;
-  sc_in<sc_lv<3> > twiddle_h_rsc_ARSIZE;
-  sc_in<sc_lv<8> > twiddle_h_rsc_ARLEN;
-  sc_in<sc_lv<12> > twiddle_h_rsc_ARADDR;
-  sc_in<sc_logic> twiddle_h_rsc_ARID;
-  sc_in<sc_logic> twiddle_h_rsc_BREADY;
-  sc_out<sc_logic> twiddle_h_rsc_BVALID;
-  sc_out<sc_logic> twiddle_h_rsc_BUSER;
-  sc_out<sc_lv<2> > twiddle_h_rsc_BRESP;
-  sc_out<sc_logic> twiddle_h_rsc_BID;
-  sc_out<sc_logic> twiddle_h_rsc_WREADY;
-  sc_in<sc_logic> twiddle_h_rsc_WVALID;
-  sc_in<sc_logic> twiddle_h_rsc_WUSER;
-  sc_in<sc_logic> twiddle_h_rsc_WLAST;
-  sc_in<sc_lv<4> > twiddle_h_rsc_WSTRB;
-  sc_in<sc_lv<32> > twiddle_h_rsc_WDATA;
-  sc_out<sc_logic> twiddle_h_rsc_AWREADY;
-  sc_in<sc_logic> twiddle_h_rsc_AWVALID;
-  sc_in<sc_logic> twiddle_h_rsc_AWUSER;
-  sc_in<sc_lv<4> > twiddle_h_rsc_AWREGION;
-  sc_in<sc_lv<4> > twiddle_h_rsc_AWQOS;
-  sc_in<sc_lv<3> > twiddle_h_rsc_AWPROT;
-  sc_in<sc_lv<4> > twiddle_h_rsc_AWCACHE;
-  sc_in<sc_logic> twiddle_h_rsc_AWLOCK;
-  sc_in<sc_lv<2> > twiddle_h_rsc_AWBURST;
-  sc_in<sc_lv<3> > twiddle_h_rsc_AWSIZE;
-  sc_in<sc_lv<8> > twiddle_h_rsc_AWLEN;
-  sc_in<sc_lv<12> > twiddle_h_rsc_AWADDR;
-  sc_in<sc_logic> twiddle_h_rsc_AWID;
+  sc_out<sc_lv<10> > twiddle_h_rsc_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_qb;
   sc_out<sc_logic> twiddle_h_rsc_triosy_lz;
-  sc_out<sc_logic> complete_rsc_triosy;
-  sc_in<sc_logic> complete_rsc_RREADY;
-  sc_out<sc_logic> complete_rsc_RVALID;
-  sc_out<sc_lv<2> > complete_rsc_RRESP;
-  sc_out<sc_lv<32> > complete_rsc_RDATA;
-  sc_out<sc_logic> complete_rsc_ARREADY;
-  sc_in<sc_logic> complete_rsc_ARVALID;
-  sc_in<sc_lv<12> > complete_rsc_ARADDR;
-  sc_in<sc_logic> complete_rsc_BREADY;
-  sc_out<sc_logic> complete_rsc_BVALID;
-  sc_out<sc_lv<2> > complete_rsc_BRESP;
-  sc_out<sc_logic> complete_rsc_WREADY;
-  sc_in<sc_logic> complete_rsc_WVALID;
-  sc_in<sc_lv<4> > complete_rsc_WSTRB;
-  sc_in<sc_lv<32> > complete_rsc_WDATA;
-  sc_out<sc_logic> complete_rsc_AWREADY;
-  sc_in<sc_logic> complete_rsc_AWVALID;
-  sc_in<sc_lv<12> > complete_rsc_AWADDR;
+  sc_in<sc_logic> complete_rsc_rdy;
+  sc_out<sc_logic> complete_rsc_vld;
 public:
   ccs_DUT_wrapper(const sc_module_name& nm, const char *hdl_name)
   :
     mc_foreign_module(nm, hdl_name), 
     clk("clk"), 
     rst("rst"), 
-    run_rsc_triosy("run_rsc_triosy"), 
-    run_rsc_RREADY("run_rsc_RREADY"), 
-    run_rsc_RVALID("run_rsc_RVALID"), 
-    run_rsc_RRESP("run_rsc_RRESP"), 
-    run_rsc_RDATA("run_rsc_RDATA"), 
-    run_rsc_ARREADY("run_rsc_ARREADY"), 
-    run_rsc_ARVALID("run_rsc_ARVALID"), 
-    run_rsc_ARADDR("run_rsc_ARADDR"), 
-    run_rsc_BREADY("run_rsc_BREADY"), 
-    run_rsc_BVALID("run_rsc_BVALID"), 
-    run_rsc_BRESP("run_rsc_BRESP"), 
-    run_rsc_WREADY("run_rsc_WREADY"), 
-    run_rsc_WVALID("run_rsc_WVALID"), 
-    run_rsc_WSTRB("run_rsc_WSTRB"), 
-    run_rsc_WDATA("run_rsc_WDATA"), 
-    run_rsc_AWREADY("run_rsc_AWREADY"), 
-    run_rsc_AWVALID("run_rsc_AWVALID"), 
-    run_rsc_AWADDR("run_rsc_AWADDR"), 
-    vec_rsc_s_tdone("vec_rsc_s_tdone"), 
-    vec_rsc_tr_write_done("vec_rsc_tr_write_done"), 
-    vec_rsc_RREADY("vec_rsc_RREADY"), 
-    vec_rsc_RVALID("vec_rsc_RVALID"), 
-    vec_rsc_RUSER("vec_rsc_RUSER"), 
-    vec_rsc_RLAST("vec_rsc_RLAST"), 
-    vec_rsc_RRESP("vec_rsc_RRESP"), 
-    vec_rsc_RDATA("vec_rsc_RDATA"), 
-    vec_rsc_RID("vec_rsc_RID"), 
-    vec_rsc_ARREADY("vec_rsc_ARREADY"), 
-    vec_rsc_ARVALID("vec_rsc_ARVALID"), 
-    vec_rsc_ARUSER("vec_rsc_ARUSER"), 
-    vec_rsc_ARREGION("vec_rsc_ARREGION"), 
-    vec_rsc_ARQOS("vec_rsc_ARQOS"), 
-    vec_rsc_ARPROT("vec_rsc_ARPROT"), 
-    vec_rsc_ARCACHE("vec_rsc_ARCACHE"), 
-    vec_rsc_ARLOCK("vec_rsc_ARLOCK"), 
-    vec_rsc_ARBURST("vec_rsc_ARBURST"), 
-    vec_rsc_ARSIZE("vec_rsc_ARSIZE"), 
-    vec_rsc_ARLEN("vec_rsc_ARLEN"), 
-    vec_rsc_ARADDR("vec_rsc_ARADDR"), 
-    vec_rsc_ARID("vec_rsc_ARID"), 
-    vec_rsc_BREADY("vec_rsc_BREADY"), 
-    vec_rsc_BVALID("vec_rsc_BVALID"), 
-    vec_rsc_BUSER("vec_rsc_BUSER"), 
-    vec_rsc_BRESP("vec_rsc_BRESP"), 
-    vec_rsc_BID("vec_rsc_BID"), 
-    vec_rsc_WREADY("vec_rsc_WREADY"), 
-    vec_rsc_WVALID("vec_rsc_WVALID"), 
-    vec_rsc_WUSER("vec_rsc_WUSER"), 
-    vec_rsc_WLAST("vec_rsc_WLAST"), 
-    vec_rsc_WSTRB("vec_rsc_WSTRB"), 
-    vec_rsc_WDATA("vec_rsc_WDATA"), 
-    vec_rsc_AWREADY("vec_rsc_AWREADY"), 
-    vec_rsc_AWVALID("vec_rsc_AWVALID"), 
-    vec_rsc_AWUSER("vec_rsc_AWUSER"), 
-    vec_rsc_AWREGION("vec_rsc_AWREGION"), 
-    vec_rsc_AWQOS("vec_rsc_AWQOS"), 
-    vec_rsc_AWPROT("vec_rsc_AWPROT"), 
-    vec_rsc_AWCACHE("vec_rsc_AWCACHE"), 
-    vec_rsc_AWLOCK("vec_rsc_AWLOCK"), 
-    vec_rsc_AWBURST("vec_rsc_AWBURST"), 
-    vec_rsc_AWSIZE("vec_rsc_AWSIZE"), 
-    vec_rsc_AWLEN("vec_rsc_AWLEN"), 
-    vec_rsc_AWADDR("vec_rsc_AWADDR"), 
-    vec_rsc_AWID("vec_rsc_AWID"), 
+    run_rsc_rdy("run_rsc_rdy"), 
+    run_rsc_vld("run_rsc_vld"), 
+    vec_rsc_adra("vec_rsc_adra"), 
+    vec_rsc_da("vec_rsc_da"), 
+    vec_rsc_wea("vec_rsc_wea"), 
+    vec_rsc_qa("vec_rsc_qa"), 
+    vec_rsc_adrb("vec_rsc_adrb"), 
+    vec_rsc_db("vec_rsc_db"), 
+    vec_rsc_web("vec_rsc_web"), 
+    vec_rsc_qb("vec_rsc_qb"), 
     vec_rsc_triosy_lz("vec_rsc_triosy_lz"), 
-    p_rsc_RREADY("p_rsc_RREADY"), 
-    p_rsc_RVALID("p_rsc_RVALID"), 
-    p_rsc_RRESP("p_rsc_RRESP"), 
-    p_rsc_RDATA("p_rsc_RDATA"), 
-    p_rsc_ARREADY("p_rsc_ARREADY"), 
-    p_rsc_ARVALID("p_rsc_ARVALID"), 
-    p_rsc_ARADDR("p_rsc_ARADDR"), 
-    p_rsc_BREADY("p_rsc_BREADY"), 
-    p_rsc_BVALID("p_rsc_BVALID"), 
-    p_rsc_BRESP("p_rsc_BRESP"), 
-    p_rsc_WREADY("p_rsc_WREADY"), 
-    p_rsc_WVALID("p_rsc_WVALID"), 
-    p_rsc_WSTRB("p_rsc_WSTRB"), 
-    p_rsc_WDATA("p_rsc_WDATA"), 
-    p_rsc_AWREADY("p_rsc_AWREADY"), 
-    p_rsc_AWVALID("p_rsc_AWVALID"), 
-    p_rsc_AWADDR("p_rsc_AWADDR"), 
+    p_rsc_dat("p_rsc_dat"), 
     p_rsc_triosy_lz("p_rsc_triosy_lz"), 
-    r_rsc_RREADY("r_rsc_RREADY"), 
-    r_rsc_RVALID("r_rsc_RVALID"), 
-    r_rsc_RRESP("r_rsc_RRESP"), 
-    r_rsc_RDATA("r_rsc_RDATA"), 
-    r_rsc_ARREADY("r_rsc_ARREADY"), 
-    r_rsc_ARVALID("r_rsc_ARVALID"), 
-    r_rsc_ARADDR("r_rsc_ARADDR"), 
-    r_rsc_BREADY("r_rsc_BREADY"), 
-    r_rsc_BVALID("r_rsc_BVALID"), 
-    r_rsc_BRESP("r_rsc_BRESP"), 
-    r_rsc_WREADY("r_rsc_WREADY"), 
-    r_rsc_WVALID("r_rsc_WVALID"), 
-    r_rsc_WSTRB("r_rsc_WSTRB"), 
-    r_rsc_WDATA("r_rsc_WDATA"), 
-    r_rsc_AWREADY("r_rsc_AWREADY"), 
-    r_rsc_AWVALID("r_rsc_AWVALID"), 
-    r_rsc_AWADDR("r_rsc_AWADDR"), 
+    r_rsc_dat("r_rsc_dat"), 
     r_rsc_triosy_lz("r_rsc_triosy_lz"), 
-    twiddle_rsc_s_tdone("twiddle_rsc_s_tdone"), 
-    twiddle_rsc_tr_write_done("twiddle_rsc_tr_write_done"), 
-    twiddle_rsc_RREADY("twiddle_rsc_RREADY"), 
-    twiddle_rsc_RVALID("twiddle_rsc_RVALID"), 
-    twiddle_rsc_RUSER("twiddle_rsc_RUSER"), 
-    twiddle_rsc_RLAST("twiddle_rsc_RLAST"), 
-    twiddle_rsc_RRESP("twiddle_rsc_RRESP"), 
-    twiddle_rsc_RDATA("twiddle_rsc_RDATA"), 
-    twiddle_rsc_RID("twiddle_rsc_RID"), 
-    twiddle_rsc_ARREADY("twiddle_rsc_ARREADY"), 
-    twiddle_rsc_ARVALID("twiddle_rsc_ARVALID"), 
-    twiddle_rsc_ARUSER("twiddle_rsc_ARUSER"), 
-    twiddle_rsc_ARREGION("twiddle_rsc_ARREGION"), 
-    twiddle_rsc_ARQOS("twiddle_rsc_ARQOS"), 
-    twiddle_rsc_ARPROT("twiddle_rsc_ARPROT"), 
-    twiddle_rsc_ARCACHE("twiddle_rsc_ARCACHE"), 
-    twiddle_rsc_ARLOCK("twiddle_rsc_ARLOCK"), 
-    twiddle_rsc_ARBURST("twiddle_rsc_ARBURST"), 
-    twiddle_rsc_ARSIZE("twiddle_rsc_ARSIZE"), 
-    twiddle_rsc_ARLEN("twiddle_rsc_ARLEN"), 
-    twiddle_rsc_ARADDR("twiddle_rsc_ARADDR"), 
-    twiddle_rsc_ARID("twiddle_rsc_ARID"), 
-    twiddle_rsc_BREADY("twiddle_rsc_BREADY"), 
-    twiddle_rsc_BVALID("twiddle_rsc_BVALID"), 
-    twiddle_rsc_BUSER("twiddle_rsc_BUSER"), 
-    twiddle_rsc_BRESP("twiddle_rsc_BRESP"), 
-    twiddle_rsc_BID("twiddle_rsc_BID"), 
-    twiddle_rsc_WREADY("twiddle_rsc_WREADY"), 
-    twiddle_rsc_WVALID("twiddle_rsc_WVALID"), 
-    twiddle_rsc_WUSER("twiddle_rsc_WUSER"), 
-    twiddle_rsc_WLAST("twiddle_rsc_WLAST"), 
-    twiddle_rsc_WSTRB("twiddle_rsc_WSTRB"), 
-    twiddle_rsc_WDATA("twiddle_rsc_WDATA"), 
-    twiddle_rsc_AWREADY("twiddle_rsc_AWREADY"), 
-    twiddle_rsc_AWVALID("twiddle_rsc_AWVALID"), 
-    twiddle_rsc_AWUSER("twiddle_rsc_AWUSER"), 
-    twiddle_rsc_AWREGION("twiddle_rsc_AWREGION"), 
-    twiddle_rsc_AWQOS("twiddle_rsc_AWQOS"), 
-    twiddle_rsc_AWPROT("twiddle_rsc_AWPROT"), 
-    twiddle_rsc_AWCACHE("twiddle_rsc_AWCACHE"), 
-    twiddle_rsc_AWLOCK("twiddle_rsc_AWLOCK"), 
-    twiddle_rsc_AWBURST("twiddle_rsc_AWBURST"), 
-    twiddle_rsc_AWSIZE("twiddle_rsc_AWSIZE"), 
-    twiddle_rsc_AWLEN("twiddle_rsc_AWLEN"), 
-    twiddle_rsc_AWADDR("twiddle_rsc_AWADDR"), 
-    twiddle_rsc_AWID("twiddle_rsc_AWID"), 
+    twiddle_rsc_adrb("twiddle_rsc_adrb"), 
+    twiddle_rsc_qb("twiddle_rsc_qb"), 
     twiddle_rsc_triosy_lz("twiddle_rsc_triosy_lz"), 
-    twiddle_h_rsc_s_tdone("twiddle_h_rsc_s_tdone"), 
-    twiddle_h_rsc_tr_write_done("twiddle_h_rsc_tr_write_done"), 
-    twiddle_h_rsc_RREADY("twiddle_h_rsc_RREADY"), 
-    twiddle_h_rsc_RVALID("twiddle_h_rsc_RVALID"), 
-    twiddle_h_rsc_RUSER("twiddle_h_rsc_RUSER"), 
-    twiddle_h_rsc_RLAST("twiddle_h_rsc_RLAST"), 
-    twiddle_h_rsc_RRESP("twiddle_h_rsc_RRESP"), 
-    twiddle_h_rsc_RDATA("twiddle_h_rsc_RDATA"), 
-    twiddle_h_rsc_RID("twiddle_h_rsc_RID"), 
-    twiddle_h_rsc_ARREADY("twiddle_h_rsc_ARREADY"), 
-    twiddle_h_rsc_ARVALID("twiddle_h_rsc_ARVALID"), 
-    twiddle_h_rsc_ARUSER("twiddle_h_rsc_ARUSER"), 
-    twiddle_h_rsc_ARREGION("twiddle_h_rsc_ARREGION"), 
-    twiddle_h_rsc_ARQOS("twiddle_h_rsc_ARQOS"), 
-    twiddle_h_rsc_ARPROT("twiddle_h_rsc_ARPROT"), 
-    twiddle_h_rsc_ARCACHE("twiddle_h_rsc_ARCACHE"), 
-    twiddle_h_rsc_ARLOCK("twiddle_h_rsc_ARLOCK"), 
-    twiddle_h_rsc_ARBURST("twiddle_h_rsc_ARBURST"), 
-    twiddle_h_rsc_ARSIZE("twiddle_h_rsc_ARSIZE"), 
-    twiddle_h_rsc_ARLEN("twiddle_h_rsc_ARLEN"), 
-    twiddle_h_rsc_ARADDR("twiddle_h_rsc_ARADDR"), 
-    twiddle_h_rsc_ARID("twiddle_h_rsc_ARID"), 
-    twiddle_h_rsc_BREADY("twiddle_h_rsc_BREADY"), 
-    twiddle_h_rsc_BVALID("twiddle_h_rsc_BVALID"), 
-    twiddle_h_rsc_BUSER("twiddle_h_rsc_BUSER"), 
-    twiddle_h_rsc_BRESP("twiddle_h_rsc_BRESP"), 
-    twiddle_h_rsc_BID("twiddle_h_rsc_BID"), 
-    twiddle_h_rsc_WREADY("twiddle_h_rsc_WREADY"), 
-    twiddle_h_rsc_WVALID("twiddle_h_rsc_WVALID"), 
-    twiddle_h_rsc_WUSER("twiddle_h_rsc_WUSER"), 
-    twiddle_h_rsc_WLAST("twiddle_h_rsc_WLAST"), 
-    twiddle_h_rsc_WSTRB("twiddle_h_rsc_WSTRB"), 
-    twiddle_h_rsc_WDATA("twiddle_h_rsc_WDATA"), 
-    twiddle_h_rsc_AWREADY("twiddle_h_rsc_AWREADY"), 
-    twiddle_h_rsc_AWVALID("twiddle_h_rsc_AWVALID"), 
-    twiddle_h_rsc_AWUSER("twiddle_h_rsc_AWUSER"), 
-    twiddle_h_rsc_AWREGION("twiddle_h_rsc_AWREGION"), 
-    twiddle_h_rsc_AWQOS("twiddle_h_rsc_AWQOS"), 
-    twiddle_h_rsc_AWPROT("twiddle_h_rsc_AWPROT"), 
-    twiddle_h_rsc_AWCACHE("twiddle_h_rsc_AWCACHE"), 
-    twiddle_h_rsc_AWLOCK("twiddle_h_rsc_AWLOCK"), 
-    twiddle_h_rsc_AWBURST("twiddle_h_rsc_AWBURST"), 
-    twiddle_h_rsc_AWSIZE("twiddle_h_rsc_AWSIZE"), 
-    twiddle_h_rsc_AWLEN("twiddle_h_rsc_AWLEN"), 
-    twiddle_h_rsc_AWADDR("twiddle_h_rsc_AWADDR"), 
-    twiddle_h_rsc_AWID("twiddle_h_rsc_AWID"), 
+    twiddle_h_rsc_adrb("twiddle_h_rsc_adrb"), 
+    twiddle_h_rsc_qb("twiddle_h_rsc_qb"), 
     twiddle_h_rsc_triosy_lz("twiddle_h_rsc_triosy_lz"), 
-    complete_rsc_triosy("complete_rsc_triosy"), 
-    complete_rsc_RREADY("complete_rsc_RREADY"), 
-    complete_rsc_RVALID("complete_rsc_RVALID"), 
-    complete_rsc_RRESP("complete_rsc_RRESP"), 
-    complete_rsc_RDATA("complete_rsc_RDATA"), 
-    complete_rsc_ARREADY("complete_rsc_ARREADY"), 
-    complete_rsc_ARVALID("complete_rsc_ARVALID"), 
-    complete_rsc_ARADDR("complete_rsc_ARADDR"), 
-    complete_rsc_BREADY("complete_rsc_BREADY"), 
-    complete_rsc_BVALID("complete_rsc_BVALID"), 
-    complete_rsc_BRESP("complete_rsc_BRESP"), 
-    complete_rsc_WREADY("complete_rsc_WREADY"), 
-    complete_rsc_WVALID("complete_rsc_WVALID"), 
-    complete_rsc_WSTRB("complete_rsc_WSTRB"), 
-    complete_rsc_WDATA("complete_rsc_WDATA"), 
-    complete_rsc_AWREADY("complete_rsc_AWREADY"), 
-    complete_rsc_AWVALID("complete_rsc_AWVALID"), 
-    complete_rsc_AWADDR("complete_rsc_AWADDR")
+    complete_rsc_rdy("complete_rsc_rdy"), 
+    complete_rsc_vld("complete_rsc_vld")
   {
     elaborate_foreign_module(hdl_name);
   }

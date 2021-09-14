@@ -16,4 +16,4 @@ create_project -force ip_tcl_concat_vhdl
 # set up XPM libraries for XPM-related IP like the Catapult Xilinx_FIFO
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY XPM_FIFO} [current_project]
 read_xdc $outputDir/concat_rtl.vhdl.xv.sdc
-set_property part xcvu13p-flga2577-3-e [current_project]
+set_property part xc7vx690tffg1761-2 [current_project]

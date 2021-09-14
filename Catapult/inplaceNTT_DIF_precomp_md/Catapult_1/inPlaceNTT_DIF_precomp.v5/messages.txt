@@ -1,0 +1,153 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.81 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+solution file add ./src/utils.cpp -exclude true
+project save
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1.ccs'. (PRJ-5)
+solution file add ./src/main.cpp -exclude true
+solution file add ./src/ntt.cpp
+go compile
+/INPUTFILES/1
+project save
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/catapult.log"
+option set Input/TargetPlatform x86_64
+/INPUTFILES/3
+c++98
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/src/ntt.cpp (CIN-69)
+option set Input/CppStandard c++98
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF_precomp' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 103, Real ops = 36, Vars = 49 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 2.00 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Synthesizing routine 'mult' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF_precomp/modulo_sub' ... (CIN-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v1/CDesignChecker/design_checker.sh'
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF_precomp/modulo_add' ... (CIN-4)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Inlining routine 'modulo_sub' (CIN-14)
+Optimizing block '/inPlaceNTT_DIF_precomp' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+Optimizing block '/inPlaceNTT_DIF_precomp/mult' ... (CIN-4)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Inlining routine 'inPlaceNTT_DIF_precomp' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF_precomp' (CIN-13)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Design 'inPlaceNTT_DIF_precomp' was read (SOL-1)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Found top design routine 'inPlaceNTT_DIF_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 36, Vars = 49 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 1.08 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 105, Real ops = 36, Vars = 51 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 0.29 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+go assembly
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v5/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v5' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'loops': Total ops = 458, Real ops = 121, Vars = 141 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v4': elapsed time 2.05 seconds, memory usage 1519608kB, peak memory usage 1519608kB (SOL-9)
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL 8
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v4' (SOL-8)
+go extract
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v4' at state 'assembly' (PRJ-2)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v4/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+# Info: Design complexity at end of 'loops': Total ops = 265, Real ops = 72, Vars = 96 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v3': elapsed time 1.65 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v3' (SOL-8)
+go extract
+N_UNROLL parameter 4 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL 4
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1.ccs'. (PRJ-5)
+project save
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is being partially unrolled 4 times. (LOOP-3)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v3/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v3' at state 'assembly' (PRJ-2)
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'loops': Total ops = 170, Real ops = 48, Vars = 74 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v2': elapsed time 0.74 seconds, memory usage 1380312kB, peak memory usage 1380316kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+go extract
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v2/CDesignChecker/design_checker.sh'
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+N_UNROLL parameter 2 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is being partially unrolled 2 times. (LOOP-3)
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL 2
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v2' at state 'assembly' (PRJ-2)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v2' (SOL-8)
+# Info: Design complexity at end of 'loops': Total ops = 118, Real ops = 36, Vars = 62 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 0.09 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF_precomp/twiddle_h:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+go extract
+/inPlaceNTT_DIF_precomp/vec:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+/inPlaceNTT_DIF_precomp/twiddle:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL

@@ -1,0 +1,16 @@
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP-2:twiddle_f:lshift.itm REGISTER_NAME COMP_LOOP-2:twiddle_f:lshift.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/VEC_LOOP:acc#1.cse.sva REGISTER_NAME COMP_LOOP-2:twiddle_f:lshift.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/VEC_LOOP:j(10:0)#1.sva(9:0) REGISTER_NAME COMP_LOOP-2:twiddle_f:lshift.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/VEC_LOOP:j(10:0).sva(9:0) REGISTER_NAME COMP_LOOP-2:twiddle_f:lshift.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP-1:twiddle_f:lshift.itm REGISTER_NAME COMP_LOOP-1:twiddle_f:lshift.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/VEC_LOOP:acc.psp.sva REGISTER_NAME COMP_LOOP-1:twiddle_f:lshift.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP:twiddle_help#1.sva REGISTER_NAME COMP_LOOP:twiddle_help#1.sva
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP:twiddle_help.sva REGISTER_NAME COMP_LOOP:twiddle_help#1.sva
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP:twiddle_f#1.sva REGISTER_NAME COMP_LOOP:twiddle_f#1.sva
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP:twiddle_f.sva REGISTER_NAME COMP_LOOP:twiddle_f#1.sva
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/VEC_LOOP:j(10:0)#1.sva#1 REGISTER_NAME VEC_LOOP:j(10:0)#1.sva#1
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/VEC_LOOP:j(10:0).sva#1 REGISTER_NAME VEC_LOOP:j(10:0)#1.sva#1
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP-1:VEC_LOOP:acc#8.itm REGISTER_NAME COMP_LOOP-1:VEC_LOOP:acc#8.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP-2:VEC_LOOP:acc#8.itm REGISTER_NAME COMP_LOOP-1:VEC_LOOP:acc#8.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP-1:VEC_LOOP:acc#5.itm REGISTER_NAME COMP_LOOP-1:VEC_LOOP:acc#5.itm
+directive set /inPlaceNTT_DIF_precomp/inPlaceNTT_DIF_precomp:core/core/COMP_LOOP-2:VEC_LOOP:acc#5.itm REGISTER_NAME COMP_LOOP-1:VEC_LOOP:acc#5.itm

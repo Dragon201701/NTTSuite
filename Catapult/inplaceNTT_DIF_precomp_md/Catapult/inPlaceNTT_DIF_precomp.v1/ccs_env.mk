@@ -11,11 +11,11 @@ CXX_VCO                                             := aol
 export CXX_VCO
 endif
 ifeq "$(Option_CppStandard)" ""
-Option_CppStandard                                  := c++98
+Option_CppStandard                                  := c++11
 export Option_CppStandard
 endif
 ifeq "$(SYN_DIR)" ""
-SYN_DIR                                             := gate_synthesis_xv
+SYN_DIR                                             := gate_synthesis_
 export SYN_DIR
 endif
 ifeq "$(HLD_CONSTRAINT_FNAME)" ""
@@ -845,174 +845,6 @@ endif
 ifeq "$(CDesignChecker_XTERM_CMD)" ""
 CDesignChecker_XTERM_CMD                            := xterm
 export CDesignChecker_XTERM_CMD
-endif
-ifeq "$(Vivado_SynthesisFlowType)" ""
-Vivado_SynthesisFlowType                            := fpga
-export Vivado_SynthesisFlowType
-endif
-ifeq "$(Vivado_FlowSuffix)" ""
-Vivado_FlowSuffix                                   := xv
-export Vivado_FlowSuffix
-endif
-ifeq "$(Vivado_XILINX_VIVADO)" ""
-Vivado_XILINX_VIVADO                                := can't read "XILINX_VIVADO": no such variable
-export Vivado_XILINX_VIVADO
-endif
-ifeq "$(Vivado_Flags)" ""
-Vivado_Flags                                        := 
-export Vivado_Flags
-endif
-ifeq "$(Vivado_addio)" ""
-Vivado_addio                                        := false
-export Vivado_addio
-endif
-ifeq "$(Vivado_max_dsp)" ""
-Vivado_max_dsp                                      := -1
-export Vivado_max_dsp
-endif
-ifeq "$(Vivado_RUN_PNR)" ""
-Vivado_RUN_PNR                                      := false
-export Vivado_RUN_PNR
-endif
-ifeq "$(Vivado_BITGEN)" ""
-Vivado_BITGEN                                       := false
-export Vivado_BITGEN
-endif
-ifeq "$(Vivado_retiming)" ""
-Vivado_retiming                                     := false
-export Vivado_retiming
-endif
-ifeq "$(Vivado_TimingReportingMode)" ""
-Vivado_TimingReportingMode                          := p2p
-export Vivado_TimingReportingMode
-endif
-ifeq "$(Vivado_VivadoMode)" ""
-Vivado_VivadoMode                                   := Non-project
-export Vivado_VivadoMode
-endif
-ifeq "$(Vivado_PCL_CACHE)" ""
-Vivado_PCL_CACHE                                    := 
-export Vivado_PCL_CACHE
-endif
-ifeq "$(Vivado_SIMLIBS_V)" ""
-Vivado_SIMLIBS_V                                    := 
-export Vivado_SIMLIBS_V
-endif
-ifeq "$(Vivado_SIMLIBS_VHD)" ""
-Vivado_SIMLIBS_VHD                                  := 
-export Vivado_SIMLIBS_VHD
-endif
-ifeq "$(Vivado_ALLOW_MCP)" ""
-Vivado_ALLOW_MCP                                    := false
-export Vivado_ALLOW_MCP
-endif
-ifeq "$(Vivado_BoardPart)" ""
-Vivado_BoardPart                                    := 
-export Vivado_BoardPart
-endif
-ifeq "$(Vivado_CCS_IP_REPO)" ""
-Vivado_CCS_IP_REPO                                  := 
-export Vivado_CCS_IP_REPO
-endif
-ifeq "$(Vivado_IP_Taxonomy)" ""
-Vivado_IP_Taxonomy                                  := /Catapult
-export Vivado_IP_Taxonomy
-endif
-ifeq "$(Vivado_Force_DSP48)" ""
-Vivado_Force_DSP48                                  := false
-export Vivado_Force_DSP48
-endif
-ifeq "$(Vivado_MAX_BRAM_CASCADE_HEIGHT)" ""
-Vivado_MAX_BRAM_CASCADE_HEIGHT                      := -1
-export Vivado_MAX_BRAM_CASCADE_HEIGHT
-endif
-ifeq "$(Vivado_Path)" ""
-Vivado_Path                                         := 
-export Vivado_Path
-endif
-ifeq "$(Vivado_ShellPrefix)" ""
-Vivado_ShellPrefix                                  := 
-export Vivado_ShellPrefix
-endif
-ifeq "$(Vivado_ShellExe)" ""
-Vivado_ShellExe                                     := vivado
-export Vivado_ShellExe
-endif
-ifeq "$(CoverCheck_QHOME)" ""
-CoverCheck_QHOME                                    := can't read "QHOME": no such variable
-export CoverCheck_QHOME
-endif
-ifeq "$(CoverCheck_LICENSE_QUEUING)" ""
-CoverCheck_LICENSE_QUEUING                          := false
-export CoverCheck_LICENSE_QUEUING
-endif
-ifeq "$(CoverCheck_WITNESS_WAVEFORM)" ""
-CoverCheck_WITNESS_WAVEFORM                         := false
-export CoverCheck_WITNESS_WAVEFORM
-endif
-ifeq "$(CoverCheck_JOBS)" ""
-CoverCheck_JOBS                                     := 2
-export CoverCheck_JOBS
-endif
-ifeq "$(CoverCheck_TIMEOUT)" ""
-CoverCheck_TIMEOUT                                  := 
-export CoverCheck_TIMEOUT
-endif
-ifeq "$(CoverCheck_SCRIPT_DIR)" ""
-CoverCheck_SCRIPT_DIR                               := 
-export CoverCheck_SCRIPT_DIR
-endif
-ifeq "$(CoverCheck_AUTO_APPLY)" ""
-CoverCheck_AUTO_APPLY                               := true
-export CoverCheck_AUTO_APPLY
-endif
-ifeq "$(Xilinx_SynthesisFlowType)" ""
-Xilinx_SynthesisFlowType                            := fpga
-export Xilinx_SynthesisFlowType
-endif
-ifeq "$(Xilinx_FlowSuffix)" ""
-Xilinx_FlowSuffix                                   := xv
-export Xilinx_FlowSuffix
-endif
-ifeq "$(Xilinx_XILINX)" ""
-Xilinx_XILINX                                       := /opt/Xilinx2018
-export Xilinx_XILINX
-endif
-ifeq "$(Xilinx_XILINX_LIB)" ""
-Xilinx_XILINX_LIB                                   := can't read "XILINX_LIB": no such variable
-export Xilinx_XILINX_LIB
-endif
-ifeq "$(Xilinx_XILINX_VHDL_LIB)" ""
-Xilinx_XILINX_VHDL_LIB                              := 
-export Xilinx_XILINX_VHDL_LIB
-endif
-ifeq "$(Xilinx_XILINX_VERILOG_LIB)" ""
-Xilinx_XILINX_VERILOG_LIB                           := 
-export Xilinx_XILINX_VERILOG_LIB
-endif
-ifeq "$(Xilinx_XILINX_SIM_LIBS)" ""
-Xilinx_XILINX_SIM_LIBS                              := 
-export Xilinx_XILINX_SIM_LIBS
-endif
-ifeq "$(Xilinx_NEW_SIMLIB_FLOW)" ""
-Xilinx_NEW_SIMLIB_FLOW                              := false
-export Xilinx_NEW_SIMLIB_FLOW
-endif
-ifeq "$(Xilinx_COMPXLIB_DIR)" ""
-Xilinx_COMPXLIB_DIR                                 := 
-export Xilinx_COMPXLIB_DIR
-endif
-ifeq "$(Xilinx_SIMLIBS_V)" ""
-Xilinx_SIMLIBS_V                                    := 
-export Xilinx_SIMLIBS_V
-endif
-ifeq "$(Xilinx_SIMLIBS_VHD)" ""
-Xilinx_SIMLIBS_VHD                                  := 
-export Xilinx_SIMLIBS_VHD
-endif
-ifeq "$(Xilinx_BITGEN)" ""
-Xilinx_BITGEN                                       := false
-export Xilinx_BITGEN
 endif
 ifeq "$(INLINEDPROPERTYLANG)" ""
 INLINEDPROPERTYLANG                                 := psl

@@ -55,22 +55,250 @@ public:
   sc_in<sc_logic> rst;
   sc_out<sc_logic> run_rsc_rdy;
   sc_in<sc_logic> run_rsc_vld;
-  sc_out<sc_lv<10> > vec_rsc_wadr;
-  sc_out<sc_lv<32> > vec_rsc_d;
-  sc_out<sc_logic> vec_rsc_we;
-  sc_out<sc_lv<10> > vec_rsc_radr;
-  sc_in<sc_lv<32> > vec_rsc_q;
-  sc_out<sc_logic> vec_rsc_triosy_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_0_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_0_da;
+  sc_out<sc_logic> vec_rsc_0_0_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_0_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_0_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_0_db;
+  sc_out<sc_logic> vec_rsc_0_0_web;
+  sc_in<sc_lv<32> > vec_rsc_0_0_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_0_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_1_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_1_da;
+  sc_out<sc_logic> vec_rsc_0_1_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_1_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_1_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_1_db;
+  sc_out<sc_logic> vec_rsc_0_1_web;
+  sc_in<sc_lv<32> > vec_rsc_0_1_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_1_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_2_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_2_da;
+  sc_out<sc_logic> vec_rsc_0_2_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_2_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_2_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_2_db;
+  sc_out<sc_logic> vec_rsc_0_2_web;
+  sc_in<sc_lv<32> > vec_rsc_0_2_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_2_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_3_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_3_da;
+  sc_out<sc_logic> vec_rsc_0_3_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_3_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_3_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_3_db;
+  sc_out<sc_logic> vec_rsc_0_3_web;
+  sc_in<sc_lv<32> > vec_rsc_0_3_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_3_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_4_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_4_da;
+  sc_out<sc_logic> vec_rsc_0_4_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_4_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_4_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_4_db;
+  sc_out<sc_logic> vec_rsc_0_4_web;
+  sc_in<sc_lv<32> > vec_rsc_0_4_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_4_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_5_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_5_da;
+  sc_out<sc_logic> vec_rsc_0_5_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_5_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_5_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_5_db;
+  sc_out<sc_logic> vec_rsc_0_5_web;
+  sc_in<sc_lv<32> > vec_rsc_0_5_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_5_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_6_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_6_da;
+  sc_out<sc_logic> vec_rsc_0_6_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_6_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_6_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_6_db;
+  sc_out<sc_logic> vec_rsc_0_6_web;
+  sc_in<sc_lv<32> > vec_rsc_0_6_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_6_lz;
+  sc_out<sc_lv<6> > vec_rsc_0_7_adra;
+  sc_out<sc_lv<32> > vec_rsc_0_7_da;
+  sc_out<sc_logic> vec_rsc_0_7_wea;
+  sc_in<sc_lv<32> > vec_rsc_0_7_qa;
+  sc_out<sc_lv<6> > vec_rsc_0_7_adrb;
+  sc_out<sc_lv<32> > vec_rsc_0_7_db;
+  sc_out<sc_logic> vec_rsc_0_7_web;
+  sc_in<sc_lv<32> > vec_rsc_0_7_qb;
+  sc_out<sc_logic> vec_rsc_triosy_0_7_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_0_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_0_da;
+  sc_out<sc_logic> vec_rsc_1_0_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_0_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_0_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_0_db;
+  sc_out<sc_logic> vec_rsc_1_0_web;
+  sc_in<sc_lv<32> > vec_rsc_1_0_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_0_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_1_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_1_da;
+  sc_out<sc_logic> vec_rsc_1_1_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_1_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_1_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_1_db;
+  sc_out<sc_logic> vec_rsc_1_1_web;
+  sc_in<sc_lv<32> > vec_rsc_1_1_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_1_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_2_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_2_da;
+  sc_out<sc_logic> vec_rsc_1_2_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_2_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_2_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_2_db;
+  sc_out<sc_logic> vec_rsc_1_2_web;
+  sc_in<sc_lv<32> > vec_rsc_1_2_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_2_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_3_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_3_da;
+  sc_out<sc_logic> vec_rsc_1_3_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_3_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_3_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_3_db;
+  sc_out<sc_logic> vec_rsc_1_3_web;
+  sc_in<sc_lv<32> > vec_rsc_1_3_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_3_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_4_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_4_da;
+  sc_out<sc_logic> vec_rsc_1_4_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_4_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_4_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_4_db;
+  sc_out<sc_logic> vec_rsc_1_4_web;
+  sc_in<sc_lv<32> > vec_rsc_1_4_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_4_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_5_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_5_da;
+  sc_out<sc_logic> vec_rsc_1_5_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_5_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_5_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_5_db;
+  sc_out<sc_logic> vec_rsc_1_5_web;
+  sc_in<sc_lv<32> > vec_rsc_1_5_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_5_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_6_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_6_da;
+  sc_out<sc_logic> vec_rsc_1_6_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_6_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_6_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_6_db;
+  sc_out<sc_logic> vec_rsc_1_6_web;
+  sc_in<sc_lv<32> > vec_rsc_1_6_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_6_lz;
+  sc_out<sc_lv<6> > vec_rsc_1_7_adra;
+  sc_out<sc_lv<32> > vec_rsc_1_7_da;
+  sc_out<sc_logic> vec_rsc_1_7_wea;
+  sc_in<sc_lv<32> > vec_rsc_1_7_qa;
+  sc_out<sc_lv<6> > vec_rsc_1_7_adrb;
+  sc_out<sc_lv<32> > vec_rsc_1_7_db;
+  sc_out<sc_logic> vec_rsc_1_7_web;
+  sc_in<sc_lv<32> > vec_rsc_1_7_qb;
+  sc_out<sc_logic> vec_rsc_triosy_1_7_lz;
   sc_in<sc_lv<32> > p_rsc_dat;
   sc_out<sc_logic> p_rsc_triosy_lz;
   sc_in<sc_lv<32> > r_rsc_dat;
   sc_out<sc_logic> r_rsc_triosy_lz;
-  sc_out<sc_lv<10> > twiddle_rsc_radr;
-  sc_in<sc_lv<32> > twiddle_rsc_q;
-  sc_out<sc_logic> twiddle_rsc_triosy_lz;
-  sc_out<sc_lv<10> > twiddle_h_rsc_radr;
-  sc_in<sc_lv<32> > twiddle_h_rsc_q;
-  sc_out<sc_logic> twiddle_h_rsc_triosy_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_0_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_0_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_0_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_1_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_1_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_1_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_2_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_2_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_2_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_3_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_3_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_3_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_4_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_4_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_4_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_5_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_5_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_5_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_6_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_6_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_6_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_0_7_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_0_7_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_0_7_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_0_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_0_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_0_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_1_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_1_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_1_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_2_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_2_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_2_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_3_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_3_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_3_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_4_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_4_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_4_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_5_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_5_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_5_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_6_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_6_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_6_lz;
+  sc_out<sc_lv<6> > twiddle_rsc_1_7_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_1_7_qb;
+  sc_out<sc_logic> twiddle_rsc_triosy_1_7_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_0_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_0_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_0_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_1_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_1_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_1_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_2_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_2_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_2_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_3_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_3_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_3_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_4_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_4_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_4_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_5_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_5_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_5_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_6_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_6_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_6_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_0_7_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_0_7_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_0_7_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_0_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_0_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_0_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_1_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_1_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_1_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_2_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_2_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_2_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_3_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_3_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_3_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_4_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_4_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_4_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_5_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_5_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_5_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_6_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_6_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_6_lz;
+  sc_out<sc_lv<6> > twiddle_h_rsc_1_7_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_1_7_qb;
+  sc_out<sc_logic> twiddle_h_rsc_triosy_1_7_lz;
   sc_in<sc_logic> complete_rsc_rdy;
   sc_out<sc_logic> complete_rsc_vld;
 public:
@@ -81,22 +309,250 @@ public:
     rst("rst"), 
     run_rsc_rdy("run_rsc_rdy"), 
     run_rsc_vld("run_rsc_vld"), 
-    vec_rsc_wadr("vec_rsc_wadr"), 
-    vec_rsc_d("vec_rsc_d"), 
-    vec_rsc_we("vec_rsc_we"), 
-    vec_rsc_radr("vec_rsc_radr"), 
-    vec_rsc_q("vec_rsc_q"), 
-    vec_rsc_triosy_lz("vec_rsc_triosy_lz"), 
+    vec_rsc_0_0_adra("vec_rsc_0_0_adra"), 
+    vec_rsc_0_0_da("vec_rsc_0_0_da"), 
+    vec_rsc_0_0_wea("vec_rsc_0_0_wea"), 
+    vec_rsc_0_0_qa("vec_rsc_0_0_qa"), 
+    vec_rsc_0_0_adrb("vec_rsc_0_0_adrb"), 
+    vec_rsc_0_0_db("vec_rsc_0_0_db"), 
+    vec_rsc_0_0_web("vec_rsc_0_0_web"), 
+    vec_rsc_0_0_qb("vec_rsc_0_0_qb"), 
+    vec_rsc_triosy_0_0_lz("vec_rsc_triosy_0_0_lz"), 
+    vec_rsc_0_1_adra("vec_rsc_0_1_adra"), 
+    vec_rsc_0_1_da("vec_rsc_0_1_da"), 
+    vec_rsc_0_1_wea("vec_rsc_0_1_wea"), 
+    vec_rsc_0_1_qa("vec_rsc_0_1_qa"), 
+    vec_rsc_0_1_adrb("vec_rsc_0_1_adrb"), 
+    vec_rsc_0_1_db("vec_rsc_0_1_db"), 
+    vec_rsc_0_1_web("vec_rsc_0_1_web"), 
+    vec_rsc_0_1_qb("vec_rsc_0_1_qb"), 
+    vec_rsc_triosy_0_1_lz("vec_rsc_triosy_0_1_lz"), 
+    vec_rsc_0_2_adra("vec_rsc_0_2_adra"), 
+    vec_rsc_0_2_da("vec_rsc_0_2_da"), 
+    vec_rsc_0_2_wea("vec_rsc_0_2_wea"), 
+    vec_rsc_0_2_qa("vec_rsc_0_2_qa"), 
+    vec_rsc_0_2_adrb("vec_rsc_0_2_adrb"), 
+    vec_rsc_0_2_db("vec_rsc_0_2_db"), 
+    vec_rsc_0_2_web("vec_rsc_0_2_web"), 
+    vec_rsc_0_2_qb("vec_rsc_0_2_qb"), 
+    vec_rsc_triosy_0_2_lz("vec_rsc_triosy_0_2_lz"), 
+    vec_rsc_0_3_adra("vec_rsc_0_3_adra"), 
+    vec_rsc_0_3_da("vec_rsc_0_3_da"), 
+    vec_rsc_0_3_wea("vec_rsc_0_3_wea"), 
+    vec_rsc_0_3_qa("vec_rsc_0_3_qa"), 
+    vec_rsc_0_3_adrb("vec_rsc_0_3_adrb"), 
+    vec_rsc_0_3_db("vec_rsc_0_3_db"), 
+    vec_rsc_0_3_web("vec_rsc_0_3_web"), 
+    vec_rsc_0_3_qb("vec_rsc_0_3_qb"), 
+    vec_rsc_triosy_0_3_lz("vec_rsc_triosy_0_3_lz"), 
+    vec_rsc_0_4_adra("vec_rsc_0_4_adra"), 
+    vec_rsc_0_4_da("vec_rsc_0_4_da"), 
+    vec_rsc_0_4_wea("vec_rsc_0_4_wea"), 
+    vec_rsc_0_4_qa("vec_rsc_0_4_qa"), 
+    vec_rsc_0_4_adrb("vec_rsc_0_4_adrb"), 
+    vec_rsc_0_4_db("vec_rsc_0_4_db"), 
+    vec_rsc_0_4_web("vec_rsc_0_4_web"), 
+    vec_rsc_0_4_qb("vec_rsc_0_4_qb"), 
+    vec_rsc_triosy_0_4_lz("vec_rsc_triosy_0_4_lz"), 
+    vec_rsc_0_5_adra("vec_rsc_0_5_adra"), 
+    vec_rsc_0_5_da("vec_rsc_0_5_da"), 
+    vec_rsc_0_5_wea("vec_rsc_0_5_wea"), 
+    vec_rsc_0_5_qa("vec_rsc_0_5_qa"), 
+    vec_rsc_0_5_adrb("vec_rsc_0_5_adrb"), 
+    vec_rsc_0_5_db("vec_rsc_0_5_db"), 
+    vec_rsc_0_5_web("vec_rsc_0_5_web"), 
+    vec_rsc_0_5_qb("vec_rsc_0_5_qb"), 
+    vec_rsc_triosy_0_5_lz("vec_rsc_triosy_0_5_lz"), 
+    vec_rsc_0_6_adra("vec_rsc_0_6_adra"), 
+    vec_rsc_0_6_da("vec_rsc_0_6_da"), 
+    vec_rsc_0_6_wea("vec_rsc_0_6_wea"), 
+    vec_rsc_0_6_qa("vec_rsc_0_6_qa"), 
+    vec_rsc_0_6_adrb("vec_rsc_0_6_adrb"), 
+    vec_rsc_0_6_db("vec_rsc_0_6_db"), 
+    vec_rsc_0_6_web("vec_rsc_0_6_web"), 
+    vec_rsc_0_6_qb("vec_rsc_0_6_qb"), 
+    vec_rsc_triosy_0_6_lz("vec_rsc_triosy_0_6_lz"), 
+    vec_rsc_0_7_adra("vec_rsc_0_7_adra"), 
+    vec_rsc_0_7_da("vec_rsc_0_7_da"), 
+    vec_rsc_0_7_wea("vec_rsc_0_7_wea"), 
+    vec_rsc_0_7_qa("vec_rsc_0_7_qa"), 
+    vec_rsc_0_7_adrb("vec_rsc_0_7_adrb"), 
+    vec_rsc_0_7_db("vec_rsc_0_7_db"), 
+    vec_rsc_0_7_web("vec_rsc_0_7_web"), 
+    vec_rsc_0_7_qb("vec_rsc_0_7_qb"), 
+    vec_rsc_triosy_0_7_lz("vec_rsc_triosy_0_7_lz"), 
+    vec_rsc_1_0_adra("vec_rsc_1_0_adra"), 
+    vec_rsc_1_0_da("vec_rsc_1_0_da"), 
+    vec_rsc_1_0_wea("vec_rsc_1_0_wea"), 
+    vec_rsc_1_0_qa("vec_rsc_1_0_qa"), 
+    vec_rsc_1_0_adrb("vec_rsc_1_0_adrb"), 
+    vec_rsc_1_0_db("vec_rsc_1_0_db"), 
+    vec_rsc_1_0_web("vec_rsc_1_0_web"), 
+    vec_rsc_1_0_qb("vec_rsc_1_0_qb"), 
+    vec_rsc_triosy_1_0_lz("vec_rsc_triosy_1_0_lz"), 
+    vec_rsc_1_1_adra("vec_rsc_1_1_adra"), 
+    vec_rsc_1_1_da("vec_rsc_1_1_da"), 
+    vec_rsc_1_1_wea("vec_rsc_1_1_wea"), 
+    vec_rsc_1_1_qa("vec_rsc_1_1_qa"), 
+    vec_rsc_1_1_adrb("vec_rsc_1_1_adrb"), 
+    vec_rsc_1_1_db("vec_rsc_1_1_db"), 
+    vec_rsc_1_1_web("vec_rsc_1_1_web"), 
+    vec_rsc_1_1_qb("vec_rsc_1_1_qb"), 
+    vec_rsc_triosy_1_1_lz("vec_rsc_triosy_1_1_lz"), 
+    vec_rsc_1_2_adra("vec_rsc_1_2_adra"), 
+    vec_rsc_1_2_da("vec_rsc_1_2_da"), 
+    vec_rsc_1_2_wea("vec_rsc_1_2_wea"), 
+    vec_rsc_1_2_qa("vec_rsc_1_2_qa"), 
+    vec_rsc_1_2_adrb("vec_rsc_1_2_adrb"), 
+    vec_rsc_1_2_db("vec_rsc_1_2_db"), 
+    vec_rsc_1_2_web("vec_rsc_1_2_web"), 
+    vec_rsc_1_2_qb("vec_rsc_1_2_qb"), 
+    vec_rsc_triosy_1_2_lz("vec_rsc_triosy_1_2_lz"), 
+    vec_rsc_1_3_adra("vec_rsc_1_3_adra"), 
+    vec_rsc_1_3_da("vec_rsc_1_3_da"), 
+    vec_rsc_1_3_wea("vec_rsc_1_3_wea"), 
+    vec_rsc_1_3_qa("vec_rsc_1_3_qa"), 
+    vec_rsc_1_3_adrb("vec_rsc_1_3_adrb"), 
+    vec_rsc_1_3_db("vec_rsc_1_3_db"), 
+    vec_rsc_1_3_web("vec_rsc_1_3_web"), 
+    vec_rsc_1_3_qb("vec_rsc_1_3_qb"), 
+    vec_rsc_triosy_1_3_lz("vec_rsc_triosy_1_3_lz"), 
+    vec_rsc_1_4_adra("vec_rsc_1_4_adra"), 
+    vec_rsc_1_4_da("vec_rsc_1_4_da"), 
+    vec_rsc_1_4_wea("vec_rsc_1_4_wea"), 
+    vec_rsc_1_4_qa("vec_rsc_1_4_qa"), 
+    vec_rsc_1_4_adrb("vec_rsc_1_4_adrb"), 
+    vec_rsc_1_4_db("vec_rsc_1_4_db"), 
+    vec_rsc_1_4_web("vec_rsc_1_4_web"), 
+    vec_rsc_1_4_qb("vec_rsc_1_4_qb"), 
+    vec_rsc_triosy_1_4_lz("vec_rsc_triosy_1_4_lz"), 
+    vec_rsc_1_5_adra("vec_rsc_1_5_adra"), 
+    vec_rsc_1_5_da("vec_rsc_1_5_da"), 
+    vec_rsc_1_5_wea("vec_rsc_1_5_wea"), 
+    vec_rsc_1_5_qa("vec_rsc_1_5_qa"), 
+    vec_rsc_1_5_adrb("vec_rsc_1_5_adrb"), 
+    vec_rsc_1_5_db("vec_rsc_1_5_db"), 
+    vec_rsc_1_5_web("vec_rsc_1_5_web"), 
+    vec_rsc_1_5_qb("vec_rsc_1_5_qb"), 
+    vec_rsc_triosy_1_5_lz("vec_rsc_triosy_1_5_lz"), 
+    vec_rsc_1_6_adra("vec_rsc_1_6_adra"), 
+    vec_rsc_1_6_da("vec_rsc_1_6_da"), 
+    vec_rsc_1_6_wea("vec_rsc_1_6_wea"), 
+    vec_rsc_1_6_qa("vec_rsc_1_6_qa"), 
+    vec_rsc_1_6_adrb("vec_rsc_1_6_adrb"), 
+    vec_rsc_1_6_db("vec_rsc_1_6_db"), 
+    vec_rsc_1_6_web("vec_rsc_1_6_web"), 
+    vec_rsc_1_6_qb("vec_rsc_1_6_qb"), 
+    vec_rsc_triosy_1_6_lz("vec_rsc_triosy_1_6_lz"), 
+    vec_rsc_1_7_adra("vec_rsc_1_7_adra"), 
+    vec_rsc_1_7_da("vec_rsc_1_7_da"), 
+    vec_rsc_1_7_wea("vec_rsc_1_7_wea"), 
+    vec_rsc_1_7_qa("vec_rsc_1_7_qa"), 
+    vec_rsc_1_7_adrb("vec_rsc_1_7_adrb"), 
+    vec_rsc_1_7_db("vec_rsc_1_7_db"), 
+    vec_rsc_1_7_web("vec_rsc_1_7_web"), 
+    vec_rsc_1_7_qb("vec_rsc_1_7_qb"), 
+    vec_rsc_triosy_1_7_lz("vec_rsc_triosy_1_7_lz"), 
     p_rsc_dat("p_rsc_dat"), 
     p_rsc_triosy_lz("p_rsc_triosy_lz"), 
     r_rsc_dat("r_rsc_dat"), 
     r_rsc_triosy_lz("r_rsc_triosy_lz"), 
-    twiddle_rsc_radr("twiddle_rsc_radr"), 
-    twiddle_rsc_q("twiddle_rsc_q"), 
-    twiddle_rsc_triosy_lz("twiddle_rsc_triosy_lz"), 
-    twiddle_h_rsc_radr("twiddle_h_rsc_radr"), 
-    twiddle_h_rsc_q("twiddle_h_rsc_q"), 
-    twiddle_h_rsc_triosy_lz("twiddle_h_rsc_triosy_lz"), 
+    twiddle_rsc_0_0_adrb("twiddle_rsc_0_0_adrb"), 
+    twiddle_rsc_0_0_qb("twiddle_rsc_0_0_qb"), 
+    twiddle_rsc_triosy_0_0_lz("twiddle_rsc_triosy_0_0_lz"), 
+    twiddle_rsc_0_1_adrb("twiddle_rsc_0_1_adrb"), 
+    twiddle_rsc_0_1_qb("twiddle_rsc_0_1_qb"), 
+    twiddle_rsc_triosy_0_1_lz("twiddle_rsc_triosy_0_1_lz"), 
+    twiddle_rsc_0_2_adrb("twiddle_rsc_0_2_adrb"), 
+    twiddle_rsc_0_2_qb("twiddle_rsc_0_2_qb"), 
+    twiddle_rsc_triosy_0_2_lz("twiddle_rsc_triosy_0_2_lz"), 
+    twiddle_rsc_0_3_adrb("twiddle_rsc_0_3_adrb"), 
+    twiddle_rsc_0_3_qb("twiddle_rsc_0_3_qb"), 
+    twiddle_rsc_triosy_0_3_lz("twiddle_rsc_triosy_0_3_lz"), 
+    twiddle_rsc_0_4_adrb("twiddle_rsc_0_4_adrb"), 
+    twiddle_rsc_0_4_qb("twiddle_rsc_0_4_qb"), 
+    twiddle_rsc_triosy_0_4_lz("twiddle_rsc_triosy_0_4_lz"), 
+    twiddle_rsc_0_5_adrb("twiddle_rsc_0_5_adrb"), 
+    twiddle_rsc_0_5_qb("twiddle_rsc_0_5_qb"), 
+    twiddle_rsc_triosy_0_5_lz("twiddle_rsc_triosy_0_5_lz"), 
+    twiddle_rsc_0_6_adrb("twiddle_rsc_0_6_adrb"), 
+    twiddle_rsc_0_6_qb("twiddle_rsc_0_6_qb"), 
+    twiddle_rsc_triosy_0_6_lz("twiddle_rsc_triosy_0_6_lz"), 
+    twiddle_rsc_0_7_adrb("twiddle_rsc_0_7_adrb"), 
+    twiddle_rsc_0_7_qb("twiddle_rsc_0_7_qb"), 
+    twiddle_rsc_triosy_0_7_lz("twiddle_rsc_triosy_0_7_lz"), 
+    twiddle_rsc_1_0_adrb("twiddle_rsc_1_0_adrb"), 
+    twiddle_rsc_1_0_qb("twiddle_rsc_1_0_qb"), 
+    twiddle_rsc_triosy_1_0_lz("twiddle_rsc_triosy_1_0_lz"), 
+    twiddle_rsc_1_1_adrb("twiddle_rsc_1_1_adrb"), 
+    twiddle_rsc_1_1_qb("twiddle_rsc_1_1_qb"), 
+    twiddle_rsc_triosy_1_1_lz("twiddle_rsc_triosy_1_1_lz"), 
+    twiddle_rsc_1_2_adrb("twiddle_rsc_1_2_adrb"), 
+    twiddle_rsc_1_2_qb("twiddle_rsc_1_2_qb"), 
+    twiddle_rsc_triosy_1_2_lz("twiddle_rsc_triosy_1_2_lz"), 
+    twiddle_rsc_1_3_adrb("twiddle_rsc_1_3_adrb"), 
+    twiddle_rsc_1_3_qb("twiddle_rsc_1_3_qb"), 
+    twiddle_rsc_triosy_1_3_lz("twiddle_rsc_triosy_1_3_lz"), 
+    twiddle_rsc_1_4_adrb("twiddle_rsc_1_4_adrb"), 
+    twiddle_rsc_1_4_qb("twiddle_rsc_1_4_qb"), 
+    twiddle_rsc_triosy_1_4_lz("twiddle_rsc_triosy_1_4_lz"), 
+    twiddle_rsc_1_5_adrb("twiddle_rsc_1_5_adrb"), 
+    twiddle_rsc_1_5_qb("twiddle_rsc_1_5_qb"), 
+    twiddle_rsc_triosy_1_5_lz("twiddle_rsc_triosy_1_5_lz"), 
+    twiddle_rsc_1_6_adrb("twiddle_rsc_1_6_adrb"), 
+    twiddle_rsc_1_6_qb("twiddle_rsc_1_6_qb"), 
+    twiddle_rsc_triosy_1_6_lz("twiddle_rsc_triosy_1_6_lz"), 
+    twiddle_rsc_1_7_adrb("twiddle_rsc_1_7_adrb"), 
+    twiddle_rsc_1_7_qb("twiddle_rsc_1_7_qb"), 
+    twiddle_rsc_triosy_1_7_lz("twiddle_rsc_triosy_1_7_lz"), 
+    twiddle_h_rsc_0_0_adrb("twiddle_h_rsc_0_0_adrb"), 
+    twiddle_h_rsc_0_0_qb("twiddle_h_rsc_0_0_qb"), 
+    twiddle_h_rsc_triosy_0_0_lz("twiddle_h_rsc_triosy_0_0_lz"), 
+    twiddle_h_rsc_0_1_adrb("twiddle_h_rsc_0_1_adrb"), 
+    twiddle_h_rsc_0_1_qb("twiddle_h_rsc_0_1_qb"), 
+    twiddle_h_rsc_triosy_0_1_lz("twiddle_h_rsc_triosy_0_1_lz"), 
+    twiddle_h_rsc_0_2_adrb("twiddle_h_rsc_0_2_adrb"), 
+    twiddle_h_rsc_0_2_qb("twiddle_h_rsc_0_2_qb"), 
+    twiddle_h_rsc_triosy_0_2_lz("twiddle_h_rsc_triosy_0_2_lz"), 
+    twiddle_h_rsc_0_3_adrb("twiddle_h_rsc_0_3_adrb"), 
+    twiddle_h_rsc_0_3_qb("twiddle_h_rsc_0_3_qb"), 
+    twiddle_h_rsc_triosy_0_3_lz("twiddle_h_rsc_triosy_0_3_lz"), 
+    twiddle_h_rsc_0_4_adrb("twiddle_h_rsc_0_4_adrb"), 
+    twiddle_h_rsc_0_4_qb("twiddle_h_rsc_0_4_qb"), 
+    twiddle_h_rsc_triosy_0_4_lz("twiddle_h_rsc_triosy_0_4_lz"), 
+    twiddle_h_rsc_0_5_adrb("twiddle_h_rsc_0_5_adrb"), 
+    twiddle_h_rsc_0_5_qb("twiddle_h_rsc_0_5_qb"), 
+    twiddle_h_rsc_triosy_0_5_lz("twiddle_h_rsc_triosy_0_5_lz"), 
+    twiddle_h_rsc_0_6_adrb("twiddle_h_rsc_0_6_adrb"), 
+    twiddle_h_rsc_0_6_qb("twiddle_h_rsc_0_6_qb"), 
+    twiddle_h_rsc_triosy_0_6_lz("twiddle_h_rsc_triosy_0_6_lz"), 
+    twiddle_h_rsc_0_7_adrb("twiddle_h_rsc_0_7_adrb"), 
+    twiddle_h_rsc_0_7_qb("twiddle_h_rsc_0_7_qb"), 
+    twiddle_h_rsc_triosy_0_7_lz("twiddle_h_rsc_triosy_0_7_lz"), 
+    twiddle_h_rsc_1_0_adrb("twiddle_h_rsc_1_0_adrb"), 
+    twiddle_h_rsc_1_0_qb("twiddle_h_rsc_1_0_qb"), 
+    twiddle_h_rsc_triosy_1_0_lz("twiddle_h_rsc_triosy_1_0_lz"), 
+    twiddle_h_rsc_1_1_adrb("twiddle_h_rsc_1_1_adrb"), 
+    twiddle_h_rsc_1_1_qb("twiddle_h_rsc_1_1_qb"), 
+    twiddle_h_rsc_triosy_1_1_lz("twiddle_h_rsc_triosy_1_1_lz"), 
+    twiddle_h_rsc_1_2_adrb("twiddle_h_rsc_1_2_adrb"), 
+    twiddle_h_rsc_1_2_qb("twiddle_h_rsc_1_2_qb"), 
+    twiddle_h_rsc_triosy_1_2_lz("twiddle_h_rsc_triosy_1_2_lz"), 
+    twiddle_h_rsc_1_3_adrb("twiddle_h_rsc_1_3_adrb"), 
+    twiddle_h_rsc_1_3_qb("twiddle_h_rsc_1_3_qb"), 
+    twiddle_h_rsc_triosy_1_3_lz("twiddle_h_rsc_triosy_1_3_lz"), 
+    twiddle_h_rsc_1_4_adrb("twiddle_h_rsc_1_4_adrb"), 
+    twiddle_h_rsc_1_4_qb("twiddle_h_rsc_1_4_qb"), 
+    twiddle_h_rsc_triosy_1_4_lz("twiddle_h_rsc_triosy_1_4_lz"), 
+    twiddle_h_rsc_1_5_adrb("twiddle_h_rsc_1_5_adrb"), 
+    twiddle_h_rsc_1_5_qb("twiddle_h_rsc_1_5_qb"), 
+    twiddle_h_rsc_triosy_1_5_lz("twiddle_h_rsc_triosy_1_5_lz"), 
+    twiddle_h_rsc_1_6_adrb("twiddle_h_rsc_1_6_adrb"), 
+    twiddle_h_rsc_1_6_qb("twiddle_h_rsc_1_6_qb"), 
+    twiddle_h_rsc_triosy_1_6_lz("twiddle_h_rsc_triosy_1_6_lz"), 
+    twiddle_h_rsc_1_7_adrb("twiddle_h_rsc_1_7_adrb"), 
+    twiddle_h_rsc_1_7_qb("twiddle_h_rsc_1_7_qb"), 
+    twiddle_h_rsc_triosy_1_7_lz("twiddle_h_rsc_triosy_1_7_lz"), 
     complete_rsc_rdy("complete_rsc_rdy"), 
     complete_rsc_vld("complete_rsc_vld")
   {

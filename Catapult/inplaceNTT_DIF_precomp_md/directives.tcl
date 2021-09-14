@@ -12,18 +12,21 @@ solution file add ${sfd}/src/utils.cpp -exclude true
 go analyze
 
 go compile
-
-solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+directive set DSP_EXTRACTION yes
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
 solution library add Xilinx_RAMS
-
 go libraries
 
-directive set DSP_EXTRACTION yes
-directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5}}
 go memories
 directive set SCHED_USE_MULTICYCLE true
 go assembly
 go architect
+
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
 
 go extract
 

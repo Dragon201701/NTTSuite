@@ -1,0 +1,440 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.06 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+x86_64
+solution file add ./src/main.cpp -exclude true
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/TargetPlatform x86_64
+go analyze
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+/INPUTFILES/3
+solution file add ./src/utils.cpp -exclude true
+solution file add ./src/ntt.cpp
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+/INPUTFILES/1
+/INPUTFILES/2
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/catapult.log"
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/src/ntt.cpp (CIN-69)
+
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF_precomp' (CIN-6)
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 2.18 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+Inlining routine 'inPlaceNTT_DIF_precomp' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIF_precomp' (CIN-13)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Found top design routine 'inPlaceNTT_DIF_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Design 'inPlaceNTT_DIF_precomp' was read (SOL-1)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Synthesizing routine 'mult' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF_precomp/modulo_sub' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF_precomp/modulo_add' ... (CIN-4)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Optimizing block '/inPlaceNTT_DIF_precomp' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+Optimizing block '/inPlaceNTT_DIF_precomp/mult' ... (CIN-4)
+Generating synthesis internal form... (CIN-3)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v1/CDesignChecker/design_checker.sh'
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v13': elapsed time 0.45 seconds, memory usage 1773536kB, peak memory usage 1773536kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v13/CDesignChecker/design_checker.sh'
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v13' (SOL-8)
+go libraries
+solution library add amba
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v13' at state 'compile' (PRJ-2)
+solution library add Xilinx_RAMS
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.97 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+go libraries
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v5' at state 'compile' (PRJ-2)
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 1.24 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+go libraries
+solution library add amba
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffq1761-2
+# Error: solution library add: Could not locate library file for library name mgc_Xilinx-VIRTEX-7-2_beh for current configuration
+go libraries
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v13': elapsed time 0.33 seconds, memory usage 1773536kB, peak memory usage 1773536kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 105, Real ops = 34, Vars = 51 (SOL-21)
+go assembly
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v13' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 1552, Real ops = 349, Vars = 408 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 6.20 seconds, memory usage 1969560kB, peak memory usage 1969560kB (SOL-9)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is being partially unrolled 32 times. (LOOP-3)
+N_UNROLL parameter 32 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+project save
+go extract
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult.ccs'. (PRJ-5)
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/twiddle_h:rsc {INTERLEAVE 1}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/vec:rsc {BLOCK_SIZE 0}: Race condition
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/core/COMP_LOOP {UNROLL 8}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/vec:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL}: Race condition
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v16' at state 'assembly' (PRJ-2)
+CU_DESIGN sid31 ADD {} {VERSION v16 SID sid31 BRANCH_SID sid30 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209 /CONFIG/PARAMETERS/Vivado/PARAMETERS/amba/240} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF_precomp}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/vec:rsc {INTERLEAVE 1}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {INTERLEAVE 1}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+CU_DIRECTIVE sid31 SET /inPlaceNTT_DIF_precomp/twiddle_h:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v16/CDesignChecker/design_checker.sh'
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL 32
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+# Info: Design complexity at end of 'loops': Total ops = 815, Real ops = 188, Vars = 231 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v15': elapsed time 2.90 seconds, memory usage 1772952kB, peak memory usage 1838488kB (SOL-9)
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {INTERLEAVE 1}: Race condition
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v15' (SOL-8)
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+go extract
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/twiddle_h:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+N_UNROLL parameter 16 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v15/CDesignChecker/design_checker.sh'
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL 16
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/core/COMP_LOOP {UNROLL 8}: Race condition
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/vec:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL}: Race condition
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v15' at state 'assembly' (PRJ-2)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is being partially unrolled 16 times. (LOOP-3)
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/twiddle_h:rsc {INTERLEAVE 1}: Race condition
+CU_DESIGN sid30 ADD {} {VERSION v15 SID sid30 BRANCH_SID sid26 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209 /CONFIG/PARAMETERS/Vivado/PARAMETERS/amba/240} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF_precomp}: Race condition
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/vec:rsc {INTERLEAVE 1}: Race condition
+CU_DIRECTIVE sid30 SET /inPlaceNTT_DIF_precomp/vec:rsc {BLOCK_SIZE 0}: Race condition
+# Info: Design complexity at end of 'loops': Total ops = 446, Real ops = 107, Vars = 142 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v14': elapsed time 1.45 seconds, memory usage 1772920kB, peak memory usage 1773536kB (SOL-9)
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v14' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+go extract
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL 8
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v14' (SOL-8)
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+/inPlaceNTT_DIF_precomp/SAFE_FSM true
+directive set /inPlaceNTT_DIF_precomp/core/COMP_LOOP -UNROLL 8
+/inPlaceNTT_DIF_precomp/vec:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/vec:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL}: Race condition
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+CU_DESIGN sid26 ADD {} {VERSION v14 SID sid26 BRANCH_SID sid22 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209 /CONFIG/PARAMETERS/Vivado/PARAMETERS/amba/240} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name inPlaceNTT_DIF_precomp}: Race condition
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/core/COMP_LOOP {UNROLL 8}: Race condition
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {INTERLEAVE 1}: Race condition
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is being partially unrolled 8 times. (LOOP-3)
+N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/twiddle_h:rsc {MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL}: Race condition
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/vec:rsc {INTERLEAVE 1}: Race condition
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v14/CDesignChecker/design_checker.sh'
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/twiddle_h:rsc {INTERLEAVE 1}: Race condition
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/vec:rsc {BLOCK_SIZE 0}: Race condition
+CU_DIRECTIVE sid26 SET /inPlaceNTT_DIF_precomp/twiddle:rsc {BLOCK_SIZE 0}: Race condition
+# Info: Design complexity at end of 'loops': Total ops = 118, Real ops = 34, Vars = 62 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v13': elapsed time 0.08 seconds, memory usage 1773536kB, peak memory usage 1773536kB (SOL-9)
+go extract
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -MAP_TO_MODULE amba.ccs_axi4_master
+/inPlaceNTT_DIF_precomp/core/COMP_LOOP/UNROLL no
+directive set /inPlaceNTT_DIF_precomp/core/COMP_LOOP -UNROLL no
+Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
+/inPlaceNTT_DIF_precomp/vec:rsc/MAP_TO_MODULE amba.ccs_axi4_master
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v13' (SOL-8)
+Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
+# Warning: AXI4 Component 'amba.ccs_axi4_master' requires asynchronous reset when processing MAP_TO_MODULE directive (DIR-48)
+# Info: Design complexity at end of 'memories': Total ops = 1587, Real ops = 349, Vars = 405 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 3.86 seconds, memory usage 1969560kB, peak memory usage 1969560kB (SOL-9)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/x:rsc' (from var: x) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y_:rsc' (from var: y_) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y:rsc' (from var: y) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 1536, Real ops = 335, Vars = 377 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 1.13 seconds, memory usage 1969560kB, peak memory usage 1969560kB (SOL-9)
+Module for CCORE 'modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374' has been successfully synthesized (TD-4)
+Module 'mult_537fa58b3c62ba07ee98ed4139c27adf70e3_0' in the cache is valid & accepted for CCORE 'mult_537fa58b3c62ba07ee98ed4139c27adf70e3' (TD-3)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374_0/.sif/solIndex_2_5bd6ccd6-a9da-4956-8f6b-43836e2d12f9.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_add_0a37945888dd1e74de5ead9499a92e0360eb_0/.sif/solIndex_2_7d717005-8137-4bf8-9933-58aaed752858.xml' ... (LIB-129)
+Module 'modulo_add_0a37945888dd1e74de5ead9499a92e0360eb_0' in the cache is valid & accepted for CCORE 'modulo_add_0a37945888dd1e74de5ead9499a92e0360eb' (TD-3)
+Module for CCORE 'modulo_add_0a37945888dd1e74de5ead9499a92e0360eb' has been successfully synthesized (TD-4)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+Module 'modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374_0' in the cache is valid & accepted for CCORE 'modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374' (TD-3)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+Module for CCORE 'mult_537fa58b3c62ba07ee98ed4139c27adf70e3' has been successfully synthesized (TD-4)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/mult_537fa58b3c62ba07ee98ed4139c27adf70e3_0/.sif/solIndex_2_1ea70f2d-5741-47cd-9650-977624473664.xml' ... (LIB-129)
+# Info: Design complexity at end of 'architect': Total ops = 1864, Real ops = 367, Vars = 412 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 4.01 seconds, memory usage 1969560kB, peak memory usage 1969560kB (SOL-9)
+Design 'inPlaceNTT_DIF_precomp' contains '367' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 1864, Real ops = 367, Vars = 412 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 3.53 seconds, memory usage 1969560kB, peak memory usage 1969560kB (SOL-9)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 85487, Area (Datapath, Register, Total) = 26398.77, 0.00, 26398.77 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-12:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIF_precomp/core' (total length 85493 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-9:VEC_LOOP' (7 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 85487, Area (Datapath, Register, Total) = 8137.81, 0.00, 8137.81 (CRAAS-12)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-10:VEC_LOOP' (7 c-steps) (SCHD-7)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+At least one feasible schedule exists. (CRAAS-9)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-15:VEC_LOOP' (7 c-steps) (SCHD-7)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-16:VEC_LOOP' (7 c-steps) (SCHD-7)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' (35 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-13:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-14:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/main' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-3:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-4:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-1:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-2:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-7:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-8:VEC_LOOP' (7 c-steps) (SCHD-7)
+Resource allocation and scheduling done. (CRAAS-2)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-5:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-6:VEC_LOOP' (7 c-steps) (SCHD-7)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-27:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-28:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-25:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-26:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-31:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-32:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-29:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-30:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-19:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-20:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-17:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-18:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-23:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-24:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-21:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-22:VEC_LOOP' (7 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP-11:VEC_LOOP' (7 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 38.33 seconds, memory usage 2043288kB, peak memory usage 2043288kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 22712, Real ops = 449, Vars = 695 (SOL-21)
+Global signal 'vec:rsc.adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+Global signal 'run:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+Global signal 'vec:rsc.web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
+Global signal 'twiddle:rsc.qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+Global signal 'vec:rsc.adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc' (SCHD-46)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+Global signal 'run:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 22.17 seconds, memory usage 2043288kB, peak memory usage 2043288kB (SOL-15)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Global signal 'complete:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy:obj' (LIB-3)
+Global signal 'complete:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+Global signal 'twiddle:rsc.adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 2842, Real ops = 988, Vars = 703 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 18.07 seconds, memory usage 2043288kB, peak memory usage 2043288kB (SOL-9)
+Creating shared register 'COMP_LOOP-17:twiddle_f:lshift.itm' for variables 'COMP_LOOP-17:twiddle_f:lshift.itm, COMP_LOOP-17:twiddle_f:mul.psp.sva, VEC_LOOP:acc#18.psp.sva' (2 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-13:twiddle_f:mul.psp.sva' for variables 'COMP_LOOP-13:twiddle_f:mul.psp.sva, COMP_LOOP-21:twiddle_f:mul.psp.sva, COMP_LOOP-29:twiddle_f:mul.psp.sva, COMP_LOOP-5:twiddle_f:mul.psp.sva, VEC_LOOP:acc#12.psp.sva, VEC_LOOP:acc#16.psp.sva, VEC_LOOP:acc#20.psp.sva, VEC_LOOP:acc#24.psp.sva' (7 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-25:twiddle_f:mul.psp.sva' for variables 'COMP_LOOP-25:twiddle_f:mul.psp.sva, COMP_LOOP-9:twiddle_f:mul.psp.sva, VEC_LOOP:acc#14.psp.sva, VEC_LOOP:acc#22.psp.sva' (3 registers deleted). (FSM-3)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+Creating shared register 'COMP_LOOP-11:twiddle_f:mul.psp.sva' for variables 'COMP_LOOP-11:twiddle_f:mul.psp.sva, COMP_LOOP-15:twiddle_f:mul.psp.sva, COMP_LOOP-19:twiddle_f:mul.psp.sva, COMP_LOOP-23:twiddle_f:mul.psp.sva, COMP_LOOP-27:twiddle_f:mul.psp.sva, COMP_LOOP-31:twiddle_f:mul.psp.sva, COMP_LOOP-3:twiddle_f:mul.psp.sva, COMP_LOOP-7:twiddle_f:mul.psp.sva, VEC_LOOP:acc#11.psp.sva, VEC_LOOP:acc#13.psp.sva, VEC_LOOP:acc#15.psp.sva, VEC_LOOP:acc#17.psp.sva, VEC_LOOP:acc#19.psp.sva, VEC_LOOP:acc#21.psp.sva, VEC_LOOP:acc#23.psp.sva, VEC_LOOP:acc#25.psp.sva' (15 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'VEC_LOOP:j(10:0)#1.sva#1' for variables 'VEC_LOOP:j(10:0)#1.sva#1, VEC_LOOP:j(10:0)#10.sva#1, VEC_LOOP:j(10:0)#11.sva#1, VEC_LOOP:j(10:0)#12.sva#1, VEC_LOOP:j(10:0)#13.sva#1, VEC_LOOP:j(10:0)#14.sva#1, VEC_LOOP:j(10:0)#15.sva#1, VEC_LOOP:j(10:0)#16.sva#1, VEC_LOOP:j(10:0)#17.sva#1, VEC_LOOP:j(10:0)#18.sva#1, VEC_LOOP:j(10:0)#19.sva#1, VEC_LOOP:j(10:0)#2.sva#1, VEC_LOOP:j(10:0)#20.sva#1, VEC_LOOP:j(10:0)#21.sva#1, VEC_LOOP:j(10:0)#22.sva#1, VEC_LOOP:j(10:0)#23.sva#1, VEC_LOOP:j(10:0)#24.sva#1, VEC_LOOP:j(10:0)#25.sva#1, VEC_LOOP:j(10:0)#26.sva#1, VEC_LOOP:j(10:0)#27.sva#1, VEC_LOOP:j(10:0)#28.sva#1, VEC_LOOP:j(10:0)#29.sva#1, VEC_LOOP:j(10:0)#3.sva#1, VEC_LOOP:j(10:0)#30.sva#1, VEC_LOOP:j(10:0)#31.sva#1, VEC_LOOP:j(10:0)#4.sva#1, VEC_LOOP:j(10:0)#5.sva#1, VEC_LOOP:j(10:0)#6.sva#1, VEC_LOOP:j(10:0)#7.sva#1, VEC_LOOP:j(10:0)#8.sva#1, VEC_LOOP:j(10:0)#9.sva#1, VEC_LOOP:j(10:0).sva#1' (31 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:twiddle_help#1.sva' for variables 'COMP_LOOP:twiddle_help#1.sva, COMP_LOOP:twiddle_help#10.sva, COMP_LOOP:twiddle_help#11.sva, COMP_LOOP:twiddle_help#12.sva, COMP_LOOP:twiddle_help#13.sva, COMP_LOOP:twiddle_help#14.sva, COMP_LOOP:twiddle_help#15.sva, COMP_LOOP:twiddle_help#16.sva, COMP_LOOP:twiddle_help#17.sva, COMP_LOOP:twiddle_help#18.sva, COMP_LOOP:twiddle_help#19.sva, COMP_LOOP:twiddle_help#2.sva, COMP_LOOP:twiddle_help#20.sva, COMP_LOOP:twiddle_help#21.sva, COMP_LOOP:twiddle_help#22.sva, COMP_LOOP:twiddle_help#23.sva, COMP_LOOP:twiddle_help#24.sva, COMP_LOOP:twiddle_help#25.sva, COMP_LOOP:twiddle_help#26.sva, COMP_LOOP:twiddle_help#27.sva, COMP_LOOP:twiddle_help#28.sva, COMP_LOOP:twiddle_help#29.sva, COMP_LOOP:twiddle_help#3.sva, COMP_LOOP:twiddle_help#30.sva, COMP_LOOP:twiddle_help#31.sva, COMP_LOOP:twiddle_help#4.sva, COMP_LOOP:twiddle_help#5.sva, COMP_LOOP:twiddle_help#6.sva, COMP_LOOP:twiddle_help#7.sva, COMP_LOOP:twiddle_help#8.sva, COMP_LOOP:twiddle_help#9.sva, COMP_LOOP:twiddle_help.sva' (31 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP-13:twiddle_f:mul.psp.sva' for variables 'COMP_LOOP-13:twiddle_f:mul.psp.sva, COMP_LOOP-21:twiddle_f:mul.psp.sva, COMP_LOOP-29:twiddle_f:mul.psp.sva, COMP_LOOP-5:twiddle_f:mul.psp.sva, VEC_LOOP:acc#12.psp.sva, VEC_LOOP:acc#16.psp.sva, VEC_LOOP:acc#20.psp.sva, VEC_LOOP:acc#24.psp.sva, COMP_LOOP-1:twiddle_f:mul.psp.sva, VEC_LOOP:acc.psp.sva, COMP_LOOP-25:twiddle_f:mul.psp.sva, COMP_LOOP-9:twiddle_f:mul.psp.sva, VEC_LOOP:acc#14.psp.sva, VEC_LOOP:acc#22.psp.sva' (2 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:twiddle_f:mul.cse#10.sva' for variables 'COMP_LOOP:twiddle_f:mul.cse#10.sva, COMP_LOOP:twiddle_f:mul.cse#12.sva, COMP_LOOP:twiddle_f:mul.cse#14.sva, COMP_LOOP:twiddle_f:mul.cse#16.sva, COMP_LOOP:twiddle_f:mul.cse#18.sva, COMP_LOOP:twiddle_f:mul.cse#2.sva, COMP_LOOP:twiddle_f:mul.cse#20.sva, COMP_LOOP:twiddle_f:mul.cse#22.sva, COMP_LOOP:twiddle_f:mul.cse#24.sva, COMP_LOOP:twiddle_f:mul.cse#26.sva, COMP_LOOP:twiddle_f:mul.cse#28.sva, COMP_LOOP:twiddle_f:mul.cse#30.sva, COMP_LOOP:twiddle_f:mul.cse#4.sva, COMP_LOOP:twiddle_f:mul.cse#6.sva, COMP_LOOP:twiddle_f:mul.cse#8.sva, COMP_LOOP:twiddle_f:mul.cse.sva' (15 registers deleted). (FSM-3)
+Creating shared register 'VEC_LOOP:acc#10.cse#1.sva' for variables 'VEC_LOOP:acc#10.cse#1.sva, VEC_LOOP:acc#10.cse#10.sva, VEC_LOOP:acc#10.cse#11.sva, VEC_LOOP:acc#10.cse#12.sva, VEC_LOOP:acc#10.cse#13.sva, VEC_LOOP:acc#10.cse#14.sva, VEC_LOOP:acc#10.cse#15.sva, VEC_LOOP:acc#10.cse#16.sva, VEC_LOOP:acc#10.cse#17.sva, VEC_LOOP:acc#10.cse#18.sva, VEC_LOOP:acc#10.cse#19.sva, VEC_LOOP:acc#10.cse#2.sva, VEC_LOOP:acc#10.cse#20.sva, VEC_LOOP:acc#10.cse#21.sva, VEC_LOOP:acc#10.cse#22.sva, VEC_LOOP:acc#10.cse#23.sva, VEC_LOOP:acc#10.cse#24.sva, VEC_LOOP:acc#10.cse#25.sva, VEC_LOOP:acc#10.cse#26.sva, VEC_LOOP:acc#10.cse#27.sva, VEC_LOOP:acc#10.cse#28.sva, VEC_LOOP:acc#10.cse#29.sva, VEC_LOOP:acc#10.cse#3.sva, VEC_LOOP:acc#10.cse#30.sva, VEC_LOOP:acc#10.cse#31.sva, VEC_LOOP:acc#10.cse#4.sva, VEC_LOOP:acc#10.cse#5.sva, VEC_LOOP:acc#10.cse#6.sva, VEC_LOOP:acc#10.cse#7.sva, VEC_LOOP:acc#10.cse#8.sva, VEC_LOOP:acc#10.cse#9.sva, VEC_LOOP:acc#10.cse.sva' (31 registers deleted). (FSM-3)
+Creating shared register 'COMP_LOOP:twiddle_f#1.sva' for variables 'COMP_LOOP:twiddle_f#1.sva, COMP_LOOP:twiddle_f#10.sva, COMP_LOOP:twiddle_f#11.sva, COMP_LOOP:twiddle_f#12.sva, COMP_LOOP:twiddle_f#13.sva, COMP_LOOP:twiddle_f#14.sva, COMP_LOOP:twiddle_f#15.sva, COMP_LOOP:twiddle_f#16.sva, COMP_LOOP:twiddle_f#17.sva, COMP_LOOP:twiddle_f#18.sva, COMP_LOOP:twiddle_f#19.sva, COMP_LOOP:twiddle_f#2.sva, COMP_LOOP:twiddle_f#20.sva, COMP_LOOP:twiddle_f#21.sva, COMP_LOOP:twiddle_f#22.sva, COMP_LOOP:twiddle_f#23.sva, COMP_LOOP:twiddle_f#24.sva, COMP_LOOP:twiddle_f#25.sva, COMP_LOOP:twiddle_f#26.sva, COMP_LOOP:twiddle_f#27.sva, COMP_LOOP:twiddle_f#28.sva, COMP_LOOP:twiddle_f#29.sva, COMP_LOOP:twiddle_f#3.sva, COMP_LOOP:twiddle_f#30.sva, COMP_LOOP:twiddle_f#31.sva, COMP_LOOP:twiddle_f#4.sva, COMP_LOOP:twiddle_f#5.sva, COMP_LOOP:twiddle_f#6.sva, COMP_LOOP:twiddle_f#7.sva, COMP_LOOP:twiddle_f#8.sva, COMP_LOOP:twiddle_f#9.sva, COMP_LOOP:twiddle_f.sva' (31 registers deleted). (FSM-3)
+Creating shared register 'VEC_LOOP:acc#1.cse#10.sva' for variables 'VEC_LOOP:acc#1.cse#10.sva, VEC_LOOP:acc#1.cse#12.sva, VEC_LOOP:acc#1.cse#14.sva, VEC_LOOP:acc#1.cse#16.sva, VEC_LOOP:acc#1.cse#18.sva, VEC_LOOP:acc#1.cse#2.sva, VEC_LOOP:acc#1.cse#20.sva, VEC_LOOP:acc#1.cse#22.sva, VEC_LOOP:acc#1.cse#24.sva, VEC_LOOP:acc#1.cse#26.sva, VEC_LOOP:acc#1.cse#28.sva, VEC_LOOP:acc#1.cse#30.sva, VEC_LOOP:acc#1.cse#4.sva, VEC_LOOP:acc#1.cse#6.sva, VEC_LOOP:acc#1.cse#8.sva, VEC_LOOP:acc#1.cse.sva, VEC_LOOP:j(10:0)#10.sva(9:0), VEC_LOOP:j(10:0)#12.sva(9:0), VEC_LOOP:j(10:0)#14.sva(9:0), VEC_LOOP:j(10:0)#16.sva(9:0), VEC_LOOP:j(10:0)#18.sva(9:0), VEC_LOOP:j(10:0)#2.sva(9:0), VEC_LOOP:j(10:0)#20.sva(9:0), VEC_LOOP:j(10:0)#22.sva(9:0), VEC_LOOP:j(10:0)#24.sva(9:0), VEC_LOOP:j(10:0)#26.sva(9:0), VEC_LOOP:j(10:0)#28.sva(9:0), VEC_LOOP:j(10:0)#30.sva(9:0), VEC_LOOP:j(10:0)#4.sva(9:0), VEC_LOOP:j(10:0)#6.sva(9:0), VEC_LOOP:j(10:0)#8.sva(9:0), VEC_LOOP:j(10:0).sva(9:0), VEC_LOOP:j(10:0)#11.sva(9:0), VEC_LOOP:j(10:0)#13.sva(9:0), VEC_LOOP:j(10:0)#15.sva(9:0), VEC_LOOP:j(10:0)#19.sva(9:0), VEC_LOOP:j(10:0)#21.sva(9:0), VEC_LOOP:j(10:0)#23.sva(9:0), VEC_LOOP:j(10:0)#27.sva(9:0), VEC_LOOP:j(10:0)#29.sva(9:0), VEC_LOOP:j(10:0)#3.sva(9:0), VEC_LOOP:j(10:0)#31.sva(9:0), VEC_LOOP:j(10:0)#5.sva(9:0), VEC_LOOP:j(10:0)#7.sva(9:0), VEC_LOOP:j(10:0)#17.sva(9:0), VEC_LOOP:j(10:0)#25.sva(9:0), VEC_LOOP:j(10:0)#9.sva(9:0), VEC_LOOP:j(10:0)#1.sva(9:0)' (47 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 2628, Real ops = 993, Vars = 2252 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 7.37 seconds, memory usage 2043288kB, peak memory usage 2043288kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 2544, Real ops = 963, Vars = 745 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v16': elapsed time 18.76 seconds, memory usage 2108824kB, peak memory usage 2108824kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v16/concat_rtl.vhdl
+Add dependent file: ../td_ccore_solutions/modulo_add_0a37945888dd1e74de5ead9499a92e0360eb_0/rtl.vhdl
+Add dependent file: ../td_ccore_solutions/modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ../td_ccore_solutions/mult_537fa58b3c62ba07ee98ed4139c27adf70e3_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: ../td_ccore_solutions/modulo_add_0a37945888dd1e74de5ead9499a92e0360eb_0/rtl.vhdl
+Add dependent file: ../td_ccore_solutions/modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v16/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374_0/rtl.v
+Add dependent file: ../td_ccore_solutions/mult_537fa58b3c62ba07ee98ed4139c27adf70e3_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_add_0a37945888dd1e74de5ead9499a92e0360eb_0/rtl.v
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v16/concat_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_add_0a37945888dd1e74de5ead9499a92e0360eb_0/rtl.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v16/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_35e8763e05b723902e0a11aa8bf94b5d6374_0/rtl.v
+Add dependent file: ../td_ccore_solutions/mult_537fa58b3c62ba07ee98ed4139c27adf70e3_0/rtl.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Report written to file 'rtl.rpt'
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v16' (SOL-8)
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ../td_ccore_solutions/mult_537fa58b3c62ba07ee98ed4139c27adf70e3_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+order file name is: rtl.vhdl_order.txt
+generate concat

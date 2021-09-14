@@ -6,7 +6,8 @@
 #include <mc_transactors.h>
 #include <mc_scverify.h>
 #include <mc_stall_ctrl.h>
-#include "/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW_trans_rsc.h"
+#include "/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_2R1W_RBW_DUAL_trans_rsc.h"
+#include "/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_DPRAM_RBW_DUAL_trans_rsc.h"
 #include "ccs_ioport_trans_rsc_v1.h"
 #include <mc_monitor.h>
 #include <mc_simulator_extensions.h>
@@ -56,38 +57,43 @@ public:
   sc_signal<sc_logic>                                                          TLS_rst;
   sc_signal<sc_logic>                                                          TLS_run_rsc_rdy;
   sc_signal<sc_logic>                                                          TLS_run_rsc_vld;
-  sc_signal<sc_lv<10> >                                                        TLS_vec_rsc_wadr;
-  sc_signal<sc_lv<32> >                                                        TLS_vec_rsc_d;
-  sc_signal<sc_logic>                                                          TLS_vec_rsc_we;
-  sc_signal<sc_lv<10> >                                                        TLS_vec_rsc_radr;
-  sc_signal<sc_lv<32> >                                                        TLS_vec_rsc_q;
+  sc_signal<sc_lv<10> >                                                        TLS_vec_rsc_adra;
+  sc_signal<sc_lv<32> >                                                        TLS_vec_rsc_da;
+  sc_signal<sc_logic>                                                          TLS_vec_rsc_wea;
+  sc_signal<sc_lv<32> >                                                        TLS_vec_rsc_qa;
+  sc_signal<sc_lv<10> >                                                        TLS_vec_rsc_adrb;
+  sc_signal<sc_lv<32> >                                                        TLS_vec_rsc_db;
+  sc_signal<sc_logic>                                                          TLS_vec_rsc_web;
+  sc_signal<sc_lv<32> >                                                        TLS_vec_rsc_qb;
   sc_signal<sc_logic>                                                          TLS_vec_rsc_triosy_lz;
   sc_signal<sc_lv<32> >                                                        TLS_p_rsc_dat;
   sc_signal<sc_logic>                                                          TLS_p_rsc_triosy_lz;
   sc_signal<sc_lv<32> >                                                        TLS_r_rsc_dat;
   sc_signal<sc_logic>                                                          TLS_r_rsc_triosy_lz;
-  sc_signal<sc_lv<10> >                                                        TLS_twiddle_rsc_radr;
-  sc_signal<sc_lv<32> >                                                        TLS_twiddle_rsc_q;
+  sc_signal<sc_lv<10> >                                                        TLS_twiddle_rsc_adrb;
+  sc_signal<sc_lv<32> >                                                        TLS_twiddle_rsc_qb;
   sc_signal<sc_logic>                                                          TLS_twiddle_rsc_triosy_lz;
-  sc_signal<sc_lv<10> >                                                        TLS_twiddle_h_rsc_radr;
-  sc_signal<sc_lv<32> >                                                        TLS_twiddle_h_rsc_q;
+  sc_signal<sc_lv<10> >                                                        TLS_twiddle_h_rsc_adrb;
+  sc_signal<sc_lv<32> >                                                        TLS_twiddle_h_rsc_qb;
   sc_signal<sc_logic>                                                          TLS_twiddle_h_rsc_triosy_lz;
   sc_signal<sc_logic>                                                          TLS_complete_rsc_rdy;
   sc_signal<sc_logic>                                                          TLS_complete_rsc_vld;
   ccs_DUT_wrapper                                                              inPlaceNTT_DIF_precomp_INST;
   ccs_sync_in_wait_trans_rsc_v1                                                run_rsc_INST;
   ccs_sync_out_wait_trans_rsc_v1                                               complete_rsc_INST;
-  BLOCK_1R1W_RBW_trans_rsc<10,32,1024 >                                        vec_rsc_INST;
+  BLOCK_DPRAM_RBW_DUAL_trans_rsc<10,32,1024 >                                  vec_rsc_INST;
   ccs_in_trans_rsc_v1<1,32 >                                                   p_rsc_INST;
   ccs_in_trans_rsc_v1<1,32 >                                                   r_rsc_INST;
-  sc_signal<sc_lv<32> >                                                        TLS_twiddle_rsc_d;
-  sc_signal<sc_lv<10> >                                                        TLS_twiddle_rsc_wadr;
-  sc_signal<sc_logic >                                                         TLS_twiddle_rsc_we;
-  BLOCK_1R1W_RBW_trans_rsc<10,32,1024 >                                        twiddle_rsc_INST;
-  sc_signal<sc_lv<32> >                                                        TLS_twiddle_h_rsc_d;
-  sc_signal<sc_lv<10> >                                                        TLS_twiddle_h_rsc_wadr;
-  sc_signal<sc_logic >                                                         TLS_twiddle_h_rsc_we;
-  BLOCK_1R1W_RBW_trans_rsc<10,32,1024 >                                        twiddle_h_rsc_INST;
+  sc_signal<sc_lv<10> >                                                        TLS_twiddle_rsc_adra;
+  sc_signal<sc_lv<32> >                                                        TLS_twiddle_rsc_da;
+  sc_signal<sc_lv<32> >                                                        TLS_twiddle_rsc_qa;
+  sc_signal<sc_logic >                                                         TLS_twiddle_rsc_wea;
+  BLOCK_2R1W_RBW_DUAL_trans_rsc<10,32,1024 >                                   twiddle_rsc_INST;
+  sc_signal<sc_lv<10> >                                                        TLS_twiddle_h_rsc_adra;
+  sc_signal<sc_lv<32> >                                                        TLS_twiddle_h_rsc_da;
+  sc_signal<sc_lv<32> >                                                        TLS_twiddle_h_rsc_qa;
+  sc_signal<sc_logic >                                                         TLS_twiddle_h_rsc_wea;
+  BLOCK_2R1W_RBW_DUAL_trans_rsc<10,32,1024 >                                   twiddle_h_rsc_INST;
   tlm::tlm_fifo<bool >                                                         TLS_in_fifo_run;
   tlm::tlm_fifo<mc_wait_ctrl>                                                  TLS_in_wait_ctrl_fifo_run;
   tlm::tlm_fifo<int>                                                           TLS_in_fifo_run_sizecount;
@@ -163,26 +169,29 @@ public:
     , SIG_SC_LOGIC_1("SIG_SC_LOGIC_1")
     , TLS_design_is_idle("TLS_design_is_idle")
     , TLS_design_is_idle_reg("TLS_design_is_idle_reg")
-    , CCS_CLK_CTOR(clk, "clk", 5, SC_NS, 0.5, 0, SC_NS, false)
-    , rst_driver("rst_driver", 110.000000, false)
+    , CCS_CLK_CTOR(clk, "clk", 10, SC_NS, 0.5, 0, SC_NS, false)
+    , rst_driver("rst_driver", 120.000000, false)
     , TLS_rst("TLS_rst")
     , TLS_run_rsc_rdy("TLS_run_rsc_rdy")
     , TLS_run_rsc_vld("TLS_run_rsc_vld")
-    , TLS_vec_rsc_wadr("TLS_vec_rsc_wadr")
-    , TLS_vec_rsc_d("TLS_vec_rsc_d")
-    , TLS_vec_rsc_we("TLS_vec_rsc_we")
-    , TLS_vec_rsc_radr("TLS_vec_rsc_radr")
-    , TLS_vec_rsc_q("TLS_vec_rsc_q")
+    , TLS_vec_rsc_adra("TLS_vec_rsc_adra")
+    , TLS_vec_rsc_da("TLS_vec_rsc_da")
+    , TLS_vec_rsc_wea("TLS_vec_rsc_wea")
+    , TLS_vec_rsc_qa("TLS_vec_rsc_qa")
+    , TLS_vec_rsc_adrb("TLS_vec_rsc_adrb")
+    , TLS_vec_rsc_db("TLS_vec_rsc_db")
+    , TLS_vec_rsc_web("TLS_vec_rsc_web")
+    , TLS_vec_rsc_qb("TLS_vec_rsc_qb")
     , TLS_vec_rsc_triosy_lz("TLS_vec_rsc_triosy_lz")
     , TLS_p_rsc_dat("TLS_p_rsc_dat")
     , TLS_p_rsc_triosy_lz("TLS_p_rsc_triosy_lz")
     , TLS_r_rsc_dat("TLS_r_rsc_dat")
     , TLS_r_rsc_triosy_lz("TLS_r_rsc_triosy_lz")
-    , TLS_twiddle_rsc_radr("TLS_twiddle_rsc_radr")
-    , TLS_twiddle_rsc_q("TLS_twiddle_rsc_q")
+    , TLS_twiddle_rsc_adrb("TLS_twiddle_rsc_adrb")
+    , TLS_twiddle_rsc_qb("TLS_twiddle_rsc_qb")
     , TLS_twiddle_rsc_triosy_lz("TLS_twiddle_rsc_triosy_lz")
-    , TLS_twiddle_h_rsc_radr("TLS_twiddle_h_rsc_radr")
-    , TLS_twiddle_h_rsc_q("TLS_twiddle_h_rsc_q")
+    , TLS_twiddle_h_rsc_adrb("TLS_twiddle_h_rsc_adrb")
+    , TLS_twiddle_h_rsc_qb("TLS_twiddle_h_rsc_qb")
     , TLS_twiddle_h_rsc_triosy_lz("TLS_twiddle_h_rsc_triosy_lz")
     , TLS_complete_rsc_rdy("TLS_complete_rsc_rdy")
     , TLS_complete_rsc_vld("TLS_complete_rsc_vld")
@@ -192,13 +201,15 @@ public:
     , vec_rsc_INST("vec_rsc", true)
     , p_rsc_INST("p_rsc", true)
     , r_rsc_INST("r_rsc", true)
-    , TLS_twiddle_rsc_d("TLS_twiddle_rsc_d")
-    , TLS_twiddle_rsc_wadr("TLS_twiddle_rsc_wadr")
-    , TLS_twiddle_rsc_we("TLS_twiddle_rsc_we")
+    , TLS_twiddle_rsc_adra("TLS_twiddle_rsc_adra")
+    , TLS_twiddle_rsc_da("TLS_twiddle_rsc_da")
+    , TLS_twiddle_rsc_qa("TLS_twiddle_rsc_qa")
+    , TLS_twiddle_rsc_wea("TLS_twiddle_rsc_wea")
     , twiddle_rsc_INST("twiddle_rsc", true)
-    , TLS_twiddle_h_rsc_d("TLS_twiddle_h_rsc_d")
-    , TLS_twiddle_h_rsc_wadr("TLS_twiddle_h_rsc_wadr")
-    , TLS_twiddle_h_rsc_we("TLS_twiddle_h_rsc_we")
+    , TLS_twiddle_h_rsc_adra("TLS_twiddle_h_rsc_adra")
+    , TLS_twiddle_h_rsc_da("TLS_twiddle_h_rsc_da")
+    , TLS_twiddle_h_rsc_qa("TLS_twiddle_h_rsc_qa")
+    , TLS_twiddle_h_rsc_wea("TLS_twiddle_h_rsc_wea")
     , twiddle_h_rsc_INST("twiddle_h_rsc", true)
     , TLS_in_fifo_run("TLS_in_fifo_run", -1)
     , TLS_in_wait_ctrl_fifo_run("TLS_in_wait_ctrl_fifo_run", -1)
@@ -239,8 +250,8 @@ public:
     , out_sync("out_sync")
     , inout_sync("inout_sync")
     , wait_for_init("wait_for_init")
-    , sync_generator_INST("sync_generator", true, false, false, false, 133273, 133273, 0)
-    , catapult_monitor_INST("Monitor", clk, true, 133273LL, 133273LL)
+    , sync_generator_INST("sync_generator", true, false, false, false, 87403, 87403, 0)
+    , catapult_monitor_INST("Monitor", clk, true, 87403LL, 87403LL)
     , ccs_probe_monitor_INST(NULL)
     , deadlocked("deadlocked")
     , maxsimtime("maxsimtime")
@@ -251,21 +262,24 @@ public:
     inPlaceNTT_DIF_precomp_INST.rst(TLS_rst);
     inPlaceNTT_DIF_precomp_INST.run_rsc_rdy(TLS_run_rsc_rdy);
     inPlaceNTT_DIF_precomp_INST.run_rsc_vld(TLS_run_rsc_vld);
-    inPlaceNTT_DIF_precomp_INST.vec_rsc_wadr(TLS_vec_rsc_wadr);
-    inPlaceNTT_DIF_precomp_INST.vec_rsc_d(TLS_vec_rsc_d);
-    inPlaceNTT_DIF_precomp_INST.vec_rsc_we(TLS_vec_rsc_we);
-    inPlaceNTT_DIF_precomp_INST.vec_rsc_radr(TLS_vec_rsc_radr);
-    inPlaceNTT_DIF_precomp_INST.vec_rsc_q(TLS_vec_rsc_q);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_adra(TLS_vec_rsc_adra);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_da(TLS_vec_rsc_da);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_wea(TLS_vec_rsc_wea);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_qa(TLS_vec_rsc_qa);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_adrb(TLS_vec_rsc_adrb);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_db(TLS_vec_rsc_db);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_web(TLS_vec_rsc_web);
+    inPlaceNTT_DIF_precomp_INST.vec_rsc_qb(TLS_vec_rsc_qb);
     inPlaceNTT_DIF_precomp_INST.vec_rsc_triosy_lz(TLS_vec_rsc_triosy_lz);
     inPlaceNTT_DIF_precomp_INST.p_rsc_dat(TLS_p_rsc_dat);
     inPlaceNTT_DIF_precomp_INST.p_rsc_triosy_lz(TLS_p_rsc_triosy_lz);
     inPlaceNTT_DIF_precomp_INST.r_rsc_dat(TLS_r_rsc_dat);
     inPlaceNTT_DIF_precomp_INST.r_rsc_triosy_lz(TLS_r_rsc_triosy_lz);
-    inPlaceNTT_DIF_precomp_INST.twiddle_rsc_radr(TLS_twiddle_rsc_radr);
-    inPlaceNTT_DIF_precomp_INST.twiddle_rsc_q(TLS_twiddle_rsc_q);
+    inPlaceNTT_DIF_precomp_INST.twiddle_rsc_adrb(TLS_twiddle_rsc_adrb);
+    inPlaceNTT_DIF_precomp_INST.twiddle_rsc_qb(TLS_twiddle_rsc_qb);
     inPlaceNTT_DIF_precomp_INST.twiddle_rsc_triosy_lz(TLS_twiddle_rsc_triosy_lz);
-    inPlaceNTT_DIF_precomp_INST.twiddle_h_rsc_radr(TLS_twiddle_h_rsc_radr);
-    inPlaceNTT_DIF_precomp_INST.twiddle_h_rsc_q(TLS_twiddle_h_rsc_q);
+    inPlaceNTT_DIF_precomp_INST.twiddle_h_rsc_adrb(TLS_twiddle_h_rsc_adrb);
+    inPlaceNTT_DIF_precomp_INST.twiddle_h_rsc_qb(TLS_twiddle_h_rsc_qb);
     inPlaceNTT_DIF_precomp_INST.twiddle_h_rsc_triosy_lz(TLS_twiddle_h_rsc_triosy_lz);
     inPlaceNTT_DIF_precomp_INST.complete_rsc_rdy(TLS_complete_rsc_rdy);
     inPlaceNTT_DIF_precomp_INST.complete_rsc_vld(TLS_complete_rsc_vld);
@@ -280,13 +294,18 @@ public:
     complete_rsc_INST.clk(clk);
     complete_rsc_INST.add_attribute(*(new sc_attribute<double>("CLK_SKEW_DELAY", __scv_hold_time_RSCID_18)));
 
-    vec_rsc_INST.q(TLS_vec_rsc_q);
-    vec_rsc_INST.radr(TLS_vec_rsc_radr);
-    vec_rsc_INST.we(TLS_vec_rsc_we);
-    vec_rsc_INST.d(TLS_vec_rsc_d);
-    vec_rsc_INST.wadr(TLS_vec_rsc_wadr);
-    vec_rsc_INST.clk(clk);
-    vec_rsc_INST.clken(SIG_SC_LOGIC_1);
+    vec_rsc_INST.qb(TLS_vec_rsc_qb);
+    vec_rsc_INST.web(TLS_vec_rsc_web);
+    vec_rsc_INST.db(TLS_vec_rsc_db);
+    vec_rsc_INST.adrb(TLS_vec_rsc_adrb);
+    vec_rsc_INST.qa(TLS_vec_rsc_qa);
+    vec_rsc_INST.wea(TLS_vec_rsc_wea);
+    vec_rsc_INST.da(TLS_vec_rsc_da);
+    vec_rsc_INST.adra(TLS_vec_rsc_adra);
+    vec_rsc_INST.clka(clk);
+    vec_rsc_INST.clka_en(SIG_SC_LOGIC_1);
+    vec_rsc_INST.clkb(clk);
+    vec_rsc_INST.clkb_en(SIG_SC_LOGIC_1);
     vec_rsc_INST.add_attribute(*(new sc_attribute<double>("CLK_SKEW_DELAY", __scv_hold_time_RSCID_13)));
 
     p_rsc_INST.dat(TLS_p_rsc_dat);
@@ -297,22 +316,24 @@ public:
     r_rsc_INST.clk(clk);
     r_rsc_INST.add_attribute(*(new sc_attribute<double>("CLK_SKEW_DELAY", __scv_hold_time_RSCID_15)));
 
-    twiddle_rsc_INST.q(TLS_twiddle_rsc_q);
-    twiddle_rsc_INST.radr(TLS_twiddle_rsc_radr);
+    twiddle_rsc_INST.qb(TLS_twiddle_rsc_qb);
+    twiddle_rsc_INST.adrb(TLS_twiddle_rsc_adrb);
     twiddle_rsc_INST.clk(clk);
     twiddle_rsc_INST.clken(SIG_SC_LOGIC_1);
-    twiddle_rsc_INST.d(TLS_twiddle_rsc_d);
-    twiddle_rsc_INST.wadr(TLS_twiddle_rsc_wadr);
-    twiddle_rsc_INST.we(TLS_twiddle_rsc_we);
+    twiddle_rsc_INST.adra(TLS_twiddle_rsc_adra);
+    twiddle_rsc_INST.da(TLS_twiddle_rsc_da);
+    twiddle_rsc_INST.qa(TLS_twiddle_rsc_qa);
+    twiddle_rsc_INST.wea(TLS_twiddle_rsc_wea);
     twiddle_rsc_INST.add_attribute(*(new sc_attribute<double>("CLK_SKEW_DELAY", __scv_hold_time_RSCID_16)));
 
-    twiddle_h_rsc_INST.q(TLS_twiddle_h_rsc_q);
-    twiddle_h_rsc_INST.radr(TLS_twiddle_h_rsc_radr);
+    twiddle_h_rsc_INST.qb(TLS_twiddle_h_rsc_qb);
+    twiddle_h_rsc_INST.adrb(TLS_twiddle_h_rsc_adrb);
     twiddle_h_rsc_INST.clk(clk);
     twiddle_h_rsc_INST.clken(SIG_SC_LOGIC_1);
-    twiddle_h_rsc_INST.d(TLS_twiddle_h_rsc_d);
-    twiddle_h_rsc_INST.wadr(TLS_twiddle_h_rsc_wadr);
-    twiddle_h_rsc_INST.we(TLS_twiddle_h_rsc_we);
+    twiddle_h_rsc_INST.adra(TLS_twiddle_h_rsc_adra);
+    twiddle_h_rsc_INST.da(TLS_twiddle_h_rsc_da);
+    twiddle_h_rsc_INST.qa(TLS_twiddle_h_rsc_qa);
+    twiddle_h_rsc_INST.wea(TLS_twiddle_h_rsc_wea);
     twiddle_h_rsc_INST.add_attribute(*(new sc_attribute<double>("CLK_SKEW_DELAY", __scv_hold_time_RSCID_17)));
 
     transactor_run.in_fifo(TLS_in_fifo_run);
@@ -608,11 +629,11 @@ void scverify_top::generate_reset() {
     activate_reset = false;
     rst.write(SC_LOGIC_1);
     rst_driver.reset_driver();
-    generate_reset_event.notify(110.000000 , SC_NS);
+    generate_reset_event.notify(120.000000 , SC_NS);
   } else {
     if (toggle_hw_reset) {
       toggle_hw_reset = false;
-      generate_reset_event.notify(110.000000 , SC_NS);
+      generate_reset_event.notify(120.000000 , SC_NS);
     } else {
       transactor_run.reset_streams();
       transactor_complete.reset_streams();

@@ -11,7 +11,7 @@ CXX_VCO                                             := aol
 export CXX_VCO
 endif
 ifeq "$(Option_CppStandard)" ""
-Option_CppStandard                                  := c++98
+Option_CppStandard                                  := c++11
 export Option_CppStandard
 endif
 ifeq "$(SYN_DIR)" ""

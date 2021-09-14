@@ -16,10 +16,13 @@
 //  
 solution new -state initial
 solution options defaults
+solution options set /Input/CppStandard c++11
 solution options set /Input/TargetPlatform x86_64
-solution file add ./src/main.cpp -type C++ -exclude true
-solution file add ./src/ntt.cpp -type C++
+solution options set /Output/GenerateCycleNetlist false
+solution options set /Flows/SCVerify/USE_CCS_BLOCK true
 solution file add ./src/utils.cpp -type C++ -exclude true
+solution file add ./src/ntt.cpp -type C++
+solution file add ./src/main.cpp -type C++ -exclude true
 directive set -DESIGN_GOAL area
 directive set -SPECULATE true
 directive set -MERGEABLE true
@@ -63,12 +66,22 @@ directive set -CLUSTER_TYPE combinational
 directive set -PROTOTYPING_ENGINE oasys
 directive set -PIPELINE_RAMP_UP true
 go new
-solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
 solution library add Xilinx_RAMS
 go libraries
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 2.5 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
 directive set -DSP_EXTRACTION yes
-directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
 go assembly
 directive set -SCHED_USE_MULTICYCLE true
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+directive set /inPlaceNTT_DIF_precomp/core/COMP_LOOP -UNROLL no
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -INTERLEAVE 8
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -INTERLEAVE 8
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -INTERLEAVE 8
 go architect
 go extract

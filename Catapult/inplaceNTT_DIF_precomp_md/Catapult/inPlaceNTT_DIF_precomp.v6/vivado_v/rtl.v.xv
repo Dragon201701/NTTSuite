@@ -28,26 +28,25 @@ set outputDir $RTL_TOOL_SCRIPT_DIR
 # STEP#1: setup design sources and constraints
 #
 create_project -force tcl_v
-   read_verilog $CATAPULT_HOME/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_insync.v
-   read_verilog $CATAPULT_HOME/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
-   read_verilog $CATAPULT_HOME/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_indirect.v
-   read_verilog $CATAPULT_HOME/pkgs/ccs_libs/interfaces/amba/ccs_axi4_lite_slave_outsync.v
+   read_verilog $CATAPULT_HOME/pkgs/siflibs/ccs_sync_in_wait_v1.v
+   read_verilog $CATAPULT_HOME/pkgs/siflibs/ccs_sync_out_wait_v1.v
    read_verilog $CATAPULT_HOME/pkgs/siflibs/mgc_io_sync_v2.v
    read_verilog $CATAPULT_HOME/pkgs/siflibs/ccs_in_v1.v
    read_verilog $CATAPULT_HOME/pkgs/siflibs/mgc_out_dreg_v2.v
-   read_verilog ../../td_ccore_solutions/mult_b2c38bf0c7290d57699e4384f1b60d6970f0_0/rtl.v
-   read_verilog ../../td_ccore_solutions/modulo_sub_4b9d4a8c3392ffaece13b91b879140226381_0/rtl.v
-   read_verilog ../../td_ccore_solutions/modulo_add_d2b0eb37ae7b9da6b6482c3e5a37a5c960f8_0/rtl.v
+   read_verilog $CATAPULT_HOME/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+   read_verilog ../../td_ccore_solutions/mult_6f95beddce4781dedef9ed170f11f70570bc_0/rtl.v
+   read_verilog ../../td_ccore_solutions/modulo_sub_5224928a713d998f31e113942b953258634d_0/rtl.v
+   read_verilog ../../td_ccore_solutions/modulo_add_95bc4fddf4956fb8fb1c3dc6de610b8360c4_0/rtl.v
    read_verilog $CATAPULT_HOME/pkgs/siflibs/mgc_shift_l_beh_v5.v
    read_verilog ../rtl.v
 # set up XPM libraries for XPM-related IP like the Catapult Xilinx_FIFO
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY XPM_FIFO} [current_project]
 read_xdc $outputDir/rtl.v.xv.sdc
-set_property part xcvu13p-flga2577-3-e [current_project]
+set_property part xc7vx690tffg1761-2 [current_project]
 #
 # STEP#2: run synthesis, report utilization and timing estimates, write checkpoint design
 #
-synth_design   -top inPlaceNTT_DIF_precomp -part xcvu13p-flga2577-3-e -mode out_of_context  -include_dirs ""
+synth_design   -top inPlaceNTT_DIF_precomp -part xc7vx690tffg1761-2 -mode out_of_context  -include_dirs ""
 write_checkpoint -force $outputDir/post_synth
 set viv_report_dir /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v6/vivado_v
 report_utilization -file $viv_report_dir/utilization_synth.rpt

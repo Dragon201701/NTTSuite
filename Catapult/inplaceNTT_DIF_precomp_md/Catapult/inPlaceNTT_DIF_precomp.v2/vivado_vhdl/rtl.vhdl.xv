@@ -33,21 +33,23 @@ create_project -force tcl_vhdl
    read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/siflibs/mgc_io_sync_v2.vhd
    read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/siflibs/ccs_in_v1.vhd
    read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/siflibs/mgc_out_dreg_v2.vhd
-   read_vhdl -library work ../../td_ccore_solutions/mult_3eae8f08f013d2486c316934aa28d4f070bd_0/rtl.vhdl
-   read_vhdl -library work ../../td_ccore_solutions/modulo_sub_0862bdaa6ac028d3bc8e20cdcb7ac85e6351_0/rtl.vhdl
-   read_vhdl -library work ../../td_ccore_solutions/modulo_add_036ce25c2a2243113f91b3e523e8840b60c8_0/rtl.vhdl
    read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/hls_pkgs/src/funcs.vhd
+   read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+   read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+   read_vhdl -library work ../../td_ccore_solutions/mult_ec0160c9b49daaaeaf8786f803682d0570f0_0/rtl.vhdl
+   read_vhdl -library work ../../td_ccore_solutions/modulo_sub_7f172812f8076ec80fc697ddd11e48616381_0/rtl.vhdl
+   read_vhdl -library work ../../td_ccore_solutions/modulo_add_1e5f30efe21918013149f435b87a1f7d60f8_0/rtl.vhdl
    read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/siflibs/mgc_shift_comps_v5.vhd
    read_vhdl -library mgc_hls $CATAPULT_HOME/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
    read_vhdl -library work ../rtl.vhdl
 # set up XPM libraries for XPM-related IP like the Catapult Xilinx_FIFO
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY XPM_FIFO} [current_project]
 read_xdc $outputDir/rtl.vhdl.xv.sdc
-set_property part xcvu13p-flga2577-3-e [current_project]
+set_property part xc7vx690tffg1761-2 [current_project]
 #
 # STEP#2: run synthesis, report utilization and timing estimates, write checkpoint design
 #
-synth_design   -top inPlaceNTT_DIF_precomp -part xcvu13p-flga2577-3-e -mode out_of_context  
+synth_design   -top inPlaceNTT_DIF_precomp -part xc7vx690tffg1761-2 -mode out_of_context  
 write_checkpoint -force $outputDir/post_synth
 set viv_report_dir /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v2/vivado_vhdl
 report_utilization -file $viv_report_dir/utilization_synth.rpt

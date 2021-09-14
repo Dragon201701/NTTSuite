@@ -11,7 +11,7 @@ CXX_VCO                                             := aol
 export CXX_VCO
 endif
 ifeq "$(Option_CppStandard)" ""
-Option_CppStandard                                  := c++98
+Option_CppStandard                                  := c++11
 export Option_CppStandard
 endif
 ifeq "$(SYN_DIR)" ""
@@ -463,7 +463,7 @@ SCVerify_GENERATE_STAGES                            := schedule extract switchin
 export SCVerify_GENERATE_STAGES
 endif
 ifeq "$(SCVerify_USE_CCS_BLOCK)" ""
-SCVerify_USE_CCS_BLOCK                              := false
+SCVerify_USE_CCS_BLOCK                              := true
 export SCVerify_USE_CCS_BLOCK
 endif
 ifeq "$(SCVerify_AUTOWAIT)" ""

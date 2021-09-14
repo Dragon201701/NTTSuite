@@ -1,119 +1,204 @@
 
 # Messages from "go new"
 
-# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
 
 # Messages from "go analyze"
 
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.71 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/src/ntt.cpp (CIN-69)
-Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
-solution file add ${sfd}/src/ntt.cpp
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
-Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF_precomp' (CIN-6)
-solution file add ${sfd}/src/main.cpp -exclude true
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.06 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
 Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
-go analyze
-# Warning: last line of file ends without a newline (CRD-1)
-solution file add ${sfd}/src/utils.cpp -exclude true
-/INPUTFILES/3
+
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
 Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
-option set Input/TargetPlatform x86_64
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/src/ntt.cpp (CIN-69)
 # Warning: last line of file ends without a newline (CRD-1)
-/Input/CompilerSettings/Type gcc /Input/CompilerSettings/Version 4.9.2 /Input/CompilerSettings/InstallPath /opt/mentorgraphics/Catapult_10.5c/Mgc_home /Input/CompilerSettings/Target GCC_x86_32 /Input/CompilerSettings/CppStandard c++98 /Input/CompilerSettings/CompilerVersion 4.9.2 /Input/CompilerSettings/Defines {__EMBEDDED_CXX__ vco_aol __null=0 __DBL_MIN_EXP__=(-1021) __UINT_LEAST16_MAX__=65535 __ATOMIC_ACQUIRE=2 __FLT_MIN__=1.17549435082228750797e-38F __GCC_IEC_559_COMPLEX=2 {__UINT_LEAST8_TYPE__=unsigned char} {__INTMAX_C(c)=c ## LL} __CHAR_BIT__=8 __UINT8_MAX__=255 __WINT_MAX__=4294967295U __ORDER_LITTLE_ENDIAN__=1234 __SIZE_MAX__=4294967295U __WCHAR_MAX__=2147483647L __GCC_HAVE_SYNC_COMPARE_AND_SWAP_1 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 __DBL_DENORM_MIN__=double(4.94065645841246544177e-324L) __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 __GCC_ATOMIC_CHAR_LOCK_FREE=2 __GCC_IEC_559=2 __FLT_EVAL_METHOD__=2 __unix__ __GCC_ATOMIC_CHAR32_T_LOCK_FREE=2 __UINT_FAST64_MAX__=18446744073709551615ULL __SIG_ATOMIC_TYPE__=int __DBL_MIN_10_EXP__=(-307) __FINITE_MATH_ONLY__=0 __GNUC_PATCHLEVEL__=2 __UINT_FAST8_MAX__=255 __DEC64_MAX_EXP__=385 __INT8_C(c)=c __UINT_LEAST64_MAX__=18446744073709551615ULL __SHRT_MAX__=32767 __LDBL_MAX__=1.18973149535723176502e+4932L __UINT_LEAST8_MAX__=255 __GCC_ATOMIC_BOOL_LOCK_FREE=2 {__UINTMAX_TYPE__=long long unsigned int} __linux __DEC32_EPSILON__=1E-6DF __unix __UINT32_MAX__=4294967295U __LDBL_MAX_EXP__=16384 __WINT_MIN__=0U __linux__ __SCHAR_MAX__=127 {__WCHAR_MIN__=(-__WCHAR_MAX__ - 1)} {__INT64_C(c)=c ## LL} __DBL_DIG__=15 __GCC_ATOMIC_POINTER_LOCK_FREE=2 __SIZEOF_INT__=4 __SIZEOF_POINTER__=4 __GCC_ATOMIC_CHAR16_T_LOCK_FREE=2 __USER_LABEL_PREFIX__= __STDC_HOSTED__ __LDBL_HAS_INFINITY__ __FLT_EPSILON__=1.19209289550781250000e-7F __GXX_WEAK__ __LDBL_MIN__=3.36210314311209350626e-4932L __DEC32_MAX__=9.999999E96DF __INT32_MAX__=2147483647 __SIZEOF_LONG__=4 __STDC_IEC_559__ __STDC_ISO_10646__=201103L __UINT16_C(c)=c __DECIMAL_DIG__=21 __gnu_linux__ __LDBL_HAS_QUIET_NAN__ __GNUC__=4 __GXX_RTTI __MMX__ __FLT_HAS_DENORM__ __SIZEOF_LONG_DOUBLE__=12 __BIGGEST_ALIGNMENT__=16 __DBL_MAX__=double(1.79769313486231570815e+308L) __INT_FAST32_MAX__=2147483647 __DBL_HAS_INFINITY__ __INT64_MAX__=9223372036854775807LL __DEC32_MIN_EXP__=(-94) __INT_FAST16_TYPE__=int __LDBL_HAS_DENORM__ __DEC128_MAX__=9.999999999999999999999999999999999E6144DL __INT_LEAST32_MAX__=2147483647 __DEC32_MIN__=1E-95DF __DEPRECATED __DBL_MAX_EXP__=1024 __DEC128_EPSILON__=1E-33DL __ATOMIC_HLE_RELEASE=131072 __PTRDIFF_MAX__=2147483647 __STDC_NO_THREADS__ __ATOMIC_HLE_ACQUIRE=65536 __GNUG__=4 __LONG_LONG_MAX__=9223372036854775807LL __SIZEOF_SIZE_T__=4 __SIZEOF_WINT_T__=4 __GXX_ABI_VERSION=1002 __FLT_MIN_EXP__=(-125) {__INT_FAST64_TYPE__=long long int} __DBL_MIN__=double(2.22507385850720138309e-308L) __FLT_MIN_10_EXP__=(-37) __DECIMAL_BID_FORMAT__ __DEC128_MIN__=1E-6143DL __REGISTER_PREFIX__= __UINT16_MAX__=65535 __DBL_HAS_DENORM__ {__UINT8_TYPE__=unsigned char} __NO_INLINE__ __i386 __FLT_MANT_DIG__=24 {__UINT64_C(c)=c ## ULL} _STDC_PREDEF_H __GCC_ATOMIC_INT_LOCK_FREE=2 __FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__ __STDC_IEC_559_COMPLEX__ __INT32_C(c)=c __DEC64_EPSILON__=1E-15DD __ORDER_PDP_ENDIAN__=3412 __DEC128_MIN_EXP__=(-6142) __code_model_32__ __INT_FAST32_TYPE__=int {__UINT_LEAST16_TYPE__=short unsigned int} unix __INT16_MAX__=32767 __i386__ __UINT64_MAX__=18446744073709551615ULL {__INT8_TYPE__=signed char} __ELF__ __FLT_RADIX__=2 {__INT_LEAST16_TYPE__=short int} __LDBL_EPSILON__=1.08420217248550443401e-19L {__UINTMAX_C(c)=c ## ULL} __k8 __SIG_ATOMIC_MAX__=2147483647 __GCC_ATOMIC_WCHAR_T_LOCK_FREE=2 __SIZEOF_PTRDIFF_T__=4 __DEC32_SUBNORMAL_MIN__=0.000001E-95DF __INT_FAST16_MAX__=2147483647 __UINT_FAST32_MAX__=4294967295U {__UINT_LEAST64_TYPE__=long long unsigned int} __FLT_HAS_QUIET_NAN__ __FLT_MAX_10_EXP__=38 __LONG_MAX__=2147483647L __DEC128_SUBNORMAL_MIN__=0.000000000000000000000000000000001E-6143DL __FLT_HAS_INFINITY__ {__UINT_FAST16_TYPE__=unsigned int} __DEC64_MAX__=9.999999999999999E384DD __PRAGMA_REDEFINE_EXTNAME __INT_LEAST16_MAX__=32767 __DEC64_MANT_DIG__=16 __UINT_LEAST32_MAX__=4294967295U __GCC_ATOMIC_LONG_LOCK_FREE=2 {__INT_LEAST64_TYPE__=long long int} {__INT16_TYPE__=short int} {__INT_LEAST8_TYPE__=signed char} __DEC32_MAX_EXP__=97 __INT_FAST8_MAX__=127 __INTPTR_MAX__=2147483647 linux __SSE2__ __EXCEPTIONS __LDBL_MANT_DIG__=64 __DBL_HAS_QUIET_NAN__ {__SIG_ATOMIC_MIN__=(-__SIG_ATOMIC_MAX__ - 1)} __k8__ __INTPTR_TYPE__=int {__UINT16_TYPE__=short unsigned int} __SIZEOF_FLOAT__=4 __UINTPTR_MAX__=4294967295U __DEC64_MIN_EXP__=(-382) __INT_FAST64_MAX__=9223372036854775807LL __GCC_ATOMIC_TEST_AND_SET_TRUEVAL __FLT_DIG__=6 {__UINT_FAST64_TYPE__=long long unsigned int} __INT_MAX__=2147483647 {__INT64_TYPE__=long long int} __FLT_MAX_EXP__=128 __DBL_MANT_DIG__=53 __INT_LEAST64_MAX__=9223372036854775807LL __DEC64_MIN__=1E-383DD {__WINT_TYPE__=unsigned int} {__UINT_LEAST32_TYPE__=unsigned int} __SIZEOF_SHORT__=2 __SSE__ __LDBL_MIN_EXP__=(-16381) __INT_LEAST8_MAX__=127 __LDBL_MAX_10_EXP__=4932 __ATOMIC_RELAXED=0 __DBL_EPSILON__=double(2.22044604925031308085e-16L) __UINT8_C(c)=c __INT_LEAST32_TYPE__=int __SIZEOF_WCHAR_T__=4 {__UINT64_TYPE__=long long unsigned int} {__INT_FAST8_TYPE__=signed char} __DBL_DECIMAL_DIG__=17 __FXSR__ __DEC_EVAL_METHOD__=2 __ORDER_BIG_ENDIAN__=4321 {__UINT32_C(c)=c ## U} __INTMAX_MAX__=9223372036854775807LL __BYTE_ORDER__=__ORDER_LITTLE_ENDIAN__ __FLT_DENORM_MIN__=1.40129846432481707092e-45F __INT8_MAX__=127 {__UINT_FAST32_TYPE__=unsigned int} {__CHAR32_TYPE__=unsigned int} __FLT_MAX__=3.40282346638528859812e+38F __INT32_TYPE__=int __SIZEOF_DOUBLE__=8 {__INTMAX_TYPE__=long long int} i386 __DEC128_MAX_EXP__=6145 __ATOMIC_CONSUME __GNUC_MINOR__=9 __UINTMAX_MAX__=18446744073709551615ULL __DEC32_MANT_DIG__=7 __DBL_MAX_10_EXP__=308 __LDBL_DENORM_MIN__=3.64519953188247460253e-4951L __INT16_C(c)=c __STDC__ __PTRDIFF_TYPE__=int __ATOMIC_SEQ_CST=5 {__UINT32_TYPE__=unsigned int} {__UINTPTR_TYPE__=unsigned int} __DEC64_SUBNORMAL_MIN__=0.000000000000001E-383DD __DEC128_MANT_DIG__=34 __LDBL_MIN_10_EXP__=(-4931) __SIZEOF_LONG_LONG__=8 __GCC_ATOMIC_LLONG_LOCK_FREE=2 __LDBL_DIG__=18 __FLT_DECIMAL_DIG__=9 __UINT_FAST16_MAX__=4294967295U __GNUC_GNU_INLINE__ __GCC_ATOMIC_SHORT_LOCK_FREE=2 {__UINT_FAST8_TYPE__=unsigned char} _GNU_SOURCE __ATOMIC_ACQ_REL=4 __ATOMIC_RELEASE=3} /Input/CompilerSettings/SearchPath {/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/x86_64-linux-gnu/32 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/backward /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include-fixed /usr/local/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/../../include /usr/include} /Input/CompilerSettings/LibPaths {}
+solution file add ./src/main.cpp -exclude true
+# Warning: last line of file ends without a newline (CRD-1)
 go analyze
-# Warning: last line of file ends without a newline (CRD-1)
-c++98
-option set Input/CppStandard c++98
-solution file add ${sfd}/src/utils.cpp -exclude true
-solution file add ${sfd}/src/ntt.cpp
+/INPUTFILES/3
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+/INPUTFILES/2
+x86_64
 Source file analysis completed (CIN-68)
-set sfd [file dirname [info script]]
-# Error: can't read "sfd": no such variable
-solution file add ${sfd}/src/main.cpp -exclude true
-.
+option set Input/TargetPlatform x86_64
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF_precomp' (CIN-6)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/catapult.log"
+solution file add ./src/utils.cpp -exclude true
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
 
 # Messages from "go compile"
 
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 2.18 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
 # Info: Design complexity at end of 'compile': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
-# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 1.99 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Optimizing block '/inPlaceNTT_DIF_precomp/modulo_sub' ... (CIN-4)
-Inlining routine 'operator<<32, true>' (CIN-14)
-Inlining routine 'mult' (CIN-14)
-Synthesizing routine 'mult' (CIN-13)
-# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+Synthesizing routine 'modulo_sub' (CIN-13)
 Optimizing block '/inPlaceNTT_DIF_precomp/modulo_add' ... (CIN-4)
-Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
 Inlining routine 'modulo_sub' (CIN-14)
 Design 'inPlaceNTT_DIF_precomp' was read (SOL-1)
-Synthesizing routine 'modulo_sub' (CIN-13)
-Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
-INOUT port 'run' is only used as an input. (OPT-10)
-Optimizing block '/inPlaceNTT_DIF_precomp' ... (CIN-4)
-Optimizing block '/inPlaceNTT_DIF_precomp/mult' ... (CIN-4)
-Inlining routine 'operator>><96, false>' (CIN-14)
-go compile
-# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
-INOUT port 'twiddle_h' is only used as an input. (OPT-10)
-INOUT port 'twiddle' is only used as an input. (OPT-10)
-Synthesizing routine 'inPlaceNTT_DIF_precomp' (CIN-13)
-INOUT port 'complete' is only used as an output. (OPT-11)
-Found top design routine 'inPlaceNTT_DIF_precomp' specified by directive (CIN-52)
-Synthesizing routine 'modulo_add' (CIN-13)
-Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
 Inlining routine 'inPlaceNTT_DIF_precomp' (CIN-14)
-Found design routine 'modulo_add' specified by directive (CIN-52)
-Generating synthesis internal form... (CIN-3)
-Found design routine 'mult' specified by directive (CIN-52)
+Synthesizing routine 'inPlaceNTT_DIF_precomp' (CIN-13)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Optimizing block '/inPlaceNTT_DIF_precomp/mult' ... (CIN-4)
+Synthesizing routine 'mult' (CIN-13)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v1/CDesignChecker/design_checker.sh'
+Optimizing block '/inPlaceNTT_DIF_precomp/modulo_sub' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Optimizing block '/inPlaceNTT_DIF_precomp' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
 Found design routine 'modulo_sub' specified by directive (CIN-52)
 Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Found top design routine 'inPlaceNTT_DIF_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
 
 # Messages from "go libraries"
 
 # Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
-# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.43 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-solution library add Xilinx_RAMS
-# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
-solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.97 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
 # Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
 go libraries
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'inPlaceNTT_DIF_precomp.v5' at state 'compile' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Design complexity at end of 'libraries': Total ops = 103, Real ops = 34, Vars = 49 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v1': elapsed time 1.24 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF_precomp.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+go libraries
+solution library add amba
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffq1761-2
+# Error: solution library add: Could not locate library file for library name mgc_Xilinx-VIRTEX-7-2_beh for current configuration
+go libraries
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
 
 # Messages from "go assembly"
 
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.38 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
 # Info: Design complexity at end of 'assembly': Total ops = 105, Real ops = 34, Vars = 51 (SOL-21)
-# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.32 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
-go assembly
-directive set DSP_EXTRACTION yes
-directive set SCHED_USE_MULTICYCLE true
-go memories
-/CLOCKS {clk {-CLOCK_PERIOD 10}}
 # Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+go assembly
 
 # Messages from "go architect"
 
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.08 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
 # Info: Design complexity at end of 'loops': Total ops = 118, Real ops = 34, Vars = 62 (SOL-21)
-# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.06 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+/inPlaceNTT_DIF_precomp/vec:rsc/BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -BLOCK_SIZE 64
+project save
+/inPlaceNTT_DIF_precomp/vec:rsc/INTERLEAVE 8
+go extract
+directive set /inPlaceNTT_DIF_precomp/vec:rsc -INTERLEAVE 8
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult.ccs'. (PRJ-5)
+/inPlaceNTT_DIF_precomp/twiddle_h:rsc/BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -BLOCK_SIZE 64
+/inPlaceNTT_DIF_precomp/twiddle_h:rsc/INTERLEAVE 8
+directive set /inPlaceNTT_DIF_precomp/twiddle_h:rsc -INTERLEAVE 8
 Loop '/inPlaceNTT_DIF_precomp/core/main' is left rolled. (LOOP-4)
 Loop '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' is left rolled. (LOOP-4)
 # Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
 Loop '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' is left rolled. (LOOP-4)
 Loop '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' is left rolled. (LOOP-4)
-# Info: Design complexity at end of 'memories': Total ops = 121, Real ops = 34, Vars = 59 (SOL-21)
-# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.58 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+/inPlaceNTT_DIF_precomp/twiddle:rsc/BLOCK_SIZE 64
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -BLOCK_SIZE 64
+/inPlaceNTT_DIF_precomp/twiddle:rsc/INTERLEAVE 8
+directive set /inPlaceNTT_DIF_precomp/twiddle:rsc -INTERLEAVE 8
+# Info: Design complexity at end of 'memories': Total ops = 412, Real ops = 34, Vars = 149 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.85 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(5)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(4)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(7)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(6)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(1)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(0)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(3)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(1)(2)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(6)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(5)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc' split into 2 x 8 blocks (MEM-11)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(7)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(2)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(1)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(4)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(3)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(5)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(4)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(7)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(6)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(1)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(0)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(3)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc(0)(2)' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
-I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
-Memory Resource '/inPlaceNTT_DIF_precomp/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
-# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
-Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
-I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc' split into 2 x 8 blocks (MEM-11)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(1)(0)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
-I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
-Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 32). (MEM-4)
+Resource '/inPlaceNTT_DIF_precomp/vec:rsc' split into 2 x 8 blocks (MEM-11)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(1)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(0)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(3)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(1)(2)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(5)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(4)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(7)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+Memory Resource '/inPlaceNTT_DIF_precomp/vec:rsc(0)(6)' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
+I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/x:rsc' (from var: x) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y_:rsc' (from var: y_) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
@@ -121,154 +206,441 @@ I/O-Port Resource '/inPlaceNTT_DIF_precomp/mult/y:rsc' (from var: y) mapped to '
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_add/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
 I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 32). (MEM-2)
-I/O-Port Resource '/inPlaceNTT_DIF_precomp/modulo_sub/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
-# Info: Design complexity at end of 'cluster': Total ops = 70, Real ops = 20, Vars = 31 (SOL-21)
-# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 5.81 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-
-go architect
-Module for CCORE 'modulo_add' has been successfully synthesized (TD-4)
+# Info: Design complexity at end of 'cluster': Total ops = 361, Real ops = 20, Vars = 121 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.35 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
+Module for CCORE 'modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2' has been successfully synthesized (TD-4)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2_0/.sif/solIndex_2_2a7762ed-cbb8-4073-b009-4648364ea70b.xml' ... (LIB-129)
+Module 'mult_b3d4a0c17af05a92530fe047f70695c970ca_0' in the cache is valid & accepted for CCORE 'mult_b3d4a0c17af05a92530fe047f70695c970ca' (TD-3)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/modulo_sub_cc250ff62aef060f45cde5681b558542635b_0/.sif/solIndex_2_3a63aabc-0907-427f-8e4b-ab7c391672ce.xml' ... (LIB-129)
 # Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
-go extract
-# Info: Design complexity at end of 'architect': Total ops = 86, Real ops = 20, Vars = 35 (SOL-21)
-# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.33 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Design 'inPlaceNTT_DIF_precomp' contains '20' real operations. (SOL-11)
+Module 'modulo_sub_cc250ff62aef060f45cde5681b558542635b_0' in the cache is valid & accepted for CCORE 'modulo_sub_cc250ff62aef060f45cde5681b558542635b' (TD-3)
+Module for CCORE 'mult_b3d4a0c17af05a92530fe047f70695c970ca' has been successfully synthesized (TD-4)
+Module 'modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2_0' in the cache is valid & accepted for CCORE 'modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2' (TD-3)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/td_ccore_solutions/mult_b3d4a0c17af05a92530fe047f70695c970ca_0/.sif/solIndex_2_f6dbf863-351b-4d21-bc2b-13fc21546cab.xml' ... (LIB-129)
+Module for CCORE 'modulo_sub_cc250ff62aef060f45cde5681b558542635b' has been successfully synthesized (TD-4)
+# Info: Design complexity at end of 'architect': Total ops = 728, Real ops = 115, Vars = 205 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 1.18 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
+Design 'inPlaceNTT_DIF_precomp' contains '115' real operations. (SOL-11)
 # Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
 
 # Messages from "go allocate"
 
-# Info: Design complexity at end of 'allocate': Total ops = 86, Real ops = 20, Vars = 35 (SOL-21)
-# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 0.32 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-Prescheduled SEQUENTIAL '/inPlaceNTT_DIF_precomp/core' (total length 92273 c-steps) (SCHD-8)
-Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
-Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/core:rlp' (0 c-steps) (SCHD-7)
+# Info: Design complexity at end of 'allocate': Total ops = 728, Real ops = 115, Vars = 205 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 1.31 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
 At least one feasible schedule exists. (CRAAS-9)
-# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
-# Info: Apply resource constraints on data operations ... (CRAAS-4)
-# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 102517, Area (Datapath, Register, Total) = 7854.33, 0.00, 7854.33 (CRAAS-11)
-# Info: Select qualified components for data operations ... (CRAAS-3)
-Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' (3 c-steps) (SCHD-7)
-Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' (6 c-steps) (SCHD-7)
+# Info: Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 174267, Area (Datapath, Register, Total) = 7763.41, 0.00, 7763.41 (CRAAS-11)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/COMP_LOOP' (5 c-steps) (SCHD-7)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/VEC_LOOP' (12 c-steps) (SCHD-7)
 Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/main' (3 c-steps) (SCHD-7)
 Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
 Resource allocation and scheduling done. (CRAAS-2)
-# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 102517, Area (Datapath, Register, Total) = 7854.33, 0.00, 7854.33 (CRAAS-12)
+# Info: Final schedule of SEQUENTIAL '/inPlaceNTT_DIF_precomp/core': Latency = 174267, Area (Datapath, Register, Total) = 7763.41, 0.00, 7763.41 (CRAAS-12)
 Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/inPlaceNTT_DIF_precomp/core' (total length 174273 c-steps) (SCHD-8)
+Prescheduled LOOP '/inPlaceNTT_DIF_precomp/core/core:rlp' (0 c-steps) (SCHD-7)
 
 # Messages from "go schedule"
 
-# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 3.50 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Design complexity at end of 'schedule': Total ops = 1301, Real ops = 95, Vars = 374 (SOL-21)
-Global signal 'twiddle:rsc.radr' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
-Global signal 'twiddle:rsc.q' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsci' (LIB-3)
-Global signal 'twiddle_h:rsc.q' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
-# Info: Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 27.14 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-9)
+# Info: Running transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 26.34 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-15)
+# Info: Design complexity at end of 'schedule': Total ops = 15453, Real ops = 947, Vars = 3720 (SOL-21)
+Global signal 'vec:rsc.triosy(0)(6).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(7).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(4).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(5).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(2).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(2):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(3).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(3):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(0).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(0):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(1).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(1):obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(6).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(7).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(7):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(2).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(3).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(0).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(0)(1).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(0).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(1).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(1):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(6).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(7).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(4).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(4):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(5).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(5):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(2).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(2):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(1)(3).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(1)(3):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(0).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(1).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(6).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(6):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(7).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(7):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(4).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(5).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(2).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy(0)(3).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy(0)(3):obj' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(0).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(0).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(1).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(1)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(0)' (SCHD-46)
+Global signal 'twiddle_h:rsc(0)(7).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(6)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(7)' (SCHD-46)
+Global signal 'twiddle_h:rsc(0)(7).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(3).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(2)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(3)' (SCHD-46)
+Global signal 'twiddle_h:rsc(1)(3).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(1)' (SCHD-46)
+Global signal 'twiddle_h:rsc(1)(1).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(1)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(2).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(2)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(2).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(2)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(5)' (SCHD-46)
+Global signal 'twiddle_h:rsc(1)(5).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(5)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(6).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(6)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(6).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(6)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(4).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(4)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(4).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(4)i' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(5).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(5)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(4)' (SCHD-46)
+Global signal 'vec:rsc.triosy(1)(6).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(6):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(7).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(7):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(4).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(4):obj' (LIB-3)
+Global signal 'vec:rsc.triosy(1)(5).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy(1)(5):obj' (LIB-3)
+Global signal 'twiddle_h:rsc(1)(7).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(6)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(1)(7)' (SCHD-46)
+Global signal 'twiddle_h:rsc(1)(7).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(1)(7)i' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(0).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(0):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(1).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(1):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(6).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(6):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(7).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(7):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(4).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(4):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(5).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(5):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(2).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(2):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(1)(3).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(1)(3):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(0).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(1).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(1):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(4).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(4):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(5).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(5):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(2).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(2):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy(0)(3).lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy(0)(3):obj' (LIB-3)
+# Info: Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+Global signal 'run:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
 # Info: Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
 Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsci' (LIB-3)
-# Info: Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
-Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
-Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'p:rsc.triosy:obj' (LIB-3)
-Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc.triosy:obj' (LIB-3)
-Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc.triosy:obj' (LIB-3)
-Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsc.triosy:obj' (LIB-3)
-# Info: Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
-Global signal 'twiddle_h:rsc.radr' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsci' (LIB-3)
-Global signal 'complete:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
-Global signal 'complete:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
 # Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
 Global signal 'run:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
 Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF_precomp/core' (CRAAS-1)
-Global signal 'vec:rsc.d' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
-Global signal 'vec:rsc.we' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
-# Info: Creating buffer for wait controller for component 'vec:rsc' (SCHD-46)
-Global signal 'vec:rsc.wadr' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
-# Info: Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
-Global signal 'run:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'run:rsci' (LIB-3)
-Global signal 'vec:rsc.radr' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
-Global signal 'vec:rsc.q' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsci' (LIB-3)
-Report written to file 'cycle.rpt'
-Global signal 'twiddle_h:rsc.triosy.lz' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc(0)(0).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF_precomp' for component 'r:rsci' (LIB-3)
+Global signal 'complete:rsc.rdy' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+Global signal 'complete:rsc.vld' added to design 'inPlaceNTT_DIF_precomp' for component 'complete:rsci' (LIB-3)
+Global signal 'vec:rsc(0)(1).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(0)' (SCHD-46)
+Global signal 'vec:rsc(0)(1).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(0).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(1)' (SCHD-46)
+Global signal 'vec:rsc(0)(1).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(1).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(1)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(5)' (SCHD-46)
+Global signal 'vec:rsc(0)(5).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(6).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(6)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(6)' (SCHD-46)
+Global signal 'vec:rsc(1)(0).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(0)(7).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(7)' (SCHD-46)
+Global signal 'vec:rsc(0)(7).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(7)i' (LIB-3)
+Global signal 'vec:rsc(1)(1).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(0)' (SCHD-46)
+Global signal 'vec:rsc(1)(1).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(1).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(1)(0).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(0)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(2)' (SCHD-46)
+Global signal 'vec:rsc(0)(2).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(2).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(2)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(3)' (SCHD-46)
+Global signal 'vec:rsc(0)(3).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(3).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(3)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(4).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(4)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(0)(4)' (SCHD-46)
+Global signal 'vec:rsc(0)(5).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(0)(5).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(0)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(5).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(5).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(5).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(5).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(5).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(4)' (SCHD-46)
+Global signal 'vec:rsc(1)(5).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(5).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(5)' (SCHD-46)
+Global signal 'vec:rsc(1)(5).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(5)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(7).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+Global signal 'vec:rsc(1)(7).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+Global signal 'vec:rsc(1)(7).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+Global signal 'vec:rsc(1)(7).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(6).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(6)i' (LIB-3)
+Global signal 'vec:rsc(1)(7).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(6)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(0).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(0).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(1).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(0)' (SCHD-46)
+Global signal 'vec:rsc(1)(7).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+Global signal 'vec:rsc(1)(7).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(7)' (SCHD-46)
+Global signal 'vec:rsc(1)(7).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(1)' (SCHD-46)
+Global signal 'vec:rsc(1)(1).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(1).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(1).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(1).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(1).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(1)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(2)' (SCHD-46)
+Global signal 'vec:rsc(1)(2).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(2).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(2)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'vec:rsc(1)(3)' (SCHD-46)
+Global signal 'vec:rsc(1)(3).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+Global signal 'vec:rsc(1)(3).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(3)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).wea' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).qa' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).adra' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).da' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).web' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+Global signal 'vec:rsc(1)(4).db' added to design 'inPlaceNTT_DIF_precomp' for component 'vec:rsc(1)(4)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(5)' (SCHD-46)
+Global signal 'twiddle:rsc(1)(5).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(6).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(6).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(4).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(4).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(5).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(5)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(4)' (SCHD-46)
+Global signal 'twiddle_h:rsc(0)(0).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(0).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(1).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(1)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(0)' (SCHD-46)
+Global signal 'twiddle:rsc(1)(7).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(6)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(7)' (SCHD-46)
+Global signal 'twiddle:rsc(1)(7).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(7)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(3).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(2)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(3)' (SCHD-46)
+Global signal 'twiddle_h:rsc(0)(3).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(1)' (SCHD-46)
+Global signal 'twiddle_h:rsc(0)(1).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(2).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(2).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(2)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(5)' (SCHD-46)
+Global signal 'twiddle_h:rsc(0)(5).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(6).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(6).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(4).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(4).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle_h:rsc(0)(5).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle_h:rsc(0)(5)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle_h:rsc(0)(4)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(3).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(2)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(3)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(3).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(1)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(1).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(2).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(5)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(5).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(6).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(4).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+Global signal 'twiddle:rsc(0)(5).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(4)' (SCHD-46)
+Global signal 'twiddle:rsc(1)(0).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(0)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(0).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(0)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(1).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(1)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(0)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(7).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(6)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(0)(7)' (SCHD-46)
+Global signal 'twiddle:rsc(0)(7).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(3).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(2)' (SCHD-46)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(3)' (SCHD-46)
+Global signal 'twiddle:rsc(1)(3).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(3)i' (LIB-3)
+# Info: Creating buffer for wait controller for component 'twiddle:rsc(1)(1)' (SCHD-46)
+Global signal 'twiddle:rsc(1)(1).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(1)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(2).adrb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(2)i' (LIB-3)
+Global signal 'twiddle:rsc(1)(2).qb' added to design 'inPlaceNTT_DIF_precomp' for component 'twiddle:rsc(1)(2)i' (LIB-3)
 # Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Report written to file 'cycle.rpt'
 
 # Messages from "go dpfsm"
 
-# Info: Design complexity at end of 'dpfsm': Total ops = 545, Real ops = 161, Vars = 307 (SOL-21)
-# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 1.91 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
-# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+# Info: Design complexity at end of 'dpfsm': Total ops = 5494, Real ops = 1338, Vars = 3381 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 18.45 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-9)
 Performing FSM extraction... (FSM-1)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+Creating shared register 'COMP_LOOP:twiddle_f:lshift.itm' for variables 'COMP_LOOP:twiddle_f:lshift.itm, VEC_LOOP:acc#1.cse.sva, VEC_LOOP:j(10:0).sva(9:0)' (2 registers deleted). (FSM-3)
 
 # Messages from "go extract"
 
-# Info: Design complexity at end of 'instance': Total ops = 542, Real ops = 140, Vars = 459 (SOL-21)
-# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 1.83 seconds, memory usage 1445860kB, peak memory usage 1445860kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 5463, Real ops = 1320, Vars = 4697 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 20.33 seconds, memory usage 1642468kB, peak memory usage 1642468kB (SOL-9)
 # Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
 Netlist written to file 'schematic.nlv' (NET-4)
-# Info: Design complexity at end of 'extract': Total ops = 537, Real ops = 142, Vars = 303 (SOL-21)
-# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 8.18 seconds, memory usage 1511396kB, peak memory usage 1511396kB (SOL-9)
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
-Add dependent file: ../td_ccore_solutions/modulo_add_1a78f3a034bed933e402bbf0ca446af860d3_0/rtl.v
-Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
-Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_rtl.v
-Add dependent file: ./rtl.v
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
-order file name is: rtl.v_order_sim.txt
-Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_rtl.vhdl
-Add dependent file: ./rtl.vhdl
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
-Report written to file 'rtl.rpt'
-order file name is: rtl.vhdl_order_sim.txt
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-Add dependent file: ../td_ccore_solutions/modulo_add_1a78f3a034bed933e402bbf0ca446af860d3_0/rtl.vhdl
-# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
-Add dependent file: ../td_ccore_solutions/modulo_sub_f56c3138e5ca6733a13aa39bf1e29fd2635c_0/rtl.vhdl
-Add dependent file: ../td_ccore_solutions/mult_c3d87980142fdbe72da25f2460c5a41a70cb_0/rtl.vhdl
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
-Add dependent file: ../td_ccore_solutions/modulo_add_1a78f3a034bed933e402bbf0ca446af860d3_0/rtl.vhdl
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Info: Design complexity at end of 'extract': Total ops = 5463, Real ops = 1320, Vars = 3377 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 33.13 seconds, memory usage 1708004kB, peak memory usage 1708004kB (SOL-9)
 Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
-Generating SCVerify testbench files
-Netlist written to file 'rtl.vhdl' (NET-4)
-generate concat
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
-Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_sim_rtl.vhdl
-Add dependent file: ./rtl.vhdl
-Generating scverify_top.cpp ()
-# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
-Add dependent file: ../td_ccore_solutions/modulo_sub_f56c3138e5ca6733a13aa39bf1e29fd2635c_0/rtl.vhdl
-Add dependent file: ../td_ccore_solutions/mult_c3d87980142fdbe72da25f2460c5a41a70cb_0/rtl.vhdl
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
-order file name is: rtl.vhdl_order.txt
-Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
 Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
-Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_sim_rtl.v
-Add dependent file: ./rtl.v
-Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
-Add dependent file: ../td_ccore_solutions/modulo_sub_f56c3138e5ca6733a13aa39bf1e29fd2635c_0/rtl.v
-Add dependent file: ../td_ccore_solutions/mult_c3d87980142fdbe72da25f2460c5a41a70cb_0/rtl.v
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
 # Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
-Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
-Add dependent file: ../td_ccore_solutions/modulo_add_1a78f3a034bed933e402bbf0ca446af860d3_0/rtl.v
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_rtl.vhdl
 Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: ../td_ccore_solutions/modulo_sub_cc250ff62aef060f45cde5681b558542635b_0/rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Add dependent file: ../td_ccore_solutions/mult_b3d4a0c17af05a92530fe047f70695c970ca_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2_0/rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Generating SCVerify testbench files
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_cc250ff62aef060f45cde5681b558542635b_0/rtl.vhdl
+Add dependent file: ../td_ccore_solutions/mult_b3d4a0c17af05a92530fe047f70695c970ca_0/rtl.vhdl
 generate concat
-# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: ../td_ccore_solutions/modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2_0/rtl.vhdl
 Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
 order file name is: rtl.v_order.txt
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_rtl.v
+Add dependent file: ../td_ccore_solutions/mult_b3d4a0c17af05a92530fe047f70695c970ca_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+Add dependent file: ../td_ccore_solutions/modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2_0/rtl.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_cc250ff62aef060f45cde5681b558542635b_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+Add dependent file: ../td_ccore_solutions/modulo_sub_cc250ff62aef060f45cde5681b558542635b_0/rtl.v
+Add dependent file: ../td_ccore_solutions/mult_b3d4a0c17af05a92530fe047f70695c970ca_0/rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ../td_ccore_solutions/modulo_add_12aaf73a68dd9ce714254cc9a57be62160d2_0/rtl.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult/inPlaceNTT_DIF_precomp.v5/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
-Netlist written to file 'rtl.v' (NET-4)
-Add dependent file: ../td_ccore_solutions/modulo_sub_f56c3138e5ca6733a13aa39bf1e29fd2635c_0/rtl.v
-Add dependent file: ../td_ccore_solutions/mult_c3d87980142fdbe72da25f2460c5a41a70cb_0/rtl.v
+# Info: Running transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v5': elapsed time 26.70 seconds, memory usage 1708004kB, peak memory usage 1708004kB (SOL-15)
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF_precomp.v5' (SOL-8)
+Report written to file 'rtl.rpt'
+order file name is: rtl.vhdl_order.txt
+generate concat
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd

@@ -55,21 +55,24 @@ public:
   sc_in<sc_logic> rst;
   sc_out<sc_logic> run_rsc_rdy;
   sc_in<sc_logic> run_rsc_vld;
-  sc_out<sc_lv<10> > vec_rsc_wadr;
-  sc_out<sc_lv<32> > vec_rsc_d;
-  sc_out<sc_logic> vec_rsc_we;
-  sc_out<sc_lv<10> > vec_rsc_radr;
-  sc_in<sc_lv<32> > vec_rsc_q;
+  sc_out<sc_lv<10> > vec_rsc_adra;
+  sc_out<sc_lv<32> > vec_rsc_da;
+  sc_out<sc_logic> vec_rsc_wea;
+  sc_in<sc_lv<32> > vec_rsc_qa;
+  sc_out<sc_lv<10> > vec_rsc_adrb;
+  sc_out<sc_lv<32> > vec_rsc_db;
+  sc_out<sc_logic> vec_rsc_web;
+  sc_in<sc_lv<32> > vec_rsc_qb;
   sc_out<sc_logic> vec_rsc_triosy_lz;
   sc_in<sc_lv<32> > p_rsc_dat;
   sc_out<sc_logic> p_rsc_triosy_lz;
   sc_in<sc_lv<32> > r_rsc_dat;
   sc_out<sc_logic> r_rsc_triosy_lz;
-  sc_out<sc_lv<10> > twiddle_rsc_radr;
-  sc_in<sc_lv<32> > twiddle_rsc_q;
+  sc_out<sc_lv<10> > twiddle_rsc_adrb;
+  sc_in<sc_lv<32> > twiddle_rsc_qb;
   sc_out<sc_logic> twiddle_rsc_triosy_lz;
-  sc_out<sc_lv<10> > twiddle_h_rsc_radr;
-  sc_in<sc_lv<32> > twiddle_h_rsc_q;
+  sc_out<sc_lv<10> > twiddle_h_rsc_adrb;
+  sc_in<sc_lv<32> > twiddle_h_rsc_qb;
   sc_out<sc_logic> twiddle_h_rsc_triosy_lz;
   sc_in<sc_logic> complete_rsc_rdy;
   sc_out<sc_logic> complete_rsc_vld;
@@ -81,21 +84,24 @@ public:
     rst("rst"), 
     run_rsc_rdy("run_rsc_rdy"), 
     run_rsc_vld("run_rsc_vld"), 
-    vec_rsc_wadr("vec_rsc_wadr"), 
-    vec_rsc_d("vec_rsc_d"), 
-    vec_rsc_we("vec_rsc_we"), 
-    vec_rsc_radr("vec_rsc_radr"), 
-    vec_rsc_q("vec_rsc_q"), 
+    vec_rsc_adra("vec_rsc_adra"), 
+    vec_rsc_da("vec_rsc_da"), 
+    vec_rsc_wea("vec_rsc_wea"), 
+    vec_rsc_qa("vec_rsc_qa"), 
+    vec_rsc_adrb("vec_rsc_adrb"), 
+    vec_rsc_db("vec_rsc_db"), 
+    vec_rsc_web("vec_rsc_web"), 
+    vec_rsc_qb("vec_rsc_qb"), 
     vec_rsc_triosy_lz("vec_rsc_triosy_lz"), 
     p_rsc_dat("p_rsc_dat"), 
     p_rsc_triosy_lz("p_rsc_triosy_lz"), 
     r_rsc_dat("r_rsc_dat"), 
     r_rsc_triosy_lz("r_rsc_triosy_lz"), 
-    twiddle_rsc_radr("twiddle_rsc_radr"), 
-    twiddle_rsc_q("twiddle_rsc_q"), 
+    twiddle_rsc_adrb("twiddle_rsc_adrb"), 
+    twiddle_rsc_qb("twiddle_rsc_qb"), 
     twiddle_rsc_triosy_lz("twiddle_rsc_triosy_lz"), 
-    twiddle_h_rsc_radr("twiddle_h_rsc_radr"), 
-    twiddle_h_rsc_q("twiddle_h_rsc_q"), 
+    twiddle_h_rsc_adrb("twiddle_h_rsc_adrb"), 
+    twiddle_h_rsc_qb("twiddle_h_rsc_qb"), 
     twiddle_h_rsc_triosy_lz("twiddle_h_rsc_triosy_lz"), 
     complete_rsc_rdy("complete_rsc_rdy"), 
     complete_rsc_vld("complete_rsc_vld")
