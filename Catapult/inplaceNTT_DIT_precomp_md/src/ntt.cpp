@@ -34,6 +34,7 @@ DATA_TYPE modulo_sub(DATA_TYPE_SIGNED base, DATA_TYPE m){
  * @param p	modulo
  * @return 	the result of the expression
  */
+#pragma hls_design ccore
 DATA_TYPE mult(DATA_TYPE x, DATA_TYPE y, DATA_TYPE y_, DATA_TYPE p){
 	DATA_TYPE z = (DATA_TYPE_TMP)x * y; 
 	DATA_TYPE t = ((DATA_TYPE_TMP)x * y_) >> PARAM_WIDTH; 
@@ -45,7 +46,8 @@ DATA_TYPE mult(DATA_TYPE x, DATA_TYPE y, DATA_TYPE y_, DATA_TYPE p){
 }
 
 #pragma hls_design top
-void inPlaceNTT_DIT_precomp(ac_sync & run, DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE], ac_sync & complete){
+void inPlaceNTT_DIT_precomp(ac_sync & run, DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, 
+	DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE], ac_sync & complete){
 
     DATA_TYPE factor1, factor2;
 	unsigned m;

@@ -1,0 +1,61 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.42 seconds, memory usage 1380228kB, peak memory usage 1380228kB (SOL-9)
+go compile
+
+
+option set Input/CppStandard c++98
+solution file add ${sfd}/src/ntt.cpp
+solution file add ${sfd}/src/main.cpp -exclude true
+
+
+go memories
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+directive set DSP_EXTRACTION yes
+go libraries
+solution library add Xilinx_RAMS
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go assembly
+directive set SCHED_USE_MULTICYCLE true
+go architect
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/catapult.log"
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+solution file add ${sfd}/src/utils.cpp -exclude true
+solution file add ${sfd}/src/ntt.cpp
+
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+go analyze
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+option set Input/CppStandard c++98
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+option set Input/TargetPlatform x86_64
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+solution file add ${sfd}/src/main.cpp -exclude true
+
+
+go libraries
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+
+directive set DSP_EXTRACTION yes
+go compile
+solution library add Xilinx_RAMS
+set sfd [file dirname [info script]]
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Error: can't read "sfd": no such variable
+option set Input/TargetPlatform x86_64
+.
+directive set SCHED_USE_MULTICYCLE true
+go memories
+go architect
+go assembly
+go analyze
+solution file add ${sfd}/src/utils.cpp -exclude true

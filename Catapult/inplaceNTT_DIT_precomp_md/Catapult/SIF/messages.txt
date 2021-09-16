@@ -1,0 +1,52 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT_precomp.v10': elapsed time 1.43 seconds, memory usage 2173888kB, peak memory usage 2173888kB (SOL-9)
+inPlaceNTT_DIT_precomp.v10
+# Info: Branching solution 'inPlaceNTT_DIT_precomp.v10' at state 'new' (PRJ-2)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'inPlaceNTT_DIT_precomp.v10' (SOL-8)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+go compile
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+
+# Messages from "go compile"
+
+Design 'inPlaceNTT_DIT_precomp' was read (SOL-1)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Found top design routine 'inPlaceNTT_DIT_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v10' (SOL-8)
+Optimizing block '/inPlaceNTT_DIT_precomp/mult' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'inPlaceNTT_DIT_precomp' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIT_precomp' (CIN-13)
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'mult' (CIN-13)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_add' ... (CIN-4)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Optimizing block '/inPlaceNTT_DIT_precomp' ... (CIN-4)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_sub' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' iterated at most 4097 times. (LOOP-2)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' iterated at most 12 times. (LOOP-2)
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
