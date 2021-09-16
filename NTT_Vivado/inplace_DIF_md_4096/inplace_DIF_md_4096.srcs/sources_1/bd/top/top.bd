@@ -1,0 +1,544 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBD2F4457438F5C5F",
+      "device": "xc7vx690tffg1761-2",
+      "gen_directory": "../../../../inplace_DIF_md_4096.gen/sources_1/bd/top",
+      "name": "top",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1"
+    },
+    "design_tree": {
+      "inPlaceNTT_DIF_preco_0": "",
+      "blk_mem_gen_0": "",
+      "blk_mem_gen_1": "",
+      "blk_mem_gen_2": ""
+    },
+    "ports": {
+      "p_rsc_dat": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "r_rsc_dat": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      },
+      "rst": {
+        "direction": "I"
+      },
+      "run_rsc_vld": {
+        "direction": "I"
+      },
+      "bram_ena": {
+        "direction": "I"
+      },
+      "run_rdy": {
+        "direction": "O"
+      },
+      "complete_rsc_vld": {
+        "direction": "O"
+      },
+      "complete_rdy_in": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "inPlaceNTT_DIF_preco_0": {
+        "vlnv": "xilinx.com:module_ref:inPlaceNTT_DIF_precomp:1.0",
+        "xci_name": "top_inPlaceNTT_DIF_preco_0_0",
+        "xci_path": "ip\\top_inPlaceNTT_DIF_preco_0_0\\top_inPlaceNTT_DIF_preco_0_0.xci",
+        "inst_hier_path": "inPlaceNTT_DIF_preco_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "inPlaceNTT_DIF_precomp",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "run_rsc_rdy": {
+            "direction": "O"
+          },
+          "run_rsc_vld": {
+            "direction": "I"
+          },
+          "vec_rsc_adra": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "vec_rsc_da": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_wea": {
+            "direction": "O"
+          },
+          "vec_rsc_qa": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_adrb": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "vec_rsc_db": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_web": {
+            "direction": "O"
+          },
+          "vec_rsc_qb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "p_rsc_dat": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "p_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "r_rsc_dat": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "r_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "twiddle_rsc_adra": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "twiddle_rsc_da": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_wea": {
+            "direction": "O"
+          },
+          "twiddle_rsc_qa": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_adrb": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "twiddle_rsc_db": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_web": {
+            "direction": "O"
+          },
+          "twiddle_rsc_qb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "twiddle_h_rsc_adra": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "twiddle_h_rsc_da": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_wea": {
+            "direction": "O"
+          },
+          "twiddle_h_rsc_qa": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_adrb": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "twiddle_h_rsc_db": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_web": {
+            "direction": "O"
+          },
+          "twiddle_h_rsc_qb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "complete_rsc_rdy": {
+            "direction": "I"
+          },
+          "complete_rsc_vld": {
+            "direction": "O"
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_0_0",
+        "xci_path": "ip\\top_blk_mem_gen_0_0\\top_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "50"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          }
+        }
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_0_1",
+        "xci_path": "ip\\top_blk_mem_gen_0_1\\top_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "blk_mem_gen_1",
+        "parameters": {
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "50"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          }
+        }
+      },
+      "blk_mem_gen_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_1_2",
+        "xci_path": "ip\\top_blk_mem_gen_1_2\\top_blk_mem_gen_1_2.xci",
+        "inst_hier_path": "blk_mem_gen_2",
+        "parameters": {
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "50"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "clk",
+          "blk_mem_gen_0/clka",
+          "inPlaceNTT_DIF_preco_0/clk",
+          "blk_mem_gen_0/clkb",
+          "blk_mem_gen_1/clka",
+          "blk_mem_gen_1/clkb",
+          "blk_mem_gen_2/clka",
+          "blk_mem_gen_2/clkb"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "inPlaceNTT_DIF_preco_0/vec_rsc_qa"
+        ]
+      },
+      "blk_mem_gen_0_doutb": {
+        "ports": [
+          "blk_mem_gen_0/doutb",
+          "inPlaceNTT_DIF_preco_0/vec_rsc_qb"
+        ]
+      },
+      "blk_mem_gen_1_douta": {
+        "ports": [
+          "blk_mem_gen_1/douta",
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_qa"
+        ]
+      },
+      "blk_mem_gen_1_doutb": {
+        "ports": [
+          "blk_mem_gen_1/doutb",
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_qb"
+        ]
+      },
+      "blk_mem_gen_2_douta": {
+        "ports": [
+          "blk_mem_gen_2/douta",
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_qa"
+        ]
+      },
+      "blk_mem_gen_2_doutb": {
+        "ports": [
+          "blk_mem_gen_2/doutb",
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_qb"
+        ]
+      },
+      "bram_ena_1": {
+        "ports": [
+          "bram_ena",
+          "blk_mem_gen_0/ena",
+          "blk_mem_gen_0/enb",
+          "blk_mem_gen_1/ena",
+          "blk_mem_gen_1/enb",
+          "blk_mem_gen_2/ena",
+          "blk_mem_gen_2/enb"
+        ]
+      },
+      "complete_rdy_in_1": {
+        "ports": [
+          "complete_rdy_in",
+          "inPlaceNTT_DIF_preco_0/complete_rsc_rdy"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_complete_rsc_vld": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/complete_rsc_vld",
+          "complete_rsc_vld"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_run_rsc_rdy": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/run_rsc_rdy",
+          "run_rdy"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_h_rsc_adra": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_adra",
+          "blk_mem_gen_2/addra"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_h_rsc_adrb": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_adrb",
+          "blk_mem_gen_2/addrb"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_h_rsc_da": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_da",
+          "blk_mem_gen_2/dina"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_h_rsc_db": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_db",
+          "blk_mem_gen_2/dinb"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_h_rsc_wea": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_wea",
+          "blk_mem_gen_2/wea"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_h_rsc_web": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_h_rsc_web",
+          "blk_mem_gen_2/web"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_rsc_adra": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_adra",
+          "blk_mem_gen_1/addra"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_rsc_adrb": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_adrb",
+          "blk_mem_gen_1/addrb"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_rsc_da": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_da",
+          "blk_mem_gen_1/dina"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_rsc_db": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_db",
+          "blk_mem_gen_1/dinb"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_rsc_wea": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_wea",
+          "blk_mem_gen_1/wea"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_twiddle_rsc_web": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/twiddle_rsc_web",
+          "blk_mem_gen_1/web"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_vec_rsc_adra": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/vec_rsc_adra",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_vec_rsc_adrb": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/vec_rsc_adrb",
+          "blk_mem_gen_0/addrb"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_vec_rsc_da": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/vec_rsc_da",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_vec_rsc_db": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/vec_rsc_db",
+          "blk_mem_gen_0/dinb"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_vec_rsc_wea": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/vec_rsc_wea",
+          "blk_mem_gen_0/wea"
+        ]
+      },
+      "inPlaceNTT_DIF_preco_0_vec_rsc_web": {
+        "ports": [
+          "inPlaceNTT_DIF_preco_0/vec_rsc_web",
+          "blk_mem_gen_0/web"
+        ]
+      },
+      "p_rsc_dat_1": {
+        "ports": [
+          "p_rsc_dat",
+          "inPlaceNTT_DIF_preco_0/p_rsc_dat"
+        ]
+      },
+      "r_rsc_dat_1": {
+        "ports": [
+          "r_rsc_dat",
+          "inPlaceNTT_DIF_preco_0/r_rsc_dat"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst",
+          "inPlaceNTT_DIF_preco_0/rst",
+          "blk_mem_gen_0/rsta",
+          "blk_mem_gen_0/rstb",
+          "blk_mem_gen_1/rsta",
+          "blk_mem_gen_1/rstb",
+          "blk_mem_gen_2/rsta",
+          "blk_mem_gen_2/rstb"
+        ]
+      },
+      "run_rsc_vld_1": {
+        "ports": [
+          "run_rsc_vld",
+          "inPlaceNTT_DIF_preco_0/run_rsc_vld"
+        ]
+      }
+    }
+  }
+}
