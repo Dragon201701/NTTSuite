@@ -2,10 +2,12 @@
 #define NTT_H_
 
 #include "config.h"
-#include "utils.h"
+#include "ac_sync.h"
+//#include "utils.h"
 //#include <cmath>
 
-void peaseNTT(DATA_TYPE xt[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE]);
+void peaseNTT(ac_sync & run, DATA_TYPE xt[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, 
+	DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE], ac_sync & complete);
 /**
  * perfrom the operation (x * y) (mod m)
  *

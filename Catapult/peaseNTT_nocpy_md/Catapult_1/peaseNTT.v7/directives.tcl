@@ -5,7 +5,7 @@
 //             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
 //  
-//  Running on Linux jd4691@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
 //  
 //  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
 //                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
@@ -19,8 +19,8 @@ solution options defaults
 solution options set /Input/CppStandard c++11
 solution options set /Input/TargetPlatform x86_64
 solution options set /Output/GenerateCycleNetlist false
-solution file add ./src/ntt.cpp -type C++
-solution file add ./src/utils.cpp -type C++
+solution file add ../../../../yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/src/ntt.cpp -type C++
+solution file add ../../../../yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/src/utils.cpp -type C++
 directive set -PIPELINE_RAMP_UP true
 directive set -PROTOTYPING_ENGINE oasys
 directive set -CLUSTER_TYPE combinational
@@ -64,7 +64,9 @@ directive set -MERGEABLE true
 directive set -SPECULATE true
 directive set -DESIGN_GOAL area
 go new
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 2.55 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
 solution library add mgc_Xilinx-VIRTEX-7-1_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -1 -part xc7vx485tffg1157-1
 solution library add Xilinx_RAMS
 solution library add amba
-go compile
+go libraries
+go libraries

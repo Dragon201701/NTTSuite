@@ -67,16 +67,16 @@ CCS_MAIN(int argc, char** argv){
 	DATA_TYPE r = 3;	
 
     	// input vector and twiddles
-    	DATA_TYPE vec[VECTOR_SIZE], vec2[VECTOR_SIZE], twiddle[VECTOR_SIZE], twiddle_h[VECTOR_SIZE];
+    DATA_TYPE vec[VECTOR_SIZE], vec2[VECTOR_SIZE], twiddle[VECTOR_SIZE], twiddle_h[VECTOR_SIZE];
 	DATA_TYPE naiveResult[VECTOR_SIZE], nttResult[VECTOR_SIZE];
-	//ac_sync        run, complete;
+	ac_sync        run, complete;
 
 	gettwiddle(twiddle, twiddle_h, p, r);
 
 	for(unsigned itr = 0; itr < VECTOR_COUNT; itr++){
 		randVec(vec, vec2, 1000);
 		bit_reverse(vec, VECTOR_SIZE, nttResult);
-		//run.sync_out();
+		run.sync_out();
 #ifdef CCS_SCVERIFY
 		if (itr==0) {
 		// due to the nb_sync_in, we need to ignore the first output compare
@@ -84,8 +84,8 @@ CCS_MAIN(int argc, char** argv){
 		//testbench::result_ignore = true;
 		}
 #endif
-		CCS_DESIGN(peaseNTT)(nttResult, p, r, twiddle, twiddle_h);
-		//complete.sync_in();
+		CCS_DESIGN(peaseNTT)(run, nttResult, p, r, twiddle, twiddle_h, complete);
+		complete.sync_in();
 		naiveNTT(vec2, VECTOR_SIZE, p, r, twiddle, twiddle_h, naiveResult);
 		correct_count += compVec(nttResult, naiveResult, VECTOR_SIZE, true);
 	}
