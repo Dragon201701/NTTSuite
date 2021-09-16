@@ -51,7 +51,6 @@ void butterFly(DATA_TYPE xt[HALF_VECTOR_SIZE], DATA_TYPE yt[HALF_VECTOR_SIZE], P
 	    yt[r + (HALF_VECTOR_SIZE >> 1)]  = modulo_sub(f1 - f2, p);
 }
 
-#include <iostream>
 
 #pragma hls_design top
 void hybrid(DATA_TYPE x[VECTOR_SIZE], DATA_TYPE m, DATA_TYPE twiddle[HALF_VECTOR_SIZE], DATA_TYPE twiddle_h[HALF_VECTOR_SIZE], PARAMS_TYPE revArr[HALF_VECTOR_SIZE],  DATA_TYPE tw[VECTOR_SIZE], DATA_TYPE tw_h[VECTOR_SIZE]){
@@ -69,18 +68,11 @@ void hybrid(DATA_TYPE x[VECTOR_SIZE], DATA_TYPE m, DATA_TYPE twiddle[HALF_VECTOR
     }
 
 
-    S2_COPY_LOOP: for(PARAMS_TYPE i=0; i < HALF_VECTOR_SIZE; i++){
+    S2_REVERSE_LOOP: for(PARAMS_TYPE i=0; i < HALF_VECTOR_SIZE; i++){
         PARAMS_TYPE revIdx = revArr[i];
-        for (PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=8) // FFT all p-line of x
+        for (PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++) // FFT all p-line of x
         {
             xx[p][revIdx] = yy[p][i];
-            xx[p+1][revIdx] = yy[p+1][i];
-            xx[p+2][revIdx] = yy[p+2][i];
-            xx[p+3][revIdx] = yy[p+3][i];
-            xx[p+4][revIdx] = yy[p+4][i];
-            xx[p+5][revIdx] = yy[p+5][i];
-            xx[p+6][revIdx] = yy[p+6][i];
-            xx[p+7][revIdx] = yy[p+7][i];
         }
     }
 
@@ -88,48 +80,25 @@ void hybrid(DATA_TYPE x[VECTOR_SIZE], DATA_TYPE m, DATA_TYPE twiddle[HALF_VECTOR
     const PARAMS_TYPE mid = HALF_VECTOR_SIZE >> 1;
     // Step2: FFT all p1-line of a by Fm
     S2_OUTER_LOOP: 
-    for (PARAMS_TYPE c = HALF_VECTOR_ADDR_BIT; c >= 2; c -= 2){
+    for (PARAMS_TYPE c = HALF_VECTOR_ADDR_BIT; c >= 1; c -= 1){
 
         	PARAMS_TYPE base = -1 << (c - 1);
 
-        	S2_INNER_LOOP1: for (PARAMS_TYPE r = 0; r < mid; r++){
+        	S2_INNER_LOOP: for (PARAMS_TYPE r = 0; r < mid; r++){
                 DATA_TYPE tf = twiddle[r & base];
                 DATA_TYPE tfh= twiddle_h[r & base];
-                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=4){
+                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++){
                     butterFly(xx[p+1], yy[p+1], r, m, base, tf, tfh);
-                    butterFly(xx[p+2], yy[p+2], r, m, base, tf, tfh);
-                    butterFly(xx[p+3], yy[p+3], r, m, base, tf, tfh);
-                    butterFly(xx[p+4], yy[p+4], r, m, base, tf, tfh);
                 }
         	}
 
-        	base = -1 << (c - 2);
-        	S2_INNER_LOOP2: for (PARAMS_TYPE r = 0; r < mid; r++){
-                DATA_TYPE tf = twiddle[r & base];
-                DATA_TYPE tfh= twiddle_h[r & base];
-                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=4){
-                    butterFly(yy[p+1], xx[p+1], r, m, base, tf, tfh);
-                    butterFly(yy[p+2], xx[p+2], r, m, base, tf, tfh);
-                    butterFly(yy[p+3], xx[p+3], r, m, base, tf, tfh);
-                    butterFly(yy[p+4], xx[p+4], r, m, base, tf, tfh);
-                }
-        	}
-
-    }
-    if(HALF_VECTOR_ADDR_BIT % 2){
-        	PARAMS_TYPE base = -1;
-        	S2_INNER_LOOP3: for (PARAMS_TYPE r = 0; r < mid; r++){
-                DATA_TYPE tf = twiddle[r & base];
-                DATA_TYPE tfh= twiddle_h[r & base];
-                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=4){
-                    butterFly(xx[p+1], yy[p+1], r, m, base, tf, tfh);
-                    butterFly(xx[p+2], yy[p+2], r, m, base, tf, tfh);
-                    butterFly(xx[p+3], yy[p+3], r, m, base, tf, tfh);
-                    butterFly(xx[p+4], yy[p+4], r, m, base, tf, tfh);
+            S2_CPY_LOOP:for(PARAMS_TYPE q = 0; q < HALF_VECTOR_SIZE; q++){
+                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++){
+                    yy[p][q] = xx[p][q];
                 }
             }
-    }
 
+    }
 
     // Step3-4: multiply twiddle factor and transpose x
     S34_OUTER_LOOP:for (PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++) { 
@@ -138,70 +107,40 @@ void hybrid(DATA_TYPE x[VECTOR_SIZE], DATA_TYPE m, DATA_TYPE twiddle[HALF_VECTOR
         for (PARAMS_TYPE k = p; k < HALF_VECTOR_SIZE; k++) {
             PARAMS_TYPE tf = tw[p * k];
             PARAMS_TYPE tf_h = tw_h[p * k];
-            DATA_TYPE a = mult(yy[p][k], tf, tf_h, m);
-            DATA_TYPE b = mult(yy[k][p], tf, tf_h, m);
-            xx[p][k] = b;
-            xx[k][p] = a;
+            DATA_TYPE a = mult(xx[p][k], tf, tf_h, m);
+            DATA_TYPE b = mult(xx[k][p], tf, tf_h, m);
+            yy[p][k] = b;
+            yy[k][p] = a;
             //wkp = modulo_dev(wkp * theta0, m);
         }
     }
 
 
     // Step5: FFT all k1-line of d by Fn
-    S5_COPY_LOOP: for(PARAMS_TYPE i=0; i < HALF_VECTOR_SIZE; i++){
+    S5_REVERSE_LOOP: for(PARAMS_TYPE i=0; i < HALF_VECTOR_SIZE; i++){
         PARAMS_TYPE revIdx = revArr[i];
-        for (PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=8) // FFT all p-line of x
+        for (PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++) // FFT all p-line of x
         {
-            yy[p][revIdx] = xx[p][i];
-            yy[p+1][revIdx] = xx[p+1][i];
-            yy[p+2][revIdx] = xx[p+2][i];
-            yy[p+3][revIdx] = xx[p+3][i];
-            yy[p+4][revIdx] = xx[p+4][i];
-            yy[p+5][revIdx] = xx[p+5][i];
-            yy[p+6][revIdx] = xx[p+6][i];
-            yy[p+7][revIdx] = xx[p+7][i];
+            xx[p][revIdx] = yy[p][i];
         }
     }
 
     S5_OUTER_LOOP: 
-    for (PARAMS_TYPE c = HALF_VECTOR_ADDR_BIT; c >= 2; c -= 2){
+    for (PARAMS_TYPE c = HALF_VECTOR_ADDR_BIT; c >= 1; c -= 1){
 
         	PARAMS_TYPE base = -1 << (c - 1);
 
-        	S5_INNER_LOOP1: for (PARAMS_TYPE r = 0; r < mid; r++){
+        	S5_INNER_LOOP: for (PARAMS_TYPE r = 0; r < mid; r++){
                 DATA_TYPE tf = twiddle[r & base];
                 DATA_TYPE tfh= twiddle_h[r & base];
-                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=4){
-                    butterFly(yy[p+1], xx[p+1], r, m, base, tf, tfh);
-                    butterFly(yy[p+2], xx[p+2], r, m, base, tf, tfh);
-                    butterFly(yy[p+3], xx[p+3], r, m, base, tf, tfh);
-                    butterFly(yy[p+4], xx[p+4], r, m, base, tf, tfh);
+                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++){
+                    butterFly(xx[p], yy[p], r, m, base, tf, tfh);
                 }
         	}
 
-        	base = -1 << (c - 2);
-        	S5_INNER_LOOP2: for (PARAMS_TYPE r = 0; r < mid; r++){
-                DATA_TYPE tf = twiddle[r & base];
-                DATA_TYPE tfh= twiddle_h[r & base];
-                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=4){
-                    butterFly(xx[p+1], yy[p+1], r, m, base, tf, tfh);
-                    butterFly(xx[p+2], yy[p+2], r, m, base, tf, tfh);
-                    butterFly(xx[p+3], yy[p+3], r, m, base, tf, tfh);
-                    butterFly(xx[p+4], yy[p+4], r, m, base, tf, tfh);
-                }
-        	}
-
-    }
-    if(HALF_VECTOR_ADDR_BIT % 2){
-        	PARAMS_TYPE base = -1;
-        	S5_INNER_LOOP3: for (PARAMS_TYPE r = 0; r < mid; r++){
-                DATA_TYPE tf = twiddle[r & base];
-                DATA_TYPE tfh= twiddle_h[r & base];
-                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p+=4){
-                    butterFly(yy[p+1], xx[p+1], r, m, base, tf, tfh);
-                    butterFly(yy[p+2], xx[p+2], r, m, base, tf, tfh);
-                    butterFly(yy[p+3], xx[p+3], r, m, base, tf, tfh);
-                    butterFly(yy[p+4], xx[p+4], r, m, base, tf, tfh);
+            S5_CPY_LOOP:for(PARAMS_TYPE q = 0; q < HALF_VECTOR_SIZE; q++){
+                for(PARAMS_TYPE p = 0; p < HALF_VECTOR_SIZE; p++){
+                    yy[p][q] = xx[p][q];
                 }
             }
     }

@@ -80,6 +80,7 @@ int main(int argc, char **argv){
 
 	for(unsigned itr = 0; itr < VECTOR_COUNT; itr++){
 		randVec(vec, vec2, itr, 1000);
+		bit_reverse(vec, nttResult);
 		run.sync_out();
 #ifdef CCS_SCVERIFY
 		if (itr==0) {
@@ -88,10 +89,9 @@ int main(int argc, char **argv){
 		//testbench::result_ignore = true;
 		}
 #endif
-		CCS_DESIGN(inPlaceNTT_DIT_precomp)(run, vec, p, r, twiddle, twiddle_h, complete);
+		CCS_DESIGN(inPlaceNTT_DIT_precomp)(run, nttResult, p, r, twiddle, twiddle_h, complete);
 		complete.sync_in();
 		naiveNTT(vec2, VECTOR_SIZE, p, r, twiddle, twiddle_h, naiveResult);
-		bit_reverse(vec, nttResult);
 		error_count += compVec(nttResult, naiveResult, VECTOR_SIZE, true);
 	}
 	//randVec(vec, vec2, 1000);
