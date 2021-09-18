@@ -1,0 +1,784 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 16 00:46:25 2021
+# Process ID: 3524
+# Current directory: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham_vivado_3/project_1024/project_1024.runs/synth_1
+# Command line: vivado -log stockham_dit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stockham_dit.tcl
+# Log file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham_vivado_3/project_1024/project_1024.runs/synth_1/stockham_dit.vds
+# Journal file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham_vivado_3/project_1024/project_1024.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source stockham_dit.tcl -notrace
+Command: synth_design -top stockham_dit -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2021.08' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7071 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2024.293 ; gain = 152.715 ; free physical = 123829 ; free virtual = 493569
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:3853]
+INFO: [Synth 8-6157] synthesizing module 'BLOCK_DPRAM_RBW_DUAL' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:175]
+	Parameter addr_width bound to: 7 - type: integer 
+	Parameter data_width bound to: 32 - type: integer 
+	Parameter depth bound to: 128 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:197]
+INFO: [Synth 8-6155] done synthesizing module 'BLOCK_DPRAM_RBW_DUAL' (1#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:175]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_3_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_3_10_32_1024_1024_32_1_gen' (2#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1054]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_10_32_1024_1024_32_1_gen' (3#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1054]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_6_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1009]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_6_7_32_128_128_32_1_gen' (4#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1009]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_7_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:964]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_7_7_32_128_128_32_1_gen' (5#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:964]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_8_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:919]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_8_7_32_128_128_32_1_gen' (6#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:919]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_9_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:874]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_9_7_32_128_128_32_1_gen' (7#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:874]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_10_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:829]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_10_7_32_128_128_32_1_gen' (8#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:829]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_11_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:784]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_11_7_32_128_128_32_1_gen' (9#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:784]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_12_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:739]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_12_7_32_128_128_32_1_gen' (10#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:739]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_13_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:694]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_en_13_7_32_128_128_32_1_gen' (11#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:694]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_14_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:654]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_14_7_32_128_128_32_1_gen' (12#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:654]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_15_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:614]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_15_7_32_128_128_32_1_gen' (13#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:614]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:574]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen' (14#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:574]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:534]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen' (15#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:534]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:494]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen' (16#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:494]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:454]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen' (17#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:454]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:414]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen' (18#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:414]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:374]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen' (19#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:374]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_core' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1240]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:21]
+	Parameter rscid bound to: 2 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1' (20#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:21]
+INFO: [Synth 8-6157] synthesizing module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:55]
+	Parameter valid bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_io_sync_v2' (21#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:55]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:69]
+	Parameter width_a bound to: 9 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_r_v5' (22#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:69]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:111]
+	Parameter width_a bound to: 9 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_l_v5' (23#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:111]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_core_wait_dp' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1179]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_core_wait_dp' (24#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1179]
+INFO: [Synth 8-6157] synthesizing module 'stockham_dit_core_core_fsm' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1097]
+	Parameter main_C_0 bound to: 3'b000 
+	Parameter for_for_C_0 bound to: 3'b001 
+	Parameter for_for_C_1 bound to: 3'b010 
+	Parameter for_for_C_2 bound to: 3'b011 
+	Parameter for_C_0 bound to: 3'b100 
+	Parameter main_C_1 bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_core_core_fsm' (25#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1097]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit_core' (26#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:1240]
+INFO: [Synth 8-6155] done synthesizing module 'stockham_dit' (27#1) [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:3853]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[31]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[30]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[29]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[28]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[27]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[26]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[25]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[24]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[23]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[22]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[21]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[20]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[19]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[18]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[17]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[16]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[15]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[14]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[13]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[12]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[11]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[10]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[9]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[8]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[7]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[6]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[5]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[4]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[3]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[2]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[1]
+WARNING: [Synth 8-3331] design stockham_dit_core_wait_dp has unconnected port mult_t_mul_cmp_z[0]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[63]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[62]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[61]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[60]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[59]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[58]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[57]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[56]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[55]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[54]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[53]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[52]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[51]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[50]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[49]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[48]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[47]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[46]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[45]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[44]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[43]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[42]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[41]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[40]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[39]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[38]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[37]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[36]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[35]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[34]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[33]
+WARNING: [Synth 8-3331] design stockham_dit_core has unconnected port xt_rsc_0_0_i_qa_d[32]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen has unconnected port clka
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen has unconnected port clka_en
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen has unconnected port wea_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen has unconnected port wea_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_21_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen has unconnected port clka
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen has unconnected port clka_en
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen has unconnected port wea_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen has unconnected port wea_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_20_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen has unconnected port clka
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen has unconnected port clka_en
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen has unconnected port wea_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen has unconnected port wea_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_19_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen has unconnected port clka
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen has unconnected port clka_en
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen has unconnected port wea_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen has unconnected port wea_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_18_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen has unconnected port clka
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen has unconnected port clka_en
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen has unconnected port wea_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen has unconnected port wea_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen has unconnected port clka
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen has unconnected port clka_en
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen has unconnected port wea_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen has unconnected port wea_d[0]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[1]
+WARNING: [Synth 8-3331] design stockham_dit_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_7_32_128_128_32_1_gen has unconnected port rwA_rw_ram_ir_internal_RMASK_B_d[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2081.016 ; gain = 209.438 ; free physical = 123697 ; free virtual = 493438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2092.887 ; gain = 221.309 ; free physical = 123619 ; free virtual = 493360
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2092.887 ; gain = 221.309 ; free physical = 123619 ; free virtual = 493360
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+Finished Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.sdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/stockham_dit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/stockham_dit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+Finished Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/stockham_dit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/stockham_dit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2296.355 ; gain = 0.000 ; free physical = 123919 ; free virtual = 493660
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2296.355 ; gain = 0.000 ; free physical = 123919 ; free virtual = 493660
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2296.355 ; gain = 424.777 ; free physical = 124029 ; free virtual = 493770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2296.355 ; gain = 424.777 ; free physical = 124029 ; free virtual = 493770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2296.355 ; gain = 424.777 ; free physical = 124029 ; free virtual = 493770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_var_reg' in module 'stockham_dit_core_core_fsm'
+INFO: [Synth 8-5544] ROM "fsm_output" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:3569]
+INFO: [Synth 8-3971] The signal "BLOCK_DPRAM_RBW_DUAL:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+*
+             for_for_C_0 |                              001 |                              001
+             for_for_C_1 |                              010 |                              010
+             for_for_C_2 |                              011 |                              011
+                 for_C_0 |                              100 |                              100
+                main_C_1 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_var_reg' using encoding 'sequential' in module 'stockham_dit_core_core_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2296.355 ; gain = 424.777 ; free physical = 124015 ; free virtual = 493756
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_6_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_5_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_4_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_3_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_2_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_1_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/xt_rsc_triosy_0_0_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/p_rsc_triosy_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/twiddle_rsc_triosy_obj'
+INFO: [Synth 8-223] decloning instance 'stockham_dit_core_inst/xt_rsc_triosy_0_7_obj' (mgc_io_sync_v2) to 'stockham_dit_core_inst/twiddle_h_rsc_triosy_obj'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 54    
+	                9 Bit    Registers := 2     
+	                7 Bit    Registers := 8     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 85    
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---RAMs : 
+	               4K Bit         RAMs := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 25    
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 30    
+	   6 Input      6 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 61    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module stockham_dit 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module BLOCK_DPRAM_RBW_DUAL 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	               4K Bit         RAMs := 1     
+Module stockham_dit_core_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module stockham_dit_core_core_fsm 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input      6 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+Module stockham_dit_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 37    
+	                9 Bit    Registers := 2     
+	                7 Bit    Registers := 8     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 85    
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 25    
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 30    
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 61    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:3542]
+DSP Report: Generating DSP nl_z_out_3, operation Mode is: A*B.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: Generating DSP nl_z_out_3, operation Mode is: A*B.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: Generating DSP nl_z_out_3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: Generating DSP nl_mult_z_mul_itm_1, operation Mode is: A2*B.
+DSP Report: register nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: Generating DSP mult_z_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register for_for_w_asn_3_itm_reg is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: register mult_z_mul_itm_1_reg is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: Generating DSP nl_mult_z_mul_itm_1, operation Mode is: A2*B2.
+DSP Report: register nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: register nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP nl_mult_z_mul_itm_1.
+DSP Report: Generating DSP mult_z_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register for_for_w_asn_3_itm_reg is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: register mult_z_mul_itm_1_reg is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: register mult_z_mul_itm_1_reg is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP mult_z_mul_itm_1_reg.
+DSP Report: operator nl_mult_z_mul_itm_1 is absorbed into DSP mult_z_mul_itm_1_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v22/concat_sim_rtl.v:4152]
+DSP Report: Generating DSP vector, operation Mode is: A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: Generating DSP vector, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: Generating DSP vector, operation Mode is: A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: Generating DSP vector, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_0_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_1_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_2_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_3_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_4_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_5_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_6_comp/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "stockham_dit/yt_rsc_0_7_comp/mem_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[47]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[46]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[45]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[44]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[43]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[42]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[41]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[40]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[39]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[38]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[37]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[36]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[35]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[34]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[33]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[32]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[31]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[30]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[29]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[28]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[27]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[26]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[25]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[24]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[23]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[22]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[21]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[20]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[19]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[18]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[17]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[16]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[15]) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[47]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[46]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[45]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[44]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[43]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[42]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[41]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[40]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[39]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[38]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[37]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[36]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[35]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[34]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[33]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[32]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[31]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[30]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[29]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[28]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[27]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[26]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[25]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[24]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[23]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[22]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[21]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[20]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[19]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[18]__0) is unused and will be removed from module stockham_dit_core.
+WARNING: [Synth 8-3332] Sequential element (mult_z_mul_itm_1_reg[17]__0) is unused and will be removed from module stockham_dit_core.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 2296.355 ; gain = 424.777 ; free physical = 123991 ; free virtual = 493738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++----------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++----------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|stockham_dit_core | A*B              | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit_core | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit_core | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit_core | A2*B             | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit_core | (PCIN>>17)+A*B2  | 16     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|stockham_dit_core | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|stockham_dit_core | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|stockham_dit      | A*B              | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit      | (PCIN>>17)+A*B   | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit      | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stockham_dit      | (PCIN>>17)+A*B   | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/yt_rsc_0_0_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/yt_rsc_0_0_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/yt_rsc_0_1_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/yt_rsc_0_1_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2/yt_rsc_0_2_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2/yt_rsc_0_2_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_3/yt_rsc_0_3_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_3/yt_rsc_0_3_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_4/yt_rsc_0_4_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_4/yt_rsc_0_4_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/yt_rsc_0_5_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_5/yt_rsc_0_5_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_6/yt_rsc_0_6_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_6/yt_rsc_0_6_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_7/yt_rsc_0_7_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_7/yt_rsc_0_7_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 2296.355 ; gain = 424.777 ; free physical = 123419 ; free virtual = 493165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2338.102 ; gain = 466.523 ; free physical = 123778 ; free virtual = 493525
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++----------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|BLOCK_DPRAM_RBW_DUAL: | mem_reg    | 128 x 32(READ_FIRST)   | W | R | 128 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++----------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_0_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_0_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_1_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_1_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_2_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_2_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_3_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_3_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_4_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_4_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_5_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_5_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_6_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_6_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_7_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yt_rsc_0_7_comp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:59 . Memory (MB): peak = 2338.102 ; gain = 466.523 ; free physical = 123767 ; free virtual = 493513
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123749 ; free virtual = 493495
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123747 ; free virtual = 493494
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123773 ; free virtual = 493520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123773 ; free virtual = 493520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123775 ; free virtual = 493522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123775 ; free virtual = 493522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    76|
+|3     |DSP48E1   |     3|
+|4     |DSP48E1_1 |     2|
+|5     |DSP48E1_2 |     5|
+|6     |LUT1      |    11|
+|7     |LUT2      |   203|
+|8     |LUT3      |   724|
+|9     |LUT4      |   328|
+|10    |LUT5      |   267|
+|11    |LUT6      |   413|
+|12    |RAMB36E1  |     8|
+|13    |FDRE      |  1327|
+|14    |FDSE      |     2|
+|15    |IBUF      |   578|
+|16    |OBUF      |   671|
++------+----------+------+
+
+Report Instance Areas: 
++------+------------------------------------+---------------------------+------+
+|      |Instance                            |Module                     |Cells |
++------+------------------------------------+---------------------------+------+
+|1     |top                                 |                           |  4619|
+|2     |  stockham_dit_core_inst            |stockham_dit_core          |  3352|
+|3     |    for_for_w_lshift_rg             |mgc_shift_l_v5             |    33|
+|4     |    for_for_w_rshift_rg             |mgc_shift_r_v5             |    14|
+|5     |    stockham_dit_core_core_fsm_inst |stockham_dit_core_core_fsm |  1050|
+|6     |    stockham_dit_core_wait_dp_inst  |stockham_dit_core_wait_dp  |    91|
+|7     |  yt_rsc_0_0_comp                   |BLOCK_DPRAM_RBW_DUAL       |     1|
+|8     |  yt_rsc_0_1_comp                   |BLOCK_DPRAM_RBW_DUAL_0     |     2|
+|9     |  yt_rsc_0_2_comp                   |BLOCK_DPRAM_RBW_DUAL_1     |     1|
+|10    |  yt_rsc_0_3_comp                   |BLOCK_DPRAM_RBW_DUAL_2     |     2|
+|11    |  yt_rsc_0_4_comp                   |BLOCK_DPRAM_RBW_DUAL_3     |     1|
+|12    |  yt_rsc_0_5_comp                   |BLOCK_DPRAM_RBW_DUAL_4     |     2|
+|13    |  yt_rsc_0_6_comp                   |BLOCK_DPRAM_RBW_DUAL_5     |     2|
+|14    |  yt_rsc_0_7_comp                   |BLOCK_DPRAM_RBW_DUAL_6     |     2|
++------+------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2338.105 ; gain = 466.527 ; free physical = 123775 ; free virtual = 493522
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 128 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:55 . Memory (MB): peak = 2338.105 ; gain = 263.059 ; free physical = 123837 ; free virtual = 493583
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2338.109 ; gain = 466.527 ; free physical = 123850 ; free virtual = 493597
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.059 ; gain = 0.000 ; free physical = 123706 ; free virtual = 493453
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+128 Infos, 164 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:22 . Memory (MB): peak = 2376.059 ; gain = 845.410 ; free physical = 123906 ; free virtual = 493653
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.059 ; gain = 0.000 ; free physical = 123899 ; free virtual = 493645
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham_vivado_3/project_1024/project_1024.runs/synth_1/stockham_dit.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file stockham_dit_utilization_synth.rpt -pb stockham_dit_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 16 00:48:01 2021...
