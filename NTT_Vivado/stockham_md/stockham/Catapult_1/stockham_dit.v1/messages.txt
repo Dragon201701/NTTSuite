@@ -1,0 +1,63 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.22 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go analyze
+c++11
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/catapult.log"
+# Error: Compilation aborted (CIN-5)
+/INPUTFILES/6
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+/INPUTFILES/2
+solution file add ./src/utils.cpp -exclude true
+solution file add ./src/ntt.cpp
+solution file add ./src/main.cpp -exclude true
+/INPUTFILES/1
+solution file add ./include/config.h
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/5
+solution file add ./include/ntt.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4
+
+# Messages from "go compile"
+
+Loop '/stockham_dit/core/for:for' iterated at most 512 times. (LOOP-2)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+# Error: Compilation aborted (CIN-5)
+# Error: Unable to reduce array size for variable 'twiddle', currently 1024 words (CIN-84)
+# Error: Unable to reduce array size for variable 'xt', currently 1024 words (CIN-84)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+# Error: Unable to reduce array size for variable 'twiddle_h', currently 1024 words (CIN-84)
+go compile
+# Info: Starting transformation 'compile' on solution 'stockham_dit.v1' (SOL-8)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Optimizing block '/stockham_dit' ... (CIN-4)
+Inlining routine 'modulo_sub' (CIN-14)
+Found top design routine 'stockham_dit' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'stockham_dit' (CIN-14)
+Synthesizing routine 'stockham_dit' (CIN-13)

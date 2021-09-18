@@ -1,0 +1,404 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'ntt_flat.v5': elapsed time 17.15 seconds, memory usage 2362788kB, peak memory usage 2362788kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'ntt_flat.v5' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp" (CRD-1)
+go libraries
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+ntt_flat.v5
+# Info: Branching solution 'ntt_flat.v5' at state 'new' (PRJ-2)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 17.32 seconds, memory usage 1904084kB, peak memory usage 1969620kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Moving session transcript to file "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/catapult.log"
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.05 seconds, memory usage 1314772kB, peak memory usage 1314772kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp (CIN-69)
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go compile
+c++11
+solution file add ./flat_md/directives.tcl -exclude true
+# Error: go analyze: Failed analyze
+/INPUTFILES/7
+/INPUTFILES/2
+solution file add ./flat_md/src/main.cpp -exclude true
+solution file add ./flat_md/src/utils.cpp -exclude true
+solution file add ./flat_md/src/ntt.cpp
+/INPUTFILES/1
+solution file add ./flat_md/include/ntt.h -exclude true
+solution file add ./flat_md/include/config.h
+/INPUTFILES/5
+solution file add ./flat_md/include/utils.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+/INPUTFILES/6
+solution file set /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp -exclude false
+solution file set /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h -exclude false
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'ntt_flat.v5': elapsed time 6.99 seconds, memory usage 2362788kB, peak memory usage 2362788kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+Design 'ntt_flat' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v5/CDesignChecker/design_checker.sh'
+Loop '/ntt_flat/core/STAGE_LOOP' iterated at most 14 times. (LOOP-2)
+Loop '/ntt_flat/core/INNER_LOOP' iterated at most 8192 times. (LOOP-2)
+Loop '/ntt_flat/core/for' iterated at most 16384 times. (LOOP-2)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/ntt_flat' ... (CIN-4)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'ntt_flat.v5' (SOL-8)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Synthesizing routine 'ntt_flat' (CIN-13)
+Found top design routine 'ntt_flat' specified by directive (CIN-52)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'ntt_flat' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'ntt_flat.v5': elapsed time 0.30 seconds, memory usage 2362788kB, peak memory usage 2362788kB (SOL-9)
+# Info: Starting transformation 'libraries' on solution 'ntt_flat.v5' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v9': elapsed time 0.24 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v9' (SOL-8)
+CU_DESIGN sid9 ADD {} {VERSION v9 SID sid9 BRANCH_SID sid8 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name ntt_flat}: Race condition
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'ntt_flat.v9' at state 'libraries' (PRJ-2)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 5.99 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.995 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.99 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.995 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 5.99 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.995 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v8': elapsed time 0.21 seconds, memory usage 2363360kB, peak memory usage 2363360kB (SOL-9)
+go extract
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.95 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.975 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 5.95 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.975 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 5.95 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.975 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid8 ADD {} {VERSION v8 SID sid8 BRANCH_SID sid7 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name ntt_flat}: Race condition
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v8' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v8/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'ntt_flat.v8' at state 'libraries' (PRJ-2)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v7': elapsed time 0.22 seconds, memory usage 2362788kB, peak memory usage 2362788kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 5.88 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.94 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v7' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v7/CDesignChecker/design_checker.sh'
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.88 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.94 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 5.88 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.94 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid7 ADD {} {VERSION v7 SID sid7 BRANCH_SID sid6 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name ntt_flat}: Race condition
+# Info: Branching solution 'ntt_flat.v7' at state 'libraries' (PRJ-2)
+go extract
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v6': elapsed time 0.21 seconds, memory usage 2362788kB, peak memory usage 2362788kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Branching solution 'ntt_flat.v6' at state 'libraries' (PRJ-2)
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v6/CDesignChecker/design_checker.sh'
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 6.06 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 3.03 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 6.06 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 3.03 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+CU_DESIGN sid6 ADD {} {VERSION v6 SID sid6 BRANCH_SID sid5 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name ntt_flat}: Race condition
+/CLOCKS {clk {-CLOCK_PERIOD 6.06 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 3.03 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v6' (SOL-8)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v5': elapsed time 0.21 seconds, memory usage 2362788kB, peak memory usage 2362788kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v5' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'ntt_flat.v9': elapsed time 0.06 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Loop '/ntt_flat/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/INNER_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/main' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/for' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'ntt_flat.v9' (SOL-8)
+# Info: Design complexity at end of 'memories': Total ops = 300, Real ops = 40, Vars = 62 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'ntt_flat.v9': elapsed time 0.68 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Memory Resource '/ntt_flat/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(0)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Resource '/ntt_flat/result:rsc' split into 15 x 1 blocks (MEM-11)
+Memory Resource '/ntt_flat/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'ntt_flat.v9' (SOL-8)
+I/O-Port Resource '/ntt_flat/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/ntt_flat/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/ntt_flat/result:rsc(6)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(5)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(14)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(8)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(13)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(7)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(2)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(1)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(10)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(4)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(9)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(3)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(12)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(11)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 16384 x 32). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 300, Real ops = 40, Vars = 62 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'ntt_flat.v9': elapsed time 0.07 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'ntt_flat.v9' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 544, Real ops = 103, Vars = 106 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'ntt_flat.v9': elapsed time 0.96 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Design 'ntt_flat' contains '103' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'ntt_flat.v9' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 544, Real ops = 103, Vars = 106 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'ntt_flat.v9': elapsed time 2.36 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Prescheduled LOOP '/ntt_flat/core/core:rlp' (0 c-steps) (SCHD-7)
+# Warning: Process 'core' has IGNORE_DEPENDENCY_FROM directives (potentially created from ignore_memory_precedence commands).  The command was refined to be dependent on the order of the arguments.  Please verify the correctness of the argument order.  See also the command's documentation. (MEM-52)
+Prescheduled LOOP '/ntt_flat/core/main' (2 c-steps) (SCHD-7)
+# Info: Initial schedule of SEQUENTIAL '/ntt_flat/core': Latency = 360587, Area (Datapath, Register, Total) = 6488.50, 0.00, 6488.50 (CRAAS-11)
+# Info: Starting transformation 'allocate' on solution 'ntt_flat.v9' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Prescheduled SEQUENTIAL '/ntt_flat/core' (total length 1196062 c-steps) (SCHD-8)
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+Prescheduled LOOP '/ntt_flat/core/INNER_LOOP' (10 c-steps) (SCHD-7)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/ntt_flat/core/for' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/ntt_flat/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Final schedule of SEQUENTIAL '/ntt_flat/core': Latency = 360601, Area (Datapath, Register, Total) = 5880.50, 0.00, 5880.50 (CRAAS-12)
+At least one feasible schedule exists. (CRAAS-9)
+Resource allocation and scheduling done. (CRAAS-2)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 2262, Real ops = 120, Vars = 546 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'ntt_flat.v9': elapsed time 15.27 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Global signal 'result:rsc(1)(0).d' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).we' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).d' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).we' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).q' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).d' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).radr' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).q' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(4)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(4)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(5)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(5)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(2)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(2)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(3)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(3)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(8)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(8)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(9)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(9)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(6)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(6)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(7)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(7)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(0)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(1)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(1)(0):obj' (LIB-3)
+# Info: Loop '/ntt_flat/core/INNER_LOOP' is pipelined with initiation interval 3 and no flushing (SCHD-43)
+# Info: Loop '/ntt_flat/core/for' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+Loop '/ntt_flat/ntt_flat:core/core/for' iterated at most 16386 times. (LOOP-2)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Report written to file 'cycle.rpt'
+Global signal 'result:rsc(11)(0).d' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).we' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).q' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).d' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).radr' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).q' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(13)(0).radr' added to design 'ntt_flat' for component 'result:rsc(13)(0)i' (LIB-3)
+Global signal 'result:rsc(13)(0).q' added to design 'ntt_flat' for component 'result:rsc(13)(0)i' (LIB-3)
+Global signal 'result:rsc(13)(0).d' added to design 'ntt_flat' for component 'result:rsc(13)(0)i' (LIB-3)
+Global signal 'result:rsc(13)(0).we' added to design 'ntt_flat' for component 'result:rsc(13)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).we' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).radr' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).d' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(14)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(14)(0)i' (LIB-3)
+Global signal 'result:rsc(14)(0).d' added to design 'ntt_flat' for component 'result:rsc(14)(0)i' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'ntt_flat' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'vec:rsc.triosy.lz' added to design 'ntt_flat' for component 'vec:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(14)(0).q' added to design 'ntt_flat' for component 'result:rsc(14)(0)i' (LIB-3)
+Global signal 'result:rsc(13)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(13)(0)i' (LIB-3)
+Global signal 'result:rsc(14)(0).we' added to design 'ntt_flat' for component 'result:rsc(14)(0)i' (LIB-3)
+Global signal 'result:rsc(14)(0).radr' added to design 'ntt_flat' for component 'result:rsc(14)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(12)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(12)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(13)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(13)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(10)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(10)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(11)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(11)(0):obj' (LIB-3)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'ntt_flat' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'ntt_flat' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc.triosy(14)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(14)(0):obj' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy.lz' added to design 'ntt_flat' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(5)(0).radr' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'result:rsc(5)(0).q' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'result:rsc(5)(0).d' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'result:rsc(5)(0).we' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).we' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).radr' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).d' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).d' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).radr' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).q' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).q' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(5)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).we' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).radr' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).we' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).radr' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).d' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).d' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).we' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).q' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).q' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'ntt_flat' for component 'p:rsci' (LIB-3)
+Global signal 'result:rsc(9)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'vec:rsc.radr' added to design 'ntt_flat' for component 'vec:rsci' (LIB-3)
+Global signal 'result:rsc(10)(0).we' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'twiddle:rsc.q' added to design 'ntt_flat' for component 'twiddle:rsci' (LIB-3)
+Global signal 'result:rsc(10)(0).radr' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'ntt_flat' for component 'r:rsci' (LIB-3)
+Global signal 'result:rsc(9)(0).radr' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'result:rsc(9)(0).q' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'ntt_flat.v9' (SOL-8)
+Global signal 'result:rsc(9)(0).d' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'vec:rsc.q' added to design 'ntt_flat' for component 'vec:rsci' (LIB-3)
+Global signal 'result:rsc(9)(0).we' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+Global signal 'result:rsc(0)(0).we' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(0).radr' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(0)(0).d' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc.q' added to design 'ntt_flat' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle:rsc.radr' added to design 'ntt_flat' for component 'twiddle:rsci' (LIB-3)
+Global signal 'result:rsc(0)(0).q' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc.radr' added to design 'ntt_flat' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'result:rsc(2)(0).q' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).we' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).radr' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).radr' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).q' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 1491, Real ops = 570, Vars = 416 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'ntt_flat.v9': elapsed time 2.12 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'ntt_flat.v9' (SOL-8)
+Performing FSM extraction... (FSM-1)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 1379, Real ops = 417, Vars = 1022 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'ntt_flat.v9': elapsed time 2.09 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'ntt_flat.v9' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 1364, Real ops = 424, Vars = 388 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'ntt_flat.v9': elapsed time 14.36 seconds, memory usage 2428896kB, peak memory usage 2428896kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+order file name is: rtl.vhdl_order.txt
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Finished writing concatenated file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Report written to file 'rtl.rpt'
+order file name is: rtl.vhdl_order_sim.txt
+# Info: Starting transformation 'extract' on solution 'ntt_flat.v9' (SOL-8)
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Finished writing concatenated simulation file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()

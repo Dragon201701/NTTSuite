@@ -1,0 +1,173 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'ntt_flat.v5': elapsed time 9.70 seconds, memory usage 1904616kB, peak memory usage 1970152kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+ntt_flat.v5
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'ntt_flat.v5' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'ntt_flat.v5' (SOL-8)
+go libraries
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'ntt_flat.v4': elapsed time 9.81 seconds, memory usage 1839080kB, peak memory usage 1904616kB (SOL-9)
+# Info: Branching solution 'ntt_flat.v4' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'ntt_flat.v4' (SOL-8)
+go libraries
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+ntt_flat.v4
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 9.87 seconds, memory usage 1641332kB, peak memory usage 1641332kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp (CIN-69)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 8.15 seconds, memory usage 1641332kB, peak memory usage 1641332kB (SOL-9)
+/INPUTFILES/2
+# Error: Compilation aborted (CIN-5)
+# Error: argument of type "DATA_TYPE (*)[1024]" is incompatible with parameter of type "DATA_TYPE *" (CRD-167)
+option set Input/TargetPlatform x86_64
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp" (CRD-167)
+solution file add ./src/ntt.cpp
+solution file add ./src/utils.cpp
+/INPUTFILES/1
+# Error: go analyze: Failed analyze
+Moving session transcript to file "/home/jd4691/research/NTT_CPU/ntt_flat/catapult.log"
+c++11
+option set Input/CppStandard c++11
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'ntt_flat.v5': elapsed time 5.06 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_CPU/ntt_flat/Catapult_1/ntt_flat.v5/CDesignChecker/design_checker.sh'
+Synthesizing routine 'ntt_flat' (CIN-13)
+Found top design routine 'ntt_flat' specified by directive (CIN-52)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'ntt_flat' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'ntt_flat.v5' (SOL-8)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Loop '/ntt_flat/core/for' iterated at most 16384 times. (LOOP-2)
+Inlining routine 'mult' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/ntt_flat' ... (CIN-4)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Design 'ntt_flat' was read (SOL-1)
+Inlining routine 'modulo_sub' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/ntt_flat/core/STAGE_LOOP' iterated at most 14 times. (LOOP-2)
+Loop '/ntt_flat/core/INNER_LOOP' iterated at most 8192 times. (LOOP-2)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'ntt_flat.v5': elapsed time 0.41 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'ntt_flat.v5' (SOL-8)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v5': elapsed time 0.24 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+go allocate
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v5' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'ntt_flat.v5': elapsed time 0.05 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+Loop '/ntt_flat/core/main' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/INNER_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/for' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'ntt_flat.v5' (SOL-8)
+# Info: Completed transformation 'memories' on solution 'ntt_flat.v5': elapsed time 1.42 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+Memory Resource '/ntt_flat/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 16384 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc' (from var: result) mapped to 'amba.ccs_axi4_slave_mem' (size: 245760 x 32). (MEM-4)
+Memory Resource '/ntt_flat/vec:rsc' (from var: vec) mapped to 'amba.ccs_axi4_slave_mem' (size: 16384 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'ntt_flat.v5' (SOL-8)
+I/O-Port Resource '/ntt_flat/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/ntt_flat/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/ntt_flat/twiddle_h:rsc' (from var: twiddle_h) mapped to 'amba.ccs_axi4_slave_mem' (size: 16384 x 32). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'ntt_flat.v5': elapsed time 0.06 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'ntt_flat.v5' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 136, Real ops = 43, Vars = 43 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'ntt_flat.v5': elapsed time 1.21 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+Design 'ntt_flat' contains '43' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'ntt_flat.v5' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 136, Real ops = 43, Vars = 43 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'ntt_flat.v5': elapsed time 0.68 seconds, memory usage 1970152kB, peak memory usage 1970152kB (SOL-9)
+Resource allocation and scheduling done. (CRAAS-2)
+Prescheduled LOOP '/ntt_flat/core/for' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/ntt_flat/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# Warning: Process 'core' has IGNORE_DEPENDENCY_FROM directives (potentially created from ignore_memory_precedence commands).  The command was refined to be dependent on the order of the arguments.  Please verify the correctness of the argument order.  See also the command's documentation. (MEM-52)
+# Info: Starting transformation 'allocate' on solution 'ntt_flat.v5' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled LOOP '/ntt_flat/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled LOOP '/ntt_flat/core/main' (2 c-steps) (SCHD-7)
+# Info: Initial schedule of SEQUENTIAL '/ntt_flat/core': Latency = 262353, Area (Datapath, Register, Total) = 11779.00, 0.00, 11779.00 (CRAAS-11)
+# Info: Final schedule of SEQUENTIAL '/ntt_flat/core': Latency = 262353, Area (Datapath, Register, Total) = 11129.00, 0.00, 11129.00 (CRAAS-12)
+Prescheduled SEQUENTIAL '/ntt_flat/core' (total length 1753118 c-steps) (SCHD-8)
+At least one feasible schedule exists. (CRAAS-9)
+Prescheduled LOOP '/ntt_flat/core/INNER_LOOP' (15 c-steps) (SCHD-7)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)

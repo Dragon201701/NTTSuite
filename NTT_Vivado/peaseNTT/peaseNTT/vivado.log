@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 16 20:27:21 2021
+# Process ID: 46647
+# Current directory: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT
+# Command line: vivado
+# Log file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/vivado.log
+# Journal file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_orig_1024 /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/vivado/project_orig_1024 -part xc7vx690tffg1761-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 6681.520 ; gain = 96.297 ; free physical = 145996 ; free virtual = 517336
+add_files -norecurse {/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ccs_in_v1' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:21]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:55]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_rem' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:69]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_mul_pipe' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:248]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:404]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'BLOCK_1R1W_RBW' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:468]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_en_6_10_64_1024_1024_64_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:604]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_10_64_1024_1024_64_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:639]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_4_10_64_1024_1024_64_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:660]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_10_64_1024_1024_64_1_gen' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:692]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_core_core_fsm' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:714]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_core_wait_dp' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:1759]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT_core' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:1789]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'peaceNTT' [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v:2524]
+WARNING: [filemgmt 20-736] The current top specification, "peaceNTT", does not uniquely identify a single design element. Using "peaceNTT" (Library: xil_defaultlib, File: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ccs_in_v1()' found in library 'xil_defaultlib'
+Duplicate found at line 21 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 21 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_io_sync_v2()' found in library 'xil_defaultlib'
+Duplicate found at line 55 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 55 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_rem()' found in library 'xil_defaultlib'
+Duplicate found at line 69 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 69 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_mul_pipe()' found in library 'xil_defaultlib'
+Duplicate found at line 248 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 248 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_l_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 404 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 404 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'BLOCK_1R1W_RBW()' found in library 'xil_defaultlib'
+Duplicate found at line 468 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 468 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_en_6_10_64_1024_1024_64_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 604 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 604 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_10_64_1024_1024_64_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 639 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 639 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_4_10_64_1024_1024_64_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 660 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 660 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_10_64_1024_1024_64_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 692 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 692 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_core_core_fsm()' found in library 'xil_defaultlib'
+Duplicate found at line 714 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 714 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_core_wait_dp()' found in library 'xil_defaultlib'
+Duplicate found at line 1759 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 1759 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT_core()' found in library 'xil_defaultlib'
+Duplicate found at line 1789 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 1789 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'peaceNTT()' found in library 'xil_defaultlib'
+Duplicate found at line 2524 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+	(Active) Duplicate found at line 2524 of file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+[Thu Sep 16 20:29:31 2021] Launched synth_1...
+Run output will be captured here: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/vivado/project_orig_1024/project_orig_1024.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 16 21:45:11 2021...

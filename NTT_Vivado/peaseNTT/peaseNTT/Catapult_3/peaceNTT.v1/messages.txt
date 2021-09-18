@@ -1,0 +1,134 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 6.92 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+/INPUTFILES/3
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+/INPUTFILES/4
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/TargetPlatform x86_64
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/7
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+c++11
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+/INPUTFILES/6
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl -exclude true
+Source file analysis completed (CIN-68)
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/catapult.log"
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+/INPUTFILES/2
+solution file add ./include/config.h
+solution file add ./include/ntt.h -exclude true
+Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/1
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+/INPUTFILES/5
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v1': elapsed time 3.44 seconds, memory usage 1642456kB, peak memory usage 1642456kB (SOL-9)
+Loop '/peaceNTT/core/COMP_LOOP' iterated at most 512 times. (LOOP-2)
+Loop '/peaceNTT/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 1024 times. (LOOP-2)
+Design 'peaceNTT' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Found top design routine 'peaceNTT' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'peaceNTT' (CIN-14)
+Synthesizing routine 'peaceNTT' (CIN-13)
+go compile
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v1/CDesignChecker/design_checker.sh'
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v1' (SOL-8)
+Inlining routine 'cpyVec_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/peaceNTT' ... (CIN-4)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'cpyVec_dev' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v1': elapsed time 0.72 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v1' (SOL-8)
+go libraries
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v1': elapsed time 0.09 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+/CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.55 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.55 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 37, Vars = 29 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v1': elapsed time 0.21 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+Loop '/peaceNTT/core/COPY_LOOP#1' is merged and folded into Loop 'COMP_LOOP' (LOOP-9)
+Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v1' (SOL-8)
+go architect
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v1': elapsed time 0.29 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 106, Real ops = 37, Vars = 29 (SOL-21)
+I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v1' (SOL-8)
+# Info: Design complexity at end of 'cluster': Total ops = 106, Real ops = 37, Vars = 29 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v1': elapsed time 0.04 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 153, Real ops = 45, Vars = 35 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v1': elapsed time 0.32 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+Design 'peaceNTT' contains '45' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Error: Couldn't find library component for operation 'modulo_dev:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Error: Couldn't find library component for operation 'COMP_LOOP:f2:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Error: Couldn't find library component for operation 'modulo_dev#1:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v1' (SOL-8)
+go allocate
+Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)

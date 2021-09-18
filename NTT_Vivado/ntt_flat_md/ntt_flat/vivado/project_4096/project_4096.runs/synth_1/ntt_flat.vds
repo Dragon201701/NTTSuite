@@ -1,0 +1,703 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 16 12:07:27 2021
+# Process ID: 12250
+# Current directory: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096/project_4096.runs/synth_1
+# Command line: vivado -log ntt_flat.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ntt_flat.tcl
+# Log file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096/project_4096.runs/synth_1/ntt_flat.vds
+# Journal file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096/project_4096.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source ntt_flat.tcl -notrace
+Command: synth_design -top ntt_flat -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2021.08' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21749 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2024.832 ; gain = 153.715 ; free physical = 136037 ; free virtual = 506414
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:2010]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:634]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_12_32_4096_4096_32_1_gen' (1#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:634]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:613]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_12_32_4096_4096_32_1_gen' (2#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:613]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:592]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_12_32_4096_4096_32_1_gen' (3#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:592]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:560]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_12_32_4096_4096_32_1_gen' (4#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:560]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:528]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_12_32_4096_4096_32_1_gen' (5#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:528]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:496]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_12_32_4096_4096_32_1_gen' (6#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:496]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:464]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_12_32_4096_4096_32_1_gen' (7#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:464]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:432]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_12_32_4096_4096_32_1_gen' (8#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:432]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:400]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_12_32_4096_4096_32_1_gen' (9#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:400]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:368]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_12_32_4096_4096_32_1_gen' (10#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:368]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_12_32_4096_4096_32_1_gen' (11#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:336]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:304]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_12_32_4096_4096_32_1_gen' (12#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:304]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:272]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_12_32_4096_4096_32_1_gen' (13#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:272]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:240]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_12_32_4096_4096_32_1_gen' (14#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:240]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:208]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_12_32_4096_4096_32_1_gen' (15#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:208]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:176]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_12_32_4096_4096_32_1_gen' (16#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:176]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_core' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:778]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:21]
+	Parameter rscid bound to: 2 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1' (17#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:21]
+INFO: [Synth 8-6157] synthesizing module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:55]
+	Parameter valid bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_io_sync_v2' (18#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:55]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:69]
+	Parameter width_a bound to: 11 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_l_v5' (19#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:69]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:119]
+	Parameter width_a bound to: 13 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_r_v5' (20#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_core_wait_dp' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:754]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_core_wait_dp' (21#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:754]
+INFO: [Synth 8-6157] synthesizing module 'ntt_flat_core_core_fsm' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:656]
+	Parameter main_C_0 bound to: 3'b000 
+	Parameter for_C_0 bound to: 3'b001 
+	Parameter STAGE_LOOP_C_0 bound to: 3'b010 
+	Parameter INNER_LOOP_C_0 bound to: 3'b011 
+	Parameter INNER_LOOP_C_1 bound to: 3'b100 
+	Parameter INNER_LOOP_C_2 bound to: 3'b101 
+	Parameter STAGE_LOOP_C_1 bound to: 3'b110 
+	Parameter main_C_1 bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_core_core_fsm' (22#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:656]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat_core' (23#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:778]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_flat' (24#1) [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:2010]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[19]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[18]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[17]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[16]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[15]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[14]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[13]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[12]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[11]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[10]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[9]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[8]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[7]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[6]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[5]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[4]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[3]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[2]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[1]
+WARNING: [Synth 8-3331] design ntt_flat_core_wait_dp has unconnected port mult_t_mul_cmp_z[0]
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_12_32_4096_4096_32_1_gen has unconnected port we_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_12_32_4096_4096_32_1_gen has unconnected port readA_r_ram_ir_internal_RMASK_B_d
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[31]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[30]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[29]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[28]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[27]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[26]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[25]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[24]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[23]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[22]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[21]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[20]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[19]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[18]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[17]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[16]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[15]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[14]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[13]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[12]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[11]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[10]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[9]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[8]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[7]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[6]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[5]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[4]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[3]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[2]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[1]
+WARNING: [Synth 8-3331] design ntt_flat has unconnected port r_rsc_dat[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2080.586 ; gain = 209.469 ; free physical = 136058 ; free virtual = 506436
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2083.551 ; gain = 212.434 ; free physical = 136053 ; free virtual = 506431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2083.551 ; gain = 212.434 ; free physical = 136053 ; free virtual = 506431
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+Finished Parsing XDC File [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.sdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ntt_flat_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ntt_flat_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+Finished Parsing XDC File [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ntt_flat_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ntt_flat_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2286.020 ; gain = 0.000 ; free physical = 135940 ; free virtual = 506319
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2286.020 ; gain = 0.000 ; free physical = 135940 ; free virtual = 506319
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2286.020 ; gain = 414.902 ; free physical = 136026 ; free virtual = 506404
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2286.020 ; gain = 414.902 ; free physical = 136026 ; free virtual = 506404
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2286.020 ; gain = 414.902 ; free physical = 136026 ; free virtual = 506405
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_var_reg' in module 'ntt_flat_core_core_fsm'
+INFO: [Synth 8-5544] ROM "fsm_output" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:1714]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+*
+                 for_C_0 |                              001 |                              001
+          STAGE_LOOP_C_0 |                              010 |                              010
+          INNER_LOOP_C_0 |                              011 |                              011
+          INNER_LOOP_C_1 |                              100 |                              100
+          INNER_LOOP_C_2 |                              101 |                              101
+          STAGE_LOOP_C_1 |                              110 |                              110
+                main_C_1 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_var_reg' using encoding 'sequential' in module 'ntt_flat_core_core_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 2286.020 ; gain = 414.902 ; free physical = 136019 ; free virtual = 506398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/p_rsc_triosy_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/r_rsc_triosy_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/twiddle_rsc_triosy_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/twiddle_h_rsc_triosy_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_12_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_11_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_10_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_9_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_8_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_7_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_6_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_5_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_4_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_3_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_2_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_1_0_obj'
+INFO: [Synth 8-223] decloning instance 'ntt_flat_core_inst/vec_rsc_triosy_obj' (mgc_io_sync_v2) to 'ntt_flat_core_inst/result_rsc_triosy_0_0_obj'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   3 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 14    
+	               16 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 4     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 34    
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 11    
+	   2 Input     12 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ntt_flat 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module ntt_flat_core_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ntt_flat_core_core_fsm 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+Module ntt_flat_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   3 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 13    
+	               16 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 4     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 34    
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 11    
+	   2 Input     12 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'INNER_LOOP_k_15_0_sva_reg[15:0]' into 'INNER_LOOP_k_15_0_sva_reg[15:0]' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:1671]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:1697]
+DSP Report: Generating DSP nl_z_out_3, operation Mode is: A*B.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: Generating DSP nl_z_out_3, operation Mode is: A*B.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: Generating DSP nl_z_out_3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: operator nl_z_out_3 is absorbed into DSP nl_z_out_3.
+DSP Report: Generating DSP nl_mult_z_mul_itm, operation Mode is: A2*B''.
+DSP Report: register nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: register nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: register nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: Generating DSP mult_z_mul_itm_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register INNER_LOOP_tf_asn_itm_2_reg is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: register mult_z_mul_itm_reg is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: register mult_z_mul_itm_reg is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: Generating DSP nl_mult_z_mul_itm, operation Mode is: A''*B2.
+DSP Report: register mult_t_mul_cmp_a_reg is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: register nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: register nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP nl_mult_z_mul_itm.
+DSP Report: Generating DSP mult_z_mul_itm_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register INNER_LOOP_tf_asn_itm_2_reg is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: register mult_t_mul_cmp_a_reg is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: register mult_z_mul_itm_reg is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: operator nl_mult_z_mul_itm is absorbed into DSP mult_z_mul_itm_reg.
+DSP Report: Generating DSP nl_twiddle_rsci_radr_d_pff, operation Mode is: A2*B2.
+DSP Report: register INNER_LOOP_k_15_0_sva_reg is absorbed into DSP nl_twiddle_rsci_radr_d_pff.
+DSP Report: register operator_33_true_return_11_0_sva_reg is absorbed into DSP nl_twiddle_rsci_radr_d_pff.
+DSP Report: operator nl_twiddle_rsci_radr_d_pff is absorbed into DSP nl_twiddle_rsci_radr_d_pff.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:2188]
+DSP Report: Generating DSP vector, operation Mode is: A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: Generating DSP vector, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: Generating DSP vector, operation Mode is: A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: Generating DSP vector, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator vector is absorbed into DSP vector.
+DSP Report: operator vector is absorbed into DSP vector.
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[19]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[18]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[17]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[16]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[15]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[14]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[13]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[12]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[11]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[10]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[9]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[8]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[7]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[6]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[5]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[4]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[3]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[2]
+WARNING: [Synth 8-3331] design ntt_flat_core has unconnected port mult_t_mul_cmp_z[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[47]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[46]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[45]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[44]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[43]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[42]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[41]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[40]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[39]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[38]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[37]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[36]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[35]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[34]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[33]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[32]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[31]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[30]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[29]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[28]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[27]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[26]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[25]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[24]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[23]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[22]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[21]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[20]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[19]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[18]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[17]) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[47]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[46]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[45]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[44]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[43]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[42]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[41]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[40]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[39]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[38]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[37]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[36]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[35]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[34]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[33]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[32]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[31]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[30]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[29]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[28]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[27]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[26]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[25]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[24]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[23]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[22]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[21]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[20]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[19]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[18]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[17]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[16]__0) is unused and will be removed from module ntt_flat.
+WARNING: [Synth 8-3332] Sequential element (ntt_flat_core_inst/mult_z_mul_itm_reg[15]__0) is unused and will be removed from module ntt_flat.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 2286.020 ; gain = 414.902 ; free physical = 135989 ; free virtual = 506372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ntt_flat_core | A*B              | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ntt_flat_core | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ntt_flat_core | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ntt_flat_core | A2*B''           | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|ntt_flat_core | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|ntt_flat_core | A''*B2           | 18     | 16     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|ntt_flat_core | (PCIN>>17)+A2*B2 | 16     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|ntt_flat_core | A2*B2            | 12     | 12     | -      | -      | 24     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|ntt_flat      | A*B              | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ntt_flat      | (PCIN>>17)+A*B   | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ntt_flat      | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ntt_flat      | (PCIN>>17)+A*B   | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 2286.020 ; gain = 414.902 ; free physical = 135821 ; free virtual = 506210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 2314.562 ; gain = 443.445 ; free physical = 135777 ; free virtual = 506166
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 2314.562 ; gain = 443.445 ; free physical = 135553 ; free virtual = 505942
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135378 ; free virtual = 505768
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135367 ; free virtual = 505756
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135511 ; free virtual = 505901
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135510 ; free virtual = 505900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135513 ; free virtual = 505902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135511 ; free virtual = 505900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    73|
+|3     |DSP48E1   |     3|
+|4     |DSP48E1_1 |     4|
+|5     |DSP48E1_3 |     1|
+|6     |DSP48E1_4 |     1|
+|7     |DSP48E1_5 |     1|
+|8     |DSP48E1_6 |     1|
+|9     |LUT1      |     9|
+|10    |LUT2      |   166|
+|11    |LUT3      |   205|
+|12    |LUT4      |   105|
+|13    |LUT5      |   198|
+|14    |LUT6      |   406|
+|15    |FDRE      |   468|
+|16    |FDSE      |     1|
+|17    |IBUF      |   546|
+|18    |OBUF      |   795|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------------------+-----------------------+------+
+|      |Instance                        |Module                 |Cells |
++------+--------------------------------+-----------------------+------+
+|1     |top                             |                       |  2984|
+|2     |  ntt_flat_core_inst            |ntt_flat_core          |  1638|
+|3     |    ntt_flat_core_core_fsm_inst |ntt_flat_core_core_fsm |   781|
+|4     |    ntt_flat_core_wait_dp_inst  |ntt_flat_core_wait_dp  |    76|
++------+--------------------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2318.535 ; gain = 447.418 ; free physical = 135511 ; free virtual = 505900
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 116 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2318.535 ; gain = 244.949 ; free physical = 135371 ; free virtual = 505760
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2318.539 ; gain = 447.418 ; free physical = 135379 ; free virtual = 505769
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2369.395 ; gain = 0.000 ; free physical = 135759 ; free virtual = 506148
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+88 Infos, 164 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 2369.395 ; gain = 884.270 ; free physical = 135909 ; free virtual = 506299
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2369.395 ; gain = 0.000 ; free physical = 135909 ; free virtual = 506299
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096/project_4096.runs/synth_1/ntt_flat.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ntt_flat_utilization_synth.rpt -pb ntt_flat_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 16 12:09:05 2021...

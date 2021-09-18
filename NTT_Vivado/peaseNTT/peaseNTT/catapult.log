@@ -1,0 +1,943 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux ls5382@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Thu Sep 16 20:05:08 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log2110402bbcde.0"
+solution file add ./include/ntt.h -exclude true
+# /INPUTFILES/1
+solution file add ./include/utils.h -exclude true
+# /INPUTFILES/2
+solution file add ./include/config.h
+# /INPUTFILES/3
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp
+# /INPUTFILES/4
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+# /INPUTFILES/5
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+# /INPUTFILES/6
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl -exclude true
+# /INPUTFILES/7
+option set Input/TargetPlatform x86_64
+option set Input/CppStandard c++11
+# c++11
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/catapult.log"
+# Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/config.h(18): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/ntt.h(11): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(10): incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning: $PROJECT_HOME/include/config.h(10):           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+# Warning: $PROJECT_HOME/include/config.h(21): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(21):           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(64): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 6.92 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+go compile
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Found top design routine 'peaceNTT' specified by directive (CIN-52)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Synthesizing routine 'peaceNTT' (CIN-13)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Inlining routine 'peaceNTT' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(57): Inlining routine 'cpyVec_dev' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(15): Inlining routine 'modulo_dev' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<64, true>' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(15): Inlining routine 'modulo_dev' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<64, true>' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(57): Inlining routine 'cpyVec_dev' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Optimizing block '/peaceNTT' ... (CIN-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): INOUT port 'vec' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): INOUT port 'twiddle' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' iterated at most 512 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 1024 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Design 'peaceNTT' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v1': elapsed time 3.44 seconds, memory usage 1642456kB, peak memory usage 1642456kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+solution library add Xilinx_RAMS
+go libraries
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v1': elapsed time 0.72 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.55 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.55 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go assembly
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v1': elapsed time 0.09 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+go architect
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v1' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Loop '/peaceNTT/core/COPY_LOOP#1' is merged and folded into Loop 'COMP_LOOP' (LOOP-9)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v1': elapsed time 0.21 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 37, Vars = 29 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v1' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(71): Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v1': elapsed time 0.29 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 106, Real ops = 37, Vars = 29 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v1' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v1': elapsed time 0.04 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 106, Real ops = 37, Vars = 29 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v1' (SOL-8)
+# Design 'peaceNTT' contains '45' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v1': elapsed time 0.32 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 153, Real ops = 45, Vars = 35 (SOL-21)
+go allocate
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Error: Couldn't find library component for operation 'COMP_LOOP:f2:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#1:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v1': elapsed time 0.15 seconds, memory usage 1642396kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 153, Real ops = 45, Vars = 35 (SOL-21)
+# Error: Design 'peaceNTT' could not schedule partition '/peaceNTT/core' - incomplete component selection
+go assembly
+directive set /peaceNTT/core/COPY_LOOP -MERGEABLE false
+# Info: Branching solution 'peaceNTT.v2' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v2/CDesignChecker/design_checker.sh'
+# /peaceNTT/core/COPY_LOOP/MERGEABLE false
+directive set /peaceNTT/core/COMP_LOOP -MERGEABLE false
+# /peaceNTT/core/COMP_LOOP/MERGEABLE false
+directive set /peaceNTT/core/COPY_LOOP#1 -MERGEABLE false
+# /peaceNTT/core/COPY_LOOP#1/MERGEABLE false
+go architect
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v2' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v2': elapsed time 0.03 seconds, memory usage 1642396kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 102, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v2' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(71): Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v2': elapsed time 0.28 seconds, memory usage 1642396kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v2' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v2': elapsed time 0.03 seconds, memory usage 1642396kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v2' (SOL-8)
+# Design 'peaceNTT' contains '39' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v2': elapsed time 0.16 seconds, memory usage 1642396kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+go allocate
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Error: Couldn't find library component for operation 'COMP_LOOP:f2:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#1:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v2': elapsed time 0.19 seconds, memory usage 1642396kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Error: Design 'peaceNTT' could not schedule partition '/peaceNTT/core' - incomplete component selection
+go new
+solution file remove {$PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl}
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl -exclude true
+# /INPUTFILES/8
+go libraries
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/config.h(18): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/ntt.h(11): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(10): incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning: $PROJECT_HOME/include/config.h(10):           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+# Warning: $PROJECT_HOME/include/config.h(21): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(21):           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(64): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.15 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v3' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Found top design routine 'peaceNTT' specified by directive (CIN-52)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Synthesizing routine 'peaceNTT' (CIN-13)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Inlining routine 'peaceNTT' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(57): Inlining routine 'cpyVec_dev' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(15): Inlining routine 'modulo_dev' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<64, true>' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(15): Inlining routine 'modulo_dev' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<64, true>' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(57): Inlining routine 'cpyVec_dev' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Optimizing block '/peaceNTT' ... (CIN-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): INOUT port 'vec' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): INOUT port 'twiddle' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' iterated at most 512 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 1024 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Design 'peaceNTT' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v3/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v3': elapsed time 3.27 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v3' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v3': elapsed time 0.29 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+go assembly
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v3' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v3': elapsed time 0.09 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+go architect
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v3' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v3': elapsed time 0.05 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 102, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v3' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(71): Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v3': elapsed time 0.28 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v3' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v3': elapsed time 0.04 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v3' (SOL-8)
+# Design 'peaceNTT' contains '39' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v3': elapsed time 0.18 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+go allocate
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Warning: Couldn't find library component for operator 'rem(128,0,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Error: Couldn't find library component for operation 'COMP_LOOP:f2:rem' ( rem(128,0,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#1:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v3': elapsed time 0.28 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Error: Design 'peaceNTT' could not schedule partition '/peaceNTT/core' - incomplete component selection
+go memories
+directive set SCHED_USE_MULTICYCLE true
+# Info: Branching solution 'peaceNTT.v4' at state 'memories' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v4/CDesignChecker/design_checker.sh'
+# /SCHED_USE_MULTICYCLE true
+go allocate
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v4' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v4': elapsed time 0.05 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v4' (SOL-8)
+# Design 'peaceNTT' contains '39' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v4': elapsed time 0.16 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v4' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP#1' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Prescheduled LOOP '/peaceNTT/core/COMP_LOOP' (137 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Prescheduled LOOP '/peaceNTT/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled SEQUENTIAL '/peaceNTT/core' (total length 735254 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Initial schedule of SEQUENTIAL '/peaceNTT/core': Latency = 740369, Area (Datapath, Register, Total) = 43105.64, 0.00, 43105.64 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Final schedule of SEQUENTIAL '/peaceNTT/core': Latency = 970769, Area (Datapath, Register, Total) = 34746.39, 0.00, 34746.39 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'peaceNTT.v4': elapsed time 0.32 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+go extract
+# Info: Starting transformation 'schedule' on solution 'peaceNTT.v4' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Global signal 'vec:rsc.q' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.radr' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.dat' added to design 'peaceNTT' for component 'p:rsci' (LIB-3)
+# Global signal 'g:rsc.dat' added to design 'peaceNTT' for component 'g:rsci' (LIB-3)
+# Global signal 'result:rsc.q' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.radr' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.we' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.d' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.wadr' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.q' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.radr' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'xt:rsc.clken' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.q' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.radr' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.we' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.d' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.wadr' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'peaceNTT' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'peaceNTT' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'g:rsc.triosy.lz' added to design 'peaceNTT' for component 'g:rsc.triosy:obj' (LIB-3)
+# Global signal 'result:rsc.triosy.lz' added to design 'peaceNTT' for component 'result:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Input port 'g:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'peaceNTT.v4': elapsed time 5.30 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 6652, Real ops = 40, Vars = 130 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'peaceNTT.v4' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'modulo_dev#1:result.sva' for variables 'modulo_dev#1:result.sva, modulo_dev:result.sva, COMP_LOOP:f1.sva, COMP_LOOP:acc#3.psp' (3 registers deleted). (FSM-3)
+# Creating shared register 'COPY_LOOP#1:i(10:0).sva(9:0)' for variables 'COPY_LOOP#1:i(10:0).sva(9:0), COPY_LOOP:i(10:0).sva(9:0), COMP_LOOP:r(9:0).sva#1' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'peaceNTT.v4': elapsed time 2.96 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 880, Real ops = 276, Vars = 160 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'peaceNTT.v4' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'peaceNTT.v4': elapsed time 1.00 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 900, Real ops = 256, Vars = 620 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'peaceNTT.v4' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v4/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v4/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v4/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v4/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'peaceNTT.v4': elapsed time 7.11 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 869, Real ops = 251, Vars = 156 (SOL-21)
+go libraries
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# CU_DESIGN sid5 ADD {} {VERSION v5 SID sid5 BRANCH_SID sid4 BRANCH_STATE libraries INCREMENTAL 0 STATE libraries TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} PROPERTIES {} OPT_INFOS {} name peaceNTT}: Race condition
+# Info: Branching solution 'peaceNTT.v5' at state 'libraries' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/CDesignChecker/design_checker.sh'
+# /CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go extract
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v5' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v5': elapsed time 0.09 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v5' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v5': elapsed time 0.03 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 102, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v5' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(71): Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v5': elapsed time 0.28 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v5' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v5': elapsed time 0.03 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v5' (SOL-8)
+# Design 'peaceNTT' contains '39' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v5': elapsed time 0.17 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v5' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP#1' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Prescheduled LOOP '/peaceNTT/core/COMP_LOOP' (139 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Prescheduled LOOP '/peaceNTT/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled SEQUENTIAL '/peaceNTT/core' (total length 745494 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Initial schedule of SEQUENTIAL '/peaceNTT/core': Latency = 750609, Area (Datapath, Register, Total) = 43105.64, 0.00, 43105.64 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Final schedule of SEQUENTIAL '/peaceNTT/core': Latency = 986129, Area (Datapath, Register, Total) = 34746.39, 0.00, 34746.39 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'peaceNTT.v5': elapsed time 0.30 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'peaceNTT.v5' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Global signal 'vec:rsc.q' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.radr' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.dat' added to design 'peaceNTT' for component 'p:rsci' (LIB-3)
+# Global signal 'g:rsc.dat' added to design 'peaceNTT' for component 'g:rsci' (LIB-3)
+# Global signal 'result:rsc.q' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.radr' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.we' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.d' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.wadr' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.q' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.radr' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'xt:rsc.clken' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.q' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.radr' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.we' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.d' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.wadr' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'peaceNTT' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'peaceNTT' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'g:rsc.triosy.lz' added to design 'peaceNTT' for component 'g:rsc.triosy:obj' (LIB-3)
+# Global signal 'result:rsc.triosy.lz' added to design 'peaceNTT' for component 'result:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Input port 'g:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'peaceNTT.v5': elapsed time 5.64 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 6756, Real ops = 39, Vars = 137 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'peaceNTT.v5' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'COPY_LOOP#1:i(10:0).sva(9:0)' for variables 'COPY_LOOP#1:i(10:0).sva(9:0), COPY_LOOP:i(10:0).sva(9:0), COMP_LOOP:r(9:0).sva#1' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'peaceNTT.v5': elapsed time 2.51 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 914, Real ops = 289, Vars = 174 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'peaceNTT.v5' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'peaceNTT.v5': elapsed time 1.01 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 914, Real ops = 263, Vars = 631 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'peaceNTT.v5' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v5/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'peaceNTT.v5': elapsed time 7.32 seconds, memory usage 1707992kB, peak memory usage 1707992kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 902, Real ops = 265, Vars = 166 (SOL-21)
+# File '$PROJECT_HOME/include/ntt.h' saved
+go new
+solution file remove {$PROJECT_HOME/include/ntt.h}
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+solution file remove {$PROJECT_HOME/include/utils.h}
+solution file remove {$PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp}
+solution file remove {$PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp}
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/include/ntt.h -exclude true
+# /INPUTFILES/8
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/include/main.h -exclude true
+# /INPUTFILES/9
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/include/utils.h
+# /INPUTFILES/10
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+# /INPUTFILES/11
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+# /INPUTFILES/12
+go libraries
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/include/utils.h /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/config.h(18): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/config.h(18):           detected during compilation of secondary translation unit "/home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/ntt.h(11): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/include/ntt.h(11):           detected during compilation of secondary translation unit "/home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(10): incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning: $PROJECT_HOME/include/config.h(10):           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+# Warning: $PROJECT_HOME/include/config.h(21): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(21):           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(64): Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.52 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'peaceNTT.v6' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Found top design routine 'peaceNTT' specified by directive (CIN-52)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Synthesizing routine 'peaceNTT' (CIN-13)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Inlining routine 'peaceNTT' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(57): Inlining routine 'cpyVec_dev' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(15): Inlining routine 'modulo_dev' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<64, true>' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(15): Inlining routine 'modulo_dev' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<64, true>' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(57): Inlining routine 'cpyVec_dev' (CIN-14)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Optimizing block '/peaceNTT' ... (CIN-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): INOUT port 'vec' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): INOUT port 'twiddle' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' iterated at most 1024 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' iterated at most 512 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' iterated at most 1024 times. (LOOP-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Design 'peaceNTT' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v6/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'peaceNTT.v6': elapsed time 3.35 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+# Info: Starting transformation 'libraries' on solution 'peaceNTT.v6' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'peaceNTT.v6': elapsed time 0.29 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+go extract
+# Info: Starting transformation 'assembly' on solution 'peaceNTT.v6' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'peaceNTT.v6': elapsed time 0.09 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 36, Vars = 23 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v6' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v6': elapsed time 0.03 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 102, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v6' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(71): Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v6': elapsed time 0.28 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v6' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v6': elapsed time 0.03 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v6' (SOL-8)
+# Design 'peaceNTT' contains '39' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v6': elapsed time 0.16 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v6' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP#1' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Prescheduled LOOP '/peaceNTT/core/COMP_LOOP' (139 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Prescheduled LOOP '/peaceNTT/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled SEQUENTIAL '/peaceNTT/core' (total length 745494 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Initial schedule of SEQUENTIAL '/peaceNTT/core': Latency = 750609, Area (Datapath, Register, Total) = 43105.64, 0.00, 43105.64 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Final schedule of SEQUENTIAL '/peaceNTT/core': Latency = 986129, Area (Datapath, Register, Total) = 34746.39, 0.00, 34746.39 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'peaceNTT.v6': elapsed time 0.30 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'peaceNTT.v6' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Global signal 'vec:rsc.q' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.radr' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.dat' added to design 'peaceNTT' for component 'p:rsci' (LIB-3)
+# Global signal 'g:rsc.dat' added to design 'peaceNTT' for component 'g:rsci' (LIB-3)
+# Global signal 'result:rsc.q' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.radr' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.we' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.d' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.wadr' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.q' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.radr' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'xt:rsc.clken' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.q' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.radr' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.we' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.d' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.wadr' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'peaceNTT' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'peaceNTT' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'g:rsc.triosy.lz' added to design 'peaceNTT' for component 'g:rsc.triosy:obj' (LIB-3)
+# Global signal 'result:rsc.triosy.lz' added to design 'peaceNTT' for component 'result:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Input port 'g:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'peaceNTT.v6': elapsed time 5.78 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 6756, Real ops = 39, Vars = 137 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'peaceNTT.v6' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'COPY_LOOP#1:i(10:0).sva(9:0)' for variables 'COPY_LOOP#1:i(10:0).sva(9:0), COPY_LOOP:i(10:0).sva(9:0), COMP_LOOP:r(9:0).sva#1' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'peaceNTT.v6': elapsed time 2.61 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 914, Real ops = 289, Vars = 174 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'peaceNTT.v6' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'peaceNTT.v6': elapsed time 1.07 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 914, Real ops = 263, Vars = 631 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'peaceNTT.v6' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v6/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v6/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v6/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_1R1W_RBW.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v6/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'peaceNTT.v6': elapsed time 7.28 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 902, Real ops = 265, Vars = 166 (SOL-21)
+go assembly
+directive set /peaceNTT/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# CU_DIRECTIVE sid7 SET /peaceNTT/core/COMP_LOOP {MERGEABLE false}: Race condition
+# CU_DIRECTIVE sid7 SET /peaceNTT/core/COPY_LOOP {MERGEABLE false}: Race condition
+# CU_DESIGN sid7 ADD {} {VERSION v7 SID sid7 BRANCH_SID sid6 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/ SYNTHESIS_FLOWPKG Vivado UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/-2/PARAMETERS/xc7vx690tffg1761-2/PARAMETERS/mgc_Xilinx-VIRTEX-7-2_beh/168 /CONFIG/PARAMETERS/Vivado/PARAMETERS/Xilinx/PARAMETERS/VIRTEX-7/PARAMETERS/Xilinx_RAMS/209} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} FLOWPKGS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name peaceNTT}: Race condition
+# Info: Branching solution 'peaceNTT.v7' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v7/CDesignChecker/design_checker.sh'
+# /peaceNTT/vec:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /peaceNTT/result:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /peaceNTT/result:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /peaceNTT/core/xt:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /peaceNTT/core/xt:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+go extract
+# Info: Starting transformation 'loops' on solution 'peaceNTT.v7' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Loop '/peaceNTT/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Loop '/peaceNTT/core/COPY_LOOP#1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Loop '/peaceNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Loop '/peaceNTT/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'peaceNTT.v7': elapsed time 0.05 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 102, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'peaceNTT.v7' (SOL-8)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(71): Memory Resource '/peaceNTT/core/xt:rsc' (from var: xt) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): I/O-Port Resource '/peaceNTT/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/result:rsc' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 1024 x 64). (MEM-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Memory Resource '/peaceNTT/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'peaceNTT.v7': elapsed time 0.30 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'peaceNTT.v7' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'peaceNTT.v7': elapsed time 0.03 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 104, Real ops = 36, Vars = 28 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'peaceNTT.v7' (SOL-8)
+# Design 'peaceNTT' contains '39' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'peaceNTT.v7': elapsed time 0.16 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'peaceNTT.v7' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP#1' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(81): Prescheduled LOOP '/peaceNTT/core/COMP_LOOP' (139 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(75): Prescheduled LOOP '/peaceNTT/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(58): Prescheduled LOOP '/peaceNTT/core/COPY_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled LOOP '/peaceNTT/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Prescheduled SEQUENTIAL '/peaceNTT/core' (total length 745494 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Initial schedule of SEQUENTIAL '/peaceNTT/core': Latency = 745489, Area (Datapath, Register, Total) = 43105.64, 0.00, 43105.64 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Final schedule of SEQUENTIAL '/peaceNTT/core': Latency = 986129, Area (Datapath, Register, Total) = 34746.39, 0.00, 34746.39 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'peaceNTT.v7': elapsed time 0.30 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 137, Real ops = 39, Vars = 34 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'peaceNTT.v7' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/peaceNTT/core' (CRAAS-1)
+# Global signal 'vec:rsc.qb' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.web' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.db' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.adrb' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.qa' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.wea' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.da' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.adra' added to design 'peaceNTT' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.dat' added to design 'peaceNTT' for component 'p:rsci' (LIB-3)
+# Global signal 'g:rsc.dat' added to design 'peaceNTT' for component 'g:rsci' (LIB-3)
+# Global signal 'result:rsc.qb' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.web' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.db' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.adrb' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.qa' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.wea' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.da' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.adra' added to design 'peaceNTT' for component 'result:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.q' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.radr' added to design 'peaceNTT' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'xt:rsc.clkb_en' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.clka_en' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.qb' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.web' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.db' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.adrb' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.qa' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.wea' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.da' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'xt:rsc.adra' added to design 'peaceNTT' for component 'xt:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'peaceNTT' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'peaceNTT' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'g:rsc.triosy.lz' added to design 'peaceNTT' for component 'g:rsc.triosy:obj' (LIB-3)
+# Global signal 'result:rsc.triosy.lz' added to design 'peaceNTT' for component 'result:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'peaceNTT' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp(65): Input port 'g:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'peaceNTT.v7': elapsed time 5.61 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 6416, Real ops = 39, Vars = 146 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'peaceNTT.v7' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'COPY_LOOP#1:i(10:0).sva(9:0)' for variables 'COPY_LOOP#1:i(10:0).sva(9:0), COPY_LOOP:i(10:0).sva(9:0), COMP_LOOP:r(9:0).sva#1' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'peaceNTT.v7': elapsed time 2.45 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 1014, Real ops = 293, Vars = 185 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'peaceNTT.v7' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'peaceNTT.v7': elapsed time 1.05 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 995, Real ops = 264, Vars = 675 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'peaceNTT.v7' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_DPRAM_RBW_DUAL.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v7/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_DPRAM_RBW_DUAL.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v7/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_DPRAM_RBW_DUAL.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v7/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_xilinx/hdl/BLOCK_DPRAM_RBW_DUAL.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3/peaceNTT.v7/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Warning: Could not determine clock name for resource /peaceNTT/core/xt:rsc. Defaulting to 'clk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'peaceNTT.v7': elapsed time 7.71 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 983, Real ops = 266, Vars = 179 (SOL-21)
+quit
+# Saving project file '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_3.ccs'. (PRJ-5)
+// Finish time Thu Sep 16 21:44:52 2021, time elapsed 1:39:44, peak memory 1.82GB, exit status 0

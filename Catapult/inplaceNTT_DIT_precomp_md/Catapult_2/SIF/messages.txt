@@ -1,0 +1,40 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.48 seconds, memory usage 1380324kB, peak memory usage 1380324kB (SOL-9)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+go architect
+solution file add ${sfd}/src/main.cpp -exclude true
+go assembly
+
+solution file add ${sfd}/src/utils.cpp -exclude true
+solution file add ${sfd}/src/ntt.cpp
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+.
+
+set sfd [file dirname [info script]]
+directive set SCHED_USE_MULTICYCLE true
+option set Input/CppStandard c++98
+go memories
+option set Input/TargetPlatform x86_64
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/catapult.log"
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+
+go libraries
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+
+go analyze
+directive set DSP_EXTRACTION yes
+go compile

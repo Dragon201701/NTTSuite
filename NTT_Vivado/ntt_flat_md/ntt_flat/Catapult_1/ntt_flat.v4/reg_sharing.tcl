@@ -1,0 +1,10 @@
+directive set /ntt_flat/ntt_flat:core/core/mult:z:mul.itm.1 REGISTER_NAME mult:z:mul.itm.1
+directive set /ntt_flat/ntt_flat:core/core/tmp.lpi#3.dfm REGISTER_NAME mult:z:mul.itm.1
+directive set /ntt_flat/ntt_flat:core/core/INNER_LOOP.stage_0 REGISTER_NAME INNER_LOOP.stage_0
+directive set /ntt_flat/ntt_flat:core/core/for.stage_0 REGISTER_NAME INNER_LOOP.stage_0
+directive set /ntt_flat/ntt_flat:core/core/butterFly:idx2(15:0).sva.3(11:0) REGISTER_NAME butterFly:idx2(15:0).sva.3(11:0)
+directive set /ntt_flat/ntt_flat:core/core/for:i:slc(for:i(12:0))(11-0)#1.itm.1 REGISTER_NAME butterFly:idx2(15:0).sva.3(11:0)
+directive set /ntt_flat/ntt_flat:core/core/INNER_LOOP.stage_0.1 REGISTER_NAME INNER_LOOP.stage_0.1
+directive set /ntt_flat/ntt_flat:core/core/for.stage_0.2 REGISTER_NAME INNER_LOOP.stage_0.1
+directive set /ntt_flat/ntt_flat:core/core/butterFly:idx2(15:0).sva.2(11:0) REGISTER_NAME butterFly:idx2(15:0).sva.2(11:0)
+directive set /ntt_flat/ntt_flat:core/core/for:i(12:0).sva(11:0) REGISTER_NAME butterFly:idx2(15:0).sva.2(11:0)

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7vx690tffg1761-2" LaunchTime="1631810518">
+  <File Type="VDS-TIMING-PB" Name="ntt_flat_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ntt_flat_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="ntt_flat.dcp"/>
+  <File Type="REPORTS-TCL" Name="ntt_flat_reports.tcl"/>
+  <File Type="PA-TCL" Name="ntt_flat.tcl"/>
+  <File Type="RDS-RDS" Name="ntt_flat.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="ntt_flat_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="ntt_flat_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ntt_flat_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Catapult_1/ntt_flat.v12/concat_sim_rtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Catapult_1/ntt_flat.v12/concat_rtl.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ntt_flat"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../Catapult_1/ntt_flat.v12/vivado_concat_v/concat_rtl.v.xv.sdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Catapult_1/ntt_flat.v12/vivado_concat_v/concat_rtl.v.xv.signoff.sdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

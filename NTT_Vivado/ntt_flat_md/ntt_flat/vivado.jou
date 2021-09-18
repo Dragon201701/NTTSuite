@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 16 11:55:00 2021
+# Process ID: 19784
+# Current directory: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat
+# Command line: vivado
+# Log file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado.log
+# Journal file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_16384 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_16384 -part xc7vx690tffg1761-2
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_project
+create_project project_4096 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096 -part xc7vx690tffg1761-2
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_project
+create_project project_4096_2 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096_2 -part xc7vx690tffg1761-2
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_project
+create_project project_1024 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_1024 -part xc7vx690tffg1761-2
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_project
+create_project project_16384_2 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_16384_2 -part xc7vx690tffg1761-2
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1

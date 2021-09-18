@@ -1,0 +1,82 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.52 seconds, memory usage 1839064kB, peak memory usage 1904600kB (SOL-9)
+/INPUTFILES/8
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/include/ntt.h -exclude true
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/include/main.h -exclude true
+solution file remove {$PROJECT_HOME/include/utils.h}
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+solution file remove {$PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp}
+solution file remove {$PROJECT_HOME/../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp}
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+/INPUTFILES/11
+go libraries
+/INPUTFILES/12
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/include/utils.h
+/INPUTFILES/9
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+/INPUTFILES/10
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/include/utils.h /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.15 seconds, memory usage 1642456kB, peak memory usage 1642968kB (SOL-9)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl -exclude true
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+go libraries
+/INPUTFILES/8
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 6.92 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-47)
+/INPUTFILES/3
+Pragma 'hls_design<top>' detected on routine 'peaceNTT' (CIN-6)
+/INPUTFILES/4
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/TargetPlatform x86_64
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/7
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+c++11
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+/INPUTFILES/6
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl -exclude true
+Source file analysis completed (CIN-68)
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/catapult.log"
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+/INPUTFILES/2
+solution file add ./include/config.h
+solution file add ./include/ntt.h -exclude true
+Front End called with arguments: -- /home/ls5382/project/NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h (CIN-69)
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/1
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/utils.cpp -exclude true
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/main.cpp -exclude true
+/INPUTFILES/5
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT/src/ntt.cpp

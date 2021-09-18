@@ -1,0 +1,203 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v6': elapsed time 6.95 seconds, memory usage 1641848kB, peak memory usage 1641848kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/utils.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v6' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/utils.cpp" (CRD-1)
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/src/utils.cpp' saved
+# Info: Starting transformation 'analyze' on solution 'solution.v6' (SOL-8)
+/INPUTFILES/7
+# Info: Branching solution 'solution.v6' at state 'new' (PRJ-2)
+/INPUTFILES/2
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/src/utils.cpp
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/utils.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/utils.cpp" (CRD-20)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v6': elapsed time 5.94 seconds, memory usage 1641848kB, peak memory usage 1641848kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: identifier "PARAM_WIDTH" is undefined (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/utils.cpp" (CRD-1)
+go compile
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/src/utils.cpp' saved
+go compile
+# Info: Completed transformation 'analyze' on solution 'solution.v6': elapsed time 3.19 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+go compile
+# Info: Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v6' (SOL-8)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v5': elapsed time 3.14 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+go compile
+# Info: Branching solution 'solution.v5' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v5' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp (CIN-69)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-979)
+# Info: Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Input file has changed
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/src/ntt.cpp' saved
+solution file set {$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/src/ntt.cpp} -updated
+# Error: Compilation aborted (CIN-5)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v4': elapsed time 2.87 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+# Error: ambiguous "?" operation: second operand of type "DATA_TYPE" can be converted to third operand type "DATA_TYPE_SIGNED", and vice versa (CRD-979)
+go compile
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'solution.v4' at state 'new' (PRJ-2)
+# Error: ambiguous "?" operation: second operand of type "DATA_TYPE" can be converted to third operand type "DATA_TYPE_SIGNED", and vice versa (CRD-979)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Error: no operator "[]" matches these operands (CRD-349)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-979)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file set {$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/src/ntt.cpp} -updated
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Input file has changed
+go compile
+# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp (CIN-69)
+# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 2.92 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-349)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/src/ntt.cpp' saved
+# Error:             operand types are: DATA_TYPE * [ ac_int<65, false> ] (CRD-349)
+# Error: go analyze: Failed analyze
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+solution.v2
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+go analyze
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: ac_int is not a template (CRD-864)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-864)
+# Error: ac_int is not a template (CRD-864)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-864)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-864)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-864)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file set {$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/include/config.h} -updated
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp (CIN-69)
+Input file has changed
+# Error: ac_int is not a template (CRD-864)
+# Error: ac_int is not a template (CRD-864)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 0.22 seconds, memory usage 1379704kB, peak memory usage 1380248kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/include/config.h' saved
+# Error: go analyze: Failed analyze
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/include/config.h' saved
+File '$PROJECT_HOME/../../../pythonSelfUseCtype/stockham/stockham/include/config.h' saved
+solution new -state new -solution solution.v1 solution
+Input file has changed
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.24 seconds, memory usage 1379692kB, peak memory usage 1380248kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+solution file add ../../../../NTT_Xilinx/Catapult/stockham_DIT/directives.tcl -exclude true
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/src/utils.cpp -exclude true
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/src/main.cpp -exclude true
+/INPUTFILES/3
+option set Input/TargetPlatform x86_64
+/INPUTFILES/4
+/INPUTFILES/7
+c++11
+/INPUTFILES/2
+option set Input/CppStandard c++11
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/src/ntt.cpp
+/INPUTFILES/6
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/include/utils.h -exclude true
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/include/config.h
+solution file add ../../../pythonSelfUseCtype/stockham/stockham/include/ntt.h -exclude true
+/INPUTFILES/5
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/stockham/stockham/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go compile"
+
+Inlining routine 'operator<<<32, false>' (CIN-14)
+Inlining routine 'operator&<34, true>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Inlining routine 'operator<<<32, false>' (CIN-14)
+# Error: Unable to reduce array size for variable 'twiddle', currently 1024 words (CIN-84)
+# Error: Unable to reduce array size for variable 'xt', currently 1024 words (CIN-84)
+# Error: Compilation aborted (CIN-5)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+# Error: Unable to reduce array size for variable 'twiddle_h', currently 1024 words (CIN-84)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Loop '/stockham_dit/core/for:for' iterated at most 512 times. (LOOP-2)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'stockham_dit.v2' (SOL-8)
+Inlining routine 'operator>><32, false>' (CIN-14)
+Inlining routine 'operator<<<32, false>' (CIN-14)
+Optimizing block '/stockham_dit' ... (CIN-4)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator>><32, false>' (CIN-14)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator&<34, true>' (CIN-14)
+Synthesizing routine 'stockham_dit' (CIN-13)
+Found top design routine 'stockham_dit' specified by directive (CIN-52)
+Inlining routine 'operator<=<32, false>' (CIN-14)
+Inlining routine 'stockham_dit' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)

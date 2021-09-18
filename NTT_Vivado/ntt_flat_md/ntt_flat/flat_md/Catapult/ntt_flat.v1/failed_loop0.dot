@@ -1,0 +1,20 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n35[label="n35 : DOPER\n 158cy+2.925\n",shape=ellipse,style=filled,color=bisque];
+  n38[label="n38 : DOPER\n 158cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n31[label="n31 : ZOPER\n 158cy+2.925\n",shape=ellipse];
+  n30[label="n30 : DOPER\n 158cy+1.455\n",shape=ellipse,style=filled,color=bisque];
+  n29[label="n29 : ZOPER\n 158cy+1.455\n",shape=ellipse];
+  n27[label="n27 : DOPER\n 158cy\n",shape=ellipse,style=filled,color=bisque];
+  n25[label="n25 : DOPER\n 156cy+4\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n35 : 0x7ff3089c73d0 modulo_add:mux\ln38 : 0x7ff2d55b07f0 butterFly:write_mem(vec:rsc.@)\ln31 : 0x7ff2cac29360 modulo_add:slc()(32)\ln30 : 0x7ff2caf238b0 modulo_add:acc#1\ln29 : 0x7ff2cac2a410 butterFly:not\ln27 : 0x7ff2cac23130 butterFly:acc\ln25 : 0x7ff2d55aff10 butterFly:f1:read_mem(vec:rsc.@)\l",shape=none];
+  n35 -> n38[label="258 : 0",color=blue];
+  n31 -> n35[label="258 : 0",color=blue];
+  n30 -> n31[label="259 : 0",color=green2];
+  n29 -> n30[label="259 : 0",color=green2];
+  n27 -> n29[label="258 : 0",color=blue];
+  n25 -> n27[label="258 : 0",color=blue];
+  n38 -> n25[label="262 : 0",color=red, style=bold];
+}
+

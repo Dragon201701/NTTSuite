@@ -1,0 +1,168 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 3.06 seconds, memory usage 1445240kB, peak memory usage 1510776kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-47)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 3.02 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-47)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Error: Compilation aborted (CIN-5)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: go analyze: Failed analyze
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-47)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-349)
+# Error:             operand types are: DATA_TYPE * [ ac_int<65, false> ] (CRD-349)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Error: no operator "[]" matches these operands (CRD-349)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+Input file has changed
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 2.71 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+solution file set {$PROJECT_HOME/include/config.h} -updated
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: go analyze: Failed analyze
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.70 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-47)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+go compile
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+Input file has changed
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+File '$PROJECT_HOME/include/config.h' saved
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'stockham_dit.v2' (SOL-8)
+# Info: Completed transformation 'new' on solution 'stockham_dit.v2': elapsed time 2.64 seconds, memory usage 1445240kB, peak memory usage 1445240kB (SOL-9)
+go compile
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Error: too few arguments for class template "ac_fixed" (CRD-442)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+File '$PROJECT_HOME/include/config.h' saved
+# Error: too few arguments for class template "ac_fixed" (CRD-442)
+# Error: go analyze: Failed analyze
+# Error: too few arguments for class template "ac_fixed" (CRD-442)
+solution file set {$PROJECT_HOME/include/config.h} -updated
+Input file has changed
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-442)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-47)
+stockham_dit.v2
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'stockham_dit.v2' at state 'new' (PRJ-2)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-442)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-442)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-20)
+# Error: identifier "PARAMS_TYPE" is undefined (CRD-20)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.22 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go analyze
+c++11
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/catapult.log"
+# Error: Compilation aborted (CIN-5)
+/INPUTFILES/6
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 1314788kB, peak memory usage 1314788kB (SOL-9)
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+/INPUTFILES/2
+solution file add ./src/utils.cpp -exclude true
+solution file add ./src/ntt.cpp
+solution file add ./src/main.cpp -exclude true
+/INPUTFILES/1
+solution file add ./include/config.h
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/5
+solution file add ./include/ntt.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4

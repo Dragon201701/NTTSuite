@@ -1,0 +1,155 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 3.10.0-1062.4.1.el7.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/vsim.wlf -l ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/sim.log -L ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work scverify_top_opt -do "do {./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 01:53:16 on Sep 16,2021
+# Loading /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# Loading work.inPlaceNTT_DIF_precomp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_13_12_32_4096_4096_32_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_12_32_4096_4096_32_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_12_32_4096_4096_32_1_gen(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# Loading work.mult(fast)
+# Loading work.mult_core(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# Loading work.modulo_sub(fast)
+# Loading work.modulo_sub_core(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__1)
+# Loading work.modulo_add(fast)
+# Loading work.modulo_add_core(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__2)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__1)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__2)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__3)
+# Loading work.inPlaceNTT_DIF_precomp_core_run_rsci(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_vec_rsci_1(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_rsci_1(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_complete_rsci(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj(fast)
+# Loading ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_staller(fast)
+# Loading work.inPlaceNTT_DIF_precomp_core_core_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/complete_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/vec_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_twiddle_h'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_twiddle_h'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_twiddle'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_twiddle'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_r'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_r'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_p'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_p'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_vec'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_complete'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_complete'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_run'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_run'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# Disabling STALL_FLAG toggling
+# do {./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run
+# Test Passed
+# Test Passed
+# Test Passed
+# ../../src/main.cpp:Testbench Complete with 0 mismatches, after running 3 iteration(s).
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
+# 
+# Info: Collecting data completed
+#    captured 0 values of run
+#    captured 0 values of vec_IN
+#    captured 0 values of vec
+#    captured 0 values of p
+#    captured 0 values of r
+#    captured 0 values of twiddle
+#    captured 0 values of twiddle_h
+#    captured 0 values of complete
+# Info: HW reset: TLS_rst active @ 0 s
+# Info: scverify_top/user_tb: Simulation completed
+# 
+# Checking results
+# 'vec'
+#    capture count        = 0
+#    comparison count     = 0
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+#    Error: output 'vec' has no golden values to compare against
+# 'complete'
+#    capture count        = 0
+#    comparison count     = 0
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+#    Warning: output 'complete' has no golden values to compare against
+# 
+# Error: Nothing to compare, all output capture counts are zero.
+# Info: scverify_top/user_tb: Simulation FAILED @ 0 s
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 

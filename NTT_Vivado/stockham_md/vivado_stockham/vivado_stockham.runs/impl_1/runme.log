@@ -1,0 +1,316 @@
+
+*** Running vivado
+    with args -log stockham_dit.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source stockham_dit.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source stockham_dit.tcl -notrace
+Command: link_design -top stockham_dit -part xc7vx690tffg1761-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+Finished Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.sdc]
+Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+Finished Parsing XDC File [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2045.230 ; gain = 0.000 ; free physical = 116850 ; free virtual = 485823
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2045.230 ; gain = 560.105 ; free physical = 116850 ; free virtual = 485822
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2021.08' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2152.953 ; gain = 99.723 ; free physical = 116847 ; free virtual = 485819
+
+Starting Cache Timing Information Task
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 18a5d2009
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2766.570 ; gain = 613.617 ; free physical = 116254 ; free virtual = 485227
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 109868ba5
+
+Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 116087 ; free virtual = 485061
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 9 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 13d34e9f0
+
+Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 116076 ; free virtual = 485049
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 12d1bd3f3
+
+Time (s): cpu = 00:00:00.84 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 116065 ; free virtual = 485038
+INFO: [Opt 31-389] Phase Sweep created 17 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 12d1bd3f3
+
+Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 116057 ; free virtual = 485030
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 12d1bd3f3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.79 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 116056 ; free virtual = 485029
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: f4f17e22
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 116056 ; free virtual = 485029
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               9  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |              17  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2879.539 ; gain = 0.000 ; free physical = 116025 ; free virtual = 484998
+Ending Logic Optimization Task | Checksum: ad03b8d6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.94 . Memory (MB): peak = 2879.539 ; gain = 0.004 ; free physical = 115925 ; free virtual = 484899
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.332 | TNS=-1758.524 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 8 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 16
+Ending PowerOpt Patch Enables Task | Checksum: ad03b8d6
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3091.250 ; gain = 0.000 ; free physical = 115648 ; free virtual = 484624
+Ending Power Optimization Task | Checksum: ad03b8d6
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 3091.250 ; gain = 211.711 ; free physical = 115652 ; free virtual = 484627
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: ad03b8d6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3091.250 ; gain = 0.000 ; free physical = 115652 ; free virtual = 484627
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3091.250 ; gain = 0.000 ; free physical = 115652 ; free virtual = 484627
+Ending Netlist Obfuscation Task | Checksum: ad03b8d6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3091.250 ; gain = 0.000 ; free physical = 115651 ; free virtual = 484626
+INFO: [Common 17-83] Releasing license: Implementation
+34 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 3091.250 ; gain = 1046.020 ; free physical = 115651 ; free virtual = 484626
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3091.250 ; gain = 0.000 ; free physical = 115651 ; free virtual = 484626
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/vivado_stockham/vivado_stockham.runs/impl_1/stockham_dit_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file stockham_dit_drc_opted.rpt -pb stockham_dit_drc_opted.pb -rpx stockham_dit_drc_opted.rpx
+Command: report_drc -file stockham_dit_drc_opted.rpt -pb stockham_dit_drc_opted.pb -rpx stockham_dit_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/vivado_stockham/vivado_stockham.runs/impl_1/stockham_dit_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3123.270 ; gain = 32.020 ; free physical = 116106 ; free virtual = 485082
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2021.08' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3123.270 ; gain = 0.000 ; free physical = 116108 ; free virtual = 485085
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 30f22294
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3123.270 ; gain = 0.000 ; free physical = 116108 ; free virtual = 485085
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3123.270 ; gain = 0.000 ; free physical = 116108 ; free virtual = 485085
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 1249 I/O ports
+ while the target  device: 7vx690t package: ffg1761, contains only 850 available user I/O. The target device has 850 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/stockham/stockham_dit.v13/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance clk_IBUF_BUFG_inst (BUFG) is not placed
+ERROR: [Place 30-68] Instance clk_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[24]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[25]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[26]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[27]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[28]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[29]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[30]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[31]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_dat_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance p_rsc_triosy_lz_OBUF_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance rst_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[24]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[25]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[26]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[27]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[28]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[29]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[30]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[31]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_q_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[0]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[1]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[2]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[3]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[4]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[5]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[6]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[7]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[8]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_radr_OBUF[9]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_h_rsc_triosy_lz_OBUF_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[24]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[25]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[26]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[27]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance twiddle_rsc_q_IBUF[28]_inst (IBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a0df2ac6
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3123.270 ; gain = 0.000 ; free physical = 116091 ; free virtual = 485068
+Phase 1 Placer Initialization | Checksum: a0df2ac6
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3123.270 ; gain = 0.000 ; free physical = 116091 ; free virtual = 485068
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: a0df2ac6
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3123.270 ; gain = 0.000 ; free physical = 116091 ; free virtual = 485068
+INFO: [Common 17-83] Releasing license: Implementation
+55 Infos, 0 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 15 18:36:20 2021...

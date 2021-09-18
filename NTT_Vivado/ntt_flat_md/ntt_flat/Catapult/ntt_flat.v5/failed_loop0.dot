@@ -1,0 +1,23 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n43[label="n43 : DOPER\n 128cy+1.38\n",shape=ellipse,style=filled,color=bisque];
+  n50[label="n50 : DOPER\n 128cy+4.208\n",shape=ellipse,style=filled,color=bisque];
+  n39[label="n39 : ZOPER\n 128cy+1.38\n",shape=ellipse];
+  n38[label="n38 : DOPER\n 128cy\n",shape=ellipse,style=filled,color=bisque];
+  n37[label="n37 : ZOPER\n 127cy+3.765\n",shape=ellipse];
+  n35[label="n35 : DOPER\n 127cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n28[label="n28 : DOPER\n 126cy+4.208\n",shape=ellipse,style=filled,color=bisque];
+  n87[label="n87 : DOPER\n 127cy+4.208\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n43 : 0x7f5d7bf584c0 modulo_add:mux\ln50 : 0x7f5d7bf3e350 butterFly:write_mem(result:rsc.@)\ln39 : 0x7f5d78940940 modulo_add:slc()(32)\ln38 : 0x7f5d7bf427c0 modulo_add:acc#1\ln37 : 0x7f5d78806450 butterFly:not\ln35 : 0x7f5d86487d80 butterFly:acc#1\ln28 : 0x7f5d7bf3cd00 butterFly:f1:read_mem(result:rsc.@)\ln87 : 0x7f5d7bf3eb60 butterFly:write_mem(result:rsc.@)#1\l",shape=none];
+  n43 -> n50[label="258 : 0+0.439",color=blue];
+  n39 -> n43[label="258 : 0",color=blue];
+  n38 -> n39[label="259 : 0",color=green2];
+  n37 -> n38[label="259 : 0",color=green2];
+  n35 -> n37[label="258 : 0",color=blue];
+  n28 -> n35[label="258 : 0",color=blue];
+  n87 -> n28[label="262 : 0",color=red, style=bold];
+  n50 -> n87[label="258 : 0",color=blue];
+  n50 -> n28[label="262 : 0",color=red, style=bold];
+}
+

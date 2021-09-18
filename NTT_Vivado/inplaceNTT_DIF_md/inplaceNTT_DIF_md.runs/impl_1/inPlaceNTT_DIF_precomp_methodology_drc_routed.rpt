@@ -1,0 +1,2159 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Sep 11 15:09:22 2021
+| Host         : DESKTOP-5VIDJ10 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file inPlaceNTT_DIF_precomp_methodology_drc_routed.rpt -pb inPlaceNTT_DIF_precomp_methodology_drc_routed.pb -rpx inPlaceNTT_DIF_precomp_methodology_drc_routed.rpx
+| Design       : inPlaceNTT_DIF_precomp
+| Device       : xcvu13p-flga2577-3-e
+| Speed File   : -3
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_inPlaceNTT_DIF_precomp
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 327
++-----------+----------+------------------------------------------+------------+
+| Rule      | Severity | Description                              | Violations |
++-----------+----------+------------------------------------------+------------+
+| SYNTH-10  | Warning  | Wide multiplier                          | 10         |
+| SYNTH-11  | Warning  | DSP output not registered                | 1          |
+| TIMING-16 | Warning  | Large setup violation                    | 73         |
+| XDCH-2    | Warning  | Same min and max delay values on IO port | 243        |
++-----------+----------+------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/mult_core_inst/mult_core_wait_dp_inst/t_mul_cmp_z_oreg_pconst_63_32_reg of size 16x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/mult_core_inst/mult_core_wait_dp_inst/t_mul_cmp_z_oreg_pconst_63_32_reg__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/mult_core_inst/mult_core_wait_dp_inst/z_mul_cmp_1_z_oreg_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/mult_core_inst/mult_core_wait_dp_inst/z_mul_cmp_z_oreg_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/vector of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/vector__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#7 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/vector__1 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#8 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/vector__2 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#9 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/vector__3 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#10 Warning
+Wide multiplier  
+Detected multiplier at inPlaceNTT_DIF_precomp_core_inst/mult_cmp/vector__4 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-11#1 Warning
+DSP output not registered  
+DSP instance inPlaceNTT_DIF_precomp_core_inst/nl_twiddle_rsci_radr_d_pff is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.989 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]_replica_1/C (clocked by clk) and vec_rsc_wadr[7] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.168 ns between complete_rsc_rdy (clocked by clk) and vec_rsc_we (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.254 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_10_cse_sva_reg[6]/C (clocked by clk) and vec_rsc_wadr[6] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.780 ns between inPlaceNTT_DIF_precomp_core_inst/mult_cmp/mult_core_inst/return_rsci_d_reg[16]/C (clocked by clk) and vec_rsc_d[16] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.872 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[2]/C (clocked by clk) and twiddle_h_rsc_radr[0] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.893 ns between inPlaceNTT_DIF_precomp_core_inst/modulo_add_cmp/modulo_add_core_inst/return_rsci_d_reg[27]/C (clocked by clk) and vec_rsc_d[27] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.904 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[3]/C (clocked by clk) and twiddle_h_rsc_radr[1] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.911 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[6] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.928 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[3]/C (clocked by clk) and twiddle_h_rsc_radr[2] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.935 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[3] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.944 ns between inPlaceNTT_DIF_precomp_core_inst/modulo_add_cmp/modulo_add_core_inst/return_rsci_d_reg[30]/C (clocked by clk) and vec_rsc_d[30] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.959 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[9] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.964 ns between inPlaceNTT_DIF_precomp_core_inst/modulo_add_cmp/modulo_add_core_inst/return_rsci_d_reg[26]/C (clocked by clk) and vec_rsc_d[26] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -3.010 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[5] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -3.025 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[4] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -3.033 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[8] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -3.081 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_h_rsc_radr[7] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -3.126 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_10_cse_sva_reg[4]/C (clocked by clk) and vec_rsc_wadr[4] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -3.145 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[9] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -3.180 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[4] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -3.188 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_wadr[1] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -3.193 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[10] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -3.216 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[2] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -3.232 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[19] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -3.255 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[0]/C (clocked by clk) and vec_rsc_radr[0] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -3.257 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[3] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -3.275 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[5] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -3.287 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_10_cse_sva_reg[3]/C (clocked by clk) and vec_rsc_wadr[3] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -3.287 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[11] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -3.306 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[21] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -3.312 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[23] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -3.313 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[17] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -3.313 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[29] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -3.316 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[1] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -3.318 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_10_cse_sva_reg[5]/C (clocked by clk) and vec_rsc_wadr[5] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -3.318 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[6] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -3.319 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[8] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -3.322 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[22] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -3.324 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[0]/C (clocked by clk) and vec_rsc_wadr[0] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -3.332 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_wadr[9] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -3.343 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[0] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -3.346 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[31] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -3.346 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[7] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -3.363 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[12] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -3.384 ns between inPlaceNTT_DIF_precomp_core_inst/COMP_LOOP_k_10_0_sva_9_0_reg[0]/C (clocked by clk) and vec_rsc_radr[1] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -3.394 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[2]/C (clocked by clk) and vec_rsc_wadr[2] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -3.401 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[8]/C (clocked by clk) and vec_rsc_wadr[8] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -3.412 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[25] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -3.415 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[28] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -3.437 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[15] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -3.454 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[18] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -3.474 ns between inPlaceNTT_DIF_precomp_core_inst/COMP_LOOP_k_10_0_sva_9_0_reg[0]/C (clocked by clk) and vec_rsc_radr[3] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -3.480 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[13] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -3.487 ns between inPlaceNTT_DIF_precomp_core_inst/COMP_LOOP_k_10_0_sva_9_0_reg[0]/C (clocked by clk) and vec_rsc_radr[4] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -3.489 ns between inPlaceNTT_DIF_precomp_core_inst/COMP_LOOP_k_10_0_sva_9_0_reg[0]/C (clocked by clk) and vec_rsc_radr[2] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -3.508 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[24] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -3.511 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[14] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -3.514 ns between inPlaceNTT_DIF_precomp_core_inst/COMP_LOOP_k_10_0_sva_9_0_reg[0]/C (clocked by clk) and vec_rsc_radr[5] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -3.565 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[3]/C (clocked by clk) and vec_rsc_radr[9] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -3.593 ns between inPlaceNTT_DIF_precomp_core_inst/inPlaceNTT_DIF_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[12]/C (clocked by clk) and vec_rsc_d[20] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -3.644 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[3]/C (clocked by clk) and vec_rsc_radr[6] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -3.678 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[3]/C (clocked by clk) and vec_rsc_radr[8] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -3.786 ns between inPlaceNTT_DIF_precomp_core_inst/VEC_LOOP_acc_1_cse_sva_reg[3]/C (clocked by clk) and vec_rsc_radr[7] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -4.150 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[5] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -4.165 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[2]/C (clocked by clk) and twiddle_rsc_radr[0] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -4.173 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[3]/C (clocked by clk) and twiddle_rsc_radr[2] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -4.175 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[8] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -4.181 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[9] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -4.191 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[6] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -4.208 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[7] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -4.218 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[4] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -4.223 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[0]/C (clocked by clk) and twiddle_rsc_radr[3] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -4.259 ns between inPlaceNTT_DIF_precomp_core_inst/STAGE_LOOP_i_3_0_sva_reg[3]/C (clocked by clk) and twiddle_rsc_radr[1] (clocked by clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'complete_rsc_rdy' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports complete_rsc_rdy]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 29)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[10]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[11]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[12]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[13]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#7 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[14]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#8 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[15]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#9 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[16]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#10 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[17]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#11 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[18]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#12 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[19]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#13 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#14 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[20]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#15 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[21]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#16 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[22]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#17 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[23]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#18 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[24]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#19 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[25]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#20 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[26]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#21 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[27]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#22 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[28]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#23 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[29]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#24 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#25 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[30]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#26 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[31]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#27 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#28 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#29 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#30 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#31 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#32 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#33 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'p_rsc_dat[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {p_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 19)
+Related violations: <none>
+
+XDCH-2#34 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#35 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[10]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#36 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[11]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#37 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[12]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#38 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[13]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#39 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[14]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#40 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[15]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#41 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[16]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#42 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[17]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#43 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[18]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#44 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[19]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#45 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#46 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[20]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#47 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[21]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#48 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[22]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#49 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[23]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#50 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[24]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#51 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[25]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#52 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[26]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#53 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[27]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#54 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[28]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#55 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[29]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#56 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#57 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[30]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#58 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[31]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#59 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#60 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#61 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#62 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#63 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#64 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#65 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'r_rsc_dat[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports {r_rsc_dat[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 21)
+Related violations: <none>
+
+XDCH-2#66 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'rst' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports rst]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 9)
+Related violations: <none>
+
+XDCH-2#67 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'run_rsc_vld' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 0.000 [get_ports run_rsc_vld]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 11)
+Related violations: <none>
+
+XDCH-2#68 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#69 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[10]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#70 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[11]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#71 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[12]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#72 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[13]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#73 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[14]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#74 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[15]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#75 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[16]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#76 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[17]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#77 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[18]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#78 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[19]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#79 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#80 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[20]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#81 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[21]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#82 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[22]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#83 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[23]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#84 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[24]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#85 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[25]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#86 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[26]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#87 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[27]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#88 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[28]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#89 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[29]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#90 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#91 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[30]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#92 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[31]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#93 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#94 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#95 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#96 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#97 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#98 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#99 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_h_rsc_q[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_h_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 27)
+Related violations: <none>
+
+XDCH-2#100 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#101 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[10]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#102 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[11]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#103 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[12]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#104 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[13]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#105 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[14]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#106 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[15]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#107 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[16]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#108 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[17]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#109 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[18]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#110 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[19]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#111 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#112 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[20]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#113 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[21]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#114 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[22]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#115 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[23]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#116 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[24]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#117 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[25]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#118 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[26]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#119 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[27]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#120 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[28]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#121 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[29]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#122 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#123 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[30]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#124 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[31]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#125 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#126 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#127 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#128 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#129 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#130 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#131 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'twiddle_rsc_q[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {twiddle_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 24)
+Related violations: <none>
+
+XDCH-2#132 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#133 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[10]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#134 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[11]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#135 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[12]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#136 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[13]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#137 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[14]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#138 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[15]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#139 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[16]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#140 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[17]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#141 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[18]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#142 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[19]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#143 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#144 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[20]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#145 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[21]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#146 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[22]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#147 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[23]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#148 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[24]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#149 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[25]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#150 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[26]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#151 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[27]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#152 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[28]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#153 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[29]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#154 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#155 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[30]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#156 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[31]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#157 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#158 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#159 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#160 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#161 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#162 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#163 Warning
+Same min and max delay values on IO port  
+The same input delay of 1.510 ns has been defined on port 'vec_rsc_q[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] 1.510 [get_ports {vec_rsc_q[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 17)
+Related violations: <none>
+
+XDCH-2#164 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'complete_rsc_vld' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports complete_rsc_vld]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 30)
+Related violations: <none>
+
+XDCH-2#165 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'p_rsc_triosy_lz' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports p_rsc_triosy_lz]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 20)
+Related violations: <none>
+
+XDCH-2#166 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'r_rsc_triosy_lz' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports r_rsc_triosy_lz]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 22)
+Related violations: <none>
+
+XDCH-2#167 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'run_rsc_rdy' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports run_rsc_rdy]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 10)
+Related violations: <none>
+
+XDCH-2#168 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'twiddle_h_rsc_triosy_lz' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports twiddle_h_rsc_triosy_lz]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 28)
+Related violations: <none>
+
+XDCH-2#169 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'twiddle_rsc_triosy_lz' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports twiddle_rsc_triosy_lz]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 25)
+Related violations: <none>
+
+XDCH-2#170 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'vec_rsc_triosy_lz' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 0.000 [get_ports vec_rsc_triosy_lz]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 18)
+Related violations: <none>
+
+XDCH-2#171 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#172 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#173 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#174 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#175 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#176 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#177 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#178 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#179 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#180 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_h_rsc_radr[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_h_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 26)
+Related violations: <none>
+
+XDCH-2#181 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#182 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#183 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#184 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#185 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#186 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#187 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#188 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#189 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#190 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'twiddle_rsc_radr[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {twiddle_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 23)
+Related violations: <none>
+
+XDCH-2#191 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#192 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[10]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#193 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[11]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#194 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[12]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#195 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[13]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#196 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[14]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#197 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[15]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#198 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[16]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#199 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[17]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#200 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[18]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#201 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[19]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#202 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#203 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[20]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#204 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[21]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#205 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[22]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#206 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[23]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#207 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[24]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#208 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[25]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#209 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[26]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#210 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[27]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#211 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[28]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#212 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[29]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#213 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#214 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[30]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#215 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[31]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#216 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#217 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#218 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#219 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#220 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#221 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#222 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_d[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_d[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#223 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#224 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#225 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#226 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#227 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#228 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#229 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#230 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#231 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#232 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_radr[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_radr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 16)
+Related violations: <none>
+
+XDCH-2#233 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#234 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#235 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#236 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#237 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[4]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#238 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[5]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#239 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[6]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#240 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[7]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#241 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[8]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#242 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_wadr[9]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports {vec_rsc_wadr[*]}]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#243 Warning
+Same min and max delay values on IO port  
+The same output delay of 1.170 ns has been defined on port 'vec_rsc_we' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] 1.170 [get_ports vec_rsc_we]
+D:/NTT_Xilinx/NTT_Vivado/inplaceNTT_DIF_md/inplaceNTT_DIF_md.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc (Line: 15)
+Related violations: <none>
+
+

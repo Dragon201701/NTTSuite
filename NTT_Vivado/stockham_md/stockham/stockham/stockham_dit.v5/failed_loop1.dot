@@ -1,0 +1,41 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n365[label="n365 : DOPER\n 412cy+2.745\n",shape=ellipse,style=filled,color=bisque];
+  n371[label="n371 : DOPER\n 412cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n361[label="n361 : ZOPER\n 412cy+2.745\n",shape=ellipse];
+  n360[label="n360 : DOPER\n 412cy+1.365\n",shape=ellipse,style=filled,color=bisque];
+  n359[label="n359 : ZOPER\n 412cy+1.365\n",shape=ellipse];
+  n357[label="n357 : DOPER\n 412cy\n",shape=ellipse,style=filled,color=bisque];
+  n196[label="n196 : DOPER\n 411cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n61[label="n61 : DOPER\n 410cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n437[label="n437 : DOPER\n 412cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n355[label="n355 : DOPER\n 405cy+2.745\n",shape=ellipse,style=filled,color=bisque];
+  n351[label="n351 : ZOPER\n 405cy+2.745\n",shape=ellipse];
+  n350[label="n350 : DOPER\n 405cy+1.365\n",shape=ellipse,style=filled,color=bisque];
+  n348[label="n348 : ZOPER\n 405cy+1.365\n",shape=ellipse];
+  n347[label="n347 : DOPER\n 405cy\n",shape=ellipse,style=filled,color=bisque];
+  n341[label="n341 : DOPER\n 403cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n339[label="n339 : DOPER\n 403cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n206[label="n206 : DOPER\n 402cy+4\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n365 : 0x7fc8dfc8e390 modulo_add:mux\ln371 : 0x7fc8d5c51290 for:for:write_mem(xt:rsc(0)(0).@)\ln361 : 0x7fc8d5ed36d0 modulo_add:slc()(32)\ln360 : 0x7fc8bcd97290 modulo_add:acc#1\ln359 : 0x7fc8d5ed30a0 for:for:not#1\ln357 : 0x7fc8d5ed18d0 for:for:acc#2\ln196 : 0x7fc8d56ea090 for:for:a:for:for:a:mux1h\ln61  : 0x7fc8d5c3ca40 for:for:a:read_mem(xt:rsc(0)(0).@)\ln437 : 0x7fc8d5c604b0 for:for:write_mem(xt:rsc(0)(0).@)#1\ln355 : 0x7fc8dfc8ac10 mult:mux\ln351 : 0x7fc8d5ed0e60 mult:slc()(32)\ln350 : 0x7fc8d6d19e40 mult:if:acc#1\ln348 : 0x7fc8df429e70 mult:if:conc\ln347 : 0x7fc8d5ecf120 mult:res:acc\ln341 : 0x7fc8d5ecdd90 mult:z:mul\ln339 : 0x7fc8d5d8cfb0 for:for:b:for:for:b:mux1h\ln206 : 0x7fc8d5c4a940 for:for:b:read_mem(xt:rsc(0)(0).@)\l",shape=none];
+  n365 -> n371[label="258 : 0",color=blue];
+  n361 -> n365[label="258 : 0",color=blue];
+  n360 -> n361[label="259 : 0",color=green2];
+  n359 -> n360[label="259 : 0",color=green2];
+  n357 -> n359[label="258 : 0",color=blue];
+  n196 -> n357[label="258 : 0",color=blue];
+  n61 -> n196[label="258 : 0",color=blue];
+  n437 -> n61[label="262 : 0",color=red, style=bold];
+  n371 -> n437[label="258 : 0",color=blue];
+  n355 -> n357[label="258 : 0",color=blue];
+  n351 -> n355[label="258 : 0",color=blue];
+  n350 -> n351[label="259 : 0",color=green2];
+  n348 -> n350[label="258 : 0",color=blue];
+  n347 -> n348[label="259 : 0",color=green2];
+  n341 -> n347[label="258 : 0",color=blue];
+  n339 -> n341[label="258 : 0",color=blue];
+  n206 -> n339[label="258 : 0",color=blue];
+  n371 -> n206[label="262 : 0",color=red, style=bold];
+}
+

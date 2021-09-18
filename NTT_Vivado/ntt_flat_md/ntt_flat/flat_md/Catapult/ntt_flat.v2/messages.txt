@@ -1,0 +1,228 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 8.72 seconds, memory usage 1642352kB, peak memory usage 1642352kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp" (CRD-1)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp (CIN-69)
+# Error:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp" (CRD-979)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: ambiguous "?" operation: second operand of type "DATA_TYPE_SIGNED" can be converted to third operand type "ac_int<33, true>", and vice versa (CRD-979)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 7.29 seconds, memory usage 1642352kB, peak memory usage 1642352kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+go compile
+# Error: go analyze: Failed analyze
+# Warning: last line of file ends without a newline (CRD-1)
+# Error: go analyze: Failed analyze
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+Moving session transcript to file "/home/jd4691/research/NTT_CPU/ntt_flat/catapult.log"
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+solution file add ./src/utils.cpp
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/ntt.cpp
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.07 seconds, memory usage 1314776kB, peak memory usage 1314776kB (SOL-9)
+/INPUTFILES/1
+# Error: Compilation aborted (CIN-5)
+Front End called with arguments: -- /home/jd4691/research/NTT_CPU/ntt_flat/src/ntt.cpp /home/jd4691/research/NTT_CPU/ntt_flat/src/utils.cpp (CIN-69)
+go compile
+c++11
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'ntt_flat.v1': elapsed time 4.10 seconds, memory usage 1642352kB, peak memory usage 1642352kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 70, Real ops = 35, Vars = 26 (SOL-21)
+Design 'ntt_flat' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/ntt_flat/core/INNER_LOOP' iterated at most 512 times. (LOOP-2)
+Loop '/ntt_flat/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_CPU/ntt_flat/Catapult/ntt_flat.v1/CDesignChecker/design_checker.sh'
+Inlining routine 'mult' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Optimizing block '/ntt_flat' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'ntt_flat.v1' (SOL-8)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Synthesizing routine 'ntt_flat' (CIN-13)
+Found top design routine 'ntt_flat' specified by directive (CIN-52)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Inlining routine 'ntt_flat' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 70, Real ops = 35, Vars = 26 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'ntt_flat.v1': elapsed time 1.06 seconds, memory usage 1642352kB, peak memory usage 1642352kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-1_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -1 -part xc7vx485tffg1157-1
+go libraries
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+solution library add amba
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'ntt_flat.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-1_beh.lib' [mgc_Xilinx-VIRTEX-7-1_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 70, Real ops = 35, Vars = 26 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v1': elapsed time 0.11 seconds, memory usage 1642456kB, peak memory usage 1642456kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/SCHED_USE_MULTICYCLE true
+directive set SCHED_USE_MULTICYCLE true
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 80, Real ops = 35, Vars = 31 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'ntt_flat.v1': elapsed time 0.07 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+directive set /ntt_flat/vec:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+/ntt_flat/core/INNER_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /ntt_flat/core/INNER_LOOP -PIPELINE_INIT_INTERVAL 2
+# Info: Starting transformation 'loops' on solution 'ntt_flat.v1' (SOL-8)
+go allocate
+Loop '/ntt_flat/core/main' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/INNER_LOOP' is left rolled. (LOOP-4)
+/ntt_flat/vec:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# Info: Design complexity at end of 'memories': Total ops = 80, Real ops = 35, Vars = 31 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'ntt_flat.v1': elapsed time 1.06 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+Memory Resource '/ntt_flat/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 1024 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'ntt_flat.v1' (SOL-8)
+Memory Resource '/ntt_flat/twiddle_h:rsc' (from var: twiddle_h) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/ntt_flat/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/ntt_flat/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+I/O-Port Resource '/ntt_flat/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Info: Design complexity at end of 'cluster': Total ops = 80, Real ops = 35, Vars = 31 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'ntt_flat.v1': elapsed time 0.04 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'ntt_flat.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 104, Real ops = 38, Vars = 39 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'ntt_flat.v1': elapsed time 1.16 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+Design 'ntt_flat' contains '38' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'ntt_flat.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Error:   MEMORYWRITE "butterFly:write_mem(vec:rsc.@)" ntt.cpp(46,4,9) (BASIC-25)
+   mapped to "mgc_Xilinx-VIRTEX-7-1_beh.mgc_mux(32,1,2)" (SCHD-6)
+   from operation MUX "modulo_add:mux" with delay  0.09 (SCHD-6)
+   from operation ACCU "butterFly:acc" with delay  1.455 (SCHD-6)
+ ntt.cpp(46,30,1): chained data dependency at time 158cy (SCHD-6)
+   with output variable "modulo_add:base.sva" (SCHD-6)
+# Info: Branching solution 'ntt_flat.v2' at state 'architect' (PRJ-2)
+   mapped to "mgc_Xilinx-VIRTEX-7-1_beh.mgc_add(32,0,32,0,32)" (SCHD-6)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+   mapped to "mgc_Xilinx-VIRTEX-7-1_beh.mgc_add(33,0,32,0,33)" (SCHD-6)
+   from operation ACCU "modulo_add:acc#1" with delay  1.47 (SCHD-6)
+   from operation NOT NOT "butterFly:not" (SCHD-6)
+ ntt.cpp(12,38,4): chained data dependency at time 158cy+1.455 (SCHD-6)
+ ntt.cpp(46,4,9): chained feedback data dependency at time 158cy+4 (SCHD-6)
+   with input delay 0.50 (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL_rwport(1,10,32,1024,1024,32,1)" (SCHD-6)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:write_mem(vec:rsc.@)/IGNORE_DEPENDENCY_FROM butterFly:f1:read_mem(vec:rsc.@)
+   from operation MEMORYWRITE "butterFly:write_mem(vec:rsc.@)" with delay  0.1 (SCHD-6)
+   from operation MEMORYREAD "butterFly:f1:read_mem(vec:rsc.@)" with delay  2.68 (SCHD-6)
+# Info: Starting transformation 'allocate' on solution 'ntt_flat.v2' (SOL-8)
+ ntt.cpp(44,19,9): chained data dependency at time 156cy+4 (SCHD-6)
+go allocate
+   with output variable "butterFly:f1.sva" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL_rwport(1,10,32,1024,1024,32,1)" (SCHD-6)
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_CPU/ntt_flat/Catapult/ntt_flat.v2/CDesignChecker/design_checker.sh'
+# Error: Feedback path is too long to schedule design with current pipeline and clock constraints. (SCHD-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+   with input delay 0.50 (SCHD-6)
+# Error:   MEMORYREAD "butterFly:f1:read_mem(vec:rsc.@)" ntt.cpp(44,19,9) (BASIC-25)
+   with output variable "vec:rsc.@" (SCHD-6)
+# Error: Schedule failed, sequential delay violated. List of sequential operations and dependencies: (SCHD-20)
+# Warning: Process 'core' has IGNORE_DEPENDENCY_FROM directives (potentially created from ignore_memory_precedence commands).  The command was refined to be dependent on the order of the arguments.  Please verify the correctness of the argument order.  See also the command's documentation. (MEM-52)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+   from operation READSLICE READSLICE "modulo_add:slc()(32)" (SCHD-6)
+ ntt.cpp(13,13,1): chained data dependency at time 158cy+2.925 (SCHD-6)
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+ ntt.cpp(13,13,1): chained data dependency at time 158cy+1.455 (SCHD-6)
+   with output variable "modulo_add:slc()(32).svs" (SCHD-6)
+ ntt.cpp(13,0,0): chained data dependency at time 158cy+2.925 (SCHD-6)
+   from operation ACCU "butterFly:acc" with delay  1.455 (SCHD-6)
+# Error: Feedback path is too long to schedule design with current pipeline and clock constraints. (SCHD-3)
+ ntt.cpp(46,30,1): chained data dependency at time 158cy (SCHD-6)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+   with output variable "modulo_add:base.sva" (SCHD-6)
+# Error:   MEMORYREAD "butterFly:f1:read_mem(vec:rsc.@)" ntt.cpp(44,19,9) (BASIC-25)
+   mapped to "mgc_Xilinx-VIRTEX-7-1_beh.mgc_add(32,0,32,0,32)" (SCHD-6)
+# Error: Schedule failed, sequential delay violated. List of sequential operations and dependencies: (SCHD-20)
+   mapped to "mgc_Xilinx-VIRTEX-7-1_beh.mgc_add(33,0,32,0,33)" (SCHD-6)
+   from operation ACCU "modulo_add:acc#1" with delay  1.47 (SCHD-6)
+# Info: Starting transformation 'allocate' on solution 'ntt_flat.v1' (SOL-8)
+   from operation NOT NOT "butterFly:not" (SCHD-6)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+ ntt.cpp(12,38,4): chained data dependency at time 158cy+1.455 (SCHD-6)
+ ntt.cpp(46,4,9): chained feedback data dependency at time 158cy+4 (SCHD-6)
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+   with input delay 0.50 (SCHD-6)
+   from operation READSLICE READSLICE "modulo_add:slc()(32)" (SCHD-6)
+   mapped to "Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL_rwport(1,10,32,1024,1024,32,1)" (SCHD-6)
+ ntt.cpp(13,13,1): chained data dependency at time 158cy+2.925 (SCHD-6)
+   from operation MEMORYWRITE "butterFly:write_mem(vec:rsc.@)" with delay  0.1 (SCHD-6)
+ ntt.cpp(13,13,1): chained data dependency at time 158cy+1.455 (SCHD-6)
+   from operation MEMORYREAD "butterFly:f1:read_mem(vec:rsc.@)" with delay  2.68 (SCHD-6)
+   with output variable "modulo_add:slc()(32).svs" (SCHD-6)
+ ntt.cpp(44,19,9): chained data dependency at time 156cy+4 (SCHD-6)
+ ntt.cpp(13,0,0): chained data dependency at time 158cy+2.925 (SCHD-6)
+   with output variable "butterFly:f1.sva" (SCHD-6)
+# Error:   MEMORYWRITE "butterFly:write_mem(vec:rsc.@)" ntt.cpp(46,4,9) (BASIC-25)
+   mapped to "Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL_rwport(1,10,32,1024,1024,32,1)" (SCHD-6)
+   mapped to "mgc_Xilinx-VIRTEX-7-1_beh.mgc_mux(32,1,2)" (SCHD-6)
+# Error: Design 'ntt_flat' could not schedule partition '/ntt_flat/core' - could not schedule even with unlimited resources
+   from operation MUX "modulo_add:mux" with delay  0.09 (SCHD-6)
+# Info: Design complexity at end of 'architect': Total ops = 104, Real ops = 38, Vars = 39 (SOL-21)
+# Error: invalid command name "butterFly:f1:read_mem(vec:rsc.@)"
+butterFly:f1:read_mem(vec:rsc.@)
+   with input delay 0.50 (SCHD-6)
+   with output variable "vec:rsc.@" (SCHD-6)
+# Info: Completed transformation 'architect' on solution 'ntt_flat.v1': elapsed time 0.24 seconds, memory usage 1642968kB, peak memory usage 1642968kB (SOL-9)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Error: ignore_memory_precedences: No matches for 'to' operation 'butterFly:write(vec:rsc.@)'
+ignore_memory_precedences -from butterFly:f1:read_mem(vec:rsc.@) -to butterFly:write(vec:rsc.@)
+ignore_memory_precedences -from butterFly:f1:read_mem(vec:rsc.@) -to butterFly:write_mem(vec:rsc.@)
+File '$PROJECT_HOME/directives.tcl' saved
