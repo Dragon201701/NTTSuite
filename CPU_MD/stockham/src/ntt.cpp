@@ -28,6 +28,7 @@ inline DATA_TYPE modulo_sub(DATA_TYPE_SIGNED base, DATA_TYPE m){
 
 }
 
+#include <iostream>
  
 void stockham_dit(DATA_TYPE * xt, DATA_TYPE p, DATA_TYPE * twiddle, DATA_TYPE * twiddle_h){
 
@@ -41,6 +42,7 @@ void stockham_dit(DATA_TYPE * xt, DATA_TYPE p, DATA_TYPE * twiddle, DATA_TYPE * 
     PARAMS_TYPE shift = VECTOR_ADDR_BIT - 1;
     for(PARAMS_TYPE nn = 2; nn <= VECTOR_SIZE; nn = nn << 1, s = s >> 1, shift = shift - 1){
         PARAMS_TYPE m = nn >> 1;
+        std::cout<<"Stage "<<nn<<std::endl;
         for (int t = 0; t < (VECTOR_SIZE >> 1); t++) {
                     const PARAMS_TYPE upper = (~(s - 1)) & t;
                     DATA_TYPE w = twiddle[(upper >> shift) << shift];
@@ -50,6 +52,7 @@ void stockham_dit(DATA_TYPE * xt, DATA_TYPE p, DATA_TYPE * twiddle, DATA_TYPE * 
                     const DATA_TYPE b = mult(y[q + (upper << 1) + s] , w, wh, p);
                     x[q + upper] = modulo_add(a + b, p);
                     x[q + upper + s * m] = modulo_sub(a - b, p);
+                    std::cout<<q+upper<<" "<<q+upper +s*m<<std::endl;
         }
         DATA_TYPE *tmp = x;
         x = y;
