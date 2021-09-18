@@ -12,7 +12,7 @@
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-inline DATA_TYPE modulo_add(DATA_TYPE base, DATA_TYPE m);
+DATA_TYPE modulo_add(DATA_TYPE base, DATA_TYPE m);
 
 /**
  * Perform the operation 'base^exp (mod m)' using the memory-efficient method
@@ -22,7 +22,7 @@ inline DATA_TYPE modulo_add(DATA_TYPE base, DATA_TYPE m);
  * @param m	The modulus of the expression
  * @return 	The result of the expression
  */
-inline DATA_TYPE modulo_sub(DATA_TYPE_SIGNED base, DATA_TYPE m);
+DATA_TYPE modulo_sub(DATA_TYPE_SIGNED base, DATA_TYPE m);
 
 /**
  * perfrom the operation (x * y) (mod m)

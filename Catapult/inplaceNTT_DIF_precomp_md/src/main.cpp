@@ -52,7 +52,7 @@ void gettwiddle(DATA_TYPE *twiddle, DATA_TYPE *twiddle_h, DATA_TYPE p, DATA_TYPE
 	DATA_TYPE witer = 1;
     	DATA_TYPE w_ 	= modExp(r, (p - 1) / VECTOR_SIZE, p);
 
-	for(int i=0; i < VECTOR_SIZE; i++){
+	for(unsigned i=0; i < VECTOR_SIZE; i++){
 		twiddle[i] = witer;
 		twiddle_h[i] = ((DATA_TYPE_TMP)witer << PARAM_WIDTH) / p;
 		witer = ((DATA_TYPE_TMP)witer * w_) % p;

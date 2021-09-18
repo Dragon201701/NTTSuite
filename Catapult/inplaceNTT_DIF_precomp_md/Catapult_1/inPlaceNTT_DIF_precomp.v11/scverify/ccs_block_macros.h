@@ -1,6 +1,6 @@
 // ccs_block_macros.h
 #include "ccs_testbench.h"
-
+#include "ac_sync.h"
 #ifndef EXCLUDE_CCS_BLOCK_INTERCEPT
 #ifndef INCLUDE_CCS_BLOCK_INTERCEPT
 #define INCLUDE_CCS_BLOCK_INTERCEPT

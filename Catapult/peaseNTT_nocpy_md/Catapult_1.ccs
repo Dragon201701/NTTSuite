@@ -5,7 +5,7 @@
 //             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
 //  
-//  Running on Linux jd4691@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
 //  
 //  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
 //                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
@@ -16,8 +16,8 @@
 //  
 if {[info script] != {} && [file isdirectory [file rootname [info script]]]} {
   project load [file rootname [info script]] 10.5
-} elseif { [file isdirectory /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_1] } {
-  project load /home/jd4691/research/NTT_CPU/peaseNTT_nocpy/Catapult_1 10.5
+} elseif { [file isdirectory /home/yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/Catapult_1] } {
+  project load /home/yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/Catapult_1 10.5
 } else {
   error {unable to locate project directory 'Catapult_1'}
 }
