@@ -3,6 +3,8 @@
 #include <inttypes.h>
 using namespace std;
 
+
+#define TIME_TEST
 void cpyVec(DATA_TYPE* src, DATA_TYPE*dst, int length){
     for(int i=0; i<length; i++){
         dst[i] = src[i];
@@ -100,8 +102,9 @@ __global__ void  bit_reverse_cu(DATA_TYPE *result, DATA_TYPE *vec, unsigned num_
 DATA_TYPE* ntt_flat(DATA_TYPE * vec,  int n, DATA_TYPE p, DATA_TYPE g){
 
     DATA_TYPE t = (DATA_TYPE)log2(n);
-
+#ifndef TIME_TEST
     cudaMemcpy(d_x, vec, VECTOR_SIZE * sizeof(DATA_TYPE ), cudaMemcpyHostToDevice);
+#endif
 
     int threadsPerBlock = 256;
     int blocksPerGrid = ((VECTOR_SIZE>>1) + threadsPerBlock - 1) / threadsPerBlock;
@@ -116,9 +119,11 @@ DATA_TYPE* ntt_flat(DATA_TYPE * vec,  int n, DATA_TYPE p, DATA_TYPE g){
 
     int threadsPerBlockRev = 16;
     int blocksPerGridRev = (VECTOR_SIZE + threadsPerBlockRev - 1) / threadsPerBlockRev;
+#ifndef TIME_TEST
     bit_reverse_cu<<<blocksPerGridRev, threadsPerBlockRev>>>(d_y, d_x, t);
 
     cudaMemcpy(result, d_y, VECTOR_SIZE * sizeof(DATA_TYPE ), cudaMemcpyDeviceToHost);
+#endif
 
     return result;
 }

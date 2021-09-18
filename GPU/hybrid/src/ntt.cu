@@ -1,6 +1,7 @@
 #include "../include/ntt.h"
 #include "../include/utils.h"
 #include <inttypes.h>
+#define TIME_TEST
 using namespace std;
 
 void cpyVec(DATA_TYPE* src, DATA_TYPE*dst, int length){
@@ -161,7 +162,9 @@ void cudaFree(){
 DATA_TYPE* six_step(DATA_TYPE * vec, int n, DATA_TYPE m, DATA_TYPE g){
 
     // Transfer data from cpu to gpu
+#ifndef TIME_TEST
     cudaMemcpy(d_x, vec, VECTOR_SIZE * sizeof(DATA_TYPE ), cudaMemcpyHostToDevice);
+#endif
 
     int threadsPerBlock = VECTOR_SIZE_H;
     int blocksPerGrid   = VECTOR_SIZE_H;
@@ -207,7 +210,9 @@ DATA_TYPE* six_step(DATA_TYPE * vec, int n, DATA_TYPE m, DATA_TYPE g){
 
     transpose<<<blocksPerGrid, threadsPerBlock>>>(d_y);
 
+#ifndef TIME_TEST
     cudaMemcpy(vec, d_y, VECTOR_SIZE * sizeof(DATA_TYPE), cudaMemcpyDeviceToHost);
+#endif
 
     return vec;
 }
