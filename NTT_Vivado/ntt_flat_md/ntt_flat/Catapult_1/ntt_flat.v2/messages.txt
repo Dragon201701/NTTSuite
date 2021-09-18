@@ -1,0 +1,387 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 17.32 seconds, memory usage 1904084kB, peak memory usage 1969620kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Moving session transcript to file "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/catapult.log"
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.05 seconds, memory usage 1314772kB, peak memory usage 1314772kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp (CIN-69)
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go compile
+c++11
+solution file add ./flat_md/directives.tcl -exclude true
+# Error: go analyze: Failed analyze
+/INPUTFILES/7
+/INPUTFILES/2
+solution file add ./flat_md/src/main.cpp -exclude true
+solution file add ./flat_md/src/utils.cpp -exclude true
+solution file add ./flat_md/src/ntt.cpp
+/INPUTFILES/1
+solution file add ./flat_md/include/ntt.h -exclude true
+solution file add ./flat_md/include/config.h
+/INPUTFILES/5
+solution file add ./flat_md/include/utils.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+/INPUTFILES/6
+solution file set /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/utils.cpp -exclude false
+solution file set /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/utils.h -exclude false
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'ntt_flat.v1': elapsed time 7.12 seconds, memory usage 1969620kB, peak memory usage 1969620kB (SOL-9)
+Design 'ntt_flat' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'ntt_flat.v1' (SOL-8)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/ntt_flat' ... (CIN-4)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Synthesizing routine 'ntt_flat' (CIN-13)
+Found top design routine 'ntt_flat' specified by directive (CIN-52)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Inlining routine 'ntt_flat' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+Loop '/ntt_flat/core/STAGE_LOOP' iterated at most 12 times. (LOOP-2)
+Loop '/ntt_flat/core/INNER_LOOP' iterated at most 2048 times. (LOOP-2)
+Loop '/ntt_flat/core/for' iterated at most 4096 times. (LOOP-2)
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v1/CDesignChecker/design_checker.sh'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'ntt_flat.v1': elapsed time 0.76 seconds, memory usage 1970136kB, peak memory usage 1970136kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+solution library add Xilinx_RAMS
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+# Info: Starting transformation 'libraries' on solution 'ntt_flat.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+go libraries
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v1': elapsed time 0.14 seconds, memory usage 1970136kB, peak memory usage 1970136kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v1' (SOL-8)
+go assembly
+/CLOCKS {clk {-CLOCK_PERIOD 6.67 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 3.335 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 6.67 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 3.335 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'ntt_flat.v2': elapsed time 0.05 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+# Info: Starting transformation 'loops' on solution 'ntt_flat.v2' (SOL-8)
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v2/CDesignChecker/design_checker.sh'
+go architect
+# Info: Branching solution 'ntt_flat.v2' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/ntt_flat/core/INNER_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/for' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/main' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/ntt_flat/result:rsc/BLOCK_SIZE 4096
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'ntt_flat.v1': elapsed time 0.05 seconds, memory usage 1970136kB, peak memory usage 1970136kB (SOL-9)
+Loop '/ntt_flat/core/main' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/ntt_flat/core/for/PIPELINE_INIT_INTERVAL 1
+# Info: Starting transformation 'loops' on solution 'ntt_flat.v1' (SOL-8)
+directive set /ntt_flat/core/for -PIPELINE_INIT_INTERVAL 1
+go architect
+/ntt_flat/core/INNER_LOOP/PIPELINE_INIT_INTERVAL 3
+Loop '/ntt_flat/core/INNER_LOOP' is left rolled. (LOOP-4)
+directive set /ntt_flat/core/INNER_LOOP -PIPELINE_INIT_INTERVAL 3
+Loop '/ntt_flat/core/for' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 272, Real ops = 40, Vars = 58 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'ntt_flat.v2': elapsed time 0.47 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+Memory Resource '/ntt_flat/result:rsc(2)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(1)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(4)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(3)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(0)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Resource '/ntt_flat/result:rsc' split into 13 x 1 blocks (MEM-11)
+Memory Resource '/ntt_flat/result:rsc(10)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(9)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(12)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(11)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(6)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(5)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(8)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(7)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 4096 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'ntt_flat.v2' (SOL-8)
+I/O-Port Resource '/ntt_flat/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/ntt_flat/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Info: Completed transformation 'cluster' on solution 'ntt_flat.v2': elapsed time 0.06 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 272, Real ops = 40, Vars = 58 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'ntt_flat.v2' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 488, Real ops = 95, Vars = 98 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'ntt_flat.v2': elapsed time 0.83 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+Design 'ntt_flat' contains '95' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'ntt_flat.v2' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 488, Real ops = 95, Vars = 98 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'ntt_flat.v2': elapsed time 1.72 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(7)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(2)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(1)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(4)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(3)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+# Info: Starting transformation 'allocate' on solution 'ntt_flat.v2' (SOL-8)
+go allocate
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+# Warning: Process 'core' has IGNORE_DEPENDENCY_FROM directives (potentially created from ignore_memory_precedence commands).  The command was refined to be dependent on the order of the arguments.  Please verify the correctness of the argument order.  See also the command's documentation. (MEM-52)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(10)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(9)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(12)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(11)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(4)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(3)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Prescheduled LOOP '/ntt_flat/core/main' (2 c-steps) (SCHD-7)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(6)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Prescheduled LOOP '/ntt_flat/core/for' (3 c-steps) (SCHD-7)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(5)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Prescheduled SEQUENTIAL '/ntt_flat/core' (total length 258074 c-steps) (SCHD-8)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(0)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Prescheduled LOOP '/ntt_flat/core/core:rlp' (0 c-steps) (SCHD-7)
+ignore_memory_precedences -from  butterFly:write_mem(result:rsc(*)(0).@)* -to butterFly:f1:read_mem(result:rsc(*)(0).@)*
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(2)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+# Info: Select qualified components for data operations ... (CRAAS-3)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(1)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Prescheduled LOOP '/ntt_flat/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(12)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Prescheduled LOOP '/ntt_flat/core/INNER_LOOP' (10 c-steps) (SCHD-7)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(11)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Netlist written to file 'schedule.gnt' (NET-4)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(0)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+ignore_memory_precedences -from  butterFly:write_mem(result:rsc(*)(0).@)* -to butterFly:f2:read_mem(result:rsc(*)(0).@)*
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(8)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(7)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+At least one feasible schedule exists. (CRAAS-9)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(10)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+# Info: Initial schedule of SEQUENTIAL '/ntt_flat/core': Latency = 77943, Area (Datapath, Register, Total) = 6413.95, 0.00, 6413.95 (CRAAS-11)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f1:read_mem(result:rsc(9)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+Resource allocation and scheduling done. (CRAAS-2)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(6)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+# Info: Final schedule of SEQUENTIAL '/ntt_flat/core': Latency = 77955, Area (Datapath, Register, Total) = 5805.95, 0.00, 5805.95 (CRAAS-12)
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(5)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+/ntt_flat/core/core:rlp/main/STAGE_LOOP/INNER_LOOP/butterFly:f2:read_mem(result:rsc(8)(0).@)/IGNORE_DEPENDENCY_FROM {butterFly:write_mem(result:rsc(0)(0).@) butterFly:write_mem(result:rsc(1)(0).@) butterFly:write_mem(result:rsc(2)(0).@) butterFly:write_mem(result:rsc(3)(0).@) butterFly:write_mem(result:rsc(4)(0).@) butterFly:write_mem(result:rsc(5)(0).@) butterFly:write_mem(result:rsc(6)(0).@) butterFly:write_mem(result:rsc(7)(0).@) butterFly:write_mem(result:rsc(8)(0).@) butterFly:write_mem(result:rsc(9)(0).@) butterFly:write_mem(result:rsc(10)(0).@) butterFly:write_mem(result:rsc(11)(0).@) butterFly:write_mem(result:rsc(12)(0).@) butterFly:write_mem(result:rsc(0)(0).@)#1 butterFly:write_mem(result:rsc(1)(0).@)#1 butterFly:write_mem(result:rsc(2)(0).@)#1 butterFly:write_mem(result:rsc(3)(0).@)#1 butterFly:write_mem(result:rsc(4)(0).@)#1 butterFly:write_mem(result:rsc(5)(0).@)#1 butterFly:write_mem(result:rsc(6)(0).@)#1 butterFly:write_mem(result:rsc(7)(0).@)#1 butterFly:write_mem(result:rsc(8)(0).@)#1 butterFly:write_mem(result:rsc(9)(0).@)#1 butterFly:write_mem(result:rsc(10)(0).@)#1 butterFly:write_mem(result:rsc(11)(0).@)#1 butterFly:write_mem(result:rsc(12)(0).@)#1}
+
+# Messages from "go schedule"
+
+# Info: Completed transformation 'schedule' on solution 'ntt_flat.v2': elapsed time 13.61 seconds, memory usage 2035096kB, peak memory usage 2035672kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 2004, Real ops = 110, Vars = 490 (SOL-21)
+Global signal 'result:rsc(10)(0).d' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).we' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).q' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(9)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'result:rsc(9)(0).d' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).radr' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(10)(0).q' added to design 'ntt_flat' for component 'result:rsc(10)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).radr' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).q' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Report written to file 'cycle.rpt'
+Global signal 'result:rsc(12)(0).d' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).we' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).we' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+# Warning: Input port 'r:rsc.dat' is never used. (OPT-4)
+Global signal 'result:rsc(11)(0).radr' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(11)(0).d' added to design 'ntt_flat' for component 'result:rsc(11)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).we' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).radr' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).d' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).d' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).we' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(7)(0).q' added to design 'ntt_flat' for component 'result:rsc(7)(0)i' (LIB-3)
+Global signal 'result:rsc(6)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc(9)(0).q' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+# Info: Loop '/ntt_flat/core/INNER_LOOP' is pipelined with initiation interval 3 and no flushing (SCHD-43)
+Global signal 'result:rsc(9)(0).we' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'result:rsc(9)(0).radr' added to design 'ntt_flat' for component 'result:rsc(9)(0)i' (LIB-3)
+Global signal 'result:rsc(8)(0).radr' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(1)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(1)(0):obj' (LIB-3)
+Global signal 'result:rsc(8)(0).q' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(2)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(2)(0):obj' (LIB-3)
+Global signal 'result:rsc(8)(0).d' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+# Info: Loop '/ntt_flat/core/for' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+Global signal 'result:rsc(8)(0).we' added to design 'ntt_flat' for component 'result:rsc(8)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(0)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(0)(0):obj' (LIB-3)
+Global signal 'result:rsc(4)(0).radr' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).q' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(4)(0).d' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Loop '/ntt_flat/ntt_flat:core/core/for' iterated at most 4098 times. (LOOP-2)
+Global signal 'result:rsc(4)(0).we' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).we' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).radr' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).d' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(5)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'twiddle_h:rsc.triosy.lz' added to design 'ntt_flat' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(5)(0).d' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'twiddle:rsc.triosy.lz' added to design 'ntt_flat' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(6)(0).radr' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(11)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(11)(0):obj' (LIB-3)
+Global signal 'result:rsc(6)(0).q' added to design 'ntt_flat' for component 'result:rsc(6)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(12)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(12)(0):obj' (LIB-3)
+Global signal 'result:rsc(5)(0).q' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'vec:rsc.triosy.lz' added to design 'ntt_flat' for component 'vec:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(4)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(4)(0)i' (LIB-3)
+Global signal 'result:rsc(12)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(12)(0)i' (LIB-3)
+Global signal 'result:rsc(5)(0).we' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'r:rsc.triosy.lz' added to design 'ntt_flat' for component 'r:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(5)(0).radr' added to design 'ntt_flat' for component 'result:rsc(5)(0)i' (LIB-3)
+Global signal 'p:rsc.triosy.lz' added to design 'ntt_flat' for component 'p:rsc.triosy:obj' (LIB-3)
+Global signal 'result:rsc(1)(0).q' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(5)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(5)(0):obj' (LIB-3)
+Global signal 'result:rsc(0)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).we' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(6)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(6)(0):obj' (LIB-3)
+Global signal 'result:rsc(1)(0).radr' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(3)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(3)(0):obj' (LIB-3)
+Global signal 'result:rsc(0)(0).radr' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(4)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(4)(0):obj' (LIB-3)
+Global signal 'result:rsc(0)(0).q' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(9)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(9)(0):obj' (LIB-3)
+Global signal 'result:rsc(0)(0).d' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(10)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(10)(0):obj' (LIB-3)
+Global signal 'result:rsc.triosy(7)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(7)(0):obj' (LIB-3)
+Global signal 'result:rsc(0)(0).we' added to design 'ntt_flat' for component 'result:rsc(0)(0)i' (LIB-3)
+Global signal 'result:rsc.triosy(8)(0).lz' added to design 'ntt_flat' for component 'result:rsc.triosy(8)(0):obj' (LIB-3)
+Global signal 'result:rsc(2)(0).d' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).we' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(3)(0).q' added to design 'ntt_flat' for component 'result:rsc(3)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).wadr' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc(1)(0).d' added to design 'ntt_flat' for component 'result:rsc(1)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).radr' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+Global signal 'result:rsc(2)(0).q' added to design 'ntt_flat' for component 'result:rsc(2)(0)i' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'ntt_flat.v2' (SOL-8)
+go extract
+Performing concurrent resource allocation and scheduling on '/ntt_flat/core' (CRAAS-1)
+Global signal 'twiddle:rsc.radr' added to design 'ntt_flat' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle:rsc.q' added to design 'ntt_flat' for component 'twiddle:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.radr' added to design 'ntt_flat' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'twiddle_h:rsc.q' added to design 'ntt_flat' for component 'twiddle_h:rsci' (LIB-3)
+Global signal 'vec:rsc.radr' added to design 'ntt_flat' for component 'vec:rsci' (LIB-3)
+Global signal 'vec:rsc.q' added to design 'ntt_flat' for component 'vec:rsci' (LIB-3)
+Global signal 'r:rsc.dat' added to design 'ntt_flat' for component 'r:rsci' (LIB-3)
+Global signal 'p:rsc.dat' added to design 'ntt_flat' for component 'p:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 1362, Real ops = 532, Vars = 385 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'ntt_flat.v2': elapsed time 1.63 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+Performing FSM extraction... (FSM-1)
+# Info: Starting transformation 'dpfsm' on solution 'ntt_flat.v2' (SOL-8)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 1263, Real ops = 386, Vars = 943 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'ntt_flat.v2': elapsed time 1.75 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'ntt_flat.v2' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Design complexity at end of 'extract': Total ops = 1245, Real ops = 394, Vars = 356 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'ntt_flat.v2': elapsed time 12.12 seconds, memory usage 2035672kB, peak memory usage 2035672kB (SOL-9)
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+Finished writing concatenated file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v2/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Report written to file 'rtl.rpt'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Starting transformation 'extract' on solution 'ntt_flat.v2' (SOL-8)
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v2/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v2/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Finished writing concatenated simulation file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v2/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+order file name is: rtl.vhdl_order.txt

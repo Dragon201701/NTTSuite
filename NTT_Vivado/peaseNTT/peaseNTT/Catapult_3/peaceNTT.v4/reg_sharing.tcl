@@ -1,0 +1,16 @@
+directive set /peaceNTT/peaceNTT:core/core/STAGE_LOOP:lst.sva REGISTER_NAME STAGE_LOOP:lst.sva
+directive set /peaceNTT/peaceNTT:core/core/STAGE_LOOP:lst.sva.dfm REGISTER_NAME STAGE_LOOP:lst.sva
+directive set /peaceNTT/peaceNTT:core/core/STAGE_LOOP:base:acc.cse.sva REGISTER_NAME STAGE_LOOP:base:acc.cse.sva
+directive set /peaceNTT/peaceNTT:core/core/STAGE_LOOP:c(3:0).sva REGISTER_NAME STAGE_LOOP:base:acc.cse.sva
+directive set /peaceNTT/peaceNTT:core/core/COMP_LOOP:acc#1.itm REGISTER_NAME COMP_LOOP:acc#1.itm
+directive set /peaceNTT/peaceNTT:core/core/COMP_LOOP:f2.sva REGISTER_NAME COMP_LOOP:acc#1.itm
+directive set /peaceNTT/peaceNTT:core/core/modulo_dev#1:result.sva REGISTER_NAME modulo_dev#1:result.sva
+directive set /peaceNTT/peaceNTT:core/core/modulo_dev:result.sva REGISTER_NAME modulo_dev#1:result.sva
+directive set /peaceNTT/peaceNTT:core/core/COMP_LOOP:f1.sva REGISTER_NAME modulo_dev#1:result.sva
+directive set /peaceNTT/peaceNTT:core/core/COMP_LOOP:acc#3.psp REGISTER_NAME modulo_dev#1:result.sva
+directive set /peaceNTT/peaceNTT:core/core/COPY_LOOP#1:i(10:0).sva(9:0) REGISTER_NAME COPY_LOOP#1:i(10:0).sva(9:0)
+directive set /peaceNTT/peaceNTT:core/core/COPY_LOOP:i(10:0).sva(9:0) REGISTER_NAME COPY_LOOP#1:i(10:0).sva(9:0)
+directive set /peaceNTT/peaceNTT:core/core/COMP_LOOP:r(9:0).sva#1 REGISTER_NAME COPY_LOOP#1:i(10:0).sva(9:0)
+directive set /peaceNTT/peaceNTT:core/core/COPY_LOOP#1:i(10:0).sva#1 REGISTER_NAME COPY_LOOP#1:i(10:0).sva#1
+directive set /peaceNTT/peaceNTT:core/core/COPY_LOOP:i(10:0).sva#1 REGISTER_NAME COPY_LOOP#1:i(10:0).sva#1
+directive set /peaceNTT/peaceNTT:core/core/COMP_LOOP:r(9:0).sva(8:0) REGISTER_NAME COPY_LOOP#1:i(10:0).sva#1

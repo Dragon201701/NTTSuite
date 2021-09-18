@@ -1,0 +1,47 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 7.15 seconds, memory usage 1511384kB, peak memory usage 1642456kB (SOL-9)
+go compile
+solution file set {$PROJECT_HOME/flat_md/directives.tcl} -exclude true
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+option set Input/TargetPlatform x86_64
+/INPUTFILES/7
+c++11
+option set Input/CppStandard c++11
+Moving session transcript to file "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/catapult.log"
+/INPUTFILES/6
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+/INPUTFILES/2
+solution file add ./flat_md/src/utils.cpp -exclude true
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.05 seconds, memory usage 1314776kB, peak memory usage 1314776kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+solution file add ./flat_md/src/ntt.cpp
+solution file add ./flat_md/directives.tcl
+solution file add ./flat_md/src/main.cpp -exclude true
+# Error: go analyze: Failed analyze
+/INPUTFILES/1
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+solution file add ./flat_md/include/ntt.h -exclude true
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+solution file add ./flat_md/include/config.h
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/5
+solution file add ./flat_md/include/utils.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4

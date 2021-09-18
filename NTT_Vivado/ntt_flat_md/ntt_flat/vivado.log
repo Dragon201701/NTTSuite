@@ -1,0 +1,572 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 16 11:55:00 2021
+# Process ID: 19784
+# Current directory: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat
+# Command line: vivado
+# Log file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado.log
+# Journal file: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_16384 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_16384 -part xc7vx690tffg1761-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 6738.949 ; gain = 62.602 ; free physical = 136146 ; free virtual = 506465
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ccs_in_v1' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:21]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:55]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:69]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:119]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_21_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:176]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_20_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:208]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:240]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:272]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:304]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:336]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:368]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:400]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:432]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:464]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:496]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:528]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:560]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:592]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:624]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:656]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:677]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:698]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_core_fsm' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:720]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_wait_dp' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:818]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:842]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v:2133]
+WARNING: [filemgmt 20-736] The current top specification, "ntt_flat", does not uniquely identify a single design element. Using "ntt_flat" (Library: xil_defaultlib, File: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ccs_in_v1()' found in library 'xil_defaultlib'
+Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_io_sync_v2()' found in library 'xil_defaultlib'
+Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_l_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_r_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_21_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_20_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 208 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 208 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 240 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 240 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 272 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 272 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 304 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 304 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 336 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 336 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 368 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 368 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 400 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 400 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 432 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 432 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 464 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 464 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 496 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 496 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 528 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 528 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 560 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 560 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 592 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 592 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 624 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 624 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 656 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 656 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 677 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 677 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 698 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 698 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_core_fsm()' found in library 'xil_defaultlib'
+Duplicate found at line 720 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 720 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_wait_dp()' found in library 'xil_defaultlib'
+Duplicate found at line 818 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 818 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core()' found in library 'xil_defaultlib'
+Duplicate found at line 842 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 842 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat()' found in library 'xil_defaultlib'
+Duplicate found at line 2133 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_rtl.v
+	(Active) Duplicate found at line 2133 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v9/concat_sim_rtl.v
+[Thu Sep 16 11:58:28 2021] Launched synth_1...
+Run output will be captured here: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_16384/project_16384.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 6820.332 ; gain = 0.051 ; free physical = 136124 ; free virtual = 506443
+close_project
+create_project project_4096 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096 -part xc7vx690tffg1761-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ccs_in_v1' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:21]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:55]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:69]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:119]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:176]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:208]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:240]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:272]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:304]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:336]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:368]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:400]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:432]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:464]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:496]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:528]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:560]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:592]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:613]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:634]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_core_fsm' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:656]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_wait_dp' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:754]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:778]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v:2010]
+WARNING: [filemgmt 20-736] The current top specification, "ntt_flat", does not uniquely identify a single design element. Using "ntt_flat" (Library: xil_defaultlib, File: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ccs_in_v1()' found in library 'xil_defaultlib'
+Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_io_sync_v2()' found in library 'xil_defaultlib'
+Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_l_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_r_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_19_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_18_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 208 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 208 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_17_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 240 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 240 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_16_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 272 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 272 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_15_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 304 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 304 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_14_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 336 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 336 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_13_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 368 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 368 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_12_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 400 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 400 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_11_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 432 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 432 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_10_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 464 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 464 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_9_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 496 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 496 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_8_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 528 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 528 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_7_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 560 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 560 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_5_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 592 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 592 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_4_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 613 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 613 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_1_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 634 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 634 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_core_fsm()' found in library 'xil_defaultlib'
+Duplicate found at line 656 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 656 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_wait_dp()' found in library 'xil_defaultlib'
+Duplicate found at line 754 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 754 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core()' found in library 'xil_defaultlib'
+Duplicate found at line 778 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 778 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat()' found in library 'xil_defaultlib'
+Duplicate found at line 2010 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_rtl.v
+	(Active) Duplicate found at line 2010 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v10/concat_sim_rtl.v
+[Thu Sep 16 12:07:24 2021] Launched synth_1...
+Run output will be captured here: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096/project_4096.runs/synth_1/runme.log
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_project
+create_project project_4096_2 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096_2 -part xc7vx690tffg1761-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ccs_in_v1' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:21]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:55]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:69]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:119]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_19_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:176]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_18_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:213]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_17_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:250]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_16_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:287]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_15_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:324]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_14_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:361]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_13_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:398]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_12_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:435]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_11_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:472]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_10_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:509]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_9_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:546]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_8_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:583]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_7_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:620]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_5_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:657]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_4_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:694]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_1_12_32_4096_4096_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:731]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_core_fsm' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:769]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_wait_dp' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:867]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:891]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v:2421]
+WARNING: [filemgmt 20-736] The current top specification, "ntt_flat", does not uniquely identify a single design element. Using "ntt_flat" (Library: xil_defaultlib, File: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ccs_in_v1()' found in library 'xil_defaultlib'
+Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_io_sync_v2()' found in library 'xil_defaultlib'
+Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_l_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_r_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_19_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_18_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 213 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 213 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_17_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 250 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 250 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_16_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 287 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 287 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_15_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 324 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 324 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_14_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 361 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 361 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_13_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 398 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 398 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_12_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 435 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 435 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_11_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 472 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 472 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_10_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 509 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 509 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_9_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 546 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 546 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_8_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 583 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 583 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_7_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 620 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 620 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_5_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 657 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 657 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_4_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 694 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 694 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_1_12_32_4096_4096_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 731 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 731 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_core_fsm()' found in library 'xil_defaultlib'
+Duplicate found at line 769 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 769 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_wait_dp()' found in library 'xil_defaultlib'
+Duplicate found at line 867 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 867 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core()' found in library 'xil_defaultlib'
+Duplicate found at line 891 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 891 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat()' found in library 'xil_defaultlib'
+Duplicate found at line 2421 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_rtl.v
+	(Active) Duplicate found at line 2421 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v11/concat_sim_rtl.v
+[Thu Sep 16 12:13:49 2021] Launched synth_1...
+Run output will be captured here: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096_2/project_4096_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+[Thu Sep 16 12:31:25 2021] Launched impl_1...
+Run output will be captured here: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_4096_2/project_4096_2.runs/impl_1/runme.log
+close_project
+create_project project_1024 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_1024 -part xc7vx690tffg1761-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ccs_in_v1' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:21]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:55]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:69]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:119]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_17_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:176]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_16_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:213]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_15_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:250]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_14_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:287]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_13_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:324]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_12_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:361]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_11_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:398]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_10_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:435]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_9_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:472]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_8_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:509]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_7_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:546]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_5_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:583]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_4_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:620]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_1_10_32_1024_1024_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:657]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_core_fsm' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:695]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_wait_dp' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:793]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:817]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v:2270]
+WARNING: [filemgmt 20-736] The current top specification, "ntt_flat", does not uniquely identify a single design element. Using "ntt_flat" (Library: xil_defaultlib, File: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ccs_in_v1()' found in library 'xil_defaultlib'
+Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_io_sync_v2()' found in library 'xil_defaultlib'
+Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_l_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_r_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_17_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_16_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 213 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 213 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_15_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 250 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 250 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_14_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 287 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 287 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_13_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 324 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 324 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_12_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 361 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 361 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_11_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 398 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 398 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_10_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 435 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 435 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_9_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 472 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 472 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_8_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 509 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 509 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_7_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 546 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 546 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_5_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 583 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 583 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_4_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 620 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 620 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_1_10_32_1024_1024_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 657 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 657 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_core_fsm()' found in library 'xil_defaultlib'
+Duplicate found at line 695 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 695 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_wait_dp()' found in library 'xil_defaultlib'
+Duplicate found at line 793 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 793 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core()' found in library 'xil_defaultlib'
+Duplicate found at line 817 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 817 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat()' found in library 'xil_defaultlib'
+Duplicate found at line 2270 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_rtl.v
+	(Active) Duplicate found at line 2270 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_1/ntt_flat.v12/concat_sim_rtl.v
+[Thu Sep 16 12:41:58 2021] Launched synth_1...
+Run output will be captured here: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_1024/project_1024.runs/synth_1/runme.log
+close_project
+create_project project_16384_2 /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_16384_2 -part xc7vx690tffg1761-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2019/Vivado/2019.1/data/ip'.
+add_files -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v}
+add_files -fileset constrs_1 -norecurse {/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/vivado_concat_v/concat_rtl.v.xv.sdc /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/vivado_concat_v/concat_rtl.v.xv.signoff.sdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ccs_in_v1' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:21]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:55]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:69]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'mgc_shift_r_v5' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:119]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_21_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:176]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_20_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:214]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_19_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:252]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_18_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:290]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_17_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:328]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_16_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:366]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_15_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:404]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_14_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:442]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_13_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:480]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_12_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:518]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_11_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:556]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_10_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:594]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_9_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:632]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_8_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:669]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_7_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:706]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_5_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:743]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_4_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:780]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_1_14_32_16384_16384_32_1_gen' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:817]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_core_fsm' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:855]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core_wait_dp' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:953]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat_core' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:977]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ntt_flat' [/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v:2620]
+WARNING: [filemgmt 20-736] The current top specification, "ntt_flat", does not uniquely identify a single design element. Using "ntt_flat" (Library: xil_defaultlib, File: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ccs_in_v1()' found in library 'xil_defaultlib'
+Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 21 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_io_sync_v2()' found in library 'xil_defaultlib'
+Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 55 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_l_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 69 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'mgc_shift_r_v5()' found in library 'xil_defaultlib'
+Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 119 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_21_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 176 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_20_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 214 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 214 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_19_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 252 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 252 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_18_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 290 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 290 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_17_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 328 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 328 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_16_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 366 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 366 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_15_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 404 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 404 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_14_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 442 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 442 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_13_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 480 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 480 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_12_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 518 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 518 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_11_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 556 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 556 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_10_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 594 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 594 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_9_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 632 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 632 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_8_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 669 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 669 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_7_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 706 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 706 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_5_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 743 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 743 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_4_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 780 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 780 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_Xilinx_RAMS_BLOCK_DPRAM_RBW_rwport_1_14_32_16384_16384_32_1_gen()' found in library 'xil_defaultlib'
+Duplicate found at line 817 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 817 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_core_fsm()' found in library 'xil_defaultlib'
+Duplicate found at line 855 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 855 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core_wait_dp()' found in library 'xil_defaultlib'
+Duplicate found at line 953 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 953 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat_core()' found in library 'xil_defaultlib'
+Duplicate found at line 977 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 977 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ntt_flat()' found in library 'xil_defaultlib'
+Duplicate found at line 2620 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_rtl.v
+	(Active) Duplicate found at line 2620 of file /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult_2/ntt_flat.v1/concat_sim_rtl.v
+[Thu Sep 16 13:14:32 2021] Launched synth_1...
+Run output will be captured here: /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/vivado/project_16384_2/project_16384_2.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 16 14:19:09 2021...

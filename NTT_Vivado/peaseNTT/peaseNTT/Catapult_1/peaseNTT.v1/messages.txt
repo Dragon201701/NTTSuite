@@ -1,0 +1,174 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.14 seconds, memory usage 1445284kB, peak memory usage 1445284kB (SOL-9)
+go analyze
+c++11
+go compile
+
+/INPUTFILES/6
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/catapult.log"
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+Pragma 'hls_design<>' detected on routine 'butterFly2' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'butterFly1' (CIN-6)
+/INPUTFILES/2
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaseNTT' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+solution file add ./src/main.cpp -exclude true
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+solution file add ./src/utils.cpp -exclude true
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+solution file add ./include/ntt.h -exclude true
+solution file add ../../../../NTT_Xilinx/Catapult/peaseNTT_md/directives.tcl -exclude true
+/INPUTFILES/5
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'peaseNTT.v1': elapsed time 3.07 seconds, memory usage 1445284kB, peak memory usage 1445284kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 329, Real ops = 34, Vars = 89 (SOL-21)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Design 'peaseNTT' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_1/peaseNTT.v1/CDesignChecker/design_checker.sh'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'peaseNTT.v1' (SOL-8)
+Optimizing block '/peaseNTT/mult' ... (CIN-4)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Synthesizing routine 'mult' (CIN-13)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator>><64, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+Optimizing block '/peaseNTT/modulo_sub' ... (CIN-4)
+Inlining routine 'operator<<32, true>' (CIN-14)
+INOUT port 'xt' is only used as an input. (OPT-10)
+Optimizing block '/peaseNTT/butterFly1' ... (CIN-4)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Optimizing block '/peaseNTT/modulo_add' ... (CIN-4)
+Inlining routine 'modulo_sub' (CIN-14)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Found top design routine 'peaseNTT' specified by directive (CIN-52)
+Found design routine 'butterFly2' specified by directive (CIN-52)
+Inlining routine 'peaseNTT' (CIN-14)
+Synthesizing routine 'peaseNTT' (CIN-13)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Found design routine 'butterFly1' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+Inlining routine 'butterFly1' (CIN-14)
+Synthesizing routine 'butterFly1' (CIN-13)
+Inlining routine 'operator<<<32, false>' (CIN-14)
+Inlining routine 'operator<<<32, false>' (CIN-14)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator>=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator<<<34, true>' (CIN-14)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator>=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator<<<34, true>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator-=<32, false>' (CIN-14)
+Inlining routine 'operator+=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+INOUT port 'xt' is only used as an input. (OPT-10)
+Optimizing block '/peaseNTT/butterFly2' ... (CIN-4)
+Inlining routine 'butterFly2' (CIN-14)
+Synthesizing routine 'butterFly2' (CIN-13)
+Inlining routine 'operator<<<32, false>' (CIN-14)
+Inlining routine 'operator<<<32, false>' (CIN-14)
+INOUT port 'yt' is only used as an output. (OPT-11)
+Inlining routine 'operator<<<34, true>' (CIN-14)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Optimizing block '/peaseNTT' ... (CIN-4)
+Inlining routine 'operator-=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator<<<34, true>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'yt' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'operator-<32, false>' (CIN-14)
+Inlining routine 'operator+=<32, false>' (CIN-14)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Loop '/peaseNTT/core/STAGE_LOOP' iterated at most 5 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP2' iterated at most 128 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP4' iterated at most 128 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP3' iterated at most 128 times. (LOOP-2)
+Loop '/peaseNTT/core/INNER_LOOP1' iterated at most 128 times. (LOOP-2)
+Loop '/peaseNTT/core/STAGE_LOOP1' iterated at most 1 times. (LOOP-2)
+Loop '/peaseNTT/core/STAGE_LOOP' iterated at most 4 times. (LOOP-2)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 329, Real ops = 34, Vars = 89 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'peaseNTT.v1': elapsed time 0.77 seconds, memory usage 1445180kB, peak memory usage 1445284kB (SOL-9)
+# Info: Starting transformation 'libraries' on solution 'peaseNTT.v1' (SOL-8)
+project save
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1761-2
+Saving project file '/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/Catapult_1.ccs'. (PRJ-5)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+go libraries
+solution library add Xilinx_RAMS
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 335, Real ops = 34, Vars = 92 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'peaseNTT.v1': elapsed time 0.31 seconds, memory usage 1445744kB, peak memory usage 1445744kB (SOL-9)
+go assembly
+/CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.55 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5.1 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.55 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'peaseNTT.v1' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Completed transformation 'loops' on solution 'peaseNTT.v1': elapsed time 0.08 seconds, memory usage 1445744kB, peak memory usage 1445744kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 350, Real ops = 34, Vars = 107 (SOL-21)
+Loop '/peaseNTT/core/INNER_LOOP3' is left rolled. (LOOP-4)
+directive set SCHED_USE_MULTICYCLE true
+go memories
+Loop '/peaseNTT/core/INNER_LOOP1' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'peaseNTT.v1' (SOL-8)
+Loop '/peaseNTT/core/STAGE_LOOP' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/INNER_LOOP2' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/main' is left rolled. (LOOP-4)
+Loop '/peaseNTT/core/INNER_LOOP4' is left rolled. (LOOP-4)

@@ -1,0 +1,69 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 0.20 seconds, memory usage 1314168kB, peak memory usage 1314188kB (SOL-9)
+Pragma 'hls_design<top>' detected on routine 'stockham_dit' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+go analyze
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.21 seconds, memory usage 1314188kB, peak memory usage 1314188kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp" (CRD-1)
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go analyze
+c++11
+/INPUTFILES/6
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+solution file add ./include/ntt.h -exclude true
+solution file add ./include/config.h
+/INPUTFILES/5
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/catapult.log"
+solution file add ./src/utils.cpp -exclude true
+solution file add ./src/ntt.cpp
+/INPUTFILES/1
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4
+/INPUTFILES/2
+solution file add ./src/main.cpp -exclude true
+# Error: Compilation aborted (CIN-5)
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.07 seconds, memory usage 1314188kB, peak memory usage 1314188kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/stockham/src/ntt.cpp (CIN-69)
+
+# Messages from "go compile"
+
+# Error: Compilation aborted (CIN-5)
+# Error: No definition for routine 'modulo_sub' (CIN-16)
+Found top design routine 'stockham_dit' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+go compile
+Inlining routine 'stockham_dit' (CIN-14)
+# Info: Starting transformation 'compile' on solution 'stockham_dit.v1' (SOL-8)
+Synthesizing routine 'stockham_dit' (CIN-13)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'mult' (CIN-14)

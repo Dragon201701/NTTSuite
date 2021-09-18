@@ -1,0 +1,181 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'ntt_flat.v11': elapsed time 8.53 seconds, memory usage 1837940kB, peak memory usage 1837940kB (SOL-9)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+ntt_flat.v11
+# Info: Branching solution 'ntt_flat.v11' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'ntt_flat.v11' (SOL-8)
+go libraries
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.89 seconds, memory usage 1641332kB, peak memory usage 1641836kB (SOL-9)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+File '$PROJECT_HOME/flat_md/src/utils.cpp' saved
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+go analyze
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+File '$PROJECT_HOME/flat_md/src/main.cpp' saved
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.45 seconds, memory usage 1641836kB, peak memory usage 1641836kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'ntt_flat' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+File '$PROJECT_HOME/flat_md/src/utils.cpp' saved
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go analyze
+c++11
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+# Error: Compilation aborted (CIN-5)
+# Error: go analyze: Failed analyze
+# Error: #error directive: Please use C++11 or a later standard for compilation. (CRD-35)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 1.27 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
+/INPUTFILES/3
+solution file add ./flat_md/include/utils.h -exclude true
+solution file add ./flat_md/src/ntt.cpp
+solution file add ./flat_md/src/main.cpp -exclude true
+/INPUTFILES/2
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/include/config.h /home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/flat_md/src/ntt.cpp (CIN-69)
+solution file add ./flat_md/include/config.h
+# Error: Compilation aborted (CIN-5)
+go analyze
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+/INPUTFILES/6
+solution file add ./flat_md/include/ntt.h -exclude true
+/INPUTFILES/4
+/INPUTFILES/5
+go analyze
+# Error: go analyze: Failed analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.05 seconds, memory usage 1314272kB, peak memory usage 1314272kB (SOL-9)
+x86_64
+option set Input/TargetPlatform x86_64
+solution file add ./flat_md/src/utils.cpp -exclude true
+Saving project file '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult.ccs'. (PRJ-5)
+/INPUTFILES/1
+project save
+Moving session transcript to file "/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/catapult.log"
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'ntt_flat.v11': elapsed time 4.08 seconds, memory usage 1837940kB, peak memory usage 1837940kB (SOL-9)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'ntt_flat.v11' (SOL-8)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'mult' (CIN-14)
+INOUT port 'vec' is only used as an input. (OPT-10)
+Optimizing block '/ntt_flat' ... (CIN-4)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Inlining routine 'operator<=<20, false>' (CIN-14)
+Inlining routine 'operator<<<33, true>' (CIN-14)
+Inlining routine 'operator-<20, false>' (CIN-14)
+Synthesizing routine 'ntt_flat' (CIN-13)
+Found top design routine 'ntt_flat' specified by directive (CIN-52)
+Inlining routine 'operator<<20, false>' (CIN-14)
+Loop '/ntt_flat/core/STAGE_LOOP' iterated at most 12 times. (LOOP-2)
+Inlining routine 'ntt_flat' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'modulo_add' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Loop '/ntt_flat/core/INNER_LOOP' iterated at most 2048 times. (LOOP-2)
+Inlining routine 'operator<<<20, false>' (CIN-14)
+Loop '/ntt_flat/core/for' iterated at most 4096 times. (LOOP-2)
+Inlining routine 'operator>><20, false>' (CIN-14)
+Inlining routine 'operator+<20, false>' (CIN-14)
+Inlining routine 'butterFly' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/ls5382/project/forPython/pythonSelfUseCtype/ntt_flat/Catapult/ntt_flat.v11/CDesignChecker/design_checker.sh'
+Design 'ntt_flat' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'ntt_flat.v11': elapsed time 0.34 seconds, memory usage 1837940kB, peak memory usage 1837940kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'ntt_flat.v11' (SOL-8)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 92, Real ops = 40, Vars = 28 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'ntt_flat.v11': elapsed time 0.13 seconds, memory usage 1837940kB, peak memory usage 1837940kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'ntt_flat.v11' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 104, Real ops = 40, Vars = 34 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'ntt_flat.v11': elapsed time 0.04 seconds, memory usage 1838456kB, peak memory usage 1838456kB (SOL-9)
+# Info: Starting transformation 'loops' on solution 'ntt_flat.v11' (SOL-8)
+go architect
+Loop '/ntt_flat/core/INNER_LOOP' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/for' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/main' is left rolled. (LOOP-4)
+Loop '/ntt_flat/core/STAGE_LOOP' is left rolled. (LOOP-4)
+/ntt_flat/result:rsc/BLOCK_SIZE 4096
+directive set /ntt_flat/result:rsc -BLOCK_SIZE 4096
+# Info: Design complexity at end of 'memories': Total ops = 272, Real ops = 40, Vars = 58 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'ntt_flat.v11': elapsed time 0.55 seconds, memory usage 1838456kB, peak memory usage 1838456kB (SOL-9)
+Memory Resource '/ntt_flat/vec:rsc' (from var: vec) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'ntt_flat.v11' (SOL-8)
+I/O-Port Resource '/ntt_flat/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+I/O-Port Resource '/ntt_flat/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+Memory Resource '/ntt_flat/result:rsc(2)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(1)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(4)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(3)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(0)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Resource '/ntt_flat/result:rsc' split into 13 x 1 blocks (MEM-11)
+Memory Resource '/ntt_flat/result:rsc(10)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(9)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(12)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(11)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(6)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(5)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(8)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+Memory Resource '/ntt_flat/result:rsc(7)(0)' (from var: result) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW' (size: 4096 x 32). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 272, Real ops = 40, Vars = 58 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'ntt_flat.v11': elapsed time 0.07 seconds, memory usage 1838456kB, peak memory usage 1838456kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'ntt_flat.v11' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 488, Real ops = 95, Vars = 98 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'ntt_flat.v11': elapsed time 1.15 seconds, memory usage 1838456kB, peak memory usage 1838456kB (SOL-9)
+Design 'ntt_flat' contains '95' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'ntt_flat.v11' (SOL-8)
+
+# Messages from "go allocate"
+
+go allocate

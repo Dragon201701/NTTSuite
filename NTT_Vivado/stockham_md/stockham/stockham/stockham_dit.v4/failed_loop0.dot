@@ -1,0 +1,25 @@
+digraph G {
+  size="7.5,10"; center=true; ratio=auto;
+  m1[fontname=Fixed,labeljust=left,label="--- Edge mode = (mode : cns_cycle) ----------------------\l  1: ctrlseq  - sequence in original inperative code     \l  2: chained  - dependency starts from end of predecessor\l  4: feedback - feedback edge                            \l  8: lpbranch - edge created from a next/exit            \l 16: soft     - constraint can be removed                \l 32: user     - user constraints                         \l 64: iomode   - constraint inherited from iomode         \l128: ctrldep  - control dependency                       \l256: datadep  - data dependency                          \l",shape=none];
+  n365[label="n365 : DOPER\n 289cy+2.745\n",shape=ellipse,style=filled,color=bisque];
+  n371[label="n371 : DOPER\n 289cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n361[label="n361 : ZOPER\n 289cy+2.745\n",shape=ellipse];
+  n360[label="n360 : DOPER\n 289cy+1.365\n",shape=ellipse,style=filled,color=bisque];
+  n359[label="n359 : ZOPER\n 289cy+1.365\n",shape=ellipse];
+  n357[label="n357 : DOPER\n 289cy\n",shape=ellipse,style=filled,color=bisque];
+  n196[label="n196 : DOPER\n 288cy+2.4\n",shape=ellipse,style=filled,color=bisque];
+  n61[label="n61 : DOPER\n 287cy+4\n",shape=ellipse,style=filled,color=bisque];
+  n437[label="n437 : DOPER\n 288cy+4\n",shape=ellipse,style=filled,color=bisque];
+  m2[fontname=Fixed,labeljust=left,label="n365 : 0x7fc8df3018f0 modulo_add:mux\ln371 : 0x7fc8c77caf80 for:for:write_mem(xt:rsc(0)(0).@)\ln361 : 0x7fc8df25cad0 modulo_add:slc()(32)\ln360 : 0x7fc8c77d77d0 modulo_add:acc#1\ln359 : 0x7fc8df25db00 for:for:not#1\ln357 : 0x7fc8bcdbd610 for:for:acc#2\ln196 : 0x7fc8deace780 for:for:a:for:for:a:mux1h\ln61  : 0x7fc8cf091dc0 for:for:a:read_mem(xt:rsc(0)(0).@)\ln437 : 0x7fc8c77cd8c0 for:for:write_mem(xt:rsc(0)(0).@)#1\l",shape=none];
+  n365 -> n371[label="258 : 0",color=blue];
+  n361 -> n365[label="258 : 0",color=blue];
+  n360 -> n361[label="259 : 0",color=green2];
+  n359 -> n360[label="259 : 0",color=green2];
+  n357 -> n359[label="258 : 0",color=blue];
+  n196 -> n357[label="258 : 0",color=blue];
+  n61 -> n196[label="258 : 0",color=blue];
+  n437 -> n61[label="262 : 0",color=red, style=bold];
+  n371 -> n437[label="258 : 0",color=blue];
+  n371 -> n61[label="262 : 0",color=red, style=bold];
+}
+

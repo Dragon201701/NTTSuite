@@ -1,0 +1,249 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 7.13 seconds, memory usage 1642988kB, peak memory usage 1642988kB (SOL-9)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'peaseNTT' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-47)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'butterFly2' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'butterFly1' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+go analyze
+# Warning: last line of file ends without a newline (CRD-1)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-67)
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 6.11 seconds, memory usage 1642988kB, peak memory usage 1642988kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Error: expected a "}" (CRD-67)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-47)
+# Error: expected an expression (CRD-29)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-47)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected a ";" (CRD-65)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-29)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Error: expected an expression (CRD-29)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+# Error: expected a ";" (CRD-65)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-29)
+go analyze
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: expected an expression (CRD-29)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected a ";" (CRD-65)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-29)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected an expression (CRD-29)
+# Error: go analyze: Failed analyze
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 5.97 seconds, memory usage 1642988kB, peak memory usage 1642988kB (SOL-9)
+# Error: expected a ";" (CRD-65)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-29)
+# Error: expected a declaration (CRD-169)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-169)
+# Error: expected a ";" (CRD-65)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-77)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+File '$PROJECT_HOME/src/ntt.cpp' saved
+go analyze
+# Error: go analyze: Failed analyze
+# Info: Completed transformation 'new' on solution 'solution.v3': elapsed time 5.93 seconds, memory usage 1577452kB, peak memory usage 1642988kB (SOL-9)
+File '$PROJECT_HOME/src/ntt.cpp' saved
+File '$PROJECT_HOME/src/ntt.cpp' saved
+# Error: expected a ";" (CRD-65)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-18)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: type name is not allowed (CRD-254)
+# Error: identifier "run" is undefined (CRD-20)
+# Error: expected a ")" (CRD-18)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-254)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: this declaration has no storage class or type specifier (CRD-77)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Error: this declaration has no storage class or type specifier (CRD-77)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Error: expected a ";" (CRD-65)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-77)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-47)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-70)
+# Error: incomplete type is not allowed (CRD-70)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-20)
+# Error: identifier "ac_sync" is undefined (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-147)
+# Error: declaration is incompatible with "void peaseNTT(DATA_TYPE *, DATA_TYPE, DATA_TYPE, DATA_TYPE *, DATA_TYPE *)" (declared at line 52 of "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/../include/ntt.h") (CRD-147)
+go analyze
+# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: Compilation aborted (CIN-5)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-169)
+# Error: this declaration has no storage class or type specifier (CRD-77)
+# Error: go analyze: Failed analyze
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 2.59 seconds, memory usage 1446380kB, peak memory usage 1446380kB (SOL-9)
+# Error: expected a ")" (CRD-18)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-254)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected a ";" (CRD-65)
+# Error: expected a declaration (CRD-169)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-18)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Error: this declaration has no storage class or type specifier (CRD-77)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Error: expected a ";" (CRD-65)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-77)
+# Error: expected a ";" (CRD-65)
+Input file has changed
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-77)
+File '$PROJECT_HOME/include/config.h' saved
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+solution file set {$PROJECT_HOME/include/config.h} -updated
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-47)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+File '$PROJECT_HOME/include/ntt.h' saved
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-20)
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+# Error: identifier "ac_sync" is undefined (CRD-20)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Error: type name is not allowed (CRD-254)
+go analyze
+# Error: identifier "run" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-147)
+# Error: declaration is incompatible with "void peaseNTT(DATA_TYPE *, DATA_TYPE, DATA_TYPE, DATA_TYPE *, DATA_TYPE *)" (declared at line 52 of "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/../include/ntt.h") (CRD-147)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-70)
+# Error: incomplete type is not allowed (CRD-70)
+# Error: identifier "ac_sync" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-70)
+# Error:             argument types are: (ac_int<33, false>, DATA_TYPE) (CRD-308)
+# Error:             function "modulo_add(DATA_TYPE, DATA_TYPE)" (from translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp") (CRD-308)
+# Error: declaration is incompatible with "void peaseNTT(DATA_TYPE *, DATA_TYPE, DATA_TYPE, DATA_TYPE *, DATA_TYPE *)" (declared at line 52 of "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/../include/ntt.h") (CRD-147)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-308)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-47)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Warning: incompatible redefinition of macro "VECTOR_WIDTH" (declared at line 7) (CRD-47)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-169)
+# Error: expected a declaration (CRD-169)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-77)
+# Error: this declaration has no storage class or type specifier (CRD-77)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected a ";" (CRD-65)
+solution file set {$PROJECT_HOME/include/ntt.h} -updated
+Input file has changed
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.54 seconds, memory usage 1446364kB, peak memory usage 1446364kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+File '$PROJECT_HOME/include/ntt.h' saved
+# Error: go analyze: Failed analyze
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-18)
+# Error: expected a ")" (CRD-18)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected a ";" (CRD-65)
+# Error: identifier "run" is undefined (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-20)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-254)
+# Error: type name is not allowed (CRD-254)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-65)
+# Error: expected a ";" (CRD-65)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-12)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-77)
+# Error: this declaration has no storage class or type specifier (CRD-77)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-308)
+# Error:             argument types are: (ac_int<33, false>, DATA_TYPE) (CRD-308)
+# Error:             function "modulo_add(DATA_TYPE_SIGNED, DATA_TYPE)" (from translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp") (CRD-308)
+# Error: more than one instance of overloaded function "modulo_add" matches the argument list: (CRD-308)
+# Error: more than one instance of overloaded function "modulo_add" matches the argument list: (CRD-308)
+# Warning:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-1)
+# Error:             function "modulo_add(DATA_TYPE, DATA_TYPE)" (from translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp") (CRD-308)
+# Error:             function "modulo_add(DATA_TYPE_SIGNED, DATA_TYPE)" (from translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp") (CRD-308)
+# Error: incomplete type is not allowed (CRD-70)
+# Error:           detected during compilation of secondary translation unit "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp" (CRD-147)
+solution file add ./include/ntt.h -exclude true
+Front End called with arguments: -- /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/include/config.h /home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/src/ntt.cpp (CIN-69)
+solution file add ./include/config.h
+/INPUTFILES/5
+solution file add ./include/utils.h -exclude true
+/INPUTFILES/3
+/INPUTFILES/4
+solution file add ../../../../NTT_Xilinx/Catapult/flat_md/directives.tcl -exclude true
+# Error: go analyze: Failed analyze
+/INPUTFILES/7
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.05 seconds, memory usage 1315288kB, peak memory usage 1315288kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+option set Input/CppStandard c++11
+option set Input/TargetPlatform x86_64
+go analyze
+c++11
+/INPUTFILES/2
+Moving session transcript to file "/home/ls5382/project/forPython/ctype/pythonSelfUseCtype/peaseNTT/catapult.log"
+solution file add ./src/main.cpp -exclude true
+/INPUTFILES/6
+solution file add ./src/utils.cpp -exclude true
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+solution file add ./src/ntt.cpp
+go analyze
+/INPUTFILES/1

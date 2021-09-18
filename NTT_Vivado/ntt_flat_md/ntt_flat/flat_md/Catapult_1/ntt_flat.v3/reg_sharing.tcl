@@ -1,0 +1,12 @@
+directive set /ntt_flat/ntt_flat:core/core/INNER_LOOP:tf:asn.itm.1 REGISTER_NAME INNER_LOOP:tf:asn.itm.1
+directive set /ntt_flat/ntt_flat:core/core/modulo_sub:base.sva REGISTER_NAME INNER_LOOP:tf:asn.itm.1
+directive set /ntt_flat/ntt_flat:core/core/butterFly:f1.sva.1 REGISTER_NAME butterFly:f1.sva.1
+directive set /ntt_flat/ntt_flat:core/core/modulo_add:base.sva REGISTER_NAME butterFly:f1.sva.1
+directive set /ntt_flat/ntt_flat:core/core/INNER_LOOP:k(13:0).sva.1 REGISTER_NAME INNER_LOOP:k(13:0).sva.1
+directive set /ntt_flat/ntt_flat:core/core/INNER_LOOP:j:slc(INNER_LOOP:j(9:0))(8-0).itm REGISTER_NAME INNER_LOOP:k(13:0).sva.1
+directive set /ntt_flat/ntt_flat:core/core/mult:res.sva REGISTER_NAME mult:res.sva
+directive set /ntt_flat/ntt_flat:core/core/mult:z:slc(mult:z:mul:cmp.z)(31-0).itm.2 REGISTER_NAME mult:res.sva
+directive set /ntt_flat/ntt_flat:core/core/INNER_LOOP:tf:asn.itm REGISTER_NAME INNER_LOOP:tf:asn.itm
+directive set /ntt_flat/ntt_flat:core/core/modulo_sub:_qr.lpi#3.dfm.1 REGISTER_NAME INNER_LOOP:tf:asn.itm
+directive set /ntt_flat/ntt_flat:core/core/operator+<20,false>:acc.itm REGISTER_NAME operator+<20,false>:acc.itm
+directive set /ntt_flat/ntt_flat:core/core/operator+<20,false>:acc.itm.5 REGISTER_NAME operator+<20,false>:acc.itm
