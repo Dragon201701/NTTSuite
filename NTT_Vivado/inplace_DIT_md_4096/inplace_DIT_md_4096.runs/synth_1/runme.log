@@ -1,0 +1,1113 @@
+
+*** Running vivado
+    with args -log inPlaceNTT_DIT_precomp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source inPlaceNTT_DIT_precomp.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source inPlaceNTT_DIT_precomp.tcl -notrace
+Command: synth_design -top inPlaceNTT_DIT_precomp -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11880 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1010.996 ; gain = 178.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:4553]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_13_12_32_4096_4096_32_1_gen' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:801]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_13_12_32_4096_4096_32_1_gen' (1#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:801]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_12_32_4096_4096_32_1_gen' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:761]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_12_32_4096_4096_32_1_gen' (2#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:761]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_12_32_4096_4096_32_1_gen' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:721]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_12_32_4096_4096_32_1_gen' (3#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:721]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2521]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 14 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1' (4#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'modulo_sub' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:251]
+INFO: [Synth 8-6157] synthesizing module 'modulo_sub_core' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:183]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized0' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 9 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized0' (4#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 10 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized1' (4#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'mgc_out_dreg_v2' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:153]
+	Parameter rscid bound to: 11 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_out_dreg_v2' (5#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:153]
+INFO: [Synth 8-6155] done synthesizing module 'modulo_sub_core' (6#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:183]
+INFO: [Synth 8-6155] done synthesizing module 'modulo_sub' (7#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:251]
+INFO: [Synth 8-6157] synthesizing module 'modulo_add' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:384]
+INFO: [Synth 8-6157] synthesizing module 'modulo_add_core' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:294]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized2' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 6 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized2' (7#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized3' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 7 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized3' (7#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'mgc_out_dreg_v2__parameterized0' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:153]
+	Parameter rscid bound to: 8 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_out_dreg_v2__parameterized0' (7#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:153]
+INFO: [Synth 8-6155] done synthesizing module 'modulo_add_core' (8#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:294]
+INFO: [Synth 8-6155] done synthesizing module 'modulo_add' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:384]
+INFO: [Synth 8-6157] synthesizing module 'mult' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:622]
+INFO: [Synth 8-6157] synthesizing module 'mult_core' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:427]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized4' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 1 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized4' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized5' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 2 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized5' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized6' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 3 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized6' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized7' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 4 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized7' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6157] synthesizing module 'mgc_out_dreg_v2__parameterized1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:153]
+	Parameter rscid bound to: 5 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_out_dreg_v2__parameterized1' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:153]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_v1__parameterized8' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+	Parameter rscid bound to: 21 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1__parameterized8' (9#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:119]
+INFO: [Synth 8-6155] done synthesizing module 'mult_core' (10#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:427]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (11#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:622]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_l_v5' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:656]
+	Parameter width_a bound to: 1 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_l_v5' (12#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:656]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_l_v5__parameterized0' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:656]
+	Parameter width_a bound to: 1 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_l_v5__parameterized0' (12#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:656]
+INFO: [Synth 8-6157] synthesizing module 'mgc_shift_l_v5__parameterized1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:656]
+	Parameter width_a bound to: 1 - type: integer 
+	Parameter signd_a bound to: 0 - type: integer 
+	Parameter width_s bound to: 4 - type: integer 
+	Parameter width_z bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_shift_l_v5__parameterized1' (12#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:656]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_run_rsci' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2471]
+INFO: [Synth 8-6157] synthesizing module 'ccs_sync_in_wait_v1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:20]
+	Parameter rscid bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_sync_in_wait_v1' (13#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:20]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2015]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_ctrl' (14#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2015]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_dp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1958]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_dp' (15#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1958]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_run_rsci' (16#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2471]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsci_1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2378]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1904]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl' (17#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1904]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_dp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1826]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_dp' (18#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1826]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsci_1' (19#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2378]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_wait_dp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1802]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_wait_dp' (20#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1802]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsci_1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2310]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1771]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl' (21#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1771]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1709]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp' (22#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1709]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsci_1' (23#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2310]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2242]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1678]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl' (24#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1678]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1616]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp' (25#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1616]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1' (26#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2242]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_complete_rsci' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2188]
+INFO: [Synth 8-6157] synthesizing module 'ccs_sync_out_wait_v1' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:53]
+	Parameter rscid bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs_sync_out_wait_v1' (27#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:53]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_complete_rsci_complete_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1587]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_complete_rsci_complete_wait_ctrl' (28#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1587]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_complete_rsci_complete_wait_dp' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1555]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_complete_rsci_complete_wait_dp' (29#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1555]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_complete_rsci' (30#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2188]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsc_triosy_obj' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2158]
+INFO: [Synth 8-6157] synthesizing module 'mgc_io_sync_v2' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:87]
+	Parameter valid bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mgc_io_sync_v2' (31#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:87]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1537]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl' (32#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1537]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_vec_rsc_triosy_obj' (33#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2158]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_p_rsc_triosy_obj' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2128]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl' (34#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_p_rsc_triosy_obj' (35#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2128]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_r_rsc_triosy_obj' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2098]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1501]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl' (36#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1501]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_r_rsc_triosy_obj' (37#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2098]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsc_triosy_obj' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2067]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1482]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl' (38#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1482]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_rsc_triosy_obj' (39#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2067]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsc_triosy_obj' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2036]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1462]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl' (40#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1462]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_twiddle_h_rsc_triosy_obj' (41#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2036]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_staller' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1430]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_staller' (42#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:1430]
+INFO: [Synth 8-6157] synthesizing module 'inPlaceNTT_DIT_precomp_core_core_fsm' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:842]
+	Parameter main_C_0 bound to: 7'b0000000 
+	Parameter STAGE_LOOP_C_0 bound to: 7'b0000001 
+	Parameter COMP_LOOP_C_0 bound to: 7'b0000010 
+	Parameter COMP_LOOP_C_1 bound to: 7'b0000011 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_0 bound to: 7'b0000100 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_1 bound to: 7'b0000101 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_2 bound to: 7'b0000110 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_3 bound to: 7'b0000111 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_4 bound to: 7'b0001000 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_5 bound to: 7'b0001001 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_6 bound to: 7'b0001010 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_7 bound to: 7'b0001011 
+	Parameter COMP_LOOP_1_VEC_LOOP_C_8 bound to: 7'b0001100 
+	Parameter COMP_LOOP_C_2 bound to: 7'b0001101 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_0 bound to: 7'b0001110 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_1 bound to: 7'b0001111 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_2 bound to: 7'b0010000 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_3 bound to: 7'b0010001 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_4 bound to: 7'b0010010 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_5 bound to: 7'b0010011 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_6 bound to: 7'b0010100 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_7 bound to: 7'b0010101 
+	Parameter COMP_LOOP_2_VEC_LOOP_C_8 bound to: 7'b0010110 
+	Parameter COMP_LOOP_C_3 bound to: 7'b0010111 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_0 bound to: 7'b0011000 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_1 bound to: 7'b0011001 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_2 bound to: 7'b0011010 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_3 bound to: 7'b0011011 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_4 bound to: 7'b0011100 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_5 bound to: 7'b0011101 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_6 bound to: 7'b0011110 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_7 bound to: 7'b0011111 
+	Parameter COMP_LOOP_3_VEC_LOOP_C_8 bound to: 7'b0100000 
+	Parameter COMP_LOOP_C_4 bound to: 7'b0100001 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_0 bound to: 7'b0100010 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_1 bound to: 7'b0100011 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_2 bound to: 7'b0100100 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_3 bound to: 7'b0100101 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_4 bound to: 7'b0100110 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_5 bound to: 7'b0100111 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_6 bound to: 7'b0101000 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_7 bound to: 7'b0101001 
+	Parameter COMP_LOOP_4_VEC_LOOP_C_8 bound to: 7'b0101010 
+	Parameter COMP_LOOP_C_5 bound to: 7'b0101011 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_0 bound to: 7'b0101100 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_1 bound to: 7'b0101101 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_2 bound to: 7'b0101110 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_3 bound to: 7'b0101111 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_4 bound to: 7'b0110000 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_5 bound to: 7'b0110001 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_6 bound to: 7'b0110010 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_7 bound to: 7'b0110011 
+	Parameter COMP_LOOP_5_VEC_LOOP_C_8 bound to: 7'b0110100 
+	Parameter COMP_LOOP_C_6 bound to: 7'b0110101 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_0 bound to: 7'b0110110 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_1 bound to: 7'b0110111 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_2 bound to: 7'b0111000 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_3 bound to: 7'b0111001 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_4 bound to: 7'b0111010 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_5 bound to: 7'b0111011 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_6 bound to: 7'b0111100 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_7 bound to: 7'b0111101 
+	Parameter COMP_LOOP_6_VEC_LOOP_C_8 bound to: 7'b0111110 
+	Parameter COMP_LOOP_C_7 bound to: 7'b0111111 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_0 bound to: 7'b1000000 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_1 bound to: 7'b1000001 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_2 bound to: 7'b1000010 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_3 bound to: 7'b1000011 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_4 bound to: 7'b1000100 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_5 bound to: 7'b1000101 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_6 bound to: 7'b1000110 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_7 bound to: 7'b1000111 
+	Parameter COMP_LOOP_7_VEC_LOOP_C_8 bound to: 7'b1001000 
+	Parameter COMP_LOOP_C_8 bound to: 7'b1001001 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_0 bound to: 7'b1001010 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_1 bound to: 7'b1001011 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_2 bound to: 7'b1001100 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_3 bound to: 7'b1001101 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_4 bound to: 7'b1001110 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_5 bound to: 7'b1001111 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_6 bound to: 7'b1010000 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_7 bound to: 7'b1010001 
+	Parameter COMP_LOOP_8_VEC_LOOP_C_8 bound to: 7'b1010010 
+	Parameter COMP_LOOP_C_9 bound to: 7'b1010011 
+	Parameter STAGE_LOOP_C_1 bound to: 7'b1010100 
+	Parameter main_C_1 bound to: 7'b1010101 
+	Parameter main_C_2 bound to: 7'b1010110 
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core_core_fsm' (43#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:842]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp_core' (44#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:2521]
+INFO: [Synth 8-6155] done synthesizing module 'inPlaceNTT_DIT_precomp' (45#1) [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:4553]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[63]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[62]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[61]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[60]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[59]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[58]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[57]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[56]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[55]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[54]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[53]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[52]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[51]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[50]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[49]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[48]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[47]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[46]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[45]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[44]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[43]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[42]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[41]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[40]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[39]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[38]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[37]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[36]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[35]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[34]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[33]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_qa_d[32]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[23]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[22]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[21]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[20]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[19]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[18]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[17]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[16]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[15]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[14]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[13]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp has unconnected port twiddle_h_rsci_adra_d_core[12]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl has unconnected port twiddle_h_rsci_rwA_rw_ram_ir_internal_RMASK_B_d_core_psct[1]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[23]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[22]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[21]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[20]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[19]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[18]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[17]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[16]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[15]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[14]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[13]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_adra_d_core[12]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1 has unconnected port twiddle_h_rsci_rwA_rw_ram_ir_internal_RMASK_B_d_core_psct[1]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[63]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[62]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[61]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[60]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[59]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[58]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[57]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[56]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[55]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[54]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[53]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[52]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[51]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[50]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[49]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[48]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[47]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[46]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[45]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[44]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[43]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[42]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[41]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[40]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[39]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[38]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[37]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[36]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[35]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[34]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[33]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_qa_d[32]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[23]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[22]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[21]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[20]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[19]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[18]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[17]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[16]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[15]
+WARNING: [Synth 8-3331] design inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp has unconnected port twiddle_rsci_adra_d_core[14]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1077.695 ; gain = 244.730
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1077.695 ; gain = 244.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1077.695 ; gain = 244.730
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_io_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc:7]
+Finished Parsing XDC File [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.sdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/inPlaceNTT_DIT_precomp_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/inPlaceNTT_DIT_precomp_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+Finished Parsing XDC File [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/constrs_1/imports/vivado_concat_v/concat_rtl.v.xv.signoff.sdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/inPlaceNTT_DIT_precomp_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/inPlaceNTT_DIT_precomp_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1237.453 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1237.453 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1237.453 ; gain = 404.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1237.453 ; gain = 404.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1237.453 ; gain = 404.488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_var_reg' in module 'inPlaceNTT_DIT_precomp_core_core_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE | 000000000000000000000000000000000000000000000000000000000000000000000000000000000000001 |                          0000000
+*
+          STAGE_LOOP_C_0 | 000000000000000000000000000000000000000000000000000000000000000000000000000000000000010 |                          0000001
+           COMP_LOOP_C_0 | 000000000000000000000000000000000000000000000000000000000000000000000000000000000000100 |                          0000010
+           COMP_LOOP_C_1 | 000000000000000000000000000000000000000000000000000000000000000000000000000000000001000 |                          0000011
+COMP_LOOP_1_VEC_LOOP_C_0 | 000000000000000000000000000000000000000000000000000000000000000000000000000000000010000 |                          0000100
+COMP_LOOP_1_VEC_LOOP_C_1 | 000000000000000000000000000000000000000000000000000000000000000000000000000000000100000 |                          0000101
+COMP_LOOP_1_VEC_LOOP_C_2 | 000000000000000000000000000000000000000000000000000000000000000000000000000000001000000 |                          0000110
+COMP_LOOP_1_VEC_LOOP_C_3 | 000000000000000000000000000000000000000000000000000000000000000000000000000000010000000 |                          0000111
+COMP_LOOP_1_VEC_LOOP_C_4 | 000000000000000000000000000000000000000000000000000000000000000000000000000000100000000 |                          0001000
+COMP_LOOP_1_VEC_LOOP_C_5 | 000000000000000000000000000000000000000000000000000000000000000000000000000001000000000 |                          0001001
+COMP_LOOP_1_VEC_LOOP_C_6 | 000000000000000000000000000000000000000000000000000000000000000000000000000010000000000 |                          0001010
+COMP_LOOP_1_VEC_LOOP_C_7 | 000000000000000000000000000000000000000000000000000000000000000000000000000100000000000 |                          0001011
+COMP_LOOP_1_VEC_LOOP_C_8 | 000000000000000000000000000000000000000000000000000000000000000000000000001000000000000 |                          0001100
+           COMP_LOOP_C_2 | 000000000000000000000000000000000000000000000000000000000000000000000000010000000000000 |                          0001101
+COMP_LOOP_2_VEC_LOOP_C_0 | 000000000000000000000000000000000000000000000000000000000000000000000000100000000000000 |                          0001110
+COMP_LOOP_2_VEC_LOOP_C_1 | 000000000000000000000000000000000000000000000000000000000000000000000001000000000000000 |                          0001111
+COMP_LOOP_2_VEC_LOOP_C_2 | 000000000000000000000000000000000000000000000000000000000000000000000010000000000000000 |                          0010000
+COMP_LOOP_2_VEC_LOOP_C_3 | 000000000000000000000000000000000000000000000000000000000000000000000100000000000000000 |                          0010001
+COMP_LOOP_2_VEC_LOOP_C_4 | 000000000000000000000000000000000000000000000000000000000000000000001000000000000000000 |                          0010010
+COMP_LOOP_2_VEC_LOOP_C_5 | 000000000000000000000000000000000000000000000000000000000000000000010000000000000000000 |                          0010011
+COMP_LOOP_2_VEC_LOOP_C_6 | 000000000000000000000000000000000000000000000000000000000000000000100000000000000000000 |                          0010100
+COMP_LOOP_2_VEC_LOOP_C_7 | 000000000000000000000000000000000000000000000000000000000000000001000000000000000000000 |                          0010101
+COMP_LOOP_2_VEC_LOOP_C_8 | 000000000000000000000000000000000000000000000000000000000000000010000000000000000000000 |                          0010110
+           COMP_LOOP_C_3 | 000000000000000000000000000000000000000000000000000000000000000100000000000000000000000 |                          0010111
+COMP_LOOP_3_VEC_LOOP_C_0 | 000000000000000000000000000000000000000000000000000000000000001000000000000000000000000 |                          0011000
+COMP_LOOP_3_VEC_LOOP_C_1 | 000000000000000000000000000000000000000000000000000000000000010000000000000000000000000 |                          0011001
+COMP_LOOP_3_VEC_LOOP_C_2 | 000000000000000000000000000000000000000000000000000000000000100000000000000000000000000 |                          0011010
+COMP_LOOP_3_VEC_LOOP_C_3 | 000000000000000000000000000000000000000000000000000000000001000000000000000000000000000 |                          0011011
+COMP_LOOP_3_VEC_LOOP_C_4 | 000000000000000000000000000000000000000000000000000000000010000000000000000000000000000 |                          0011100
+COMP_LOOP_3_VEC_LOOP_C_5 | 000000000000000000000000000000000000000000000000000000000100000000000000000000000000000 |                          0011101
+COMP_LOOP_3_VEC_LOOP_C_6 | 000000000000000000000000000000000000000000000000000000001000000000000000000000000000000 |                          0011110
+COMP_LOOP_3_VEC_LOOP_C_7 | 000000000000000000000000000000000000000000000000000000010000000000000000000000000000000 |                          0011111
+COMP_LOOP_3_VEC_LOOP_C_8 | 000000000000000000000000000000000000000000000000000000100000000000000000000000000000000 |                          0100000
+           COMP_LOOP_C_4 | 000000000000000000000000000000000000000000000000000001000000000000000000000000000000000 |                          0100001
+COMP_LOOP_4_VEC_LOOP_C_0 | 000000000000000000000000000000000000000000000000000010000000000000000000000000000000000 |                          0100010
+COMP_LOOP_4_VEC_LOOP_C_1 | 000000000000000000000000000000000000000000000000000100000000000000000000000000000000000 |                          0100011
+COMP_LOOP_4_VEC_LOOP_C_2 | 000000000000000000000000000000000000000000000000001000000000000000000000000000000000000 |                          0100100
+COMP_LOOP_4_VEC_LOOP_C_3 | 000000000000000000000000000000000000000000000000010000000000000000000000000000000000000 |                          0100101
+COMP_LOOP_4_VEC_LOOP_C_4 | 000000000000000000000000000000000000000000000000100000000000000000000000000000000000000 |                          0100110
+COMP_LOOP_4_VEC_LOOP_C_5 | 000000000000000000000000000000000000000000000001000000000000000000000000000000000000000 |                          0100111
+COMP_LOOP_4_VEC_LOOP_C_6 | 000000000000000000000000000000000000000000000010000000000000000000000000000000000000000 |                          0101000
+COMP_LOOP_4_VEC_LOOP_C_7 | 000000000000000000000000000000000000000000000100000000000000000000000000000000000000000 |                          0101001
+COMP_LOOP_4_VEC_LOOP_C_8 | 000000000000000000000000000000000000000000001000000000000000000000000000000000000000000 |                          0101010
+           COMP_LOOP_C_5 | 000000000000000000000000000000000000000000010000000000000000000000000000000000000000000 |                          0101011
+COMP_LOOP_5_VEC_LOOP_C_0 | 000000000000000000000000000000000000000000100000000000000000000000000000000000000000000 |                          0101100
+COMP_LOOP_5_VEC_LOOP_C_1 | 000000000000000000000000000000000000000001000000000000000000000000000000000000000000000 |                          0101101
+COMP_LOOP_5_VEC_LOOP_C_2 | 000000000000000000000000000000000000000010000000000000000000000000000000000000000000000 |                          0101110
+COMP_LOOP_5_VEC_LOOP_C_3 | 000000000000000000000000000000000000000100000000000000000000000000000000000000000000000 |                          0101111
+COMP_LOOP_5_VEC_LOOP_C_4 | 000000000000000000000000000000000000001000000000000000000000000000000000000000000000000 |                          0110000
+COMP_LOOP_5_VEC_LOOP_C_5 | 000000000000000000000000000000000000010000000000000000000000000000000000000000000000000 |                          0110001
+COMP_LOOP_5_VEC_LOOP_C_6 | 000000000000000000000000000000000000100000000000000000000000000000000000000000000000000 |                          0110010
+COMP_LOOP_5_VEC_LOOP_C_7 | 000000000000000000000000000000000001000000000000000000000000000000000000000000000000000 |                          0110011
+COMP_LOOP_5_VEC_LOOP_C_8 | 000000000000000000000000000000000010000000000000000000000000000000000000000000000000000 |                          0110100
+           COMP_LOOP_C_6 | 000000000000000000000000000000000100000000000000000000000000000000000000000000000000000 |                          0110101
+COMP_LOOP_6_VEC_LOOP_C_0 | 000000000000000000000000000000001000000000000000000000000000000000000000000000000000000 |                          0110110
+COMP_LOOP_6_VEC_LOOP_C_1 | 000000000000000000000000000000010000000000000000000000000000000000000000000000000000000 |                          0110111
+COMP_LOOP_6_VEC_LOOP_C_2 | 000000000000000000000000000000100000000000000000000000000000000000000000000000000000000 |                          0111000
+COMP_LOOP_6_VEC_LOOP_C_3 | 000000000000000000000000000001000000000000000000000000000000000000000000000000000000000 |                          0111001
+COMP_LOOP_6_VEC_LOOP_C_4 | 000000000000000000000000000010000000000000000000000000000000000000000000000000000000000 |                          0111010
+COMP_LOOP_6_VEC_LOOP_C_5 | 000000000000000000000000000100000000000000000000000000000000000000000000000000000000000 |                          0111011
+COMP_LOOP_6_VEC_LOOP_C_6 | 000000000000000000000000001000000000000000000000000000000000000000000000000000000000000 |                          0111100
+COMP_LOOP_6_VEC_LOOP_C_7 | 000000000000000000000000010000000000000000000000000000000000000000000000000000000000000 |                          0111101
+COMP_LOOP_6_VEC_LOOP_C_8 | 000000000000000000000000100000000000000000000000000000000000000000000000000000000000000 |                          0111110
+           COMP_LOOP_C_7 | 000000000000000000000001000000000000000000000000000000000000000000000000000000000000000 |                          0111111
+COMP_LOOP_7_VEC_LOOP_C_0 | 000000000000000000000010000000000000000000000000000000000000000000000000000000000000000 |                          1000000
+COMP_LOOP_7_VEC_LOOP_C_1 | 000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 |                          1000001
+COMP_LOOP_7_VEC_LOOP_C_2 | 000000000000000000001000000000000000000000000000000000000000000000000000000000000000000 |                          1000010
+COMP_LOOP_7_VEC_LOOP_C_3 | 000000000000000000010000000000000000000000000000000000000000000000000000000000000000000 |                          1000011
+COMP_LOOP_7_VEC_LOOP_C_4 | 000000000000000000100000000000000000000000000000000000000000000000000000000000000000000 |                          1000100
+COMP_LOOP_7_VEC_LOOP_C_5 | 000000000000000001000000000000000000000000000000000000000000000000000000000000000000000 |                          1000101
+COMP_LOOP_7_VEC_LOOP_C_6 | 000000000000000010000000000000000000000000000000000000000000000000000000000000000000000 |                          1000110
+COMP_LOOP_7_VEC_LOOP_C_7 | 000000000000000100000000000000000000000000000000000000000000000000000000000000000000000 |                          1000111
+COMP_LOOP_7_VEC_LOOP_C_8 | 000000000000001000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001000
+           COMP_LOOP_C_8 | 000000000000010000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001001
+COMP_LOOP_8_VEC_LOOP_C_0 | 000000000000100000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001010
+COMP_LOOP_8_VEC_LOOP_C_1 | 000000000001000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001011
+COMP_LOOP_8_VEC_LOOP_C_2 | 000000000010000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001100
+COMP_LOOP_8_VEC_LOOP_C_3 | 000000000100000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001101
+COMP_LOOP_8_VEC_LOOP_C_4 | 000000001000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001110
+COMP_LOOP_8_VEC_LOOP_C_5 | 000000010000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1001111
+COMP_LOOP_8_VEC_LOOP_C_6 | 000000100000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010000
+COMP_LOOP_8_VEC_LOOP_C_7 | 000001000000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010001
+COMP_LOOP_8_VEC_LOOP_C_8 | 000010000000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010010
+           COMP_LOOP_C_9 | 000100000000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010011
+          STAGE_LOOP_C_1 | 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010100
+                main_C_1 | 010000000000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010101
+                main_C_2 | 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000 |                          1010110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_var_reg' using encoding 'one-hot' in module 'inPlaceNTT_DIT_precomp_core_core_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1237.453 ; gain = 404.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 19    
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Multipliers : 
+	                32x32  Multipliers := 3     
++---Muxes : 
+	  87 Input     87 Bit        Muxes := 1     
+	   2 Input     87 Bit        Muxes := 18    
+	   2 Input     32 Bit        Muxes := 11    
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 4     
+	  87 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 135   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module modulo_sub_core 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module modulo_add_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mult_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module inPlaceNTT_DIT_precomp_core_complete_rsci_complete_wait_dp 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module inPlaceNTT_DIT_precomp_core_staller 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module inPlaceNTT_DIT_precomp_core_core_fsm 
+Detailed RTL Component Info : 
++---Muxes : 
+	  87 Input     87 Bit        Muxes := 1     
+	   2 Input     87 Bit        Muxes := 18    
+	  87 Input      7 Bit        Muxes := 1     
+Module inPlaceNTT_DIT_precomp_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 133   
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:559]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:507]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:558]
+DSP Report: Generating DSP mult_core_inst/vector, operation Mode is: A*B.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: Generating DSP mult_core_inst/vector, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: Generating DSP mult_core_inst/vector, operation Mode is: A*B.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: Generating DSP mult_core_inst/vector, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: operator mult_core_inst/vector is absorbed into DSP mult_core_inst/vector.
+DSP Report: Generating DSP mult_core_inst/nl_z_mul_nl, operation Mode is: A2*B2.
+DSP Report: register mult_core_inst/operator_96_false_operator_96_false_slc_t_mul_63_32_itm_1_reg is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: register mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: Generating DSP mult_core_inst/nl_z_mul_nl, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mult_core_inst/operator_96_false_operator_96_false_slc_t_mul_63_32_itm_1_reg is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: Generating DSP mult_core_inst/nl_z_mul_nl, operation Mode is: A2*B2.
+DSP Report: register mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: register mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: Generating DSP mult_core_inst/nl_z_mul_nl, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: operator mult_core_inst/nl_z_mul_nl is absorbed into DSP mult_core_inst/nl_z_mul_nl.
+DSP Report: Generating DSP mult_core_inst/nl_z_mul_itm_1, operation Mode is: A*B.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/nl_z_mul_itm_1.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/nl_z_mul_itm_1.
+DSP Report: Generating DSP mult_core_inst/z_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mult_core_inst/z_mul_itm_1_reg is absorbed into DSP mult_core_inst/z_mul_itm_1_reg.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/z_mul_itm_1_reg.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/z_mul_itm_1_reg.
+DSP Report: Generating DSP mult_core_inst/nl_z_mul_itm_1, operation Mode is: A*B.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/nl_z_mul_itm_1.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/nl_z_mul_itm_1.
+DSP Report: Generating DSP mult_core_inst/z_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mult_core_inst/z_mul_itm_1_reg is absorbed into DSP mult_core_inst/z_mul_itm_1_reg.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/z_mul_itm_1_reg.
+DSP Report: operator mult_core_inst/nl_z_mul_itm_1 is absorbed into DSP mult_core_inst/z_mul_itm_1_reg.
+INFO: [Synth 8-4471] merging register 'COMP_LOOP_k_12_3_sva_8_0_reg[8:0]' into 'COMP_LOOP_k_12_3_sva_8_0_reg[8:0]' [D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.srcs/sources_1/imports/inPlaceNTT_DIT_precomp.v5/concat_rtl.v:3373]
+DSP Report: Generating DSP nl_z_out_8, operation Mode is: A*B.
+DSP Report: operator nl_z_out_8 is absorbed into DSP nl_z_out_8.
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[31] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[30] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[29] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[28] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[27] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[26] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[25] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[24] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[23] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[22] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[21] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[20] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[19] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[18] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[17] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[16] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[15] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[14] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[13] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[12] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[11] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[10] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[9] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[8] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[7] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[6] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[5] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[4] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[3] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[2] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[1] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port vec_rsc_db[0] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[31] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[30] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[29] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[28] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[27] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[26] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[25] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[24] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[23] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[22] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[21] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[20] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[19] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[18] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[17] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[16] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[15] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[14] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[13] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[12] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[11] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[10] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[9] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[8] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[7] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[6] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[5] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[4] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[3] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[2] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[1] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_da[0] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_wea driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[11] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[10] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[9] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[8] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[7] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[6] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[5] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[4] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[3] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[2] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[1] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_adrb[0] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[31] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[30] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[29] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[28] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[27] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[26] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[25] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[24] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[23] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[22] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[21] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[20] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[19] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[18] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[17] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[16] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[15] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[14] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[13] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[12] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[11] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[10] driven by constant 0
+WARNING: [Synth 8-3917] design inPlaceNTT_DIT_precomp has port twiddle_rsc_db[9] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[47]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[46]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[45]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[44]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[43]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[42]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[41]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[40]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[39]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[38]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[37]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[36]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[35]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[34]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[33]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[32]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[31]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[30]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[29]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[28]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[27]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[26]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[25]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[24]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[23]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[22]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[21]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[20]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[19]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[18]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[17]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[16]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[15]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[47]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[46]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[45]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[44]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[43]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[42]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[41]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[40]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[39]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[38]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[37]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[36]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[35]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[34]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[33]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[32]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[31]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[30]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[29]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[28]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[27]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[26]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[25]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[24]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[23]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[22]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[21]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[20]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[19]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[18]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/COMP_LOOP_1_mult_cmp/mult_core_inst/z_mul_itm_1_reg[17]__0) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+WARNING: [Synth 8-3332] Sequential element (inPlaceNTT_DIT_precomp_core_inst/inPlaceNTT_DIT_precomp_core_core_fsm_inst/FSM_onehot_state_var_reg[0]) is unused and will be removed from module inPlaceNTT_DIT_precomp.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:53 . Memory (MB): peak = 1257.883 ; gain = 424.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++----------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                 | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult                        | A*B             | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | (PCIN>>17)+A*B  | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|mult                        | (PCIN>>17)+A2*B | 16     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|mult                        | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | A*B             | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult                        | A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult                        | (PCIN>>17)+A*B  | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|inPlaceNTT_DIT_precomp_core | A*B             | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++----------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1257.883 ; gain = 424.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:44 ; elapsed = 00:02:45 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:45 ; elapsed = 00:02:46 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:47 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:47 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:47 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:47 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |   114|
+|3     |DSP48E1   |     5|
+|4     |DSP48E1_1 |     2|
+|5     |DSP48E1_2 |     1|
+|6     |DSP48E1_3 |     1|
+|7     |DSP48E1_4 |     1|
+|8     |DSP48E1_5 |     1|
+|9     |LUT1      |    12|
+|10    |LUT2      |   302|
+|11    |LUT3      |   446|
+|12    |LUT4      |   150|
+|13    |LUT5      |   143|
+|14    |LUT6      |   271|
+|15    |FDRE      |   670|
+|16    |FDSE      |     1|
+|17    |IBUF      |   164|
+|18    |OBUF      |   277|
++------+----------+------+
+
+Report Instance Areas: 
++------+------------------------------------------------------------------------------+-------------------------------------------------------------------+------+
+|      |Instance                                                                      |Module                                                             |Cells |
++------+------------------------------------------------------------------------------+-------------------------------------------------------------------+------+
+|1     |top                                                                           |                                                                   |  2562|
+|2     |  inPlaceNTT_DIT_precomp_core_inst                                            |inPlaceNTT_DIT_precomp_core                                        |  2120|
+|3     |    COMP_LOOP_1_modulo_add_cmp                                                |modulo_add                                                         |   105|
+|4     |      modulo_add_core_inst                                                    |modulo_add_core                                                    |   105|
+|5     |    COMP_LOOP_1_modulo_sub_cmp                                                |modulo_sub                                                         |    33|
+|6     |      modulo_sub_core_inst                                                    |modulo_sub_core                                                    |    33|
+|7     |    COMP_LOOP_1_mult_cmp                                                      |mult                                                               |   471|
+|8     |      mult_core_inst                                                          |mult_core                                                          |   471|
+|9     |    inPlaceNTT_DIT_precomp_core_core_fsm_inst                                 |inPlaceNTT_DIT_precomp_core_core_fsm                               |   922|
+|10    |    inPlaceNTT_DIT_precomp_core_run_rsci_inst                                 |inPlaceNTT_DIT_precomp_core_run_rsci                               |     3|
+|11    |      inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_dp_inst                   |inPlaceNTT_DIT_precomp_core_run_rsci_run_wait_dp                   |     3|
+|12    |    inPlaceNTT_DIT_precomp_core_staller_inst                                  |inPlaceNTT_DIT_precomp_core_staller                                |    11|
+|13    |    inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_inst                         |inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1                       |    65|
+|14    |      inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp_inst |inPlaceNTT_DIT_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp |    65|
+|15    |    inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_inst                           |inPlaceNTT_DIT_precomp_core_twiddle_rsci_1                         |    65|
+|16    |      inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp_inst     |inPlaceNTT_DIT_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp     |    65|
+|17    |    inPlaceNTT_DIT_precomp_core_vec_rsci_1_inst                               |inPlaceNTT_DIT_precomp_core_vec_rsci_1                             |   130|
+|18    |      inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_dp_inst             |inPlaceNTT_DIT_precomp_core_vec_rsci_1_vec_rsc_wait_dp             |   130|
++------+------------------------------------------------------------------------------+-------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:47 ; elapsed = 00:02:48 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 413 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:38 ; elapsed = 00:02:44 . Memory (MB): peak = 2514.559 ; gain = 1521.836
+Synthesis Optimization Complete : Time (s): cpu = 00:02:47 ; elapsed = 00:02:49 . Memory (MB): peak = 2514.559 ; gain = 1681.594
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2514.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+138 Infos, 265 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:02 ; elapsed = 00:03:04 . Memory (MB): peak = 2514.559 ; gain = 2158.789
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2514.559 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/NTT_Xilinx/NTT_Vivado/inplace_DIT_md_4096/inplace_DIT_md_4096.runs/synth_1/inPlaceNTT_DIT_precomp.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file inPlaceNTT_DIT_precomp_utilization_synth.rpt -pb inPlaceNTT_DIT_precomp_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 16 14:09:18 2021...

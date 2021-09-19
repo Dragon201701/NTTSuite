@@ -68,8 +68,8 @@ void butterFly1(DATA_TYPE xt[VECTOR_SIZE], DATA_TYPE yt[VECTOR_SIZE], PARAMS_TYP
 
 #pragma hls_design ccore
 void butterFly2(DATA_TYPE xt[VECTOR_SIZE], DATA_TYPE yt[VECTOR_SIZE], PARAMS_TYPE r, DATA_TYPE p, PARAMS_TYPE base, DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE]){
-        DATA_TYPE tw = twiddle[base & r];
-        DATA_TYPE tw_h = twiddle_h[base & r];
+    DATA_TYPE tw = twiddle[base & r];
+    DATA_TYPE tw_h = twiddle_h[base & r];
 	DATA_TYPE f1 = xt[r << 1];
 	DATA_TYPE f2 = (DATA_TYPE)mult(xt[(r << 1) + 1], tw, tw_h, p);
 	yt[r]       = (DATA_TYPE)modulo_add(f1 + f2, p);
