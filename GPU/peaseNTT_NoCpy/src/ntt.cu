@@ -2,6 +2,7 @@
 #include "../include/utils.h"
 #include <inttypes.h>
 using namespace std;
+#define TIME_TEST
 
 void cpyVec(DATA_TYPE* src, DATA_TYPE*dst, int length){
     for(int i=0; i<length; i++){
@@ -98,15 +99,19 @@ DATA_TYPE* peaseNTT(DATA_TYPE * vec,  int n, DATA_TYPE p, DATA_TYPE g){
 
     unsigned t = (unsigned)log2(n);
 
+#ifndef TIME_TEST
     cudaMemcpy(d_y, vec, VECTOR_SIZE * sizeof(DATA_TYPE ), cudaMemcpyHostToDevice);
+#endif
     int threadsPerBlock = 256;
     int blocksPerGrid = ((VECTOR_SIZE>>1) + threadsPerBlock - 1) / threadsPerBlock;
 
     int threadsPerBlockRev = 256;
     int blocksPerGridRev = (VECTOR_SIZE + threadsPerBlock - 1) / threadsPerBlock;
 
+#ifndef TIME_TEST
     bit_reverse_cu<<<blocksPerGridRev, threadsPerBlockRev>>>(d_x, d_y, t);
     cudaMemcpy(result, d_x, VECTOR_SIZE * sizeof(DATA_TYPE ), cudaMemcpyDeviceToHost);
+#endif
 
     for (unsigned c = t; c >= 2; c -= 2){
         unsigned base = -1 << (c - 1);
@@ -116,7 +121,9 @@ DATA_TYPE* peaseNTT(DATA_TYPE * vec,  int n, DATA_TYPE p, DATA_TYPE g){
         butter_prec<<<blocksPerGrid, threadsPerBlock>>>(d_x, d_y, d_twiddle, base, p);
     }
 
+#ifndef TIME_TEST
     cudaMemcpy(result, d_y, VECTOR_SIZE * sizeof(DATA_TYPE ), cudaMemcpyDeviceToHost);
+#endif
 
     return result;
 }

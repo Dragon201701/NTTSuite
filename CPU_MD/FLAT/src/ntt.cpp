@@ -50,6 +50,7 @@ void butterFly(DATA_TYPE vec[VECTOR_ADDR_BIT + 1][VECTOR_SIZE], PARAMS_TYPE idx1
 
 
  
+ #include <iostream>
 #pragma hls_design top
 void ntt_flat(DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, DATA_TYPE twiddle[VECTOR_SIZE], DATA_TYPE twiddle_h[VECTOR_SIZE], DATA_TYPE result[VECTOR_ADDR_BIT + 1][VECTOR_SIZE]){
 
@@ -65,6 +66,7 @@ void ntt_flat(DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, DATA_TYPE tw
 		PARAMS_TYPE gp = 1 << (i - 1);
 		PARAMS_TYPE op =  VECTOR_SIZE >> i;
 		PARAMS_TYPE point = op << 1;
+		std::cout<<"stage is "<<i<<std::endl;
 		INNER_LOOP: for(PARAMS_TYPE j=0; j < mid; j++){
 			PARAMS_TYPE g = j >> shift_idx;
 			PARAMS_TYPE k = j - (g << shift_idx);
@@ -72,6 +74,7 @@ void ntt_flat(DATA_TYPE vec[VECTOR_SIZE], DATA_TYPE p, DATA_TYPE r, DATA_TYPE tw
 			PARAMS_TYPE idx2= idx1 + op;
 			DATA_TYPE tf = twiddle[gp * k];
 			DATA_TYPE tf_h = twiddle_h[gp * k];
+			std::cout<<idx1<<" "<<idx2<<std::endl;
 			//cout<<idx1<<" "<<idx2<<" "<<gp*t<<endl;
 			butterFly(result, idx1, idx2, tf, tf_h, p, i - 1);
 		}

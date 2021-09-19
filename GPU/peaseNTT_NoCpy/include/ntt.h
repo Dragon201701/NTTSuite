@@ -5,7 +5,7 @@
 #include <cmath>
 #include <iostream>
 #include "utils.h"
-#define VECTOR_SIZE 4096
+#define VECTOR_SIZE 16384
 //#define DEBUG
 
 

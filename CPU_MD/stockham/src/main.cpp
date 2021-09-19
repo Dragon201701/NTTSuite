@@ -7,7 +7,7 @@
 #include "../include/config.h"
 #include "../include/utils.h"
 
-//#define DEBUG
+#define DEBUG
 
 using namespace std;
 

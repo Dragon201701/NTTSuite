@@ -3,9 +3,9 @@
 
 #include <inttypes.h>
 
-#define VECTOR_SIZE  1024
+#define VECTOR_SIZE  16
 #define VECTOR_WIDTH  32
-#define VECTOR_ADDR_BIT  10
+#define VECTOR_ADDR_BIT  4
 #define PARAM_WIDTH  32
 typedef uint64_t DATA_TYPE;
 typedef uint64_t DATA_TYPE_TMP;
