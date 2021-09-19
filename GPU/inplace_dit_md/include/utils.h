@@ -16,7 +16,7 @@ typedef uint64_t DATA_TYPE;
  * @param n   The length of the vector, must be a power of two
  * @return    The bit reversed vector
  */
-DATA_TYPE *bit_reverse(DATA_TYPE *result, DATA_TYPE *vec, DATA_TYPE n);
+DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE n);
 
 /**
  * Compare two vectors element-wise and return whether they are equivalent

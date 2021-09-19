@@ -5,8 +5,8 @@
 #include <cmath>
 #include <iostream>
 #include "utils.h"
-#define VECTOR_SIZE 4096
-#define VECTOR_ADDR_BIT 12
+#define VECTOR_SIZE 16384
+#define VECTOR_ADDR_BIT 14
 //#define DEBUG
 
 //#define DEBUG

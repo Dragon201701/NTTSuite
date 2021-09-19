@@ -8,10 +8,10 @@ using namespace std;
  * @param n   The length of the vector, must be a power of two
  * @return    The bit reversed vector
  */
-DATA_TYPE *bit_reverse(DATA_TYPE *result, DATA_TYPE *vec, DATA_TYPE n){
+DATA_TYPE *bit_reverse(DATA_TYPE *vec, DATA_TYPE n){
 
 	DATA_TYPE num_bits = log2(n);
-
+	DATA_TYPE * result = (DATA_TYPE *)malloc(n*sizeof(DATA_TYPE));
 
 	unsigned reverse_num;
 	for(unsigned i = 0; i < n; i++){
