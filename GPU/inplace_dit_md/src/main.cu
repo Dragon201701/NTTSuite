@@ -40,12 +40,12 @@ DATA_TYPE* inPlaceNTT_DIT_precomp_golden(DATA_TYPE* vec, DATA_TYPE n, DATA_TYPE 
         }
     }
     DATA_TYPE m, factor1, factor2;
-    for (DATA_TYPE i = 1; i <= log2(n); i++) {
-        m = pow(2, i);
+    for (int i = 1; i <= log2(n); i++) {
+        m = 1 << i;
         for (DATA_TYPE j = 0; j < n; j += m) {
             for (DATA_TYPE k = 0; k < m / 2; k++) {
                 factor1 = result[j + k];
-                factor2 = modulo(twiddle[(DATA_TYPE)pow(2, i - 1) - 1 + k] * result[j + k + m / 2], p);
+                factor2 = modulo(twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k] * result[j + k + m / 2], p);
                 result[j + k] = modulo(factor1 + factor2, p);
                 result[j + k + m / 2] = modulo(factor1 - factor2, p);
             }
@@ -64,7 +64,6 @@ int main(int argc, char **argv){
     //printVec(vec, VECTOR_SIZE);
     twiddle = twiddle_cal(VECTOR_SIZE, r, p);
     //result_g = naiveNTT(vec, VECTOR_SIZE, p, r);
-    result_g = inPlaceNTT_DIT_precomp_golden(vec, VECTOR_SIZE, p, r, twiddle, false);
     cudaError_t cudaStatus;
     dim3 dimGrid, dimBlock;
     cudaStatus = cudaSetDevice(0);
@@ -103,22 +102,14 @@ int main(int argc, char **argv){
     cudaEventCreate(&kernel_stop);
     cudaEventRecord(kernel_start,0);
     for (int i = 1; i <= log2(n); i++) {
-        DATA_TYPE m = (int)pow(2, i);
-        DATA_TYPE k_ = (p - 1) / m;
-        DATA_TYPE a = modExp(r, k_, p);
-        int numblocks = 64, maxthreads = 1024, numthreads = m / 2, thread_offset = 0;
+        int m           = 1 << i;
+        int maxBlocks   = m >> 1;
+        int maxThreads  = 1 << (VECTOR_ADDR_BIT - i - 1);
 
-        for (int batch = 0; batch < n; batch += m * numblocks) {
-            // if (numthreads > maxthreads) {
-                dimBlock.x = maxthreads;
-                for (int stage = 0; stage < numthreads / maxthreads; stage++) {
-                    inplaceNTT_DIT_precomp_stage << <numblocks, dimBlock >> > (dev_vec, batch, m, p, dev_twiddle, stage * maxthreads);
-                }
-            // }
-            // else {
-            //     dimBlock.x = numthreads;
-            //     inplaceNTT_DIT_precomp_stage << <numblocks, dimBlock >> > (dev_vec, batch, m, p, dev_twiddle, 0);
-            // }
+        for(unsigned block_offset = 0; block_offset < m/2; block_offset += numberblock){
+			for(unsigned  thread_offset = 0; thread_offset < VECTOR_SIZE; thread_offset += numberthread * m){
+                inplaceNTT_DIT_precomp_stage << <numberblock, numberthread>> > (dev_vec, block_offset, thread_offset, m, p, dev_twiddle, i);
+            }
         }
     }
     
@@ -149,7 +140,8 @@ int main(int argc, char **argv){
         fprintf(stderr, "result cudaMemcpy failed!");
         goto Error;
     }
-    compVec(vec, result, VECTOR_SIZE, true);
+    result_g = inPlaceNTT_DIT_precomp_golden(vec, VECTOR_SIZE, p, r, twiddle, false);
+    compVec(result, result_g, VECTOR_SIZE, true);
 
 Error:
     cudaFree(dev_vec);

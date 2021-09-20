@@ -58,6 +58,11 @@ bool compVec(DATA_TYPE *vec1, DATA_TYPE *vec2, DATA_TYPE n, bool debug){
 			}
 		}
 	}
+	if(comp){
+		std::cout<<"Test Passed"<<std::endl;
+	} else {
+		std::cout<<"Test Failed"<<std::endl;
+	}
 
 	return comp;
 }
