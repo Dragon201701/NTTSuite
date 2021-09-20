@@ -21,4 +21,4 @@ ntt: $(CPP) $(CU) $(DEPS)
 #	#$(NVCC) -c -o $@ $< -Iinclude
 #
 clean:
-	rm -rfv $(OBJ) ntt.exe
+	rm -rfv $(OBJ) ntt.exe ntt

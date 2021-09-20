@@ -21,7 +21,7 @@ __global__ void inplaceNTT_DIF_precomp_stage(DATA_TYPE* vec, int block_offset, i
 	int j = m * threadIdx.x + thread_offset;
 	if((k >= (m >> 1)) || (j >= VECTOR_SIZE))
 		return;
-    DATA_TYPE w = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
+    	DATA_TYPE w = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
 	// DATA_TYPE f1 = vec[j + k];
 	// DATA_TYPE f2 = modulo_dev(w * vec[j + k + m / 2], p);
 	// vec[j + k] = modulo_dev(f1 + f2, p);

@@ -28,27 +28,28 @@ DATA_TYPE *naiveNTT(DATA_TYPE *vec, unsigned n, DATA_TYPE p, DATA_TYPE r){
 	}
 	return result;
 }
-DATA_TYPE* inPlaceNTT_DIT_precomp_golden(DATA_TYPE* vec, DATA_TYPE n, DATA_TYPE p, DATA_TYPE r, DATA_TYPE* twiddle, bool rev) {
+DATA_TYPE* inPlaceNTT_DIF_precomp_golden(DATA_TYPE* vec, DATA_TYPE n, DATA_TYPE p, DATA_TYPE r, DATA_TYPE* twiddle, bool rev) {
     DATA_TYPE * result;
     result = (DATA_TYPE*)malloc(n * sizeof(DATA_TYPE));
+    DATA_TYPE m;
+    for (int i = log2(n); i >= 1; i--) {
+        m = 1 << i;
+        for (DATA_TYPE j = 0; j < n; j += m) {
+            for (DATA_TYPE k = 0; k < m / 2; k++) {
+    	        DATA_TYPE w = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
+	            DATA_TYPE f1 = vec[j + k];
+	            DATA_TYPE f2 = vec[j + k + m/2];
+	            vec[j + k] = modulo(f1 + f2, p);
+	            vec[j + k + m/2] = modulo(w * modulo(f1 - f2, p), p);
+            }
+        }
+    }
     if (rev) {
         result = bit_reverse(vec, n);
     }
     else {
         for (DATA_TYPE i = 0; i < n; i++) {
             result[i] = vec[i];
-        }
-    }
-    DATA_TYPE m, factor1, factor2;
-    for (int i = 1; i <= log2(n); i++) {
-        m = 1 << i;
-        for (DATA_TYPE j = 0; j < n; j += m) {
-            for (DATA_TYPE k = 0; k < m / 2; k++) {
-                factor1 = result[j + k];
-                factor2 = modulo(twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k] * result[j + k + m / 2], p);
-                result[j + k] = modulo(factor1 + factor2, p);
-                result[j + k + m / 2] = modulo(factor1 - factor2, p);
-            }
         }
     }
     return result;
@@ -101,7 +102,7 @@ int main(int argc, char **argv){
     cudaEventCreate(&kernel_start);
     cudaEventCreate(&kernel_stop);
     cudaEventRecord(kernel_start,0);
-    for (int i = 1; i <= log2(n); i++) {
+    for (int i = log2(n); i >= 1; i--) {
         int m           = 1 << i;
         int maxBlocks   = m >> 1;
         int maxThreads  = 1 << (VECTOR_ADDR_BIT - i - 1);
@@ -140,7 +141,7 @@ int main(int argc, char **argv){
         fprintf(stderr, "result cudaMemcpy failed!");
         goto Error;
     }
-    result_g = inPlaceNTT_DIT_precomp_golden(vec, VECTOR_SIZE, p, r, twiddle, false);
+    result_g = inPlaceNTT_DIF_precomp_golden(vec, VECTOR_SIZE, p, r, twiddle, false);
     compVec(result, result_g, VECTOR_SIZE, true);
 
 Error:
