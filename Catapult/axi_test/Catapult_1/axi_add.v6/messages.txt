@@ -1,0 +1,76 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.26 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+flow package option set /SCVerify/DISABLE_EMPTY_INPUTS true
+/INPUTFILES/2
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)
+flow package require /SCVerify
+solution file add ./src/axI_test_tb.cpp -exclude true
+flow package option set /SCVerify/ENABLE_STALL_TOGGLE true
+/INPUTFILES/1
+Source file analysis completed (CIN-68)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<top>' detected on routine 'axi_add' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Setup options and flows
+solution file add ./src/axi_test.cpp
+x86_64
+go compile
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'axi_add.v6': elapsed time 1.08 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v6/CDesignChecker/design_checker.sh'
+INOUT port 'run' is only used as an input. (OPT-10)
+Optimizing block '/axi_add' ... (CIN-4)
+INOUT port 'complete' is only used as an output. (OPT-11)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Generating synthesis internal form... (CIN-3)
+INOUT port 'a' is only used as an input. (OPT-10)
+# Info: Starting transformation 'compile' on solution 'axi_add.v6' (SOL-8)
+Synthesizing routine 'axi_add' (CIN-13)
+Found top design routine 'axi_add' specified by directive (CIN-52)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Loop '/axi_add/core/ADD_LOOP' iterated at most 16 times. (LOOP-2)
+Inlining routine 'axi_add' (CIN-14)
+Design 'axi_add' was read (SOL-1)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_add.v6': elapsed time 0.44 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+solution library add ccs_sample_mem
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+# Info: Starting transformation 'libraries' on solution 'axi_add.v6' (SOL-8)
+go libraries
+Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_sample_mem.lib' [ccs_sample_mem]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'axi_add.v6': elapsed time 0.07 seconds, memory usage 1585144kB, peak memory usage 1585144kB (SOL-9)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 2.0}}
+set can_simulate 1
+# Specify the Clock Period
+# Flag to indicate SCVerify readiness
+
+go assembly
+# Info: Starting transformation 'assembly' on solution 'axi_add.v6' (SOL-8)

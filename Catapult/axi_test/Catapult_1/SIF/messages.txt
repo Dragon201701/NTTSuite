@@ -1,0 +1,24 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.21 seconds, memory usage 1650680kB, peak memory usage 1650680kB (SOL-9)
+Source file analysis completed (CIN-68)
+solution file add ./src/axI_test_tb.cpp -exclude true
+go analyze
+/INPUTFILES/2
+solution file add ./src/axi_test.cpp
+x86_64
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<>' detected on routine 'axi_test' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)

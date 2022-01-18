@@ -1,0 +1,106 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 3.10.0-1062.4.1.el7.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/vsim.wlf -l ./Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/sim.log -L ./Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/work scverify_top_opt -do "do {./Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 12:43:02 on Jan 02,2022
+# Loading /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# Loading work.axi_add(fast)
+# Loading work.axi_add_core(fast)
+# Loading work.axi_add_core_a_rsci(fast)
+# Loading work.ccs_axi4_master(fast)
+# Loading work.ccs_axi4_master_core(fast)
+# Loading work.ccs_axi4_master_read_core(fast)
+# Loading work.ccs_axi4_master_write_core(fast)
+# Loading work.axi_add_core_a_rsci_a_rsc_wait_ctrl(fast)
+# Loading work.axi_add_core_a_rsci_a_rsc_wait_dp(fast)
+# Loading work.axi_add_core_b_rsci(fast)
+# Loading work.axi_add_core_b_rsci_b_rsc_wait_dp(fast)
+# Loading work.axi_add_core_b_rsci_b_rsc_wait_ctrl(fast)
+# Loading work.axi_add_core_a_rsc_triosy_obj(fast)
+# Loading work.mgc_io_sync_v2(fast)
+# Loading work.axi_add_core_a_rsc_triosy_obj_a_rsc_triosy_wait_ctrl(fast)
+# Loading work.axi_add_core_b_rsc_triosy_obj(fast)
+# Loading work.axi_add_core_b_rsc_triosy_obj_b_rsc_triosy_wait_ctrl(fast)
+# Loading work.axi_add_core_staller(fast)
+# Loading work.axi_add_core_core_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/b_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_b'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_b'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_a'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_a'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# Disabling STALL_FLAG toggling
+# do {./Catapult_1/axi_add.v1/scverify/concat_sim_rtl_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult_1/axi_add.v1/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run
+# Info: HW reset: TLS_rst active @ 0 s
+# 100
+# 101
+# 102
+# 103
+# 104
+# 105
+# 106
+# 107
+# 108
+# 109
+# 110
+# 111
+# 112
+# 113
+# 114
+# 115
+# ../../src/axI_test_tb.cpp:26 - End of testbench.
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
+# 
+# Info: Collecting data completed
+#    captured 1 values of a
+#    captured 1 values of b
+run
+run
+# Causality operation skipped due to absence of debug database file
+run
+run
+run
+run
+run
+run
+# Info: scverify_top/user_tb: Testbench exited early or ran into deadlock
+# 
+# Checking results
+# 'b'
+#    capture count        = 1
+#    comparison count     = 0
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+#    Error: output 'b' has incomplete comparisons
+# 
+# Info: scverify_top/user_tb: Simulation FAILED @ 900 ps
+# Info: scverify_top/Monitor: runs with constant clock period 0 s
+# Info: scverify_top/Monitor: Throughput: 1 transaction per 0 s
+# Info: scverify_top/Monitor: No transactions completed.  Skipping latency and throughput reports
+# End time: 12:43:38 on Jan 02,2022, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 6, Suppressed Warnings: 2

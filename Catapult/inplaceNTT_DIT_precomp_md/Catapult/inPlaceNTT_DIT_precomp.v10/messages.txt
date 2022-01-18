@@ -1,0 +1,151 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT_precomp.v10': elapsed time 1.43 seconds, memory usage 2173888kB, peak memory usage 2173888kB (SOL-9)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIT_precomp' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'inPlaceNTT_DIT_precomp.v10' (SOL-8)
+go compile
+Pragma 'hls_design<>' detected on routine 'modulo_add' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<>' detected on routine 'mult' (CIN-6)
+Pragma 'hls_design<>' detected on routine 'modulo_sub' (CIN-6)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/src/ntt.cpp (CIN-69)
+inPlaceNTT_DIT_precomp.v10
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'inPlaceNTT_DIT_precomp.v10' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+
+# Messages from "go compile"
+
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'mult' (CIN-13)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Optimizing block '/inPlaceNTT_DIT_precomp/mult' ... (CIN-4)
+Design 'inPlaceNTT_DIT_precomp' was read (SOL-1)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Inlining routine 'operator<<32, true>' (CIN-14)
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+Inlining routine 'modulo_sub' (CIN-14)
+Optimizing block '/inPlaceNTT_DIT_precomp' ... (CIN-4)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_sub' ... (CIN-4)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_add' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Found top design routine 'inPlaceNTT_DIT_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' iterated at most 4097 times. (LOOP-2)
+Inlining routine 'inPlaceNTT_DIT_precomp' (CIN-14)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' iterated at most 12 times. (LOOP-2)
+Synthesizing routine 'inPlaceNTT_DIT_precomp' (CIN-13)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v10' (SOL-8)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Optimizing block '/inPlaceNTT_DIT_precomp/mult' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Found top design routine 'inPlaceNTT_DIT_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+Inlining routine 'inPlaceNTT_DIT_precomp' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIT_precomp' (CIN-13)
+# Error: Script: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_checker.flo ...
+# Error: Package: CDesignChecker, Version: 8.2, Flow: generate
+inPlaceNTT_DIT_precomp.v10
+solution select inPlaceNTT_DIT_precomp.v8
+# Info: Design complexity at end of 'analyze': Total ops = 104, Real ops = 35, Vars = 49 (SOL-21)
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT_precomp.v10': elapsed time 2.95 seconds, memory usage 1641952kB, peak memory usage 1641952kB (SOL-9)
+# Error: utility xref: Handle '' not found
+# Error: errors encountered while running flows, check $errorInfo for more details
+go libraries
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Design 'inPlaceNTT_DIT_precomp' was read (SOL-1)
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' iterated at most 4097 times. (LOOP-2)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' iterated at most 12 times. (LOOP-2)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_add' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Inlining routine 'operator<<32, true>' (CIN-14)
+Inlining routine 'modulo_sub' (CIN-14)
+Optimizing block '/inPlaceNTT_DIT_precomp' ... (CIN-4)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_sub' ... (CIN-4)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v10' (SOL-8)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'mult' (CIN-13)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/mult_2e4bc42889b304aeffa2245c869db4ef70c9_0/.sif/solIndex_2_274bc065-70b3-4197-a0ff-288f4b404755.xml' ... (LIB-129)
+go compile
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_48c33633fffddef438ac148bf33666256036_0/.sif/solIndex_2_337221db-ef42-4d78-9aa8-cc2cc2a51c13.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_e7244821cb27245804479f813dfcbd1a635c_0/.sif/solIndex_2_ab2f841b-cb84-43a1-8997-b18f0eb5c906.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_9e6b06881060c48119593246171fb95f6028_0/.sif/solIndex_2_ebe31c5e-ce8a-4935-8067-8cbc5131e810.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_a48ff83301b11bc89e50b3ecfb088e71634e_0/.sif/solIndex_2_d5eccbee-f2f4-41e2-b003-66a157ca34c7.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_09234dfffbf6bf3991e053db4676dd156036_0/.sif/solIndex_2_d71a6526-62bf-4a32-8328-202c0adee276.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/mult_211a0e259bca55d0a7d87e37cf4e500170bb_0/.sif/solIndex_2_8c7d0ea7-78a0-4853-9039-e322fee583a6.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_20f67d2a306b3300fd71db6974653bfb635e_0/.sif/solIndex_2_00989560-2263-4142-89c7-2f243b72523c.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_1c7cb5effec07f258b1f9fafcfd3564d6028_0/.sif/solIndex_2_5ff81686-a76d-4f3e-937e-792fd6a74c3f.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_f83f1ef2ff5a4101c59f332e5a2a07d06350_0/.sif/solIndex_2_375adefc-4500-41a6-90fc-0dc7455169f2.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_a48ff83301b11bc89e50b3ecfb088e71634e_0/.sif/solIndex_2_d5eccbee-f2f4-41e2-b003-66a157ca34c7.xml' ... (LIB-129)
+quit
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult.ccs'. (PRJ-5)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/mult_211a0e259bca55d0a7d87e37cf4e500170bb_0/.sif/solIndex_2_8c7d0ea7-78a0-4853-9039-e322fee583a6.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_1c7cb5effec07f258b1f9fafcfd3564d6028_0/.sif/solIndex_2_5ff81686-a76d-4f3e-937e-792fd6a74c3f.xml' ... (LIB-129)
+project save
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_09234dfffbf6bf3991e053db4676dd156036_0/.sif/solIndex_2_d71a6526-62bf-4a32-8328-202c0adee276.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_20f67d2a306b3300fd71db6974653bfb635e_0/.sif/solIndex_2_00989560-2263-4142-89c7-2f243b72523c.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_f83f1ef2ff5a4101c59f332e5a2a07d06350_0/.sif/solIndex_2_375adefc-4500-41a6-90fc-0dc7455169f2.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/mult_2e4bc42889b304aeffa2245c869db4ef70c9_0/.sif/solIndex_2_274bc065-70b3-4197-a0ff-288f4b404755.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_48c33633fffddef438ac148bf33666256036_0/.sif/solIndex_2_337221db-ef42-4d78-9aa8-cc2cc2a51c13.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_sub_e7244821cb27245804479f813dfcbd1a635c_0/.sif/solIndex_2_ab2f841b-cb84-43a1-8997-b18f0eb5c906.xml' ... (LIB-129)
+Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIT_precomp_md/Catapult/td_ccore_solutions/modulo_add_9e6b06881060c48119593246171fb95f6028_0/.sif/solIndex_2_ebe31c5e-ce8a-4935-8067-8cbc5131e810.xml' ... (LIB-129)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIT_precomp.v10' (SOL-8)
+Design 'inPlaceNTT_DIT_precomp' was read (SOL-1)
+Loop '/inPlaceNTT_DIT_precomp/core/COMP_LOOP' iterated at most 4097 times. (LOOP-2)
+Loop '/inPlaceNTT_DIT_precomp/core/STAGE_LOOP' iterated at most 12 times. (LOOP-2)
+# Error: utility xref: Handle '' not found
+# Error: errors encountered while running flows, check $errorInfo for more details
+# Error: Script: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_checker.flo ...
+# Error: Package: CDesignChecker, Version: 8.2, Flow: generate
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Design complexity at end of 'analyze': Total ops = 104, Real ops = 35, Vars = 49 (SOL-21)
+# Info: Completed transformation 'analyze' on solution 'inPlaceNTT_DIT_precomp.v10': elapsed time 2.48 seconds, memory usage 2173888kB, peak memory usage 2173888kB (SOL-9)
+Optimizing block '/inPlaceNTT_DIT_precomp' ... (CIN-4)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_sub' ... (CIN-4)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+Synthesizing routine 'modulo_sub' (CIN-13)
+Optimizing block '/inPlaceNTT_DIT_precomp/modulo_add' ... (CIN-4)
+quit
+Inlining routine 'operator<<32, true>' (CIN-14)
+File '$PROJECT_HOME/Catapult/inPlaceNTT_DIT_precomp.v8/scverify/ccs_block_macros.h' saved
+Inlining routine 'modulo_sub' (CIN-14)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+Inlining routine 'inPlaceNTT_DIT_precomp' (CIN-14)
+Synthesizing routine 'inPlaceNTT_DIT_precomp' (CIN-13)
+Inlining routine 'mult' (CIN-14)
+Synthesizing routine 'mult' (CIN-13)
+Found design routine 'modulo_sub' specified by directive (CIN-52)
+Found design routine 'modulo_add' specified by directive (CIN-52)
+Found top design routine 'inPlaceNTT_DIT_precomp' specified by directive (CIN-52)
+Found design routine 'mult' specified by directive (CIN-52)
+Inlining routine 'modulo_add' (CIN-14)
+Synthesizing routine 'modulo_add' (CIN-13)
+Optimizing block '/inPlaceNTT_DIT_precomp/mult' ... (CIN-4)
+Inlining routine 'operator>><96, false>' (CIN-14)
+Generating synthesis internal form... (CIN-3)

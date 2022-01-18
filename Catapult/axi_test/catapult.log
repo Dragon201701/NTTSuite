@@ -1,0 +1,24 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Mon Jan 17 20:39:48 2022
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log590274c2b5273.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+project load /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1.ccs
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/axi_test/catapult.log"
+# Error: internal assertion failed ((get_name()&&is_wildcard())||(!get_name(true)&&!get_resolved_name())) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_hierconfig.cxx line 2461 (ASSERT-1)
+# Error: internal assertion failed ((get_name()&&is_wildcard())||(!get_name(true)&&!get_resolved_name())) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_hierconfig.cxx line 2461 (ASSERT-1)

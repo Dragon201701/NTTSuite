@@ -1,0 +1,319 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.26 seconds, memory usage 1453464kB, peak memory usage 1453464kB (SOL-9)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Input file has changed
+solution file set {$PROJECT_HOME/src/axi_test.cpp} -updated
+go compile
+solution file set {$PROJECT_HOME/src/axi_test.cpp} -updated
+Input file has changed
+Pragma 'hls_design<top>' detected on routine 'axi_add' (CIN-6)
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+# Warning: last line of file ends without a newline (CRD-1)
+Input file has changed
+solution file set {$PROJECT_HOME/src/axi_test.cpp} -updated
+Source file analysis completed (CIN-68)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)
+# Info: Completed transformation 'analyze' on solution 'axi_add.v2': elapsed time 1.26 seconds, memory usage 1379704kB, peak memory usage 1379704kB (SOL-9)
+Pragma 'hls_design<top>' detected on routine 'axi_add' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)
+axi_add.v2
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Branching solution 'axi_add.v2' at state 'new' (PRJ-2)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'axi_add.v2' (SOL-8)
+Source file analysis completed (CIN-68)
+go compile
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.03 seconds, memory usage 1379808kB, peak memory usage 1380328kB (SOL-9)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'axi_add' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+/INPUTFILES/2
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+/INPUTFILES/1
+solution file add ./src/axi_test.cpp
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.04 seconds, memory usage 1380320kB, peak memory usage 1380328kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+option set Input/TargetPlatform x86_64
+# Error: go analyze: Failed analyze
+go compile
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)
+x86_64
+solution remove -solution solution.v3
+# Error: cannot open source file "gnu/stubs-32.h" (CRD-1696)
+/Input/CompilerSettings/Type gcc /Input/CompilerSettings/Version 4.9.2 /Input/CompilerSettings/InstallPath /opt/mentorgraphics/Catapult_10.5c/Mgc_home /Input/CompilerSettings/Target GCC_x86_32 /Input/CompilerSettings/CppStandard c++98 /Input/CompilerSettings/CompilerVersion 4.9.2 /Input/CompilerSettings/Defines {__EMBEDDED_CXX__ vco_aol __null=0 __DBL_MIN_EXP__=(-1021) __UINT_LEAST16_MAX__=65535 __ATOMIC_ACQUIRE=2 __FLT_MIN__=1.17549435082228750797e-38F __GCC_IEC_559_COMPLEX=2 {__UINT_LEAST8_TYPE__=unsigned char} {__INTMAX_C(c)=c ## LL} __CHAR_BIT__=8 __UINT8_MAX__=255 __WINT_MAX__=4294967295U __ORDER_LITTLE_ENDIAN__=1234 __SIZE_MAX__=4294967295U __WCHAR_MAX__=2147483647L __GCC_HAVE_SYNC_COMPARE_AND_SWAP_1 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 __DBL_DENORM_MIN__=double(4.94065645841246544177e-324L) __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 __GCC_ATOMIC_CHAR_LOCK_FREE=2 __GCC_IEC_559=2 __FLT_EVAL_METHOD__=2 __unix__ __GCC_ATOMIC_CHAR32_T_LOCK_FREE=2 __UINT_FAST64_MAX__=18446744073709551615ULL __SIG_ATOMIC_TYPE__=int __DBL_MIN_10_EXP__=(-307) __FINITE_MATH_ONLY__=0 __GNUC_PATCHLEVEL__=2 __UINT_FAST8_MAX__=255 __DEC64_MAX_EXP__=385 __INT8_C(c)=c __UINT_LEAST64_MAX__=18446744073709551615ULL __SHRT_MAX__=32767 __LDBL_MAX__=1.18973149535723176502e+4932L __UINT_LEAST8_MAX__=255 __GCC_ATOMIC_BOOL_LOCK_FREE=2 {__UINTMAX_TYPE__=long long unsigned int} __linux __DEC32_EPSILON__=1E-6DF __unix __UINT32_MAX__=4294967295U __LDBL_MAX_EXP__=16384 __WINT_MIN__=0U __linux__ __SCHAR_MAX__=127 {__WCHAR_MIN__=(-__WCHAR_MAX__ - 1)} {__INT64_C(c)=c ## LL} __DBL_DIG__=15 __GCC_ATOMIC_POINTER_LOCK_FREE=2 __SIZEOF_INT__=4 __SIZEOF_POINTER__=4 __GCC_ATOMIC_CHAR16_T_LOCK_FREE=2 __USER_LABEL_PREFIX__= __STDC_HOSTED__ __LDBL_HAS_INFINITY__ __FLT_EPSILON__=1.19209289550781250000e-7F __GXX_WEAK__ __LDBL_MIN__=3.36210314311209350626e-4932L __DEC32_MAX__=9.999999E96DF __INT32_MAX__=2147483647 __SIZEOF_LONG__=4 __STDC_IEC_559__ __STDC_ISO_10646__=201103L __UINT16_C(c)=c __DECIMAL_DIG__=21 __gnu_linux__ __LDBL_HAS_QUIET_NAN__ __GNUC__=4 __GXX_RTTI __MMX__ __FLT_HAS_DENORM__ __SIZEOF_LONG_DOUBLE__=12 __BIGGEST_ALIGNMENT__=16 __DBL_MAX__=double(1.79769313486231570815e+308L) __INT_FAST32_MAX__=2147483647 __DBL_HAS_INFINITY__ __INT64_MAX__=9223372036854775807LL __DEC32_MIN_EXP__=(-94) __INT_FAST16_TYPE__=int __LDBL_HAS_DENORM__ __DEC128_MAX__=9.999999999999999999999999999999999E6144DL __INT_LEAST32_MAX__=2147483647 __DEC32_MIN__=1E-95DF __DEPRECATED __DBL_MAX_EXP__=1024 __DEC128_EPSILON__=1E-33DL __ATOMIC_HLE_RELEASE=131072 __PTRDIFF_MAX__=2147483647 __STDC_NO_THREADS__ __ATOMIC_HLE_ACQUIRE=65536 __GNUG__=4 __LONG_LONG_MAX__=9223372036854775807LL __SIZEOF_SIZE_T__=4 __SIZEOF_WINT_T__=4 __GXX_ABI_VERSION=1002 __FLT_MIN_EXP__=(-125) {__INT_FAST64_TYPE__=long long int} __DBL_MIN__=double(2.22507385850720138309e-308L) __FLT_MIN_10_EXP__=(-37) __DECIMAL_BID_FORMAT__ __DEC128_MIN__=1E-6143DL __REGISTER_PREFIX__= __UINT16_MAX__=65535 __DBL_HAS_DENORM__ {__UINT8_TYPE__=unsigned char} __NO_INLINE__ __i386 __FLT_MANT_DIG__=24 {__UINT64_C(c)=c ## ULL} _STDC_PREDEF_H __GCC_ATOMIC_INT_LOCK_FREE=2 __FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__ __STDC_IEC_559_COMPLEX__ __INT32_C(c)=c __DEC64_EPSILON__=1E-15DD __ORDER_PDP_ENDIAN__=3412 __DEC128_MIN_EXP__=(-6142) __code_model_32__ __INT_FAST32_TYPE__=int {__UINT_LEAST16_TYPE__=short unsigned int} unix __INT16_MAX__=32767 __i386__ __UINT64_MAX__=18446744073709551615ULL {__INT8_TYPE__=signed char} __ELF__ __FLT_RADIX__=2 {__INT_LEAST16_TYPE__=short int} __LDBL_EPSILON__=1.08420217248550443401e-19L {__UINTMAX_C(c)=c ## ULL} __k8 __SIG_ATOMIC_MAX__=2147483647 __GCC_ATOMIC_WCHAR_T_LOCK_FREE=2 __SIZEOF_PTRDIFF_T__=4 __DEC32_SUBNORMAL_MIN__=0.000001E-95DF __INT_FAST16_MAX__=2147483647 __UINT_FAST32_MAX__=4294967295U {__UINT_LEAST64_TYPE__=long long unsigned int} __FLT_HAS_QUIET_NAN__ __FLT_MAX_10_EXP__=38 __LONG_MAX__=2147483647L __DEC128_SUBNORMAL_MIN__=0.000000000000000000000000000000001E-6143DL __FLT_HAS_INFINITY__ {__UINT_FAST16_TYPE__=unsigned int} __DEC64_MAX__=9.999999999999999E384DD __PRAGMA_REDEFINE_EXTNAME __INT_LEAST16_MAX__=32767 __DEC64_MANT_DIG__=16 __UINT_LEAST32_MAX__=4294967295U __GCC_ATOMIC_LONG_LOCK_FREE=2 {__INT_LEAST64_TYPE__=long long int} {__INT16_TYPE__=short int} {__INT_LEAST8_TYPE__=signed char} __DEC32_MAX_EXP__=97 __INT_FAST8_MAX__=127 __INTPTR_MAX__=2147483647 linux __SSE2__ __EXCEPTIONS __LDBL_MANT_DIG__=64 __DBL_HAS_QUIET_NAN__ {__SIG_ATOMIC_MIN__=(-__SIG_ATOMIC_MAX__ - 1)} __k8__ __INTPTR_TYPE__=int {__UINT16_TYPE__=short unsigned int} __SIZEOF_FLOAT__=4 __UINTPTR_MAX__=4294967295U __DEC64_MIN_EXP__=(-382) __INT_FAST64_MAX__=9223372036854775807LL __GCC_ATOMIC_TEST_AND_SET_TRUEVAL __FLT_DIG__=6 {__UINT_FAST64_TYPE__=long long unsigned int} __INT_MAX__=2147483647 {__INT64_TYPE__=long long int} __FLT_MAX_EXP__=128 __DBL_MANT_DIG__=53 __INT_LEAST64_MAX__=9223372036854775807LL __DEC64_MIN__=1E-383DD {__WINT_TYPE__=unsigned int} {__UINT_LEAST32_TYPE__=unsigned int} __SIZEOF_SHORT__=2 __SSE__ __LDBL_MIN_EXP__=(-16381) __INT_LEAST8_MAX__=127 __LDBL_MAX_10_EXP__=4932 __ATOMIC_RELAXED=0 __DBL_EPSILON__=double(2.22044604925031308085e-16L) __UINT8_C(c)=c __INT_LEAST32_TYPE__=int __SIZEOF_WCHAR_T__=4 {__UINT64_TYPE__=long long unsigned int} {__INT_FAST8_TYPE__=signed char} __DBL_DECIMAL_DIG__=17 __FXSR__ __DEC_EVAL_METHOD__=2 __ORDER_BIG_ENDIAN__=4321 {__UINT32_C(c)=c ## U} __INTMAX_MAX__=9223372036854775807LL __BYTE_ORDER__=__ORDER_LITTLE_ENDIAN__ __FLT_DENORM_MIN__=1.40129846432481707092e-45F __INT8_MAX__=127 {__UINT_FAST32_TYPE__=unsigned int} {__CHAR32_TYPE__=unsigned int} __FLT_MAX__=3.40282346638528859812e+38F __INT32_TYPE__=int __SIZEOF_DOUBLE__=8 {__INTMAX_TYPE__=long long int} i386 __DEC128_MAX_EXP__=6145 __ATOMIC_CONSUME __GNUC_MINOR__=9 __UINTMAX_MAX__=18446744073709551615ULL __DEC32_MANT_DIG__=7 __DBL_MAX_10_EXP__=308 __LDBL_DENORM_MIN__=3.64519953188247460253e-4951L __INT16_C(c)=c __STDC__ __PTRDIFF_TYPE__=int __ATOMIC_SEQ_CST=5 {__UINT32_TYPE__=unsigned int} {__UINTPTR_TYPE__=unsigned int} __DEC64_SUBNORMAL_MIN__=0.000000000000001E-383DD __DEC128_MANT_DIG__=34 __LDBL_MIN_10_EXP__=(-4931) __SIZEOF_LONG_LONG__=8 __GCC_ATOMIC_LLONG_LOCK_FREE=2 __LDBL_DIG__=18 __FLT_DECIMAL_DIG__=9 __UINT_FAST16_MAX__=4294967295U __GNUC_GNU_INLINE__ __GCC_ATOMIC_SHORT_LOCK_FREE=2 {__UINT_FAST8_TYPE__=unsigned char} _GNU_SOURCE __ATOMIC_ACQ_REL=4 __ATOMIC_RELEASE=3} /Input/CompilerSettings/SearchPath {/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/x86_64-linux-gnu/32 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/../../../../include/c++/4.9.2/backward /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/x86_64-linux-gnu/4.9.2/include-fixed /usr/local/include /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/dcs_gcc/gcc-4.9.2/lib/gcc/../../include /usr/include} /Input/CompilerSettings/LibPaths {}
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/axI_test_tb.cpp -exclude true
+solution.v3
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'axi_add.v3': elapsed time 0.94 seconds, memory usage 1453464kB, peak memory usage 1453464kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v3/CDesignChecker/design_checker.sh'
+INOUT port 'run' is only used as an input. (OPT-10)
+Optimizing block '/axi_add' ... (CIN-4)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'a' is only used as an input. (OPT-10)
+Synthesizing routine 'axi_add' (CIN-13)
+Found top design routine 'axi_add' specified by directive (CIN-52)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'axi_add' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'axi_add.v3' (SOL-8)
+Loop '/axi_add/core/ADD_LOOP' iterated at most 16 times. (LOOP-2)
+Design 'axi_add' was read (SOL-1)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_add.v3': elapsed time 0.28 seconds, memory usage 1453464kB, peak memory usage 1453464kB (SOL-9)
+# Info: Starting transformation 'libraries' on solution 'axi_add.v3' (SOL-8)
+go libraries
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'axi_add.v3': elapsed time 0.07 seconds, memory usage 1453464kB, peak memory usage 1453464kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'axi_add.v3' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Completed transformation 'loops' on solution 'axi_add.v3': elapsed time 0.02 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+Loop '/axi_add/core/ADD_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'axi_add.v3' (SOL-8)
+Loop '/axi_add/core/main' is left rolled. (LOOP-4)
+project save
+go extract
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1.ccs'. (PRJ-5)
+# Info: Design complexity at end of 'memories': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'axi_add.v3': elapsed time 0.70 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+Memory Resource '/axi_add/a:rsc' (from var: a) mapped to 'amba.ccs_axi4_master' (size: 16 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'axi_add.v3' (SOL-8)
+Memory Resource '/axi_add/b:rsc' (from var: b) mapped to 'amba.ccs_axi4_master' (size: 16 x 32). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'axi_add.v3': elapsed time 0.03 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'axi_add.v3' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 25, Real ops = 3, Vars = 12 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'axi_add.v3': elapsed time 0.06 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+Design 'axi_add' contains '3' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'axi_add.v3' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 25, Real ops = 3, Vars = 12 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'axi_add.v3': elapsed time 0.11 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Netlist written to file 'schedule.gnt' (NET-4)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/axi_add/core': Latency = 31, Area (Datapath, Register, Total) = 19234.00, 0.00, 19234.00 (CRAAS-11)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/axi_add/core': Latency = 31, Area (Datapath, Register, Total) = 19234.00, 0.00, 19234.00 (CRAAS-12)
+Prescheduled LOOP '/axi_add/core/main' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/axi_add/core/ADD_LOOP' (2 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/axi_add/core' (total length 36 c-steps) (SCHD-8)
+Prescheduled LOOP '/axi_add/core/core:rlp' (1 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/axi_add/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'axi_add.v3' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 718, Real ops = 59, Vars = 509 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'axi_add.v3': elapsed time 1.72 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+Global signal 'a:rsc.AWADDR' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.RUSER' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.BRESP' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWVALID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.BID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWUSER' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.BVALID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.WDATA' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.BUSER' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWREADY' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.WUSER' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWPROT' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.WLAST' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWCACHE' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.WREADY' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWREGION' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.WVALID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWQOS' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARBURST' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWBURST' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARSIZE' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWSIZE' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARCACHE' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWCACHE' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARLOCK' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWLOCK' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.BREADY' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.m_wstate' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARLEN' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWLEN' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.ARADDR' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWADDR' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWREADY' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWVALID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WSTRB' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.WDATA' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWQOS' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWPROT' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWUSER' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.AWREGION' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARVALID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.ARUSER' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.RID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.ARREADY' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.ARPROT' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.ARCACHE' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.ARREGION' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.ARQOS' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.RREADY' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.RVALID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.m_wCaughtUp' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'complete:rsc.rdy' added to design 'axi_add' for component 'complete:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'a:rsc' (SCHD-46)
+Global signal 'complete:rsc.vld' added to design 'axi_add' for component 'complete:rsci' (LIB-3)
+Global signal 'a:rsc.RRESP' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.triosy.lz' added to design 'axi_add' for component 'b:rsc.triosy:obj' (LIB-3)
+Global signal 'a:rsc.RDATA' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.triosy.lz' added to design 'axi_add' for component 'a:rsc.triosy:obj' (LIB-3)
+Global signal 'a:rsc.RUSER' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.RLAST' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Report written to file 'cycle.rpt'
+# Info: Starting transformation 'schedule' on solution 'axi_add.v3' (SOL-8)
+Global signal 'run:rsc.vld' added to design 'axi_add' for component 'run:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/axi_add/core' (CRAAS-1)
+Global signal 'a:rsc.BID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.WREADY' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.BUSER' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.BRESP' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.WLAST' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.WSTRB' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.WVALID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.WUSER' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARREADY' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARSIZE' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARVALID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARLEN' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.RDATA' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARLOCK' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.RID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARBURST' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARQOS' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.BREADY' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARPROT' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.BVALID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARUSER' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARADDR' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.ARREGION' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.ARID' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'b:rsc' (SCHD-46)
+Global signal 'a:rsc.AWSIZE' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.RREADY' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'b:rsc.m_wstate' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWLEN' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.m_wCaughtUp' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.AWLOCK' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.AWBURST' added to design 'axi_add' for component 'a:rsci' (LIB-3)
+Global signal 'b:rsc.RLAST' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+Global signal 'b:rsc.RRESP' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+Global signal 'run:rsc.rdy' added to design 'axi_add' for component 'run:rsci' (LIB-3)
+Global signal 'b:rsc.RVALID' added to design 'axi_add' for component 'b:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 546, Real ops = 74, Vars = 467 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'axi_add.v3': elapsed time 0.61 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'axi_add.v3' (SOL-8)
+Performing FSM extraction... (FSM-1)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 540, Real ops = 71, Vars = 513 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'axi_add.v3': elapsed time 1.19 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'axi_add.v3' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 540, Real ops = 71, Vars = 464 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'axi_add.v3': elapsed time 6.11 seconds, memory usage 1454072kB, peak memory usage 1454072kB (SOL-9)
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_read_core.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_core.v
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_write_core.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_core.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_write_core.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Netlist written to file 'rtl.vhdl' (NET-4)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master.v
+Generating scverify_top.cpp ()
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v3/concat_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_read_core.v
+# Info: Starting transformation 'extract' on solution 'axi_add.v3' (SOL-8)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+Report written to file 'rtl.rpt'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+order file name is: rtl.v_order.txt
+generate concat
+Netlist written to file 'rtl.v' (NET-4)
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v3/concat_sim_rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v3/concat_rtl.vhdl
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Add dependent file: ./rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_write_core.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_read_core.vhd
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_core.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_core.vhd
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_add.v3/concat_sim_rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_write_core.vhd
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master_read_core.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_master.v

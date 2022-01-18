@@ -1,0 +1,131 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 3.10.0-1062.4.1.el7.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/vsim.wlf -l ./Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/sim.log -L ./Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/work scverify_top_opt -do "do {./Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 21:49:56 on Jan 02,2022
+# Loading /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# Loading work.axi_test(fast)
+# Loading work.axi_test_Xilinx_RAMS_BLOCK_SPRAM_RBW_rwport_2_4_32_16_16_32_1_gen(fast)
+# Loading work.axi_test_Xilinx_RAMS_BLOCK_SPRAM_WBR_rwport_3_4_32_16_16_32_1_gen(fast)
+# Loading work.axi_test_core(fast)
+# Loading work.axi_test_core_run_rsci(fast)
+# Loading work.ccs_sync_in_wait_v1(fast)
+# Loading work.axi_test_core_run_rsci_run_wait_ctrl(fast)
+# Loading work.axi_test_core_run_rsci_run_wait_dp(fast)
+# Loading work.axi_test_core_a_rsci_1(fast)
+# Loading work.axi_test_core_a_rsci_1_a_rsc_wait_ctrl(fast)
+# Loading work.axi_test_core_a_rsci_1_a_rsc_wait_dp(fast)
+# Loading work.axi_test_core_b_rsci_1(fast)
+# Loading work.axi_test_core_b_rsci_1_b_rsc_wait_ctrl(fast)
+# Loading work.axi_test_core_complete_rsci(fast)
+# Loading work.ccs_sync_out_wait_v1(fast)
+# Loading work.axi_test_core_complete_rsci_complete_wait_ctrl(fast)
+# Loading work.axi_test_core_complete_rsci_complete_wait_dp(fast)
+# Loading work.axi_test_core_a_rsc_triosy_obj(fast)
+# Loading work.mgc_io_sync_v2(fast)
+# Loading work.axi_test_core_a_rsc_triosy_obj_a_rsc_triosy_wait_ctrl(fast)
+# Loading work.axi_test_core_b_rsc_triosy_obj(fast)
+# Loading work.axi_test_core_b_rsc_triosy_obj_b_rsc_triosy_wait_ctrl(fast)
+# Loading work.axi_test_core_staller(fast)
+# Loading work.axi_test_core_core_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/complete_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/b_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_b'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_b'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_a'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_a'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_complete'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_complete'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_run'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_run'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# Disabling STALL_FLAG toggling
+# do {./Catapult_1/axi_test.v8/scverify/concat_sim_rtl_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult_1/axi_test.v8/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run -all
+# Info: HW reset: TLS_rst active @ 0 s
+# ../../src/axI_test_tb.cpp:39 - End of testbench.
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
+# 
+# Info: Collecting data completed
+#    captured 3 values of run
+#    captured 3 values of a
+#    captured 3 values of b
+#    captured 3 values of complete
+# Info: scverify_top/user_tb/b_comp: Incorrect Data Detected @ 155 ns
+# Info: scverify_top/user_tb/b_comp:  iteration count = 1
+# Info: scverify_top/user_tb/b_comp:    compare count = 1
+# Info: scverify_top/user_tb/b_comp:      error count = 1
+# Info: scverify_top/user_tb/b_comp:     ignore count = 0
+# Info: scverify_top/user_tb/b_comp:     index         golden value            dut value
+# Info: scverify_top/user_tb/b_comp:      0                  100                    0
+# Info: scverify_top/user_tb/b_comp:      1                  100                    0
+# Info: scverify_top/user_tb/b_comp:      2                  100                    0
+# Info: scverify_top/user_tb/b_comp:      3                  100                    0
+# Info: scverify_top/user_tb/b_comp:      4                  100                    0
+# Info: scverify_top/user_tb/b_comp:      5                  100                    0
+# Info: scverify_top/user_tb/b_comp:      6                  100                    0
+# Info: scverify_top/user_tb/b_comp:      7                  100                    0
+# Info: scverify_top/user_tb/b_comp:      8                  100                    0
+# Info: scverify_top/user_tb/b_comp:      9                  100                    0
+# Info: scverify_top/user_tb/b_comp:     10                  100                    0
+# Info: scverify_top/user_tb/b_comp:     11                  100                    0
+# Info: scverify_top/user_tb/b_comp:     12                  100                    0
+# Info: scverify_top/user_tb/b_comp:     13                  100                    0
+# Info: scverify_top/user_tb/b_comp:     14                  100                    0
+# Info: scverify_top/user_tb/b_comp:     15                  100                    0
+# Info: scverify_top/user_tb: Simulation completed
+# 
+# Checking results
+# 'b'
+#    capture count        = 3
+#    comparison count     = 3
+#    ignore count         = 0
+#    error count          = 1
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+#    Error: output 'b' had comparison errors
+# 'complete'
+#    capture count        = 3
+#    comparison count     = 3
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 
+# Info: scverify_top/user_tb: Simulation FAILED @ 1676 ns
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 
+# Info: scverify_top/Monitor: runs with constant clock period 10 ns
+# Info: scverify_top/Monitor: Throughput: 1 transaction per 510 ns
+# Info: scverify_top/Monitor: Latency: 510 ns
+# Warning: scverify_top/Monitor: Latency: 51 cycles does not match expected 52 cycles.
+# End time: 16:38:04 on Jan 16,2022, Elapsed time: 330:48:08
+# Errors: 0, Warnings: 11, Suppressed Warnings: 3

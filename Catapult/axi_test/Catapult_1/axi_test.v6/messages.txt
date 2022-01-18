@@ -1,0 +1,138 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.21 seconds, memory usage 1650680kB, peak memory usage 1650680kB (SOL-9)
+x86_64
+/INPUTFILES/1
+Source file analysis completed (CIN-68)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Pragma 'hls_design<>' detected on routine 'axi_test' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test/src/axi_test.cpp (CIN-69)
+solution file add ./src/axI_test_tb.cpp -exclude true
+go analyze
+/INPUTFILES/2
+solution file add ./src/axi_test.cpp
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'axi_test.v1': elapsed time 1.00 seconds, memory usage 1650680kB, peak memory usage 1650680kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+INOUT port 'a' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+Loop '/axi_test/core/ADD_LOOP' iterated at most 16 times. (LOOP-2)
+Design 'axi_test' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v1/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Found top design routine 'axi_test' specified by directive (CIN-52)
+Generating synthesis internal form... (CIN-3)
+Inlining routine 'axi_test' (CIN-14)
+Synthesizing routine 'axi_test' (CIN-13)
+go compile
+# Info: Starting transformation 'compile' on solution 'axi_test.v1' (SOL-8)
+INOUT port 'complete' is only used as an output. (OPT-11)
+Optimizing block '/axi_test' ... (CIN-4)
+Inlining routine 'operator+<32, false>' (CIN-14)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_test.v6': elapsed time 0.34 seconds, memory usage 1576920kB, peak memory usage 1577432kB (SOL-9)
+solution library add mgc_Xilinx-KINTEX-u-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family KINTEX-u -speed -2 -part xcku115-flvb2104-2-e
+# Info: Starting transformation 'libraries' on solution 'axi_test.v6' (SOL-8)
+go assembly
+solution library add amba
+# Info: Branching solution 'axi_test.v6' at state 'compile' (PRJ-2)
+solution library add Xilinx_RAMS
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v6/CDesignChecker/design_checker.sh'
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_test.v3': elapsed time 0.50 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'axi_test.v3' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add mgc_Xilinx-KINTEX-u-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family KINTEX-u -speed -2 -part xcku115-flvb2104-2-e
+go assembly
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-KINTEX-u-2_beh.lib' [mgc_Xilinx-KINTEX-u-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v3/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'axi_test.v3' at state 'compile' (PRJ-2)
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_test.v2': elapsed time 0.41 seconds, memory usage 1576932kB, peak memory usage 1576932kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v2/CDesignChecker/design_checker.sh'
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-KINTEX-u-2_beh.lib' [mgc_Xilinx-KINTEX-u-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+solution library add mgc_Xilinx-KINTEX-u-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family KINTEX-u -speed -2 -part xcku115-flvb2104-2-e
+# Info: Branching solution 'axi_test.v2' at state 'compile' (PRJ-2)
+# Info: Starting transformation 'libraries' on solution 'axi_test.v2' (SOL-8)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+go assembly
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_test.v1': elapsed time 0.26 seconds, memory usage 1650680kB, peak memory usage 1650680kB (SOL-9)
+# Flag to indicate SCVerify readiness
+
+# Info: Starting transformation 'libraries' on solution 'axi_test.v1' (SOL-8)
+set can_simulate 1
+# Specify the Clock Period
+flow package option set /SCVerify/ENABLE_STALL_TOGGLE true
+go assembly
+solution library add ccs_sample_mem
+directive set -CLOCKS {clk {-CLOCK_PERIOD 2.0}}
+solution library add nangate-45nm_beh -- -rtlsyntool OasysRTL -vendor Nangate -technology 045nm
+flow package option set /SCVerify/DISABLE_EMPTY_INPUTS true
+flow package require /SCVerify
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'axi_test.v6': elapsed time 0.06 seconds, memory usage 1576920kB, peak memory usage 1577432kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'axi_test.v6' (SOL-8)
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'axi_test.v6': elapsed time 0.03 seconds, memory usage 1576816kB, peak memory usage 1577432kB (SOL-9)
+directive set /axi_test/a:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+/axi_test/b:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /axi_test/b:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# Info: Starting transformation 'loops' on solution 'axi_test.v6' (SOL-8)
+go extract
+Loop '/axi_test/core/main' is left rolled. (LOOP-4)
+Loop '/axi_test/core/ADD_LOOP' is left rolled. (LOOP-4)
+/axi_test/a:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# Info: Design complexity at end of 'memories': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'axi_test.v6': elapsed time 0.64 seconds, memory usage 1587072kB, peak memory usage 1587072kB (SOL-9)
+Memory Resource '/axi_test/a:rsc' (from var: a) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 16 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'axi_test.v6' (SOL-8)
+Memory Resource '/axi_test/b:rsc' (from var: b) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 16 x 32). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'axi_test.v6': elapsed time 0.03 seconds, memory usage 1587072kB, peak memory usage 1587072kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'axi_test.v6' (SOL-8)
+Design 'axi_test' contains '3' real operations. (SOL-11)
+# Error: When TRANSACTION_DONE_SIGNAL is set .. IO delay on port 'operator+<32,false>:read_mem(a:rsc.@)' can not be greater than 'clock period - clock uncertainity' (DIR-24)
+# Info: Starting transformation 'architect' on solution 'axi_test.v6' (SOL-8)
