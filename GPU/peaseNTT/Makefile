@@ -21,4 +21,4 @@ ntt: $(CPP) $(CU) $(DEPS)
 #	#$(NVCC) -c -o $@ $< -Iinclude
 #
 clean:
-	rm -rfv $(OBJ) pease.exe
+	rm -rfv $(OBJ) pease

@@ -19,7 +19,9 @@ typedef int64_t DATA_TYPE_SIGNED;
 
 __device__ DATA_TYPE modulo_dev(DATA_TYPE_SIGNED base, DATA_TYPE_SIGNED m);
 __device__ DATA_TYPE modExp_cu(DATA_TYPE base, unsigned exp, DATA_TYPE m);
+__device__ void modulo_cu(int64_t base, int64_t m, DATA_TYPE &a);
  __global__ void inplaceNTT_DIF_precomp_stage(DATA_TYPE* vec, int k, int j, 
  		DATA_TYPE m, DATA_TYPE p, DATA_TYPE* twiddle, int i);
 __global__ void  bit_reverse_cu(DATA_TYPE *result, DATA_TYPE *vec, unsigned num_bits);
+__global__ void butter_prec(DATA_TYPE *yt, DATA_TYPE *xt, DATA_TYPE *twiddle, unsigned base, DATA_TYPE p);
 #endif /* NTT_H_ */

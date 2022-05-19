@@ -28,9 +28,22 @@ DATA_TYPE *naiveNTT(DATA_TYPE *vec, unsigned n, DATA_TYPE p, DATA_TYPE r){
 	}
 	return result;
 }
-DATA_TYPE* inPlaceNTT_DIT_precomp_golden(DATA_TYPE* vec, DATA_TYPE n, DATA_TYPE p, DATA_TYPE r, DATA_TYPE* twiddle, bool rev) {
+DATA_TYPE* inPlaceNTT_DIF_precomp_golden(DATA_TYPE* vec, DATA_TYPE n, DATA_TYPE p, DATA_TYPE r, DATA_TYPE* twiddle, bool rev) {
     DATA_TYPE * result;
     result = (DATA_TYPE*)malloc(n * sizeof(DATA_TYPE));
+    DATA_TYPE m;
+    for (int i = log2(n); i >= 1; i--) {
+        m = 1 << i;
+        for (DATA_TYPE j = 0; j < n; j += m) {
+            for (DATA_TYPE k = 0; k < m / 2; k++) {
+    	        DATA_TYPE w = twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k];
+	            DATA_TYPE f1 = vec[j + k];
+	            DATA_TYPE f2 = vec[j + k + m/2];
+	            vec[j + k] = modulo(f1 + f2, p);
+	            vec[j + k + m/2] = modulo(w * modulo(f1 - f2, p), p);
+            }
+        }
+    }
     if (rev) {
         result = bit_reverse(vec, n);
     }
@@ -39,29 +52,14 @@ DATA_TYPE* inPlaceNTT_DIT_precomp_golden(DATA_TYPE* vec, DATA_TYPE n, DATA_TYPE 
             result[i] = vec[i];
         }
     }
-    DATA_TYPE m, factor1, factor2;
-    for (int i = 1; i <= log2(n); i++) {
-        m = 1 << i;
-        for (DATA_TYPE j = 0; j < n; j += m) {
-            for (DATA_TYPE k = 0; k < m / 2; k++) {
-                factor1 = result[j + k];
-                factor2 = modulo(twiddle[(1 << (VECTOR_ADDR_BIT - i)) * k] * result[j + k + m / 2], p);
-                result[j + k] = modulo(factor1 + factor2, p);
-                result[j + k + m / 2] = modulo(factor1 - factor2, p);
-            }
-        }
-    }
     return result;
 }
+
 float nttcuda(int n, DATA_TYPE p, DATA_TYPE r){
-    DATA_TYPE *vec = 0, *dev_vec = 0, *twiddle = 0, *dev_twiddle = 0;
+    DATA_TYPE *vec, *twiddle, *dev_vec, *dev_twiddle, *dev_result;
     DATA_TYPE *result_g, *result;
-    vec = randVec(VECTOR_SIZE, 1000);
-    //printVec(vec, VECTOR_SIZE);
-    twiddle = twiddle_cal(VECTOR_SIZE, r, p);
-    result_g = naiveNTT(vec, VECTOR_SIZE, p, r);
+
     cudaError_t cudaStatus;
-    dim3 dimGrid, dimBlock;
     cudaStatus = cudaSetDevice(0);
     struct cudaDeviceProp properties;
     cudaGetDeviceProperties(&properties, 0);
@@ -72,13 +70,25 @@ float nttcuda(int n, DATA_TYPE p, DATA_TYPE r){
     cout << "using " << properties.multiProcessorCount << " multiprocessors" << endl;
     cout << "max threads per processor: " << properties.maxThreadsPerMultiProcessor << endl;
 
-    cudaEvent_t kernel_start, kernel_stop, cuda_start, cuda_stop;
-    cudaEventCreate(&kernel_start);
-    cudaEventCreate(&kernel_stop);
+    int threadsPerBlock = 1024;
+    int blocksPerGrid = ((VECTOR_SIZE>>1) + threadsPerBlock - 1) / threadsPerBlock;
+
+    int threadsPerBlockRev = 512;
+    int blocksPerGridRev = (VECTOR_SIZE + threadsPerBlock - 1) / threadsPerBlock;
+
+    unsigned t = (unsigned)log2(n);
+    vec = randVec(VECTOR_SIZE, 1000);
+    result = (DATA_TYPE *)malloc(n*sizeof(DATA_TYPE));
+    twiddle = twiddle_cal(VECTOR_SIZE, r, p);
+    result_g = naiveNTT(vec, VECTOR_SIZE, p, r);
+
+    cudaEvent_t malloc_start, malloc_stop, cuda_start, cuda_stop;
+    cudaEventCreate(&malloc_start);
+    cudaEventCreate(&malloc_stop);
     cudaEventCreate(&cuda_start);
     cudaEventCreate(&cuda_stop);
-    cudaEventRecord(cuda_start,0);
 
+    cudaEventRecord(cuda_start,0);
     cudaStatus = cudaMalloc((void**)&dev_vec, VECTOR_SIZE * sizeof(DATA_TYPE));
     if (cudaStatus != cudaSuccess) {
         fprintf(stderr, "vec cudaMalloc failed!");
@@ -89,7 +99,11 @@ float nttcuda(int n, DATA_TYPE p, DATA_TYPE r){
         fprintf(stderr, "vec cudaMemcpy failed!");
         goto Error;
     }
-
+    cudaStatus = cudaMalloc((void**)&dev_result, VECTOR_SIZE * sizeof(DATA_TYPE));
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "vec cudaMalloc failed!");
+        goto Error;
+    }
     cudaStatus = cudaMalloc((void**)&dev_twiddle, VECTOR_SIZE * sizeof(DATA_TYPE));
     if (cudaStatus != cudaSuccess) {
         fprintf(stderr, "twiddle cudaMalloc failed!");
@@ -100,64 +114,44 @@ float nttcuda(int n, DATA_TYPE p, DATA_TYPE r){
         fprintf(stderr, "twiddle cudaMemcpy failed!");
         goto Error;
     }
-    
 
-    cudaEventRecord(kernel_start,0);
-    for (int i = 1; i <= log2(n); i++) {
-        int m           = 1 << i;
-        int maxBlocks   = m >> 1;
-        int maxThreads  = 1 << (VECTOR_ADDR_BIT - i - 1);
-
-        for(unsigned block_offset = 0; block_offset < m/2; block_offset += numberblock){
-			for(unsigned  thread_offset = 0; thread_offset < VECTOR_SIZE; thread_offset += numberthread * m){
-                inplaceNTT_DIT_precomp_stage << <numberblock, numberthread>> > (dev_vec, block_offset, thread_offset, m, p, dev_twiddle, i);
-            }
-        }
+    for (unsigned c = t; c >= 1; c--){
+        unsigned base = -1 << (c - 1);
+        //unsigned base = -1 << (c - 1);
+        butter_prec<<<blocksPerGrid, threadsPerBlock>>>(dev_result, dev_vec, dev_twiddle, base, p);
+        cudaMemcpy(dev_vec, dev_result, VECTOR_SIZE * sizeof(DATA_TYPE), cudaMemcpyDeviceToDevice);
+        //printVec(xt,n);
     }
-    
+    cudaDeviceSynchronize();
+    cudaStatus = cudaMemcpy(result, dev_result, VECTOR_SIZE * sizeof(DATA_TYPE), cudaMemcpyDeviceToHost);
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "result cudaMemcpy failed!");
+        goto Error;
+    }
+
+    cudaEventRecord(cuda_stop,0);
+    cudaEventSynchronize(cuda_stop);
+    float cuda_et;
+    cudaEventElapsedTime( &cuda_et, cuda_start, cuda_stop);
+    printf("CUDA Time: %f milliseconds (ms) \n", cuda_et);
+
     // Check for any errors launching the kernel
     cudaStatus = cudaGetLastError();
     if (cudaStatus != cudaSuccess) {
         fprintf(stderr, "Kernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
         goto Error;
     }
-    // cudaDeviceSynchronize waits for the kernel to finish, and returns
-    // any errors encountered during the launch.
-    cudaStatus = cudaDeviceSynchronize();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaDeviceSynchronize returned error code %d after launching addKernel!\n", cudaStatus);
-        goto Error;
-    }
 
-    cudaEventRecord(kernel_stop,0);
-    cudaEventSynchronize(kernel_stop);
-    float kernel_et;
-    cudaEventElapsedTime( &kernel_et, kernel_start, kernel_stop);
-    printf("Kernel Time: %f milliseconds (ms) \n", kernel_et);
-    
-    // Copy output vector from GPU buffer to host memory.
-    result = (DATA_TYPE *)malloc(sizeof(DATA_TYPE) * VECTOR_SIZE);
-    cudaStatus = cudaMemcpy(result, dev_vec, n * sizeof(DATA_TYPE), cudaMemcpyDeviceToHost);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "result cudaMemcpy failed!");
-        goto Error;
-    }
-    cudaEventRecord(cuda_stop,0);
-    cudaEventSynchronize(cuda_stop);
-    float cuda_et;
-    cudaEventElapsedTime( &cuda_et, cuda_start, cuda_stop);
-    printf("CUDA Time: %f milliseconds (ms) \n", cuda_et);
-    result_g = inPlaceNTT_DIT_precomp_golden(vec, VECTOR_SIZE, p, r, twiddle, false);
-    compVec(result, result_g, VECTOR_SIZE, true);
+    //compVec(result, result_g, VECTOR_SIZE, true);
     cudaFree(dev_vec);
+    cudaFree(dev_result);
     cudaFree(dev_twiddle);
     return cuda_et;
-
-
 Error:
-    cudaFree(dev_vec);
-    cudaFree(dev_twiddle);
-    return cudaStatus;
+    cudaFree(vec);
+    cudaFree(twiddle);
+    return -1;
+
 }
 int main(int argc, char **argv){
     int n = VECTOR_SIZE;

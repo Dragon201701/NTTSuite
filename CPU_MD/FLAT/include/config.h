@@ -3,8 +3,8 @@
 
 #include <inttypes.h>
 
-#define VECTOR_SIZE  1024
-#define VECTOR_ADDR_BIT  10
+#define VECTOR_SIZE  16
+#define VECTOR_ADDR_BIT  4
 #define VECTOR_WIDTH 32
 #define PARAM_WIDTH  32
 typedef uint32_t DATA_TYPE;
