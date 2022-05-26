@@ -1,0 +1,20 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.39 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Source file analysis completed (CIN-68)
+/INPUTFILES/2
+Pragma 'hls_design<>' detected on routine 'axi_test' (CIN-6)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+solution file add ./src/axI_test_tb.cpp -exclude true
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test1/src/axi_test.cpp (CIN-69)
+solution file add ./src/axi_test.cpp
+# Warning: last line of file ends without a newline (CRD-1)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/axi_test1/catapult.log"

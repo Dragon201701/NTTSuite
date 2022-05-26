@@ -12,7 +12,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -i -t ps -wlf ./Catapult_1/axi_test.v8/scverify/rtl_v_msim/vsim.wlf -l ./Catapult_1/axi_test.v8/scverify/rtl_v_msim/sim.log -L ./Catapult_1/axi_test.v8/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/axi_test.v8/scverify/rtl_v_msim/work scverify_top_opt -do "do {./Catapult_1/axi_test.v8/scverify/rtl_v_msim/scverify_msim_wave.tcl}" 
-# Start time: 18:11:11 on Jan 16,2022
+# Start time: 21:34:51 on Jan 23,2022
 # Loading /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v8/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
 # Loading /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v8/scverify/rtl_v_msim/work.scverify_top
 # Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
@@ -68,8 +68,9 @@
 # 0
 # 
 # stdin: <EOF>
-run -all
+run
 # Info: HW reset: TLS_rst active @ 0 s
+run -all
 # ../../src/axI_test_tb.cpp:39 - End of testbench.
 # Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
 # 
@@ -123,9 +124,10 @@ run -all
 # ** Note: (vsim-6574) SystemC simulation stopped by user.
 # 1
 # 
+# Causality operation skipped due to absence of debug database file
 # Info: scverify_top/Monitor: runs with constant clock period 10 ns
 # Info: scverify_top/Monitor: Throughput: 1 transaction per 510 ns
 # Info: scverify_top/Monitor: Latency: 510 ns
 # Warning: scverify_top/Monitor: Latency: 51 cycles does not match expected 52 cycles.
-# End time: 18:41:12 on Jan 16,2022, Elapsed time: 0:30:01
-# Errors: 0, Warnings: 11, Suppressed Warnings: 3
+# End time: 21:59:44 on Jan 23,2022, Elapsed time: 0:24:53
+# Errors: 0, Warnings: 12, Suppressed Warnings: 3

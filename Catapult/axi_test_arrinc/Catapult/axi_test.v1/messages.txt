@@ -1,0 +1,223 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.43 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/catapult.log"
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<>' detected on routine 'axi_test' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+/INPUTFILES/2
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/src/axi_test.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+solution file add ./src/axI_test_tb.cpp -exclude true
+solution file add ./src/axi_test.cpp
+/INPUTFILES/1
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'axi_test.v1': elapsed time 1.00 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/Catapult/axi_test.v1/CDesignChecker/design_checker.sh'
+Loop '/axi_test/core/ADD_LOOP' iterated at most 16 times. (LOOP-2)
+Design 'axi_test' was read (SOL-1)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'axi_test.v1' (SOL-8)
+INOUT port 'run' is only used as an input. (OPT-10)
+Optimizing block '/axi_test' ... (CIN-4)
+INOUT port 'complete' is only used as an output. (OPT-11)
+INOUT port 'a' is only used as an input. (OPT-10)
+Synthesizing routine 'axi_test' (CIN-13)
+Found top design routine 'axi_test' specified by directive (CIN-52)
+Inlining routine 'operator+<32, false>' (CIN-14)
+Inlining routine 'axi_test' (CIN-14)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_test.v1': elapsed time 0.80 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-KINTEX-u-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family KINTEX-u -speed -2 -part xcku115-flvb2104-2-e
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-KINTEX-u-2_beh.lib' [mgc_Xilinx-KINTEX-u-2_beh]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'axi_test.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 17, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'axi_test.v1': elapsed time 0.04 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Starting transformation 'assembly' on solution 'axi_test.v1' (SOL-8)
+go extract
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'axi_test.v1': elapsed time 0.02 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Loop '/axi_test/core/ADD_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'axi_test.v1' (SOL-8)
+Loop '/axi_test/core/main' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 117, Real ops = 3, Vars = 76 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'axi_test.v1': elapsed time 0.81 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+I/O-Port Resource '/axi_test/a:rsc' (from var: a) mapped to 'ccs_ioport.ccs_in' (size: 512). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'axi_test.v1' (SOL-8)
+I/O-Port Resource '/axi_test/b:rsc' (from var: b) mapped to 'ccs_ioport.ccs_out' (size: 512). (MEM-2)
+# Info: Completed transformation 'cluster' on solution 'axi_test.v1': elapsed time 0.03 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 117, Real ops = 3, Vars = 76 (SOL-21)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'axi_test.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 494, Real ops = 99, Vars = 189 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'axi_test.v1': elapsed time 0.20 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Design 'axi_test' contains '99' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'axi_test.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 494, Real ops = 99, Vars = 189 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'axi_test.v1': elapsed time 0.41 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/axi_test/core': Latency = 31, Area (Datapath, Register, Total) = 674.00, 0.00, 674.00 (CRAAS-11)
+Resource allocation and scheduling done. (CRAAS-2)
+# Info: Final schedule of SEQUENTIAL '/axi_test/core': Latency = 31, Area (Datapath, Register, Total) = 674.00, 0.00, 674.00 (CRAAS-12)
+Prescheduled LOOP '/axi_test/core/main' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/axi_test/core/ADD_LOOP' (2 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/axi_test/core' (total length 36 c-steps) (SCHD-8)
+Performing concurrent resource allocation and scheduling on '/axi_test/core' (CRAAS-1)
+Prescheduled LOOP '/axi_test/core/core:rlp' (1 c-steps) (SCHD-7)
+# Info: Starting transformation 'allocate' on solution 'axi_test.v1' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Netlist written to file 'schedule.gnt' (NET-4)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 528, Real ops = 124, Vars = 301 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'axi_test.v1': elapsed time 2.07 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Report written to file 'cycle.rpt'
+# Info: Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+Global signal 'run:rsc.rdy' added to design 'axi_test' for component 'run:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'a:rsc' (SCHD-46)
+Global signal 'a:rsc.dat' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'axi_test.v1' (SOL-8)
+Global signal 'run:rsc.vld' added to design 'axi_test' for component 'run:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/axi_test/core' (CRAAS-1)
+Global signal 'b:rsc.triosy.lz' added to design 'axi_test' for component 'b:rsc.triosy:obj' (LIB-3)
+Global signal 'complete:rsc.vld' added to design 'axi_test' for component 'complete:rsci' (LIB-3)
+Global signal 'b:rsc.dat' added to design 'axi_test' for component 'b:rsci' (LIB-3)
+Global signal 'a:rsc.triosy.lz' added to design 'axi_test' for component 'a:rsc.triosy:obj' (LIB-3)
+Global signal 'complete:rsc.rdy' added to design 'axi_test' for component 'complete:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Completed transformation 'dpfsm' on solution 'axi_test.v1': elapsed time 0.73 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Warning: Extrapolation detected. Script '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/Catapult/axi_test.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Design complexity at end of 'dpfsm': Total ops = 655, Real ops = 352, Vars = 242 (SOL-21)
+Creating shared register 'b:rsc.@#1(65:64).lpi#1.dfm' for variables 'b:rsc.@#1(65:64).lpi#1.dfm, b:rsc.@#1(65:64).lpi#2, b:rsc.@#1(65:64).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(481:480).lpi#1.dfm' for variables 'b:rsc.@#1(481:480).lpi#1.dfm, b:rsc.@#1(481:480).lpi#2, b:rsc.@#1(481:480).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(97:96).lpi#1.dfm' for variables 'b:rsc.@#1(97:96).lpi#1.dfm, b:rsc.@#1(97:96).lpi#2, b:rsc.@#1(97:96).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(191:162).lpi#1.dfm' for variables 'b:rsc.@#1(191:162).lpi#1.dfm, b:rsc.@#1(191:162).lpi#2, b:rsc.@#1(191:162).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(159:130).lpi#1.dfm' for variables 'b:rsc.@#1(159:130).lpi#1.dfm, b:rsc.@#1(159:130).lpi#2, b:rsc.@#1(159:130).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(255:226).lpi#1.dfm' for variables 'b:rsc.@#1(255:226).lpi#1.dfm, b:rsc.@#1(255:226).lpi#2, b:rsc.@#1(255:226).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(223:194).lpi#1.dfm' for variables 'b:rsc.@#1(223:194).lpi#1.dfm, b:rsc.@#1(223:194).lpi#2, b:rsc.@#1(223:194).sva' (2 registers deleted). (FSM-3)
+# Info: Starting transformation 'dpfsm' on solution 'axi_test.v1' (SOL-8)
+Creating shared register 'b:rsc.@#1(127:98).lpi#1.dfm' for variables 'b:rsc.@#1(127:98).lpi#1.dfm, b:rsc.@#1(127:98).lpi#2, b:rsc.@#1(127:98).sva' (2 registers deleted). (FSM-3)
+Performing FSM extraction... (FSM-1)
+Creating shared register 'b:rsc.@#1(415:386).lpi#1.dfm' for variables 'b:rsc.@#1(415:386).lpi#1.dfm, b:rsc.@#1(415:386).lpi#2, b:rsc.@#1(415:386).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(383:354).lpi#1.dfm' for variables 'b:rsc.@#1(383:354).lpi#1.dfm, b:rsc.@#1(383:354).lpi#2, b:rsc.@#1(383:354).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(479:450).lpi#1.dfm' for variables 'b:rsc.@#1(479:450).lpi#1.dfm, b:rsc.@#1(479:450).lpi#2, b:rsc.@#1(479:450).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(447:418).lpi#1.dfm' for variables 'b:rsc.@#1(447:418).lpi#1.dfm, b:rsc.@#1(447:418).lpi#2, b:rsc.@#1(447:418).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(319:290).lpi#1.dfm' for variables 'b:rsc.@#1(319:290).lpi#1.dfm, b:rsc.@#1(319:290).lpi#2, b:rsc.@#1(319:290).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(287:258).lpi#1.dfm' for variables 'b:rsc.@#1(287:258).lpi#1.dfm, b:rsc.@#1(287:258).lpi#2, b:rsc.@#1(287:258).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(351:322).lpi#1.dfm' for variables 'b:rsc.@#1(351:322).lpi#1.dfm, b:rsc.@#1(351:322).lpi#2, b:rsc.@#1(351:322).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(31:2).lpi#1.dfm' for variables 'b:rsc.@#1(31:2).lpi#1.dfm, b:rsc.@#1(31:2).lpi#2, b:rsc.@#1(31:2).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(193:192).lpi#1.dfm' for variables 'b:rsc.@#1(193:192).lpi#1.dfm, b:rsc.@#1(193:192).lpi#2, b:rsc.@#1(193:192).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(161:160).lpi#1.dfm' for variables 'b:rsc.@#1(161:160).lpi#1.dfm, b:rsc.@#1(161:160).lpi#2, b:rsc.@#1(161:160).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(225:224).lpi#1.dfm' for variables 'b:rsc.@#1(225:224).lpi#1.dfm, b:rsc.@#1(225:224).lpi#2, b:rsc.@#1(225:224).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(1:0).lpi#1.dfm' for variables 'b:rsc.@#1(1:0).lpi#1.dfm, b:rsc.@#1(1:0).lpi#2, b:rsc.@#1(1:0).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(63:34).lpi#1.dfm' for variables 'b:rsc.@#1(63:34).lpi#1.dfm, b:rsc.@#1(63:34).lpi#2, b:rsc.@#1(63:34).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(511:482).lpi#1.dfm' for variables 'b:rsc.@#1(511:482).lpi#1.dfm, b:rsc.@#1(511:482).lpi#2, b:rsc.@#1(511:482).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(129:128).lpi#1.dfm' for variables 'b:rsc.@#1(129:128).lpi#1.dfm, b:rsc.@#1(129:128).lpi#2, b:rsc.@#1(129:128).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(95:66).lpi#1.dfm' for variables 'b:rsc.@#1(95:66).lpi#1.dfm, b:rsc.@#1(95:66).lpi#2, b:rsc.@#1(95:66).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(385:384).lpi#1.dfm' for variables 'b:rsc.@#1(385:384).lpi#1.dfm, b:rsc.@#1(385:384).lpi#2, b:rsc.@#1(385:384).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(353:352).lpi#1.dfm' for variables 'b:rsc.@#1(353:352).lpi#1.dfm, b:rsc.@#1(353:352).lpi#2, b:rsc.@#1(353:352).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(449:448).lpi#1.dfm' for variables 'b:rsc.@#1(449:448).lpi#1.dfm, b:rsc.@#1(449:448).lpi#2, b:rsc.@#1(449:448).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(417:416).lpi#1.dfm' for variables 'b:rsc.@#1(417:416).lpi#1.dfm, b:rsc.@#1(417:416).lpi#2, b:rsc.@#1(417:416).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(289:288).lpi#1.dfm' for variables 'b:rsc.@#1(289:288).lpi#1.dfm, b:rsc.@#1(289:288).lpi#2, b:rsc.@#1(289:288).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(257:256).lpi#1.dfm' for variables 'b:rsc.@#1(257:256).lpi#1.dfm, b:rsc.@#1(257:256).lpi#2, b:rsc.@#1(257:256).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(33:32).lpi#1.dfm' for variables 'b:rsc.@#1(33:32).lpi#1.dfm, b:rsc.@#1(33:32).lpi#2, b:rsc.@#1(33:32).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'b:rsc.@#1(321:320).lpi#1.dfm' for variables 'b:rsc.@#1(321:320).lpi#1.dfm, b:rsc.@#1(321:320).lpi#2, b:rsc.@#1(321:320).sva' (2 registers deleted). (FSM-3)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 444, Real ops = 210, Vars = 434 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'axi_test.v1': elapsed time 0.91 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Starting transformation 'instance' on solution 'axi_test.v1' (SOL-8)
+# Info: Design complexity at end of 'extract': Total ops = 444, Real ops = 210, Vars = 199 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'axi_test.v1': elapsed time 4.93 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/Catapult/axi_test.v1/concat_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/Catapult/axi_test.v1/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+order file name is: rtl.vhdl_order.txt
+generate concat
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Netlist written to file 'rtl.vhdl' (NET-4)
+Generating scverify_top.cpp ()
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/Catapult/axi_test.v1/concat_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Generating SCVerify testbench files
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrinc/Catapult/axi_test.v1/concat_sim_rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Starting transformation 'extract' on solution 'axi_test.v1' (SOL-8)
+Report written to file 'rtl.rpt'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Netlist written to file 'rtl.v' (NET-4)
+generate concat

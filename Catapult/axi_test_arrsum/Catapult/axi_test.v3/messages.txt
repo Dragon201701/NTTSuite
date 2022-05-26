@@ -1,0 +1,74 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.72 seconds, memory usage 1510820kB, peak memory usage 1510820kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+go compile
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axI_test_tb.cpp /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'axi_test' (CIN-6)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.56 seconds, memory usage 1510820kB, peak memory usage 1510820kB (SOL-9)
+Input file has changed
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Input file has changed
+solution file set {$PROJECT_HOME/src/axI_test_tb.cpp} -updated
+Pragma 'hls_design<top>' detected on routine 'axi_test' (CIN-6)
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+Source file analysis completed (CIN-68)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: last line of file ends without a newline (CRD-1)
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axI_test_tb.cpp /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp (CIN-69)
+# Warning: last line of file ends without a newline (CRD-1)
+Input file has changed
+# Warning: last line of file ends without a newline (CRD-1)
+solution file set {$PROJECT_HOME/src/axI_test_tb.cpp} -updated
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+File '$PROJECT_HOME/Catapult/axi_test.v1/scverify/ccs_testbench.h' saved
+solution file set {$PROJECT_HOME/src/axI_test_tb.cpp} -updated
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.85 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+/INPUTFILES/2
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/axi_test.cpp
+solution file add ./src/axI_test_tb.cpp
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axI_test_tb.cpp /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp (CIN-69)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'axi_test' (CIN-6)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/catapult.log"
+
+# Messages from "go compile"
+
+# Info: Completed transformation 'compile' on solution 'axi_test.v3': elapsed time 1.48 seconds, memory usage 1510820kB, peak memory usage 1510820kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 14, Real ops = 3, Vars = 9 (SOL-21)
+INOUT port 'a' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+INOUT port 'complete' is only used as an output. (OPT-11)
+Design 'axi_test' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Synthesizing routine 'axi_test' (CIN-13)
+Found top design routine 'axi_test' specified by directive (CIN-52)
+Optimizing block '/axi_test' ... (CIN-4)
+Inlining routine 'axi_test' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v3/CDesignChecker/design_checker.sh'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'axi_test.v3' (SOL-8)
+Loop '/axi_test/core/ADD_LOOP' iterated at most 16 times. (LOOP-2)

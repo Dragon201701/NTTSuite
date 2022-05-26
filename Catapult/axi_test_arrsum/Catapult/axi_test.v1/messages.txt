@@ -1,0 +1,203 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.85 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+/INPUTFILES/2
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+go compile
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp" (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/axi_test.cpp
+solution file add ./src/axI_test_tb.cpp
+Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axI_test_tb.cpp /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/src/axi_test.cpp (CIN-69)
+/INPUTFILES/1
+# Warning: last line of file ends without a newline (CRD-1)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Source file analysis completed (CIN-68)
+Pragma 'hls_design<top>' detected on routine 'axi_test' (CIN-6)
+Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/catapult.log"
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 14, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'axi_test.v1': elapsed time 1.73 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+Loop '/axi_test/core/ADD_LOOP' iterated at most 16 times. (LOOP-2)
+INOUT port 'a' is only used as an input. (OPT-10)
+INOUT port 'run' is only used as an input. (OPT-10)
+INOUT port 'complete' is only used as an output. (OPT-11)
+Design 'axi_test' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Synthesizing routine 'axi_test' (CIN-13)
+Found top design routine 'axi_test' specified by directive (CIN-52)
+Optimizing block '/axi_test' ... (CIN-4)
+Inlining routine 'axi_test' (CIN-14)
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v1/CDesignChecker/design_checker.sh'
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'axi_test.v1' (SOL-8)
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 14, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'axi_test.v1': elapsed time 0.77 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'axi_test.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add Xilinx_RAMS
+solution library add mgc_Xilinx-KINTEX-u-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family KINTEX-u -speed -2 -part xcku115-flvb1760-2-i
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-KINTEX-u-2_beh.lib' [mgc_Xilinx-KINTEX-u-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 14, Real ops = 3, Vars = 9 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'axi_test.v1': elapsed time 0.06 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'axi_test.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 18, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'axi_test.v1': elapsed time 0.03 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+Saving project file '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult.ccs'. (PRJ-5)
+Loop '/axi_test/core/main' is left rolled. (LOOP-4)
+/axi_test/a:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /axi_test/a:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+/axi_test/a/WORD_WIDTH 32
+directive set /axi_test/a -WORD_WIDTH 32
+Loop '/axi_test/core/ADD_LOOP' is left rolled. (LOOP-4)
+project save
+# Info: Starting transformation 'loops' on solution 'axi_test.v1' (SOL-8)
+go extract
+# Info: Design complexity at end of 'memories': Total ops = 18, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'axi_test.v1': elapsed time 0.58 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+I/O-Port Resource '/axi_test/arrsum:rsc' (from var: arrsum) mapped to 'ccs_ioport.ccs_out' (size: 32). (MEM-2)
+Memory Resource '/axi_test/a:rsc' (from var: a) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 16 x 32). (MEM-4)
+# Info: Starting transformation 'memories' on solution 'axi_test.v1' (SOL-8)
+# Info: Design complexity at end of 'cluster': Total ops = 18, Real ops = 3, Vars = 11 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'axi_test.v1': elapsed time 0.02 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Starting transformation 'cluster' on solution 'axi_test.v1' (SOL-8)
+# Info: Design complexity at end of 'architect': Total ops = 23, Real ops = 3, Vars = 13 (SOL-21)
+# Info: Completed transformation 'architect' on solution 'axi_test.v1': elapsed time 0.05 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+Design 'axi_test' contains '3' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'axi_test.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Info: Design complexity at end of 'allocate': Total ops = 23, Real ops = 3, Vars = 13 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'axi_test.v1': elapsed time 0.11 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+Prescheduled LOOP '/axi_test/core/main' (4 c-steps) (SCHD-7)
+Prescheduled LOOP '/axi_test/core/ADD_LOOP' (2 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/axi_test/core' (total length 37 c-steps) (SCHD-8)
+Prescheduled LOOP '/axi_test/core/core:rlp' (1 c-steps) (SCHD-7)
+Performing concurrent resource allocation and scheduling on '/axi_test/core' (CRAAS-1)
+# Info: Starting transformation 'allocate' on solution 'axi_test.v1' (SOL-8)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Initial schedule of SEQUENTIAL '/axi_test/core': Latency = 32, Area (Datapath, Register, Total) = 36.00, 0.00, 36.00 (CRAAS-11)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Final schedule of SEQUENTIAL '/axi_test/core': Latency = 32, Area (Datapath, Register, Total) = 36.00, 0.00, 36.00 (CRAAS-12)
+
+# Messages from "go schedule"
+
+# Info: Design complexity at end of 'schedule': Total ops = 347, Real ops = 40, Vars = 176 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'axi_test.v1': elapsed time 1.27 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+# Info: Creating buffer for wait controller for component 'run:rsc' (SCHD-46)
+Global signal 'run:rsc.rdy' added to design 'axi_test' for component 'run:rsci' (LIB-3)
+Global signal 'a:rsc.web' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.qb' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'axi_test.v1' (SOL-8)
+Global signal 'run:rsc.vld' added to design 'axi_test' for component 'run:rsci' (LIB-3)
+Performing concurrent resource allocation and scheduling on '/axi_test/core' (CRAAS-1)
+Global signal 'a:rsc.adra' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.da' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'arrsum:rsc.dat' added to design 'axi_test' for component 'arrsum:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'a:rsc' (SCHD-46)
+Global signal 'a:rsc.adrb' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.db' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.wea' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'a:rsc.qa' added to design 'axi_test' for component 'a:rsci' (LIB-3)
+Global signal 'complete:rsc.rdy' added to design 'axi_test' for component 'complete:rsci' (LIB-3)
+Global signal 'complete:rsc.vld' added to design 'axi_test' for component 'complete:rsci' (LIB-3)
+Global signal 'arrsum:rsc.triosy.lz' added to design 'axi_test' for component 'arrsum:rsc.triosy:obj' (LIB-3)
+Global signal 'a:rsc.triosy.lz' added to design 'axi_test' for component 'a:rsc.triosy:obj' (LIB-3)
+Report written to file 'cycle.rpt'
+
+# Messages from "go dpfsm"
+
+# Info: Design complexity at end of 'dpfsm': Total ops = 267, Real ops = 65, Vars = 169 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'axi_test.v1': elapsed time 0.51 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+# Warning: Extrapolation detected. Script '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Starting transformation 'dpfsm' on solution 'axi_test.v1' (SOL-8)
+Performing FSM extraction... (FSM-1)
+
+# Messages from "go extract"
+
+# Info: Design complexity at end of 'instance': Total ops = 258, Real ops = 59, Vars = 221 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'axi_test.v1': elapsed time 0.56 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+# Info: Starting transformation 'instance' on solution 'axi_test.v1' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Design complexity at end of 'extract': Total ops = 258, Real ops = 59, Vars = 166 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'axi_test.v1': elapsed time 4.48 seconds, memory usage 1445764kB, peak memory usage 1445764kB (SOL-9)
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Netlist written to file 'rtl.vhdl' (NET-4)
+# Info: Starting transformation 'extract' on solution 'axi_test.v1' (SOL-8)
+generate concat
+Report written to file 'rtl.rpt'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.vhd
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+Generating scverify_top.cpp ()
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ./rtl.vhdl
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v1/concat_rtl.vhdl
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v1/concat_sim_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+Generating SCVerify testbench files
+order file name is: rtl.v_order.txt
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Netlist written to file 'rtl.v' (NET-4)
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+generate concat
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ./rtl.v
+Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v1/concat_rtl.v
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult/axi_test.v1/concat_sim_rtl.v
+Add dependent file: ./rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'

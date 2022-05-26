@@ -14,11 +14,22 @@
 //                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
 //                       DesignPad v2.78_1.0
 //  
-//  Start time Mon Jan 17 20:39:48 2022
+//  Start time Sun Jan 23 21:07:55 2022
 # -------------------------------------------------
-# Logging session transcript to file "/tmp/log590274c2b5273.0"
+# Logging session transcript to file "/tmp/log641382c2b0e6a.0"
 # Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
 project load /home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1.ccs
 # Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/axi_test/catapult.log"
 # Error: internal assertion failed ((get_name()&&is_wildcard())||(!get_name(true)&&!get_resolved_name())) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_hierconfig.cxx line 2461 (ASSERT-1)
 # Error: internal assertion failed ((get_name()&&is_wildcard())||(!get_name(true)&&!get_resolved_name())) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_hierconfig.cxx line 2461 (ASSERT-1)
+project save
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1.ccs'. (PRJ-5)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1/axi_test.v8'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# make: Nothing to be done for `build'.
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+quit
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/axi_test/Catapult_1.ccs'. (PRJ-5)
+// Finish time Sun Jan 23 21:58:59 2022, time elapsed 51:04, peak memory 1.50GB, exit status 0

@@ -1,0 +1,8 @@
+export MGLS_LICENSE_FILE=1717@pyke.poly.edu
+
+#e MGC_HOME /opt/mentorgraphics/Calibre_2016.4_38/aoi_cal_2016.4_38.25
+export MGC_HOME=/opt/mentorgraphics/Catapult_10.5c/Mgc_home/
+export MATLAB_USE_USERPATH=1
+
+# set path=( $path $MGC_HOME/bin /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64 /usr/local/bin )
+export PATH=$PATH:$MGC_HOME/bin:/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64:/usr/local/bin
