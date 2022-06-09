@@ -1,0 +1,321 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Wed Jun  8 23:47:33 2022
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log44969d42a30d9.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+option set Input/TargetPlatform x86_64
+option set Input/CppStandard c++11
+# c++11
+solution file add ./src/utils.cpp -exclude true
+# /INPUTFILES/1
+solution file add ./src/ntt.cpp
+# /INPUTFILES/2
+solution file add ./src/main.cpp -exclude true
+# /INPUTFILES/3
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/FPGA/hybrid/catapult.log"
+# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/FPGA/hybrid/src/ntt.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: $PROJECT_HOME/include/config.h(26): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/ntt.h(10): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/src/ntt.cpp(156): last line of file ends without a newline (CRD-1)
+# $PROJECT_HOME/src/ntt.cpp(55): Pragma 'hls_design<top>' detected on routine 'hybrid' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.47 seconds, memory usage 1380216kB, peak memory usage 1380216kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'hybrid.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/src/ntt.cpp(56): Found top design routine 'hybrid' specified by directive (CIN-52)
+# $PROJECT_HOME/src/ntt.cpp(56): Synthesizing routine 'hybrid' (CIN-13)
+# $PROJECT_HOME/src/ntt.cpp(56): Inlining routine 'hybrid' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator*<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator*<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator-<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<33, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $PROJECT_HOME/src/ntt.cpp(47): Inlining routine 'butterFly' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# Error: $PROJECT_HOME/src/ntt.cpp(49): No definition for routine 'mult' (CIN-16)
+# Error: Compilation aborted (CIN-5)
+# Info: Completed transformation 'analyze' on solution 'hybrid.v1': elapsed time 0.97 seconds, memory usage 1380216kB, peak memory usage 1380216kB (SOL-9)
+# Info: Design complexity at end of 'analyze': Total ops = 243, Real ops = 48, Vars = 77 (SOL-21)
+# Error: go compile: Failed compile
+# Input file has changed
+solution new -state new -solution hybrid.v1 hybrid
+# Info: Branching solution 'hybrid.v2' at state 'new' (PRJ-2)
+# hybrid.v2
+# Input file has changed
+solution new -state new -solution hybrid.v2 hybrid
+# Info: Branching solution 'hybrid.v3' at state 'new' (PRJ-2)
+# hybrid.v3
+# Input file has changed
+solution new -state new -solution hybrid.v3 hybrid
+# Info: Branching solution 'hybrid.v4' at state 'new' (PRJ-2)
+# hybrid.v4
+# Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/FPGA/hybrid/src/ntt.cpp' not found in input file list
+# Input file has changed
+solution file set {$PROJECT_HOME/src/ntt.cpp} -updated
+# Error: solution file set: File '/home/yl7897/NTT_Xilinx/FPGA/hybrid/src/ntt.cpp' not found in input file list
+go compile
+# Info: Starting transformation 'analyze' on solution 'hybrid.v4' (SOL-8)
+# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/FPGA/hybrid/src/ntt.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: $PROJECT_HOME/include/config.h(26): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/ntt.h(22): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/src/ntt.cpp(175): last line of file ends without a newline (CRD-1)
+# $MGC_HOME/shared/include/ac_int.h(2812): Pragma 'hls_design<top>' detected on routine 'hybrid' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'hybrid.v4': elapsed time 1.45 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'hybrid.v4' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/src/ntt.cpp(75): Found top design routine 'hybrid' specified by directive (CIN-52)
+# $PROJECT_HOME/include/ntt.h(20): Synthesizing routine 'hybrid' (CIN-13)
+# $PROJECT_HOME/include/ntt.h(20): Inlining routine 'hybrid' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator*<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator*<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator-<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<33, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'butterFly' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $PROJECT_HOME/include/ntt.h(17): Inlining routine 'mult' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>><96, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(1982): Inlining routine 'modulo_add' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(1982): Inlining routine 'modulo_sub' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<32, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator-=<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $PROJECT_HOME/include/ntt.h(17): Inlining routine 'mult' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>><96, false>' (CIN-14)
+# $PROJECT_HOME/include/ntt.h(17): Inlining routine 'mult' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>><96, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>=<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator-<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<33, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'butterFly' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $PROJECT_HOME/include/ntt.h(17): Inlining routine 'mult' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator>><96, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(1982): Inlining routine 'modulo_add' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator+<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(1982): Inlining routine 'modulo_sub' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<32, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator-=<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator*<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator*<20, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Optimizing block '/hybrid' ... (CIN-4)
+# $PROJECT_HOME/include/ntt.h(20): INOUT port 'twiddle' is only used as an input. (OPT-10)
+# $PROJECT_HOME/include/ntt.h(20): INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+# $PROJECT_HOME/include/ntt.h(20): INOUT port 'revArr' is only used as an input. (OPT-10)
+# $PROJECT_HOME/include/ntt.h(20): INOUT port 'tw' is only used as an input. (OPT-10)
+# $PROJECT_HOME/include/ntt.h(20): INOUT port 'tw_h' is only used as an input. (OPT-10)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S1_OUTER_LOOP' iterated at most 64 times. (LOOP-2)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_REVERSE_LOOP:for' iterated at most 64 times. (LOOP-2)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_REVERSE_LOOP' iterated at most 64 times. (LOOP-2)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_INNER_LOOP:for' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_INNER_LOOP' iterated at most 32 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_CPY_LOOP:for' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S2_CPY_LOOP' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S34_OUTER_LOOP' iterated at most 64 times. (LOOP-2)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S5_REVERSE_LOOP:for' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S5_REVERSE_LOOP' iterated at most 64 times. (LOOP-2)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S5_INNER_LOOP:for' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S5_INNER_LOOP' iterated at most 32 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S5_CPY_LOOP:for' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S5_CPY_LOOP' iterated at most 64 times. (LOOP-2)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S6_OUTER_LOOP' iterated at most 64 times. (LOOP-2)
+# Design 'hybrid' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/FPGA/hybrid/Catapult/hybrid.v4/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'hybrid.v4': elapsed time 3.84 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 232, Real ops = 67, Vars = 52 (SOL-21)
+solution library add mgc_Xilinx-KINTEX-u-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family KINTEX-u -speed -2 -part xcku115-flvb2104-2-e
+solution library add Xilinx_RAMS
+solution library add amba
+go libraries
+# Info: Starting transformation 'libraries' on solution 'hybrid.v4' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-KINTEX-u-2_beh.lib' [mgc_Xilinx-KINTEX-u-2_beh]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'hybrid.v4': elapsed time 0.82 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 232, Real ops = 67, Vars = 52 (SOL-21)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 14.99 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.495 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 14.99 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.495 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go assembly
+# Info: Starting transformation 'assembly' on solution 'hybrid.v4' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'hybrid.v4': elapsed time 0.57 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 232, Real ops = 67, Vars = 52 (SOL-21)
+directive set /hybrid/x:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/x:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/twiddle:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/twiddle:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/core/S1_OUTER_LOOP -PIPELINE_INIT_INTERVAL 2
+# /hybrid/core/S1_OUTER_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /hybrid/core/S2_REVERSE_LOOP -PIPELINE_INIT_INTERVAL 1
+# /hybrid/core/S2_REVERSE_LOOP/PIPELINE_INIT_INTERVAL 1
+directive set /hybrid/core/S2_REVERSE_LOOP -PIPELINE_INIT_INTERVAL 2
+# /hybrid/core/S2_REVERSE_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /hybrid/core/S2_OUTER_LOOP -PIPELINE_INIT_INTERVAL 2
+# /hybrid/core/S2_OUTER_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /hybrid/core/S34_OUTER_LOOP -PIPELINE_INIT_INTERVAL 1
+# /hybrid/core/S34_OUTER_LOOP/PIPELINE_INIT_INTERVAL 1
+directive set /hybrid/core/S5_REVERSE_LOOP -PIPELINE_INIT_INTERVAL 2
+# /hybrid/core/S5_REVERSE_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /hybrid/core/S6_OUTER_LOOP -PIPELINE_INIT_INTERVAL 2
+# /hybrid/core/S6_OUTER_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /hybrid/core/xx:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/core/xx:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/core/yy:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/core/yy:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/twiddle_h:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/twiddle_h:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/revArr:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/revArr:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/tw:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/tw:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /hybrid/tw_h:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+# /hybrid/tw_h:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+go extract
+# Info: Starting transformation 'loops' on solution 'hybrid.v4' (SOL-8)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S1_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S1_OUTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_REVERSE_LOOP:for' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_REVERSE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_INNER_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_INNER_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_CPY_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S2_CPY_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_OUTER_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S34_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S34_OUTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S5_REVERSE_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S5_REVERSE_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S6_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S6_OUTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'hybrid.v4': elapsed time 0.08 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 246, Real ops = 67, Vars = 59 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'hybrid.v4' (SOL-8)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/core/xx:rsc' (from var: xx) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/core/yy:rsc' (from var: yy) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/x:rsc' (from var: x) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): I/O-Port Resource '/hybrid/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/revArr:rsc' (from var: revArr) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 20). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/tw:rsc' (from var: tw) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/tw_h:rsc' (from var: tw_h) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# Info: Completed transformation 'assembly' on solution 'hybrid.v4': elapsed time 1.74 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 248, Real ops = 67, Vars = 59 (SOL-21)
+# Error: go: error transforming design
+directive set DSP_EXTRACTION yes
+# Info: Branching solution 'hybrid.v5' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Warning: Toplevel found in header $MGC_HOME/shared/include/ac_int.h, using $PROJECT_HOME/src/ntt.cpp for header dependencies.
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/FPGA/hybrid/Catapult/hybrid.v5/CDesignChecker/design_checker.sh'
+# /DSP_EXTRACTION yes
+go memories
+directive set SCHED_USE_MULTICYCLE true
+# Info: Starting transformation 'loops' on solution 'hybrid.v5' (SOL-8)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S1_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S1_OUTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_REVERSE_LOOP:for' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_REVERSE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S2_INNER_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_INNER_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_CPY_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S2_CPY_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S2_OUTER_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S34_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S34_OUTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/S5_REVERSE_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(1982): Loop '/hybrid/core/S5_REVERSE_LOOP' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S6_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# $MGC_HOME/shared/include/ac_int.h(2812): Loop '/hybrid/core/S6_OUTER_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/include/ntt.h(20): Loop '/hybrid/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'hybrid.v5': elapsed time 0.08 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 246, Real ops = 67, Vars = 59 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'hybrid.v5' (SOL-8)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/core/xx:rsc' (from var: xx) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/core/yy:rsc' (from var: yy) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/x:rsc' (from var: x) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): I/O-Port Resource '/hybrid/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/twiddle:rsc' (from var: twiddle) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/twiddle_h:rsc' (from var: twiddle_h) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 32). (MEM-4)
+# Error: internal assertion failed (var.type() == SIF_Constant::d_class_id || var.get_length() == libsize || var.get_property_int("ORIG_LEN") == libsize) /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_flows_api.cxx line 4376 (ASSERT-1)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/revArr:rsc' (from var: revArr) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 64 x 20). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/tw:rsc' (from var: tw) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# $PROJECT_HOME/include/ntt.h(20): Memory Resource '/hybrid/tw_h:rsc' (from var: tw_h) mapped to 'Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL' (size: 4096 x 32). (MEM-4)
+# Info: Completed transformation 'assembly' on solution 'hybrid.v5': elapsed time 1.76 seconds, memory usage 1380312kB, peak memory usage 1380312kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 248, Real ops = 67, Vars = 59 (SOL-21)
+# Error: go: error transforming design
+project save
+# Saving project file '/home/yl7897/NTT_Xilinx/FPGA/hybrid/Catapult.ccs'. (PRJ-5)
+quit
+# Saving project file '/home/yl7897/NTT_Xilinx/FPGA/hybrid/Catapult.ccs'. (PRJ-5)
+// Finish time Wed Jun  8 23:58:47 2022, time elapsed 11:14, peak memory 1.32GB, exit status 0

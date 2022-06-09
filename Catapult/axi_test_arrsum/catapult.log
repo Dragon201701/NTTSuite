@@ -27,3 +27,6 @@ flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim s
 #     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
 # make: Nothing to be done for `build'.
 #     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+quit
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/axi_test_arrsum/Catapult.ccs'. (PRJ-5)
+// Finish time Thu May 26 21:44:49 2022, time elapsed 3:40:45, peak memory 1.31GB, exit status 0
