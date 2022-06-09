@@ -122,7 +122,7 @@ float nttcuda(int n, DATA_TYPE p, DATA_TYPE r){
         cudaMemcpy(dev_vec, dev_result, VECTOR_SIZE * sizeof(DATA_TYPE), cudaMemcpyDeviceToDevice);
         //printVec(xt,n);
     }
-    cudaDeviceSynchronize();
+    //cudaDeviceSynchronize();
     cudaStatus = cudaMemcpy(result, dev_result, VECTOR_SIZE * sizeof(DATA_TYPE), cudaMemcpyDeviceToHost);
     if (cudaStatus != cudaSuccess) {
         fprintf(stderr, "result cudaMemcpy failed!");

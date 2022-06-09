@@ -11,8 +11,8 @@
 
 #define VECTOR_SIZE 	1024
 #define VECTOR_ADDR_BIT 10
-#define numberblock	512
-#define numberthread 	512
+#define numberblock	1024
+#define numberthread 	1024
 
 typedef uint64_t DATA_TYPE;
 typedef int64_t DATA_TYPE_SIGNED;
