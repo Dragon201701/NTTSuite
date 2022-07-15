@@ -1,0 +1,66 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.852654",
+   "Default View_TopLeft":"-547,-160",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -420 -y 120 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -420 -y -10 -defaultsOSRD
+preplace port port-id_run_rsc_vld -pg 1 -lvl 0 -x -420 -y 10 -defaultsOSRD
+preplace port port-id_complete_rsc_rdy -pg 1 -lvl 0 -x -420 -y 280 -defaultsOSRD
+preplace port port-id_run_rsc_rdy -pg 1 -lvl 5 -x 1240 -y -180 -defaultsOSRD
+preplace port port-id_complete_rsc_vld -pg 1 -lvl 5 -x 1240 -y 330 -defaultsOSRD
+preplace port port-id_vec_rsc_triosy_lz -pg 1 -lvl 5 -x 1240 -y -20 -defaultsOSRD
+preplace port port-id_p_rsc_triosy_lz -pg 1 -lvl 5 -x 1240 -y 0 -defaultsOSRD
+preplace port port-id_r_rsc_triosy_lz -pg 1 -lvl 5 -x 1240 -y 20 -defaultsOSRD
+preplace port port-id_twiddle_rsc_triosy_lz -pg 1 -lvl 5 -x 1240 -y 160 -defaultsOSRD
+preplace port port-id_twiddle_h_rsc_triosy_lz -pg 1 -lvl 5 -x 1240 -y 290 -defaultsOSRD
+preplace portBus p_rsc_dat -pg 1 -lvl 0 -x -420 -y 70 -defaultsOSRD
+preplace portBus r_rsc_dat -pg 1 -lvl 0 -x -420 -y 90 -defaultsOSRD
+preplace inst inPlaceNTT_DIT_preco_0 -pg 1 -lvl 1 -x -150 -y 80 -defaultsOSRD
+preplace inst blk_mem_gen_vec -pg 1 -lvl 3 -x 740 -y 20 -defaultsOSRD
+preplace inst blk_mem_gen_twiddle_rsc -pg 1 -lvl 4 -x 1060 -y 130 -defaultsOSRD
+preplace inst blk_mem_gen_twiddle_h_rsc -pg 1 -lvl 2 -x 390 -y 300 -defaultsOSRD
+preplace netloc blk_mem_gen_twiddle_h_rsc_douta 1 0 2 -380 380 190
+preplace netloc blk_mem_gen_twiddle_h_rsc_doutb 1 0 2 -370 390 NJ
+preplace netloc blk_mem_gen_twiddle_rsc_douta 1 0 4 -390 -260 NJ -260 N -260 930J
+preplace netloc blk_mem_gen_twiddle_rsc_doutb 1 0 4 -390 510 NJ 510 530 220 NJ
+preplace netloc blk_mem_gen_vec_douta 1 0 3 -380 -240 NJ -240 590
+preplace netloc blk_mem_gen_vec_doutb 1 0 3 -370 -220 60 -170 570
+preplace netloc clk_1 1 0 4 -400 -230 180 -80 610 -150 870
+preplace netloc complete_rsc_rdy_1 1 0 1 -400 190n
+preplace netloc inPlaceNTT_DIT_preco_0_complete_rsc_vld 1 1 4 70 470 N 470 NJ 470 1220
+preplace netloc inPlaceNTT_DIT_preco_0_p_rsc_triosy_lz 1 1 4 70 -220 NJ -220 NJ -220 1190J
+preplace netloc inPlaceNTT_DIT_preco_0_r_rsc_triosy_lz 1 1 4 90J -180 520J -230 NJ -230 1200
+preplace netloc inPlaceNTT_DIT_preco_0_run_rsc_rdy 1 1 4 NJ -160 530 -210 N -210 1210
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_adra 1 1 1 170 180n
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_adrb 1 1 1 140 240n
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_da 1 1 1 160 200n
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_db 1 1 1 110 260n
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_triosy_lz 1 1 4 50J 490 570J 450 NJ 450 1210
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_wea 1 1 1 150 220n
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_h_rsc_web 1 1 1 90 280n
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_adra 1 1 3 110J -130 540 -190 910
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_adrb 1 1 3 130J -120 560 -180 900
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_da 1 1 3 120J -110 550 -200 920
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_db 1 1 3 160J -100 580 -170 880
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_triosy_lz 1 1 4 130 480 600J 460 NJ 460 1190J
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_wea 1 1 3 150J -90 600 -160 890
+preplace netloc inPlaceNTT_DIT_preco_0_twiddle_rsc_web 1 1 3 120J 500 550 240 N
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_adra 1 1 2 190 -70 N
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_adrb 1 1 2 60 50 N
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_da 1 1 2 100 -30 N
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_db 1 1 2 170 90 N
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_triosy_lz 1 1 4 50J -250 NJ -250 NJ -250 1220
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_wea 1 1 2 80 10 N
+preplace netloc inPlaceNTT_DIT_preco_0_vec_rsc_web 1 1 2 140 130 N
+preplace netloc p_rsc_dat_1 1 0 1 N 70
+preplace netloc r_rsc_dat_1 1 0 1 N 90
+preplace netloc rst_1 1 0 1 N -10
+preplace netloc run_rsc_vld_1 1 0 1 N 10
+levelinfo -pg 1 -420 -150 390 740 1060 1240
+pagesize -pg 1 -db -bbox -sgen -590 -280 1440 600
+"
+}
+0

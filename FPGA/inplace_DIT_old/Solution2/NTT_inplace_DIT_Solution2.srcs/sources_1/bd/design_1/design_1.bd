@@ -1,0 +1,190 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xcku115-flvb2104-2-e",
+      "gen_directory": "../../../../NTT_inplace_DIT_Solution2.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1"
+    },
+    "design_tree": {
+      "inPlaceNTT_DIT_preco_0": ""
+    },
+    "components": {
+      "inPlaceNTT_DIT_preco_0": {
+        "vlnv": "xilinx.com:module_ref:inPlaceNTT_DIT_precomp:1.0",
+        "xci_name": "design_1_inPlaceNTT_DIT_preco_0_0",
+        "xci_path": "ip\\design_1_inPlaceNTT_DIT_preco_0_0\\design_1_inPlaceNTT_DIT_preco_0_0.xci",
+        "inst_hier_path": "inPlaceNTT_DIT_preco_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "inPlaceNTT_DIT_precomp",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "run_rsc_rdy": {
+            "direction": "O"
+          },
+          "run_rsc_vld": {
+            "direction": "I"
+          },
+          "vec_rsc_adra": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "vec_rsc_da": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_wea": {
+            "direction": "O"
+          },
+          "vec_rsc_qa": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_adrb": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "vec_rsc_db": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_web": {
+            "direction": "O"
+          },
+          "vec_rsc_qb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "vec_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "p_rsc_dat": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "p_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "r_rsc_dat": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "r_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "twiddle_rsc_adra": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "twiddle_rsc_da": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_wea": {
+            "direction": "O"
+          },
+          "twiddle_rsc_qa": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_adrb": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "twiddle_rsc_db": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_web": {
+            "direction": "O"
+          },
+          "twiddle_rsc_qb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "twiddle_h_rsc_adra": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "twiddle_h_rsc_da": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_wea": {
+            "direction": "O"
+          },
+          "twiddle_h_rsc_qa": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_adrb": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "twiddle_h_rsc_db": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_web": {
+            "direction": "O"
+          },
+          "twiddle_h_rsc_qb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "twiddle_h_rsc_triosy_lz": {
+            "direction": "O"
+          },
+          "complete_rsc_rdy": {
+            "direction": "I"
+          },
+          "complete_rsc_vld": {
+            "direction": "O"
+          }
+        }
+      }
+    }
+  }
+}

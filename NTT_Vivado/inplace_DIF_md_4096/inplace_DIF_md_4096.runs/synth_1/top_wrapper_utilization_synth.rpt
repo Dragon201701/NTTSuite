@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Sep 16 00:50:36 2021
-| Host         : DESKTOP-5VIDJ10 running 64-bit major release  (build 9200)
+| Date         : Sat Jul  9 16:43:14 2022
+| Host         : Desktop-0-Alienware-R7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
 | Design       : top_wrapper
 | Device       : 7vx690tffg1761-2
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   70 |     0 |          0 |       850 |  8.24 |
+| Bonded IOB                  |   71 |     0 |          0 |       850 |  8.35 |
 | Bonded IPADs                |    0 |     0 |          0 |       110 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |        72 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |        20 |  0.00 |
@@ -150,7 +150,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   68 |                  IO |
+| IBUF     |   69 |                  IO |
 | OBUF     |    2 |                  IO |
 +----------+------+---------------------+
 

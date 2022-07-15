@@ -166,6 +166,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set bram_ena [ create_bd_port -dir I bram_ena ]
   set clk [ create_bd_port -dir I -type clk -freq_hz 100000000 clk ]
+  set complete_rdy_in [ create_bd_port -dir I complete_rdy_in ]
   set complete_rsc_vld [ create_bd_port -dir O complete_rsc_vld ]
   set p_rsc_dat [ create_bd_port -dir I -from 31 -to 0 p_rsc_dat ]
   set r_rsc_dat [ create_bd_port -dir I -from 31 -to 0 r_rsc_dat ]
@@ -232,6 +233,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net blk_mem_gen_2_douta [get_bd_pins blk_mem_gen_2/douta] [get_bd_pins inPlaceNTT_DIF_preco_0/twiddle_h_rsc_qa]
   connect_bd_net -net blk_mem_gen_2_doutb [get_bd_pins blk_mem_gen_2/doutb] [get_bd_pins inPlaceNTT_DIF_preco_0/twiddle_h_rsc_qb]
   connect_bd_net -net bram_ena_1 [get_bd_ports bram_ena] [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins blk_mem_gen_1/ena] [get_bd_pins blk_mem_gen_1/enb] [get_bd_pins blk_mem_gen_2/ena] [get_bd_pins blk_mem_gen_2/enb]
+  connect_bd_net -net complete_rdy_in_1 [get_bd_ports complete_rdy_in] [get_bd_pins inPlaceNTT_DIF_preco_0/complete_rsc_rdy]
   connect_bd_net -net inPlaceNTT_DIF_preco_0_complete_rsc_vld [get_bd_ports complete_rsc_vld] [get_bd_pins inPlaceNTT_DIF_preco_0/complete_rsc_vld]
   connect_bd_net -net inPlaceNTT_DIF_preco_0_run_rsc_rdy [get_bd_ports run_rdy] [get_bd_pins inPlaceNTT_DIF_preco_0/run_rsc_rdy]
   connect_bd_net -net inPlaceNTT_DIF_preco_0_twiddle_h_rsc_adra [get_bd_pins blk_mem_gen_2/addra] [get_bd_pins inPlaceNTT_DIF_preco_0/twiddle_h_rsc_adra]

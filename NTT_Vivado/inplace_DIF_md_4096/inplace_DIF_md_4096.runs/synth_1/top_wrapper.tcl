@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7vx690tffg1761-2
 
@@ -88,7 +86,7 @@ set_property ip_output_repo d:/NTT_Xilinx/NTT_Vivado/inplace_DIF_md_4096/inplace
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib d:/NTT_Xilinx/NTT_Vivado/inplace_DIF_md_4096/inplace_DIF_md_4096.gen/sources_1/bd/top/hdl/top_wrapper.v
+read_verilog -library xil_defaultlib D:/NTT_Xilinx/NTT_Vivado/inplace_DIF_md_4096/inplace_DIF_md_4096.gen/sources_1/bd/top/hdl/top_wrapper.v
 add_files D:/NTT_Xilinx/NTT_Vivado/inplace_DIF_md_4096/inplace_DIF_md_4096.srcs/sources_1/bd/top/top.bd
 set_property used_in_implementation false [get_files -all d:/NTT_Xilinx/NTT_Vivado/inplace_DIF_md_4096/inplace_DIF_md_4096.gen/sources_1/bd/top/ip/top_blk_mem_gen_0_0/top_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/NTT_Xilinx/NTT_Vivado/inplace_DIF_md_4096/inplace_DIF_md_4096.gen/sources_1/bd/top/ip/top_blk_mem_gen_0_1/top_blk_mem_gen_0_1_ooc.xdc]

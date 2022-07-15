@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Sep 16 00:35:56 2021" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jul  9 16:42:02 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="virtex7" DEVICE="7vx690t" NAME="top" PACKAGE="ffg1761" SPEEDGRADE="-2"/>
 
@@ -59,6 +59,11 @@
     <PORT DIR="O" NAME="complete_rsc_vld" SIGIS="undef" SIGNAME="inPlaceNTT_DIF_preco_0_complete_rsc_vld">
       <CONNECTIONS>
         <CONNECTION INSTANCE="inPlaceNTT_DIF_preco_0" PORT="complete_rsc_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="complete_rdy_in" SIGIS="undef" SIGNAME="External_Ports_complete_rdy_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="inPlaceNTT_DIF_preco_0" PORT="complete_rsc_rdy"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1023,7 +1028,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="twiddle_h_rsc_triosy_lz" SIGIS="undef"/>
-        <PORT DIR="I" NAME="complete_rsc_rdy" SIGIS="undef"/>
+        <PORT DIR="I" NAME="complete_rsc_rdy" SIGIS="undef" SIGNAME="External_Ports_complete_rdy_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="complete_rdy_in"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="complete_rsc_vld" SIGIS="undef" SIGNAME="inPlaceNTT_DIF_preco_0_complete_rsc_vld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="complete_rsc_vld"/>
